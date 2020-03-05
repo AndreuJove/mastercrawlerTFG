@@ -41,8 +41,7 @@ class ToolsSpider(CrawlSpider):
                 "Http Response Code" : httpResponse,
                 "Title of the Url" : titleUrl,
                 "Links of the Url: " : linksOfTheUrl,
-        
-                        
+     
         }
         
 

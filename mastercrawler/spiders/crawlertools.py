@@ -43,8 +43,7 @@ class ToolsSpider(CrawlSpider):
                 "Links of the Url: " : linksOfTheUrl,
      
         }
-        
-
+    
     def errback_httpbin(self, failure):
         url = failure.request.url
         print(url)

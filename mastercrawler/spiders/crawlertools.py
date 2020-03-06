@@ -28,6 +28,7 @@ class ToolsSpider(CrawlSpider):
         for url in self.start_urls:
             print("startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
             yield scrapy.Request(url, callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : True, 'dont_retry' : True}, errback=self.errback_httpbin, dont_filter=True)
+
     
     def parse_httpbin(self, response):
         httpCode = response.status
@@ -36,7 +37,6 @@ class ToolsSpider(CrawlSpider):
         allLinks = response.xpath('//a/@href').getall()
         linksParsed = []
         for link in allLinks:
-            
             if link not in linksParsed:
                 if link.startswith("http"):
                     linksParsed.append(link)
@@ -46,7 +46,9 @@ class ToolsSpider(CrawlSpider):
                 else: 
                     continue
             else:
-                continue     
+                continue  
+        
+           
         #or link[0].isalpha()   
         # linksParsed = []
         # for link in alllinks:

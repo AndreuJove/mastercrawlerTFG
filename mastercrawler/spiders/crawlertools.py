@@ -5,6 +5,8 @@ from mastercrawler.spiders.jsonextraction import *
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.internet.error import DNSLookupError
 from twisted.internet.error import TimeoutError, TCPTimedOutError
+from ..items import MastercrawlerItem
+
 
 class ToolsSpider(CrawlSpider):
     name ='tools'
@@ -28,21 +30,23 @@ class ToolsSpider(CrawlSpider):
     
     def parse_httpbin(self, response):
         
-        httpResponse = response.status
+        httpCode = response.status
         
         # if httpResponse == 301:
         #     redirectUrls = response.request.meta['redirect_urls']
         url = response.url
-        titleUrl = response.xpath('//title/text()').get()
-        linksOfTheUrl = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
+        title = response.xpath('//title/text()').get()
+        links = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
         
-        yield  {
-                "URL: " : url,
-                "Http Response Code" : httpResponse,
-                "Title of the Url" : titleUrl,
-                "Links of the Url: " : linksOfTheUrl,
-     
-        }
+        toolItem = MastercrawlerItem()
+        
+        toolItem ['url'] = url
+        toolItem ['httpCode'] = httpCode
+        toolItem ['title'] = title
+        toolItem ['links'] = links
+        
+        yield toolItem
+        
     
     def errback_httpbin(self, failure):
         url = failure.request.url

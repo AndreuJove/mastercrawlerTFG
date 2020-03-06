@@ -9,6 +9,15 @@ import scrapy
 
 
 class MastercrawlerItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    url = scrapy.Field()
+    httpCode = scrapy.Field()
+    title = scrapy.Field()
+    links = scrapy.Field()
+    
+    
+
+
+
+    
+    
+

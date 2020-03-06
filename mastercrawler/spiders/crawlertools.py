@@ -28,21 +28,26 @@ class ToolsSpider(CrawlSpider):
     
     def parse_httpbin(self, response):
         
-        httpResponse = response.status
+        
+        # httpResponse = response.status
         
         # if httpResponse == 301:
         #     redirectUrls = response.request.meta['redirect_urls']
-        url = response.url
-        titleUrl = response.xpath('//title/text()').get()
-        linksOfTheUrl = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
-        
-        yield  {
-                "URL: " : url,
-                "Http Response Code" : httpResponse,
-                "Title of the Url" : titleUrl,
-                "Links of the Url: " : linksOfTheUrl,
-     
-        }
+        # url = response.url
+        # titleUrl = response.xpath('//title/text()').get()
+        # linksOfTheUrl = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
+        item = scrapy.Item()
+        item['url'] = response.url
+        item ['httpCode'] = response.status
+        item ['title'] = response.xpath('//title/text()').get()
+        item ['links'] = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
+        return item
+        # yield  {
+        #         "URL: " : url,
+        #         "Http Response Code" : httpResponse,
+        #         "Title of the Url" : titleUrl,
+        #         "Links of the Url: " : linksOfTheUrl,
+        # }
     
     def errback_httpbin(self, failure):
         url = failure.request.url

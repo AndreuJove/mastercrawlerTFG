@@ -1,11 +1,6 @@
-# -*- coding: utf-8 -*-
-
-# Define here the models for your spider middleware
-#
-# See documentation in:
-# https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-
 from scrapy import signals
+from .items import MastercrawlerItem
+
 
 
 class MastercrawlerSpiderMiddleware(object):
@@ -101,3 +96,22 @@ class MastercrawlerDownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+       
+# class MiddlewareRedirect(object):
+    
+#     def process_request(self, request, spider):
+#         pass   
+
+#     def process_response(self, request, response, spider):    
+
+#         if response.status == 301:
+#             redirectUrls = response.meta.get('redirectUrls')
+            
+#             toolItem = MastercrawlerItem()
+#             toolItem ['redirectUrls'] = redirectUrls
+                
+#             return request
+
+#         else:
+
+#             return response

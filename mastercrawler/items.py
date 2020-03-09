@@ -13,6 +13,10 @@ class MastercrawlerItem(scrapy.Item):
     title = scrapy.Field()
     links = scrapy.Field()
     numberlinks = scrapy.Field()
+    latency = scrapy.Field()
+    redirectUrls = scrapy.Field()
+    errorMessage = scrapy.Field()
+    #latencyTime = scrapy.Field()
     
     
 

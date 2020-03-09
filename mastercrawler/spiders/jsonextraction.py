@@ -6,9 +6,9 @@ with open('tools.json', "r") as fp:
 urlToolList, idToolList, nameToolList = ([] for i in range(3))      
            
 tools = jsonData[1]['tools']
-lessTools = tools[:15]
-#print(len(lessTools))
+lessTools = tools[:20]
 
+print("Less tools has: {}".format(len(lessTools)))
 def getAllFromJson(toolsList):
     toolsListOut = []
     for tool in toolsList:
@@ -38,8 +38,6 @@ toolUrlList = getUrlListFromTools(toolsListOut)
 
 # print(toolsListOut)
 # print(len(toolsListOut))
-
-
 
 
 # import logging

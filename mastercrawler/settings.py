@@ -51,15 +51,15 @@ COOKIES_ENABLED = True
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    'mastercrawler.middlewares.MastercrawlerSpiderMiddleware': 543,
-#}
+# SPIDER_MIDDLEWARES = {
+#       'mastercrawler.middlewares.MastercrawlerSpiderMiddleware': 543,
+# }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'mastercrawler.middlewares.MastercrawlerDownloaderMiddleware': 543,
-#}
+# DOWNLOADER_MIDDLEWARES = {
+#     'mastercrawler.middlewares.MiddlewareRedirect': 300,
+# }
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html

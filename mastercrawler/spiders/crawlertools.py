@@ -13,7 +13,7 @@ class ToolsSpider(CrawlSpider):
     #allowed_domains = ['']
     print("List to crawl: \n {}".format(toolUrlList))
     print(len(toolUrlList))
-    #print(toolUrlList)
+    toolUrlList.remove("http://150.145.82.212/aspic/aspicgeneid.tar.gz")
     start_urls = toolUrlList
     #handle_httpstatus_list = [404]
     #user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
@@ -24,14 +24,22 @@ class ToolsSpider(CrawlSpider):
     #     self.urls = startUrls
 
     def start_requests(self):
-        #print("startrequest called")
         for url in self.start_urls:
             print("startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-            yield scrapy.Request(url, callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : True, 'dont_retry' : True}, errback=self.errback_httpbin, dont_filter=True)
+            yield scrapy.Request(url, callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : True, 'dont_retry' : True,  'download_timeout' : 4}, errback=self.errback_httpbin, dont_filter=True)
 
+    #he download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers.
+    
     
     def parse_httpbin(self, response):
+        #time = response.download_latency
         httpCode = response.status
+        # if httpCode == 301:
+        #     redirect_url_list = response.request.meta.get('redirect_urls')
+        #     print(redirect_url_list)
+        redirectUrls = response.meta.get('redirectUrls')
+        latency = response.meta.get('download_latency')
+        redirectUrls = response.meta.get('')
         url = response.url
         title = response.xpath('//title/text()').get()
         allLinks = response.xpath('//a/@href').getall()
@@ -45,52 +53,48 @@ class ToolsSpider(CrawlSpider):
                     linksParsed.append(relative_url)
                 else: 
                     continue
-            else:
-                continue  
-        
-           
-        #or link[0].isalpha()   
-        # linksParsed = []
-        # for link in alllinks:
-        #     if link 
-        
+              
+    
         #linksOfthePage = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
-        
         # if httpCode == 301:
         #       redirectUrls = response.request.meta['redirect_urls']
               
-
         toolItem = MastercrawlerItem()
+        #toolItem ['latencyTime'] = response.time
+        toolItem ['redirectUrls'] = redirectUrls
+        toolItem ['latency'] = latency
         toolItem ['url'] = url
         toolItem ['httpCode'] = httpCode
         toolItem ['title'] = title
         toolItem ['links'] = linksParsed
         toolItem ['numberlinks'] = len(linksParsed)
-        
         yield toolItem
         
     
     def errback_httpbin(self, failure):
         url = failure.request.url
         print("Entered in errback_httpin: " + url)
+        toolItem = MastercrawlerItem()
+
         #self.logger.error(repr(failure))
         if failure.check(HttpError):
             request = failure.request
-            self.logger.error('HttpError on %s', request.url)
+            toolItem ['url'] = request.url
+            toolItem ['httpCode'] = str(failure.type())
+            yield (toolItem)
                   
         elif failure.check(DNSLookupError):
             request = failure.request
-            toolItem = MastercrawlerItem()
             toolItem ['url'] = request.url
-            toolItem ['httpCode'] = failure.getErrorMessage()
-            toolItem ['title'] = "None"
-            toolItem ['links'] = "None"
+            toolItem ['httpCode'] = str(failure.type())
             yield (toolItem)
             #self.logger.error('DNSLookupError on %s', request.url)
             
         elif failure.check(TimeoutError, TCPTimedOutError):
             request = failure.request
-            self.logger.error('TimeoutError on %s', request.url)
+            toolItem ['url'] = request.url
+            toolItem ['httpCode'] = str(failure.type())
+            yield (toolItem)
         
         
     

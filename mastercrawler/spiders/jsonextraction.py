@@ -30,6 +30,8 @@ def getUrlListFromTools(toolsListOut):
         toolUrlList.append(tool['url'])
     return toolUrlList
 
+
+
 toolsListOut = getAllFromJson(lessTools)
 toolUrlList = getUrlListFromTools(toolsListOut)
 

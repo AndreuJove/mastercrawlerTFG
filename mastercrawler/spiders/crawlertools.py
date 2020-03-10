@@ -26,7 +26,7 @@ class ToolsSpider(CrawlSpider):
     def start_requests(self):
         for url in self.start_urls:
             print("startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-            yield scrapy.Request(url, callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : True, 'dont_retry' : True,  'download_timeout' : 4}, errback=self.errback_httpbin, dont_filter=True)
+            yield scrapy.Request(url, callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : True, 'dont_retry' : False,  'download_timeout' : 3, }, errback=self.errback_httpbin, dont_filter=True)
 
     #he download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers.
     
@@ -34,12 +34,16 @@ class ToolsSpider(CrawlSpider):
     def parse_httpbin(self, response):
         #time = response.download_latency
         httpCode = response.status
-        # if httpCode == 301:
-        #     redirect_url_list = response.request.meta.get('redirect_urls')
-        #     print(redirect_url_list)
+        if httpCode == 301:
+            toolItem = MastercrawlerItem()
+            toolItem ['httpCode'] = httpCode
+            redirect_url_list = response.meta.get('redirect_urls')
+            yield toolItem
+            
+            
+            
         redirectUrls = response.meta.get('redirectUrls')
         latency = response.meta.get('download_latency')
-        redirectUrls = response.meta.get('')
         url = response.url
         title = response.xpath('//title/text()').get()
         allLinks = response.xpath('//a/@href').getall()
@@ -56,17 +60,17 @@ class ToolsSpider(CrawlSpider):
               
     
         #linksOfthePage = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
-        # if httpCode == 301:
-        #       redirectUrls = response.request.meta['redirect_urls']
+        #if httpCode == 301:
+        #      redirectUrls = response.request.meta['redirect_urls']
               
         toolItem = MastercrawlerItem()
         #toolItem ['latencyTime'] = response.time
-        toolItem ['redirectUrls'] = redirectUrls
-        toolItem ['latency'] = latency
-        toolItem ['url'] = url
         toolItem ['httpCode'] = httpCode
+        toolItem ['url'] = url
         toolItem ['title'] = title
         toolItem ['links'] = linksParsed
+        toolItem ['latency'] = latency
+        toolItem ['redirectUrls'] = redirectUrls
         toolItem ['numberlinks'] = len(linksParsed)
         yield toolItem
         

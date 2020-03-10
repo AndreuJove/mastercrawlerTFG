@@ -1,8 +1,4 @@
-# -*- coding: utf-8 -*-
 
-# Define here the models for your scraped items
-#
-# See documentation in:
 # https://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
@@ -18,7 +14,7 @@ class MastercrawlerItem(scrapy.Item):
     errorMessage = scrapy.Field()
     #latencyTime = scrapy.Field()
     idUrl = scrapy.Field()
-    
+    redirect_reasons = scrapy.Field()
     
 
 

@@ -6,13 +6,15 @@ from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.internet.error import DNSLookupError
 from twisted.internet.error import TimeoutError, TCPTimedOutError
 from ..items import MastercrawlerItem
+from six.moves.urllib.parse import urljoin
+from scrapy.utils.python import to_native_str
+
 
 class ToolsSpider(CrawlSpider):
     name ='tools'
     #allowed_domains = ['']
     # print("List to crawl: \n {}".format(d['url'] for d in toolsListOut))
-    # print(len(d['url'] for d in toolsListOut))
-    
+    # print(len(d['url'] for d in toolsListOut)) 
     start_urls = toolsListOut
     #handle_httpstatus_list = [404]
     #user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
@@ -21,24 +23,37 @@ class ToolsSpider(CrawlSpider):
     #     super(ToolsSpider, self).__init__(*args, **kwargs)
     #     self.urls = startUrls
 
-    
     def start_requests(self):
         for url in self.start_urls:
-            print("<<<<<<<<<<<<<<<Startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-            yield scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : True, 'dont_retry' : True,  'download_timeout' : 2, 'id' : url['id'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
+            print("<<<<<<<<<<<<<<<<<<<<<<<<<<Startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 2, 'id' : url['id'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
+            yield req
 
-    #he download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers.
+    #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers.
     
     def parse_httpbin(self, response):
-        #time = response.download_latency
+        
         httpCode = response.status
         redirectUrls = response.meta.get('redirect_urls')
-        if httpCode == 301:
+        redirect_reasons = response.meta.get('redirect_reasons')
+        # if response.status >= 300 and response.status < 400:
+        #     location = to_native_str(response.headers['location'].decode('latin1'))
+        #     request = response.request
+        #     redirected_url = urljoin(request.url, location)
+            
+        #     if response.status in (301, 307) or request.method == 'HEAD':
+        #         redirected = request.replace(url=redirected_url)
+        #         yield redirected
+        #     else:
+        #         redirected = request.replace(url=redirected_url, method='GET', body='')
+        #         redirected.headers.pop('Content-Type', None)
+        #         redirected.headers.pop('Content-Length', None)
+        #         yield redirected
             #getRedirections(response)
-            toolItem = MastercrawlerItem()
-            toolItem ['httpCode'] = httpCode
-            toolItem ['redirectUrls'] = redirectUrls
-            yield toolItem 
+            # toolItem = MastercrawlerItem()
+            # toolItem ['httpCode'] = httpCode
+            # toolItem ['redirectUrls'] = redirectUrls
+            # yield toolItem 
          
         idUrl = response.meta.get('id')  
         #redirectUrls = response.meta.get('redirectUrls')
@@ -61,7 +76,7 @@ class ToolsSpider(CrawlSpider):
         #linksOfthePage = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
          
         toolItem = MastercrawlerItem()
-        #toolItem ['latencyTime'] = response.time
+        toolItem ['redirect_reasons'] = redirect_reasons
         toolItem ['idUrl'] = idUrl
         toolItem ['httpCode'] = httpCode
         toolItem ['url'] = url
@@ -82,22 +97,22 @@ class ToolsSpider(CrawlSpider):
         #self.logger.error(repr(failure))
         if failure.check(HttpError):
             toolItem ['idUrl'] = idUrl
-            toolItem ['url'] = request.url
             toolItem ['httpCode'] = str(failure.type())
+            toolItem ['url'] = request.url
             yield (toolItem)
                   
         elif failure.check(DNSLookupError):
             toolItem ['idUrl'] = idUrl
-            toolItem ['url'] = request.url
             toolItem ['httpCode'] = str(failure.type())
+            toolItem ['url'] = request.url
             yield (toolItem)
             #self.logger.error('DNSLookupError on %s', request.url)
             
         elif failure.check(TimeoutError, TCPTimedOutError):
             request = failure.request
             toolItem ['idUrl'] = idUrl
-            toolItem ['url'] = request.url
             toolItem ['httpCode'] = str(failure.type())
+            toolItem ['url'] = request.url
             yield (toolItem)
         
         

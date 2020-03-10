@@ -58,7 +58,7 @@ COOKIES_ENABLED = True
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#     'mastercrawler.middlewares.MiddlewareRedirect': 300,
+#     'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': 300,
 # }
 
 # Enable or disable extensions

@@ -17,6 +17,7 @@ class MastercrawlerItem(scrapy.Item):
     redirectUrls = scrapy.Field()
     errorMessage = scrapy.Field()
     #latencyTime = scrapy.Field()
+    idUrl = scrapy.Field()
     
     
 

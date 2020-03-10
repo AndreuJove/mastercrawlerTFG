@@ -24,16 +24,16 @@ def getAllFromJson(toolsList):
                 toolsListOut.append(dict_tool)       
     return toolsListOut            
 
-def getUrlListFromTools(toolsListOut):
-    toolUrlList = []
-    for tool in toolsListOut:
-        toolUrlList.append(tool['url'])
-    return toolUrlList
+# def getUrlListFromTools(toolsListOut):
+#     toolUrlList = []
+#     for tool in toolsListOut:
+#         toolUrlList.append(tool['url'])
+#     return toolUrlList
 
 
 
 toolsListOut = getAllFromJson(lessTools)
-toolUrlList = getUrlListFromTools(toolsListOut)
+#toolUrlList = getUrlListFromTools(toolsListOut)
 
 # print(toolUrlList)
 # print(len(toolUrlList))

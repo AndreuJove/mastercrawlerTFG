@@ -6,15 +6,15 @@ from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.internet.error import DNSLookupError
 from twisted.internet.error import TimeoutError, TCPTimedOutError
 from ..items import MastercrawlerItem
-import urllib.parse
+
 
 class ToolsSpider(CrawlSpider):
     name ='tools'
     #allowed_domains = ['']
-    print("List to crawl: \n {}".format(toolUrlList))
-    print(len(toolUrlList))
-    toolUrlList.remove("http://150.145.82.212/aspic/aspicgeneid.tar.gz")
-    start_urls = toolUrlList
+    # print("List to crawl: \n {}".format(d['url'] for d in toolsListOut))
+    # print(len(d['url'] for d in toolsListOut))
+    
+    start_urls = toolsListOut
     #handle_httpstatus_list = [404]
     #user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
     
@@ -25,8 +25,8 @@ class ToolsSpider(CrawlSpider):
 
     def start_requests(self):
         for url in self.start_urls:
-            print("startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-            yield scrapy.Request(url, callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : True, 'dont_retry' : False,  'download_timeout' : 3, }, errback=self.errback_httpbin, dont_filter=True)
+            print("<<<<<<<<<<<<<<<Startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+            yield scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : True, 'dont_retry' : False,  'download_timeout' : 2, 'id' : url['id'] }, errback=self.errback_httpbin, dont_filter=True)
 
     #he download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers.
     
@@ -38,10 +38,10 @@ class ToolsSpider(CrawlSpider):
             toolItem = MastercrawlerItem()
             toolItem ['httpCode'] = httpCode
             redirect_url_list = response.meta.get('redirect_urls')
-            yield toolItem
+            yield toolItem 
             
             
-            
+        idUrl = response.meta.get('id')  
         redirectUrls = response.meta.get('redirectUrls')
         latency = response.meta.get('download_latency')
         url = response.url
@@ -60,11 +60,11 @@ class ToolsSpider(CrawlSpider):
               
     
         #linksOfthePage = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
-        #if httpCode == 301:
-        #      redirectUrls = response.request.meta['redirect_urls']
+        
               
         toolItem = MastercrawlerItem()
         #toolItem ['latencyTime'] = response.time
+        toolItem ['idUrl'] = idUrl
         toolItem ['httpCode'] = httpCode
         toolItem ['url'] = url
         toolItem ['title'] = title

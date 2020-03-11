@@ -58,7 +58,7 @@ class ToolsSpider(CrawlSpider):
         #redirectUrls = response.meta.get('redirectUrls')
         latency = response.meta.get('download_latency')
         url = response.url
-        #title = response.xpath('//title/text()').get()
+        
         allLinks = response.xpath('//a/@href').getall()
         
         linksParsed = []
@@ -66,7 +66,7 @@ class ToolsSpider(CrawlSpider):
             if link not in linksParsed:
                 if link.startswith("http"):
                     linksParsed.append(link)
-                elif link.startswith("/") or link.startswith("#") or link[:1].isalpha():
+                elif link.startswith("/") or link.startswith("#") or link[:1].isalpha() or link.startswith("./"):
                     relative_url = url + link
                     linksParsed.append(relative_url)
                 else: 

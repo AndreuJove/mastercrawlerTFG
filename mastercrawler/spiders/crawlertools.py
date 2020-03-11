@@ -6,8 +6,7 @@ from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.internet.error import DNSLookupError
 from twisted.internet.error import TimeoutError, TCPTimedOutError
 from ..items import MastercrawlerItem
-from six.moves.urllib.parse import urljoin
-from scrapy.utils.python import to_native_str
+
 
 
 class ToolsSpider(CrawlSpider):
@@ -25,7 +24,7 @@ class ToolsSpider(CrawlSpider):
 
     def start_requests(self):
         for url in self.start_urls:
-            print("<<<<<<<<<<<<<<<<<<<<<<<<<<Startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+            #print("<<<<<<<<<<<<<<<<<<<<<<<<<<Startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
             req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 2, 'id' : url['id'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
             yield req
 
@@ -74,14 +73,14 @@ class ToolsSpider(CrawlSpider):
                     continue
               
         #linksOfthePage = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
-         
+        
         toolItem = MastercrawlerItem()
-        toolItem ['redirect_reasons'] = redirect_reasons
         toolItem ['idUrl'] = idUrl
         toolItem ['httpCode'] = httpCode
         toolItem ['url'] = url
+        toolItem ['redirect_reasons'] = redirect_reasons
         toolItem ['title'] = response.xpath('//title/text()').get()
-        toolItem ['links'] = linksParsed
+        #toolItem ['links'] = linksParsed
         toolItem ['latency'] = latency
         toolItem ['redirectUrls'] = redirectUrls
         toolItem ['numberlinks'] = len(linksParsed)

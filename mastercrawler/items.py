@@ -7,7 +7,7 @@ class MastercrawlerItem(scrapy.Item):
     url = scrapy.Field()
     httpCode = scrapy.Field()
     title = scrapy.Field()
-    links = scrapy.Field()
+    #links = scrapy.Field()
     numberlinks = scrapy.Field()
     latency = scrapy.Field()
     redirectUrls = scrapy.Field()

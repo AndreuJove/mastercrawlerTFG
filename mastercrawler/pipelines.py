@@ -8,4 +8,7 @@
 
 class MastercrawlerPipeline(object):
     def process_item(self, item, spider):
+        
+        if item['redirectUrls'] == "Null":
+            del item['redirectUrls']
         return item

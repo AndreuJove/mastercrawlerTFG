@@ -66,7 +66,7 @@ class ToolsSpider(CrawlSpider):
             if link not in linksParsed:
                 if link.startswith("http"):
                     linksParsed.append(link)
-                elif link.startswith("/") or link.startswith("#") or link[:1].isalpha() or link.startswith("./"):
+                elif link.startswith("/") or link.startswith("#") or link[:1].isalpha() or link.startswith("./") or link.startswith("../"):
                     relative_url = url + link
                     linksParsed.append(relative_url)
                 else: 

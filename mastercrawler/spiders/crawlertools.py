@@ -22,6 +22,7 @@ class ToolsSpider(CrawlSpider):
     #     super(ToolsSpider, self).__init__(*args, **kwargs)
     #     self.urls = startUrls
 
+    
     def start_requests(self):
         for url in self.start_urls:
             #print("<<<<<<<<<<<<<<<<<<<<<<<<<<Startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")

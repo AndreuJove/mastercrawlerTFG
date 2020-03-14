@@ -8,7 +8,7 @@ from twisted.internet.error import TimeoutError, TCPTimedOutError
 from ..items import MastercrawlerItem
 
 
-
+#Nou canvi pel git
 class ToolsSpider(CrawlSpider):
     name ='tools'
     #allowed_domains = ['']

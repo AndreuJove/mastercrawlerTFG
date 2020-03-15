@@ -22,7 +22,7 @@ class ToolsSpider(CrawlSpider):
     #     super(ToolsSpider, self).__init__(*args, **kwargs)
     #     self.urls = startUrls
 
-    
+    #Trying new n.
     def start_requests(self):
         for url in self.start_urls:
             #print("<<<<<<<<<<<<<<<<<<<<<<<<<<Startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
@@ -133,6 +133,12 @@ class ToolsSpider(CrawlSpider):
             yield (toolItem)
 
         elif failure.check(ResponseNeverReceived):
+            toolItem ['idUrl'] = idUrl
+            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['url'] = request.url
+            yield (toolItem)
+
+        elif failure.check(ValueError):
             toolItem ['idUrl'] = idUrl
             toolItem ['httpCode'] = str(failure.type())
             toolItem ['url'] = request.url

@@ -26,7 +26,7 @@ class ToolsSpider(CrawlSpider):
     def start_requests(self):
         for url in self.start_urls:
             #print("<<<<<<<<<<<<<<<<<<<<<<<<<<Startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 10, 'id' : url['id'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
+            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 5, 'id' : url['id'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
             yield req
 
     #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers.

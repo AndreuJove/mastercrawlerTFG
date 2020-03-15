@@ -3,8 +3,8 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from mastercrawler.spiders.jsonextraction import *
 from scrapy.spidermiddlewares.httperror import HttpError
-from twisted.internet.error import DNSLookupError
-from twisted.internet.error import TimeoutError, TCPTimedOutError
+from twisted.web._newclient import ResponseFailed, ResponseNeverReceived
+from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupError, ConnectError, ConnectionRefusedError
 from ..items import MastercrawlerItem
 
 
@@ -109,12 +109,33 @@ class ToolsSpider(CrawlSpider):
             #self.logger.error('DNSLookupError on %s', request.url)
             
         elif failure.check(TimeoutError, TCPTimedOutError):
-            request = failure.request
+            toolItem ['idUrl'] = idUrl
+            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['url'] = request.url
+            yield (toolItem)
+
+        elif failure.check(ConnectError):
             toolItem ['idUrl'] = idUrl
             toolItem ['httpCode'] = str(failure.type())
             toolItem ['url'] = request.url
             yield (toolItem)
         
+        elif failure.check(ConnectionRefusedError):
+            toolItem ['idUrl'] = idUrl
+            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['url'] = request.url
+            yield (toolItem)
         
-    
+        elif failure.check(ResponseFailed):
+            toolItem ['idUrl'] = idUrl
+            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['url'] = request.url
+            yield (toolItem)
+
+        elif failure.check(ResponseNeverReceived):
+            toolItem ['idUrl'] = idUrl
+            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['url'] = request.url
+            yield (toolItem)
+
     

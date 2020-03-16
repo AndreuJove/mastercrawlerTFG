@@ -51522,7 +51522,7 @@ ValueError: Missing scheme in request url: dfam.org
  'finish_time': datetime.datetime(2020, 3, 15, 15, 25, 6, 652383),
  'item_scraped_count': 5056,
  'log_count/DEBUG': 11228,
- 'log_count/ERROR': 5,
+ 'log_count/': 5,
  'log_count/INFO': 14,
  'log_count/WARNING': 13,
  'memusage/max': 991916032,

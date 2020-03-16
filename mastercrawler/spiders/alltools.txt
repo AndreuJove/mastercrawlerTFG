@@ -51240,7 +51240,7 @@ scrapy.exceptions.NotSupported: Response content isn't text
  'redirectUrls': ['https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6698785/'],
  'redirect_reasons': [302],
  'title': 'NCBI - WWW Error Blocked Diagnostic',
- 'url': 'https://misuse.ncbi.nlm.nih.gov/error/abuse.shtml'}
+ 'url': 'https://misuse.ncbi.nlm.nih.gov/error/abuse.html'}
 2020-03-15 16:25:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://dialign-tx.gobics.de> (referer: None)
 2020-03-15 16:25:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://misuse.ncbi.nlm.nih.gov/error/abuse.shtml?term=31398302> (referer: None)
 2020-03-15 16:25:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://cran.r-project.org/web/packages/DGCA/index.html>

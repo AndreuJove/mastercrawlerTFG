@@ -138,10 +138,6 @@ class ToolsSpider(CrawlSpider):
             toolItem ['url'] = request.url
             yield (toolItem)
 
-        elif failure.check(ValueError):
-            toolItem ['idUrl'] = idUrl
-            toolItem ['httpCode'] = str(failure.type())
-            toolItem ['url'] = request.url
-            yield (toolItem)
+        
 
     

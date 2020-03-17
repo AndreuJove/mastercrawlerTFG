@@ -8,21 +8,18 @@ from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupErro
 from ..items import MastercrawlerItem
 
 
-#Nou canvi pel git
+
 class ToolsSpider(CrawlSpider):
     name ='tools'
     #allowed_domains = ['']
-    # print("List to crawl: \n {}".format(d['url'] for d in toolsListOut))
-    # print(len(d['url'] for d in toolsListOut)) 
     start_urls = toolsListOut
-    #handle_httpstatus_list = [404]
+    
     #user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
     # def __init__(self, startUrls, *args, **kwargs):
     #     # print(toolUrlList)
     #     super(ToolsSpider, self).__init__(*args, **kwargs)
     #     self.urls = startUrls
 
-    #Trying new n.
     def start_requests(self):
         for url in self.start_urls:
             #print("<<<<<<<<<<<<<<<<<<<<<<<<<<Startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
@@ -56,23 +53,23 @@ class ToolsSpider(CrawlSpider):
             # yield toolItem 
          
         idUrl = response.meta.get('id')  
-        #redirectUrls = response.meta.get('redirectUrls')
         latency = response.meta.get('download_latency')
         url = response.url
         
         allLinks = response.xpath('//a/@href').getall()
         
-        linksParsed = []
+
+
+        externalLinks = []
+        relativeLinks = []
         for link in allLinks:
-            if link not in linksParsed:
                 if link.startswith("http"):
-                    linksParsed.append(link)
+                    externalLinks.append(link)
                 elif link.startswith("/") or link.startswith("#") or link[:1].isalpha() or link.startswith("./") or link.startswith("../"):
                     relative_url = url + link
-                    linksParsed.append(relative_url)
-                else: 
-                    continue
-              
+                    relativeLinks.append(relative_url)
+                
+                
         #linksOfthePage = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
         
         toolItem = MastercrawlerItem()
@@ -84,7 +81,9 @@ class ToolsSpider(CrawlSpider):
         #toolItem ['links'] = linksParsed
         toolItem ['latency'] = latency
         toolItem ['redirectUrls'] = redirectUrls
-        toolItem ['numberlinks'] = len(linksParsed)
+        toolItem ['externalLinks'] = externalLinks
+        toolItem ['numberRelativeLinks'] = len(relativeLinks)
+        toolItem ['numberExternalLinks'] = len(externalLinks)
         yield toolItem
         
     

@@ -6,7 +6,7 @@ with open('tools.json', "r") as fp:
 urlToolList, idToolList, nameToolList = ([] for i in range(3))      
            
 tools = jsonData[1]['tools']
-lessTools = tools
+lessTools = tools[:20]
 
 #print("Less tools has: {}".format(len(lessTools)))
 def getAllFromJson(toolsList):
@@ -17,7 +17,7 @@ def getAllFromJson(toolsList):
         numberOfDashes = idTool.count('/')
         if numberOfDashes <= 5:
             urlTool = tool["web"]["homepage"]
-            if urlTool not in urlToolList and not urlTool.endswith(".zip", ".pdf", ".de") and not urlTool.startswith("ftp://"):
+            if urlTool not in urlToolList and not urlTool.endswith((".zip", ".pdf", ".de")) and not urlTool.startswith("ftp://"):
                 dict_tool['name'] = tool["name"]
                 dict_tool['url'] = tool["web"]["homepage"]
                 dict_tool['id'] = tool["@id"]

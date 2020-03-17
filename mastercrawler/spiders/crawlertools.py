@@ -13,7 +13,10 @@ class ToolsSpider(CrawlSpider):
     name ='tools'
     #allowed_domains = ['']
     start_urls = toolsListOut
-    
+    print("number of URL: ") 
+    print(len(start_urls))
+    print("URL to scrap: ")
+    print(start_urls)
     #user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
     # def __init__(self, startUrls, *args, **kwargs):
     #     # print(toolUrlList)
@@ -22,7 +25,6 @@ class ToolsSpider(CrawlSpider):
 
     def start_requests(self):
         for url in self.start_urls:
-            #print("<<<<<<<<<<<<<<<<<<<<<<<<<<Startrequest called>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
             req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 5, 'id' : url['id'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
             yield req
 
@@ -32,58 +34,37 @@ class ToolsSpider(CrawlSpider):
         
         httpCode = response.status
         redirectUrls = response.meta.get('redirect_urls')
-        redirect_reasons = response.meta.get('redirect_reasons')
-        # if response.status >= 300 and response.status < 400:
-        #     location = to_native_str(response.headers['location'].decode('latin1'))
-        #     request = response.request
-        #     redirected_url = urljoin(request.url, location)
-            
-        #     if response.status in (301, 307) or request.method == 'HEAD':
-        #         redirected = request.replace(url=redirected_url)
-        #         yield redirected
-        #     else:
-        #         redirected = request.replace(url=redirected_url, method='GET', body='')
-        #         redirected.headers.pop('Content-Type', None)
-        #         redirected.headers.pop('Content-Length', None)
-        #         yield redirected
-            #getRedirections(response)
-            # toolItem = MastercrawlerItem()
-            # toolItem ['httpCode'] = httpCode
-            # toolItem ['redirectUrls'] = redirectUrls
-            # yield toolItem 
-         
+        redirect_reasons = response.meta.get('redirect_reasons')         
         idUrl = response.meta.get('id')  
         latency = response.meta.get('download_latency')
         url = response.url
-        
         allLinks = response.xpath('//a/@href').getall()
-        
-
 
         externalLinks = []
         relativeLinks = []
         for link in allLinks:
-                if link.startswith("http"):
-                    externalLinks.append(link)
-                elif link.startswith("/") or link.startswith("#") or link[:1].isalpha() or link.startswith("./") or link.startswith("../"):
+                if url in link or link.startswith("/") or link.startswith("#") or link[:1].isalpha() or link.startswith("./") or link.startswith("../"):
                     relative_url = url + link
                     relativeLinks.append(relative_url)
-                
-                
+                else:
+                    externalLinks.append(link)
         #linksOfthePage = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
         
         toolItem = MastercrawlerItem()
         toolItem ['idUrl'] = idUrl
         toolItem ['httpCode'] = httpCode
         toolItem ['url'] = url
-        toolItem ['redirect_reasons'] = redirect_reasons
-        toolItem ['title'] = response.xpath('//title/text()').get()
-        #toolItem ['links'] = linksParsed
         toolItem ['latency'] = latency
+        toolItem ['title'] = response.xpath('//title/text()').get()
+
+        toolItem ['redirect_reasons'] = redirect_reasons
         toolItem ['redirectUrls'] = redirectUrls
+        
         toolItem ['externalLinks'] = externalLinks
+        toolItem ['relativeLinks'] = relativeLinks
         toolItem ['numberRelativeLinks'] = len(relativeLinks)
         toolItem ['numberExternalLinks'] = len(externalLinks)
+
         yield toolItem
         
     

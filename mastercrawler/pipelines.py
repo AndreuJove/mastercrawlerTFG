@@ -8,7 +8,5 @@
 
 class MastercrawlerPipeline(object):
     def process_item(self, item, spider):
-        
-        if item['redirectUrls'] == "None":
-            del item['redirectUrls']
+    
         return item

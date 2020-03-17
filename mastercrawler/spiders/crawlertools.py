@@ -32,10 +32,9 @@ class ToolsSpider(CrawlSpider):
     
     def parse_httpbin(self, response):
         
-        httpCode = response.status
+        idUrl = response.meta.get('id')  
         redirectUrls = response.meta.get('redirect_urls')
         redirect_reasons = response.meta.get('redirect_reasons')         
-        idUrl = response.meta.get('id')  
         latency = response.meta.get('download_latency')
         url = response.url
         allLinks = response.xpath('//a/@href').getall()
@@ -43,27 +42,31 @@ class ToolsSpider(CrawlSpider):
         externalLinks = []
         relativeLinks = []
         for link in allLinks:
-                if url in link or link.startswith("/") or link.startswith("#") or link[:1].isalpha() or link.startswith("./") or link.startswith("../"):
+                if url in link:
+                    relativeLinks.append(link)
+                elif link.startswith("/") or link.startswith("#") or link[:1].isalpha() or link.startswith("./") or link.startswith("../"):
                     relative_url = url + link
                     relativeLinks.append(relative_url)
                 else:
                     externalLinks.append(link)
-        #linksOfthePage = response.xpath("//a[starts-with(@href, 'http')]/@href").getall()
+        
         
         toolItem = MastercrawlerItem()
         toolItem ['idUrl'] = idUrl
-        toolItem ['httpCode'] = httpCode
+        toolItem ['httpCode'] = response.status
         toolItem ['url'] = url
-        toolItem ['latency'] = latency
         toolItem ['title'] = response.xpath('//title/text()').get()
+        toolItem ['latency'] = latency
+        
 
         toolItem ['redirect_reasons'] = redirect_reasons
         toolItem ['redirectUrls'] = redirectUrls
         
-        toolItem ['externalLinks'] = externalLinks
-        toolItem ['relativeLinks'] = relativeLinks
+       
         toolItem ['numberRelativeLinks'] = len(relativeLinks)
         toolItem ['numberExternalLinks'] = len(externalLinks)
+        toolItem ['externalLinks'] = externalLinks
+        toolItem ['relativeLinks'] = relativeLinks
 
         yield toolItem
         

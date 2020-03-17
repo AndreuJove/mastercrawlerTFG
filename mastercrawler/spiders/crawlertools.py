@@ -25,14 +25,15 @@ class ToolsSpider(CrawlSpider):
 
     def start_requests(self):
         for url in self.start_urls:
-            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 5, 'id' : url['id'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
+            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 5, 'id' : url['id'], 'name' : url['name'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
             yield req
 
-    #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers.
+    
     
     def parse_httpbin(self, response):
         
-        idUrl = response.meta.get('id')  
+        idTool = response.meta.get('id')
+        nameTool = response.meta.get('name') 
         redirectUrls = response.meta.get('redirect_urls')
         redirect_reasons = response.meta.get('redirect_reasons')         
         latency = response.meta.get('download_latency')
@@ -52,10 +53,11 @@ class ToolsSpider(CrawlSpider):
         
         
         toolItem = MastercrawlerItem()
-        toolItem ['idUrl'] = idUrl
+        toolItem ['idTool'] = idTool
         toolItem ['httpCode'] = response.status
         toolItem ['url'] = url
-        toolItem ['title'] = response.xpath('//title/text()').get()
+        toolItem ['titleUrl'] = response.xpath('//title/text()').get()
+        #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers:
         toolItem ['latency'] = latency
         
 
@@ -77,7 +79,7 @@ class ToolsSpider(CrawlSpider):
         toolItem = MastercrawlerItem()
         idUrl = failure.request.meta.get('id') 
         request = failure.request
-        #self.logger.error(repr(failure))
+        
         if failure.check(HttpError):
             toolItem ['idUrl'] = idUrl
             toolItem ['httpCode'] = str(failure.type())

@@ -5,18 +5,23 @@ import scrapy
 
 class MastercrawlerItem(scrapy.Item):
     
-    idUrl = scrapy.Field()
-    url = scrapy.Field()
+    idTool = scrapy.Field()
+    nameTool = scrapy.Field()
+    urlTool = scrapy.Field()
     httpCode = scrapy.Field()
-    title = scrapy.Field()
-    
+    titleUrl = scrapy.Field()
+    h1 = scrapy.Field()
+    h2 = scrapy.Field()
+    h3 = scrapy.Field()
+
     latency = scrapy.Field()
     errorMessage = scrapy.Field()
-    
+
     redirectUrls = scrapy.Field()
     redirect_reasons = scrapy.Field()
 
     
+
     numberRelativeLinks = scrapy.Field()
     numberExternalLinks = scrapy.Field()
     relativeLinks = scrapy.Field()

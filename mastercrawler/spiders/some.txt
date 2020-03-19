@@ -1,0 +1,206 @@
+2020-03-18 12:50:03 [scrapy.utils.log] INFO: Scrapy 2.0.0 started (bot: mastercrawler)
+2020-03-18 12:50:03 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.8.1 (default, Jan  8 2020, 22:29:32) - [GCC 7.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-5.3.0-40-generic-x86_64-with-glibc2.10
+2020-03-18 12:50:03 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2020-03-18 12:50:03 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'mastercrawler',
+ 'NEWSPIDER_MODULE': 'mastercrawler.spiders',
+ 'SPIDER_MODULES': ['mastercrawler.spiders']}
+2020-03-18 12:50:03 [scrapy.extensions.telnet] INFO: Telnet Password: 04b76325882d9aad
+2020-03-18 12:50:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-03-18 12:50:03 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-03-18 12:50:03 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-03-18 12:50:03 [scrapy.middleware] INFO: Enabled item pipelines:
+['mastercrawler.pipelines.MastercrawlerPipeline']
+2020-03-18 12:50:03 [scrapy.core.engine] INFO: Spider opened
+2020-03-18 12:50:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-03-18 12:50:03 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-03-18 12:50:03 [scrapy.core.scraper] DEBUG: Scraped from DNS lookup failed: no results for hostname lookup: sysbio.kribb.re.kr.
+{'httpCode': 'DNS lookup failed.',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/asidesigner',
+ 'urlTool': 'http://sysbio.kribb.re.kr/AsiDesigner/'}
+2020-03-18 12:50:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://aspwood.popgenie.org/aspwood-v3.0/> (referer: None)
+2020-03-18 12:50:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://cran.r-project.org/web/packages/aSPU/> (referer: None)
+2020-03-18 12:50:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bioconductor.org/packages/release/bioc/html/ASICS.html> (referer: None)
+2020-03-18 12:50:03 [scrapy.core.scraper] DEBUG: Scraped from <200 http://aspwood.popgenie.org/aspwood-v3.0/>
+{'h1': [],
+ 'h2': [],
+ 'h3': [],
+ 'httpCode': 200,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspwood',
+ 'latency': 0.16811466217041016,
+ 'numberExternalLinks': 0,
+ 'numberRelativeLinks': 4,
+ 'redirectUrls': None,
+ 'redirect_reasons': None,
+ 'titleUrl': None,
+ 'urlTool': 'http://aspwood.popgenie.org/aspwood-v3.0/'}
+2020-03-18 12:50:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://cran.r-project.org/web/packages/aSPU/>
+{'h1': [],
+ 'h2': ['aSPU: Adaptive Sum of Powered Score Test'],
+ 'h3': [],
+ 'httpCode': 200,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspu',
+ 'latency': 0.21655893325805664,
+ 'numberExternalLinks': 0,
+ 'numberRelativeLinks': 23,
+ 'redirectUrls': None,
+ 'redirect_reasons': None,
+ 'titleUrl': 'CRAN - Package aSPU',
+ 'urlTool': 'https://cran.r-project.org/web/packages/aSPU/'}
+2020-03-18 12:50:03 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bioconductor.org/packages/release/bioc/html/ASICS.html>
+{'h1': ['ASICS'],
+ 'h2': ['Automatic Statistical Identification in Complex Spectra'],
+ 'h3': ['Installation', 'Documentation', 'Details', 'Package Archives'],
+ 'httpCode': 200,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/asics',
+ 'latency': 0.23769664764404297,
+ 'numberExternalLinks': 0,
+ 'numberRelativeLinks': 94,
+ 'redirectUrls': None,
+ 'redirect_reasons': None,
+ 'titleUrl': 'Bioconductor - ASICS',
+ 'urlTool': 'http://bioconductor.org/packages/release/bioc/html/ASICS.html'}
+2020-03-18 12:50:03 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://sourceforge.net/projects/asm2ace/> from <GET http://sourceforge.net/projects/asm2ace/>
+2020-03-18 12:50:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://aspex.sourceforge.net/> (referer: None)
+2020-03-18 12:50:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://srv00.recas.ba.infn.it/ASPicDB/> (referer: None)
+2020-03-18 12:50:03 [scrapy.core.scraper] DEBUG: Scraped from <200 http://aspex.sourceforge.net/>
+{'h1': [],
+ 'h2': ['\nThe ASPEX package: affected sib-pair exclusion mapping'],
+ 'h3': [],
+ 'httpCode': 200,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspex',
+ 'latency': 0.5140976905822754,
+ 'numberExternalLinks': 0,
+ 'numberRelativeLinks': 12,
+ 'redirectUrls': None,
+ 'redirect_reasons': None,
+ 'titleUrl': 'The ASPEX package: affected sib-pair exclusion mapping',
+ 'urlTool': 'http://aspex.sourceforge.net/'}
+2020-03-18 12:50:03 [scrapy.core.scraper] DEBUG: Scraped from <200 http://srv00.recas.ba.infn.it/ASPicDB/>
+{'h1': [],
+ 'h2': [],
+ 'h3': [],
+ 'httpCode': 200,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspicdb',
+ 'latency': 0.5533971786499023,
+ 'numberExternalLinks': 0,
+ 'numberRelativeLinks': 9,
+ 'redirectUrls': None,
+ 'redirect_reasons': None,
+ 'titleUrl': 'ASPicDB ',
+ 'urlTool': 'http://srv00.recas.ba.infn.it/ASPicDB/'}
+2020-03-18 12:50:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/xgaia/asko-cli> (referer: None)
+2020-03-18 12:50:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/xgaia/asko-cli>
+{'h1': ['\n    ', '\n  ', '\n  ', '\n  ', '\n  \n', 'Askocli'],
+ 'h2': ['Latest commit',
+        'Files',
+        '\n        ',
+        '\n        README.md\n      ',
+        'Requirment',
+        'Installation',
+        'Usage example',
+        'History'],
+ 'h3': ['Join GitHub today'],
+ 'httpCode': 200,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/askocli',
+ 'latency': 1.1305701732635498,
+ 'numberExternalLinks': 0,
+ 'numberRelativeLinks': 93,
+ 'redirectUrls': None,
+ 'redirect_reasons': None,
+ 'titleUrl': 'GitHub - xgaia/asko-cli: asko-cli provide cli tools to insert '
+             'data into a distant AskOmics',
+ 'urlTool': 'https://github.com/xgaia/asko-cli'}
+2020-03-18 12:50:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sourceforge.net/projects/asm2ace/> (referer: None)
+2020-03-18 12:50:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sourceforge.net/projects/asm2ace/>
+{'h1': ['asm2ace'],
+ 'h2': ['\n        ',
+        '\n        ',
+        '\n    ',
+        '\n        ',
+        '\n        ',
+        '\n    ',
+        'Other Useful Business Software',
+        'Thanks for helping keep SourceForge clean.',
+        'Get latest updates about Open Source Projects, Conferences and News.'],
+ 'h3': ['\n\n            \n                ',
+        '\n'
+        '            \n'
+        '\n'
+        '            Brought to you by:\n'
+        '            \n'
+        '                \n'
+        '                    ',
+        ',\n'
+        '                \n'
+        '            \n'
+        '                \n'
+        '                    ',
+        '\n                \n            \n        ',
+        'Features',
+        'Project Activity',
+        'Categories',
+        'Follow asm2ace',
+        'Rate This Project',
+        'User Reviews',
+        'Additional Project Details'],
+ 'httpCode': 200,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/asm2ace',
+ 'latency': 1.5834016799926758,
+ 'numberExternalLinks': 0,
+ 'numberRelativeLinks': 228,
+ 'redirectUrls': ['http://sourceforge.net/projects/asm2ace/'],
+ 'redirect_reasons': [301],
+ 'titleUrl': 'asm2ace download | SourceForge.net',
+ 'urlTool': 'https://sourceforge.net/projects/asm2ace/'}
+2020-03-18 12:50:08 [scrapy.core.scraper] DEBUG: Scraped from User timeout caused connection failure: Getting http://150.145.82.212/aspic/aspicgeneid.tar.gz took longer than 5 seconds..
+{'httpCode': 'User timeout caused connection failure.',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspic-geneid',
+ 'urlTool': 'http://150.145.82.212/aspic/aspicgeneid.tar.gz'}
+2020-03-18 12:50:08 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-03-18 12:50:08 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 2,
+ 'downloader/exception_type_count/twisted.internet.error.DNSLookupError': 1,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 1,
+ 'downloader/request_bytes': 2329,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 116974,
+ 'downloader/response_count': 8,
+ 'downloader/response_status_count/200': 7,
+ 'downloader/response_status_count/301': 1,
+ 'elapsed_time_seconds': 5.141111,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 3, 18, 11, 50, 8, 397342),
+ 'item_scraped_count': 9,
+ 'log_count/DEBUG': 17,
+ 'log_count/INFO': 10,
+ 'memusage/max': 445026304,
+ 'memusage/startup': 445026304,
+ 'response_received_count': 7,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'start_time': datetime.datetime(2020, 3, 18, 11, 50, 3, 256231)}
+2020-03-18 12:50:08 [scrapy.core.engine] INFO: Spider closed (finished)

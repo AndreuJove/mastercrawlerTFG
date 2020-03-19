@@ -13,6 +13,7 @@ class MastercrawlerItem(scrapy.Item):
     h1 = scrapy.Field()
     h2 = scrapy.Field()
     h3 = scrapy.Field()
+    metaDescription = scrapy.Field()    
 
     latency = scrapy.Field()
     errorMessage = scrapy.Field()

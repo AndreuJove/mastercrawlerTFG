@@ -18,12 +18,19 @@ class ToolsSpider(CrawlSpider):
     print("URL to scrap: ")
     print(start_urls)
     #user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
-  
 
     def start_requests(self):
         for url in self.start_urls:
             req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 5, 'id' : url['id'], 'name' : url['name'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
             yield req
+
+    
+    def parseHtmlTags(self, tagsList):
+        tagsList = [item.replace('\n', "") for item in tagsList]
+        tagsList = [item.strip() for item in tagsList]
+        while("" in tagsList):
+            tagsList.remove("")
+        return tagsList
 
     def parse_httpbin(self, response):
         
@@ -34,7 +41,6 @@ class ToolsSpider(CrawlSpider):
         latency = response.meta.get('download_latency')
         url = response.url
         allLinks = response.xpath('//a/@href').getall()
-
         externalLinks = []
         relativeLinks = []
         for link in allLinks:
@@ -46,29 +52,54 @@ class ToolsSpider(CrawlSpider):
                 elif link.startswith("http"):
                     externalLinks.append(link)
         
-        
+        h1List = response.xpath('//h1/text()').getall()
+        h2List = response.xpath('//h2/text()').getall()
+        h3List = response.xpath('//h3/text()').getall()
+
+        h1ListOut = self.parseHtmlTags(h1List)
+        h2ListOut = self.parseHtmlTags(h2List)
+        h3ListOut = self.parseHtmlTags(h3List)
+
+        #print(h1List + {type(h1List)})
+        #h1List = [item for item in h1List if item[0].isalalpha()]
+
+        #['', '', '', '', '', 'Askocli']
+
+        # for item in h1List:
+        #     if item.startwith(" ") == False:
+                
+        # for i in range(len(h1List)):
+        #     if h1List[i].startswith(" "):
+        #         h1List.remove(h1List[i])
+
+
+        #['  ', '  ', 'Askocli']
+
+        print(h1ListOut)
+    
+
         toolItem = MastercrawlerItem()
         toolItem ['idTool'] = idTool
         toolItem ['httpCode'] = response.status
         toolItem ['urlTool'] = url
         toolItem ['nameTool'] = nameTool
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()
-        toolItem ['h1'] = response.xpath('//h1/text()').getall()
-        toolItem ['h2'] = response.xpath('//h2/text()').getall()
-        toolItem ['h3'] = response.xpath('//h3/text()').getall()
+        toolItem ['metaDescription'] = response.xpath('//meta[@description="name"]')
+        
+        toolItem ['h1'] = h1ListOut
+        toolItem ['h2'] = h2ListOut
+        toolItem ['h3'] = h3ListOut
         #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers:
         toolItem ['latency'] = latency
         
 
         toolItem ['redirect_reasons'] = redirect_reasons
         toolItem ['redirectUrls'] = redirectUrls
-        
        
         toolItem ['numberRelativeLinks'] = len(relativeLinks)
         toolItem ['numberExternalLinks'] = len(externalLinks)
         #toolItem ['externalLinks'] = externalLinks
         #toolItem ['relativeLinks'] = relativeLinks
-    
         yield toolItem
         
     

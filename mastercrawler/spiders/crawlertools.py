@@ -22,7 +22,6 @@ class ToolsSpider(CrawlSpider):
     def start_requests(self):
         for url in self.start_urls:
             req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 5, 'id' : url['id'], 'name' : url['name'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
-            
             yield req
 
     
@@ -33,8 +32,7 @@ class ToolsSpider(CrawlSpider):
             tagsList.remove("")
         return tagsList
 
-    def parse_httpbin(self, response):
-        
+    def parse_httpbin(self, response):  
         idTool = response.meta.get('id')
         nameTool = response.meta.get('name') 
         redirectUrls = response.meta.get('redirect_urls')
@@ -56,28 +54,13 @@ class ToolsSpider(CrawlSpider):
         h1List = response.xpath('//h1/text()').getall()
         h2List = response.xpath('//h2/text()').getall()
         h3List = response.xpath('//h3/text()').getall()
+        h4List = response.xpath('//h4/text()').getall()
 
         h1ListOut = self.parseHtmlTags(h1List)
         h2ListOut = self.parseHtmlTags(h2List)
         h3ListOut = self.parseHtmlTags(h3List)
+        h4ListOut = self.parseHtmlTags(h4List)
 
-        #print(h1List + {type(h1List)})
-        #h1List = [item for item in h1List if item[0].isalalpha()]
-
-        #['', '', '', '', '', 'Askocli']
-
-        # for item in h1List:
-        #     if item.startwith(" ") == False:
-                
-        # for i in range(len(h1List)):
-        #     if h1List[i].startswith(" "):
-        #         h1List.remove(h1List[i])
-
-
-        #['  ', '  ', 'Askocli']
-
-        #print(h1ListOut)
-    
 
         toolItem = MastercrawlerItem()
         toolItem ['idTool'] = idTool
@@ -85,11 +68,13 @@ class ToolsSpider(CrawlSpider):
         toolItem ['urlTool'] = url
         toolItem ['nameTool'] = nameTool
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()
-        toolItem ['metaDescription'] = response.xpath('//meta[@description="name"]')
-        
+        toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
+
         toolItem ['h1'] = h1ListOut
         toolItem ['h2'] = h2ListOut
         toolItem ['h3'] = h3ListOut
+        toolItem ['h4'] = h4ListOut
+
         #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers:
         toolItem ['latency'] = latency
         
@@ -99,7 +84,7 @@ class ToolsSpider(CrawlSpider):
        
         toolItem ['numberRelativeLinks'] = len(relativeLinks)
         toolItem ['numberExternalLinks'] = len(externalLinks)
-        #toolItem ['externalLinks'] = externalLinks
+        toolItem ['externalLinks'] = externalLinks
         #toolItem ['relativeLinks'] = relativeLinks
         yield toolItem
         
@@ -108,52 +93,60 @@ class ToolsSpider(CrawlSpider):
         url = failure.request.url
         print("Entered in errback_httpin: " + url)
         toolItem = MastercrawlerItem()
+        nameTool = failure.request.meta.get('name') 
         idUrl = failure.request.meta.get('id') 
         request = failure.request
         
         if failure.check(HttpError):
             toolItem ['idTool'] = idUrl
-            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['httpCode'] = HttpError
+            toolItem ['nameTool'] = nameTool
             toolItem ['urlTool'] = request.url
+            
             yield (toolItem)
                   
         elif failure.check(DNSLookupError):
             toolItem ['idTool'] = idUrl
             toolItem ['httpCode'] = str(failure.type())
+            toolItem ['nameTool'] = nameTool
             toolItem ['urlTool'] = request.url
             yield (toolItem)
             #self.logger.error('DNSLookupError on %s', request.url)
             
         elif failure.check(TimeoutError, TCPTimedOutError):
             toolItem ['idTool'] = idUrl
+            toolItem ['nameTool'] = nameTool
             toolItem ['httpCode'] = str(failure.type())
             toolItem ['urlTool'] = request.url
             yield (toolItem)
 
         elif failure.check(ConnectError):
             toolItem ['idTool'] = idUrl
-            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['nameTool'] = nameTool
+            toolItem ['httpCode'] = ConnectError
             toolItem ['urlTool'] = request.url
             yield (toolItem)
         
         elif failure.check(ConnectionRefusedError):
             toolItem ['idTool'] = idUrl
-            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['nameTool'] = nameTool
+            toolItem ['httpCode'] = ConnectionRefusedError
             toolItem ['urlTool'] = request.url
             yield (toolItem)
         
         elif failure.check(ResponseFailed):
             toolItem ['idTool'] = idUrl
+            toolItem ['nameTool'] = nameTool
             #toolItem ['httpCode'] = str(failure.type())
             #TypeError: __init__() missing 1 required positional argument: 'reasons'
-            
-            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['httpCode'] = ResponseFailed
             toolItem ['urlTool'] = request.url
             yield (toolItem)
 
         elif failure.check(ResponseNeverReceived):
             toolItem ['idTool'] = idUrl
-            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['nameTool'] = nameTool
+            toolItem ['httpCode'] = ResponseNeverReceived
             toolItem ['urlTool'] = request.url
             yield (toolItem)
 

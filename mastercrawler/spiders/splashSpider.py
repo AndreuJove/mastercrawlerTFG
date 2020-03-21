@@ -31,3 +31,4 @@ class SplashspiderSpider(CrawlSpider):
         #item['name'] = response.xpath('//div[@id="name"]').get()
         #item['description'] = response.xpath('//div[@id="description"]').get()
         yield toolItem
+        

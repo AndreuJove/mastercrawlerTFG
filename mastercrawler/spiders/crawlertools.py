@@ -6,7 +6,7 @@ from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.web._newclient import ResponseFailed, ResponseNeverReceived
 from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupError, ConnectError, ConnectionRefusedError
 from ..items import MastercrawlerItem
-from scrapy_splash import SplashRequest
+
 
 
 class ToolsSpider(CrawlSpider):
@@ -32,6 +32,7 @@ class ToolsSpider(CrawlSpider):
         return tagsList
 
     def parse_httpbin(self, response):  
+
         idTool = response.meta.get('id')
         nameTool = response.meta.get('name') 
         redirectUrls = response.meta.get('redirect_urls')
@@ -101,7 +102,6 @@ class ToolsSpider(CrawlSpider):
             toolItem ['httpCode'] = HttpError
             toolItem ['nameTool'] = nameTool
             toolItem ['urlTool'] = request.url
-            
             yield (toolItem)
                   
         elif failure.check(DNSLookupError):

@@ -6,7 +6,7 @@ from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.web._newclient import ResponseFailed, ResponseNeverReceived
 from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupError, ConnectError, ConnectionRefusedError
 from ..items import MastercrawlerItem
-
+from scrapy_splash import SplashRequest
 
 
 class ToolsSpider(CrawlSpider):

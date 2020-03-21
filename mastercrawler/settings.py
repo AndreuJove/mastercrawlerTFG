@@ -15,6 +15,9 @@ SPIDER_MODULES = ['mastercrawler.spiders']
 NEWSPIDER_MODULE = 'mastercrawler.spiders'
 
 
+SPLASH_URL = 'http://192.168.59.103:8050'
+
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'mastercrawler (+http://www.yourdomain.com)'
 
@@ -55,17 +58,25 @@ COOKIES_ENABLED = True
 #       'mastercrawler.middlewares.MastercrawlerSpiderMiddleware': 543,
 # }
 
+SPIDER_MIDDLEWARES = {
+    'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
+}
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
 #     'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': 300,
 # }
-
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy_splash.SplashCookiesMiddleware': 723,
+    'scrapy_splash.SplashMiddleware': 725,
+    'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
+}
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
+
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html

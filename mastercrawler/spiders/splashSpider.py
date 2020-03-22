@@ -21,7 +21,7 @@ class SplashspiderSpider(CrawlSpider):
     def start_requests(self):
         for url in self.start_urls:
             yield SplashRequest(url = url ['url'], callback=self.parse, errback=self.errback_httpbin)
-
+            
            
     def parse(self, response):
         toolItem = MastercrawlerItem()
@@ -34,7 +34,7 @@ class SplashspiderSpider(CrawlSpider):
 
 
 
-        
+    
     def errback_httpbin(self, failure):
         url = failure.request.url
         print("Entered in errback_httpin: " + url)

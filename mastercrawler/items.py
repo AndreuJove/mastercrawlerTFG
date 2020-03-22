@@ -6,6 +6,7 @@ import scrapy
 class MastercrawlerItem(scrapy.Item):
     
     idTool = scrapy.Field()
+    bodyContent = scrapy.Field()
     nameTool = scrapy.Field()
     urlTool = scrapy.Field()
     httpCode = scrapy.Field()

@@ -64,6 +64,7 @@ class ToolsSpider(CrawlSpider):
 
         toolItem = MastercrawlerItem()
         toolItem ['idTool'] = idTool
+        toolItem ['bodyContent'] = len(response.text)
         toolItem ['httpCode'] = response.status
         toolItem ['urlTool'] = url
         toolItem ['nameTool'] = nameTool
@@ -106,14 +107,17 @@ class ToolsSpider(CrawlSpider):
                   
         elif failure.check(DNSLookupError):
             toolItem ['idTool'] = idUrl
+            toolItem ['bodyContent'] = 0
             toolItem ['httpCode'] = str(failure.type())
             toolItem ['nameTool'] = nameTool
             toolItem ['urlTool'] = request.url
+            
             yield (toolItem)
             #self.logger.error('DNSLookupError on %s', request.url)
             
         elif failure.check(TimeoutError, TCPTimedOutError):
             toolItem ['idTool'] = idUrl
+            toolItem ['bodyContent'] = 0
             toolItem ['nameTool'] = nameTool
             toolItem ['httpCode'] = str(failure.type())
             toolItem ['urlTool'] = request.url

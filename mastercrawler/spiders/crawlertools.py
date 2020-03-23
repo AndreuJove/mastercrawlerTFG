@@ -15,8 +15,8 @@ class ToolsSpider(CrawlSpider):
     start_urls = toolsListOut
     print("number of URL: ") 
     print(len(start_urls))
-    print("URL to scrap: ")
-    print(start_urls)
+    # print("URL to scrap: ")
+    # print(start_urls)
     #user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
 
     def start_requests(self):
@@ -40,6 +40,8 @@ class ToolsSpider(CrawlSpider):
         latency = response.meta.get('download_latency')
         url = response.url
         allLinks = response.xpath('//a/@href').getall()
+
+
         externalLinks = []
         relativeLinks = []
         for link in allLinks:
@@ -79,7 +81,6 @@ class ToolsSpider(CrawlSpider):
         #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers:
         toolItem ['latency'] = latency
         
-
         toolItem ['redirect_reasons'] = redirect_reasons
         toolItem ['redirectUrls'] = redirectUrls
        
@@ -97,12 +98,15 @@ class ToolsSpider(CrawlSpider):
         nameTool = failure.request.meta.get('name') 
         idUrl = failure.request.meta.get('id') 
         request = failure.request
-        
+
+
+
+     
         if failure.check(HttpError):
             toolItem ['idTool'] = idUrl
             toolItem ['httpCode'] = HttpError
             toolItem ['nameTool'] = nameTool
-            toolItem ['urlTool'] = request.url
+            toolItem ['urlTool'] = failure.url
             yield (toolItem)
                   
         elif failure.check(DNSLookupError):
@@ -110,7 +114,7 @@ class ToolsSpider(CrawlSpider):
             toolItem ['bodyContent'] = 0
             toolItem ['httpCode'] = str(failure.type())
             toolItem ['nameTool'] = nameTool
-            toolItem ['urlTool'] = request.url
+            toolItem ['urlTool'] = failure.url
             
             yield (toolItem)
             #self.logger.error('DNSLookupError on %s', request.url)

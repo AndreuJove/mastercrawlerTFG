@@ -19,6 +19,7 @@ class SplashspiderSpider(CrawlSpider):
     # )
     script = '''
         function main(splash, args)
+            
             splash.private_mode_enabled = false
             url = args.url
             assert(splash:go(url))
@@ -27,13 +28,14 @@ class SplashspiderSpider(CrawlSpider):
         end
 
     '''
+    
     # rur_tab = assert(splash:select_all(".filterPanelItem___2z5Gb"))
     #         rur_tab[5]:mouse_click()
     #         assert(splash:wait(1))
     # splash:set_viewport_full()
     def start_requests(self):
         for url in self.start_urls:
-            yield SplashRequest(url = url['url'], callback=self.parse, errback=self.errback_httpbin, endpoint='execute', args={'lua_source': self.script, 'timeout' : 10}, meta={'dont retry': True, 'id' : url['id'], 'name' : url['name']})
+            yield SplashRequest(url = url['url'], callback=self.parse, errback=self.errback_httpbin, endpoint='execute', args={'lua_source': self.script}, meta={'dont retry': True, 'id' : url['id'], 'name' : url['name']})
             
            
     def parse(self, response):
@@ -41,9 +43,6 @@ class SplashspiderSpider(CrawlSpider):
         idTool = response.meta.get('id')
         url = response.url
         allLinks = response.xpath('//a/@href').getall()
-
-
-
 
         externalLinks = []
         relativeLinks = []

@@ -41,7 +41,6 @@ class ToolsSpider(CrawlSpider):
         url = response.url
         allLinks = response.xpath('//a/@href').getall()
 
-
         externalLinks = []
         relativeLinks = []
         for link in allLinks:
@@ -98,10 +97,7 @@ class ToolsSpider(CrawlSpider):
         nameTool = failure.request.meta.get('name') 
         idUrl = failure.request.meta.get('id') 
         request = failure.request
-
-
-
-     
+ 
         if failure.check(HttpError):
             toolItem ['idTool'] = idUrl
             toolItem ['httpCode'] = HttpError

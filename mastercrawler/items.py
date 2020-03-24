@@ -3,6 +3,8 @@
 
 import scrapy
 
+
+#This creates tool item:
 class MastercrawlerItem(scrapy.Item):
     
     idTool = scrapy.Field()
@@ -25,6 +27,7 @@ class MastercrawlerItem(scrapy.Item):
     redirect_reasons = scrapy.Field()
 
     
+    responseBody = scrapy.Field()
 
     numberRelativeLinks = scrapy.Field()
     numberExternalLinks = scrapy.Field()

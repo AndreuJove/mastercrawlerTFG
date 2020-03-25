@@ -27,7 +27,8 @@ class SplashspiderSpider(CrawlSpider):
             url = args.url
             assert(splash:go(url))
             assert(splash:wait(0.5))
-            return{
+
+            return {
                 html = splash:html()  
             } 
         end

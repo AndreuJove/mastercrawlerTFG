@@ -8,7 +8,6 @@ from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupErro
 from ..items import MastercrawlerItem
 
 
-
 class ToolsSpider(CrawlSpider):
     name ='tools'
     #allowed_domains = ['']
@@ -21,7 +20,7 @@ class ToolsSpider(CrawlSpider):
 
     def start_requests(self):
         for url in self.start_urls:
-            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 5, 'id' : url['id'], 'name' : url['name'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
+            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 10, 'id' : url['id'], 'name' : url['name'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
             yield req
 
     def parseHtmlTags(self, tagsList):
@@ -39,8 +38,9 @@ class ToolsSpider(CrawlSpider):
         redirect_reasons = response.meta.get('redirect_reasons')         
         latency = response.meta.get('download_latency')
         url = response.url
+        
+        
         allLinks = response.xpath('//a/@href').getall()
-
         externalLinks = []
         relativeLinks = []
         for link in allLinks:
@@ -52,6 +52,7 @@ class ToolsSpider(CrawlSpider):
                 elif link.startswith("http"):
                     externalLinks.append(link)
         
+
         h1List = response.xpath('//h1/text()').getall()
         h2List = response.xpath('//h2/text()').getall()
         h3List = response.xpath('//h3/text()').getall()
@@ -67,10 +68,14 @@ class ToolsSpider(CrawlSpider):
         toolItem ['idTool'] = idTool
         toolItem ['bodyContent'] = len(response.text)
         toolItem ['httpCode'] = response.status
+        toolItem ['JavaScript'] = "No"
+
+
         toolItem ['urlTool'] = url
-        toolItem ['nameTool'] = nameTool
+        #toolItem ['nameTool'] = nameTool
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()
         toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
+        
 
         toolItem ['h1'] = h1ListOut
         toolItem ['h2'] = h2ListOut
@@ -102,7 +107,7 @@ class ToolsSpider(CrawlSpider):
             toolItem ['idTool'] = idUrl
             toolItem ['httpCode'] = HttpError
             toolItem ['nameTool'] = nameTool
-            toolItem ['urlTool'] = failure.url
+            toolItem ['urlTool'] = request.url
             yield (toolItem)
                   
         elif failure.check(DNSLookupError):
@@ -110,7 +115,7 @@ class ToolsSpider(CrawlSpider):
             toolItem ['bodyContent'] = 0
             toolItem ['httpCode'] = str(failure.type())
             toolItem ['nameTool'] = nameTool
-            toolItem ['urlTool'] = failure.url
+            toolItem ['urlTool'] = request.url
             
             yield (toolItem)
             #self.logger.error('DNSLookupError on %s', request.url)

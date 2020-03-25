@@ -19,11 +19,9 @@ class SplashspiderSpider(CrawlSpider):
     # )
     script = '''
         function main(splash, args)
-            
             splash:on_request(function(request)
                 request:set_timeout(10)
                 request:enable_response_body()
-
             end)
             splash.private_mode_enabled = false
             url = args.url
@@ -44,15 +42,25 @@ class SplashspiderSpider(CrawlSpider):
     def start_requests(self):
         for url in self.start_urls:
             yield SplashRequest(url = url['url'], callback=self.parse, errback=self.errback_httpbin, endpoint='execute', magic_response= True, args={'lua_source': self.script}, meta={'dont retry': True, 'id' : url['id'], 'name' : url['name']})
-           
+
+    def parseHtmlTags(self, tagsList):
+        tagsList = [item.replace('\n', "") for item in tagsList]
+        tagsList = [item.strip() for item in tagsList]
+        while("" in tagsList):
+            tagsList.remove("")
+        return tagsList
+
     def parse(self, response):
         
         idTool = response.meta.get('id')
         url = response.url
+        nameTool = response.meta.get('name') 
         redirect_reasons = response.meta.get('redirect_reasons')
+        redirectUrls = response.meta.get('redirect_urls')       
+        latency = response.meta.get('download_latency')
+        
+        
         allLinks = response.xpath('//a/@href').getall()
-
-
         externalLinks = []
         relativeLinks = []
         for link in allLinks:
@@ -65,18 +73,42 @@ class SplashspiderSpider(CrawlSpider):
                     externalLinks.append(link)
         
         
+        h1List = response.xpath('//h1/text()').getall()
+        h2List = response.xpath('//h2/text()').getall()
+        h3List = response.xpath('//h3/text()').getall()
+        h4List = response.xpath('//h4/text()').getall()
+
+        h1ListOut = self.parseHtmlTags(h1List)
+        h2ListOut = self.parseHtmlTags(h2List)
+        h3ListOut = self.parseHtmlTags(h3List)
+        h4ListOut = self.parseHtmlTags(h4List)
+
         
+
+        #Create Item:
         toolItem = MastercrawlerItem()
         toolItem ['idTool'] = idTool
-        toolItem ['titleUrl'] = response.xpath('//title/text()').get()
-        toolItem ['urlTool'] = response.url
         toolItem ['bodyContent'] = len(response.text)
         toolItem ['responseBody'] = len(response.body)
         toolItem ['httpCode'] = response.status
+        toolItem ['JavaScript'] = "Yes"
+
+        toolItem ['titleUrl'] = response.xpath('//title/text()').get()
+        toolItem ['urlTool'] = response.url
+        
+        toolItem ['h1'] = h1ListOut
+        toolItem ['h2'] = h2ListOut
+        toolItem ['h3'] = h3ListOut
+        toolItem ['h4'] = h4ListOut
+
+        toolItem ['latency'] = latency
+        
         toolItem ['redirect_reasons'] = redirect_reasons
+        toolItem ['redirectUrls'] = redirectUrls
+
         toolItem ['numberRelativeLinks'] = len(relativeLinks)
         toolItem ['numberExternalLinks'] = len(externalLinks)
-        
+        #toolItem ['relativeLinks'] = relativeLinks
         yield toolItem
 
     
@@ -86,7 +118,7 @@ class SplashspiderSpider(CrawlSpider):
         toolItem = MastercrawlerItem()
         nameTool = failure.request.meta.get('name') 
         idUrl = failure.request.meta.get('id') 
-        request = failure.request
+        
         
         if failure.check(HttpError):
             print("Entered in HttpError: " + url)
@@ -101,7 +133,7 @@ class SplashspiderSpider(CrawlSpider):
             toolItem ['idTool'] = idUrl
             toolItem ['httpCode'] = str(failure.type())
             toolItem ['nameTool'] = nameTool
-            toolItem ['urlTool'] = failure.url
+            toolItem ['urlTool'] = url
             yield (toolItem)
             #self.logger.error('DNSLookupError on %s', request.url)
             
@@ -110,7 +142,7 @@ class SplashspiderSpider(CrawlSpider):
             toolItem ['idTool'] = idUrl
             toolItem ['nameTool'] = nameTool
             toolItem ['httpCode'] = str(failure.type())
-            toolItem ['urlTool'] = failure.url
+            toolItem ['urlTool'] =  url
             yield (toolItem)
 
         elif failure.check(ConnectError):
@@ -118,7 +150,7 @@ class SplashspiderSpider(CrawlSpider):
             toolItem ['idTool'] = idUrl
             toolItem ['nameTool'] = nameTool
             toolItem ['httpCode'] = ConnectError
-            toolItem ['urlTool'] = request.url
+            toolItem ['urlTool'] = url
             yield (toolItem)
         
         elif failure.check(ConnectionRefusedError):
@@ -126,7 +158,7 @@ class SplashspiderSpider(CrawlSpider):
             toolItem ['idTool'] = idUrl
             toolItem ['nameTool'] = nameTool
             toolItem ['httpCode'] = ConnectionRefusedError
-            toolItem ['urlTool'] = request.url
+            toolItem ['urlTool'] = url
             yield (toolItem)
         
         elif failure.check(ResponseFailed):
@@ -135,12 +167,12 @@ class SplashspiderSpider(CrawlSpider):
             #toolItem ['httpCode'] = str(failure.type())
             #TypeError: __init__() missing 1 required positional argument: 'reasons'
             toolItem ['httpCode'] = ResponseFailed
-            toolItem ['urlTool'] = failure.url
+            toolItem ['urlTool'] = url
             yield (toolItem)
 
         elif failure.check(ResponseNeverReceived):
             toolItem ['idTool'] = idUrl
             toolItem ['nameTool'] = nameTool
             toolItem ['httpCode'] = ResponseNeverReceived
-            toolItem ['urlTool'] = failure.url
+            toolItem ['urlTool'] = url
             yield (toolItem)

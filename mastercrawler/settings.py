@@ -14,7 +14,6 @@ BOT_NAME = 'mastercrawler'
 SPIDER_MODULES = ['mastercrawler.spiders']
 NEWSPIDER_MODULE = 'mastercrawler.spiders'
 
-
 SPLASH_URL = 'http://0.0.0.0:8050/'
 
 

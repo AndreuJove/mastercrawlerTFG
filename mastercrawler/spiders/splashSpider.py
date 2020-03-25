@@ -8,7 +8,6 @@ from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupErro
 from ..items import MastercrawlerItem
 from scrapy_splash import SplashRequest
 
-
 class SplashspiderSpider(CrawlSpider):
     name = 'splashSpider'
     #allowed_domains = ['example.com']
@@ -17,6 +16,7 @@ class SplashspiderSpider(CrawlSpider):
     # rules = (
     #     Rule(LinkExtractor(allow=r'Items/'), callback='parse_item', follow=True),
     # )
+
     script = '''
         function main(splash, args)
             splash:on_request(function(request)
@@ -28,8 +28,7 @@ class SplashspiderSpider(CrawlSpider):
             assert(splash:go(url))
             assert(splash:wait(0.5))
             return{
-                html = splash:html()
-                
+                html = splash:html()  
             } 
         end
 
@@ -51,7 +50,6 @@ class SplashspiderSpider(CrawlSpider):
         return tagsList
 
     def parse(self, response):
-        
         idTool = response.meta.get('id')
         url = response.url
         nameTool = response.meta.get('name') 

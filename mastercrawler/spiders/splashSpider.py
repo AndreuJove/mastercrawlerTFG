@@ -29,7 +29,9 @@ class SplashspiderSpider(CrawlSpider):
             assert(splash:wait(0.5))
 
             return {
-                html = splash:html()  
+                html = splash:html() 
+                
+
             } 
         end
 
@@ -41,7 +43,7 @@ class SplashspiderSpider(CrawlSpider):
     # splash:set_viewport_full()
     def start_requests(self):
         for url in self.start_urls:
-            yield SplashRequest(url = url['url'], callback=self.parse, errback=self.errback_httpbin, endpoint='execute', magic_response= True, args={'lua_source': self.script}, meta={'dont retry': True, 'id' : url['id'], 'name' : url['name']})
+            yield SplashRequest(url = url['url'], callback=self.parse, errback=self.errback_httpbin, endpoint='execute', magic_response= True, args={'lua_source': self.script}, meta={'dont retry': True, 'id' : url['id'], 'name' : url['name']}, http_status_from_error_code=False)
 
     def parseHtmlTags(self, tagsList):
         tagsList = [item.replace('\n', "") for item in tagsList]
@@ -94,6 +96,7 @@ class SplashspiderSpider(CrawlSpider):
 
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()
         toolItem ['urlTool'] = response.url
+        toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
         
         toolItem ['h1'] = h1ListOut
         toolItem ['h2'] = h2ListOut
@@ -112,7 +115,7 @@ class SplashspiderSpider(CrawlSpider):
 
     
     def errback_httpbin(self, failure):
-        url = failure.request.url
+        url = failure.request._original_url
         print("Entered in errback_httpin: " + url)
         toolItem = MastercrawlerItem()
         nameTool = failure.request.meta.get('name') 

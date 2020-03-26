@@ -20,21 +20,18 @@ class SplashspiderSpider(CrawlSpider):
     script = '''
         function main(splash, args)
             splash:on_request(function(request)
-                request:set_timeout(10)
+                request:set_timeout(15)
                 request:enable_response_body()
             end)
             splash.private_mode_enabled = false
             url = args.url
-            assert(splash:go(url))
+            splash:go(url)
             assert(splash:wait(0.5))
-
             return {
-                html = splash:html() 
-                
-
-            } 
+                html = splash:html()
+            }
         end
-
+        
     '''
     
     # rur_tab = assert(splash:select_all(".filterPanelItem___2z5Gb"))
@@ -43,7 +40,7 @@ class SplashspiderSpider(CrawlSpider):
     # splash:set_viewport_full()
     def start_requests(self):
         for url in self.start_urls:
-            yield SplashRequest(url = url['url'], callback=self.parse, errback=self.errback_httpbin, endpoint='execute', magic_response= True, args={'lua_source': self.script}, meta={'dont retry': True, 'id' : url['id'], 'name' : url['name']}, http_status_from_error_code=False)
+            yield SplashRequest(url = url['url'], callback=self.parse, errback=self.errback_httpbin, endpoint='execute', magic_response= True, args={'lua_source': self.script}, meta={'dont retry': True, 'id' : url['id'], 'name' : url['name']})
 
     def parseHtmlTags(self, tagsList):
         tagsList = [item.replace('\n', "") for item in tagsList]
@@ -59,8 +56,6 @@ class SplashspiderSpider(CrawlSpider):
         redirect_reasons = response.meta.get('redirect_reasons')
         redirectUrls = response.meta.get('redirect_urls')       
         latency = response.meta.get('download_latency')
-        
-        
         allLinks = response.xpath('//a/@href').getall()
         externalLinks = []
         relativeLinks = []
@@ -110,6 +105,7 @@ class SplashspiderSpider(CrawlSpider):
 
         toolItem ['numberRelativeLinks'] = len(relativeLinks)
         toolItem ['numberExternalLinks'] = len(externalLinks)
+        toolItem ['externalLinks'] = externalLinks
         #toolItem ['relativeLinks'] = relativeLinks
         yield toolItem
 
@@ -125,7 +121,7 @@ class SplashspiderSpider(CrawlSpider):
         if failure.check(HttpError):
             print("Entered in HttpError: " + url)
             toolItem ['idTool'] = idUrl
-            #toolItem ['httpCode'] = HttpError
+            toolItem ['httpCode'] = "HttpError"
             toolItem ['nameTool'] = nameTool
             toolItem ['urlTool'] = url
             yield (toolItem)
@@ -151,7 +147,7 @@ class SplashspiderSpider(CrawlSpider):
             print("Entered in ConnectError: " + url)
             toolItem ['idTool'] = idUrl
             toolItem ['nameTool'] = nameTool
-            toolItem ['httpCode'] = ConnectError
+            toolItem ['httpCode'] = "ConnectError"
             toolItem ['urlTool'] = url
             yield (toolItem)
         
@@ -159,7 +155,7 @@ class SplashspiderSpider(CrawlSpider):
             print("Entered in ConnectionRefusedError: " + url)
             toolItem ['idTool'] = idUrl
             toolItem ['nameTool'] = nameTool
-            toolItem ['httpCode'] = ConnectionRefusedError
+            toolItem ['httpCode'] = "ConnectionRefusedError"
             toolItem ['urlTool'] = url
             yield (toolItem)
         
@@ -168,13 +164,13 @@ class SplashspiderSpider(CrawlSpider):
             toolItem ['nameTool'] = nameTool
             #toolItem ['httpCode'] = str(failure.type())
             #TypeError: __init__() missing 1 required positional argument: 'reasons'
-            toolItem ['httpCode'] = ResponseFailed
+            toolItem ['httpCode'] = "ResponseFailed"
             toolItem ['urlTool'] = url
             yield (toolItem)
 
         elif failure.check(ResponseNeverReceived):
             toolItem ['idTool'] = idUrl
             toolItem ['nameTool'] = nameTool
-            toolItem ['httpCode'] = ResponseNeverReceived
+            toolItem ['httpCode'] = "ResponseNeverReceived"
             toolItem ['urlTool'] = url
             yield (toolItem)

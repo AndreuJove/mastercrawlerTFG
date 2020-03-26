@@ -20,7 +20,7 @@ class ToolsSpider(CrawlSpider):
 
     def start_requests(self):
         for url in self.start_urls:
-            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 10, 'id' : url['id'], 'name' : url['name'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
+            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 15, 'id' : url['id'], 'name' : url['name'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
             yield req
 
     def parseHtmlTags(self, tagsList):

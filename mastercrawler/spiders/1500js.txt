@@ -1,0 +1,132 @@
+2020-03-26 19:33:32 [scrapy.utils.log] INFO: Scrapy 2.0.0 started (bot: mastercrawler)
+2020-03-26 19:33:32 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.8.1 (default, Jan  8 2020, 22:29:32) - [GCC 7.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-5.3.0-42-generic-x86_64-with-glibc2.10
+2020-03-26 19:33:32 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2020-03-26 19:33:32 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'mastercrawler',
+ 'DUPEFILTER_CLASS': 'scrapy_splash.SplashAwareDupeFilter',
+ 'NEWSPIDER_MODULE': 'mastercrawler.spiders',
+ 'SPIDER_MODULES': ['mastercrawler.spiders']}
+2020-03-26 19:33:32 [scrapy.extensions.telnet] INFO: Telnet Password: fcec59373d9894fe
+2020-03-26 19:33:32 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-03-26 19:33:32 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy_splash.SplashCookiesMiddleware',
+ 'scrapy_splash.SplashMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-03-26 19:33:32 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy_splash.SplashDeduplicateArgsMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-03-26 19:33:32 [scrapy.middleware] INFO: Enabled item pipelines:
+['mastercrawler.pipelines.MastercrawlerPipeline']
+2020-03-26 19:33:32 [scrapy.core.engine] INFO: Spider opened
+2020-03-26 19:33:32 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-03-26 19:33:32 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-03-26 19:33:32 [py.warnings] WARNING: /home/andreu/anaconda3/envs/scrapyenv/lib/python3.8/site-packages/scrapy_splash/request.py:41: ScrapyDeprecationWarning: Call to deprecated function to_native_str. Use to_unicode instead.
+  url = to_native_str(url)
+
+2020-03-26 19:33:32 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 12, 'error': "unexpected symbol near ')'", 'type': 'LUA_INIT_ERROR', 'message': '[string "..."]:12: unexpected symbol near \')\''}}
+2020-03-26 19:33:32 [scrapy.core.engine] DEBUG: Crawled (400) <GET http://sourceforge.net/projects/asm2ace/ via http://0.0.0.0:8050/execute> (referer: None)
+2020-03-26 19:33:32 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 12, 'error': "unexpected symbol near ')'", 'type': 'LUA_INIT_ERROR', 'message': '[string "..."]:12: unexpected symbol near \')\''}}
+2020-03-26 19:33:32 [scrapy.core.engine] DEBUG: Crawled (400) <GET http://srv00.recas.ba.infn.it/ASPicDB/ via http://0.0.0.0:8050/execute> (referer: None)
+2020-03-26 19:33:32 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 12, 'error': "unexpected symbol near ')'", 'type': 'LUA_INIT_ERROR', 'message': '[string "..."]:12: unexpected symbol near \')\''}}
+2020-03-26 19:33:32 [scrapy.core.engine] DEBUG: Crawled (400) <GET https://cran.r-project.org/web/packages/aSPU/ via http://0.0.0.0:8050/execute> (referer: None)
+2020-03-26 19:33:32 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 12, 'error': "unexpected symbol near ')'", 'type': 'LUA_INIT_ERROR', 'message': '[string "..."]:12: unexpected symbol near \')\''}}
+2020-03-26 19:33:32 [scrapy.core.engine] DEBUG: Crawled (400) <GET http://aspex.sourceforge.net/ via http://0.0.0.0:8050/execute> (referer: None)
+2020-03-26 19:33:32 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 12, 'error': "unexpected symbol near ')'", 'type': 'LUA_INIT_ERROR', 'message': '[string "..."]:12: unexpected symbol near \')\''}}
+2020-03-26 19:33:32 [scrapy.core.engine] DEBUG: Crawled (400) <GET http://sysbio.kribb.re.kr/AsiDesigner/ via http://0.0.0.0:8050/execute> (referer: None)
+2020-03-26 19:33:32 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 12, 'error': "unexpected symbol near ')'", 'type': 'LUA_INIT_ERROR', 'message': '[string "..."]:12: unexpected symbol near \')\''}}
+2020-03-26 19:33:32 [scrapy.core.engine] DEBUG: Crawled (400) <GET http://bioconductor.org/packages/release/bioc/html/ASICS.html via http://0.0.0.0:8050/execute> (referer: None)
+2020-03-26 19:33:32 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 12, 'error': "unexpected symbol near ')'", 'type': 'LUA_INIT_ERROR', 'message': '[string "..."]:12: unexpected symbol near \')\''}}
+2020-03-26 19:33:32 [scrapy.core.engine] DEBUG: Crawled (400) <GET https://github.com/xgaia/asko-cli via http://0.0.0.0:8050/execute> (referer: None)
+2020-03-26 19:33:32 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 12, 'error': "unexpected symbol near ')'", 'type': 'LUA_INIT_ERROR', 'message': '[string "..."]:12: unexpected symbol near \')\''}}
+2020-03-26 19:33:32 [scrapy.core.engine] DEBUG: Crawled (400) <GET http://aspwood.popgenie.org/aspwood-v3.0/ via http://0.0.0.0:8050/execute> (referer: None)
+2020-03-26 19:33:32 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 12, 'error': "unexpected symbol near ')'", 'type': 'LUA_INIT_ERROR', 'message': '[string "..."]:12: unexpected symbol near \')\''}}
+2020-03-26 19:33:32 [scrapy.core.engine] DEBUG: Crawled (400) <GET http://150.145.82.212/aspic/aspicgeneid.tar.gz via http://0.0.0.0:8050/execute> (referer: None)
+2020-03-26 19:33:32 [scrapy.core.scraper] DEBUG: Scraped from <400 http://sourceforge.net/projects/asm2ace/>
+{'httpCode': 'HttpError',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/asm2ace',
+ 'nameTool': 'asm2ace',
+ 'urlTool': 'http://sourceforge.net/projects/asm2ace/'}
+2020-03-26 19:33:32 [scrapy.core.scraper] DEBUG: Scraped from <400 http://srv00.recas.ba.infn.it/ASPicDB/>
+{'httpCode': 'HttpError',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspicdb',
+ 'nameTool': 'Alternative splicing prediction database (ASPICdb)',
+ 'urlTool': 'http://srv00.recas.ba.infn.it/ASPicDB/'}
+2020-03-26 19:33:32 [scrapy.core.scraper] DEBUG: Scraped from <400 https://cran.r-project.org/web/packages/aSPU/>
+{'httpCode': 'HttpError',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspu',
+ 'nameTool': 'aSPU',
+ 'urlTool': 'https://cran.r-project.org/web/packages/aSPU/'}
+2020-03-26 19:33:32 [scrapy.core.scraper] DEBUG: Scraped from <400 http://aspex.sourceforge.net/>
+{'httpCode': 'HttpError',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspex',
+ 'nameTool': 'ASPEX',
+ 'urlTool': 'http://aspex.sourceforge.net/'}
+2020-03-26 19:33:32 [scrapy.core.scraper] DEBUG: Scraped from <400 http://sysbio.kribb.re.kr/AsiDesigner/>
+{'httpCode': 'HttpError',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/asidesigner',
+ 'nameTool': 'AsiDesigner',
+ 'urlTool': 'http://sysbio.kribb.re.kr/AsiDesigner/'}
+2020-03-26 19:33:32 [scrapy.core.scraper] DEBUG: Scraped from <400 http://bioconductor.org/packages/release/bioc/html/ASICS.html>
+{'httpCode': 'HttpError',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/asics',
+ 'nameTool': 'ASICS',
+ 'urlTool': 'http://bioconductor.org/packages/release/bioc/html/ASICS.html'}
+2020-03-26 19:33:32 [scrapy.core.scraper] DEBUG: Scraped from <400 https://github.com/xgaia/asko-cli>
+{'httpCode': 'HttpError',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/askocli',
+ 'nameTool': 'askocli',
+ 'urlTool': 'https://github.com/xgaia/asko-cli'}
+2020-03-26 19:33:32 [scrapy.core.scraper] DEBUG: Scraped from <400 http://aspwood.popgenie.org/aspwood-v3.0/>
+{'httpCode': 'HttpError',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspwood',
+ 'nameTool': 'AspWood',
+ 'urlTool': 'http://aspwood.popgenie.org/aspwood-v3.0/'}
+2020-03-26 19:33:32 [scrapy.core.scraper] DEBUG: Scraped from <400 http://150.145.82.212/aspic/aspicgeneid.tar.gz>
+{'httpCode': 'HttpError',
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspic-geneid',
+ 'nameTool': 'ASPic-GeneID',
+ 'urlTool': 'http://150.145.82.212/aspic/aspicgeneid.tar.gz'}
+2020-03-26 19:33:32 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-03-26 19:33:32 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 9704,
+ 'downloader/request_count': 9,
+ 'downloader/request_method_count/POST': 9,
+ 'downloader/response_bytes': 3663,
+ 'downloader/response_count': 9,
+ 'downloader/response_status_count/400': 9,
+ 'elapsed_time_seconds': 0.211457,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 3, 26, 18, 33, 32, 663588),
+ 'item_scraped_count': 9,
+ 'log_count/DEBUG': 18,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 10,
+ 'memusage/max': 444289024,
+ 'memusage/startup': 444289024,
+ 'response_received_count': 9,
+ 'scheduler/dequeued': 18,
+ 'scheduler/dequeued/memory': 18,
+ 'scheduler/enqueued': 18,
+ 'scheduler/enqueued/memory': 18,
+ 'splash/execute/request_count': 9,
+ 'splash/execute/response_count/400': 9,
+ 'start_time': datetime.datetime(2020, 3, 26, 18, 33, 32, 452131)}
+2020-03-26 19:33:32 [scrapy.core.engine] INFO: Spider closed (finished)

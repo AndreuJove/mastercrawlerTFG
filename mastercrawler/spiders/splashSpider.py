@@ -26,7 +26,7 @@ class SplashspiderSpider(CrawlSpider):
             splash.private_mode_enabled = false
             url = args.url
             splash:go(url)
-            assert(splash:wait(0.5))
+            assert(splash:wait(1))
             return {
                 html = splash:html()
             }
@@ -40,7 +40,7 @@ class SplashspiderSpider(CrawlSpider):
     # splash:set_viewport_full()
     def start_requests(self):
         for url in self.start_urls:
-            yield SplashRequest(url = url['url'], callback=self.parse, errback=self.errback_httpbin, endpoint='execute', magic_response= True, args={'lua_source': self.script}, meta={'dont retry': True, 'id' : url['id'], 'name' : url['name']})
+            yield SplashRequest(url = url['url'], callback=self.parse, errback=self.errback_httpbin, endpoint='execute', magic_response= True, args={'lua_source': self.script}, meta={'dont retry': True, 'dont_redirect': False, 'id' : url['id'], 'name' : url['name']})
 
     def parseHtmlTags(self, tagsList):
         tagsList = [item.replace('\n', "") for item in tagsList]

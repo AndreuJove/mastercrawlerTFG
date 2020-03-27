@@ -85,6 +85,7 @@ ITEM_PIPELINES = {
    'mastercrawler.pipelines.MastercrawlerPipeline': 300,
 }
 
+HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

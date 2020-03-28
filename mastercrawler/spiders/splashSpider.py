@@ -24,6 +24,7 @@ class SplashspiderSpider(CrawlSpider):
                 request:enable_response_body()
             end)
             splash.private_mode_enabled = false
+            
             url = args.url
             splash:go(url)
             assert(splash:wait(1))

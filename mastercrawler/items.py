@@ -9,6 +9,10 @@ class MastercrawlerItem(scrapy.Item):
     
     idTool = scrapy.Field()
     bodyContent = scrapy.Field()
+
+    scriptsTagsText = scrapy.Field()
+    lenScriptsTagsText = scrapy.Field()
+
     nameTool = scrapy.Field()
     urlTool = scrapy.Field()
     httpCode = scrapy.Field()
@@ -21,6 +25,8 @@ class MastercrawlerItem(scrapy.Item):
     JavaScript = scrapy.Field()
 
     metaDescription = scrapy.Field()    
+
+    
 
     latency = scrapy.Field()
     errorMessage = scrapy.Field()

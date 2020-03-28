@@ -30,6 +30,11 @@ class ToolsSpider(CrawlSpider):
             tagsList.remove("")
         return tagsList
 
+
+    def listToString(self, listInput):
+        str1 = ""
+        return (str1.join(listInput))
+
     def parse_httpbin(self, response):  
 
         idTool = response.meta.get('id')
@@ -53,6 +58,14 @@ class ToolsSpider(CrawlSpider):
                     externalLinks.append(link)
         
 
+
+        scriptsTagsText = response.xpath('//script/text()').getall()
+    
+        lenScriptsTagsText = len(self.listToString(scriptsTagsText))
+
+        # lenScriptsTagsText = len(response.xpath('//script/text()').getall())
+
+
         h1List = response.xpath('//h1/text()').getall()
         h2List = response.xpath('//h2/text()').getall()
         h3List = response.xpath('//h3/text()').getall()
@@ -64,12 +77,16 @@ class ToolsSpider(CrawlSpider):
         h4ListOut = self.parseHtmlTags(h4List)
 
 
+
         toolItem = MastercrawlerItem()
         toolItem ['idTool'] = idTool
-        toolItem ['bodyContent'] = len(response.text)
+        toolItem ['bodyContent'] = len(response.text) - lenScriptsTagsText
         toolItem ['httpCode'] = response.status
+        
         toolItem ['JavaScript'] = "No"
 
+        toolItem ['scriptsTagsText'] = scriptsTagsText
+        toolItem ['lenScriptsTagsText'] = lenScriptsTagsText
 
         toolItem ['urlTool'] = url
         #toolItem ['nameTool'] = nameTool

@@ -1,19 +1,19 @@
-2020-03-27 13:22:07 [scrapy.utils.log] INFO: Scrapy 2.0.0 started (bot: mastercrawler)
-2020-03-27 13:22:07 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.8.1 (default, Jan  8 2020, 22:29:32) - [GCC 7.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-5.3.0-42-generic-x86_64-with-glibc2.10
-2020-03-27 13:22:07 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
-2020-03-27 13:22:07 [scrapy.crawler] INFO: Overridden settings:
+2020-03-28 19:59:18 [scrapy.utils.log] INFO: Scrapy 2.0.0 started (bot: mastercrawler)
+2020-03-28 19:59:18 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.8.1 (default, Jan  8 2020, 22:29:32) - [GCC 7.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-5.3.0-42-generic-x86_64-with-glibc2.10
+2020-03-28 19:59:18 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2020-03-28 19:59:18 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'mastercrawler',
  'DUPEFILTER_CLASS': 'scrapy_splash.SplashAwareDupeFilter',
  'HTTPCACHE_STORAGE': 'scrapy_splash.SplashAwareFSCacheStorage',
  'NEWSPIDER_MODULE': 'mastercrawler.spiders',
  'SPIDER_MODULES': ['mastercrawler.spiders']}
-2020-03-27 13:22:07 [scrapy.extensions.telnet] INFO: Telnet Password: 5b908a75117635bc
-2020-03-27 13:22:07 [scrapy.middleware] INFO: Enabled extensions:
+2020-03-28 19:59:18 [scrapy.extensions.telnet] INFO: Telnet Password: 265135e155328cf0
+2020-03-28 19:59:18 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.logstats.LogStats']
-2020-03-27 13:22:07 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2020-03-28 19:59:18 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
@@ -27,204 +27,302 @@
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2020-03-27 13:22:07 [scrapy.middleware] INFO: Enabled spider middlewares:
+2020-03-28 19:59:18 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy_splash.SplashDeduplicateArgsMiddleware',
  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2020-03-27 13:22:07 [scrapy.middleware] INFO: Enabled item pipelines:
+2020-03-28 19:59:18 [scrapy.middleware] INFO: Enabled item pipelines:
 ['mastercrawler.pipelines.MastercrawlerPipeline']
-2020-03-27 13:22:07 [scrapy.core.engine] INFO: Spider opened
-2020-03-27 13:22:07 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2020-03-27 13:22:07 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2020-03-27 13:22:07 [py.warnings] WARNING: /home/andreu/anaconda3/envs/scrapyenv/lib/python3.8/site-packages/scrapy_splash/request.py:41: ScrapyDeprecationWarning: Call to deprecated function to_native_str. Use to_unicode instead.
-  url = to_native_str(url)
-
-2020-03-27 13:22:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://cran.r-project.org/web/packages/aSPU/ via http://0.0.0.0:8050/execute> (referer: None)
-2020-03-27 13:22:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://cran.r-project.org/web/packages/aSPU/>
-{'JavaScript': 'Yes',
- 'bodyContent': 4897,
+2020-03-28 19:59:18 [scrapy.core.engine] INFO: Spider opened
+2020-03-28 19:59:18 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-03-28 19:59:18 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-03-28 19:59:19 [scrapy.core.engine] DEBUG: Crawled (200) <POST http://0.0.0.0:8050/execute> (referer: None)
+2020-03-28 19:59:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://cran.r-project.org/web/packages/aSPU/>
+{'bodyContent': 4897,
  'externalLinks': [],
- 'h1': [],
- 'h2': ['aSPU: Adaptive Sum of Powered Score Test'],
- 'h3': [],
- 'h4': ['Downloads:', 'Reverse dependencies:', 'Linking:'],
  'httpCode': 200,
  'idTool': 'https://openebench.bsc.es/monitor/tool/aspu',
- 'latency': 1.4318900108337402,
+ 'latency': 1.060105323791504,
+ 'lenScriptsTagsText': 0,
  'metaDescription': None,
  'numberExternalLinks': 0,
  'numberRelativeLinks': 23,
  'redirectUrls': None,
  'redirect_reasons': None,
- 'responseBody': 4899,
+ 'scriptsTagsText': [],
  'titleUrl': 'CRAN - Package aSPU',
  'urlTool': 'https://cran.r-project.org/web/packages/aSPU/'}
-2020-03-27 13:22:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://sysbio.kribb.re.kr/AsiDesigner/ via http://0.0.0.0:8050/execute> (referer: None)
-2020-03-27 13:22:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://sysbio.kribb.re.kr/AsiDesigner/>
-{'JavaScript': 'Yes',
- 'bodyContent': 304,
+2020-03-28 19:59:20 [scrapy.core.engine] DEBUG: Crawled (200) <POST http://0.0.0.0:8050/execute> (referer: None)
+2020-03-28 19:59:20 [scrapy.core.engine] DEBUG: Crawled (200) <POST http://0.0.0.0:8050/execute> (referer: None)
+2020-03-28 19:59:20 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bioconductor.org/packages/release/bioc/html/ASICS.html>
+{'bodyContent': 20586,
  'externalLinks': [],
- 'h1': ['Failed loading page (Host sysbio.kribb.re.kr not found)'],
- 'h2': ['http://sysbio.kribb.re.kr/AsiDesigner/'],
- 'h3': [],
- 'h4': [],
- 'httpCode': 200,
- 'idTool': 'https://openebench.bsc.es/monitor/tool/asidesigner',
- 'latency': 1.7331361770629883,
- 'metaDescription': None,
- 'numberExternalLinks': 0,
- 'numberRelativeLinks': 0,
- 'redirectUrls': None,
- 'redirect_reasons': None,
- 'responseBody': 304,
- 'titleUrl': 'Failed loading page',
- 'urlTool': 'http://sysbio.kribb.re.kr/AsiDesigner/'}
-2020-03-27 13:22:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/xgaia/asko-cli via http://0.0.0.0:8050/execute> (referer: None)
-2020-03-27 13:22:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://aspex.sourceforge.net/ via http://0.0.0.0:8050/execute> (referer: None)
-2020-03-27 13:22:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bioconductor.org/packages/release/bioc/html/ASICS.html via http://0.0.0.0:8050/execute> (referer: None)
-2020-03-27 13:22:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://aspwood.popgenie.org/aspwood-v3.0/ via http://0.0.0.0:8050/execute> (referer: None)
-2020-03-27 13:22:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/xgaia/asko-cli>
-{'JavaScript': 'Yes',
- 'bodyContent': 84145,
- 'externalLinks': [],
- 'h1': ['Askocli'],
- 'h2': ['Latest commit',
-        'Files',
-        'README.md',
-        'Requirment',
-        'Installation',
-        'Usage example',
-        'History'],
- 'h3': ['Join GitHub today'],
- 'h4': ['Learn & contribute',
-        'Connect with others',
-        'Clone with HTTPS',
-        'Downloading',
-        'Launching GitHub Desktop',
-        'Launching GitHub Desktop',
-        'Launching Xcode',
-        'Launching Visual Studio'],
- 'httpCode': 200,
- 'idTool': 'https://openebench.bsc.es/monitor/tool/askocli',
- 'latency': 2.2037806510925293,
- 'metaDescription': 'asko-cli provide cli tools to insert data into a distant '
-                    'AskOmics - xgaia/asko-cli',
- 'numberExternalLinks': 0,
- 'numberRelativeLinks': 93,
- 'redirectUrls': None,
- 'redirect_reasons': None,
- 'responseBody': 84176,
- 'titleUrl': 'GitHub - xgaia/asko-cli: asko-cli provide cli tools to insert '
-             'data into a distant AskOmics',
- 'urlTool': 'https://github.com/xgaia/asko-cli'}
-2020-03-27 13:22:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://aspex.sourceforge.net/>
-{'JavaScript': 'Yes',
- 'bodyContent': 2458,
- 'externalLinks': [],
- 'h1': [],
- 'h2': ['The ASPEX package: affected sib-pair exclusion mapping'],
- 'h3': [],
- 'h4': [],
- 'httpCode': 200,
- 'idTool': 'https://openebench.bsc.es/monitor/tool/aspex',
- 'latency': 2.2242491245269775,
- 'metaDescription': None,
- 'numberExternalLinks': 0,
- 'numberRelativeLinks': 12,
- 'redirectUrls': None,
- 'redirect_reasons': None,
- 'responseBody': 2458,
- 'titleUrl': 'The ASPEX package: affected sib-pair exclusion mapping',
- 'urlTool': 'http://aspex.sourceforge.net/'}
-2020-03-27 13:22:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bioconductor.org/packages/release/bioc/html/ASICS.html>
-{'JavaScript': 'Yes',
- 'bodyContent': 21232,
- 'externalLinks': [],
- 'h1': ['ASICS'],
- 'h2': ['Automatic Statistical Identification in Complex Spectra'],
- 'h3': ['Installation', 'Documentation', 'Details', 'Package Archives'],
- 'h4': [],
  'httpCode': 200,
  'idTool': 'https://openebench.bsc.es/monitor/tool/asics',
- 'latency': 2.2646634578704834,
+ 'latency': 1.4972195625305176,
+ 'lenScriptsTagsText': 646,
  'metaDescription': None,
  'numberExternalLinks': 0,
  'numberRelativeLinks': 95,
  'redirectUrls': None,
  'redirect_reasons': None,
- 'responseBody': 21242,
+ 'scriptsTagsText': ['\n'
+                     '        if '
+                     '(!window.location.href.match(/bioconductor\\.org|\\/\\/localhost/i)) '
+                     '{\n'
+                     '            var mirror = true;\n'
+                     "            document.write('<base "
+                     'href="//www.bioconductor.org"/>\\n\');\n'
+                     '        } \n'
+                     '    ',
+                     '\n'
+                     '    var _gaq = _gaq || [];\n'
+                     "    _gaq.push(['_setAccount', 'UA-9338486-1']);\n"
+                     "    _gaq.push(['_trackPageview']);\n"
+                     '\n'
+                     '    (function() {\n'
+                     "      var ga = document.createElement('script'); ga.type "
+                     "= 'text/javascript'; ga.async = true;\n"
+                     "      ga.src = ('https:' == document.location.protocol ? "
+                     "'https://ssl' : 'http://www') + "
+                     "'.google-analytics.com/ga.js';\n"
+                     '      var s = '
+                     "document.getElementsByTagName('script')[0]; "
+                     's.parentNode.insertBefore(ga, s);\n'
+                     '    })();\n'
+                     '  '],
  'titleUrl': 'Bioconductor - ASICS',
  'urlTool': 'http://bioconductor.org/packages/release/bioc/html/ASICS.html'}
-2020-03-27 13:22:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://aspwood.popgenie.org/aspwood-v3.0/>
-{'JavaScript': 'Yes',
- 'bodyContent': 14497,
+2020-03-28 19:59:20 [scrapy.core.scraper] DEBUG: Scraped from <200 http://aspex.sourceforge.net/>
+{'bodyContent': 2458,
  'externalLinks': [],
- 'h1': [],
- 'h2': [],
- 'h3': [],
- 'h4': [],
  'httpCode': 200,
- 'idTool': 'https://openebench.bsc.es/monitor/tool/aspwood',
- 'latency': 2.255279779434204,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspex',
+ 'latency': 1.5126850605010986,
+ 'lenScriptsTagsText': 0,
  'metaDescription': None,
  'numberExternalLinks': 0,
- 'numberRelativeLinks': 4,
+ 'numberRelativeLinks': 12,
  'redirectUrls': None,
  'redirect_reasons': None,
- 'responseBody': 14497,
- 'titleUrl': None,
- 'urlTool': 'http://aspwood.popgenie.org/aspwood-v3.0/'}
-2020-03-27 13:22:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://srv00.recas.ba.infn.it/ASPicDB/ via http://0.0.0.0:8050/execute> (referer: None)
-2020-03-27 13:22:10 [scrapy.core.scraper] DEBUG: Scraped from <200 http://srv00.recas.ba.infn.it/ASPicDB/>
-{'JavaScript': 'Yes',
- 'bodyContent': 6986,
+ 'scriptsTagsText': [],
+ 'titleUrl': 'The ASPEX package: affected sib-pair exclusion mapping',
+ 'urlTool': 'http://aspex.sourceforge.net/'}
+2020-03-28 19:59:20 [scrapy.core.engine] DEBUG: Crawled (200) <POST http://0.0.0.0:8050/execute> (referer: None)
+2020-03-28 19:59:20 [scrapy.core.engine] DEBUG: Crawled (200) <POST http://0.0.0.0:8050/execute> (referer: None)
+2020-03-28 19:59:20 [scrapy.core.scraper] DEBUG: Scraped from <200 http://srv00.recas.ba.infn.it/ASPicDB/>
+{'bodyContent': 6788,
  'externalLinks': [],
- 'h1': [],
- 'h2': [],
- 'h3': [],
- 'h4': [],
  'httpCode': 200,
  'idTool': 'https://openebench.bsc.es/monitor/tool/aspicdb',
- 'latency': 3.2226614952087402,
+ 'latency': 1.6572129726409912,
+ 'lenScriptsTagsText': 198,
  'metaDescription': None,
  'numberExternalLinks': 0,
  'numberRelativeLinks': 9,
  'redirectUrls': None,
  'redirect_reasons': None,
- 'responseBody': 6986,
+ 'scriptsTagsText': [' \n'
+                     '\tfunction changeBall(string,mycase) {\n'
+                     '\t\tobj=document.getElementById(""+string+"");\n'
+                     '\t\tif (mycase==1) '
+                     'obj.src="./images/pallino-arancioul.jpg";\n'
+                     '\t\tif (mycase==2) obj.src="./images/pallinoul.jpg";\n'
+                     '\t}\n'],
  'titleUrl': 'ASPicDB ',
  'urlTool': 'http://srv00.recas.ba.infn.it/ASPicDB/'}
-2020-03-27 13:22:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://sourceforge.net/projects/asm2ace/ via http://0.0.0.0:8050/execute> (referer: None)
-2020-03-27 13:22:11 [scrapy.core.scraper] DEBUG: Scraped from <200 http://sourceforge.net/projects/asm2ace/>
-{'JavaScript': 'Yes',
- 'bodyContent': 213710,
+2020-03-28 19:59:20 [scrapy.core.scraper] DEBUG: Scraped from <200 http://aspwood.popgenie.org/aspwood-v3.0/>
+{'bodyContent': 10128,
  'externalLinks': [],
- 'h1': ['asm2ace'],
- 'h2': ['Other Useful Business Software',
-        'Thanks for helping keep SourceForge clean.',
-        'Get latest updates about Open Source Projects, Conferences and News.'],
- 'h3': ['Brought to you by:',
-        ',',
-        'Features',
-        'Project Activity',
-        'Categories',
-        'Follow asm2ace',
-        'Rate This Project',
-        'User Reviews',
-        'Additional Project Details'],
- 'h4': ['Languages',
-        'User Interface',
-        'Programming Language',
-        'Database Environment',
-        'Registered',
-        'Yes, also send me special offers about products & services regarding:',
-        'You can contact me via:'],
+ 'httpCode': 200,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspwood',
+ 'latency': 1.6780738830566406,
+ 'lenScriptsTagsText': 4369,
+ 'metaDescription': None,
+ 'numberExternalLinks': 0,
+ 'numberRelativeLinks': 4,
+ 'redirectUrls': None,
+ 'redirect_reasons': None,
+ 'scriptsTagsText': ['\n'
+                     '    function getData() {\n'
+                     '        $.post("content/download.php", function(data){\n'
+                     '            $("#downloadText").html(data);\n'
+                     '        });\n'
+                     '    }\n'
+                     '    // <tr class="gradeA"> <td>Potri.001G000100</td> '
+                     '<td></td> <td>27043735_peptide</td> <td></td> </tr>\n'
+                     '    // <tr class="gradeB"> <td>Potri.001G000200</td> '
+                     '<td></td> <td>27045395_peptide</td> <td></td> </tr>\n'
+                     '\n'
+                     '    function printFullGeneTable(){\n'
+                     '        $("#filltablebtn").remove();\n'
+                     '        $("#geneListInfo").html("Loading gene table, '
+                     'please wait... ~ 20 seconds");\n'
+                     '        $.post("content/geneinfo.php", {genes:"all"})\n'
+                     '        .done(function(data){\n'
+                     '            $("#geneListInfo").html(data);\n'
+                     '            }).done( function (data) {\n'
+                     '                $("#full_gene_table").dataTable({\n'
+                     '                        "aaSorting": [ ], // Prevent '
+                     'initial sorting\n'
+                     '                        "aoColumns": [\n'
+                     '                        null,\n'
+                     '                        null,\n'
+                     '                        null,\n'
+                     '                        null,\n'
+                     '                        null,\n'
+                     '                        null,\n'
+                     '                         ]\n'
+                     '                });\n'
+                     '            });\n'
+                     '            $("#geneListButtons").html(\'<button '
+                     'id="geneinfobtn" class="greenbtn margin" '
+                     'onclick="selectSubset()">Add filtered '
+                     'genes</button><button id="geneinfobtn" class="greenbtn" '
+                     'onclick="clearTable()">clear textbox</button>\');\n'
+                     '        }\n'
+                     '        $(document).ready(function() {\n'
+                     '            //printFullGeneTable();\n'
+                     '           //load_cluster();\n'
+                     '        }\n'
+                     '    );\n'
+                     '\n'
+                     '    function clearTable(){\n'
+                     '        $("#genes").val("");\n'
+                     '    }\n'
+                     '\n'
+                     '    function fillTable(){\n'
+                     '        for (var i=1;i<=1;i++){\n'
+                     '                //var i = 100;\n'
+                     '                $.post("content/geneinfo.php", '
+                     '{genes:i,next:"yes"})\n'
+                     '                .done( function (data) {\n'
+                     '                    //alert(data);\n'
+                     '                    //$("#full_gene_table '
+                     'tr:last").after(data);\n'
+                     '                    addData(data);\n'
+                     '                    \n'
+                     '                    alert("adding button");\n'
+                     '                });\n'
+                     '        }\n'
+                     '    }\n'
+                     '\n'
+                     '    function addData(data){\n'
+                     '        var arr = data.split("=");\n'
+                     '        arr.pop();\n'
+                     '        for(var i in arr) {\n'
+                     '            var row1 = arr[i].split("|");\n'
+                     '            var lastRow = ""\n'
+                     '            if (row1[3] != ""){lastRow += "!TF"}   \n'
+                     '            //if (row1[3] && row[4]){lastRow += ","}\n'
+                     '            if (row1[4] != ""){lastRow += "!miR"}\n'
+                     '            '
+                     '$("#full_gene_table").dataTable().fnAddData(\n'
+                     '                [\n'
+                     '                    row1[0],\n'
+                     '                    row1[1],\n'
+                     '                    row1[2],\n'
+                     '                    lastRow\n'
+                     '                ]\n'
+                     '            );\n'
+                     '        }  \n'
+                     '    }\n'
+                     '\n'
+                     '    var first = true;\n'
+                     '    function add_gene(gene_id){\n'
+                     '        if (first == true){\n'
+                     '            first = false;\n'
+                     '            var test = $("#genes").val().split(",");\n'
+                     '            $("#genes").val(gene_id);\n'
+                     '        }else{\n'
+                     '            if ($("#genes").val().length < 9) {\n'
+                     '                $("#genes").val(gene_id);\n'
+                     '            }else{\n'
+                     '                old = $("#genes").val();\n'
+                     '                $("#genes").val(old+", "+gene_id);\n'
+                     '            }\n'
+                     '        }\n'
+                     '    }\n'
+                     '\n'
+                     '    function load_cluster(){\n'
+                     '        $("#mclCluster").html(\n'
+                     '            \'<iframe class="noscroll" '
+                     'src="http://130.239.72.5/network_tools_v210/clusterProfiles/Cluster_mi_th.70_inlf1.6.php" '
+                     'width="850px" height="820px" '
+                     'frameborder="0"></iframe>\'\n'
+                     '        );\n'
+                     '    }\n'
+                     '\n'
+                     '    function load_heatmap(){\n'
+                     '        $("#heatmapCluster").html(\'<iframe '
+                     'class="noscroll" src="woodheatmap/index.php" '
+                     'width="850px" height="520px" '
+                     'style="border:0px;"></iframe>\' );\n'
+                     '    }\n'
+                     '\n'
+                     '    function selectSubset(){\n'
+                     '        first = false;    \n'
+                     '        var geneinfoData = '
+                     '$("#full_gene_table").dataTable()._(\'tr\', '
+                     '{"filter":"applied"});\n'
+                     '        var genes = "";\n'
+                     '        for (var i = 0; i < geneinfoData.length; i++){\n'
+                     '            var gene = geneinfoData[i][0]\n'
+                     '            genes+=gene+" ,";\n'
+                     '        }\n'
+                     '        genes = genes.substring(0,genes.length-1)\n'
+                     '        //$("#genes").html("");\n'
+                     '        var val = $("#genes").val();\n'
+                     '        if (val.length > 0){\n'
+                     '            genes = val+", "+genes;\n'
+                     '        }\n'
+                     '        $("#genes").val(genes);\n'
+                     '    }\n'
+                     '    \n'
+                     '    function load_example(){\n'
+                     '        $("#genes").html("Potri.007G076500, '
+                     'Potri.013G019800, Potri.005G154200, Potri.005G194200, '
+                     'Potri.002G066600, Potri.004G059600, Potri.011G069600, '
+                     'Potri.006G181900, Potri.018G103900, Potri.005G087500, '
+                     'Potri.009G060800, Potri.006G251900, Potri.016G054900, '
+                     'Potri.005G027600, Potri.018G029400, Potri.002G257900, '
+                     'Potri.006G052600, Potri.001G266400");\n'
+                     '    }\n'
+                     '\n'
+                     '\n'
+                     '\n'
+                     '    load_heatmap();\n'],
+ 'titleUrl': None,
+ 'urlTool': 'http://aspwood.popgenie.org/aspwood-v3.0/'}
+2020-03-28 19:59:20 [scrapy.core.engine] DEBUG: Crawled (200) <POST http://0.0.0.0:8050/execute> (referer: None)
+2020-03-28 19:59:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/xgaia/asko-cli>
+{'bodyContent': 86949,
+ 'externalLinks': [],
+ 'httpCode': 200,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/askocli',
+ 'latency': 2.058751344680786,
+ 'lenScriptsTagsText': 0,
+ 'metaDescription': 'asko-cli provide cli tools to insert data into a distant '
+                    'AskOmics - xgaia/asko-cli',
+ 'numberExternalLinks': 0,
+ 'numberRelativeLinks': 104,
+ 'redirectUrls': None,
+ 'redirect_reasons': None,
+ 'scriptsTagsText': [],
+ 'titleUrl': 'GitHub - xgaia/asko-cli: asko-cli provide cli tools to insert '
+             'data into a distant AskOmics',
+ 'urlTool': 'https://github.com/xgaia/asko-cli'}
+2020-03-28 19:59:22 [scrapy.core.engine] DEBUG: Crawled (200) <POST http://0.0.0.0:8050/execute> (referer: None)
+2020-03-28 19:59:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://sourceforge.net/projects/asm2ace/>
+{'bodyContent': 188750,
+ 'externalLinks': [],
  'httpCode': 200,
  'idTool': 'https://openebench.bsc.es/monitor/tool/asm2ace',
- 'latency': 4.126185178756714,
+ 'latency': 4.200196027755737,
+ 'lenScriptsTagsText': 39495,
  'metaDescription': 'Download asm2ace for free.  Convert the Celera ASM '
                     'assembly format to the Consed ACE or the CAF file '
                     'format. ',
@@ -232,52 +330,1237 @@
  'numberRelativeLinks': 247,
  'redirectUrls': None,
  'redirect_reasons': None,
- 'responseBody': 213726,
+ 'scriptsTagsText': ['\n'
+                     '        window.bizx.cmp.init({\n'
+                     '            \n'
+                     "        }, 'consentmanager.net');\n"
+                     '    ',
+                     '\n'
+                     '            /*global unescape, window, SF*/\n'
+                     '            // Setup our namespace\n'
+                     '            if (!window.SF) { window.SF = {}; }\n'
+                     '            if (!window.net) { window.net = {}; }\n'
+                     '            if (!window.net.sf) { window.net.sf = {}; }\n'
+                     '            SF.Ads = {};\n'
+                     "            SF.cdn = '//a.fsdn.com/con';\n"
+                     "            SF.deploy_time = '1585251886';\n"
+                     '            SF.sandiego = true;\n'
+                     '            SF.sandiego_chrome = true;\n'
+                     '            \n'
+                     '            SF.Breakpoints = {\n'
+                     '              small: 0,\n'
+                     '              medium: 640,\n'
+                     '              leaderboard: 743,\n'
+                     '              billboard: 985,\n'
+                     '              large: 1053,\n'
+                     '              xlarge: 1295,\n'
+                     '              xxlarge: 1366\n'
+                     '            };\n'
+                     '            SF.initial_breakpoints_visible = {};\n'
+                     '            for (var bp in SF.Breakpoints) {\n'
+                     '                if (!SF.Breakpoints.hasOwnProperty(bp)) '
+                     '{\n'
+                     '                    continue;\n'
+                     '                }\n'
+                     '                SF.initial_breakpoints_visible[bp] = '
+                     "!window.matchMedia || window.matchMedia('(min-width: ' + "
+                     "SF.Breakpoints[bp] + 'px)').matches;\n"
+                     '            }\n'
+                     '            SF.Ads.viewportWidth = '
+                     'Math.max(document.documentElement.clientWidth, '
+                     'window.innerWidth || 0);\n'
+                     '            SF.Ads.viewportHeight = '
+                     'Math.max(document.documentElement.clientHeight, '
+                     'window.innerHeight || 0);\n'
+                     '        ',
+                     '\n'
+                     '\n'
+                     '            SF.Ads.prebidOptions = {\n'
+                     '                showIndicators: false,\n'
+                     '                analytics: false,\n'
+                     '                timeout: 650,\n'
+                     '                timeouts_by_bids: {650: 3, 2000: 1, '
+                     '3000: 0},\n'
+                     '                \n'
+                     '            };\n'
+                     '\n'
+                     '            SF.Ads.prebidUnits = [];if '
+                     '(SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '                var thisUnit =  {\n'
+                     '                    bids: [{"params": {"tagid": '
+                     '"364652"}, "bidder": "sovrn"},\n'
+                     '                            {"params": {"cp": 558092, '
+                     '"cf": "728x90", "ct": "472229"}, "bidder": '
+                     '"pulsepoint"},\n'
+                     '                            {"params": {"siteId": '
+                     '"103240", "position": "atf", "sizes": [2], "accountId": '
+                     '"15680", "zoneId": "486000"}, "bidder": "rubicon"},\n'
+                     '                            {"params": {"placementId": '
+                     '9265107}, "bidder": "appnexus"},\n'
+                     '                            {"params": {"dmxid": 178246, '
+                     '"memberid": "101054"}, "bidder": "districtmDMX"},\n'
+                     '                            {"params": {"placementId": '
+                     '12120052}, "bidder": "districtm"},\n'
+                     '                            ],\n'
+                     "                    code: 'div-gpt-ad-1394209358853-0',\n"
+                     "                    tag: 'SF_ProjectSum_728x90_A',\n"
+                     '                    mediaTypes: { banner: { sizes: [] } '
+                     '}\n'
+                     '                }; \n'
+                     '                if (SF.Ads.viewportWidth >= 728 && '
+                     'SF.Ads.viewportHeight >= 200){\n'
+                     '                    thisUnit.mediaTypes.banner.sizes = '
+                     '[[728, 90]];\n'
+                     '                } \n'
+                     '                if (SF.Ads.viewportWidth >= 970 && '
+                     'SF.Ads.viewportHeight >= 901){\n'
+                     '                    thisUnit.mediaTypes.banner.sizes = '
+                     '[[728, 90], [970, 250]];\n'
+                     '                }\n'
+                     '\n'
+                     '                SF.Ads.prebidUnits.push(thisUnit);\n'
+                     '            }\n'
+                     '            if '
+                     '(!SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '                var thisUnit =  {\n'
+                     '                    bids: [{"params": {"tagid": '
+                     '"542316"}, "bidder": "sovrn"},\n'
+                     '                            {"params": {"cp": 558092, '
+                     '"cf": "320x50", "ct": "630563"}, "bidder": '
+                     '"pulsepoint"},\n'
+                     '                            {"params": {"siteId": '
+                     '"103240", "position": "atf", "sizes": [43], "accountId": '
+                     '"15680", "zoneId": "610848"}, "bidder": "rubicon"},\n'
+                     '                            {"params": {"placementId": '
+                     '12559081}, "bidder": "appnexus"},\n'
+                     '                            {"params": {"dmxid": 189802, '
+                     '"memberid": "101054"}, "bidder": "districtmDMX"},\n'
+                     '                            {"params": {"placementId": '
+                     '12558822}, "bidder": "districtm"},\n'
+                     '                            ],\n'
+                     "                    code: 'div-gpt-ad-1512154506943-0',\n"
+                     "                    tag: 'SF_Mobile_320x50_A',\n"
+                     '                    mediaTypes: { banner: { sizes: '
+                     '[[320, 50]] } }\n'
+                     '                };\n'
+                     '\n'
+                     '                SF.Ads.prebidUnits.push(thisUnit);\n'
+                     '            }\n'
+                     '            if (SF.initial_breakpoints_visible.large) {\n'
+                     '                var thisUnit =  {\n'
+                     '                    bids: [{"params": {"tagid": '
+                     '"364649"}, "bidder": "sovrn"},\n'
+                     '                            {"params": {"cp": 558092, '
+                     '"cf": "300x250", "ct": "472224"}, "bidder": '
+                     '"pulsepoint"},\n'
+                     '                            {"params": {"siteId": '
+                     '"103240", "position": "atf", "sizes": [15, 10], '
+                     '"accountId": "15680", "zoneId": "486000"}, "bidder": '
+                     '"rubicon"},\n'
+                     '                            {"params": {"placementId": '
+                     '9265108}, "bidder": "appnexus"},\n'
+                     '                            {"params": {"dmxid": 178242, '
+                     '"memberid": "101054"}, "bidder": "districtmDMX"},\n'
+                     '                            {"params": {"placementId": '
+                     '12120048}, "bidder": "districtm"},\n'
+                     '                            ],\n'
+                     "                    code: 'div-gpt-ad-1394209358855-0',\n"
+                     "                    tag: 'SF_ProjectSum_300x250_A',\n"
+                     '                    mediaTypes: { banner: { sizes: '
+                     '[[300, 250], [300, 600], [300, 1050]] } }\n'
+                     '                };\n'
+                     '\n'
+                     '                SF.Ads.prebidUnits.push(thisUnit);\n'
+                     '            }\n'
+                     '            if (SF.initial_breakpoints_visible.large) {\n'
+                     '                var thisUnit =  {\n'
+                     '                    bids: [{"params": {"tagid": '
+                     '"364650"}, "bidder": "sovrn"},\n'
+                     '                            {"params": {"cp": 558092, '
+                     '"cf": "300x250", "ct": "472225"}, "bidder": '
+                     '"pulsepoint"},\n'
+                     '                            {"params": {"siteId": '
+                     '"103240", "sizes": [15], "accountId": "15680", "zoneId": '
+                     '"486010"}, "bidder": "rubicon"},\n'
+                     '                            {"params": {"placementId": '
+                     '9265109}, "bidder": "appnexus"},\n'
+                     '                            {"params": {"dmxid": 178243, '
+                     '"memberid": "101054"}, "bidder": "districtmDMX"},\n'
+                     '                            {"params": {"placementId": '
+                     '12120049}, "bidder": "districtm"},\n'
+                     '                            ],\n'
+                     "                    code: 'div-gpt-ad-1394209358856-0',\n"
+                     "                    tag: 'SF_ProjectSum_300x250_B',\n"
+                     '                    mediaTypes: { banner: { sizes: '
+                     '[[300, 250]] } }\n'
+                     '                };\n'
+                     '\n'
+                     '                SF.Ads.prebidUnits.push(thisUnit);\n'
+                     '            }\n'
+                     '            if (SF.initial_breakpoints_visible.large) {\n'
+                     '                var thisUnit =  {\n'
+                     '                    bids: [{"params": {"tagid": '
+                     '"364651"}, "bidder": "sovrn"},\n'
+                     '                            {"params": {"cp": 558092, '
+                     '"cf": "300x250", "ct": "472226"}, "bidder": '
+                     '"pulsepoint"},\n'
+                     '                            {"params": {"siteId": '
+                     '"103240", "sizes": [15], "accountId": "15680", "zoneId": '
+                     '"486010"}, "bidder": "rubicon"},\n'
+                     '                            {"params": {"placementId": '
+                     '9265110}, "bidder": "appnexus"},\n'
+                     '                            {"params": {"dmxid": 178245, '
+                     '"memberid": "101054"}, "bidder": "districtmDMX"},\n'
+                     '                            {"params": {"placementId": '
+                     '12120051}, "bidder": "districtm"},\n'
+                     '                            ],\n'
+                     "                    code: 'div-gpt-ad-1394209358857-0',\n"
+                     "                    tag: 'SF_ProjectSum_300x250_C',\n"
+                     '                    mediaTypes: { banner: { sizes: '
+                     '[[300, 250]] } }\n'
+                     '                };\n'
+                     '\n'
+                     '                SF.Ads.prebidUnits.push(thisUnit);\n'
+                     '            }\n'
+                     '            if '
+                     '(SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '                var thisUnit =  {\n'
+                     '                    bids: [{"params": {"tagid": '
+                     '"364655"}, "bidder": "sovrn"},\n'
+                     '                            {"params": {"cp": 558092, '
+                     '"cf": "728x90", "ct": "472228"}, "bidder": '
+                     '"pulsepoint"},\n'
+                     '                            {"params": {"siteId": '
+                     '"103240", "sizes": [2], "accountId": "15680", "zoneId": '
+                     '"486010"}, "bidder": "rubicon"},\n'
+                     '                            {"params": {"placementId": '
+                     '9265111}, "bidder": "appnexus"},\n'
+                     '                            {"params": {"dmxid": 178247, '
+                     '"memberid": "101054"}, "bidder": "districtmDMX"},\n'
+                     '                            {"params": {"placementId": '
+                     '12120053}, "bidder": "districtm"},\n'
+                     '                            ],\n'
+                     "                    code: 'div-gpt-ad-1392148208790-0',\n"
+                     "                    tag: 'SF_ProjectSum_728x90_B',\n"
+                     '                    mediaTypes: { banner: { sizes: [] } '
+                     '}\n'
+                     '                }; \n'
+                     '                if (SF.Ads.viewportWidth >= 728 && '
+                     'SF.Ads.viewportHeight >= 200){\n'
+                     '                    thisUnit.mediaTypes.banner.sizes = '
+                     '[[728, 90]];\n'
+                     '                } \n'
+                     '                if (SF.Ads.viewportWidth >= 1280 && '
+                     'SF.Ads.viewportHeight >= 200){\n'
+                     '                    thisUnit.mediaTypes.banner.sizes = '
+                     '[[728, 90], [970, 250]];\n'
+                     '                }\n'
+                     '\n'
+                     '                SF.Ads.prebidUnits.push(thisUnit);\n'
+                     '            }\n'
+                     '            if '
+                     '(!SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '                var thisUnit =  {\n'
+                     '                    bids: [{"params": {"tagid": '
+                     '"542317"}, "bidder": "sovrn"},\n'
+                     '                            {"params": {"cp": 558092, '
+                     '"cf": "300x250", "ct": "627928"}, "bidder": '
+                     '"pulsepoint"},\n'
+                     '                            {"params": {"siteId": '
+                     '"103240", "sizes": [43], "accountId": "15680", "zoneId": '
+                     '"798260"}, "bidder": "rubicon"},\n'
+                     '                            {"params": {"placementId": '
+                     '12559084}, "bidder": "appnexus"},\n'
+                     '                            {"params": {"dmxid": 189801, '
+                     '"memberid": "101054"}, "bidder": "districtmDMX"},\n'
+                     '                            {"params": {"placementId": '
+                     '12558816}, "bidder": "districtm"},\n'
+                     '                            ],\n'
+                     "                    code: 'div-gpt-ad-1512154653435-0',\n"
+                     "                    tag: 'SF_Mobile_Multi_B',\n"
+                     '                    mediaTypes: { banner: { sizes: '
+                     '[[300, 50], [300, 250], [320, 50], [320, 100]] } }\n'
+                     '                };\n'
+                     '\n'
+                     '                SF.Ads.prebidUnits.push(thisUnit);\n'
+                     '            }\n'
+                     '            if '
+                     '(SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '                var thisUnit =  {\n'
+                     '                    bids: [{"params": {"tagid": '
+                     '"542319"}, "bidder": "sovrn"},\n'
+                     '                            {"params": {"cp": 558092, '
+                     '"cf": "728x90", "ct": "627935"}, "bidder": '
+                     '"pulsepoint"},\n'
+                     '                            {"params": {"siteId": '
+                     '"103240", "sizes": [2], "accountId": "15680", "zoneId": '
+                     '"486010"}, "bidder": "rubicon"},\n'
+                     '                            {"params": {"placementId": '
+                     '12559070}, "bidder": "appnexus"},\n'
+                     '                            {"params": {"dmxid": 189799, '
+                     '"memberid": "101054"}, "bidder": "districtmDMX"},\n'
+                     '                            {"params": {"placementId": '
+                     '12558814}, "bidder": "districtm"},\n'
+                     '                            ],\n'
+                     "                    code: 'div-gpt-ad-1491500833666-0',\n"
+                     "                    tag: 'SF_ProjectSum_728x90_C',\n"
+                     '                    mediaTypes: { banner: { sizes: [] } '
+                     '}\n'
+                     '                }; \n'
+                     '                if (SF.Ads.viewportWidth >= 728 && '
+                     'SF.Ads.viewportHeight >= 200){\n'
+                     '                    thisUnit.mediaTypes.banner.sizes = '
+                     '[[728, 90]];\n'
+                     '                } \n'
+                     '                if (SF.Ads.viewportWidth >= 1280 && '
+                     'SF.Ads.viewportHeight >= 200){\n'
+                     '                    thisUnit.mediaTypes.banner.sizes = '
+                     '[[728, 90], [970, 250]];\n'
+                     '                }\n'
+                     '\n'
+                     '                SF.Ads.prebidUnits.push(thisUnit);\n'
+                     '            }\n'
+                     '            if '
+                     '(!SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '                var thisUnit =  {\n'
+                     '                    bids: [{"params": {"tagid": '
+                     '"542318"}, "bidder": "sovrn"},\n'
+                     '                            {"params": {"cp": 558092, '
+                     '"cf": "300x250", "ct": "627932"}, "bidder": '
+                     '"pulsepoint"},\n'
+                     '                            {"params": {"siteId": '
+                     '"103240", "sizes": [43], "accountId": "15680", "zoneId": '
+                     '"798260"}, "bidder": "rubicon"},\n'
+                     '                            {"params": {"placementId": '
+                     '12559087}, "bidder": "appnexus"},\n'
+                     '                            {"params": {"dmxid": 189800, '
+                     '"memberid": "101054"}, "bidder": "districtmDMX"},\n'
+                     '                            {"params": {"placementId": '
+                     '12558815}, "bidder": "districtm"},\n'
+                     '                            ],\n'
+                     "                    code: 'div-gpt-ad-1512154755912-0',\n"
+                     "                    tag: 'SF_Mobile_Multi_C',\n"
+                     '                    mediaTypes: { banner: { sizes: '
+                     '[[300, 50], [300, 250], [320, 50], [320, 100]] } }\n'
+                     '                };\n'
+                     '\n'
+                     '                SF.Ads.prebidUnits.push(thisUnit);\n'
+                     '            }\n'
+                     '            SF.Ads.prebidAdjustments = '
+                     '{"bidder_deflations": {"rubiconlite": 1, "komoona": '
+                     '0.92, "onefiftytwo": 0.9, "indexexchange": 0.95, '
+                     '"sovrn": 0.94, "aardvark": 1, "aol": 0.98, "brealtime": '
+                     '0.98, "districtm": 1, "oftmedia": 0.9, "emxdigital": 1, '
+                     '"pulsepoint": 0.93, "rubicon": 1.1, "indexex#hange": '
+                     '0.98, "springserve": 0.001, "districtmdmx": 1, '
+                     '"appnexus": 1, "rhythmone": 0.85}, "inflation": 1.18, '
+                     '"floor": 0.02};\n'
+                     '        ',
+                     '\n'
+                     "            bizx.cmp.ifConsent('all', 'all', "
+                     'function(){\n'
+                     '                SF.Ads.disallowPersonalization = 0;\n'
+                     '            }, function(){\n'
+                     '                SF.Ads.disallowPersonalization = 1;\n'
+                     '            }, function () {\n'
+                     '                if (window.bizxPrebid){\n'
+                     '                    '
+                     'window.bizxPrebid.Ads.initPrebid(window.bizxPrebid.adUnits);\n'
+                     '                }\n'
+                     '            });\n'
+                     '        ',
+                     '\n'
+                     '            /*global unescape, window, console, jQuery, '
+                     '$, net, SF, DD_belatedPNG, ga */\n'
+                     '            if (!window.SF) {\n'
+                     '                window.SF = {};\n'
+                     '            }\n'
+                     '        ',
+                     '\n'
+                     '            SF.EU_country_codes = ["BE", "FR", "BG", '
+                     '"DK", "VG", "WF", "HR", "BM", "DE", "HU", "JE", "FI", '
+                     '"FK", "YT", "NL", "PT", "CW", "NC", "LV", "RE", "LT", '
+                     '"LU", "PF", "GI", "TF", "RO", "PN", "TC", "PL", "PM", '
+                     '"GS", "GR", "GP", "EE", "IT", "GG", "CZ", "CY", "SX", '
+                     '"IO", "AT", "AW", "AX", "GL", "IE", "KY", "ES", "ME", '
+                     '"MF", "BL", "GF", "SK", "MT", "SI", "SH", "MQ", "MS", '
+                     '"AI", "SE", "GB"];\n'
+                     '            SF.unknown_country_codes = ["", "A1", "A2", '
+                     '"O1"];\n'
+                     '        ',
+                     '\n    SF.adblock = true;\n',
+                     '\n'
+                     '       /*global Foundation */\n'
+                     '           /*global googletag, bizxPrebid */\n'
+                     '            SF.Ads.gptExpected();\n'
+                     '       var gptadslots=[];\n'
+                     '       var gptadHandlers={};\n'
+                     '       var gptadRenderers=[];\n'
+                     '       var gptadComplements={};\n'
+                     '       SF.Ads.slotsById = {};\n'
+                     '       SF.Ads.idsByPath = {};\n'
+                     '\n'
+                     '       googletag.cmd.push(function() {\n'
+                     '           var leaderboard = googletag.sizeMapping()\n'
+                     '               .addSize([970, 901], [[728, 90], [970, '
+                     '250]])\n'
+                     '               .addSize([728, 200], [[728, 90]])\n'
+                     '               .build();\n'
+                     '           var leaderboardInContent = '
+                     'googletag.sizeMapping()\n'
+                     '               .addSize([1280, 200], [[728, 90], [970, '
+                     '250]])\n'
+                     '               .addSize([728, 200], [[728, 90]])\n'
+                     '               .build();\n'
+                     '\n'
+                     "            //prebid_log('GPT push define slots and "
+                     "targeting');\n"
+                     '            googletag.pubads()\n'
+                     '               .setForceSafeFrame(true)\n'
+                     "               .setTargeting('usingSafeFrame','1')\n"
+                     '               .setSafeFrameConfig({\n'
+                     '                    allowOverlayExpansion: true,\n'
+                     '                    allowPushExpansion: true,\n'
+                     '                    sandbox: true\n'
+                     '            });\n'
+                     '\n'
+                     '            var thisSlot;\n'
+                     '            thisSlot = '
+                     "googletag.defineSlot('/41014381/Sourceforge/SF_ProjectSum_728x90_A',[],'div-gpt-ad-1394209358853-0')\n"
+                     '                                                    '
+                     '.defineSizeMapping( leaderboard )\n'
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "gptadComplements['/41014381/Sourceforge/SF_ProjectSum_728x90_A'] "
+                     '= ["SF_ProjectSum_HubIcon_200x90_A", ["728x90"]] ;\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1394209358853-0'] = "
+                     'thisSlot;\n'
+                     '            '
+                     "SF.Ads.idsByPath['/41014381/Sourceforge/SF_ProjectSum_728x90_A'] "
+                     "= 'div-gpt-ad-1394209358853-0';\n"
+                     '            thisSlot = '
+                     "googletag.defineSlot('/41014381/Sourceforge/SF_Mobile_320x50_A',[320, "
+                     "50],'div-gpt-ad-1512154506943-0')\n"
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'sz\',"320x50")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1512154506943-0'] = "
+                     'thisSlot;\n'
+                     '            '
+                     "SF.Ads.idsByPath['/41014381/Sourceforge/SF_Mobile_320x50_A'] "
+                     "= 'div-gpt-ad-1512154506943-0';\n"
+                     '            thisSlot = '
+                     "googletag.defineSlot('/41014381/Sourceforge/SF_ProjectSum_HubIcon_200x90_A',[200, "
+                     "90],'div-gpt-ad-1394209358854-0')\n"
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'sz\',"200x90")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1394209358854-0'] = "
+                     'thisSlot;\n'
+                     '            '
+                     "SF.Ads.idsByPath['/41014381/Sourceforge/SF_ProjectSum_HubIcon_200x90_A'] "
+                     "= 'div-gpt-ad-1394209358854-0';\n"
+                     '            thisSlot = '
+                     "googletag.defineSlot('/41014381/Sourceforge/SF_ProjectSum_300x250_A',[[300, "
+                     '250], [300, 600], [300, '
+                     "1050]],'div-gpt-ad-1394209358855-0')\n"
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'sz\',"300x250,300x600,300x1050")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1394209358855-0'] = "
+                     'thisSlot;\n'
+                     '            '
+                     "SF.Ads.idsByPath['/41014381/Sourceforge/SF_ProjectSum_300x250_A'] "
+                     "= 'div-gpt-ad-1394209358855-0';\n"
+                     '            thisSlot = '
+                     "googletag.defineSlot('/41014381/Sourceforge/SF_ProjectSum_300x250_B',[300, "
+                     "250],'div-gpt-ad-1394209358856-0')\n"
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'sz\',"300x250")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1394209358856-0'] = "
+                     'thisSlot;\n'
+                     '            '
+                     "SF.Ads.idsByPath['/41014381/Sourceforge/SF_ProjectSum_300x250_B'] "
+                     "= 'div-gpt-ad-1394209358856-0';\n"
+                     '            thisSlot = '
+                     "googletag.defineSlot('/41014381/Sourceforge/SF_ProjectSum_300x250_C',[300, "
+                     "250],'div-gpt-ad-1394209358857-0')\n"
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'sz\',"300x250")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1394209358857-0'] = "
+                     'thisSlot;\n'
+                     '            '
+                     "SF.Ads.idsByPath['/41014381/Sourceforge/SF_ProjectSum_300x250_C'] "
+                     "= 'div-gpt-ad-1394209358857-0';\n"
+                     '            thisSlot = '
+                     "googletag.defineSlot('/41014381/Sourceforge/SF_ProjectSum_728x90_B',[],'div-gpt-ad-1392148208790-0')\n"
+                     '                                                    '
+                     '.defineSizeMapping( leaderboardInContent )\n'
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1392148208790-0'] = "
+                     'thisSlot;\n'
+                     '            '
+                     "SF.Ads.idsByPath['/41014381/Sourceforge/SF_ProjectSum_728x90_B'] "
+                     "= 'div-gpt-ad-1392148208790-0';\n"
+                     '            thisSlot = '
+                     "googletag.defineSlot('/41014381/Sourceforge/SF_Mobile_Multi_B',[[300, "
+                     '50], [300, 250], [320, 50], [320, '
+                     "100]],'div-gpt-ad-1512154653435-0')\n"
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'sz\',"300x50,300x250,320x50,320x100")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1512154653435-0'] = "
+                     'thisSlot;\n'
+                     '            '
+                     "SF.Ads.idsByPath['/41014381/Sourceforge/SF_Mobile_Multi_B'] "
+                     "= 'div-gpt-ad-1512154653435-0';\n"
+                     '            thisSlot = '
+                     "googletag.defineSlot('/41014381/Sourceforge/SF_ProjectSum_728x90_C',[],'div-gpt-ad-1491500833666-0')\n"
+                     '                                                    '
+                     '.defineSizeMapping( leaderboardInContent )\n'
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1491500833666-0'] = "
+                     'thisSlot;\n'
+                     '            '
+                     "SF.Ads.idsByPath['/41014381/Sourceforge/SF_ProjectSum_728x90_C'] "
+                     "= 'div-gpt-ad-1491500833666-0';\n"
+                     '            thisSlot = '
+                     "googletag.defineSlot('/41014381/Sourceforge/SF_Mobile_Multi_C',[[300, "
+                     '50], [300, 250], [320, 50], [320, '
+                     "100]],'div-gpt-ad-1512154755912-0')\n"
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'sz\',"300x50,300x250,320x50,320x100")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1512154755912-0'] = "
+                     'thisSlot;\n'
+                     '            '
+                     "SF.Ads.idsByPath['/41014381/Sourceforge/SF_Mobile_Multi_C'] "
+                     "= 'div-gpt-ad-1512154755912-0';\n"
+                     '            thisSlot = '
+                     "googletag.defineSlot('/7346874/SF-300x250',[300, "
+                     "250],'div-gpt-ad-1392148208795-0')\n"
+                     '                                                    '
+                     '.addService(googletag.pubads())\n'
+                     '                                                        '
+                     '.setTargeting(\'oss_tpc\',["Bio-Informatics", '
+                     '"Scientific/Engineering"])\n'
+                     '                                                        '
+                     '.setTargeting(\'shortname\',"asm2ace")\n'
+                     '                                                        '
+                     '.setTargeting(\'dc_ref\',"https://sourceforge.net/projects/asm2ace/")\n'
+                     '                                                        '
+                     '.setTargeting(\'sz\',"300x250")\n'
+                     '                                                        '
+                     '.setTargeting(\'page_type\',"pg_project");\n'
+                     '            gptadslots.push(thisSlot);\n'
+                     '            '
+                     "SF.Ads.slotsById['div-gpt-ad-1392148208795-0'] = "
+                     'thisSlot;\n'
+                     "            SF.Ads.idsByPath['/7346874/SF-300x250'] = "
+                     "'div-gpt-ad-1392148208795-0';   \n"
+                     '            \n'
+                     '\n'
+                     '            '
+                     'googletag.pubads().setRequestNonPersonalizedAds(SF.Ads.disallowPersonalization);\n'
+                     '\n'
+                     '            '
+                     "googletag.pubads().setTargeting('requestSource', "
+                     "'GPT');\n"
+                     '            googletag.pubads().enableAsyncRendering();\n'
+                     '\n'
+                     '            googletag.pubads().collapseEmptyDivs();\n'
+                     '            '
+                     "googletag.pubads().addEventListener('slotOnload', "
+                     'function(event) {\n'
+                     '                '
+                     'SF.Ads.Helpers.getSizeAndSetClass.call(this, event);\n'
+                     '            });\n'
+                     '            '
+                     "googletag.pubads().addEventListener('slotRenderEnded', "
+                     'function(event) {\n'
+                     '                var unitName = '
+                     'event.slot.getAdUnitPath();\n'
+                     '                if ( unitName in gptadHandlers ) {\n'
+                     '                   for (var i = 0; i < '
+                     'gptadHandlers[unitName].length; i++) {\n'
+                     '                       try {\n'
+                     '                           '
+                     'SF.Ads.RenderHandlers[gptadHandlers[unitName][i]].call(this, '
+                     'event);\n'
+                     '                       } catch (e) {\n'
+                     '                       }\n'
+                     '                   }\n'
+                     '                }\n'
+                     '\n'
+                     '                '
+                     'SF.Ads.RenderHandlers.decorateSizeDelivered.call(this, '
+                     'event);\n'
+                     '                if (unitName in gptadComplements) {\n'
+                     '                    if '
+                     '(gptadComplements[unitName][1].indexOf(SF.Ads.Helpers.getSizeDelivered(event)) '
+                     '>=0) {\n'
+                     '                        '
+                     'gptadRenderers[gptadComplements[unitName][0]].call();\n'
+                     '                    }\n'
+                     '                }\n'
+                     '                if(SF.Ads.scrollFixable) {\n'
+                     '                    '
+                     'SF.Ads.scrollFixable.scrollRelocate();\n'
+                     '                }\n'
+                     '            });\n'
+                     '            '
+                     "googletag.pubads().addEventListener('slotVisibilityChanged', "
+                     'SF.Ads.visibilityChangedTracker);\n'
+                     '            SF.Ads.setupAdRefresh();\n'
+                     '            '
+                     "googletag.pubads().addEventListener('impressionViewable', "
+                     'SF.Ads.RenderHandlers.viewabilityInstrumentation);\n'
+                     '            \n'
+                     '            '
+                     "googletag.pubads().addEventListener('slotRenderEnded', "
+                     'SF.Ads.listenerForBlockThis);\n'
+                     '            bizxPrebid.Ads.pushToGoogle();\n'
+                     '\n'
+                     '            googletag.enableServices();\n'
+                     '        });\n'
+                     '   ',
+                     '\n'
+                     '  (function () {\n'
+                     "      bizx.cmp.ifConsent('all', 'all', function () {\n"
+                     '          /*global _ml:true, window */\n'
+                     '          _ml = window._ml || {};\n'
+                     "          _ml.eid = '771';\n"
+                     '\n'
+                     '          var s = '
+                     "document.getElementsByTagName('script')[0], cd = new "
+                     "Date(), mltag = document.createElement('script');\n"
+                     "          mltag.type = 'text/javascript';\n"
+                     '          mltag.async = true;\n'
+                     "          mltag.src = '//ml314.com/tag.aspx?' + "
+                     'cd.getDate() + cd.getMonth() + cd.getFullYear();\n'
+                     '          s.parentNode.insertBefore(mltag, s);\n'
+                     '      });\n'
+                     '  })();\n',
+                     '\n'
+                     '        /* globals bizx */\n'
+                     '        function initPiwik(){\n'
+                     '            var _paq = window._paq = window._paq || [];\n'
+                     "            _paq.push(['trackPageView', document.title, "
+                     '{\n'
+                     "                    dimension1: 'asm2ace',\n"
+                     "                dimension2: 'pg_project',\n"
+                     '                dimension3: SF.devicePixelRatio,\n'
+                     '                \n'
+                     '            }]);\n'
+                     "            _paq.push(['enableLinkTracking']);\n"
+                     '            (function() {\n'
+                     '                var u="//analytics.slashdotmedia.com/";\n'
+                     "                _paq.push(['setTrackerUrl', "
+                     "u+'sf.php']);\n"
+                     "                _paq.push(['setSiteId', 39]);\n"
+                     '                var d=document, '
+                     "g=d.createElement('script'), "
+                     "s=d.getElementsByTagName('script')[0];\n"
+                     "                g.type='text/javascript'; g.async=true; "
+                     "g.defer=true; g.src=u+'sf.js'; "
+                     's.parentNode.insertBefore(g,s);\n'
+                     '            })();\n'
+                     '        }\n'
+                     "        bizx.cmp.ifConsent('publisher', ['storage', "
+                     "'measurement'], initPiwik);\n"
+                     '    ',
+                     '\n'
+                     '            {\n'
+                     '                "@context": "http://schema.org",\n'
+                     '                "@type": "WebSite",\n'
+                     '                "name": "SourceForge",\n'
+                     '                "url": "https://sourceforge.net/"\n'
+                     '            }\n'
+                     '        ',
+                     '\n'
+                     '    SF.linkout_icon = \'<svg  version="1.1"  '
+                     'xmlns="http://www.w3.org/2000/svg" '
+                     'xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" '
+                     'y="0px" viewBox="0 0 300 300" '
+                     'style="enable-background:new 0 0 300 300;" '
+                     'xml:space="preserve"><polygon class="st0" '
+                     'points="243.2,243.2 56.8,243.2 56.8,56.8 123,56.8 123,9 '
+                     '9,9 9,291 291,291 291,179.4 243.2,179 "/><polygon '
+                     'class="st0" points="128.5,213 155,186.5 176,165.5 '
+                     '206.7,196.3 235.5,132.5 248.9,102.6 290.6,9.8 291,9 '
+                     '290.6,9.2 197.4,51.1 169.1,63.8 103.7,93.3 137,126.5 '
+                     '115.9,147.5 89.5,174 "/></svg>\';\n',
+                     '\n'
+                     '/*global googletag */\n'
+                     'if (SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '(function(){\n'
+                     '    \n'
+                     '    var el = '
+                     "document.getElementById('SF_ProjectSum_728x90_A_wrapped');\n"
+                     "    var newNode = document.createElement('div');\n"
+                     "    newNode.id = 'div-gpt-ad-1394209358853-0';\n"
+                     '    el.appendChild(newNode);\n'
+                     '}());\n'
+                     '\n'
+                     "gptadRenderers['SF_ProjectSum_728x90_A'] = function(){  "
+                     '// jshint ignore:line\n'
+                     '    \n'
+                     '        if (!SF.adblock) {\n'
+                     '            '
+                     '$(\'#div-gpt-ad-1394209358853-0\').parents(\'.draper\').css("min-height", '
+                     '90 + 13); // 13 for height of .lbl-ad\n'
+                     '        }\n'
+                     '    \n'
+                     '    googletag.cmd.push(function() {\n'
+                     '        '
+                     "googletag.display('div-gpt-ad-1394209358853-0');\n"
+                     '    });\n'
+                     '};\n'
+                     "gptadRenderers['SF_ProjectSum_728x90_A']();  // jshint "
+                     'ignore:line\n'
+                     '}\n',
+                     '\n'
+                     '/*global googletag */\n'
+                     'if (!SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '(function(){\n'
+                     '    \n'
+                     '    var el = '
+                     "document.getElementById('SF_Mobile_320x50_A_wrapped');\n"
+                     "    var newNode = document.createElement('div');\n"
+                     "    newNode.id = 'div-gpt-ad-1512154506943-0';\n"
+                     '    el.appendChild(newNode);\n'
+                     '}());\n'
+                     '\n'
+                     "gptadRenderers['SF_Mobile_320x50_A'] = function(){  // "
+                     'jshint ignore:line\n'
+                     '    \n'
+                     '        if (!SF.adblock) {\n'
+                     '            '
+                     '$(\'#div-gpt-ad-1512154506943-0\').parents(\'.draper\').css("min-height", '
+                     '50 + 13); // 13 for height of .lbl-ad\n'
+                     '        }\n'
+                     '    \n'
+                     '    googletag.cmd.push(function() {\n'
+                     '        '
+                     "googletag.display('div-gpt-ad-1512154506943-0');\n"
+                     '    });\n'
+                     '};\n'
+                     "gptadRenderers['SF_Mobile_320x50_A']();  // jshint "
+                     'ignore:line\n'
+                     '}\n',
+                     '\n'
+                     '/*global googletag */\n'
+                     'if (SF.initial_breakpoints_visible.billboard) {\n'
+                     '(function(){\n'
+                     '    \n'
+                     '    var el = '
+                     "document.getElementById('SF_ProjectSum_HubIcon_200x90_A_wrapped');\n"
+                     "    var newNode = document.createElement('div');\n"
+                     "    newNode.id = 'div-gpt-ad-1394209358854-0';\n"
+                     '    el.appendChild(newNode);\n'
+                     '}());\n'
+                     '\n'
+                     "gptadRenderers['SF_ProjectSum_HubIcon_200x90_A'] = "
+                     'function(){  // jshint ignore:line\n'
+                     '    \n'
+                     '    googletag.cmd.push(function() {\n'
+                     '        '
+                     "googletag.display('div-gpt-ad-1394209358854-0');\n"
+                     '    });\n'
+                     '};\n'
+                     '\n'
+                     '}\n',
+                     '\n'
+                     '    \n'
+                     '        <ul class="list-of-activities">\n'
+                     '            {{#each timeline}}\n'
+                     '            <li class="item">\n'
+                     '                <time datetime="{{ iso8601date '
+                     'this.published }}" title="{{ readable_date '
+                     'this.published }}">{{ ago this.published }}</time>\n'
+                     '                <div>\n'
+                     '                {{#ifTagged "release"}}\n'
+                     '                  {{ cap this.verb }}\n'
+                     '                {{else}}\n'
+                     '                  {{ icon '
+                     'this.actor.activity_extras.icon_url }}\n'
+                     '                  {{ activity_obj this.actor }}\n'
+                     '                  {{ this.verb }}\n'
+                     '                {{/ifTagged}}\n'
+                     '                {{ activity_obj this.obj }}\n'
+                     '                {{#if this.target.activity_name}} on {{ '
+                     'activity_obj this.target }}{{/if}}\n'
+                     '                </div>\n'
+                     '                <div class="summary">\n'
+                     '                    {{ this.obj.activity_extras.summary '
+                     '}}\n'
+                     '                </div>\n'
+                     '            </li>\n'
+                     '            {{/each}}\n'
+                     '        </ul>\n'
+                     '    \n'
+                     '    ',
+                     '\n'
+                     '/*global googletag */\n'
+                     'if (SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '(function(){\n'
+                     '    \n'
+                     '    var el = '
+                     "document.getElementById('SF_ProjectSum_728x90_B_wrapped');\n"
+                     "    var newNode = document.createElement('div');\n"
+                     "    newNode.id = 'div-gpt-ad-1392148208790-0';\n"
+                     '    el.appendChild(newNode);\n'
+                     '}());\n'
+                     '\n'
+                     "gptadRenderers['SF_ProjectSum_728x90_B'] = function(){  "
+                     '// jshint ignore:line\n'
+                     '    \n'
+                     '    googletag.cmd.push(function() {\n'
+                     '        '
+                     "googletag.display('div-gpt-ad-1392148208790-0');\n"
+                     '    });\n'
+                     '};\n'
+                     "gptadRenderers['SF_ProjectSum_728x90_B']();  // jshint "
+                     'ignore:line\n'
+                     '}\n',
+                     '\n'
+                     '/*global googletag */\n'
+                     'if (!SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '(function(){\n'
+                     '    \n'
+                     '    var el = '
+                     "document.getElementById('SF_Mobile_Multi_B_wrapped');\n"
+                     "    var newNode = document.createElement('div');\n"
+                     "    newNode.id = 'div-gpt-ad-1512154653435-0';\n"
+                     '    el.appendChild(newNode);\n'
+                     '}());\n'
+                     '\n'
+                     "gptadRenderers['SF_Mobile_Multi_B'] = function(){  // "
+                     'jshint ignore:line\n'
+                     '    \n'
+                     '    googletag.cmd.push(function() {\n'
+                     '        '
+                     "googletag.display('div-gpt-ad-1512154653435-0');\n"
+                     '    });\n'
+                     '};\n'
+                     "gptadRenderers['SF_Mobile_Multi_B']();  // jshint "
+                     'ignore:line\n'
+                     '}\n',
+                     '\n    $(SF.wireOutboundZoneTracking);\n',
+                     '\n'
+                     '    /* globals bizx */\n'
+                     "    bizx.cmp.trackingPixel('publisher', ['storage', "
+                     "'measurement'], "
+                     "'/directory/tp/?b=26812&c=5069&cb=cc8fad0946&z=24170', "
+                     '"CMMS that is Simple and Easy to Use", '
+                     "'94e35e77-3af0-4481-889e-937ca27e420d');\n",
+                     '\n'
+                     '/*global googletag */\n'
+                     'if (SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '(function(){\n'
+                     '    \n'
+                     '    var el = '
+                     "document.getElementById('SF_ProjectSum_728x90_C_wrapped');\n"
+                     "    var newNode = document.createElement('div');\n"
+                     "    newNode.id = 'div-gpt-ad-1491500833666-0';\n"
+                     '    el.appendChild(newNode);\n'
+                     '}());\n'
+                     '\n'
+                     "gptadRenderers['SF_ProjectSum_728x90_C'] = function(){  "
+                     '// jshint ignore:line\n'
+                     '    \n'
+                     '    googletag.cmd.push(function() {\n'
+                     '        '
+                     "googletag.display('div-gpt-ad-1491500833666-0');\n"
+                     '    });\n'
+                     '};\n'
+                     "gptadRenderers['SF_ProjectSum_728x90_C']();  // jshint "
+                     'ignore:line\n'
+                     '}\n',
+                     '\n'
+                     '/*global googletag */\n'
+                     'if (SF.initial_breakpoints_visible.large) {\n'
+                     '(function(){\n'
+                     '    \n'
+                     '    var el = '
+                     "document.getElementById('SF_ProjectSum_300x250_A_wrapped');\n"
+                     "    var newNode = document.createElement('div');\n"
+                     "    newNode.id = 'div-gpt-ad-1394209358855-0';\n"
+                     '    el.appendChild(newNode);\n'
+                     '}());\n'
+                     '\n'
+                     "gptadRenderers['SF_ProjectSum_300x250_A'] = function(){  "
+                     '// jshint ignore:line\n'
+                     '    \n'
+                     '        if (!SF.adblock) {\n'
+                     '            '
+                     '$(\'#div-gpt-ad-1394209358855-0\').parents(\'.draper\').css("min-height", '
+                     '250 + 13); // 13 for height of .lbl-ad\n'
+                     '        }\n'
+                     '    \n'
+                     '    googletag.cmd.push(function() {\n'
+                     '        '
+                     "googletag.display('div-gpt-ad-1394209358855-0');\n"
+                     '    });\n'
+                     '};\n'
+                     "gptadRenderers['SF_ProjectSum_300x250_A']();  // jshint "
+                     'ignore:line\n'
+                     '}\n',
+                     '\n'
+                     '/*global googletag */\n'
+                     'if (SF.initial_breakpoints_visible.large) {\n'
+                     '(function(){\n'
+                     '    \n'
+                     '    var el = '
+                     "document.getElementById('SF_ProjectSum_300x250_B_wrapped');\n"
+                     "    var newNode = document.createElement('div');\n"
+                     "    newNode.id = 'div-gpt-ad-1394209358856-0';\n"
+                     '    el.appendChild(newNode);\n'
+                     '}());\n'
+                     '\n'
+                     "gptadRenderers['SF_ProjectSum_300x250_B'] = function(){  "
+                     '// jshint ignore:line\n'
+                     '    \n'
+                     '        if (!SF.adblock) {\n'
+                     '            '
+                     '$(\'#div-gpt-ad-1394209358856-0\').parents(\'.draper\').css("min-height", '
+                     '250 + 13); // 13 for height of .lbl-ad\n'
+                     '        }\n'
+                     '    \n'
+                     '    googletag.cmd.push(function() {\n'
+                     '        '
+                     "googletag.display('div-gpt-ad-1394209358856-0');\n"
+                     '    });\n'
+                     '};\n'
+                     "gptadRenderers['SF_ProjectSum_300x250_B']();  // jshint "
+                     'ignore:line\n'
+                     '}\n',
+                     '\n'
+                     '/*global googletag */\n'
+                     'if (SF.initial_breakpoints_visible.large) {\n'
+                     '(function(){\n'
+                     '    \n'
+                     '    var el = '
+                     "document.getElementById('SF_ProjectSum_300x250_C_wrapped');\n"
+                     "    var newNode = document.createElement('div');\n"
+                     "    newNode.id = 'div-gpt-ad-1394209358857-0';\n"
+                     '    el.appendChild(newNode);\n'
+                     '}());\n'
+                     '\n'
+                     "gptadRenderers['SF_ProjectSum_300x250_C'] = function(){  "
+                     '// jshint ignore:line\n'
+                     '    \n'
+                     '    googletag.cmd.push(function() {\n'
+                     '        '
+                     "googletag.display('div-gpt-ad-1394209358857-0');\n"
+                     '    });\n'
+                     '};\n'
+                     "gptadRenderers['SF_ProjectSum_300x250_C']();  // jshint "
+                     'ignore:line\n'
+                     '}\n',
+                     '\n'
+                     'if (!SF.adblock && SF.initial_breakpoints_visible.large) '
+                     '{\n'
+                     '    \n'
+                     '    SF.Ads.scrollFixable = new '
+                     "SF.ScrollFixable($('.scroll-fixable').eq(0), "
+                     '{"watchAvoidStickiness": true, "avoidElement": '
+                     '".l-header-nav, .l-header-nav-bottom", '
+                     '"adjustHorizontal": false});\n'
+                     '    \n'
+                     '}\n',
+                     '\n'
+                     '/*global googletag */\n'
+                     'if (!SF.initial_breakpoints_visible.leaderboard) {\n'
+                     '(function(){\n'
+                     '    \n'
+                     '    var el = '
+                     "document.getElementById('SF_Mobile_Multi_C_wrapped');\n"
+                     "    var newNode = document.createElement('div');\n"
+                     "    newNode.id = 'div-gpt-ad-1512154755912-0';\n"
+                     '    el.appendChild(newNode);\n'
+                     '}());\n'
+                     '\n'
+                     "gptadRenderers['SF_Mobile_Multi_C'] = function(){  // "
+                     'jshint ignore:line\n'
+                     '    \n'
+                     '    googletag.cmd.push(function() {\n'
+                     '        '
+                     "googletag.display('div-gpt-ad-1512154755912-0');\n"
+                     '    });\n'
+                     '};\n'
+                     "gptadRenderers['SF_Mobile_Multi_C']();  // jshint "
+                     'ignore:line\n'
+                     '}\n',
+                     '\n'
+                     '\n'
+                     "document.addEventListener('DOMContentLoaded', function "
+                     '() {\n'
+                     '    var hasCSS = '
+                     "window.getComputedStyle(document.querySelector('#l-no-css')).display "
+                     "=== 'none';\n"
+                     '    if(!hasCSS) {\n'
+                     "        var svgs = document.querySelectorAll('svg');\n"
+                     '        for (var x=0; x<svgs.length; x++){\n'
+                     "            svgs[x].style.display = 'none';\n"
+                     '        }\n'
+                     '        window.scroll(0, 0);  \n'
+                     '        '
+                     "document.getElementById('offCanvas').style.display = "
+                     "'none';\n"
+                     '        var dropdowns = '
+                     "document.querySelectorAll('.nav-dropdown-menu');\n"
+                     '        for (x=0; x<dropdowns.length; x++){\n'
+                     "            dropdowns[x].style.display = 'none';\n"
+                     '        }\n'
+                     '        var backdrop = '
+                     "document.querySelectorAll('.backdrop');\n"
+                     '        if (backdrop.length) {\n'
+                     "            backdrop[0].style.display = 'none';\n"
+                     '        }\n'
+                     '        var dlpNewsletterModal = '
+                     "document.getElementById('psp-newsletter-modal');\n"
+                     '        if (dlpNewsletterModal) {\n'
+                     "            dlpNewsletterModal.style.display = 'none';\n"
+                     '        }\n'
+                     '        var problemDownloading = '
+                     "document.getElementById('btn-problems-downloading');\n"
+                     '        if (problemDownloading) {\n'
+                     "            problemDownloading.setAttribute('href', "
+                     "problemDownloading.getAttribute('data-release-url'));\n"
+                     "            problemDownloading.style.fontSize = '40px';\n"
+                     '        }\n'
+                     '    }\n'
+                     '});\n',
+                     '\n'
+                     '            /* global Foundation */\n'
+                     '            $(document).foundation();\n'
+                     '            Foundation.Triggers.forceListenersNow();\n'
+                     '        ',
+                     '\n'
+                     "            bizx.cmp.ifConsent('all', 'all', function () "
+                     '{\n'
+                     '               /*jshint ignore:start*/\n'
+                     '               adroll_adv_id = '
+                     '"3QEU55AVURGVNFYKGPRLHU";\n'
+                     '               adroll_pix_id = '
+                     '"EPGGWMNOENDCJMRYE2IIFV";\n'
+                     '               (function () {\n'
+                     '                   var _onload = function(){\n'
+                     '                       if (document.readyState && '
+                     '!/loaded|complete/.test(document.readyState)){setTimeout(_onload, '
+                     '10);return}\n'
+                     '                       if '
+                     '(!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, '
+                     '50);return}\n'
+                     '                       var scr = '
+                     'document.createElement("script");\n'
+                     '                       var host = (("https:" == '
+                     'document.location.protocol) ? "https://s.adroll.com" : '
+                     '"http://a.adroll.com");\n'
+                     "                       scr.setAttribute('async', "
+                     "'true');\n"
+                     '                       scr.type = "text/javascript";\n'
+                     '                       scr.src = host + '
+                     '"/j/roundtrip.js";\n'
+                     '                       '
+                     "((document.getElementsByTagName('head') || [null])[0] "
+                     '||\n'
+                     '                           '
+                     "document.getElementsByTagName('script')[0].parentNode).appendChild(scr);\n"
+                     '                   };\n'
+                     '                   if (window.addEventListener) '
+                     "{window.addEventListener('load', _onload, false);}\n"
+                     "                   else {window.attachEvent('onload', "
+                     '_onload)}\n'
+                     '                   _onload(); \n'
+                     '               }());\n'
+                     '               /*jshint ignore:end*/\n'
+                     '            });\n'
+                     '            '],
  'titleUrl': 'asm2ace download | SourceForge.net',
  'urlTool': 'http://sourceforge.net/projects/asm2ace/'}
-2020-03-27 13:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://150.145.82.212/aspic/aspicgeneid.tar.gz via http://0.0.0.0:8050/execute> (referer: None)
-2020-03-27 13:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://150.145.82.212/aspic/aspicgeneid.tar.gz>
-{'JavaScript': 'Yes',
- 'bodyContent': 297,
+2020-03-28 19:59:24 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 10, 'error': 'network3', 'type': 'LUA_ERROR', 'message': 'Lua error: [string "..."]:10: network3'}}
+2020-03-28 19:59:24 [scrapy.core.engine] DEBUG: Crawled (400) <POST http://0.0.0.0:8050/execute> (referer: None)
+2020-03-28 19:59:24 [scrapy.core.scraper] DEBUG: Scraped from <400 http://sysbio.kribb.re.kr/AsiDesigner/>
+{'bodyContent': 253,
  'externalLinks': [],
- 'h1': ['Failed loading page (Operation canceled)'],
- 'h2': ['http://150.145.82.212/aspic/aspicgeneid.tar.gz'],
- 'h3': [],
- 'h4': [],
- 'httpCode': 200,
- 'idTool': 'https://openebench.bsc.es/monitor/tool/aspic-geneid',
- 'latency': 16.2522234916687,
+ 'httpCode': 400,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/asidesigner',
+ 'latency': 6.248566389083862,
+ 'lenScriptsTagsText': 0,
  'metaDescription': None,
  'numberExternalLinks': 0,
  'numberRelativeLinks': 0,
  'redirectUrls': None,
  'redirect_reasons': None,
- 'responseBody': 297,
- 'titleUrl': 'Failed loading page',
+ 'scriptsTagsText': [],
+ 'titleUrl': None,
+ 'urlTool': 'http://sysbio.kribb.re.kr/AsiDesigner/'}
+2020-03-28 19:59:33 [scrapy_splash.middleware] WARNING: Bad request to Splash: {'error': 400, 'type': 'ScriptError', 'description': 'Error happened while executing Lua script', 'info': {'source': '[string "..."]', 'line_number': 10, 'error': 'network5', 'type': 'LUA_ERROR', 'message': 'Lua error: [string "..."]:10: network5'}}
+2020-03-28 19:59:33 [scrapy.core.engine] DEBUG: Crawled (400) <POST http://0.0.0.0:8050/execute> (referer: None)
+2020-03-28 19:59:33 [scrapy.core.scraper] DEBUG: Scraped from <400 http://150.145.82.212/aspic/aspicgeneid.tar.gz>
+{'bodyContent': 253,
+ 'externalLinks': [],
+ 'httpCode': 400,
+ 'idTool': 'https://openebench.bsc.es/monitor/tool/aspic-geneid',
+ 'latency': 14.558464527130127,
+ 'lenScriptsTagsText': 0,
+ 'metaDescription': None,
+ 'numberExternalLinks': 0,
+ 'numberRelativeLinks': 0,
+ 'redirectUrls': None,
+ 'redirect_reasons': None,
+ 'scriptsTagsText': [],
+ 'titleUrl': None,
  'urlTool': 'http://150.145.82.212/aspic/aspicgeneid.tar.gz'}
-2020-03-27 13:22:23 [scrapy.core.engine] INFO: Closing spider (finished)
-2020-03-27 13:22:23 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 8867,
+2020-03-28 19:59:33 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-03-28 19:59:33 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 8894,
  'downloader/request_count': 9,
  'downloader/request_method_count/POST': 9,
- 'downloader/response_bytes': 365016,
+ 'downloader/response_bytes': 382397,
  'downloader/response_count': 9,
- 'downloader/response_status_count/200': 9,
- 'elapsed_time_seconds': 16.39026,
+ 'downloader/response_status_count/200': 7,
+ 'downloader/response_status_count/400': 2,
+ 'elapsed_time_seconds': 14.689423,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2020, 3, 27, 12, 22, 23, 938428),
+ 'finish_time': datetime.datetime(2020, 3, 28, 18, 59, 33, 289173),
  'item_scraped_count': 9,
  'log_count/DEBUG': 18,
  'log_count/INFO': 10,
- 'log_count/WARNING': 1,
- 'memusage/max': 444506112,
- 'memusage/startup': 444506112,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 445075456,
+ 'memusage/startup': 445075456,
  'response_received_count': 9,
  'scheduler/dequeued': 18,
  'scheduler/dequeued/memory': 18,
  'scheduler/enqueued': 18,
  'scheduler/enqueued/memory': 18,
  'splash/execute/request_count': 9,
- 'splash/execute/response_count/200': 9,
- 'start_time': datetime.datetime(2020, 3, 27, 12, 22, 7, 548168)}
-2020-03-27 13:22:23 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'splash/execute/response_count/200': 7,
+ 'splash/execute/response_count/400': 2,
+ 'start_time': datetime.datetime(2020, 3, 28, 18, 59, 18, 599750)}
+2020-03-28 19:59:33 [scrapy.core.engine] INFO: Spider closed (finished)

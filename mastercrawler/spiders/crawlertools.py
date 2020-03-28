@@ -58,9 +58,7 @@ class ToolsSpider(CrawlSpider):
                     externalLinks.append(link)
         
 
-
         scriptsTagsText = response.xpath('//script/text()').getall()
-    
         lenScriptsTagsText = len(self.listToString(scriptsTagsText))
 
         # lenScriptsTagsText = len(response.xpath('//script/text()').getall())
@@ -82,11 +80,12 @@ class ToolsSpider(CrawlSpider):
         toolItem ['idTool'] = idTool
         toolItem ['bodyContent'] = len(response.text) - lenScriptsTagsText
         toolItem ['httpCode'] = response.status
-        
-        toolItem ['JavaScript'] = "No"
-
         toolItem ['scriptsTagsText'] = scriptsTagsText
         toolItem ['lenScriptsTagsText'] = lenScriptsTagsText
+        
+        #toolItem ['JavaScript'] = "No"
+
+        
 
         toolItem ['urlTool'] = url
         #toolItem ['nameTool'] = nameTool
@@ -94,10 +93,10 @@ class ToolsSpider(CrawlSpider):
         toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
         
 
-        toolItem ['h1'] = h1ListOut
-        toolItem ['h2'] = h2ListOut
-        toolItem ['h3'] = h3ListOut
-        toolItem ['h4'] = h4ListOut
+        # toolItem ['h1'] = h1ListOut
+        # toolItem ['h2'] = h2ListOut
+        # toolItem ['h3'] = h3ListOut
+        # toolItem ['h4'] = h4ListOut
 
         #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers:
         toolItem ['latency'] = latency

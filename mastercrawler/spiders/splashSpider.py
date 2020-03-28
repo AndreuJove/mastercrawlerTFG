@@ -26,7 +26,7 @@ class SplashspiderSpider(CrawlSpider):
             splash.private_mode_enabled = false
             
             url = args.url
-            splash:go(url)
+            assert(splash:go(url))
             assert(splash:wait(1))
             return {
                 html = splash:html()
@@ -41,7 +41,19 @@ class SplashspiderSpider(CrawlSpider):
     # splash:set_viewport_full()
     def start_requests(self):
         for url in self.start_urls:
-            yield SplashRequest(url = url['url'], callback=self.parse, errback=self.errback_httpbin, endpoint='execute', magic_response= True, args={'lua_source': self.script}, meta={'dont retry': True, 'dont_redirect': False, 'id' : url['id'], 'name' : url['name']})
+            yield scrapy.Request(url = url['url'], callback=self.parse, meta={'dont retry': True, 'handle_httpstatus_all' : False, 'dont_redirect': False, 'id' : url['id'], 'name' : url['name'], 
+                'splash' : { 
+                    'args' : {
+                        'lua_source': self.script
+                    }, 
+                        'endpoint' : 'execute', 'magic_response' : True 
+                }
+                }, errback=self.errback_httpbin)
+
+    def listToString(self, listInput):
+        str1 = ""
+        return (str1.join(listInput))
+
 
     def parseHtmlTags(self, tagsList):
         tagsList = [item.replace('\n', "") for item in tagsList]
@@ -69,6 +81,8 @@ class SplashspiderSpider(CrawlSpider):
                 elif link.startswith("http"):
                     externalLinks.append(link)
         
+        scriptsTagsText = response.xpath('//script/text()').getall()
+        lenScriptsTagsText = len(self.listToString(scriptsTagsText))
         
         h1List = response.xpath('//h1/text()').getall()
         h2List = response.xpath('//h2/text()').getall()
@@ -85,19 +99,22 @@ class SplashspiderSpider(CrawlSpider):
         #Create Item:
         toolItem = MastercrawlerItem()
         toolItem ['idTool'] = idTool
-        toolItem ['bodyContent'] = len(response.text)
-        toolItem ['responseBody'] = len(response.body)
+        toolItem ['bodyContent'] = len(response.text) - lenScriptsTagsText
+        
+
         toolItem ['httpCode'] = response.status
-        toolItem ['JavaScript'] = "Yes"
+        #toolItem ['JavaScript'] = "Yes"
+        toolItem ['scriptsTagsText'] = scriptsTagsText
+        toolItem ['lenScriptsTagsText'] = lenScriptsTagsText
 
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()
         toolItem ['urlTool'] = response.url
         toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
         
-        toolItem ['h1'] = h1ListOut
-        toolItem ['h2'] = h2ListOut
-        toolItem ['h3'] = h3ListOut
-        toolItem ['h4'] = h4ListOut
+        # toolItem ['h1'] = h1ListOut
+        # toolItem ['h2'] = h2ListOut
+        # toolItem ['h3'] = h3ListOut
+        # toolItem ['h4'] = h4ListOut
 
         toolItem ['latency'] = latency
         

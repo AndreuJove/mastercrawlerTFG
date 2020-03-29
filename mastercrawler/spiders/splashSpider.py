@@ -41,7 +41,7 @@ class SplashspiderSpider(CrawlSpider):
     # splash:set_viewport_full()
     def start_requests(self):
         for url in self.start_urls:
-            yield scrapy.Request(url = url['url'], callback=self.parse, meta={'dont retry': True, 'handle_httpstatus_all' : False, 'dont_redirect': False, 'id' : url['id'], 'name' : url['name'], 
+            yield scrapy.Request(url = url['url'], callback=self.parse, meta={'dont retry': True, 'handle_httpstatus_all' : False, 'dont_redirect': True, 'id' : url['id'], 'name' : url['name'], 
                 'splash' : { 
                     'args' : {
                         'lua_source': self.script
@@ -104,7 +104,7 @@ class SplashspiderSpider(CrawlSpider):
 
         toolItem ['httpCode'] = response.status
         #toolItem ['JavaScript'] = "Yes"
-        toolItem ['scriptsTagsText'] = scriptsTagsText
+        #toolItem ['scriptsTagsText'] = scriptsTagsText
         toolItem ['lenScriptsTagsText'] = lenScriptsTagsText
 
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()

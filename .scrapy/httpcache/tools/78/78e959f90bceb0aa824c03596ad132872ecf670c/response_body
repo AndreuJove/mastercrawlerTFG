@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--  
+ 
+ $Revision:1 $
+ $LastChangedDate:2014-01-11  $
+ $Author:black-night - Daniel Neef $
+
+-->    
+<html xmlns="http://www.w3.org/1999/xhtml">     
+	<head>
+<script type="text/javascript" src="/cms/jquery/jquery-1.7.2.min.js"></script>
+<!-- bootstrap -->
+<style type="text/css"> @import "/plugins/Bootstrap/css/bootstrap.min.css"; </style><script type="text/javascript" src="/plugins/Bootstrap/js/bootstrap.min.js"></script>
+		<meta name="keywords" content="Massenspektrometrie Cysteinbr&uuml;cken Proteomics mass spectrometry Ionenfalle MALDI ESI-Quad Orbitrap QTrap Qexecactive Plus" />
+		<meta name="description" content="Ger&auml;tezentrum Massenspektrometrie an der Universit&auml;t Osnabr&uuml;ck" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />		
+		<title>Massenspektrometrie -  Universtit&auml;t Osnabr&uuml;ck :: SoftwareTools</title>
+    <style type="text/css"> @import "/layouts/bnBootstrapBasic/css/bootstrap-theme.mini.css"; </style>
+    <style type="text/css"> @import "/layouts/bnBootstrapBasic/css/style.css"; </style>
+    <script type="text/javascript" src="/layouts/bnBootstrapBasic/js/bn-bootstrap.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+   <script type="text/javascript">
+        $(document).ready(function() {
+            var $foo = $('#nach_oben');
+            $foo.hide();
+            var $win = $(window).scroll(function() {
+            if($win.scrollTop() > 400) {
+                if(!$foo.is(':visible')) {
+                    $foo.stop(true, true).fadeIn();
+                }
+            } else {
+                if(!$foo.is(':animated')) {
+                    $foo.stop(true, true).fadeOut();
+                }
+            }
+            });
+
+        });   
+        
+        function changeClass(MyElement)
+        {
+            if ( document.getElementById(MyElement).classList.contains('zoom') ){
+                    document.getElementById(MyElement).classList.remove('zoom');
+            } else{
+                document.getElementById(MyElement).classList.add('zoom');
+            }
+        }
+    </script>
+
+
+ 
+    </head>
+    
+    
+	<body> 
+    <div id="nach_oben" style="position:fixed; top:200px; left:70px; border: 2px solid #AD1034; background-color: white; padding:20px; display:none" ><a href="#logo">nach oben</a></div>
+<div id="wrap">
+    
+    
+            <!-- begin logo -->
+            <div id="logo" class="container">
+                <div style="float:left; height:120px; margin-top:-10px;">
+                <a href="http://www.uni-osnabrueck.de" target=_new>
+                <img src="/layouts/bnBootstrapBasic/grafiken/UNI_logo.gif" alt="Uni Logo" />
+                </a>
+                </div>
+            
+            
+                <div id="searchcontainer"><form accept-charset="UTF-8" method="get" action="/index.html" class="searchform"><fieldset id="searchfieldset"><input type="hidden" name="action" value="search" /><input type="text" name="search" value="" class="searchtextfield" /><input type="image" src="/layouts/bnBootstrapBasic/grafiken/searchicon.gif" alt="Suchen" class="searchbutton" /></fieldset></form></div>
+          
+            </div>
+            <!-- end logo -->
+            
+            
+           <div class="navbar navbar-default navbar-static-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <span class="navbar-brand"></span>
+                </div>
+                
+                <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav"><li class="dropdown"><a href="/Home.html" target=""><span class="glyphicon glyphicon-home"></span></a><ul class="dropdown-menu"><li><a href="/Home/Willkommen.html">Willkommen</a></li></ul></li><li class="dropdown"><a href="/Aktuelles.html" target="">Aktuelles</a><ul class="dropdown-menu"><li><a href="/Aktuelles/Neuigkeiten.html">Neuigkeiten</a></li></ul></li><li><a href="/Ger%C3%A4tepool.html" target="">Ger&auml;tepool</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Die Proben<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/Die%20Proben/Beispiel%20Proteinidentifikation.html">Beispiel Proteinidentifikation</a></li><li><a href="/Die%20Proben/Probenmessung.html">Probenmessung</a></li><li><a href="/Die%20Proben/Datenzugang.html">Datenzugang</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Methoden<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/Methoden/Methoden%20Wizard.html">Methoden Wizard</a></li><li><a href="/Methoden/In-Gel-Purification.html">In-Gel-Purification</a></li><li><a href="/Methoden/Time-Column-ProteinID.html">Time-Column-ProteinID</a></li></ul></li><li class="active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SoftwareTools<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/SoftwareTools/Peptide%20Fragmentation%20Prediction.html">Peptide Fragmentation Prediction</a></li><li><a href="/SoftwareTools/Calculation%20Mass/Charge%20relations.html">Calculation Mass/Charge relations</a></li><li><a href="/SoftwareTools/MS-Performance-Analyzer.html">MS-Performance-Analyzer</a></li><li><a href="/SoftwareTools/Lipide%20mass%20calculation.html">Lipide mass calculation</a></li><li><a href="/SoftwareTools/CC%3A%3Aintroduction.html">CC::introduction</a></li><li><a href="/SoftwareTools/CC%3A%3Aidentifing%20within%20MS%20data.html">CC::identifing within MS data</a></li><li class="active"><a href="/SoftwareTools/CC%3A%3Ain%20silico%20digestion.html">CC::in silico digestion</a></li><li><a href="/SoftwareTools/Inhouse%20Mascot%20Server.html">Inhouse Mascot Server</a></li><li><a href="/SoftwareTools/Inhouse%20Mascot%20Database%20Check.html">Inhouse Mascot Database Check</a></li><li><a href="/SoftwareTools/Inhouse%20Mascot%20Database%20New%20%20Entry.html">Inhouse Mascot Database New  Entry</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Infos<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/Infos/externe%20Links.html">externe Links</a></li><li><a href="/Infos/AminoAcids.html">AminoAcids</a></li></ul></li><li><a href="/Downloads.html" target="">Downloads</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Kontakt &amp; Impressum<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/Kontakt%20%26%20Impressum/Ger%C3%A4tezentrum.html">Ger&auml;tezentrum</a></li><li><a href="/Kontakt%20%26%20Impressum/Mitarbeiterinnen%20%26%20Mitarbeiter.html">Mitarbeiterinnen &amp; Mitarbeiter</a></li><li><a href="/Kontakt%20%26%20Impressum/Impressum%20und%20Datenschutz.html">Impressum und Datenschutz</a></li></ul></li></ul>
+                </div><!--/.nav-collapse -->
+              </div>
+            </div>  
+	
+    <div class="container">
+				<h3 id="a2" class="heading3"><i class="contentitalic">In silico</i> digestion of proteins containing intact disulfide bridges (C-C)</h3>
+<iframe style="border:0px solid silver" src="https://mass-spec.cellnanos.uni-osnabrueck.de/CC/cgi/form_digest_iframe.pl" width="1200px"height="1200px" scrolling="yes" frameborder="no"></iframe><br />
+<br />
+<br />
+
+	</div>
+  
+  </div>
+    
+  <div id="footer">
+    <div class="container">          
+        <div class="row">
+        
+            <ul class="mylist">
+            <li>Quicklinks:</li>
+            <li><a href="http://www.uni-osnabrueck.de">
+                <img src="/layouts/bnBootstrapBasic/grafiken/UNI.gif" alt="UNI OS" width="100" height="65" /></a>
+            </li>
+            <li><a href="https://www.cellnanos.uni-osnabrueck.de/en/home.html">
+                <img src="/layouts/bnBootstrapBasic/grafiken/Icon_CellNanos.png" alt="CellNanOS" width="100" height="65" /></a>
+            </li>
+            <li><a href="http://www.biologie.uni-osnabrueck.de">
+                <img src="/layouts/bnBootstrapBasic/grafiken/FB5.gif" alt="FB5" width="100" height="65" /></a>
+            </li>
+             <li><a href="https://www.uni-osnabrueck.de/universitaet/lageplaene.html">
+                <img src="/layouts/bnBootstrapBasic/grafiken/Lageplaene.gif" alt="Lagepläne" width="100" height="65" /></a>
+            </li>
+            <li>Services:</li>
+            <li><a href="https://argo.biologie.uni-osnabrueck.de/owa">
+                <img src="/layouts/bnBootstrapBasic/grafiken/Webmail.gif" alt="Webmail" width="100" height="65" /></a>
+            </li>            
+            <li><a href="http://studip.serv.uni-osnabrueck.de/">
+                <img src="/layouts/bnBootstrapBasic/grafiken/Stud_IP.gif" alt="StudIP" width="100" height="65" /></a>
+            </li>
+            
+           
+            </ul>
+        </div>
+        <span class="fontsize" style="font-size:13px;">Webseite CMS <a href="http://www.mozilo.de/" target="_blank" id="cmsinfolink" title="Webseite erstellt mit moziloCMS">moziloCMS 2.0</a>  |  Original-Layout: bnBootstrapBasic(black-night)</span>
+        
+               
+            
+        
+         
+    </div>
+    
+  </div>
+    
+</body>
+</html>

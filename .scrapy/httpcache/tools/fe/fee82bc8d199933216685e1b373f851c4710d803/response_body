@@ -1,0 +1,1283 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="agile_files/filelist.xml">
+<link rel=Edit-Time-Data href="agile_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>AGILE: AliGnIng Long rEads</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Sanchit Misra</o:Author>
+  <o:LastAuthor>Sanchit Misra</o:LastAuthor>
+  <o:Revision>46</o:Revision>
+  <o:TotalTime>70</o:TotalTime>
+  <o:Created>2010-05-13T08:23:00Z</o:Created>
+  <o:LastSaved>2010-11-23T08:39:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>876</o:Words>
+  <o:Characters>4998</o:Characters>
+  <o:Lines>41</o:Lines>
+  <o:Paragraphs>11</o:Paragraphs>
+  <o:CharactersWithSpaces>5863</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="agile_files/themedata.thmx">
+<link rel=colorSchemeMapping href="agile_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.stylebl, li.stylebl, div.stylebl
+	{mso-style-name:style_bl;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:18.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+p.stylebm, li.stylebm, div.stylebm
+	{mso-style-name:style_bm;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+p.stylem, li.stylem, div.stylem
+	{mso-style-name:style_m;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.styleword, li.styleword, div.styleword
+	{mso-style-name:style_word;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.stylesmall, li.stylesmall, div.stylesmall
+	{mso-style-name:style_small;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:7.5pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.styleline, li.styleline, div.styleline
+	{mso-style-name:style_line;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	background:#EEEEEE;
+	font-size:15.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.stylebm1
+	{mso-style-name:style_bm1;
+	mso-style-unhide:no;
+	mso-ansi-font-size:10.5pt;
+	mso-bidi-font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	font-weight:bold;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:148328174;
+	mso-list-template-ids:-1147347510;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:448361095;
+	mso-list-template-ids:158365986;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:689449842;
+	mso-list-template-ids:-444824162;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1563714806;
+	mso-list-template-ids:-268918568;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1708677099;
+	mso-list-template-ids:1197662934;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]-->
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="7170"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19913726-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<div class=WordSection1>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="60%"
+ style='width:60.0%;mso-cellspacing:1.5pt;background:white;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=115 style='width:86.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+   coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+   filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="Picture_x0020_2" o:spid="_x0000_s1039" type="#_x0000_t75"
+   style='position:absolute;margin-left:0;margin-top:0;width:75pt;height:67.5pt;
+   z-index:1;visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+   mso-wrap-distance-top:0;mso-wrap-distance-right:0;
+   mso-wrap-distance-bottom:0;mso-position-horizontal:left;
+   mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+   mso-position-vertical-relative:line' o:allowoverlap="f">
+   <v:imagedata src="dna_white_purple_soft.gif"/>
+   <w:wrap type="square" anchory="line"/>
+  </v:shape><![endif]--><![if !vml]><img width=100 height=90
+  src="dna_white_purple_soft.gif" align=left v:shapes="Picture_x0020_2"><![endif]><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=540
+   style='width:405.0pt;mso-cellspacing:0in;mso-yfti-tbllook:1184;mso-padding-alt:
+   0in 0in 0in 0in' height=90>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes;
+    height:48.75pt'>
+    <td valign=bottom style='padding:0in 0in 0in 0in;height:48.75pt'>
+    <p class=MsoNormal><b><span style='font-size:18.0pt;mso-fareast-font-family:
+    "Times New Roman"'>AGILE: AliGnIng Long rEads</span></b><i><span
+    style='mso-fareast-font-family:"Times New Roman"'> </span></i><span
+    style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shape id="Picture_x0020_3" o:spid="_x0000_s1038"
+   type="#_x0000_t75" href="http://www.northwestern.edu/" style='position:absolute;
+   margin-left:87.5pt;margin-top:0;width:127.5pt;height:67.5pt;z-index:2;
+   visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+   mso-wrap-distance-top:0;mso-wrap-distance-right:0;
+   mso-wrap-distance-bottom:0;mso-position-horizontal:right;
+   mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+   mso-position-vertical-relative:line' o:allowoverlap="f" o:button="t">
+   <v:imagedata src="nulogo.gif"/>
+   <w:wrap type="square" anchory="line"/>
+  </v:shape><![endif]--><![if !vml]><a href="http://www.northwestern.edu/"><img
+  border=0 width=170 height=90 src=nulogo.gif align=right title="" v:shapes="Picture_x0020_3"></a><![endif]><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span style='mso-fareast-font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="70%"
+ style='width:70.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt' height=330>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width="20%" valign=top style='width:20.0%;padding:.75pt .75pt .75pt .75pt'><!--Links on left-->
+  <table class=MsoNormalTable border=0 cellpadding=0 align=left width="100%"
+   style='width:100.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-table-lspace:
+   2.25pt;mso-table-rspace:2.25pt;mso-table-anchor-vertical:paragraph;
+   mso-table-anchor-horizontal:column;mso-table-left:left;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td style='background:#EEEEEE;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span style='font-size:15.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'><a href="#overview">Overview</a><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td style='background:#EEEEEE;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span style='font-size:15.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'><a href="#agile">AGILE</a><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td style='background:#EEEEEE;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span style='font-size:15.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'><a href="#download">Download</a><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3'>
+    <td style='background:#EEEEEE;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span style='font-size:15.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'><a href="#usage">Manual</a><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:4'>
+    <td style='background:#EEEEEE;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span style='font-size:15.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'><a href="#publications">Publications</a><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:5'>
+    <td style='background:#EEEEEE;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span style='font-size:15.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'><a href="#current">Current
+    Status</a><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes'>
+    <td style='background:#EEEEEE;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span style='font-size:15.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'><a
+    href="http://cucis.ece.northwestern.edu/">CUCIS</a><o:p></o:p></span></p>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=7 cellpadding=0 width="100%"
+   style='width:100.0%;mso-cellspacing:5.2pt;mso-yfti-tbllook:1184;mso-padding-alt:
+   3.0pt 3.0pt 3.0pt 3.0pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td style='background:#EEEEEE;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span class=stylebm1><span style='font-size:10.5pt;
+    mso-fareast-font-family:"Times New Roman"'>&nbsp;&nbsp;<a name=overview>Overview</a></span></span><span
+    style='font-size:15.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman"'><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td style='padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal style='margin-bottom:12.0pt'><span style='font-size:
+    9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>Recent
+    advances in Next Generation Sequencing (NGS) technology have led to
+    affordable desktop-sized sequencers with low running costs and high
+    throughput. These sequencers produce small fragments of the genome being
+    sequenced as a result of the sequencing process. By mapping these small
+    fragments (reads) to a reference genome, we can sequence the DNA of a new
+    individual. The NGSs are making it possible for these studies to be
+    conducted at a mass scale. This is believed to usher an era of personal
+    genomics when each individual can have his/her dna sequenced and studied to
+    come up with more personalized ways of anticipating, diagnosing and
+    treating diseases. <br>
+    <br>
+    The studies of this nature have already begun. Following are two very
+    recent examples of such kinds of studies. James Lupski, a
+    physician-scientist who suffers from a neurological disorder called
+    Charcot-Marie-Tooth has found the genetic cause of his disease by
+    sequencing his entire genome (late 2009). Another study, the first to
+    describe the genomes of an entire family of four, confirmed the genetic
+    root of a rare disease, called Miller syndrome, afflicting both children
+    (March 2010). <br>
+    <br>
+    A number of different companies are involved in building sequencers - 454,
+    Illumina and Applied Biosciences to name a few. The rate of throughput as
+    well as read lengths of these NGSs are increasing at a pace that puts even
+    the Moore's law to shame. Hence there is a growing need of tools that can
+    work for longer reads and can still match the pace of the NGSs. <o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td style='background:#EEEEEE;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><a name=agile><span class=stylebm1><span
+    style='font-size:10.5pt;mso-fareast-font-family:"Times New Roman"'>&nbsp;&nbsp;AGILE</span></span></a><span
+    style='mso-bookmark:agile'><span style='font-size:15.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></p>
+    </td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+   <tr style='mso-yfti-irow:3'>
+    <td style='padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><span style='font-size:
+    9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>AGILE
+    is a sequence mapping tool specifically designed to map the longer reads
+    (read length &gt; 200) to a given reference genome. Currently it works for
+    454 reads, but efforts are being made to make it suitable to work for all
+    sequencers, which produce longer reads. Looking at the current trend of
+    increasing read lengths, soon most of the sequencers have read lengths &gt;
+    200. In comparison with existing tools, the most significant features of
+    AGILE are:<o:p></o:p></span></span></p>
+    <ul type=disc>
+     <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+         auto;mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+         style='mso-bookmark:agile'><b><span style='font-size:9.0pt;font-family:
+         "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>High
+         flexibility.</span></b></span><span style='mso-bookmark:agile'><span
+         style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+         "Times New Roman"'> It allows a large number of mismatches and insertions/deletions
+         in mapping. Current version of AGILE has been tested to work with upto
+         <b style='mso-bidi-font-weight:normal'>10%</b> differences in mapping.
+         <o:p></o:p></span></span></li>
+     <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+         auto;mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+         style='mso-bookmark:agile'><b><span style='font-size:9.0pt;font-family:
+         "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>High
+         Sensitivity.</span></b></span><span style='mso-bookmark:agile'><span
+         style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+         "Times New Roman"'> AGILE correctly maps about <b style='mso-bidi-font-weight:
+         normal'>~99.8%</b> reads.<o:p></o:p></span></span></li>
+     <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+         auto;mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+         style='mso-bookmark:agile'><b><span style='font-size:9.0pt;font-family:
+         "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>Ability
+         to handle large datasets.</span></b></span><span style='mso-bookmark:
+         agile'><span style='font-size:9.0pt;font-family:"Arial","sans-serif";
+         mso-fareast-font-family:"Times New Roman"'> We have successfully
+         tested AGILE with <b style='mso-bidi-font-weight:normal'>human genome</b>
+         and a <b style='mso-bidi-font-weight:normal'>million batch queries</b>.
+         <o:p></o:p></span></span></li>
+     <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+         auto;mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+         style='mso-bookmark:agile'><b><span style='font-size:9.0pt;font-family:
+         "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>Speed.</span></b></span><span
+         style='mso-bookmark:agile'><span style='font-size:9.0pt;font-family:
+         "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'> Using
+         AGILE, we can map approximately <b style='mso-bidi-font-weight:normal'>1.1
+         million</b> reads of length <b style='mso-bidi-font-weight:normal'>500</b>
+         each to a reference <b style='mso-bidi-font-weight:normal'>human
+         genome</b> per hour. That means about <b style='mso-bidi-font-weight:
+         normal'>550 million bases per hour</b>. At this rate, AGILE will need <b
+         style='mso-bidi-font-weight:normal'>only 6 hours</b> for a 1X coverage
+         of the <b style='mso-bidi-font-weight:normal'>human genome.</b> <o:p></o:p></span></span></li>
+    </ul>
+    </td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+   <tr style='mso-yfti-irow:4'>
+    <td style='background:#EEEEEE;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><a name=download><span
+    class=stylebm1><span style='font-size:10.5pt;mso-fareast-font-family:"Times New Roman"'>&nbsp;&nbsp;Download
+    AGILE</span></span></a></span><span style='mso-bookmark:agile'><span
+    style='mso-bookmark:download'><span style='font-size:15.0pt;font-family:
+    "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></p>
+    </td>
+    <span style='mso-bookmark:agile'><span style='mso-bookmark:download'></span></span>
+   </tr>
+   <tr style='mso-yfti-irow:5'>
+    <td style='padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><span style='mso-bookmark:
+    download'><span style='font-size:9.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'>Please download AGILE here : </span></span></span><a
+    href="agile/download.html" onClick="javascript:pageTracker._trackEvent('EXEC','Download','agile'); void(0);" ><span style='mso-bookmark:agile'><span
+    style='mso-bookmark:download'><span style='font-size:10.0pt;font-family:
+    "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>AGILE_Linux_x86_64_0.4.0</span></span></span><span
+    style='mso-bookmark:agile'><span style='mso-bookmark:download'></span></span></a><span
+    style='mso-bookmark:agile'><span style='mso-bookmark:download'><span
+    style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman"'> <br>
+    <br>
+    This version works for a 64 bit linux operating system. <o:p></o:p></span></span></span></p>
+    </td>
+    <span style='mso-bookmark:agile'><span style='mso-bookmark:download'></span></span>
+   </tr>
+   <tr style='mso-yfti-irow:6'>
+    <td style='background:#F2F2F2;mso-background-themecolor:background1;
+    mso-background-themeshade:242;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><span class=stylebm1><span
+    style='font-size:10.5pt;mso-fareast-font-family:"Times New Roman"'>&nbsp;&nbsp;Download
+    Data</span></span></span><span style='mso-bookmark:agile'><span
+    style='font-size:15.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman"'><o:p></o:p></span></span></p>
+    </td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+   <tr style='mso-yfti-irow:7'>
+    <td style='padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><span style='font-size:
+    9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>The
+    fasta version of human genome hg19 can be downloaded here: </span></span><a
+    href="hg19_unmasked.fa.tar.bz2"><span style='mso-bookmark:agile'><span
+    style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman"'>hg19_unmasked</span></span><span style='mso-bookmark:
+    agile'></span></a><span style='mso-bookmark:agile'><span style='font-size:
+    9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></p>
+    </td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+   <tr style='mso-yfti-irow:8'>
+    <td style='padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><span style='font-size:
+    9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>A
+    sample fasta file containing real 454 reads can be downloaded here: </span></span><a
+    href="SRR005010_15.fa"><span style='mso-bookmark:agile'><span
+    style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman"'>SRR005010_15.fa</span></span><span style='mso-bookmark:
+    agile'></span></a><span style='mso-bookmark:agile'><span style='font-size:
+    9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></p>
+    </td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+   <tr style='mso-yfti-irow:4'>
+    <td style='background:#EEEEEE;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><a name=download><span
+    class=stylebm1><span style='font-size:10.5pt;mso-fareast-font-family:"Times New Roman"'>&nbsp;&nbsp;Third party Galaxy Wrapper for
+    AGILE</span></span></a></span><span style='mso-bookmark:agile'><span
+    style='mso-bookmark:download'><span style='font-size:15.0pt;font-family:
+    "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></p>
+    </td>
+    <span style='mso-bookmark:agile'><span style='mso-bookmark:download'></span></span>
+   </tr>
+   <tr style='mso-yfti-irow:5'>
+    <td style='padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><span style='mso-bookmark:
+    download'><span style='font-size:9.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'>A third party python script and xml wrapper can be downloaded here (thanks to Simon Lank from O'Connor Lab, WNPRC, Madison WI for writing them): </span></span></span><a 
+    href="agile/galaxy_agile.tar.gz"><span style='mso-bookmark:agile'><span
+    style='mso-bookmark:download'><span style='font-size:10.0pt;font-family:
+    "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>AGILE_Galaxy_wrapper</span></span></span><span
+    style='mso-bookmark:agile'><span style='mso-bookmark:download'></span></span></a><span
+    style='mso-bookmark:agile'><span style='mso-bookmark:download'><span
+    style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman"'> <br>
+    </td>
+    <span style='mso-bookmark:agile'><span style='mso-bookmark:download'></span></span>
+   </tr>
+   <tr style='mso-yfti-irow:9'>
+    <td style='background:#EEEEEE;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><a name=usage><span
+    class=stylebm1><span style='font-size:10.5pt;mso-fareast-font-family:"Times New Roman"'>&nbsp;&nbsp;So,
+    how do I use it?</span></span></a></span><span style='mso-bookmark:agile'><span
+    style='font-size:15.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman"'><o:p></o:p></span></span></p>
+    </td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+   <tr style='mso-yfti-irow:10'>
+    <td style='padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <table class=MsoNormalTable border=0 cellspacing=4 cellpadding=0 width=701
+     style='width:7.3in;mso-cellspacing:2.9pt;mso-yfti-tbllook:1184;mso-padding-alt:
+     0in 0in 0in 0in'>
+     <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+      <td width=664 colspan=2 style='width:498.25pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><b style='mso-bidi-font-weight:
+      normal'><span style='font-family:"Courier New";mso-fareast-font-family:
+      "Times New Roman"'>Usage: <o:p></o:p></span></b></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:1'>
+      <td width=664 colspan=2 style='width:498.25pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>agile
+      database query [options] output_file &gt; mapping_quality_file <o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:2'>
+      <td width=664 colspan=2 style='width:498.25pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><b style='mso-bidi-font-weight:
+      normal'><span style='font-family:"Courier New";mso-fareast-font-family:
+      "Times New Roman"'>where: <o:p></o:p></span></b></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:3'>
+      <td width=664 colspan=2 style='width:498.25pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>database
+      and query are each either a .fa , .nib or .2bit file, <o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:4'>
+      <td width=664 colspan=2 style='width:498.25pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>or
+      a list these files one file name per line. <o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:5'>
+      <td width=664 colspan=2 style='width:498.25pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>output_file
+      is file for the mapped result. <o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:6'>
+      <td width=664 colspan=2 style='width:498.25pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><b style='mso-bidi-font-weight:
+      normal'><span style='font-family:"Courier New";mso-fareast-font-family:
+      "Times New Roman"'>Options: <o:p></o:p></span></b></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:7'>
+      <td width=127 valign=top style='width:95.05pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>-tileSize=k<o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+      <td width=536 valign=top style='width:401.7pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>sets
+      the length of tuples for creating hash table.<br>
+      Usually between 11 and 20 (default 16)<o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:8'>
+      <td width=127 valign=top style='width:95.05pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>-maxSIMs=n<o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+      <td width=536 valign=top style='width:401.7pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>sets
+      the maximum #SIMs (single imperfect matches) allowed. These include
+      mismatches and indels<br>
+      (default 5 with -all option and 100 without -all option) <o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:9'>
+      <td width=127 valign=top style='width:95.05pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>-maxFreq=F<o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+      <td width=536 valign=top style='width:401.7pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>sets
+      the maximum number of occurrences of a pattern (k-tuple) that are
+      allowed. k-tuples which occur more than F times are marked as overused
+      and ignored. The default value depends on the read length (for example, F
+      = 8 for read length of 500).<o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:10'>
+      <td width=127 valign=top style='width:95.05pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>-all<o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+      <td width=536 valign=top style='width:401.7pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>If
+      this is used, the program outputs all the alignments which satisfy
+      maxSIMs=F. If this is not used, the program simply tries to find the
+      best alignment and outputs the best alignment it can find and also all the other alignments with the same score as the best one.<o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+     <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+      <td width=127 valign=top style='width:95.05pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>-out=type<o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+      <td width=536 valign=top style='width:401.7pt;padding:0in 0in 0in 0in'>
+      <p class=MsoNormal><span style='mso-bookmark:agile'><span
+      style='font-family:"Courier New";mso-fareast-font-family:"Times New Roman"'>sets
+      output file format. Type is one of:<br>
+      psl - Default. Tab separated format, no sequence<br>
+      pslx - Tab separated format with sequence<br>
+      axt - blastz-associated axt format<br>
+      maf - multiz-associated maf format<br>
+      sim4 - similar to sim4 format<br>
+      wublast - similar to wublast format<br>
+      blast - similar to NCBI blast format<br>
+      blast8- NCBI blast tabular format<br>
+      blast9 - NCBI blast tabular format with comments<o:p></o:p></span></span></p>
+      </td>
+      <span style='mso-bookmark:agile'></span>
+     </tr>
+    </table>
+    <span style='mso-bookmark:agile'></span></td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+   <tr style='mso-yfti-irow:11'>
+    <td style='background:#EEEEEE;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><span class=stylebm1><span
+    style='font-size:10.5pt;mso-fareast-font-family:"Times New Roman"'>&nbsp;&nbsp;<a
+    name=publications>Publications</a></span></span></span><span
+    style='mso-bookmark:agile'><span style='font-size:15.0pt;font-family:"Arial","sans-serif";
+    mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></p>
+    </td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+   <tr style='mso-yfti-irow:12'>
+    <td style='padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <ul type=disc>
+     <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+         auto;mso-list:l2 level1 lfo6;tab-stops:list .5in'><span
+         style='mso-bookmark:agile'><span style='font-size:10.0pt;font-family:
+         "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>Sanchit
+         Misra, Ankit Agrawal, Wei-keng Liao, Alok Choudhary. <b>Anatomy of a
+         Hash-based Long Read Sequence Mapping Algorithm for Next Generation
+         DNA Sequencing.</b> <i>Bioinformatics 2010; doi:
+         10.1093/bioinformatics/btq648.</i> <o:p></o:p></span></span></li>
+     <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+         auto;mso-list:l2 level1 lfo6;tab-stops:list .5in'><span
+         style='mso-bookmark:agile'><span style='font-size:10.0pt;font-family:
+         "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>Sanchit
+         Misra, Ramanathan Narayanan, Wei-keng Liao, Alok Choudhary and Simon
+         Lin. <b>pFANGS: Parallel High Speed Sequence Mapping for Next
+         Generation 454-Roche Sequencing Reads.</b> In Proc. <i>Ninth IEEE
+         International Workshop on High Performance Computational Biology
+         (IPDPS 2010)</i>, April, 2010, Atlanta, GA. <o:p></o:p></span></span></li>
+     <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+         auto;mso-list:l2 level1 lfo6;tab-stops:list .5in'><span
+         style='mso-bookmark:agile'><span style='font-size:10.0pt;font-family:
+         "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>Sanchit
+         Misra, Ramanathan Narayanan, Simon Lin and Alok Choudhary. <b>FANGS:
+         High Speed Sequence Mapping for Next Generation Sequencing Reads.</b>
+         In Proceedings of <i>ACM Symposium of Applied Computing (ACM SAC)</i>,
+         March 22-26, 2010, Sierre, Switzerland. <o:p></o:p></span></span></li>
+    </ul>
+    </td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+   <tr style='mso-yfti-irow:13'>
+    <td style='background:#F2F2F2;mso-background-themecolor:background1;
+    mso-background-themeshade:242;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <p class=MsoNormal><span style='mso-bookmark:agile'><a name=current><span
+    class=stylebm1><span style='font-size:10.5pt;mso-fareast-font-family:"Times New Roman"'>&nbsp;&nbsp;Current
+    Status</span></span></a></span><span style='mso-bookmark:agile'><span
+    style='font-size:15.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+    "Times New Roman"'><o:p></o:p></span></span></p>
+    </td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+   <tr style='mso-yfti-irow:14;mso-yfti-lastrow:yes'>
+    <td style='background:white;mso-background-themecolor:background1;
+    padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+    <ul type=disc>
+     <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+         auto;mso-list:l2 level1 lfo6;tab-stops:list .5in'><span
+         style='mso-bookmark:agile'><span style='font-size:10.0pt;font-family:
+         "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>Current
+         sequential version of AGILE (AGILE_0.4.0) has been tested to handle
+         upto 10% error. It has a throughput of about 0.5 Gigabytes per hour.<o:p></o:p></span></span></li>
+     <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+         auto;mso-list:l2 level1 lfo6;tab-stops:list .5in'><span
+         style='mso-bookmark:agile'><span style='font-size:10.0pt;font-family:
+         "Arial","sans-serif";mso-fareast-font-family:"Times New Roman"'>The
+         latest version comes with two modes : 1) output the best alignment and all the alignments with the same score as the best one and
+         2) output all alignments that satisfy a "minimum similarity criteria".<o:p></o:p></span></span></li>
+    </ul>
+    </td>
+    <span style='mso-bookmark:agile'></span>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

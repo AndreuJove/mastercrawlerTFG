@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html><head>
+   <title>COLORADO3D SERVER</title>
+   <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1"/>
+   <meta name="keywords" content="Bioinformatics, structural biology, servers"/>
+   <meta name="author" content="Joanna Sasin"/>
+   <link rel="stylesheet" href="styles1.css"/>
+
+</head>
+
+<body><script type='text/javascript'>var _paq=_paq||[];_paq.push(['setDocumentTitle',document.domain+'/'+document.title]);_paq.push(['setCookieDomain','*.genesilico.pl']);_paq.push(['setCustomVariable',1,'Section','colorado3d','visit']);_paq.push(['trackPageView']);_paq.push(['enableLinkTracking']);(function(){var u=(('https:'==document.location.protocol)?'https':'http')+'://anl.genesilico.pl/';_paq.push(['setTrackerUrl',u+'piwik.php']);_paq.push(['setSiteId', '7']);var d=document,g=d.createElement('script'),s=d.getElementsByTagName('script')[0];g.type='text/javascript';g.defer=true;g.async=true;g.src=u+'piwik.js';s.parentNode.insertBefore(g,s);})();</script>
+  <h1>COLORADO3D</h1>
+  <div id="breadcrumb">
+     <a href="http://genesilico.pl/">Home Page</a> > COLORADO3D > <a href="http://asia.genesilico.pl/colorado3d/help.html">Help</a> 
+  </div>
+    
+
+  <form enctype="multipart/form-data" method="post" action="log_in.py">  
+  <div id="page">
+
+    <div id="login_menu">
+      <div class="p">Log in | <a href="http://asia.genesilico.pl/colorado3d/join.html">Join</a></div>
+      <div class="p1">Username</div>
+      <input  type="text" class="text" id="user_name" name="user_name" /> 
+      <div class="p1">Password</div>
+      <input  type="password" class="text" id="user_password" name="user_password"/>
+      <input type="submit" value="Submit" name="submit" class="button"/>
+      <div class="p">If You forgot You password please click <a href="http://asia.genesilico.pl/colorado3d/password.html">here</a></div> 
+    </div>
+
+    <!-- ##### Main Copy ##### --> 
+     <div id="main-copy">
+       <p class="my_text">COLORADO-3D is a www-tool that greatly facilitates the
+        visual analysis of various features in three-dimensional
+        protein structures, directly at the level of the protein
+        structure, with the aid of commonly used viewers such as
+        <a href="http://www.umass.edu/microbio/rasmol/">RASMOL</a> or
+        <a href="http://www.expasy.org/spdbv/mainpage.htm">SWISSPDBVIEWER</a>.
+       </p>
+
+       <p class="my_text"> 
+        Among the features most important for the structural biologist
+        that our server allows to visualize in color are potential
+        errors in protein structure (detected by <a href="http://www.swissmodel.unibas.ch/anolea/">ANOLEA</a>, <a href="http://www.lmcp.jussieu.fr/sincris-top/logiciel/prg-prosa.html">PROSA</a>, <a href="http://www.doe-mbi.ucla.edu/People/Software/PROVE.html">PROVE</a>,<a href="http://www.doe-mbi.ucla.edu/Services/Verify_3D/">VERIFY3D</a>),
+        regions buried in the protein core and inaccessible to the solvent,
+        and regions of high or low sequence conservation
+        (e.g. detected by <a href="http://www.tau.ac.il/~itaymay/cp/rate4site.html">RATE4SITE</a>).
+       </p>
+     
+        <p class="my_text">In particular COLORADO3D may serve to visualize the results
+        of assessment of the protein structure's quality at various
+        stages of the model building and refinement (both in the case
+        of experinemtal structure determination and homology modeling).</p>
+
+        <p class="my_text_bold">Just Log in and Enjoy Your Coloured Proteins! :-) </p>
+        <p><img src="malunki.png" class="picture" alt="example"></img></p>
+
+        <p class="text_under">Two alternative homology models of protein 1h7m colored
+          according to the results of structure evaluation with the
+          VERIFY3D method</p>  
+     </div>
+  </div> 
+  </form>
+  <div id="article-footer">
+     <a href="mailto: asia@genesilico.pl"> Contact Us </a> | Copyright &copy; 2004 genesilico.pl
+  </div>
+  <div id="css">
+     <a href='http://validator.w3.org/check/referer'>Valid XHTML 1.0</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+  </div> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

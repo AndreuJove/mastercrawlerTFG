@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+
+    <meta name="ROBOTS" content="ALL" />
+    <meta name="DESCRIPTION" content="TheorChromo is a BioLCCC-based online tool
+    for prediction of retention time of peptides and proteins in liquid
+    chromatography" />
+    <meta name="KEYWORDS" content="BioLCCC, retention, prediction, peptide,
+    chromatography">
+
+    <title>
+       BioLCCC | Prediction of peptide/protein retention time
+      in liquid chromatography
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="/media/style_div.css">
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-10219290-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+  </head>
+  <body>
+    <div id="main">
+        <div id="headerTable">
+            <div id="headerRow">
+                <div id="header">
+                  
+                    <strong>TheorChromo online version 1.0</strong>
+                  
+                </div>
+            </div>
+            <div id="headerRow">
+                <div id="subHeader">
+                    
+                    <div class="headerLink">
+                        <a href="/">Home</a>
+                    </div>
+                    <div class="headerLink">
+                        <a href="/help/">Help</a>
+                    </div>
+                    <div class="headerLink">
+                        <a href="http://groups.google.com/group/biolccc">
+                        BioLCCC mailing group</a>
+                    </div>
+                    <div class="headerLink">
+                        <a href="http://packages.python.org/pyteomics.biolccc/API/namespaceBioLCCC.html">
+                        libBioLCCC</a>
+                    </div>
+                    <div class="headerLink">
+                        <a href="https://pyteomics.readthedocs.io/">
+                        Pyteomics</a>
+                    </div>
+                    <div class="headerLink">
+                        <a href="/docs">
+                        pyteomics.biolccc</a>
+                    </div>
+                    <div class="headerLink">
+                        <a href="http://hg.theorchromo.ru/">
+                        Source code repository</a>
+                    </div>
+                    <div class="headerLink">
+                        <a href="http://proteomics.fizteh.ru/eng">
+                        Our laboratory</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="headerRow">
+                <div id="subsubHeader">
+                </div>
+            </div>
+        </div>
+    
+        
+    
+
+    <FORM action="" method="post"><input type='hidden' name='csrfmiddlewaretoken' value='TodzpAf6fgd5BCBAE2j5R1MFVi0798WPuPcBF9yn81qOQv3K5hgdYzNkOmUtgGWM' />
+        <div id="chromoConditionsBlock">
+            <h6><a href="help#lcparameters" class="help">1. Describe your LC system.</a></h6>
+            <table id="chromoConditionsTable">							
+                <tr><th><label for="id_length">Column length, mm:</label></th><td><input type="number" name="length" value="150.0" max="10000.0" step="any" required id="id_length" min="0.0" /></td></tr>
+<tr><th><label for="id_diameter">Column internal diameter, mm:</label></th><td><input type="number" name="diameter" value="0.075" max="100.0" step="any" required id="id_diameter" min="0.0" /></td></tr>
+<tr><th><label for="id_pore_size">Packing material pore size, A:</label></th><td><input type="number" name="pore_size" value="100.0" max="1000.0" step="any" required id="id_pore_size" min="60.0" /></td></tr>
+<tr><th><label for="id_bmin">Initial concentration of component B, %:</label></th><td><input type="number" name="bmin" value="0.0" max="100.0" step="any" required id="id_bmin" min="0.0" /></td></tr>
+<tr><th><label for="id_bmax">Final concentration of component B, %:</label></th><td><input type="number" name="bmax" value="50.0" max="100.0" step="any" required id="id_bmax" min="0.0" /></td></tr>
+<tr><th><label for="id_gradient_time">Gradient time, min:</label></th><td><input type="number" name="gradient_time" value="60.0" max="1000.0" step="any" required id="id_gradient_time" min="0.0" /></td></tr>
+<tr><th><label for="id_delay_time">Delay time, min:</label></th><td><input type="number" name="delay_time" value="0.0" max="1000.0" step="any" required id="id_delay_time" min="0.0" /></td></tr>
+<tr><th><label for="id_flow_rate">Flow rate, ml/min:</label></th><td><input type="number" name="flow_rate" value="0.0003" max="100.0" step="any" required id="id_flow_rate" min="0.0" /></td></tr>
+<tr><th><label for="id_acna">ACN concentration in component A, %:</label></th><td><input type="number" name="acna" value="2.0" max="100.0" step="any" required id="id_acna" min="0.0" /></td></tr>
+<tr><th><label for="id_acnb">ACN concentration in component B, %:</label></th><td><input type="number" name="acnb" value="80.0" max="100.0" step="any" required id="id_acnb" min="0.0" /></td></tr>
+<tr><th><label for="id_chromatography_type">Solid/mobile phase combination:</label></th><td><select name="chromatography_type" id="id_chromatography_type">
+  <option value="RP/ACN+TFA">RP/ACN+TFA</option>
+
+  <option value="RP/ACN+FA" selected>RP/ACN+FA</option>
+
+</select></td></tr>
+            </table>
+        </div>		
+        <div id="peptideSequencesBlock">
+            <h6><a href="help#sequences" class="help">2. Enter peptides, each
+            one on a new line.</a></h6>
+            <table id="peptideSequencesTable">
+                    <tr>
+                        <td colspan="2">
+                            <textarea name="peptides" id="id_peptides" rows="10" cols="60" required>
+</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cysteines are carboxyamidomethylated
+                        </td>
+                        <td>
+                            <input type="checkbox" name="is_alkylated" id="id_is_alkylated" />
+                        </td>
+                    </tr>
+                <tr>
+                    <td class="buttonCell" colspan="2">
+                        <INPUT TYPE=SUBMIT value="Submit" class="button">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </FORM>
+
+
+        <div id="footer">
+            Based on BioLCCC (Liquid Chromatography of Biomacromolecules at 
+            Critical Conditions) model.<br/>
+            Created by Laboratory of Physical and Chemical Methods for Structure
+            Analysis,<br/>
+            Institute for Energy Problems of Chemical Physics, 2004-2012.<br/>
+            Powered by Django.
+        </div>
+    </div>
+  </body>
+</html>

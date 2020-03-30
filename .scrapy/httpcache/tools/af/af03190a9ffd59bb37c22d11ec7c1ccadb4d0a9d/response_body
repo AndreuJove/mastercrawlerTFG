@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BacMap</title>
+    <link href="/assets/application-2e1b6947522c29340f19adcb5980559c.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="/assets/application-9e498e2eadf0be42780363370602c500.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="oYl9U8lPUiF3eOT48fqVOQcrEGQwxU8myGjtI/83KsE=" name="csrf-token" />
+    <link href="/assets/favicon-299e3c29c00726266b97df02bbb80862.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    
+
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-25761458-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <img alt="BacMap" src="/assets/bacmap-logo-e498e69655dd2606ea9139363e4602d8.png" />
+        <div id="nav">
+          <ul>
+            <li><a href="/" class="home selected">home</a></li>
+            <li><a href="/about" class="about">about</a></li>
+            <li><a href="/help" class="help">help</a></li>
+            <li><a href="/contact_us" class="contact">contact us</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+			
+      
+      <div id="content">
+        
+          <div id="about">
+  <h3>An Interactive Atlas for Exploring Bacterial Genomes</h3>
+  <p>
+  BacMap is an interactive visual database containing hundreds of fully labeled, zoomable, and searchable maps of bacterial genomes.
+  </p>
+  <img alt="Map-image" src="/assets/map-image-c9d90cf11e94862d903c28bea54307c7.png" />
+</div>
+
+<div id="features">
+  <h3>Some features of BacMap</h3>
+  <ul>
+    <li>Maps are available for 2989 bacterial chromosomes across 1,790 bacterial organisms.</li>
+    <li>Each map supports zooming and rotation.</li>
+    <li>Map gene labels are hyperlinked to detailed textual annotations.</li>
+    <li>Maps can be explored manually, or with the help of BacMap's built in text search and BLAST search.</li>
+    <li>A written synopsis of each bacterial species is provided.</li>
+    <li>Several charts illustrating the proteomic and genomic characteristics of each chromosome are available.</li>
+    <li>Gene sequences and protein sequences can be downloaded.</li>
+  </ul>
+  <div class="clear"></div>
+  <div id="citing" >
+    <table>
+      <tr>
+        <th>Citing BacMap</strong></th>
+      <td><a href="http://www.ncbi.nlm.nih.gov/pubmed/22135301" target="_blank">Cruz J, Liu Y, Liang Y, Zhou Y, Wilson M, Dennis JJ, Stothard P, Van Domselaar G, Wishart DS. BacMap: an up-to-date electronic atlas of annotated bacterial genomes. Nucleic Acids Res. 2012 Jan;40(Database issue):D599-604.</a></td>
+    </tr>
+  </table>
+</div> 
+</div>
+
+
+
+
+<a href="/genomes" class="btn">Reset</a>
+<a href="/blast/new" class="filtered-blast btn">BLAST Search</a>
+<a href="/genomes?query=bacillus+-%28anthra%2A+%7C+cereus%29&amp;type=taxonomy" class="btn" id="sample-query">Sample Query</a>
+<form accept-charset="UTF-8" action="/genomes" class="search-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  
+  <select name='type' id= 'type'>
+    <option value="gene">Gene/Protein Names</option>
+<option value="taxonomy">Genus/Species/Strain</option>
+<option value="text">Text in BioCard</option>
+<option value="pathway">Metabolic Pathway</option>
+  </select>
+  <input id="test1" name="query" type="text" />
+  <input src="/assets/icon-search-ac515b53403bfd67577bc18472f8cd19.png" type="image" />
+</form>
+
+<div class="clear"></div>
+
+<div id="genome-filters">
+  <form accept-charset="UTF-8" action="/genomes" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div> 
+  <input id="query" name="query" type="hidden" />
+
+  <div id="genome-filters-controls">
+    <input name="commit" type="submit" value="Filter" />
+    <input name="commit" type="reset" value="Clear Selections" />
+  </div>
+
+  <div class='super-group'>Filter by Taxonomy</div>
+  <div class="filter-table-container">
+    <table>
+      <tbody>
+              <tr class='group'><th>Archaea</th><td>yes no</td></tr>
+
+        <tr>
+          <td>All</td>      <td>
+        <input id="filter_kingdom_Archaea_" name="filter[kingdom][Archaea][]" type="checkbox" value="yes" />
+        <input id="filter_kingdom_Archaea_" name="filter[kingdom][Archaea][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Crenarchaeota</td>      <td>
+        <input id="filter_phylum_Crenarchaeota_" name="filter[phylum][Crenarchaeota][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Crenarchaeota_" name="filter[phylum][Crenarchaeota][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Euryarchaeota</td>      <td>
+        <input id="filter_phylum_Euryarchaeota_" name="filter[phylum][Euryarchaeota][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Euryarchaeota_" name="filter[phylum][Euryarchaeota][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Korarchaeota</td>      <td>
+        <input id="filter_phylum_Korarchaeota_" name="filter[phylum][Korarchaeota][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Korarchaeota_" name="filter[phylum][Korarchaeota][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Nanoarchaeota</td>      <td>
+        <input id="filter_phylum_Nanoarchaeota_" name="filter[phylum][Nanoarchaeota][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Nanoarchaeota_" name="filter[phylum][Nanoarchaeota][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Thaumarchaeota</td>      <td>
+        <input id="filter_phylum_Thaumarchaeota_" name="filter[phylum][Thaumarchaeota][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Thaumarchaeota_" name="filter[phylum][Thaumarchaeota][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>NA</td>      <td>
+        <input id="filter_phylum_NA_" name="filter[phylum][NA][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_NA_" name="filter[phylum][NA][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+              <tr class='group'><th>Bacteria</th><td>yes no</td></tr>
+
+        <tr>
+          <td>All</td>      <td>
+        <input id="filter_kingdom_Bacteria_" name="filter[kingdom][Bacteria][]" type="checkbox" value="yes" />
+        <input id="filter_kingdom_Bacteria_" name="filter[kingdom][Bacteria][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Acidobacteria</td>      <td>
+        <input id="filter_phylum_Acidobacteria_" name="filter[phylum][Acidobacteria][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Acidobacteria_" name="filter[phylum][Acidobacteria][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Actinobacteria</td>      <td>
+        <input id="filter_phylum_Actinobacteria_" name="filter[phylum][Actinobacteria][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Actinobacteria_" name="filter[phylum][Actinobacteria][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Aquificae</td>      <td>
+        <input id="filter_phylum_Aquificae_" name="filter[phylum][Aquificae][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Aquificae_" name="filter[phylum][Aquificae][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Armatimonadetes</td>      <td>
+        <input id="filter_phylum_Armatimonadetes_" name="filter[phylum][Armatimonadetes][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Armatimonadetes_" name="filter[phylum][Armatimonadetes][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Bacteroidetes</td>      <td>
+        <input id="filter_phylum_Bacteroidetes_" name="filter[phylum][Bacteroidetes][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Bacteroidetes_" name="filter[phylum][Bacteroidetes][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Chlorobi</td>      <td>
+        <input id="filter_phylum_Chlorobi_" name="filter[phylum][Chlorobi][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Chlorobi_" name="filter[phylum][Chlorobi][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Caldiserica</td>      <td>
+        <input id="filter_phylum_Caldiserica_" name="filter[phylum][Caldiserica][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Caldiserica_" name="filter[phylum][Caldiserica][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Chlamydiae</td>      <td>
+        <input id="filter_phylum_Chlamydiae_" name="filter[phylum][Chlamydiae][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Chlamydiae_" name="filter[phylum][Chlamydiae][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Chloroflexi</td>      <td>
+        <input id="filter_phylum_Chloroflexi_" name="filter[phylum][Chloroflexi][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Chloroflexi_" name="filter[phylum][Chloroflexi][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Chrysiogenetes</td>      <td>
+        <input id="filter_phylum_Chrysiogenetes_" name="filter[phylum][Chrysiogenetes][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Chrysiogenetes_" name="filter[phylum][Chrysiogenetes][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Cyanobacteria</td>      <td>
+        <input id="filter_phylum_Cyanobacteria_" name="filter[phylum][Cyanobacteria][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Cyanobacteria_" name="filter[phylum][Cyanobacteria][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Deferribacteres</td>      <td>
+        <input id="filter_phylum_Deferribacteres_" name="filter[phylum][Deferribacteres][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Deferribacteres_" name="filter[phylum][Deferribacteres][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Deinococcus-Thermus</td>      <td>
+        <input id="filter_phylum_Deinococcus-Thermus_" name="filter[phylum][Deinococcus-Thermus][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Deinococcus-Thermus_" name="filter[phylum][Deinococcus-Thermus][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Dictyoglomi</td>      <td>
+        <input id="filter_phylum_Dictyoglomi_" name="filter[phylum][Dictyoglomi][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Dictyoglomi_" name="filter[phylum][Dictyoglomi][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Elusimicrobia</td>      <td>
+        <input id="filter_phylum_Elusimicrobia_" name="filter[phylum][Elusimicrobia][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Elusimicrobia_" name="filter[phylum][Elusimicrobia][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Fibrobacteres</td>      <td>
+        <input id="filter_phylum_Fibrobacteres_" name="filter[phylum][Fibrobacteres][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Fibrobacteres_" name="filter[phylum][Fibrobacteres][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Firmicutes</td>      <td>
+        <input id="filter_phylum_Firmicutes_" name="filter[phylum][Firmicutes][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Firmicutes_" name="filter[phylum][Firmicutes][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Fusobacteria</td>      <td>
+        <input id="filter_phylum_Fusobacteria_" name="filter[phylum][Fusobacteria][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Fusobacteria_" name="filter[phylum][Fusobacteria][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Gemmatimonadetes</td>      <td>
+        <input id="filter_phylum_Gemmatimonadetes_" name="filter[phylum][Gemmatimonadetes][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Gemmatimonadetes_" name="filter[phylum][Gemmatimonadetes][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Lentisphaerae</td>      <td>
+        <input id="filter_phylum_Lentisphaerae_" name="filter[phylum][Lentisphaerae][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Lentisphaerae_" name="filter[phylum][Lentisphaerae][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Nitrospirae</td>      <td>
+        <input id="filter_phylum_Nitrospirae_" name="filter[phylum][Nitrospirae][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Nitrospirae_" name="filter[phylum][Nitrospirae][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Planctomycetes</td>      <td>
+        <input id="filter_phylum_Planctomycetes_" name="filter[phylum][Planctomycetes][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Planctomycetes_" name="filter[phylum][Planctomycetes][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Proteobacteria</td>      <td>
+        <input id="filter_phylum_Proteobacteria_" name="filter[phylum][Proteobacteria][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Proteobacteria_" name="filter[phylum][Proteobacteria][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Spirochaetes</td>      <td>
+        <input id="filter_phylum_Spirochaetes_" name="filter[phylum][Spirochaetes][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Spirochaetes_" name="filter[phylum][Spirochaetes][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Synergistetes</td>      <td>
+        <input id="filter_phylum_Synergistetes_" name="filter[phylum][Synergistetes][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Synergistetes_" name="filter[phylum][Synergistetes][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Tenericutes</td>      <td>
+        <input id="filter_phylum_Tenericutes_" name="filter[phylum][Tenericutes][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Tenericutes_" name="filter[phylum][Tenericutes][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Thermodesulfobacteria</td>      <td>
+        <input id="filter_phylum_Thermodesulfobacteria_" name="filter[phylum][Thermodesulfobacteria][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Thermodesulfobacteria_" name="filter[phylum][Thermodesulfobacteria][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Thermotogae</td>      <td>
+        <input id="filter_phylum_Thermotogae_" name="filter[phylum][Thermotogae][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Thermotogae_" name="filter[phylum][Thermotogae][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>Verrucomicrobia</td>      <td>
+        <input id="filter_phylum_Verrucomicrobia_" name="filter[phylum][Verrucomicrobia][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_Verrucomicrobia_" name="filter[phylum][Verrucomicrobia][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+        <tr>
+          <td>NA</td>      <td>
+        <input id="filter_phylum_NA_" name="filter[phylum][NA][]" type="checkbox" value="yes" />
+        <input id="filter_phylum_NA_" name="filter[phylum][NA][]" type="checkbox" value="no" />
+      </td>
+</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class='super-group'>Filter by Phenotype</div>
+  <div class="filter-table-container">
+    <table>
+      <tbody>
+        <tr><th></th><td>yes no NA</td></tr>
+        <tr><th>Flagella</th>      <td>
+        <input id="filter_flagella_" name="filter[flagella][]" type="checkbox" value="yes" />
+        <input id="filter_flagella_" name="filter[flagella][]" type="checkbox" value="no" />
+        <input id="filter_flagella_" name="filter[flagella][]" type="checkbox" value="NA" />
+      </td>
+</tr>
+        <tr><th>Human pathogen</th>      <td>
+        <input id="filter_pathogen_" name="filter[pathogen][]" type="checkbox" value="yes" />
+        <input id="filter_pathogen_" name="filter[pathogen][]" type="checkbox" value="no" />
+        <input id="filter_pathogen_" name="filter[pathogen][]" type="checkbox" value="NA" />
+      </td>
+</tr>
+        <tr><th>Mobility</th>      <td>
+        <input id="filter_mobility_" name="filter[mobility][]" type="checkbox" value="yes" />
+        <input id="filter_mobility_" name="filter[mobility][]" type="checkbox" value="no" />
+        <input id="filter_mobility_" name="filter[mobility][]" type="checkbox" value="NA" />
+      </td>
+</tr>
+
+              <tr class='group'><th>Number of membranes</th><td>yes no</td></tr>
+
+        <tr><td>1</td>      <td>
+        <input id="filter_membranes_1_" name="filter[membranes][1][]" type="checkbox" value="yes" />
+        <input id="filter_membranes_1_" name="filter[membranes][1][]" type="checkbox" value="no" />
+      </td>
+</tr> 
+        <tr><td>2</td>      <td>
+        <input id="filter_membranes_2_" name="filter[membranes][2][]" type="checkbox" value="yes" />
+        <input id="filter_membranes_2_" name="filter[membranes][2][]" type="checkbox" value="no" />
+      </td>
+</tr> 
+        <tr><td>3</td>      <td>
+        <input id="filter_membranes_3_" name="filter[membranes][3][]" type="checkbox" value="yes" />
+        <input id="filter_membranes_3_" name="filter[membranes][3][]" type="checkbox" value="no" />
+      </td>
+</tr> 
+        <tr><td>NA</td>      <td>
+        <input id="filter_membranes_NA_" name="filter[membranes][NA][]" type="checkbox" value="yes" />
+        <input id="filter_membranes_NA_" name="filter[membranes][NA][]" type="checkbox" value="no" />
+      </td>
+</tr> 
+
+              <tr class='group'><th>Cell Shape</th><td>yes no</td></tr>
+
+        <tr><td>Cocci</td>      <td>
+        <input id="filter_shape_Cocci_" name="filter[shape][Cocci][]" type="checkbox" value="yes" />
+        <input id="filter_shape_Cocci_" name="filter[shape][Cocci][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Spirilla</td>      <td>
+        <input id="filter_shape_Spirilla_" name="filter[shape][Spirilla][]" type="checkbox" value="yes" />
+        <input id="filter_shape_Spirilla_" name="filter[shape][Spirilla][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>SquareShaped</td>      <td>
+        <input id="filter_shape_SquareShaped_" name="filter[shape][SquareShaped][]" type="checkbox" value="yes" />
+        <input id="filter_shape_SquareShaped_" name="filter[shape][SquareShaped][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Coccobacilli</td>      <td>
+        <input id="filter_shape_Coccobacilli_" name="filter[shape][Coccobacilli][]" type="checkbox" value="yes" />
+        <input id="filter_shape_Coccobacilli_" name="filter[shape][Coccobacilli][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>CurvedShaped</td>      <td>
+        <input id="filter_shape_CurvedShaped_" name="filter[shape][CurvedShaped][]" type="checkbox" value="yes" />
+        <input id="filter_shape_CurvedShaped_" name="filter[shape][CurvedShaped][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Tailed</td>      <td>
+        <input id="filter_shape_Tailed_" name="filter[shape][Tailed][]" type="checkbox" value="yes" />
+        <input id="filter_shape_Tailed_" name="filter[shape][Tailed][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Vibrios</td>      <td>
+        <input id="filter_shape_Vibrios_" name="filter[shape][Vibrios][]" type="checkbox" value="yes" />
+        <input id="filter_shape_Vibrios_" name="filter[shape][Vibrios][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Filamentous</td>      <td>
+        <input id="filter_shape_Filamentous_" name="filter[shape][Filamentous][]" type="checkbox" value="yes" />
+        <input id="filter_shape_Filamentous_" name="filter[shape][Filamentous][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Bacilli</td>      <td>
+        <input id="filter_shape_Bacilli_" name="filter[shape][Bacilli][]" type="checkbox" value="yes" />
+        <input id="filter_shape_Bacilli_" name="filter[shape][Bacilli][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>NA</td>      <td>
+        <input id="filter_shape_NA_" name="filter[shape][NA][]" type="checkbox" value="yes" />
+        <input id="filter_shape_NA_" name="filter[shape][NA][]" type="checkbox" value="no" />
+      </td>
+</tr>
+
+              <tr class='group'><th>Oxygen requirements</th><td>yes no</td></tr>
+
+        <tr><td>Anaerobic</td>      <td>
+        <input id="filter_oxygen_Anaerobic_" name="filter[oxygen][Anaerobic][]" type="checkbox" value="yes" />
+        <input id="filter_oxygen_Anaerobic_" name="filter[oxygen][Anaerobic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Microaerophilic</td>      <td>
+        <input id="filter_oxygen_Microaerophilic_" name="filter[oxygen][Microaerophilic][]" type="checkbox" value="yes" />
+        <input id="filter_oxygen_Microaerophilic_" name="filter[oxygen][Microaerophilic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Aerobic</td>      <td>
+        <input id="filter_oxygen_Aerobic_" name="filter[oxygen][Aerobic][]" type="checkbox" value="yes" />
+        <input id="filter_oxygen_Aerobic_" name="filter[oxygen][Aerobic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Facultative</td>      <td>
+        <input id="filter_oxygen_Facultative_" name="filter[oxygen][Facultative][]" type="checkbox" value="yes" />
+        <input id="filter_oxygen_Facultative_" name="filter[oxygen][Facultative][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>NA</td>      <td>
+        <input id="filter_oxygen_NA_" name="filter[oxygen][NA][]" type="checkbox" value="yes" />
+        <input id="filter_oxygen_NA_" name="filter[oxygen][NA][]" type="checkbox" value="no" />
+      </td>
+</tr>
+
+              <tr class='group'><th>Temperature range</th><td>yes no</td></tr>
+
+        <tr><td>Thermophilic</td>      <td>
+        <input id="filter_temperature_Thermophilic_" name="filter[temperature][Thermophilic][]" type="checkbox" value="yes" />
+        <input id="filter_temperature_Thermophilic_" name="filter[temperature][Thermophilic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Mesophilic</td>      <td>
+        <input id="filter_temperature_Mesophilic_" name="filter[temperature][Mesophilic][]" type="checkbox" value="yes" />
+        <input id="filter_temperature_Mesophilic_" name="filter[temperature][Mesophilic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Psychrophilic</td>      <td>
+        <input id="filter_temperature_Psychrophilic_" name="filter[temperature][Psychrophilic][]" type="checkbox" value="yes" />
+        <input id="filter_temperature_Psychrophilic_" name="filter[temperature][Psychrophilic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Cryophilic</td>      <td>
+        <input id="filter_temperature_Cryophilic_" name="filter[temperature][Cryophilic][]" type="checkbox" value="yes" />
+        <input id="filter_temperature_Cryophilic_" name="filter[temperature][Cryophilic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Hyperthermophilic</td>      <td>
+        <input id="filter_temperature_Hyperthermophilic_" name="filter[temperature][Hyperthermophilic][]" type="checkbox" value="yes" />
+        <input id="filter_temperature_Hyperthermophilic_" name="filter[temperature][Hyperthermophilic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>NA</td>      <td>
+        <input id="filter_temperature_NA_" name="filter[temperature][NA][]" type="checkbox" value="yes" />
+        <input id="filter_temperature_NA_" name="filter[temperature][NA][]" type="checkbox" value="no" />
+      </td>
+</tr>
+
+              <tr class='group'><th>Habitat</th><td>yes no</td></tr>
+
+        <tr><td>Specialized</td>      <td>
+        <input id="filter_habitat_Specialized_" name="filter[habitat][Specialized][]" type="checkbox" value="yes" />
+        <input id="filter_habitat_Specialized_" name="filter[habitat][Specialized][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>HostAssociated</td>      <td>
+        <input id="filter_habitat_HostAssociated_" name="filter[habitat][HostAssociated][]" type="checkbox" value="yes" />
+        <input id="filter_habitat_HostAssociated_" name="filter[habitat][HostAssociated][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Terrestrial</td>      <td>
+        <input id="filter_habitat_Terrestrial_" name="filter[habitat][Terrestrial][]" type="checkbox" value="yes" />
+        <input id="filter_habitat_Terrestrial_" name="filter[habitat][Terrestrial][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Multiple</td>      <td>
+        <input id="filter_habitat_Multiple_" name="filter[habitat][Multiple][]" type="checkbox" value="yes" />
+        <input id="filter_habitat_Multiple_" name="filter[habitat][Multiple][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Aquatic</td>      <td>
+        <input id="filter_habitat_Aquatic_" name="filter[habitat][Aquatic][]" type="checkbox" value="yes" />
+        <input id="filter_habitat_Aquatic_" name="filter[habitat][Aquatic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>NA</td>      <td>
+        <input id="filter_habitat_NA_" name="filter[habitat][NA][]" type="checkbox" value="yes" />
+        <input id="filter_habitat_NA_" name="filter[habitat][NA][]" type="checkbox" value="no" />
+      </td>
+</tr>
+
+              <tr class='group'><th>Gram</th><td>yes no</td></tr>
+
+        <tr><td>Negative</td>      <td>
+        <input id="filter_gram_Negative_" name="filter[gram][Negative][]" type="checkbox" value="yes" />
+        <input id="filter_gram_Negative_" name="filter[gram][Negative][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Positive</td>      <td>
+        <input id="filter_gram_Positive_" name="filter[gram][Positive][]" type="checkbox" value="yes" />
+        <input id="filter_gram_Positive_" name="filter[gram][Positive][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>NA</td>      <td>
+        <input id="filter_gram_NA_" name="filter[gram][NA][]" type="checkbox" value="yes" />
+        <input id="filter_gram_NA_" name="filter[gram][NA][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        
+              <tr class='group'><th>Biotic relationship</th><td>yes no</td></tr>
+
+        <tr><td>Free living</td>      <td>
+        <input id="filter_biotic_relationship_Free_living_" name="filter[biotic_relationship][Free living][]" type="checkbox" value="yes" />
+        <input id="filter_biotic_relationship_Free_living_" name="filter[biotic_relationship][Free living][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Symbiotic</td>      <td>
+        <input id="filter_biotic_relationship_Symbiotic_" name="filter[biotic_relationship][Symbiotic][]" type="checkbox" value="yes" />
+        <input id="filter_biotic_relationship_Symbiotic_" name="filter[biotic_relationship][Symbiotic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        
+              <tr class='group'><th>Sporulation</th><td>yes no</td></tr>
+
+        <tr><td>Sporulating</td>      <td>
+        <input id="filter_sporulation_Sporulating_" name="filter[sporulation][Sporulating][]" type="checkbox" value="yes" />
+        <input id="filter_sporulation_Sporulating_" name="filter[sporulation][Sporulating][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Nonsporulating</td>      <td>
+        <input id="filter_sporulation_Nonsporulating_" name="filter[sporulation][Nonsporulating][]" type="checkbox" value="yes" />
+        <input id="filter_sporulation_Nonsporulating_" name="filter[sporulation][Nonsporulating][]" type="checkbox" value="no" />
+      </td>
+</tr>
+
+              <tr class='group'><th>Number of Chromosomes</th><td>yes no</td></tr>
+
+        <tr><td>1</td>      <td>
+        <input id="filter_number_of_chromosomes_1_" name="filter[number_of_chromosomes][1][]" type="checkbox" value="yes" />
+        <input id="filter_number_of_chromosomes_1_" name="filter[number_of_chromosomes][1][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>2</td>      <td>
+        <input id="filter_number_of_chromosomes_2_" name="filter[number_of_chromosomes][2][]" type="checkbox" value="yes" />
+        <input id="filter_number_of_chromosomes_2_" name="filter[number_of_chromosomes][2][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>3</td>      <td>
+        <input id="filter_number_of_chromosomes_3_" name="filter[number_of_chromosomes][3][]" type="checkbox" value="yes" />
+        <input id="filter_number_of_chromosomes_3_" name="filter[number_of_chromosomes][3][]" type="checkbox" value="no" />
+      </td>
+</tr>
+
+              <tr class='group'><th>Energy Source</th><td>yes no</td></tr>
+
+        <tr><td>Autotroph</td>      <td>
+        <input id="filter_energy_source_Autotroph_" name="filter[energy_source][Autotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Autotroph_" name="filter[energy_source][Autotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Carboxydotroph</td>      <td>
+        <input id="filter_energy_source_Carboxydotroph_" name="filter[energy_source][Carboxydotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Carboxydotroph_" name="filter[energy_source][Carboxydotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Chemoautotroph</td>      <td>
+        <input id="filter_energy_source_Chemoautotroph_" name="filter[energy_source][Chemoautotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Chemoautotroph_" name="filter[energy_source][Chemoautotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Chemoheterotroph</td>      <td>
+        <input id="filter_energy_source_Chemoheterotroph_" name="filter[energy_source][Chemoheterotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Chemoheterotroph_" name="filter[energy_source][Chemoheterotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Chemolithoautotroph</td>      <td>
+        <input id="filter_energy_source_Chemolithoautotroph_" name="filter[energy_source][Chemolithoautotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Chemolithoautotroph_" name="filter[energy_source][Chemolithoautotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Chemolithotroph</td>      <td>
+        <input id="filter_energy_source_Chemolithotroph_" name="filter[energy_source][Chemolithotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Chemolithotroph_" name="filter[energy_source][Chemolithotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Chemoorganoheterotroph</td>      <td>
+        <input id="filter_energy_source_Chemoorganoheterotroph_" name="filter[energy_source][Chemoorganoheterotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Chemoorganoheterotroph_" name="filter[energy_source][Chemoorganoheterotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Chemoorganotroph</td>      <td>
+        <input id="filter_energy_source_Chemoorganotroph_" name="filter[energy_source][Chemoorganotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Chemoorganotroph_" name="filter[energy_source][Chemoorganotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Chemosynthetic</td>      <td>
+        <input id="filter_energy_source_Chemosynthetic_" name="filter[energy_source][Chemosynthetic][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Chemosynthetic_" name="filter[energy_source][Chemosynthetic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Chemotroph</td>      <td>
+        <input id="filter_energy_source_Chemotroph_" name="filter[energy_source][Chemotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Chemotroph_" name="filter[energy_source][Chemotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Diazotroph</td>      <td>
+        <input id="filter_energy_source_Diazotroph_" name="filter[energy_source][Diazotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Diazotroph_" name="filter[energy_source][Diazotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Heterotroph</td>      <td>
+        <input id="filter_energy_source_Heterotroph_" name="filter[energy_source][Heterotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Heterotroph_" name="filter[energy_source][Heterotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Lithoautotroph</td>      <td>
+        <input id="filter_energy_source_Lithoautotroph_" name="filter[energy_source][Lithoautotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Lithoautotroph_" name="filter[energy_source][Lithoautotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Lithoheterotroph</td>      <td>
+        <input id="filter_energy_source_Lithoheterotroph_" name="filter[energy_source][Lithoheterotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Lithoheterotroph_" name="filter[energy_source][Lithoheterotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Lithotroph</td>      <td>
+        <input id="filter_energy_source_Lithotroph_" name="filter[energy_source][Lithotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Lithotroph_" name="filter[energy_source][Lithotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Methanotroph</td>      <td>
+        <input id="filter_energy_source_Methanotroph_" name="filter[energy_source][Methanotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Methanotroph_" name="filter[energy_source][Methanotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Methylotroph</td>      <td>
+        <input id="filter_energy_source_Methylotroph_" name="filter[energy_source][Methylotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Methylotroph_" name="filter[energy_source][Methylotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Mixotroph</td>      <td>
+        <input id="filter_energy_source_Mixotroph_" name="filter[energy_source][Mixotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Mixotroph_" name="filter[energy_source][Mixotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Obligate chemoautolithotroph</td>      <td>
+        <input id="filter_energy_source_Obligate_chemoautolithotroph_" name="filter[energy_source][Obligate chemoautolithotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Obligate_chemoautolithotroph_" name="filter[energy_source][Obligate chemoautolithotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Oligotroph</td>      <td>
+        <input id="filter_energy_source_Oligotroph_" name="filter[energy_source][Oligotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Oligotroph_" name="filter[energy_source][Oligotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Organoheterotroph</td>      <td>
+        <input id="filter_energy_source_Organoheterotroph_" name="filter[energy_source][Organoheterotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Organoheterotroph_" name="filter[energy_source][Organoheterotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Organotroph</td>      <td>
+        <input id="filter_energy_source_Organotroph_" name="filter[energy_source][Organotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Organotroph_" name="filter[energy_source][Organotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Photoautotroph</td>      <td>
+        <input id="filter_energy_source_Photoautotroph_" name="filter[energy_source][Photoautotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Photoautotroph_" name="filter[energy_source][Photoautotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Photoheterotroph</td>      <td>
+        <input id="filter_energy_source_Photoheterotroph_" name="filter[energy_source][Photoheterotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Photoheterotroph_" name="filter[energy_source][Photoheterotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Photolithoautotroph</td>      <td>
+        <input id="filter_energy_source_Photolithoautotroph_" name="filter[energy_source][Photolithoautotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Photolithoautotroph_" name="filter[energy_source][Photolithoautotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Photolithotroph</td>      <td>
+        <input id="filter_energy_source_Photolithotroph_" name="filter[energy_source][Photolithotroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Photolithotroph_" name="filter[energy_source][Photolithotroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Photosynthetic</td>      <td>
+        <input id="filter_energy_source_Photosynthetic_" name="filter[energy_source][Photosynthetic][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Photosynthetic_" name="filter[energy_source][Photosynthetic][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Phototroph</td>      <td>
+        <input id="filter_energy_source_Phototroph_" name="filter[energy_source][Phototroph][]" type="checkbox" value="yes" />
+        <input id="filter_energy_source_Phototroph_" name="filter[energy_source][Phototroph][]" type="checkbox" value="no" />
+      </td>
+</tr>
+
+              <tr class='group'><th>Cell Arrangement</th><td>yes no</td></tr>
+
+        <tr><td>Chains</td>      <td>
+        <input id="filter_cell_arrangement_Chains_" name="filter[cell_arrangement][Chains][]" type="checkbox" value="yes" />
+        <input id="filter_cell_arrangement_Chains_" name="filter[cell_arrangement][Chains][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Clusters</td>      <td>
+        <input id="filter_cell_arrangement_Clusters_" name="filter[cell_arrangement][Clusters][]" type="checkbox" value="yes" />
+        <input id="filter_cell_arrangement_Clusters_" name="filter[cell_arrangement][Clusters][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Filaments</td>      <td>
+        <input id="filter_cell_arrangement_Filaments_" name="filter[cell_arrangement][Filaments][]" type="checkbox" value="yes" />
+        <input id="filter_cell_arrangement_Filaments_" name="filter[cell_arrangement][Filaments][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Irregular  colonies</td>      <td>
+        <input id="filter_cell_arrangement_Irregular__colonies_" name="filter[cell_arrangement][Irregular  colonies][]" type="checkbox" value="yes" />
+        <input id="filter_cell_arrangement_Irregular__colonies_" name="filter[cell_arrangement][Irregular  colonies][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Pairs</td>      <td>
+        <input id="filter_cell_arrangement_Pairs_" name="filter[cell_arrangement][Pairs][]" type="checkbox" value="yes" />
+        <input id="filter_cell_arrangement_Pairs_" name="filter[cell_arrangement][Pairs][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Singles</td>      <td>
+        <input id="filter_cell_arrangement_Singles_" name="filter[cell_arrangement][Singles][]" type="checkbox" value="yes" />
+        <input id="filter_cell_arrangement_Singles_" name="filter[cell_arrangement][Singles][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Tetrads</td>      <td>
+        <input id="filter_cell_arrangement_Tetrads_" name="filter[cell_arrangement][Tetrads][]" type="checkbox" value="yes" />
+        <input id="filter_cell_arrangement_Tetrads_" name="filter[cell_arrangement][Tetrads][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>V-shaped forms</td>      <td>
+        <input id="filter_cell_arrangement_V-shaped_forms_" name="filter[cell_arrangement][V-shaped forms][]" type="checkbox" value="yes" />
+        <input id="filter_cell_arrangement_V-shaped_forms_" name="filter[cell_arrangement][V-shaped forms][]" type="checkbox" value="no" />
+      </td>
+</tr>
+
+              <tr class='group'><th>Plasmid Shape</th><td>yes no</td></tr>
+
+        <tr><td>Circular</td>      <td>
+        <input id="filter_plasmid_shape_Circular_" name="filter[plasmid_shape][Circular][]" type="checkbox" value="yes" />
+        <input id="filter_plasmid_shape_Circular_" name="filter[plasmid_shape][Circular][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Linear</td>      <td>
+        <input id="filter_plasmid_shape_Linear_" name="filter[plasmid_shape][Linear][]" type="checkbox" value="yes" />
+        <input id="filter_plasmid_shape_Linear_" name="filter[plasmid_shape][Linear][]" type="checkbox" value="no" />
+      </td>
+</tr>
+
+              <tr class='group'><th>Chromosome Shape</th><td>yes no</td></tr>
+
+        <tr><td>Circular</td>      <td>
+        <input id="filter_chromosome_shape_Circular_" name="filter[chromosome_shape][Circular][]" type="checkbox" value="yes" />
+        <input id="filter_chromosome_shape_Circular_" name="filter[chromosome_shape][Circular][]" type="checkbox" value="no" />
+      </td>
+</tr>
+        <tr><td>Linear</td>      <td>
+        <input id="filter_chromosome_shape_Linear_" name="filter[chromosome_shape][Linear][]" type="checkbox" value="yes" />
+        <input id="filter_chromosome_shape_Linear_" name="filter[chromosome_shape][Linear][]" type="checkbox" value="no" />
+      </td>
+</tr>
+ 
+      </tbody>
+    </table>
+  </div>
+</form></div>
+
+
+<div class="list genomes">
+  <a name="genomes-list"></a>
+
+  <div class="list-header">
+    <div class="table_pagination">
+  <div class="page_info">
+    Displaying Genome <b>1&nbsp;-&nbsp;50</b> of <b>2989</b> in total
+  </div>
+  <div class="pagination"><span class="previous_page disabled">&#8592; Previous</span> <em class="current">1</em> <a rel="next" href="/genomes?page=2">2</a> <a href="/genomes?page=3">3</a> <a href="/genomes?page=4">4</a> <a href="/genomes?page=5">5</a> <a href="/genomes?page=6">6</a> <a href="/genomes?page=7">7</a> <a href="/genomes?page=8">8</a> <a href="/genomes?page=9">9</a> <span class="gap">&hellip;</span> <a href="/genomes?page=59">59</a> <a href="/genomes?page=60">60</a> <a class="next_page" rel="next" href="/genomes?page=2">Next &#8594;</a></div>
+</div>
+
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="organism first"><a href="/genomes?order=organisms.names+DESC&amp;page=1#genomes-list">Organism</a></th>
+        <th><a href="/genomes?order=replicon_type+ASC&amp;page=1#genomes-list">Type</a></th>
+        <th><a href="/genomes?order=released_on+ASC&amp;page=1#genomes-list">Release date</a></th>
+        <th><a href="/genomes?order=organisms.genomes_count+ASC&amp;page=1#genomes-list"># of replicons</a></th>
+        <th><a href="/genomes?order=accession+ASC&amp;page=1#genomes-list">Identifier</a></th>
+        <th><a href="/genomes?order=length+ASC&amp;page=1#genomes-list">Length</a></th>
+        <th><a href="/genomes?order=gc_content+ASC&amp;page=1#genomes-list">GC content</a></th>
+        <th class="maps">Maps</th>
+        <th class="last">Tools</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/595" title="">Acaryochloris marina MBIC11017</a></td>
+          <td>chromosome</td>
+          <td>05/12/11</td>
+          <td>1/10</td>
+          <td>NC_009925</td>
+          <td>6503724</td>
+          <td>0.47</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009925" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009925/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009925/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009925/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009925" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009925/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009925/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/595" title="">Acaryochloris marina MBIC11017</a></td>
+          <td>plasmid</td>
+          <td>07/25/08</td>
+          <td>2/10</td>
+          <td>NC_009926</td>
+          <td>374161</td>
+          <td>0.47</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009926" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009926/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009926/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009926/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009926" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009926/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009926/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/595" title="">Acaryochloris marina MBIC11017</a></td>
+          <td>plasmid</td>
+          <td>04/27/09</td>
+          <td>3/10</td>
+          <td>NC_009927</td>
+          <td>356087</td>
+          <td>0.45</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009927" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009927/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009927/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009927/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009927" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009927/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009927/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/595" title="">Acaryochloris marina MBIC11017</a></td>
+          <td>plasmid</td>
+          <td>07/25/08</td>
+          <td>4/10</td>
+          <td>NC_009928</td>
+          <td>273121</td>
+          <td>0.45</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009928" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009928/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009928/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009928/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009928" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009928/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009928/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/595" title="">Acaryochloris marina MBIC11017</a></td>
+          <td>plasmid</td>
+          <td>04/09/10</td>
+          <td>5/10</td>
+          <td>NC_009929</td>
+          <td>226680</td>
+          <td>0.46</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009929" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009929/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009929/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009929/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009929" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009929/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009929/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/595" title="">Acaryochloris marina MBIC11017</a></td>
+          <td>plasmid</td>
+          <td>07/25/08</td>
+          <td>6/10</td>
+          <td>NC_009930</td>
+          <td>177162</td>
+          <td>0.45</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009930" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009930/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009930/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009930/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009930" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009930/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009930/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/595" title="">Acaryochloris marina MBIC11017</a></td>
+          <td>plasmid</td>
+          <td>04/27/09</td>
+          <td>7/10</td>
+          <td>NC_009931</td>
+          <td>172728</td>
+          <td>0.47</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009931" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009931/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009931/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009931/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009931" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009931/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009931/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/595" title="">Acaryochloris marina MBIC11017</a></td>
+          <td>plasmid</td>
+          <td>07/25/08</td>
+          <td>8/10</td>
+          <td>NC_009932</td>
+          <td>155110</td>
+          <td>0.46</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009932" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009932/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009932/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009932/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009932" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009932/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009932/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/595" title="">Acaryochloris marina MBIC11017</a></td>
+          <td>plasmid</td>
+          <td>07/25/08</td>
+          <td>9/10</td>
+          <td>NC_009933</td>
+          <td>120693</td>
+          <td>0.45</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009933" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009933/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009933/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009933/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009933" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009933/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009933/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/595" title="">Acaryochloris marina MBIC11017</a></td>
+          <td>plasmid</td>
+          <td>02/20/08</td>
+          <td>10/10</td>
+          <td>NC_009934</td>
+          <td>2133</td>
+          <td>0.43</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009934" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009934/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009934/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009934/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009934" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009934/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009934/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/966" title="Acetobacter pasteurianus IFO 3283-01">Acetobacter pas...3283-01</a></td>
+          <td>chromosome</td>
+          <td>04/18/11</td>
+          <td>1/7</td>
+          <td>NC_013209</td>
+          <td>2907495</td>
+          <td>0.53</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_013209" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_013209/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_013209/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_013209/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_013209" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_013209/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_013209/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/966" title="Acetobacter pasteurianus IFO 3283-01">Acetobacter pas...3283-01</a></td>
+          <td>plasmid</td>
+          <td>04/11/11</td>
+          <td>2/7</td>
+          <td>NC_013210</td>
+          <td>191799</td>
+          <td>0.53</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_013210" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_013210/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_013210/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_013210/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_013210" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_013210/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_013210/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/966" title="Acetobacter pasteurianus IFO 3283-01">Acetobacter pas...3283-01</a></td>
+          <td>plasmid</td>
+          <td>04/16/10</td>
+          <td>3/7</td>
+          <td>NC_013211</td>
+          <td>182940</td>
+          <td>0.53</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_013211" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_013211/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_013211/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_013211/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_013211" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_013211/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_013211/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/966" title="Acetobacter pasteurianus IFO 3283-01">Acetobacter pas...3283-01</a></td>
+          <td>plasmid</td>
+          <td>04/16/10</td>
+          <td>4/7</td>
+          <td>NC_013212</td>
+          <td>49961</td>
+          <td>0.54</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_013212" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_013212/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_013212/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_013212/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_013212" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_013212/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_013212/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/966" title="Acetobacter pasteurianus IFO 3283-01">Acetobacter pas...3283-01</a></td>
+          <td>plasmid</td>
+          <td>10/02/09</td>
+          <td>5/7</td>
+          <td>NC_013213</td>
+          <td>3204</td>
+          <td>0.54</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_013213" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_013213/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_013213/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_013213/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_013213" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_013213/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_013213/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/966" title="Acetobacter pasteurianus IFO 3283-01">Acetobacter pas...3283-01</a></td>
+          <td>plasmid</td>
+          <td>10/02/09</td>
+          <td>6/7</td>
+          <td>NC_013214</td>
+          <td>3035</td>
+          <td>0.56</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_013214" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_013214/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_013214/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_013214/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_013214" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_013214/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_013214/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/966" title="Acetobacter pasteurianus IFO 3283-01">Acetobacter pas...3283-01</a></td>
+          <td>plasmid</td>
+          <td>10/02/09</td>
+          <td>7/7</td>
+          <td>NC_013215</td>
+          <td>1815</td>
+          <td>0.59</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_013215" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_013215/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_013215/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_013215/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_013215" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_013215/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_013215/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1672" title="Acetobacter pasteurianus IFO 3283-01-42C">Acetobacter pas...-01-42C</a></td>
+          <td>chromosome</td>
+          <td>08/27/09</td>
+          <td>1/1</td>
+          <td>AP011163</td>
+          <td>2815241</td>
+          <td>0.53</td>
+          <td class="maps">
+            <a href="/maps/genomes/AP011163" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/AP011163/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/AP011163/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/AP011163/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/AP011163" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/AP011163/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/AP011163/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1608" title="Acetobacter pasteurianus IFO 3283-03">Acetobacter pas...3283-03</a></td>
+          <td>chromosome</td>
+          <td>08/27/09</td>
+          <td>1/1</td>
+          <td>AP011128</td>
+          <td>2907287</td>
+          <td>0.53</td>
+          <td class="maps">
+            <a href="/maps/genomes/AP011128" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/AP011128/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/AP011128/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/AP011128/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/AP011128" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/AP011128/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/AP011128/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1487" title="Acetobacter pasteurianus IFO 3283-07">Acetobacter pas...3283-07</a></td>
+          <td>chromosome</td>
+          <td>08/27/09</td>
+          <td>1/1</td>
+          <td>AP011135</td>
+          <td>2906044</td>
+          <td>0.53</td>
+          <td class="maps">
+            <a href="/maps/genomes/AP011135" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/AP011135/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/AP011135/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/AP011135/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/AP011135" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/AP011135/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/AP011135/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1489" title="Acetobacter pasteurianus IFO 3283-12">Acetobacter pas...3283-12</a></td>
+          <td>chromosome</td>
+          <td>08/27/09</td>
+          <td>1/1</td>
+          <td>AP011170</td>
+          <td>2904624</td>
+          <td>0.53</td>
+          <td class="maps">
+            <a href="/maps/genomes/AP011170" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/AP011170/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/AP011170/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/AP011170/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/AP011170" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/AP011170/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/AP011170/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1760" title="Acetobacter pasteurianus IFO 3283-22">Acetobacter pas...3283-22</a></td>
+          <td>chromosome</td>
+          <td>08/27/09</td>
+          <td>1/1</td>
+          <td>AP011142</td>
+          <td>2907267</td>
+          <td>0.53</td>
+          <td class="maps">
+            <a href="/maps/genomes/AP011142" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/AP011142/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/AP011142/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/AP011142/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/AP011142" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/AP011142/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/AP011142/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1707" title="Acetobacter pasteurianus IFO 3283-26">Acetobacter pas...3283-26</a></td>
+          <td>chromosome</td>
+          <td>08/27/09</td>
+          <td>1/1</td>
+          <td>AP011149</td>
+          <td>2907309</td>
+          <td>0.53</td>
+          <td class="maps">
+            <a href="/maps/genomes/AP011149" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/AP011149/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/AP011149/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/AP011149/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/AP011149" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/AP011149/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/AP011149/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1740" title="Acetobacter pasteurianus IFO 3283-32">Acetobacter pas...3283-32</a></td>
+          <td>chromosome</td>
+          <td>08/27/09</td>
+          <td>1/1</td>
+          <td>AP011156</td>
+          <td>2904642</td>
+          <td>0.53</td>
+          <td class="maps">
+            <a href="/maps/genomes/AP011156" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/AP011156/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/AP011156/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/AP011156/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/AP011156" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/AP011156/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/AP011156/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1150" title="Acetohalobium arabaticum DSM 5501">Acetohalobium a...SM 5501</a></td>
+          <td>chromosome</td>
+          <td>07/05/11</td>
+          <td>1/1</td>
+          <td>NC_014378</td>
+          <td>2469596</td>
+          <td>0.37</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_014378" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_014378/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_014378/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_014378/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_014378" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_014378/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_014378/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/622" title="">Acholeplasma laidlawii PG-8A</a></td>
+          <td>chromosome</td>
+          <td>01/04/11</td>
+          <td>1/1</td>
+          <td>NC_010163</td>
+          <td>1496992</td>
+          <td>0.32</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_010163" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_010163/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_010163/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_010163/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_010163" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_010163/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_010163/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1194" title="">Achromobacter xylosoxidans A8</a></td>
+          <td>chromosome</td>
+          <td>06/01/11</td>
+          <td>1/3</td>
+          <td>NC_014640</td>
+          <td>7013095</td>
+          <td>0.66</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_014640" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_014640/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_014640/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_014640/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_014640" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_014640/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_014640/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1194" title="">Achromobacter xylosoxidans A8</a></td>
+          <td>plasmid</td>
+          <td>01/14/11</td>
+          <td>2/3</td>
+          <td>NC_014641</td>
+          <td>98156</td>
+          <td>0.62</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_014641" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_014641/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_014641/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_014641/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_014641" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_014641/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_014641/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1194" title="">Achromobacter xylosoxidans A8</a></td>
+          <td>plasmid</td>
+          <td>01/25/11</td>
+          <td>3/3</td>
+          <td>NC_014642</td>
+          <td>247895</td>
+          <td>0.61</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_014642" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_014642/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_014642/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_014642/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_014642" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_014642/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_014642/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1022" title="Acidaminococcus fermentans DSM 20731">Acidaminococcus...M 20731</a></td>
+          <td>chromosome</td>
+          <td>07/05/11</td>
+          <td>1/1</td>
+          <td>NC_013740</td>
+          <td>2329769</td>
+          <td>0.56</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_013740" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_013740/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_013740/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_013740/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_013740" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_013740/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_013740/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1342" title="">Acidianus hospitalis W1</a></td>
+          <td>chromosome</td>
+          <td>05/12/11</td>
+          <td>1/1</td>
+          <td>NC_015518</td>
+          <td>2137654</td>
+          <td>0.34</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_015518" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_015518/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_015518/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_015518/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_015518" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_015518/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_015518/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1146" title="Acidilobus saccharovorans 345-15">Acidilobus sacc... 345-15</a></td>
+          <td>chromosome</td>
+          <td>08/06/10</td>
+          <td>1/1</td>
+          <td>NC_014374</td>
+          <td>1496453</td>
+          <td>0.57</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_014374" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_014374/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_014374/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_014374/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_014374" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_014374/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_014374/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/942" title="Acidimicrobium ferrooxidans DSM 10331">Acidimicrobium ...M 10331</a></td>
+          <td>chromosome</td>
+          <td>07/25/11</td>
+          <td>1/1</td>
+          <td>NC_013124</td>
+          <td>2158157</td>
+          <td>0.68</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_013124" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_013124/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_013124/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_013124/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_013124" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_013124/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_013124/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/509" title="">Acidiphilium cryptum JF-5</a></td>
+          <td>chromosome</td>
+          <td>06/21/11</td>
+          <td>1/9</td>
+          <td>NC_009484</td>
+          <td>3389227</td>
+          <td>0.68</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009484" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009484/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009484/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009484/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009484" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009484/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009484/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/509" title="">Acidiphilium cryptum JF-5</a></td>
+          <td>plasmid</td>
+          <td>07/26/08</td>
+          <td>2/9</td>
+          <td>NC_009467</td>
+          <td>203589</td>
+          <td>0.62</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009467" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009467/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009467/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009467/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009467" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009467/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009467/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/509" title="">Acidiphilium cryptum JF-5</a></td>
+          <td>plasmid</td>
+          <td>04/28/09</td>
+          <td>3/9</td>
+          <td>NC_009468</td>
+          <td>187422</td>
+          <td>0.62</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009468" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009468/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009468/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009468/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009468" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009468/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009468/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/509" title="">Acidiphilium cryptum JF-5</a></td>
+          <td>plasmid</td>
+          <td>04/28/09</td>
+          <td>4/9</td>
+          <td>NC_009469</td>
+          <td>88953</td>
+          <td>0.62</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009469" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009469/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009469/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009469/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009469" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009469/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009469/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/509" title="">Acidiphilium cryptum JF-5</a></td>
+          <td>plasmid</td>
+          <td>07/26/08</td>
+          <td>5/9</td>
+          <td>NC_009470</td>
+          <td>37415</td>
+          <td>0.6</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009470" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009470/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009470/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009470/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009470" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009470/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009470/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/509" title="">Acidiphilium cryptum JF-5</a></td>
+          <td>plasmid</td>
+          <td>07/26/08</td>
+          <td>6/9</td>
+          <td>NC_009471</td>
+          <td>37155</td>
+          <td>0.61</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009471" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009471/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009471/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009471/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009471" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009471/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009471/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/509" title="">Acidiphilium cryptum JF-5</a></td>
+          <td>plasmid</td>
+          <td>07/26/08</td>
+          <td>7/9</td>
+          <td>NC_009472</td>
+          <td>8781</td>
+          <td>0.61</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009472" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009472/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009472/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009472/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009472" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009472/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009472/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/509" title="">Acidiphilium cryptum JF-5</a></td>
+          <td>plasmid</td>
+          <td>05/24/07</td>
+          <td>8/9</td>
+          <td>NC_009473</td>
+          <td>5629</td>
+          <td>0.58</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009473" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009473/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009473/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009473/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009473" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009473/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009473/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/509" title="">Acidiphilium cryptum JF-5</a></td>
+          <td>plasmid</td>
+          <td>07/26/08</td>
+          <td>9/9</td>
+          <td>NC_009474</td>
+          <td>4909</td>
+          <td>0.59</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_009474" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_009474/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_009474/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_009474/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_009474" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_009474/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_009474/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1289" title="">Acidiphilium multivorum AIU301</a></td>
+          <td>chromosome</td>
+          <td>03/18/11</td>
+          <td>1/9</td>
+          <td>NC_015186</td>
+          <td>3749411</td>
+          <td>0.68</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_015186" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_015186/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_015186/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_015186/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_015186" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_015186/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_015186/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1289" title="">Acidiphilium multivorum AIU301</a></td>
+          <td>plasmid</td>
+          <td>03/02/11</td>
+          <td>2/9</td>
+          <td>NC_015178</td>
+          <td>271573</td>
+          <td>0.63</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_015178" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_015178/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_015178/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_015178/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_015178" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_015178/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_015178/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1289" title="">Acidiphilium multivorum AIU301</a></td>
+          <td>plasmid</td>
+          <td>03/02/11</td>
+          <td>3/9</td>
+          <td>NC_015179</td>
+          <td>54248</td>
+          <td>0.61</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_015179" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_015179/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_015179/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_015179/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_015179" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_015179/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_015179/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1289" title="">Acidiphilium multivorum AIU301</a></td>
+          <td>plasmid</td>
+          <td>03/03/11</td>
+          <td>4/9</td>
+          <td>NC_015180</td>
+          <td>14328</td>
+          <td>0.59</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_015180" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_015180/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_015180/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_015180/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_015180" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_015180/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_015180/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1289" title="">Acidiphilium multivorum AIU301</a></td>
+          <td>plasmid</td>
+          <td>03/03/11</td>
+          <td>5/9</td>
+          <td>NC_015181</td>
+          <td>12125</td>
+          <td>0.6</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_015181" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_015181/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_015181/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_015181/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_015181" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_015181/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_015181/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1289" title="">Acidiphilium multivorum AIU301</a></td>
+          <td>plasmid</td>
+          <td>03/03/11</td>
+          <td>6/9</td>
+          <td>NC_015182</td>
+          <td>1729</td>
+          <td>0.61</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_015182" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_015182/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_015182/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_015182/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_015182" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_015182/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_015182/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td class="organism first"><a href="/organisms/1289" title="">Acidiphilium multivorum AIU301</a></td>
+          <td>plasmid</td>
+          <td>03/03/11</td>
+          <td>7/9</td>
+          <td>NC_015187</td>
+          <td>65564</td>
+          <td>0.62</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_015187" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_015187/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_015187/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_015187/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_015187" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_015187/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_015187/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+        <tr class="even">
+          <td class="organism first"><a href="/organisms/1289" title="">Acidiphilium multivorum AIU301</a></td>
+          <td>plasmid</td>
+          <td>03/03/11</td>
+          <td>8/9</td>
+          <td>NC_015188</td>
+          <td>40588</td>
+          <td>0.6</td>
+          <td class="maps">
+            <a href="/maps/genomes/NC_015188" class="protein-icon" title="Gene/Protein Map"></a>
+            <a href="/rnas/NC_015188/map" class="trna-icon" title="tRNA/rRNA Map"></a>
+            <a href="/prophages/NC_015188/map" class="prophage-icon" title="Prophage Map"></a>
+          </td>
+          <td class="tools last">
+            <a href="/genomes/NC_015188/statistics" class="stats-icon" title="Genome statistics"></a>
+            <a href="/genomes/blasts/NC_015188" class="blast-icon" title="BLAST Search genome"></a>
+            <a href="/genomes/NC_015188/search" class="search-icon" title="Text Search genome"></a>
+            <a href="/genomes/NC_015188/download" class="download-icon" title="Download genome"></a>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  <div class="list-footer">
+    <div class="table_pagination">
+  <div class="page_info">
+    Displaying Genome <b>1&nbsp;-&nbsp;50</b> of <b>2989</b> in total
+  </div>
+  <div class="pagination"><span class="previous_page disabled">&#8592; Previous</span> <em class="current">1</em> <a rel="next" href="/genomes?page=2">2</a> <a href="/genomes?page=3">3</a> <a href="/genomes?page=4">4</a> <a href="/genomes?page=5">5</a> <a href="/genomes?page=6">6</a> <a href="/genomes?page=7">7</a> <a href="/genomes?page=8">8</a> <a href="/genomes?page=9">9</a> <span class="gap">&hellip;</span> <a href="/genomes?page=59">59</a> <a href="/genomes?page=60">60</a> <a class="next_page" rel="next" href="/genomes?page=2">Next &#8594;</a></div>
+</div>
+
+  </div>
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>

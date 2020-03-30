@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The clusterv R package: Supplementary Information</TITLE>
+<META NAME="description" CONTENT="The clusterv R package: Supplementary Information">
+<META NAME="keywords" CONTENT="clusterv-web">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="clusterv-web.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY bgcolor=lightgreen>
+<!--Navigation Panel-->
+<A NAME="tex2html22"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_g.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html23"
+  HREF="node1.html">Overview of the clusterv</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+
+<P>
+
+<P>
+
+<P>
+
+<H1 ALIGN="CENTER">The <EM>clusterv</EM> R package: Supplementary Information</H1>
+<DIV>
+
+<P ALIGN="CENTER"><STRONG><EM>Giorgio Valentini</EM></STRONG></P>
+</DIV>
+<DIV ALIGN="CENTER">
+DSI - Dipartimento di Scienze dell' Informazione 
+<BR>
+Universita' degli Studi di Milano, Italia.
+
+</DIV>
+ 
+<center> 
+email address: <a href="mailto:valentini@dsi.unimi.it">valentini@dsi.unimi.it</a>
+</center> 
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html24"
+  HREF="node1.html"><FONT SIZE="+2">Overview of the <EM>clusterv</EM> R package</FONT></A>
+<LI><A NAME="tex2html25"
+  HREF="node2.html"><FONT SIZE="+2">Background on random projections in euclidean spaces</FONT></A>
+<LI><A NAME="tex2html26"
+  HREF="node3.html"><FONT SIZE="+2"><EM>Clusterv</EM> tutorial</FONT></A>
+<LI><A NAME="tex2html38"
+  HREF="node11.html"><FONT SIZE="+2">Application of <EM>clusterv</EM> to DNA microarray data analysis</FONT></A>
+<LI><A NAME="tex2html41"
+  HREF="node14.html"><FONT SIZE="+2">Download software and documentation</FONT></A>
+<LI><A NAME="tex2html42"
+  HREF="node15.html"><FONT SIZE="+2">Bibliography</FONT></A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+Giorgio 
+2006-08-16
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,1081 @@
+
+
+
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>CLICK</title>  
+        <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+        <link rel="stylesheet" type="text/css" href="/click/Design/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/click/Design/css/template.css"> 
+        <link rel="stylesheet" type="text/css" href="/click/Design/css/messages.css"/>
+        <link rel="stylesheet" type="text/css" href="/click/Design/css/animate.css"/> 
+        <link rel=" stylesheet" type="text/css" href="/click/Design/css/bootstrap-tour.min.css">
+    </head> 
+
+    <body>   
+
+        
+
+
+<!DOCTYPE html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">       
+
+<link rel="stylesheet" href="/click/Design/css/bootstrap.css">
+<link rel="stylesheet" href="/click/Design/css/navbar.css">    
+<script type="text/javascript" src="click/Design/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="click/Design/js/jquery-2.1.4.min.js"></script>
+
+
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+                             
+        </div>                                            
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/click/">CLICK</a></li> 
+                <li><a href="/click/Search/search_archive.jsp">Search</a></li>
+                <li class="dropdown">                            
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">EXPLORE<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/click/Explore/Introduction.jsp">Introduction to Click</a></li>
+                        <li><a href="/click/Explore/Algorithm.jsp">The Click Algorithm</a></li>
+                        <li><a href="/click/Explore/Benchmark.jsp">Benchmark data</a></li>
+                        <li><a href="/click/Explore/Examples.jsp">Examples</a></li>
+                    </ul>
+                </li>                    
+                <li><a href="/click/Download/Download.jsp">DOWNLOAD</a></li> 
+                <li><a href="/click/References/References.jsp">REFERENCES</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="helpmenu">HELP<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/click/Help/Parameters-help.jsp">Pairwise alignment help</a></li>
+                        <li><a href="/click/Help/Database-help.jsp">Database search help</a></li>
+                        <li><a href="/click/Help/Measures.jsp">Description of the scores/measures</a></li>
+                        <li><a href="/click/Help/faq.jsp">F.A.Q</a></li>  
+                        <li><a href="/click/Help/sup.jsp">Supplementary data</a></li>  
+                    </ul>
+                </li>                    
+                <li><a href="/click/Contact/Contactus.jsp">CONTACT</a></li> 
+            </ul>
+        </div>
+</nav>
+
+
+
+
+
+        <div class="page-header">
+            <div class="container-fluid">               
+                <a href="/click/"><img src="/click/Design/img/click_logo.png" class="img-responsive" style="height: 45px;margin: auto;"></a>
+                <p>Topology Independent Comparison of Biomolecular 3D Structures</p>
+            </div>
+        </div>
+
+        <div id="wrap">            
+
+            <!-- The warning messages starts here. This section basically lists all the messages related to intermediate warnings
+            informations and success of the form submission-->
+
+            <div id="pdbmissing" class="warning help">               
+                PDB structure is not specified. Either enter a four letter PDB code or upload PDB file to proceed.  
+            </div>
+
+            <div id="repatommiss" class="warning help">               
+                Representative atom(s) not provided. Provide the representative atom(s) to proceed.
+            </div>
+
+            <div id="output_error" class="error help">                
+                Problem in creating the output files. If this behavior repeats
+                kindly report it using the link<a href="/click/Contact/Contactus.jsp">Contact</a>
+            </div>            
+
+            <div id='pdb_error' class="error help">
+                Not able to process the PDB structures. Please check if there are any invalid special characters in the PDB file.        
+            </div>            
+
+            <div id="hitsmissing" class="warning help">
+                The field 'number of hits' is empty. Please provide an integer value to proceed. 
+            </div>
+
+            <div id="databasemissing" class="warning help">
+                The field 'Select a database' is empty. Please select a database or upload your own database file to proceed. 
+            </div>
+
+
+            <div id="pdb_code_invalid" class="warning help">                
+            </div>
+
+            <div id="fragment_format_err" class="warning help">
+            </div>
+
+            <div id="upload_file_format_err" class="warning help">
+                Please upload valid PDB format file.
+            </div>           
+
+
+            <!-- The message display section ends here-->
+            <div class="container-fluid">
+
+                <div class="col-sm-1"></div>
+
+                <div id="user-panel" class="col-sm-4"> 
+
+                    <div class="well custom-fonts">
+
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="active"><a data-toggle="tab" href="#pairwise_panel" onclick="showhelp();">Pairwise Alignment</a></li>
+                            <li><a data-toggle="tab" href="#database_panel" onclick="showdbhelp('reset')">Database Alignment</a></li>
+                        </ul>
+
+                        <br>
+
+                        <div class="tab-content">
+                            <div id="pairwise_panel" class="tab-pane fade in active">
+
+                                <form name="PairwiseAlignActionForm" method="post" action="/click/pairwisealign.do;jsessionid=74D65F4962D137B06C0C8EEFEF16A010" enctype="multipart/form-data">
+                                    <div class="form-group">                            
+
+                                        <div id="structure_help_tour">
+                                            <div class="row">                                           
+                                                <div class="col-xs-6">
+                                                    <p class="glyphicon glyphicon-question-sign"></p>
+                                                    <label data-toggle="tooltip" data-placemen="top" id="pdb-q" class="showhelp" onclick="showhelp(this.id);">Structure 1 *
+                                                    </label>
+                                                    <div class="input-group">
+                                                        <input type="text" id="querypdbfile" name="querypdbfile" class="form-control">
+                                                        <span class="input-group-btn"> 
+                                                            <span class="form-control btn btn-default btn-file" data-toggle="tooltip" 
+                                                                  data-placement="top" title="Upload file">
+                                                                <input id="uploadqueryFile" name="uploadqueryFile" type="file" class="form-control" onchange="showfile(this.id)">
+                                                                <span class="glyphicon glyphicon-open" style="overflow: hidden;">
+                                                                </span>
+                                                            </span>
+                                                        </span> 
+                                                    </div>
+                                                </div>                                    
+
+                                                <div class="col-xs-6">   
+                                                    <p class="glyphicon glyphicon-question-sign"></p>
+                                                    <label data-toggle="tooltip" data-placement="top" id="pdb-t" class="showhelp" onclick="showhelp(this.id);">Structure 2 *</label>
+                                                    <div class="input-group">
+
+                                                        <input type="text" id="targetpdbfile" name="targetpdbfile" class="form-control">
+                                                        <span class="input-group-btn">
+                                                            <span class="form-control btn btn-default btn-file" data-toggle="tooltip" 
+                                                                  data-placement="top" title="Upload file">
+                                                                <input id="uploadtargetFile" name="uploadtargetFile" type="file" class="form-control" onchange="showfile(this.id);">
+                                                                <span class="glyphicon glyphicon-open"style="overflow: hidden;">  
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>                                          
+                                            </div>
+                                        </div>
+
+                                        <span class="help-block">Four letter PDB code or upload file in PDB format.
+                                            <br>Format for specifying the fragments: 1tig,A(83:100) <br>
+                                            <a onclick="showhelp('pdb-t');" role="button">Format help</a>
+                                        </span>
+                                        <br>
+
+                                        <div id="rep_atom_help_tour">
+                                            <p class="glyphicon glyphicon-question-sign"></p>
+                                            <label data-toggle="tooltip" data-placement="top" id="rep-atom" class="showhelp" onclick="showhelp(this.id);">Representative atom(s) *</label>
+                                            <input type="text" id="repatomvalue" name="repatomvalue" value="CA" class="form-control" placeholder="Enter the code for representative atom">
+                                            <span class="help-block">Multiple representative atom types are separated by spaces, e.g. CA CB O N</span>
+                                        </div>
+                                        <br>
+
+                                        <div id="use-ad-param">                     
+                                            <a href="#" onclick="showadvance();" class="btn btn-info btn-block advance-param-button-text">
+                                                Advanced Features</a>
+                                            <br>
+                                        </div>
+
+                                        <div id="not-ad-param" class="advance-param">                                   
+                                            <a href="#" onclick="showadvance();" class="btn btn-info btn-block advance-param-button-text">
+                                                Hide</a>
+                                            <br>
+                                        </div>
+
+                                        <div id="advance-param" class="advance-param">
+
+                                            <input type="checkbox" id="sec_str" name='sec_str' value="2" checked>
+                                            <label class="form-inline showhelp" id="sec_str_sol_acc" onclick="showhelp(this.id);">Secondary structure</label>
+                                            <br>                                           
+
+                                            <input type="checkbox" id="sol_acc" name='sol_acc' value="1" checked>
+                                            <label class="form-inline showhelp" id="sec_str_sol_acc" onclick="showhelp(this.id);">Solvent accessibility</label>
+                                            <br>
+
+                                            <input type="checkbox" id='res_depth' name="res_depth">
+                                            <label id="res-depth" class="form-inline showhelp" onclick="showhelp(this.id);">Residue depth</label>
+
+                                        </div>
+
+                                        <hr>  
+                                        <a id="reset" class="btn btn-default advance-param-button-text" role="button" 
+                                           onclick="pairwise_reset();">Reset</a>
+
+                                        <button id="click" type="submit" class="btn btn-info btn-primary advance-param-button-text" 
+                                                onclick="return check_input_parameters();">Click</button>
+
+                                    </div>
+
+                                    <input type="text" id="quploaded" name="quploaded" hidden="true" />
+                                    <input type="text" id="tuploaded" name="tuploaded" hidden="true" />  
+                                </div>
+                            </form>
+
+                            <!------------------------------- Database panel code starts here---------------------------------------->
+                            <div id="database_panel" class="tab-pane fade">
+                                <form method="POST" action="cgi/run_click_server.cgi" enctype="multipart/form-data" method="post" name="click_database"> 
+                                    <div class="form-group">                            
+
+                                        <div id="db_pdb_tour_help">
+
+                                            <p class="glyphicon glyphicon-question-sign"></p>
+                                            <label data-toggle="tooltip" data-placement="top" class="showhelp" id="pdb-q" onclick="showdbhelp(this.id);" title="Click for help">Structure (whole/fragmented) *</label> 
+                                            <div class="input-group">
+                                                <input type=text id="prot1" name="prot1" class="form-control help">                                            
+                                                <input type=text id="prot2" class="form-control">
+                                                <span class="input-group-btn">
+                                                    <span class="form-control btn btn-default btn-file" data-toggle="tooltip" 
+                                                          data-placement="top" title="Upload PDB File">                                                        
+                                                            <input id="prot1file" name="prot1file" type="file" class="form-control" onchange="updateStructure('CA', this.value);">
+                                                    <span class="glyphicon glyphicon-open" style="overflow: hidden;"> 
+                                                    </span>
+                                                    </span>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <span class="help-block">Four letter PDB code or upload file in PDB format.</span>
+                                    </div>
+
+                                    <div id="select_db_tour_help">
+                                        <p class="glyphicon glyphicon-question-sign"></p>
+                                        <label id="db" data-toggle="tooltip" data-placement="top" class="showhelp" onclick="showdbhelp(this.id);" 
+                                               title="click for help.">
+                                            Select a database *
+                                        </label>                                       
+
+                                        <select id="database_type" name="database_type" class="form-control custom-width" onchange="updaterepatom();"> 		
+                                            <option onclick="updateText('CA');"> Small single domain SCOP fold representatives </option>
+                                            <option> SCOP family representatives (3654 PDB chains)</option>
+                                            <option> Human Protein (3468 PDB chains NR 90)</option>
+                                            <option> Protein (24,364 PDB chains NR 90)</option>
+                                            <option> DNA (1367 PDB NR 90)</option>
+                                            <option> DNA-Protein complexes (2262 PDB)</option>
+                                            <option> RNA (493 PDB NR 90)</option>
+                                            <option> User-uploaded</option>
+                                        </select>
+                                    </div>
+
+                                    <br>
+
+                                    <div id="num_hits_tour_help">
+                                        <p class="glyphicon glyphicon-question-sign"></p>
+                                        <label id="hits" data-toggle="tooltip" data-placement="top" class="showhelp" onclick="showdbhelp(this.id);" 
+                                               title="click for help.">
+                                            Number of Hits *
+                                        </label>
+                                        <br>
+
+                                        <input type=text id="numberHits" name="numberHits" size=12 MAXLENGTH=5 value="100" class="form-control"> </td>
+                                        <br> 
+                                    </div>
+
+                                    <input type=text id="Zscore" name="Zscore" value="2.5" class="form-control help">                                            
+
+                                    <div id="rep_atom_db_tour_help">
+                                        <p class="glyphicon glyphicon-question-sign"></p>
+                                        <label data-toggle="tooltip" data-placement="top" id="rep-atom" class="showhelp" onclick="showdbhelp(this.id);" title="click for help">Representative atom(s) *</label>
+                                        <input type=text id="typeAtom" name="typeAtom" class='form-control' value="CA">                                             
+                                        <span class="help-block">Multiple representative atom types are separated by spaces, e.g. CA CB O N</span>
+                                    </div>
+
+                                    <div id="db_email_tour_help">
+                                        <p class="glyphicon glyphicon-question-sign"></p>
+                                        <label data-toggle="tooltip" data-placement="top" id="email" class="showhelp" onclick="showdbhelp(this.id);" title="click for help">Email</label>
+                                        <br>
+
+                                        <input type=text id="Email" name="Email" class="form-control"></td>
+                                        <span class="help-block">Enter the email-id for receiving the notification</span>
+                                        <br>
+                                    </div>
+
+                                    <div id="db-use-ad-param">                     
+                                        <a href="#" onclick="dbshowadvance();" class="btn btn-info btn-block advance-param-button-text">
+                                            Advanced Features</a>
+                                        <br>
+                                    </div>
+
+                                    <div id="db-not-ad-param" class="advance-param">                                   
+                                        <a href="#" onclick="dbshowadvance();" class="btn btn-info btn-block advance-param-button-text">
+                                            Hide</a>
+                                        <br>
+                                    </div>
+
+                                    <div id="db-advance-param" class="advance-param">
+                                        <input name="SS_chkbox" type="checkbox" value="on" checked>
+                                        <label class="form-inline showhelp" id="dbsec_str_sol_acc" onclick="showdbhelp(this.id);">Secondary structure</label> 
+                                        <br>
+
+                                        <input name="SA_chkbox" type="checkbox" value="on" checked> 
+                                        <label class="form-inline showhelp" id="dbsec_str_sol_acc" onclick="showdbhelp('dbsec_str_sol_acc');">Solvent Accessibility</label>
+                                        <br>
+
+                                        <input id="RD_chkbox" name="RD_chkbox" type="checkbox" value="on">
+                                        <label id="res-depth" class="form-inline showhelp" onclick="showdbhelp(this.id);"><median>Residue depth</median></label> 
+
+                                    </div>
+
+                                    <hr>
+                                    <a id="db_reset" class="btn btn-default advance-param-button-text" role="button" onclick="database_reset();">Reset</a>
+
+                                    <INPUT id="db_click" TYPE="SUBMIT" VALUE ="Click" 
+                                           class="btn btn-info btn-primary advance-param-button-text" onclick="return check_input_db_parameters();"/>
+
+                                    <input type=file id="database_file" name="database_file" style="visibility:hidden" onchange="updateDatabase('CA');">
+
+                                </form>                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="help-panel" class="col-sm-7">                          
+                    <div class="well custom-fonts">
+                        <label class="help-heading">Help</label> <a href="#" id="hidehelp" class="got-it-link" onclick="hidehelp();">
+                            Got It <span class="glyphicon glyphicon-thumbs-up"></span></a>                      
+
+                        <p id="db-example" class="help">
+                            <a target="_blank" href="/click/Explore/Examples.jsp#db_search_example">Database search example</a> &nbsp;&nbsp;
+                            <a role="button" data-toggle="modal" data-target="#run-time-help">Runtime estimation of database search</a>&nbsp;&nbsp;
+                            <a id="db_info" onclick="showdbhelp(this.id);" role="button">PDB database information</a>
+                        </p>
+                        <hr>                            
+                        <div id="query-pdb-help" class="help">                                
+                            <div class="panel panel-info">
+                                <div class="panel-heading">PDB Structure</div>
+                                <div class="panel-body">
+                                    Users can choose query structures from the PDB without having to upload their own structure files.
+                                    <br>
+                                    The input can be just the 4 letter PDB code, in which case the whole structure corresponding to that PDB entry will be considered. 
+                                    Should you want to specify chains and fragments use the following format: 
+
+                                    <hr>
+                                    <table class=" table table-responsive table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Format</th><th>Meaning</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>1ang</td> <td>The whole structure 1ang.</td></tr>
+                                            <tr><td>1ang,A</td> <td>The structure 1ang, chain A</td></tr>
+                                            <tr><td>1xxa,A,B</td> <td>The structure 1xxa, chains A and B</td></tr>                                            
+                                            <tr><td> 1ang,A(1:15),A(82:100)</td> <td>Two fragment structure constituting residues 1-15 and 82-100 of 
+                                                    the structure 1ang, chain A.</td></tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p class="mark"><b>Note:</b> If you are uploading a PDB structure then you can not specify the fragments. If so desired, you should pre-fragment the 
+                                        PDB structure and then upload.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="rep-atom-help" class="help">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Representative atoms</div>
+                                <div class="panel-body">
+                                    Representative atoms should be specified exactly as they appear in the PDB files (upper case, etc). The choice of 
+                                    representative atoms depends on the types of molecules that are to be aligned.                            
+                                    The example of representative atoms for proteins are CA, CB, C3, N, O etc.<br>                           
+                                    <br>
+                                    At the least, 3 representative atoms should be present in each of the structures to be aligned.
+                                    <br><br>
+                                    The user can chose one or more type of atoms as representative.
+                                    For example, when aligning a pair of proteins the representative atoms chosen could be "CA CB".
+                                    When choosing multiple types of representative atoms separate then with spaces.<br>                            
+                                    <hr>
+                                    <table class="table table-responsive table-bordered table-striped">                                       
+                                        <thead>
+                                            <tr>
+                                                <th>Structure type</th>
+                                                <th>Choice of representative atom(s)</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td><b>protein-protein alignments</b></td>
+
+                                                <td>CA; Or any main-chain atom or combination of main chain atoms</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><b>DNA/RNA alignments</b></td>
+
+                                                <td>C3'; Or any nucleotide backbone atom</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><b>DNA-protein complexes</b></td>
+
+                                                <td>CA C3'; Or any combination of protein/nucleotide backbone atoms</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><b>DNA-protein complexes</b></td>
+
+                                                <td>CA C3'; Or any combination of protein/nucleotide backbone atoms</td>
+                                            </tr>
+                                    </table>
+
+                                    <p class="mark">Note: To align ligand molecules change the HETATM label to ATOM. Choose the appropriate representative atom(s) and upload the structure.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="sec-str-sol-acc-help" class="help">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Residue Feature- Secondary Structure</div>
+                                <div class="panel-body">                           
+                                    <ul>
+                                        <li>In addition to the cartesian coordinates of the representative atoms, 
+                                            CLICK can make use of other features of the protein such as secondary structure, 
+                                            depth, etc (see below) in guiding the alignment.
+                                        </li>
+
+                                    </ul>
+
+                                    <ul>
+                                        <li>Secondary structure provides the general three-dimensional form of local segments of proteins. 
+                                            For matching of a pair of cliques in our algorithm, the secondary structure 
+                                            score between two equivalent residues Ai and Bj are compared:
+                                        </li>
+                                    </ul>
+
+                                    <center>SSM[Ai,Bj]</center><br>
+
+                                    <img src="/click/Design/img/sec-struct.png" class="img-responsive center-block">                             
+
+
+                                    <ul>Where,<br>
+
+                                        <li>SSM is an empirically determined secondary structure match matrix. </li>
+                                        <br>
+
+                                        <li>SS(Ai) is the secondary structure state of amino acid residue Ai, and s is a 
+                                            preset threshold for matching secondary structure elements. 
+                                        </li>
+                                        <br>
+
+                                        <li>The cut-off threshold for comparing secondary structure used in this 
+                                            study was 2, hence SSM[Ai,Bj]< 2. 
+                                        </li>
+                                        <br>
+
+                                        <li>This implies that, either residues of regular secondary structures can only match 
+                                            with other residues of the same secondary structure, or with residues in loops.
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Residue Feature- Solvent Accessibility</div>
+                                <div class="panel-body">  
+                                    <ul>
+                                        <li>Side-chain solvent accessibility is the degree to which a residue in a protein is 
+                                            accessible to a solvent molecule. The solvent accessibility score between two residues 
+                                            Ai and Bj are matched by using the inequality: 
+                                        </li>
+                                    </ul>
+                                    <br>
+                                    <center>SAM[Ai,Bj]</center><br>
+
+                                    <img src="/click/Design/img/solv-acc.png" class="img-responsive img-rounded center-block">                             
+
+                                    <ul>Where,<br>
+
+                                        <li>SAM is an empirical solvent accessibility match matrix. </li>
+                                        <br>
+
+                                        <li>SA(Ai) is the side-chain solvent accessibility of amino acid residue Ai, 
+                                            and a is a preset threshold for matching solvent accessible area states. 
+                                        </li>
+                                        <br>
+
+                                        <li> The cut-off threshold for solvent accessibility matching is a=1, implying that 
+                                            residues categorized in different accessible area classes cannot be matched. 
+                                        </li>
+                                        <br>
+
+                                        <li>However, this criterion is relaxed to allow the matching of two residues in adjacent 
+                                            accessible area classes if their side chain accessible areas are within 10% of each other.
+                                        </li>
+
+                                        <br>
+                                        <li><b> Note: Secondary structure, side-chain solvent accessibility, 
+                                                and residue depth are currently computed only for protein structures.
+                                            </b></li>
+
+                                    </ul>                           
+                                </div>  
+                            </div>
+                        </div>
+
+                        <div id="res-depth-help" class="help">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Residue Depth</div>
+                                <div class="panel-body">
+                                    The depth of an atom/residue is defined as its distance to the closest bulk solvent molecule. 
+                                    It is a measure that parameterizes the environment of atoms/residues. For further details on the 
+                                    computation and utility of Depth refer to 
+                                    <a>http://cospi.iiserpune.ac.in/depth/</a>
+                                </div> 
+                            </div>
+                        </div>                        
+
+                        <div id="db-help" class="help">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Database Selection</div>
+                                <div class="panel-body">
+                                    <b>Currently, users can search over following structural databases:</b>
+                                    <hr>
+                                    <table class="table table-responsive table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Serial no.
+                                                </th>
+                                                <th>
+                                                    Database
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    non-redundant (90% sequence identity) set of 24,563 protein chains
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    non-redundant set of 3468 human protein chains
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>3</td>
+                                                <td>
+                                                    a set of 2262 DNA-protein complexes
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>4</td>
+                                                <td>
+                                                    non-redundant set of 493 RNA
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>5</td>
+                                                <td>
+                                                    non-redundant set of 1368 DNA
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                    <p><b class="mark">Uploading your own database:</b>
+                                        <br>                                        
+                                        The server offers the flexibility of uploading your own database, should 
+                                        the default ones be inadequate for your queries. The user 
+                                        should upload a plain/ASCII text file. The format of the file 
+                                        is as follows:
+                                        <br>                                       
+                                        The first line is the type of their database (protein/DNA/RNA or DNA-protein) 
+                                        and next lines are just the 4 letter PDB code and/or chain - for example:</p>
+                                    <a href="/click/Explore/data-files/user_uploaded_database.txt" target="_blank">Sample file for user uploaded database</a>
+                                    <div style="background-color: gray">
+                                        <p>protein
+                                            <br>
+                                            7odcA
+                                            <br>
+                                            4eetB
+                                            <br>
+                                            3mhpC
+                                            <br>
+                                            3c4s
+                                            <br>
+                                            1xak
+                                            <br>
+                                            3l32                                                       
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="hits-help" class="help">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Number of hits</div>
+                                <div class="panel-body">
+                                    <b>Number of hits for database search</b> <br>
+                                    <li>As databases could be large, you may want to restrict the number of comparisons 
+                                        for which you may require detailed information (alignment files and the 
+                                        superimposed structures). The hits are ranked according to Z-scores.</li>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="email-help" class="help">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Email Notification</div>   
+                                <div class="panel-body">
+                                    We advise users of long running jobs to fill in this field so that they could be notified (with a link to their results) on job completion.   
+                                    We will neither store nor disseminate these e-mail addresses.
+                                    <br><br>
+                                    <li><b>If no email address is provided</b>: Please save the URL that is shown after you submit the job. 
+                                        You can either leave the page to refresh until completion or bookmark it to for later. Once the job finishes, result page 
+                                        referred by the URL will show the results.</li>
+                                </div>   
+                            </div>
+                        </div>
+
+                        <div id="Zscore-help" class="help">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Z-score</div>
+                                <div class="panel-body">                            
+                                    For each alignment produced by CLICK, a Z-score is computed to determine the significance of the alignment. In our case, 
+                                    the Z-scores are an estimate of the likelihood that the alignment is different an alignment made by chance. It is computed as
+                                    <br>
+                                    <img src="/click/Design/img/Z-score.png" class="img-responsive img-rounded center-block">
+                                    <br>
+                                    <ul>Where,<br>
+                                        <li>A is the query structure for which similar structures are sought in a database, 
+                                            whose members are the structures {S<i><sub>i</sub></i>}.</li> </li>
+
+
+                                        <li>SO<sub>A-S<i><sub>i</sub></i></sub> is the average structure overlap (computed over the representative atoms) 
+                                            on the superimposition of A and S<i><sub>i</sub></i> within cut-off distances of 1 Å, 2 Å, and 3 Å. 
+                                        </li>
+                                        <br>
+                                        <li> avg_SO<sub>bg</sub> and std_ SO<sub>bg</sub> are the average and standard deviation of structure overlap within 1 Å, 2 Å, 
+                                            and 3 Å of alignments produced by aligning all members of a background database with one another. Background databases are 
+                                            chosen according to the submitted query. </li>
+
+
+                                        <li>For instance, for a query protein structure, the background database would be a non-redundant set of proteins structures 
+                                            consisting of 1601 chains. Similarly, the DNA, RNA and DNA-protein complex databases consist of 107, 255 and 301 non-redundant 
+                                            structures respectively. When the query structure is a fragmented chain of a structure that consists of  <i>N</i> representative points, 
+                                            the same number of points (of the same atom types) are extracted at random from 30 randomly chosen structures of the appropriate 
+                                            database. </li>
+
+
+                                        <li>The avg_SO<sub>bg</sub> is then computed by an all-against-all alignment of these 30 selected extracts.  For the comparisons 
+                                            of whole molecules or for fragments containing more than 80 representative points, the background scores are computed by considering 
+                                            the all-against-all comparisons of structures of 30 randomly chosen whole molecules. 
+                                        </li>
+
+                                    </ul>
+                                    <b>Note: For a significant match, Z-score should be above 2.5. The greater the Z-score the more significant is the match.</b> 
+                                </div>
+                            </div>                   
+                        </div> 
+
+                    </div> 
+                </div>
+                <div id="pairwise_tour" class="guide custom-fonts" onclick="click_pairwise_tour();"><p class="glyphicon glyphicon-question-sign"></p></div>
+                <div id="db_tour" class="guide custom-fonts" style="display: none;" onclick="click_database_tour();"><p class="glyphicon glyphicon-question-sign"></p></div>
+
+            </div>
+
+
+
+            <div id="run-time-help" class="modal fade" role="dialog">                             
+
+                <div class="modal-dialog modal-lg">                            
+
+                    <div class="modal-content">
+                        <div class="modal-header">  
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title text-center">Approximate runtime estimate for CLICK database search</h4>
+                        </div>                             
+
+                        <div class="modal-body text-left">
+                            <b>The runtime for a job usually increase with an increase in the following:</b>
+                            <br>
+                            <div class="list-group">
+                                <li class="list-group-item">1. Size of the query structure.</li>
+
+                                <li class="list-group-item">2. Size of database.</li>
+
+                                <li class="list-group-item">3. Number of representative atoms.</li>
+
+                                <li class="list-group-item">4. Number of best matched cliques for each alignment.</li>
+                            </div>
+
+
+                            <b>Note:</b> The reported run times were calculated when the <b>system was idle (no other resource intensive operation was running on the 
+                                system)</b>. The run time may vary for a new database search depending on the system load and rank of your job in the
+                            queue. If the job is in queue then the waiting time in the queue will be added to the standard runtime of the job.
+                            <br><br>
+                            <!--<a role="button" class="btn btn-block btn-info" href="/click/Help/Parameters-help.jsp#run_time_help">Graphical representation of runtime</a>
+                            -->
+
+                            <table class="table table-bordered table-responsive">
+
+                                <thead>
+                                <th colspan="3" class="text-center alert-info">Approximate runtime estimate for searching 'Protein database' (24,563 PDB chains, NR 90)
+                                    <a role="button" class="btn badge" onclick="modal_reload('protein');">See Graph</a></th>
+                                </thead>
+                                <thead>
+                                <th>
+                                    PDB Code
+                                </th>
+                                <th>
+                                    Size
+                                </th>
+                                <th>
+                                    Runtime in hours
+                                </th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            5CFH
+                                        </td>
+                                        <td>
+                                            100 residues
+                                        </td>
+                                        <td>
+                                            13 hours
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            1A3H
+                                        </td>
+                                        <td>
+                                            300 residues
+                                        </td>
+                                        <td>
+                                            13 hours
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            5EJY
+                                        </td>
+                                        <td>
+                                            500 residues
+                                        </td>
+                                        <td>
+                                            18.5 hours
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <thead>
+                                <th colspan="3" class="text-center alert-info">Approximate runtime estimate for searching 'Human Protein database' (3468 PDB chains, NR 90)
+                                    <a role="button" class="btn badge" onclick="modal_reload('human_protein');">See Graph</a></th>
+                                </thead>
+                                <thead>
+                                <th>
+                                    PDB Code
+                                </th>
+                                <th>
+                                    Size
+                                </th>
+                                <th>
+                                    Runtime in hours
+                                </th>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            5CFH
+                                        </td>
+                                        <td>
+                                            100 residues
+                                        </td>
+                                        <td>
+                                            1.5 hours
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            1A3H
+                                        </td>
+                                        <td>
+                                            300 residues
+                                        </td>
+                                        <td>
+                                            2.5 hours
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            5EJY
+                                        </td>
+                                        <td>
+                                            500 residues
+                                        </td>
+                                        <td>
+                                            3 hours
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <thead>
+                                <th colspan="3" class="text-center alert-info">Approximate runtime estimate for searching 'DNA Protein complex' database (2262 PDB)
+                                    <a role="button" class="btn badge" onclick="modal_reload('dna_protein');">See Graph</a></th>
+                                </thead>
+                                <thead>
+                                <th>
+                                    PDB Code
+                                </th>
+                                <th>
+                                    Size
+                                </th>
+                                <th>
+                                    Runtime in hours
+                                </th>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            1AN2
+                                        </td>
+                                        <td>
+                                            86 residues
+                                        </td>
+                                        <td>
+                                            1 hour 7 minutes
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            4Z6C
+                                        </td>
+                                        <td>
+                                            335 residues
+                                        </td>
+                                        <td>
+                                            1 hour 20 minutes
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            5D9Y
+                                        </td>
+                                        <td>
+                                            462 residues
+                                        </td>
+                                        <td>
+                                            1 hour 45 minutes
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <thead>
+                                <th colspan="3" class="text-center alert-info">Approximate runtime estimate for searching 'RNA' database (493 PDB, NR 90)
+                                    <a role="button" class="btn badge" onclick="modal_reload('rna');">See Graph</a></th>
+                                </thead>
+                                <thead>
+                                <th>
+                                    PDB Code
+                                </th>
+                                <th>
+                                    Size
+                                </th>
+                                <th>
+                                    Runtime in hours
+                                </th>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            5KVJ
+                                        </td>
+                                        <td>
+                                            32 residues
+                                        </td>
+                                        <td>
+                                            15 minutes
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            3RGJ
+                                        </td>
+                                        <td>
+                                            172 residues
+                                        </td>
+                                        <td>
+                                            17 minutes
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>                           
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="table_button" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal modal-lg fade" id="dbsearch_modal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">                          
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+
+<!DOCTYPE html>
+
+<html>
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            /* Margin bottom by footer height */
+            margin-bottom: 60px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            background-color: #f5f5f5;
+            //background-color: black;
+            overflow: hidden;
+        }
+
+        .footer-fonts{
+            font-family: 'Lato',Helvetica,Arial,sans-serif; 
+            font-size: 12px; 
+            color: #777;
+        }
+
+        .footer-fonts a{    
+            text-decoration: none;
+            color: #777;
+        }
+
+        .footer-fonts-contact a{            
+            font-size: 12px;
+            color: #777;
+            text-decoration: none;
+            font-family: 'Lato',Helvetica,Arial,sans-serif;            
+        }
+
+        body > .container {
+            padding: 60px 15px 0;
+        }
+
+    </style>
+    <body>
+        <footer class="footer">
+            <div class="container-fluid">  
+                <nav class="nav navbar-nav navbar-left" style="margin-left:2%;"> 
+                    <br>
+                    <p class="footer-fonts">
+                        <span class="glyphicon glyphicon-copyright-mark"></span> <a href="http://cospi.iiserpune.ac.in" target="_blank">
+                            Computational and Structural Biology at Pune, IISER (cospi)</a>. All rights reserved. 
+                        <br>
+                        The site is mobile <span class="glyphicon glyphicon-phone"></span>friendly.                    
+                    </p>           
+                </nav>   
+                <nav class="nav navbar-nav navbar-right footer-fonts-contact" style="padding-top:1%; margin-right:2%;"> 
+                    <p>
+                        <a href="/click/Contact/Contactus.jsp" target="_blank">CONTACT</a>
+                    </p>
+                </nav>          
+            </div>
+        </footer>
+    </body>
+</html>
+ 
+
+    </body>
+
+    <div id="cover" class="cover">
+        <div class="covermsg custom-fonts well">Processing your query.<br>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/click/Design/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/click/Design/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="/click/Design/scripts/Click.js"></script> 
+    <script type="text/javascript" src="/click/Design/scripts/Click_db.js"></script>
+    <script type="text/javascript" src="/click/Design/js/bootstrap-tour.min.js"></script>
+    <script type="text/javascript" src="/click/Design/scripts/click_tour.js"></script>
+    <script type="text/javascript" src="/click/Design/scripts/tracking.js"></script> 
+</html>
+

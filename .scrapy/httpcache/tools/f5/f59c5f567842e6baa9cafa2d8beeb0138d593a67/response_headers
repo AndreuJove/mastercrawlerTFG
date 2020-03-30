@@ -1,0 +1,8 @@
+Server: nginx/1.4.4
+Date: Mon, 30 Mar 2020 18:49:02 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Vary: Cookie
+Set-Cookie: sessionid=8vhcw9fknybrr08ue2int850xv6p3u7r; expires=Mon, 27-Apr-2020 18:49:02 GMT; httponly; Max-Age=2419200; Path=/
+Set-Cookie: messages="3703a468839251e8b9a92ec3dc1b6ec92b6bbdb8$[[\"__json_message\"\0540\05425\054\"User space is created successfully!\"]\054[\"__json_message\"\0540\05425\054\"User's image folder is created successfully!\"]\054[\"__json_message\"\0540\05425\054\"User's model folder is created successfully!\"]]"; Path=/
+Content-Encoding: gzip

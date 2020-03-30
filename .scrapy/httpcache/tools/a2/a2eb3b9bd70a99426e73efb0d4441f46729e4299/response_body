@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>BEL Commons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/img/PyBEL-square-100.png">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+
+    
+    <!--[if lt IE 9]>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+  <body>
+    
+    
+    <nav class="navbar navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed"
+                    data-target="#485848c5cd0b7dabdf24f858e4f3abbf21fdb984" data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img alt="BEL Commons" src="/static/img/PyBEL-square-100.png"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="485848c5cd0b7dabdf24f858e4f3abbf21fdb984">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle nav-header" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">SCAI Resources <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-header"
+                               href="http://belief.scai.fraunhofer.de/BeliefDashboard">BELIEF</a></li>
+                        <li><a class="nav-header" href="http://neurommsig.scai.fraunhofer.de/">NeuroMMSig</a></li>
+                        <li><a class="nav-header" href="http://compath.scai.fraunhofer.de/">ComPath</a></li>
+                        <li>
+                            <a class="nav-header" href="https://arty.scai.fraunhofer.de/artifactory/bel/">
+                                BEL Resources
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-header" href="http://academia.scaiview.com/academia/">SCAIView</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/terms-and-conditions">Terms and Conditions</a>
+                </li>
+                <li>
+                    <a href="/imprint">Imprint</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right no-collapse">
+                
+                    <li><a href="/login">Log In</a></li>
+                
+                <li>
+                    <a id="nav-scai-logo"
+                       href="https://www.scai.fraunhofer.de/en/business-research-areas/bioinformatics.html">
+                        <img alt="Fraunhofer SCAI"
+                             src="/static/img/scai_logo.svg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    
+    <div class="container" style="margin-top: 50px">
+        
+
+      <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        We're getting ready to publish this web application! Check our <a href="https://doi.org/10.1101/288274">preprint</a> on <i>bioRxiv</i>.
+      </div>
+
+        
+
+        
+
+        <div class="jumbotron">
+            <h1>BEL Commons</h1>
+            <p>
+                An environment for <strong>curating</strong>, <strong>validating</strong>, and
+                <strong>exploring</strong> knowledge assemblies encoded in Biological Expression Language (BEL) to
+                support <strong>elucidating</strong> disease-specific, mechanistic insight.
+            </p>
+
+            <small>
+                Disclaimer: this is a scientific prototype that has been developed in an academic
+                capacity, and thus comes with no warranty or guarantee of maintenance, support, or back-up of data.
+            </small>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h3>Upload</h3>
+                        <p>
+                            Parse BEL script, validate its contents, perform automatic enrichment, and
+                            generate a network summary.
+                        </p>
+                        <p>
+                            <a href="/upload" class="btn btn-primary btn-block">
+                                Upload BEL
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h3>Catalog</h3>
+                        <p>
+                            View summaries and statistics over curated networks and as a first step towards
+                            exploration, visualization, and <a href="/experiment/">analysis</a>.
+                        </p>
+                        <p>
+                            <a href="/network" class="btn btn-primary btn-block">
+                                Network Catalog
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h3>Query</h3>
+                        <p>
+                            Build a network by investigating the knowledge related to interesting biological
+                            entities, chemical matter, authors, or publications.
+                        </p>
+                        <p>
+                            <a href="/query/build"
+                               class="btn btn-primary btn-block" role="button">Build Query</a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h3>Curate</h3>
+                        <p>
+                            Tools for generating BEL script stubs, merging BEL namespace files, or curation feedback
+                            on BEL namespace files.
+                        </p>
+                        <div class="btn-group">
+                            <a href="/curation/bel/template" class="btn btn-primary"
+                               role="button" data-toggle="tooltip" data-placement="top"
+                               title="Generate a template BEL script given an optional list of PubMed identifiers or Entrez Gene identifiers">
+                                Generate</a>
+                            <a href="/curation/namespace/merge" class="btn btn-primary"
+                               role="button" data-toggle="tooltip" data-placement="top"
+                               title="Merge multiple BEL Namespace (BELNS) files">
+                                Merge</a>
+                            <a href="/curation/namespace/validate" class="btn btn-primary"
+                               role="button" data-toggle="tooltip" data-placement="top"
+                               title="Validate a manually curated BEL Namespace or Annotation with the EBI Ontology Lookup Service">
+                                Validate</a>
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h3>Terminologies</h3>
+                        <p>
+                            View the underlying namespaces and annotations along with their respective uniform resource
+                            locators and version numbers.
+                        </p>
+                        <div class="btn-group">
+                            <a href="/namespace" class="btn btn-primary">
+                                Namespaces <span class="badge">171</span>
+                            </a>
+                            <a href="/annotation" class="btn btn-primary">
+                                Annotations <span class="badge">139</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h3>Future Work</h3>
+                        <p>
+                            PyBEL is in constant development. Join us on the <a
+                                href="https://github.com/pybel/pybel">core</a>, <a
+                                href="https://github.com/pybel/pybel-tools">analytical tools</a>, or <a
+                                href="https://github.com/pybel/pybel-notebooks">notebooks</a> repositories for
+                            upcoming code, protocols, and pipelines and additional entries in
+                            <a href="https://github.com/bio2bel">Bio2BEL</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">About</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+    BEL Commons is developed and maintained in an academic capacity by
+    <a href="https://github.com/cthoyt">Charles Tapley Hoyt</a> and <a href="https://github.com/ddomingof">Daniel
+    Domingo-Fernández</a> at the <a
+        href="https://www.scai.fraunhofer.de/en/business-research-areas/bioinformatics.html">Fraunhofer
+    SCAI Department of Bioinformatics</a> with support from the <a href="https://www.imi.europa.eu/">IMI</a> project,
+    <a href="http://www.aetionomy.eu/">AETIONOMY</a>.
+
+    It is built on top of the open source project, <a href="https://github.com/pybel/pybel">PyBEL</a>.
+    Please feel free to contact us
+    <a href="mailto:charles.hoyt@scai.fraunhofer.de">here</a> to give us feedback or report any issues.
+</p>
+            <hr/>
+            <div class="row">
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xs-4">
+                    <a href="https://www.scai.fraunhofer.de/en/business-research-areas/bioinformatics.html">
+                        <img class="img-responsive"
+                             src="/static/img/scai_logo.svg"/>
+                    </a>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xs-4">
+                    <a href="https://pharmacome.scai.fraunhofer.de">
+                        <img class="img-responsive"
+                             src="/static/img/hbp_logo.png"/>
+                    </a>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xs-4">
+                    <a href="https://www.imi.europa.eu/">
+                        <img class="img-responsive"
+                             src="/static/img/imi_logo.png"/>
+                    </a>
+                </div>
+                <div class="col-sm-2 col-md-1 col-lg-1 col-xs-4">
+                    <a href="#">
+                        <img class="img-responsive" style="max-height: 45px"
+                             src="/static/img/eu_logo.png"/>
+                    </a>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xs-4">
+                    <a href="https://www.efpia.eu/">
+                        <img class="img-responsive"  style="max-height: 45px"
+                             src="/static/img/EFPIA_logo.jpg"/>
+                    </a>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xs-4">
+                    <a href="http://www.aetionomy.eu/">
+                        <img class="img-responsive"
+                             src="/static/img/aetionomy_logo.png"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+  </body>
+</html>

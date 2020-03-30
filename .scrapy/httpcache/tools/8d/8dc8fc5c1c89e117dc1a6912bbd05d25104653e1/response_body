@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>
+        CBIIT Maintenance Page
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/maintenancepage.css" />
+    <!-- Internet Explorer CSS Fixes -->
+    <!--[if IE]>   
+    <link rel="stylesheet" type="text/css" href="css/IEFixes.css" />
+    <![endif]-->
+
+    <!-- Disable IE6 image toolbar -->
+    <meta http-equiv="imagetoolbar" content="no" />
+  </head>
+  <body class="section-front-page" dir="ltr">
+    <div style="position:absolute;">
+      <a href="#skip"><img src="images/skipnav.gif" border="0" height="1" width="1" alt="Skip Navigation" title="Skip Navigation" /></a>
+    </div>
+    <div id="visual-portal-wrapper">
+      <div id="portal-top">
+	<table width="100%" bgcolor="#A90101">
+	<tr align="center">
+	  <td>
+	    <table width="994" border="0" cellspacing="0" cellpadding="0" bgcolor="#A90101">
+	    <tr bgcolor="#A90101">
+	      <td width="100%" height="43" align="left"><a href="http://www.cancer.gov"><img src="images/nci.jpg" width="286" height="43" border="0" title="National Cancer Institute" alt="National Cancer Institute"></a></td>
+	      <td width="322" height="43" align="right"><a href="http://www.cancer.gov"><img src="images/nih.jpg" width="322" height="43" border="0" title="at the National Institutes of Health" alt="at the National Institutes of Health"></a></td>
+	     </tr>
+	    </table>
+	  </td>
+	</tr>
+	</table>
+    <div id="portal-header">
+	  <h1 id="portal-logo" title="CBIIT: Center of Biomedical Informatics and Information Technology">
+	    <br>
+	  </h1>
+        </div>
+      <div class="visualClear" id="clear-space-before-wrapper-table"><!-- --></div>
+      <table id="portal-columns">
+        <tbody>
+          <tr>
+            <a name="skip" id="skip"></a>
+            <td id="portal-column-content">
+			<div align="center">
+				<h1>CGAP Retirement Notice</h1><br>
+				<h3>
+					The NCI CBIIT instance of the CGAP no longer exist on this website.  
+					<br><br><p>
+					The Mitelman Database of Chromosome Aberrations and Gene Fusions in Cancer 
+					has a new home at the NCI-funded Institute for Systems Biology Cancer 
+					Genomics Cloud available at the following location: 
+					<br><p>
+                                        <a href="https://mitelmandatabase.isb-cgc.org">https://mitelmandatabase.isb-cgc.org</a>
+					<br><br><p>
+					If you have any questions or need assistance,<br>
+					please contact us: <a href="mailto:ncicbiit@mail.nih.gov">ncicbiit@mail.nih.gov</a><br>
+				</h3>
+            </td>    
+          </tr>
+        </tbody>
+      </table>
+      <div class="visualClear" id="clear-space-before-footer"><!-- --></div>
+      <div id="portal-footer">
+  <a href="http://www.cancer.gov/global/web/policies" title="Policies" target="_blank">Policies</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.cancer.gov/global/web/policies/page3" title="Accessibility" target="_blank">Accessibility</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://cancer.gov/global/viewing-files" target="_blank" title="Viewing Files">Viewing Files</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.cancer.gov/global/web/policies/page6" title="FOIA" target="_blank">FOIA</a>
+      </div>
+      <div id="portal-colophon">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td valign="top">
+			<div align="center">
+				<a href="http://www.dhhs.gov/"><img title="Department of Health and Human Services" src="images/footer_hhs.gif" width="45" height="43" alt="Department of Health and Human Services" border="0"></a>
+				<a href="http://www.nih.gov/"><img title="National Institutes of Health" src="images/footer_nih.gif" width="45" height="43" alt="National Institutes of Health" border="0"></a>
+				<a href="http://www.cancer.gov/"><img title="National Cancer Institute" src="images/footer_nci.gif" width="57" height="43" alt="National Cancer Institute" border="0"></a>
+				<a href="http://www.usa.gov/"><img title="USA.gov" src="images/footer_usagov.gif" width="93" height="43" alt="USA.gov" border="0"></a><br><br>
+				<em>NIH...Turning Discovery Into Health&reg;</em>
+			</div>
+		  </td>
+		</tr>
+		</table>
+    </div>
+  </body>
+</html>

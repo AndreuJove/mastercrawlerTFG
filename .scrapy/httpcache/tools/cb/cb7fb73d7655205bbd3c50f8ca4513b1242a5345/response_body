@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xlmns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset-iso-8859-1" />
+	<meta name="author" content="Chuong Do" />
+	<meta name="keywords" content="contra, contralign" />
+	<meta name="description" content="A protein sequence aligner based on pair-CRFs." />
+	<meta name="robots" content="all" />
+	<title>CONTRAlign: CONditional TRAining for Protein Sequence Alignment</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/contra.css" />
+	<script type="text/javascript" src="../js/page-builder.js"></script>
+</head>
+
+<body id="body">
+
+<script type="text/javascript">
+<!--
+	ShowHeader(CONTRALIGN,"Description");
+//-->
+</script>
+
+<div id="content">
+	
+	<div class="textbox">
+		<h3>Description</h3>
+		<div class="body">
+			<p>CONTRAlign is an extensible and fully automatic parameter learning framework for protein pairwise sequence alignment based on pair conditional random fields. The CONTRAlign framework enables the development of feature-rich alignment models which generalize well to previously unseen sequences and avoid overfitting by controlling model complexity through regularization.</p>
+			<p>When given as few as 20 example alignments, CONTRAlign simultaneously learns both a substitution matrix and gap penalties yielding accuracies competitive with modern alignment tools. This provides a stark contrast to traditional methods of parameter estimation, which typically require several order of magnitude more training data.</p>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+<!--
+	ShowFooter();
+//-->
+</script>
+
+</body>
+</html>

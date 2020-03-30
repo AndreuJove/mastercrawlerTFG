@@ -1,0 +1,16 @@
+Date: Mon, 30 Mar 2020 18:50:22 GMT
+Server: Apache
+Last-Modified: Sat, 21 Dec 2019 20:13:40 GMT
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Cache-Control: max-age=43200, public, must-revalidate
+Expires: Tue, 31 Mar 2020 18:50:22 GMT
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self' 'unsafe-inline' data: https://*.mutaframe.com https://mutaframe.com https://d3js.org https://*.d3js.org https://*.mygene.info https://mygene.info *.google-analytics.com ajax.googleapis.com https://driftt.com https://*.driftt.com https://revolvermaps.com https://*.revolvermaps.com https://disqus.com https://*.disqus.com https://*.disquscdn.com https://*.twitter.com https://cdn.syndication.twimg.com https://pbs.twimg.com https://www.youtube.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://cdn.jsdelivr.net https://distreau.com/ https://*.distreau.com/ https://img.shields.io;
+X-Cache: MISS from deogen2.mutaframe.com
+X-Cache-Detail: "cache miss: attempting entity save" from deogen2.mutaframe.com
+Content-Type: text/html

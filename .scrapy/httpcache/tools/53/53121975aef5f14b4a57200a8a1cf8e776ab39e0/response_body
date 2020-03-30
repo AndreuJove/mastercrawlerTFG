@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>ANTHEPROT 3D</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="general.css" type="text/css">
+
+
+</head>
+<body>
+<img src="./images/haut.jpg" border="0">
+
+<div id="blueblockmenu">
+<div class="menutitle">ANTHEPROT 6.9.3</div>
+<div class="menutitle"></div>
+<ul>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="gallerie.php">Snapshots</a></li>
+    <li><a href="anthe_histo.php?evene=3D viewer">User manual</a></li>
+    <li><a href="anthe_videos.php">Videos</a></li>
+</ul>
+
+<div class="menutitle">Downloads</div>
+<ul>
+    <li><a href="anthe_download.php?recipient=ANTHEPROT">ANTHEPROT</a></li>
+    <li><a href="anthe_download.php?recipient=ANTHEPROT3D">ANTHEPROT 3D</a></li>
+</ul>
+
+
+
+<div class="menutitle">Contact</div>
+<ul>
+    <li><a href="coordonnes.php">Address</a></li>
+    <li><a href="mailcontact.php">Send a mail</a></li>
+    <li><a href="http://perso.ibcp.fr/gilbert.deleage/" target="_blank">Author web site</a></li>
+</ul>
+
+<div class="menutitle">About</div>
+<ul>
+    <li><a href="citations.php">Citations</a></li>
+    <li><a href="thanks.php">Acknowledgements</a></li>
+
+   <!-- <li><img src="images/logo.jpg" border="0" width="80"></li>-->
+
+</ul>
+
+<div class="menutitle">Links</div>
+<ul>
+ <li><a href="http://antheprot-pbil.ibcp.fr/3D/" target="_blank">ANTHEPROT 3D gallery</a></li>
+  <li><a href="http://dicroprot-pbil.ibcp.fr/" target="_blank">Dicroprot</a></li>
+  <li><a href="http://www.ibcp.fr" target="_blank">IBCP</a></li>
+</ul>
+<div class="menutitle"></div>
+
+
+  
+</div>
+
+
+<div id="page">
+   <H2>ANTHEPROT is a PC software for protein analysis.</h2>
+<table><tr><td>
+<table><tr><td>
+<div style='overflow-y:hidden;overflow-x:hidden;width:640px;height:320px;' contenteditable='false'><table border="0" cellpadding="4" cellspacing="0" width="600px"></tr><tr><td>2010-05-12&nbsp;<b><font color="#54FF9F">Actualit&eacute;</font></b>&nbsp;ANTHEPROT 3D&nbsp;&nbsp;<br><font color="#ddddd"><b>ANTHEPROT 3D</b> is a molecular graphics program intended for the visualisation of proteins, nucleic acids from <a href="http://www.pdb.org/" target="_blank">RCSB</a> archive. The program is aimed at display, teaching and generation of publication quality images.<br>
+<br>The 3D module of ANTHEPROT 3D has been completely written in OPENGL 
+for maximal graphic speed. It is now available as a standalone program 
+but can be still associated with the general ANTHEPROT plateform of 
+protein sequence analysis. An image <a href="http://antheprot-pbil.ibcp.fr/3D/" target="_blank">gallery</a>  and <a href="http://g.deleage.free.fr/antheprot.avi" target="_blank">video</a> are available which demonstrate the software graphic capabilities.
+Antheprot documentation file is being rewritten so as to fit with ANTHEPROT last version.
+
+</td><td>
+<td><script type="text/javascript">var images_exemple_1=new Array();images_exemple_1[0]=new Image();images_exemple_1[0].src="./images/vignettes/ab.jpg";images_exemple_1[1]=new Image();images_exemple_1[1].src="./images/vignettes/ad.jpg";images_exemple_1[2]=new Image();images_exemple_1[2].src="./images/vignettes/ah.jpg";images_exemple_1[3]=new Image();images_exemple_1[3].src="./images/vignettes/ai.jpg";images_exemple_1[4]=new Image();images_exemple_1[4].src="./images/vignettes/ak.jpg";images_exemple_1[5]=new Image();images_exemple_1[5].src="./images/vignettes/al.jpg";images_exemple_1[6]=new Image();images_exemple_1[6].src="./images/vignettes/am.jpg";images_exemple_1[7]=new Image();images_exemple_1[7].src="./images/vignettes/ao.jpg";images_exemple_1[8]=new Image();images_exemple_1[8].src="./images/vignettes/ap.jpg";images_exemple_1[9]=new Image();images_exemple_1[9].src="./images/vignettes/au.jpg";images_exemple_1[10]=new Image();images_exemple_1[10].src="./images/vignettes/backbone1.jpg";images_exemple_1[11]=new Image();images_exemple_1[11].src="./images/vignettes/surface9.jpg";</script><img id='exemple_1' name='exemple_1' border="0" width="100" src='./images/vignettes/ab.jpg'/><script type="text/javascript">var transition_time=3;var transition_pause_exemple_1=3;var index_exemple_1=0;var length_exemple_1=images_exemple_1.length;var timeout_exemple_1;function run_exemple_1() {if (document.all){document.getElementById('exemple_1').style.filter="blendTrans(duration=3)";document.getElementById('exemple_1').style.filter="blendTrans(duration=transition_time)";if (document.getElementById('exemple_1').filters) document.getElementById('exemple_1').filters.blendTrans.Apply();}document.getElementById('exemple_1').src = images_exemple_1[index_exemple_1].src;document.getElementById('exemple_1').alt = images_exemple_1[index_exemple_1].alt;document.getElementById('exemple_1').title = images_exemple_1[index_exemple_1].alt;if (document.all){if (document.getElementById('exemple_1').filters) document.getElementById('exemple_1').filters.blendTrans.Play()}index_exemple_1+=1if (index_exemple_1 > (length_exemple_1-1)) index_exemple_1=0;timeout_exemple_1 = setTimeout('run_exemple_1()', transition_pause_exemple_1 * 1000);}if (length_exemple_1 > 0) run_exemple_1();</script></td>
+</td></tr></tr></tr></tr></table></div>
+</td></tr><tr><td><input value="3D zalmann" type="button" class="btn_lrg" onclick="window.open('./images/ad.jpg')"></td></tr>
+
+</table></td></tr></table></div>
+
+<div id="baspage">
+PRABI-IBCP
+7, passage du Vercors
+69367 Lyon, FRANCE&nbsp;
+&copy; <a href="http://perso.ibcp.fr/gilbert.deleage/" target="_blank">G.Del&eacute;age</a> (2010-
+2020)<font color="#EE7600">&nbsp<b>247193</b></font> visits 
+Mon 30 Mar 2020</div>
+
+
+
+
+
+</body>
+</html>

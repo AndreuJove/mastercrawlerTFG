@@ -1,0 +1,17 @@
+Date: Mon, 30 Mar 2020 18:49:25 GMT
+Content-Type: text/html; charset=utf-8
+Set-Cookie: __cfduid=d7861d3dacd019498ee402e0972ddb8ea1585594165; expires=Wed, 29-Apr-20 18:49:25 GMT; path=/; domain=.acs.org; HttpOnly; SameSite=Lax
+Set-Cookie: ACSEnt=450116_6105_1585594165331; domain=.acs.org; path=/; secure
+Location: https://pubs.acs.org/action/cookieAbsent
+Cf-Ray: 57c402acaf0aff00-MAD
+Cache-Control: private
+Link: </wro/igez~product.css>; rel=preload; as=style; nopush, </wro/igez~product.js>; rel=preload; as=script; nopush, <https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, </products/achs/releasedAssets/css/build.css>; rel=preload; as=style; nopush, </pb/css/t-1-v0/default.css>; rel=preload; as=style; nopush, <https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Cabin+Condensed:400,500,600,700>; rel=preload; as=style; nopush; crossorigin, </templates/jsp/js/jquery-3.1.1.min.js>; rel=preload; as=script; nopush, </products/achs/releasedAssets/js/main.bundle.js>; rel=preload; as=script; nopush, <https://edge.api.brightcove.com>; rel=preconnect
+Strict-Transport-Security: max-age=15552000
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+Vary: Accept-Encoding
+Server: cloudflare
+Alt-Svc: h3-27=":443"; ma=86400, h3-25=":443"; ma=86400, h3-24=":443"; ma=86400, h3-23=":443"; ma=86400

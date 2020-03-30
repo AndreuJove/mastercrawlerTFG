@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="decription" content="STRBase.nist.gov SRD 130" />
+		<meta charset="utf-8">
+		<title>Welcome to the AutoDimer Homepage</title>
+		<link rel="stylesheet" type="text/css" href="/_css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/_css/page-style.css" />
+		<link rel="stylesheet" type="text/css" href="/_css/header-style.css" />
+		<link rel="stylesheet" type="text/css" href="/_css/main-style.css" />
+		<link rel="stylesheet" type="text/css" href="/_css/footer-style.css" />
+		<style id="antiClickjack">body{display:none !important;}</style>
+		<script type="text/javascript">
+		   if (self === top) {
+		       var antiClickjack = document.getElementById("antiClickjack");
+		       antiClickjack.parentNode.removeChild(antiClickjack);
+		   } else {
+		       top.location = self.location;
+		   }
+		</script>
+		<script src="/_js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NIST&pua=UA-115121490-4&yt=true&exts=ppsx,pps,f90,sch,rtf,wrl,txz,m1v,xlsm,msi,xsd,f,tif,eps,mpg,xml,pl,xlt,c"></script>
+	</head>
+	<body>
+		<header>
+			<!--h1>A Sample Page</h1-->
+
+			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+			<!--[if lt IE 9]> 
+				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> 
+				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> 
+				<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<![endif]-->
+		<nav id="topnav">
+			<h1 id="top_title">STRBase</h1>
+			<div class="logo"><a target="_blank" href="http://www.nist.gov/" title="Go to nist.gov">National Institute of Standards and Technology</a></div>
+			<div id="head-mobile"></div>
+			<div class="button"></div>			
+			<ul>
+				<li><a href="/index.htm">HOME</a></li>
+				<li><a href="/updates.htm">UPDATES</a></li>
+				<li><a href="">INFO</a>
+					<ul>
+						<li><a href="/purpose.htm">Purpose</a></li>
+						<li><a href="/images/STRBase.pdf">STRBase Paper (PDF)</a></li>
+						<li><a href="/NISTpub.htm">Publications &amp; Presentations</a>
+							<ul>
+								<li><a href="/NISTpub.htm#Publications">Publications</a>
+									<ul>
+										<li><a href="/NISTpub.htm#Pub2018">2018</a></li>
+										<li><a href="/NISTpub.htm#Pub2017">2017</a></li>
+										<li><a href="/NISTpub.htm#Pub2016">2016</a></li>
+										<li><a href="/NISTpub.htm#Pub2015">2015</a></li>
+										<li><a href="/NISTpub.htm#Pub2014">2014</a></li>
+										<li><a href="/NISTpub.htm#Pub2013">2013</a></li>
+										<li><a href="/NISTpub.htm#Pub2012">2012</a></li>
+										<li><a href="/NISTpub.htm#Pub2011">2011</a></li>
+										<li><a href="/NISTpub.htm#Pub2010">2010</a></li>
+										<li><a href="/NISTpub.htm#Pub2009">2009</a></li>
+										<li><a href="/NISTpub.htm#Pub2008">2008</a></li>
+										<li><a href="/NISTpub.htm#Pub2007">2007</a></li>
+										<li><a href="/NISTpub.htm#Pub2006">2006</a></li>
+										<li><a href="/NISTpub.htm#Pub2005">2005</a></li>
+										<li><a href="/NISTpub.htm#Pub2004">2004</a></li>
+										<li><a href="/NISTpub.htm#Pub2003">2003</a></li>
+										<li><a href="/NISTpub.htm#Pub2002">2002</a></li>
+										<li><a href="/NISTpub.htm#Pub2001">2001</a></li>
+										<li><a href="/NISTpub.htm#Pub2000">2000</a></li>
+									</ul>
+								</li>
+								<li><a href="/NISTpub.htm#Presentations">Presentations</a>
+									<ul>
+										<li><a href="/NISTpub.htm#Pres2017">2018</a></li>
+										<li><a href="/NISTpub.htm#Pres2017">2017</a></li>
+										<li><a href="/NISTpub.htm#Pres2016">2016</a></li>
+										<li><a href="/NISTpub.htm#Pres2015">2015</a></li>
+										<li><a href="/NISTpub.htm#Pres2014">2014</a></li>
+										<li><a href="/NISTpub.htm#Pres2013">2013</a></li>
+										<li><a href="/NISTpub.htm#Pres2012">2012</a></li>
+										<li><a href="/NISTpub.htm#Pres2011">2011</a></li>
+										<li><a href="/NISTpub.htm#Pres2010">2010</a></li>
+										<li><a href="/NISTpub.htm#Pres2009">2009</a></li>
+										<li><a href="/NISTpub.htm#Pres2008">2008</a></li>
+										<li><a href="/NISTpub.htm#Pres2007">2007</a></li>
+										<li><a href="/NISTpub.htm#Pres2006">2006</a></li>
+										<li><a href="/NISTpub.htm#Pres2005">2005</a></li>
+										<li><a href="/NISTpub.htm#Pres2004">2004</a></li>
+										<li><a href="/NISTpub.htm#Pres2003">2003</a></li>
+										<li><a href="/NISTpub.htm#Pres2002">2002</a></li>
+										<li><a href="/NISTpub.htm#Pres2001">2001</a></li>
+										<li><a href="/NISTpub.htm#Pres2000">2000</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="/NIJprojects.htm">NIJ-Funded Projects</a></li>
+						<li><a href="/training.htm">Training Materials</a></li>
+						<li><a href="/weblink.htm">Related Web Sites</a>
+							<ul>
+								<li><a href="/weblink.htm#Organizations">Organizations</a></li>
+								<li><a href="/weblink.htm#Journals">Journals</a></li>
+								<li><a href="/weblink.htm#Institutes">Institutes</a></li>
+								<li><a href="/weblink.htm#Commercial_Sites">Commercial</a></li>
+								<li><a href="/weblink.htm#Genetic_Genealogy">Genetic Genealogy Labs</a></li>
+								<li><a href="/weblink.htm#Parentage_Testing">Parentage Testing Labs</a></li>
+								<li><a href="/weblink.htm#Legal">Legal Sites/Forensic DNA</a></li>
+								<li><a href="/weblink.htm#Other">Other</a></li>
+							</ul>
+						</li>
+						<li><a href="/glossary.htm">Glossary of Terms</a></li>
+					</ul>
+				</li>
+				<li><a href="">Human STRs</a>
+					<ul>
+						<li><a href="/intro.htm">STRs 101</a></li>
+						<li><a href="/fbicore.htm">FBI CODIS/Core STRs</a></li>
+						<li><a href="/coreSTRs.htm">All Core STRs</a></li>
+						<li><a href="/str_fact.htm">STR Fact Sheets</a></li>
+						<li><a href="/multiplx.htm">Multiplex STR Kits</a></li>
+						<li><a href="/seq_info.htm">STR Sequence Links</a></li>
+						<li><a href="/var_tab.htm">Variant Allele Reports</a></li>
+						<li><a href="/tri_tab.htm">Tri-Allelic Patterns</a></li>
+						<li><a href="/mutation.htm">Mutation Rates</a></li>
+						<li><a href="/primer.htm">Published PCR Primers</a></li>
+						<li><a href="/y_strs.htm">Y-Chromosome STRs</a></li>
+						<li><a href="/LTDNA.htm">Low-Template DNA</a></li>
+						<li><a href="/mixture.htm">Mixture Interpretation</a></li>
+						<li><a href="/kinship.htm">Kinship Analysis</a></li>
+						<li><a href="/miniSTR.htm">MiniSTRs</a></li>
+						<li><a href="/NullAlleles.htm">Null Alleles</a></li>
+						<li><a href="/str_ref.htm">STR Reference</a></li>
+					</ul>
+				</li>
+				<li><a href="">Other Markers</a>
+					<ul>
+						<li><a href="/Amelogenin.htm">Amelogenin</a></li>
+						<li><a href="/sextype.htm">Sex-Typing</a></li>
+						<li><a href="/SNP.htm">Forensic SNPs</a></li>
+						<li><a href="/mtDNA.htm">Mitochondrial (mtDNA)</a></li>
+						<li><a href="/catSTRs.htm">Cat STR</a></li>
+						<li><a href="/dogSTRs.htm">Dog STR</a></li>
+						<li><a href="/cattleSTRs.htm">Cattle STR</a></li>
+						<li><a href="/horseSTRs.htm">Horse STR</a></li>
+
+					</ul>		
+				</li>			
+				<li><a href="">Resources</a>
+					<ul>
+						<li><a href="/address.htm">Contributors</a></li>
+						<li><a href="/training.htm">Training Materials</a></li>
+						<li><a href="/STRseq.htm">STR Allele Sequencing</a></li>
+						<li><a href="/NISTpop.htm">NIST Population Data</a></li>
+						<li><a href="/populationdata.htm">Other Population Data</a></li>
+						<li><a href="/software.htm">NIST Software</a>
+							<ul>
+								<li><a href="/software.htm#AutoDimer">AutoDimer</a></li>
+								<li><a href="/software.htm#Multiplex_QA">Multiplex_QA</a></li>
+								<li><a href="/software.htm#mixSTR">mixSTR</a></li>
+								<li><a href="/software.htm#Virtual_MixtureMaker">Virtual MixtureMaker</a></li>
+								<li><a href="/software.htm#STR_ConvertFormats">STR_ConvertFormats</a></li>
+								<li><a href="/software.htm#STR_MatchSamples">STR_MatchSamples</a></li>
+								<li><a href="/software.htm#STR_AlleleFreq">STR_AlleleFreq</a></li>
+								<li><a href="/software.htm#STR_Genotype">STR_Genotype</a></li>
+								<li><a href="/software.htm#STR_StutterFreq">STR_StutterFreq</a></li>
+							</ul>
+						</li>
+						<li><a href="/srm2372.htm">SRM 2372</a></li>
+						<li><a href="/srm_tab.htm">All DNA-typing SRMs</a></li>
+						<li><a href="/newSTRs.htm">New STR Markers</a></li>
+						<li><a href="/chrom.htm">Chromosomal Locations</a></li>
+						<li><a href="/dabqas.htm">DNA Advis. Board QA Stds</a></li>
+						<li><a href="/interlab/MIX13.htm">MIX13 Interlab Study</a></li>
+						<li><a href="/interlab/MIX05.htm">MIX05 Interlab Study</a></li>
+						<li><a href="/interlab.htm">All Interlab Studies</a></li>
+						<li><a href="/validation.htm">Validation Information</a></li>
+						<li><a href="/DNAquant.htm">DNA Quantitation at NIST</a></li>
+						<li><a href="/tech.htm">STR Tech Review</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		</header>
+		<div class="header-push"></div>
+		<div class="container">
+			<main>
+                		<div class="banner">
+			<div class="poabanner"></div>
+		</div>
+                
+
+
+<div class=Section1>
+
+<p align=center style='text-align:center'>&nbsp;</p>
+
+<p align=center style='text-align:center'><span style='font-size:24.0pt;
+font-family:Arial'>Welcome to the <span class=SpellE>AutoDimer</span> Homepage</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none;mso-border-alt:outset #111111 .25pt;
+ mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width="14%" style='width:14.0%;border:none;background:aqua;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:Verdana'><a
+  href="http://www.cstl.nist.gov/div831/strbase/AutoDimerHomepage/AutoDimerProgramHomepage.htm">Home</a></span></b></p>
+  </td>
+  <td width="14%" style='width:14.0%;border:none;background:yellow;padding:
+  0in 0in 0in 0in'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:Verdana'><a
+  href="http://www.cstl.nist.gov/div831/strbase/AutoDimerHomepage/DownloadPage.htm">Download</a></span></b></p>
+  </td>
+  <td width="14%" style='width:14.0%;border:none;background:lime;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:Verdana'><a
+  href="http://www.cstl.nist.gov/div831/strbase/AutoDimerHomepage/RunningAutoDimer.htm">Tips
+  for running</a></span></b></p>
+  </td>
+  <td width="14%" style='width:14.0%;border:none;background:red;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:Verdana'><a
+  href="http://www.cstl.nist.gov/div831/strbase/AutoDimerHomepage/InputFile.htm">Example
+  Input</a></span></b></p>
+  </td>
+  <td width="14%" style='width:14.0%;border:none;background:fuchsia;padding:
+  0in 0in 0in 0in'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:Verdana'><a
+  href="http://www.cstl.nist.gov/div831/strbase/AutoDimerHomepage/Reference.htm">Referencing
+  <span class=SpellE>AutoDimer</span> </a></span></b></p>
+  </td>
+  <td width="15%" style='width:15.0%;border:none;background:olive;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:Verdana'><a
+  href="http://www.cstl.nist.gov/div831/strbase/AutoDimerHomepage/FAQ.htm">FAQ</a></span></b></p>
+  </td>
+  <td width="15%" style='width:15.0%;border:none;background:silver;padding:
+  0in 0in 0in 0in'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:Verdana'><a
+  href="http://www.cstl.nist.gov/div831/strbase/AutoDimerHomepage/Support.htm">Support</a></span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='font-size:13.5pt;font-family:Arial'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1026" type="#_x0000_t75" style='width:43.5pt;
+ height:15pt'>
+ <v:imagedata src="AutoDimerProgramHomepage_files/image001.gif" o:title="new"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=58 height=20
+src="AutoDimerProgramHomepage_files/image001.gif" v:shapes="_x0000_s1026"><![endif]><span
+style='mso-spacerun:yes'> </span>Web-based version of <span class=SpellE>AutoDimer</span>!
+<a href="http://pubapps.nist.gov:8444/dnaAnalysis/">Click here
+for the web-based version of <span class=SpellE>AutoDimer</span>.</a> <span
+style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+
+<p><span style='font-size:13.5pt;font-family:Arial'>This version of <span
+class=SpellE>AutoDimer</span> works similarly to the previous version with some
+additional functionalities.<br>
+<span style='mso-tab-count:1'>          </span>-Primer Stats: T<sub>m</sub>,
+extinction coefficient @260 nm, molecular weight, fractional GC content (<span
+class=SpellE>fGC</span>) and free energy estimate (</span><span
+style='font-size:13.5pt;font-family:Symbol;mso-bidi-font-family:Arial'>D</span><span
+style='font-size:13.5pt;font-family:Arial'>G) are provided.<br>
+<span style='mso-tab-count:1'>          </span>-Results for all of the modules can
+be saved directly to excel or to a comma delimited (CSV) file.<span
+style='mso-spacerun:yes'>  </span><br>
+<br>
+Note: the web-based version of <span class=SpellE>AutoDimer</span> is limited
+to 100 sequences per run with a maximum <span class=SpellE>oligomer</span> length
+of 75 nucleotides.<span style='mso-spacerun:yes'>  </span>It also used the same
+input file format as the stand alone version.<o:p></o:p></span></p>
+
+<p><span class=SpellE><span style='font-size:13.5pt;font-family:Arial'>AutoDimer</span></span><span
+style='font-size:13.5pt;font-family:Arial'> software was developed to rapidly
+screen previously selected PCR primers for primer-<span class=SpellE>dimer</span>
+and hairpin interactions in short DNA <span class=SpellE>oligomers</span> (&lt;
+30 nucleotides).&nbsp; <span class=SpellE>AutoDimer</span> was originally
+created to assist in the development of multiplex PCR assays for probing STR
+and SNP markers for forensic purposes.&nbsp; <a
+href="http://www.cstl.nist.gov/div831/strbase/AutoDimerHomepage/ScreenShot.htm">Click
+here for a screen shot of <span class=SpellE>AutoDimer</span></a>.</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style='font-size:13.5pt;font-family:Arial'><a
+href="http://www.cstl.nist.gov/div831/strbase/AutoDimerHomepage/Marshfield.htm">Click
+here to review the results of screening 408 primer pairs</a></span></p>
+
+<p><span style='font-size:13.5pt;font-family:Arial'><a
+href="http://www.cstl.nist.gov/div831/strbase/AutoDimerHomepage/Publications.htm">Publications</a>
+in which <span class=SpellE>AutoDimer</span> was implemented to develop
+multiplex PCR and primer extension assays</span></p>
+
+<p><span style='font-size:13.5pt;font-family:Arial'>Problems, questions,
+comments please email me</span></p>
+
+<p><span style='font-size:13.5pt;font-family:Arial'><a
+href="mailto:petev@nist.gov">petev@nist.gov</a></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><img
+border=0 width=60 height=20 id="_x0000_i1025"
+src="AutoDimerProgramHomepage_files/AutoDimer.gif" hspace=4 vspace=2
+align=middle></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+style='font-size:7.5pt'>Visitors to this site as of 03-18-2004<sub> </sub>(Counter
+courtesy of www.digits.com)</span></p>
+
+</div>
+
+			</main>
+			<footer>
+				<p class="contact">Please send comments or suggestions for this database to the STRBase team at <a class="contact mail" href="mailto:strbase@nist.gov">strbase@nist.gov</a>. <br> <hr> 
+				<p class="small disclaimer">Disclaimer</p> 
+				<p class="small">We have made and will continue to make great efforts to ensure the accuracy and completeness of the data included in this STR database. Information will be added from time-to-time to keep this site as up-to-date as possible. The National Institute of Standards and Technology (NIST) is in no way responsible for information provided through this site, including hyperlinks to commercial sources of materials. Certain commercial vendors are identified in this web site to benefit the DNA typing community. In no case does such identification imply a recommendation or endorsement by NIST nor does it imply that the material, instrument or equipment identified is necessarily the best available for human identity testing. </p> 
+				<p class="small">All users agree that all access and use of this web site and on any site linked to this one and the content thereof is at their own risk. Neither NIST nor the webmaster for the STR DNA Internet Database assume responsibility or liability for the content of pages outside of this web site.</p> 
+				<p class="small">Our web site contains links to various other federal agencies and private organizations. Once you link to another site, you are then subject to the privacy policies of the new site. It is always a good idea to read the Privacy Policy of any site you visit. For the NIST privacy statement, see <a class="footer link" href="http://www.nist.gov/public_affairs/privacy.cfm">http://www.nist.gov/public_affairs/privacy.cfm</a>.</p>
+				<div id="NIST-footer">
+					<hr>
+					<ul>
+						<li><a target="_blank" href="https://www.nist.gov/privacy-policy">Privacy Statement</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/privacy-policy#privpolicy">Privacy Policy</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/privacy-policy#secnot">Security Notice</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/privacy-policy#accesstate">Accessibility Statement</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/privacy">NIST Privacy Program</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/disclaimer">NIST Disclaimer</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/office-director/freedom-information-act">FOIA</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/environmental-policy-statement">Environmental Policy Statement</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/privacy-policy#cookie">Cookie Disclaimer</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrigy Summary</a></li>
+						<li><a target="_blank" href="https://www.nist.gov/nist-information-quality-standards">NIST Information Quality Standards</a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+		<!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+		<script src="/_js/jquery-3.1.1.min.js"></script>
+		<script src="/_js/main.js"></script>
+		<script src="/_js/fixhead.js"></script>
+		<script type="text/javascript">
+			(function() {
+				// do something
+			})();
+		</script>	
+	</body>
+</html>
+
+
+
+

@@ -1,0 +1,12 @@
+Date: Tue, 31 Mar 2020 03:38:27 GMT
+Server: Apache/2.4.17 (Unix) PHP/5.3.29
+X-Powered-By: PHP/5.3.29
+Set-Cookie: CDN_ID=guest_fusarium; path=/; domain=fusariumdb.org
+Set-Cookie: CDN_UID=647; path=/; domain=fusariumdb.org
+Set-Cookie: CDN_UUID=0; path=/; domain=fusariumdb.org
+Set-Cookie: CDN_GROUP=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=fusariumdb.org
+Set-Cookie: CDN_NAME=Guest; path=/; domain=fusariumdb.org
+Set-Cookie: CDN_EMAIL=guest%40fusariumdb.org; path=/; domain=fusariumdb.org
+Set-Cookie: CDN_SID=fd190b978cfe92bf8823f9bf621b3b94; path=/; domain=fusariumdb.org
+Location: index.php
+Content-Type: text/html; charset=UTF-8

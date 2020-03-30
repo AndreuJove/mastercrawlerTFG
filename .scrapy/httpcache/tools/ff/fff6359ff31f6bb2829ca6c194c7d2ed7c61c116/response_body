@@ -1,0 +1,97 @@
+<html>
+<head><META NAME="AUTHOR" CONTENT="Zhiliang Hu">
+<title>BEAP</title>
+<STYLE TYPE="text/css"><!--
+A  { color:blue; text-decoration: none; }
+LI { margin:10 0px; padding:0px; font-size:10pt;}
+OL,UL { margin: 3 0px; padding:0 0 0 18px; }
+H4 { margin: 0 3 3 0px; }
+TD { font-size:10pt; color:navy;
+     text-align: justify; line-height:1.3em;
+     font-family:sans-serif,verdana, helvetica; }
+.bullet { color:#cdcd00;padding:1px; }
+pre{ color: gray;}
+-->
+<LINK REL=STYLESHEET TYPE="text/css" HREF="/default/style.css" MEDIA=screen>
+</STYLE>
+</head>
+<body bgcolor="#ffffff" TEXT="#343434" LINK="#001121" VLINK="#000088" ALINK="#880000"
+      leftmargin=0 topmargin=0">
+
+<img style="margin:11 0 24 0px;" src="images/logo4.jpg">
+<TABLE border=0 width=730 cellpadding=5 cellspacing=3 style="margin:2 2 2 23px;">
+<TR><TD valign=top><img border=1 class=bullet src="images/bullet.jpg"></TD><TD>
+<h4>INTRODUCTION</h4>
+The Blast Extension and Assembly Program (BEAP) is a computer program that uses a
+short starting DNA fragment, often a EST or partial gene segment, as "primer", to 
+recursively blast nucleotide databases in an attempt to obtain all sequences that 
+overlaps, directly or indirectly, with the "primer" therefore help to "extend" the 
+length of the original sequence for constructing a "full length" sequence for 
+functional analysis, or at least to obtain neighboring regions of the segment for 
+SNP discovery and linkage disequilibrium analysis.  The confidence of  assembling 
+the resulting sequences is achieved by using a known genome, such as human genome, 
+as a reference.
+<a style="border-bottom: 1px dotted #006; border-right: 1px dotted #006; padding: 0.05em 1px; background: #d8effa;" href="backgrnd">Click here for more details</a>.
+</TD></TR>
+
+<TR><TD valign=top><img border=1 class=bullet src="images/bullet.jpg"></TD><TD>
+<h4>USER'S MANUAL</h4>
+<a href="userguide">
+<img border=0 align=right style="margin:6 3 6 34px;" src="images/docs.jpg"></a>
+<U>BEAP</U> is a Linux/Unix command line program.  Basic knowledge about Unix file
+system (view, edit, copy, transfer, etc) is required in order to use BEAP.  The
+BEAP includes a Java graphical user interface (GUI) that displays the assembled 
+contigs and alignments. The User's Manual is included in the software downloads 
+(below), and also
+<a style="border-bottom: 1px dotted #006; border-right: 1px dotted #006; padding: 0.05em 1px; background: #d8effa;" href="userguide">available on line </a>.
+</TD></TR>
+
+<TR><TD valign=top><img border=1 class=bullet src="images/bullet.jpg"></TD><TD>
+<h4>DOWNLOADS</h4>
+<a href="/bioinfo/tools/share/BEAP">
+<img border=0 align=right style="margin:6 13 6 46px;" src="/icons/download.jpg"></a>
+<U>Pre-request</U>: The BEAP has built in its data pipeline the NCBI 
+<a href="/blast/doc/">blast tools</a> (including blastall, megablast, netblast, 
+etc) and <a href="/bioinfo/resources/manuals/Assembly-CAP3.htm">CAP3</a> as an 
+integral part of the program, therefore they are pre-requires in order to install 
+and run BEAP on the same platform.<p>
+<U>Download</U>:
+<a style="border-bottom: 1px dotted #006; border-right: 1px dotted #006; padding: 0.05em 1px; background: #d8effa;" href="/bioinfo/tools/share/BEAP">Click here to download</a>. Installation instructions are 
+included in the download tar ball. 
+</TD></TR>
+<TR><TD valign=top><img border=1 class=bullet src="images/bullet.jpg"></TD><TD>
+
+<h4>PUBLICATIONS</h4>
+<UL style='line-height:1.1em'>
+<LI>James E. Koltes, Zhi-Liang Hu, and James M. Reecy. (2005)
+<a href="PAG2005.jpg">
+"Localized Development of a High Resolution Sequence Comparative Map of Bovine Chromosome 6."</a>
+Plant & Animal Genome XIV Conference, San Diego, CA, January 15-19, 2005.
+<LI>James E. Koltes, Zhi-Liang Hu, Eric Fritz and James M. Reecy (2009).
+<a href="http://www.biomedcentral.com/1756-0500/2/11">
+BEAP: The BLAST Extension and Alignment Program &#151;
+a tool for contig construction and analysis of preliminary genome sequence</a>.
+( <I>BMC Research Notes 2009, 2:11</I> ).
+</UL>
+</TD></TR>
+</TABLE>
+<TABLE border=0 cellpadding=0 cellspacing=0 style="margin:0 0 0 7px;" width=740>
+<TR><TD><div style="margin:0;border-top:1px solid #999;height:3px"></div>
+<TABLE border=0 width='90%' cellpadding=0 cellspacing=0 style="margin:0 0 40 0px;padding:0;">
+<TR><TD valign=top width=32>
+<a href="/log"><img border=0 align=left alt="Web Access Statistics" src="/icons/stat_a.jpg"></A>
+</TD>
+<TD style="vertical-align:top;margin:0;padding:0;text-align:left;font-size:8pt;color:red;font-family:verdana,helvetica, sans-serif;">
+&#169 2003-2020 <a style="font-size:8pt;font-family:verdana, helvetica, sans-serif;" target=_NEW
+ href="/default/info">NAGRP - Bioinformatics Coordination Program</a>.<BR>
+Contact: <a style="font-size:8pt;font-family:verdana, helvetica, sans-serif;" target=_NEW
+ href="/bioinfo/community/team">NAGRP Bioinformatics Team</a>
+</TD><TD valign=bottom align=right>
+<a id="WID" target=_NEW href="/helpdesk?subj=/bioinfo/tools/beap/index.php">
+<img src="/icons/small/bookstdl.gif"> Helpdesk <img src="/icons/small/bookstdr.gif"></a>
+</TD></TR>
+</TABLE>
+</TD></TR></TABLE>
+</body>
+</html>
+

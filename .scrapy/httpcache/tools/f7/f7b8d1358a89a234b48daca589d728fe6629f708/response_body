@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>CRI-MAP Improved</title>
+<STYLE TYPE="text/css"><!--
+BODY    { background-color:#ffffff; } 
+a       { text-decoration:none; }
+a:hover { background-color:#ddd; text-decoration:none; }
+INPUT   { font-size:8pt; color:navy; margin:0px; padding:3;
+          font-family:arial,sans-serif,verdana, helvetica; }
+TEXTAREA { margin:0px; padding:3; }
+TD  { font-size:11pt; color:navy;
+      font-family:Calibri,verdana,sans-serif,arial,helvetica; }
+LI  { margin:3 0px; padding: 0 10px; line-height:1.15em; }
+H1  { margin:0px; padding:0; }
+#av { margin:0px; padding:0; }
+-->
+</STYLE>
+<script Language="JavaScript">
+<!--
+function curatorform_Validator(theForm)
+{
+    if (theForm.bug.value == "") {
+        alert("Ooops, you have not yet entered anything to send");
+        theForm.bug.focus();
+        return (false);
+    }
+}
+//--></script>
+</head>
+<BODY bgcolor="#FFFFFF" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+
+<TABLE border=0 cellpadding=0 cellspacing=0 width=830 style="margin:10 20 16 20px;">
+<TR>
+<TD valign=top width=340><img src="/bioinfo/tools/share/crimap/crimap3.jpg">
+
+<h1>Background</h1>
+<table border=0 cellpadding="6" cellspacing="6" style="margin:0 15 0 0px;">
+<tr><td style="text-align:justify;">
+CRI-MAP (version 2.4, by 
+<a style="color:#364636;" href="http://www.gs.washington.edu/faculty/green.htm">Phil Green</a> 
+et al, 1990) has been used extensively in the past 20 years for genetic linkage analysis 
+of diploid species, and has played a fundamental role in producing genetic linkage 
+maps for humans, rats, mouse, fruit flies, cattle, sheep, pigs, chicken, fish, 
+among many other species. 
+<!-- However, the rapid development 
+of genetic markers far exceeded the capacity the CRI-MAP was originally designed 
+to handle.  Therefore improvements became necessary in terms of error handling, 
+memory management, etc. -->
+However, both the number of genetic markers and the pedigree sizes commonly used 
+today greatly exceed the capacity that the original version of CRI-MAP handled. 
+Therefore improvements have been made so that CRI-MAP can better handle large 
+pedigrees with large numbers of markers on modern hardware. Please note that 
+whilst this is an improved version of CRI-MAP that there are still problems 
+handling large pedigrees with large numbers of bi-allelic markers particularly 
+when there are lots of missing parental and grandparental genotypes. The 
+improvements are still ongoing so please fill out the CRI-MAP usage form and 
+submit an e-mail address so that you can be notified of future improvements or bugs.
+</td></tr></table>
+
+<h1>Aims</h1>
+<table border=0 cellpadding="6" cellspacing="6" style="margin:0 15 0 0px;"><tr><td>
+<!-- Provide a more robust CRI-MAP for the animal genetics community. -->
+Provide a faster, more efficient and more robust CRI-MAP for the genetics 
+research community.
+</td></tr></table>
+<img align="center" src="/icons/targetsrings.png">
+
+</TD><TD style="width:460px;vertical-align:top;padding:6px;">
+
+<div style="padding:3 9px;margin:7px;border:6px solid #eee;background-color:#eff;">
+<h1 style="color:#8470ff;"><img style="padding:0;margin:0 15px;" src="/icons/download.png">
+<a style="text-decoratin:none;" href="downloads/">Downloads</a></h1>
+  <UL>
+    <LI><a href="/cgi-bin/host/crimap/procinfo?q=crimap_2.507.tgz">crimap_2.507.tgz</a> <img src="/icons/newest.gif">( Apr 17, 2015)
+    <LI><a href="/cgi-bin/host/crimap/procinfo?q=crimap_2.507_MacOSX-10.10.4.gz">crimap_2.507_MacOSX-10.10.4.gz</a> <img src="/icons/newest.gif">( Jul 22, 2015)
+  </UL>
+  <div style="text-align:right;font-size:9pt;">
+  For details, go to <a href="downloads/">download</a> area.
+  </div>
+</div>
+
+<div style="padding:3 9px;margin:6 3px;border:2px solid #fdf;">
+<img align="right" src="/icons/tools.jpg">
+
+<h1>Enhancements:</h1>
+<table border=0 cellpadding="6" cellspacing="0"><tr><td>
+<LI>Converted to C++
+<LI>Better memory usage
+<LI>Faster
+<LI>Handles larger pedigrees
+<LI>Handles more markers
+</td></tr></table>
+
+<h1>Improvements in the pipeline</h1>
+<table border=0 cellpadding="6" cellspacing="0"><tr><td>
+<LI>Parallelisation for use on multi-cpu machines
+<LI>New map building algorithm for use with large data sets
+<LI>Better pedigree handling
+</td></tr></table>
+</div>
+
+<div height=200 style="padding:3 9px;margin:6 3px;border:2px solid #d6E6FA;">
+<img style="margin:4px;" align="right" src="/icons/chat04.png">
+<h1>User Tools</h1>
+<table border=0 cellpadding="6" cellspacing="0" style="margin:0 2 6 0px;"><tr><td>
+<LI>Software repository
+<UL style="list-style:url('/icons/small/sqpurple.gif');padding:0 32px;margin:0;">
+  <LI><a href="/cgi-bin/util/fileshare">Upload</a>
+  <LI><a href="downloads">Download</a>
+</UL>
+<P>
+<LI>CRI-MAP User Forum<BR>
+<UL style="list-style:url('/icons/small/sqpurple.gif');padding:0 32px;margin:0;">
+ <LI><a href="/community/crimap-users">A listserv based user discussion channel</a>
+</UL>
+</td></tr></table>
+
+<h1>User References</h1>
+<table border=0 cellpadding="6" cellspacing="6" style="margin:0 2 6 0px;"><tr><td>
+<UL style="list-style-image: url(/icons/small/text.gif);margin:0;padding:0 0 0 26px;">
+<LI id="av"><a href="/hu/CRIMAPwkshp/crimap-doc.html">Authors' Documentation</a> -- by Phil Green, et al.</LI>
+<LI id="av" style="margin-bottom:6px;"><a href="http://teacher.bmc.uu.se/CRIMAP/Crimap/crimanua.html">Documentation Explained</a> -- by David Featherston</LI>
+
+<LI id="av"><a href="http://teacher.bmc.uu.se/CRIMAP/Crimap/">An Indepth Tutorial</a> -- by David Featherston</LI>
+<LI id="av"><a href="http://www.parisveltsos.com/research/crimap/">A Workflow using CRI-MAP</a> -- by Paris Veltsos <img src="/icons/newest.gif"></LI>
+<LI id="av"><a href="/hu/CRIMAPwkshp/">A Scroll Through Tutorial for beginners</a> -- by Zhiliang Hu</LI>
+<LI id="av"><a href="http://helix.nih.gov/Applications/crimap.html">CRIM-MAP Description</a> -- A brief description at the NIH</LI>
+</UL>
+</td></tr></table>
+
+<h1>Bug report</h1>
+<form name="theForm" action="/cgi-bin/host/crimap/procinfo"
+      onsubmit="return curatorform_Validator(this)">
+<table border=0 style="margin:1 0 1 12px;padding:0">
+<tr><td align=right><textarea name="bug" cols=47 rows=3></textarea>
+ <input style="padding:0 21px;color:66f;font-weight:700;" type="submit" name="submit" value="Proceed">
+</td></tr></table>
+</form>
+</div>
+
+</TD></TR>
+<TR><TD colspan=2>
+
+<table border=0 cellpadding=8 cellspacing=0>
+<tr><td style="font-size:9pt;background-color:#fed;text-align:center;">The 
+improvements of CRI-MAP were made by <a href="mailto:irwevans@bigpond.net.au">
+Ian Evans</a> and <a href="mailto:jfmaddox@bigpond.com">Jill Maddox</a>.
+The project to date has been partly funded by SheepGenomics 
+<!-- (<a href="http://www.sheepgenomics.com/">http://www.sheepgenomics.com/</a>) -->, 
+the joint initiative of Meat and Livestock Australia 
+(<a href="http://www.mla.com.au">http://www.mla.com.au/</a>) and Australian 
+Wool Innovation (<a href="http://www.wool.com/">http://www.wool.com</a>). 
+Future improvements will be partly funded by a USDA Agriculture and Food 
+Research Initiative grant 
+</td></tr></table>
+
+<div style="text-align:center;padding:12px;">
+( External links: <a href="legacy">CRI-MAP Home</a>
+<!-- <a href="http://compgen.rutgers.edu/old/multimap/crimap/">CRI-MAP Home</a> --> )
+</div>
+
+<hr noshade>
+<TABLE border=0 width=95% cellpadding=0 cellspacing=0>
+<TR><TD valign=top width=36>
+<a href="/log"><img border=0 align=left alt="Web Access Statistics" src="/icons/stat_a.jpg"></A>
+</TD>
+<TD style="text-align:left;vertical-align:top;font-size:8pt;color:red;font-family:verdana, helvetica, sans-serif;">
+&#169 2020 Host: <a style="font-size:8pt;font-family:verdana, helvetica, sans-serif;"
+ href="/default/info.html">NAGRP - Bioinformatics Coordination Program</a>.<BR>
+Contact: <a style="font-size:8pt;font-family:verdana, helvetica, sans-serif;"
+ href="/bioinfo/community/team.html">NAGRP Bioinformatics Team</a>
+</TD>
+
+<TD valign=bottom align=right style="font-size:8pt;font-family:verdana, helvetica, sans-serif;">
+March 30, 2020 (Monday)</TD></TR>
+</TABLE>
+
+</TD></TR>
+</TABLE>
+</body>
+</html>
+

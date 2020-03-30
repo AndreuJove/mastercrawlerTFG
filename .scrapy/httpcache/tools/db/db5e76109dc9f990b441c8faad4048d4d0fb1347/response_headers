@@ -1,0 +1,22 @@
+Date: Mon, 30 Mar 2020 18:46:05 GMT
+Content-Type: text/html;charset=utf-8
+Set-Cookie: __cfduid=ddd246d3374a0f803bb3cecd3d40679001585593964; expires=Wed, 29-Apr-20 18:46:04 GMT; path=/; domain=.www.ansible.com; HttpOnly; SameSite=Lax
+Set-Cookie: __cfruid=158a8fbe9024574d029454c076a4d1d1211f7125-1585593965; path=/; domain=.www.ansible.com; HttpOnly; Secure; SameSite=None
+Cf-Ray: 57c3fdc698b4c683-MAD
+Cache-Control: s-maxage=120,max-age=5
+Content-Encoding: gzip
+Link: </hs/hsstatic/HubspotToolsMenu/static-1.58/js/index.js>; rel=preload; as=script, </hs/hsstatic/cos-i18n/static-1.16/bundles/project.js>; rel=preload; as=script, </hs/hsstatic/AsyncSupport/static-1.70/js/rss_listing_asset.js>; rel=preload; as=script
+Strict-Transport-Security: max-age=3628800
+Vary: Accept-Encoding
+Cf-Cache-Status: EXPIRED
+Access-Control-Allow-Credentials: false
+Content-Security-Policy: upgrade-insecure-requests
+Edge-Cache-Tag: CT-4617718409,CG-330046,P-330046,L-14126864753,L-5991552849,L-6195572944,L-6195572946,CW-14126796507,CW-14143045729,CW-5075488061,CW-5482762872,CW-5482763244,CW-5482763384,CW-5482763386,CW-8112973092,DB-1575286,E-5993415685,E-6195900440,E-6195900567,PGS-ALL,SW-4,SD-46,B-4314649920
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+X-Hs-Cache-Config: BrowserCache-5s-EdgeCache-120s
+X-Hs-Combine-Css: Media
+X-Hs-Content-Id: 4617718409
+X-Hs-Hub-Id: 330046
+X-Powered-By: HubSpot
+X-Trace: 2B7B481E4D5ADBC1820FC65BF80464DA3E2BFF0A90000000000000000000
+Server: cloudflare

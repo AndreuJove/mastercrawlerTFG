@@ -1,0 +1,366 @@
+
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	 "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-US"><head><title>SIENA 2D-DATABASE</title>
+<link rev="made" href="mailto:bini%40unisi.it">
+<meta name="keywords" content="2-D PAGE SDS Two-dimensional polyacrylamide gel electrophoresis Database">
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<style type="text/css">
+<!-- 
+
+
+     .center                                                                                             { text-align:center }
+     .right                                                                                               { text-align:right }
+     .left                                                                                                 { text-align:left }
+     .underlined                                                                                { text-decoration: underline }
+     .red,A.red:link,A.red:visited                                                                               { color:red }
+     .blue                                                                                                      { color:blue }
+     .expasyVisited                                                                                          { color:#660099 }
+     .darkBlue                                                                                               { color:#00008b }
+     .brown                                                                                                  { color:#a52a2a }
+     .gray,.specialList                                                                                         { color:gray }
+     .small                                                                                                { font-size:12px; }
+     .smallComment                                                                              { font-size:11px; color:gray }
+     .smallCommentBrown                                                                      { font-size:11px; color:#a52a2a }
+     .bold                                                                                                { font-weight:bold }
+     .breakCategory1                                                                                    { margin-bottom:20px }
+     .upperCased                                                                                  { text-transform:uppercase }
+     .leftBorder                                                 { border-left:20px solid #99FFFF; margin:10px; padding:10px }
+     .leftBorder2                                                 { border-left:15px solid #99FFFF; margin:20px; padding:5px }
+     .topBorder                                                             { border-top:10px solid #99FFFF; margin-top:10px }
+     .topBorderThin                                      { border-top:3px solid #99FFFF; margin-top:15px; margin-bottom:25px; margin-left:50px; margin-right:50px;}
+     .Comment                                                                                { font-style:italic; color:gray }
+     .Transparent,A.Transparent:link,A.Transparent:visited                        { text-decoration:none; color:#F0FFFF }
+     .H2FontPlus                                                                          { font-size:28px; font-weight:bold }
+     .H2Font                                                                              { font-size:24px; font-weight:bold }
+     .H3Font                                                                              { font-size:18px; font-weight:bold }
+     .H4Font                                                                              { font-size:16px; font-weight:bold }
+      BODY,SPAN                { font-family:sans-serif ariel; font-size:13px; text-decoration:none; color:#000066 }
+      A,P,Select               { font-family:sans-serif ariel; font-size:13px; text-decoration:none; color:#000066 }
+      A:hover                                                                                                               {}
+      EM    { font-style:italic; font-family:sans-serif ariel; font-size:13px; text-decoration:none; color:#000066 }
+      Strong { font-weight:bold ;font-family:sans-serif ariel; font-size:13px; text-decoration:none; color:#000066 }
+      A:link                                                                       { color:#ff2500; text-decoration:none }
+      A:visited                                                                  { color:blue;text-decoration:none }
+      A:link:hover,A:visited:hover                                                               { text-decoration:underline }
+      A.MenuLink:link,A.MenuLink:visited      { color:#a52a2a; font-size:14px; font-weight:bold; text-decoration:none }
+      A.MenuLinkOnTxt:link,A.MenuLinkOnTxt:visited { color:#a52a2a; font-size:14px; font-weight:bold; text-decoration:underline }
+      A.MenuLink:hover                                                                                           { color:red }
+      SPAN.Estomped,A.Estomped,Strong.Estomped                                                  { font-size:12px; color:gray }
+      SPAN.MenuTitle, A.MenuTitle,A.MenuTitle:link,A.MenuTitle:visited,A.MenuTitle:hover { font-weight:bold; font-size:18px; color:black; text-decoration:none }
+      A.MenuTitleUnderlined                     { text-decoration:underline; font-weight:bold; font-size:18px; color:#00008b }
+      A.LightColumn,Strong.LightColumn,EM.LightColumn                                                          { color:white }
+      A.Warn,Strong.Warn,I.Warn,EM.Warn                                                         { text-align:left; color:red }
+      A.SubmitText,Strong.SubmitText                                                            { font-size:13px; color:blue }
+      H1                                                                                                      {color:#00008b }
+      H2                                                                           { font-size:24px; color:#000066 }
+      H3.Menu                                  { margin-top:0px; margin-bottom:0px; text-align:left; color:#000066 }
+      H3                                    { margin-top:8px; margin-bottom:14px; text-align:center; color:#000066 }
+      H3.subHeader                                   {font-size: large; font-weight: bold; font-style: italic; color:#00008b }
+      H3.MenuLink                                                                             { text-align:center; color:red }
+      H3.Result                               { margin-top:8px; margin-bottom:10px; text-align:left; color:#000066 }
+      H4                     { font-size:14px; margin-top:6px; margin-bottom:8px; text-align:center; color:#000066 }
+      H4.Result                               { margin-top:8px; margin-bottom:10px; text-align:left; color:#000066 }
+      SPAN.Result,A.Result                                                                                   { color:#a52a2a }
+      TABLE                                                     { font-size:16px; color:#000066; empty-cells: show }
+      TH                                                                                                   { text-align:left }
+      TR,DT,LI                                                                                              { font-size:13px }
+      TD.NoWrap                                                                                         { white-space:nowrap }
+      UL.compact                                                                           { margin:0 0 0 0; padding:0 0 0 0 }
+      LI.compact                                                                           { margin:0 0 0 0; padding:0 0 0 0 }
+      DIV.borderContainer                                                    { border:2px solid #99FFFF; margin:0; padding:0 }
+      Caption.preHR                                                           { border-top:2px solid gray; padding-top: 10px }
+      Input.FixedMenu { background-color:#FFFF99; font-style:italic; font-size:13px; font-family:monospace; color:#FFFF99; width:188px; height:24px }
+      Input.FixedMenuSelected { background-color:#FFFF99; font-style:italic; font-size:13px; font-family:monospace; color:#FFFF99; width:188px; height:24px }
+      Input.small { color:red; background-color:#87cefa; width:30px; height:20px; padding:1px; margin-top:12px; text-align:center; font-size:11px }
+      Input.colored { background-color:#FFFF99; font-size:12px }
+      Input.coloredFixed { background-color:#FFFF99; width:120px; font-size:12px }
+      Input.expandableOn { color:red; background-color:#FFFF99; width:20px; height:24px; font-size:14px; text-align:center }
+      Input.expandableOff { color:#FFFF99; background-color:red; width:20px; height:24px; font-size:14px; text-align:center }
+      Input.niceViewButtonHead { border:0; border-color:#aaffff; color:red; height:18px; background-color:#0000dd; font-size:13px; text-align:center; font-weight:bold }
+      Input.niceViewButton { border:0; border-color:#aaffff; color:#ff2500; height:18px; background-color:#bbffff; font-size:11px; text-align:center }
+      Input.small { border:0; border-color:#eeeeee; color:gray; height:16px; background-color:#FFFF99; font-size:11px; text-align:center }
+      Input.mapSelection  { margin:3px 3px 3px 3px; height:100px }
+
+    
+ -->
+</style>
+<script type="text/javascript">
+<!-- Hide script
+ 
+
+    function isNumeric(val) {return(parseFloat(val,10)==(val*1))}
+
+
+    function SetCookie(name, value, days) {
+        // store info on cookie   
+        var expire = new Date ();
+        expire.setTime (expire.getTime() + (24 * 60 * 60) * days); 
+        document.cookie = name + "=" + escape(value) + "; expires=" + expire.toGMTString(); 
+    }
+
+    function GetCookie(name) {
+        // retrieve info on cookie 
+        var startIndex = document.cookie.indexOf(name);
+        if (startIndex != -1) {
+            var endIndex = document.cookie.indexOf(";", startIndex); 
+            if (endIndex == -1) endIndex = document.cookie.length;
+            return unescape(document.cookie.substring(startIndex+name.length+1, endIndex)); 
+        }
+        else {
+            return null;
+        }
+    }
+
+    function DeleteCookie(name) {
+       // delete info on cookie
+       var expire = new Date ();
+       expire.setTime (expire.getTime() - (24 * 60 * 60 * 30)); 
+       document.cookie = name + "=; expires=" + expire.toGMTString(); 
+    }
+
+     
+
+    function GetElementValue(obj) {
+        // Get the very last selected element value
+        var txt = obj.options[obj.selectedIndex].text;
+        return txt;
+    }
+
+   
+
+    function OpenViewerForSpot(SpotNumber, MapName, DatabaseName) {
+
+        window.open("/cgi-bin/2d/2d_view_map.cgi?map=" + MapName.toLowerCase() + "&spot=" +
+                    SpotNumber,'subWind','scrollbars,Height=600,Width=780,dependent')
+
+    }
+
+    function OpenViewerForSpotEntry(AC, SpotNumber, MapName, DatabaseName) {
+
+        window.open("/cgi-bin/2d/2d_view_map.cgi?map=" + MapName.toLowerCase() + "&ac=" + AC + "&spot=" +
+                    SpotNumber,'subWind','scrollbars,Height=600,Width=780,dependent')
+
+    }
+    
+
+    function GraphApplet(masses_string, intensities_string, name) {
+
+      if (!intensities_string.length) {
+          intensities_string = masses_string;
+        }
+      var newWindow = window.open('', '_blank', 'menubar=yes,resizable=yes,height=300,width=650');
+
+      var ba = '/'; // silly var, but needed for HTML validation
+
+      newWindow.document.write('<HTML><HEAD><TITLE>Quick spectrum watch<'+ba+'TITLE><'+ba+'HEAD><BODY BGCOLOR=WHITE>');
+
+      newWindow.document.write('<!--[if !IE]> Firefox and others will use outer object -->');
+      newWindow.document.write('<object classid="java:grapher.GraphApplet" archive="/2d/data/GraphApplet.jar" type="application/x-java-applet" height="100%" width="100%" >');
+      newWindow.document.write('<param name="masses"  value="' + masses_string + '">');
+      newWindow.document.write('<param name="intensities"  value="' + intensities_string + '">');
+      newWindow.document.write('<param name="title" value="' + name + '">');
+      newWindow.document.write('<!-- <![endif]-->');
+
+      newWindow.document.write('<!-- MSIE (Microsoft Internet Explorer) will use inner object -->');
+      newWindow.document.write('<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" codebase="http://java.sun.com/update/1.5.0/jinstall-1_5_0-windows-i586.cab" height="100%" width="100%" >');
+      newWindow.document.write('<param name="code" value="grapher.GraphApplet">');
+      newWindow.document.write('<param name="archive" value="/2d/data/GraphApplet.jar">');
+      newWindow.document.write('<param name="type" value="application/x-java-applet">');
+
+      newWindow.document.write('<param name="masses"  value="' + masses_string + '">');
+      newWindow.document.write('<param name="intensities"  value="' + intensities_string + '">');
+      newWindow.document.write('<param name="title" value="' + name + '">');
+
+      newWindow.document.write('<strong>This browser does not have a Java Plug-in.<br>');
+      newWindow.document.write('<a href="http://java.sun.com/products/plugin/downloads/index.html">');
+      newWindow.document.write('Get the latest Java Plug-in here.<'+ba+'a><'+ba+'strong>');
+      newWindow.document.write('<'+ba+'object>');
+
+      newWindow.document.write('<!--[if !IE]> close outer object -->');
+      newWindow.document.write('<'+ba+'object>');
+      newWindow.document.write('<!--<![endif]-->');
+
+      newWindow.document.write('<'+ba+'BODY><'+ba+'HTML>');
+      newWindow.document.close();
+      newWindow.focus();
+
+    }
+
+    
+
+    function ClickMenu(fieldValue, toScriptName) {
+        // change a hidden field value and submit
+        document.Form1.clickedMenu.value=fieldValue;
+        //document.Form1.action=toScriptName;
+        document.Form1.submit();
+        //this.submit();
+    }
+
+    
+
+    function OpenViewerForSpot_SWISS_2DPAGE(SpotNumber, MapName, DatabaseName) {
+
+        window.open("http://www.expasy.org/swiss-2dpage/viewer&map=" + MapName.toLowerCase() + "&spot=" + SpotNumber +
+                    "&database=" + DatabaseName.toLowerCase(),'subWind','scrollbars,Height=600,Width=780,dependent')
+
+    }
+
+    function OpenViewerForSpotEntry_SWISS_2DPAGE(AC, SpotNumber, MapName, DatabaseName) {
+
+        window.open("http://www.expasy.org/swiss-2dpage/viewer&map=" + MapName.toLowerCase() + "&ac=" + AC + "&spot=" + SpotNumber +
+                    "&database=" + DatabaseName.toLowerCase(),'subWind','scrollbars,Height=600,Width=780,dependent')
+
+    }
+
+    
+
+    function OpenViewerForSpot_World_2DPAGE(SpotNumber, MapName, DatabaseName) {
+
+        window.open("http://www.expasy.org/world-2dpage/viewer&map=" + MapName.toLowerCase() + "&spot=" + SpotNumber +
+                    "&database=" + DatabaseName.toLowerCase(),'subWind','scrollbars,Height=600,Width=780,dependent')
+
+    }
+
+    function OpenViewerForSpotEntry_World_2DPAGE(AC, SpotNumber, MapName, DatabaseName) {
+
+        window.open("http://www.expasy.org/world-2dpage/viewer&map=" + MapName.toLowerCase() + "&ac=" + AC + "&spot=" + SpotNumber +
+                    "&database=" + DatabaseName.toLowerCase(),'subWind','scrollbars,Height=600,Width=780,dependent')
+
+    }
+
+    // End script hiding -->
+</script>
+</head>
+<body link="blue" bgcolor="#F0FFFF">
+
+
+
+<noscript>
+<BR><H3><STRONG>!!This displayer contains script commands. You should enable JavaScripting within your browser preferences, or use another browser!!
+</STRONG></H3><BR><BR></noscript>
+
+<table>
+<tr>
+<td>
+<a class="Transparent" href="/"><img border="0" align="left" src="/icons/make2DBLogo.gif" alt="Home"></a>
+</td>
+<td>
+<h1 class="left">SIENA 2D-DATABASE</h1>
+<h3 class="subHeader left">Two-dimensional polyacrylamide gel electrophoresis database</h3></td>
+</tr>
+</table>
+<hr>
+<form method="post" action="/cgi-bin/2d/2d.cgi" enctype="multipart/form-data" name="Form1">
+
+<input type="hidden" name="clickedMenu" value="" >
+<input type="hidden" name="keep_Search_param" value="" >
+<input type="hidden" name="keep_LastDatabase" value="1" >
+<input type="hidden" name="default_example_ID" value="A1IPW3_NEIMA" >
+<input type="hidden" name="default_example_AC" value="A1IPW3" >
+<input type="hidden" name="default_example_spot" value="908" >
+<input type="hidden" name="default_example_ID" value="TCTP_HUMAN" >
+<input type="hidden" name="default_example_AC" value="P12345" >
+<input type="hidden" name="default_example_spot" value="" >
+<table>
+<tr>
+<td valign="top" width="9%">
+<br>
+<table><caption><strong></strong></caption> <tr align="left">
+<td nowrap><a class="MenuTitle" onmouseover="window.status=&quot;Choose one of the search methods below!&quot;;return true" href="/cgi-bin/2d/2d.cgi">Home&nbsp;</a><hr>
+<strong><span class="MenuTitle">Search&nbsp;by&nbsp;</span></strong><br>
+
+<p><input onmouseup="javascript:ClickMenu('AC','/cgi-bin/2d/2d.cgi')" type="image" src="/icons/2d_menu_AC.gif" onmouseover="window.status='Search by ACCESSION NUMBER';return true" alt="* Search by ACCESSION NUMBER"></p>
+
+<p><input onmouseup="javascript:ClickMenu('DE','/cgi-bin/2d/2d.cgi')" type="image" src="/icons/2d_menu_DE.gif" onmouseover="window.status='Search by DESCRIPTION, ID or GENE NAME';return true" alt="* Search by DESCRIPTION, ID or GENE NAME"></p>
+
+<p><input onmouseup="javascript:ClickMenu('Author','/cgi-bin/2d/2d.cgi')" type="image" src="/icons/2d_menu_author.gif" onmouseover="window.status='Search by AUTHOR';return true" alt="* Search by AUTHOR"></p>
+
+<p><input onmouseup="javascript:ClickMenu('Spot','/cgi-bin/2d/2d.cgi')" type="image" src="/icons/2d_menu_spot.gif" onmouseover="window.status='Search by SPOT ID / SERIAL NUMBER';return true" alt="* Search by SPOT ID / SERIAL NUMBER"></p>
+
+<p><input onmouseup="javascript:ClickMenu('Ident','/cgi-bin/2d/2d.cgi')" type="image" src="/icons/2d_menu_ident.jpg" onmouseover="window.status='Search Spots by IDENTIFICATION Techniques';return true" alt="* Search Spots by IDENTIFICATION Techniques"></p>
+
+<p><input onmouseup="javascript:ClickMenu('pI','/cgi-bin/2d/2d.cgi')" type="image" src="/icons/2d_menu_pi.gif" onmouseover="window.status='Search SPOTS in a pI/Mw Range';return true" alt="* Search SPOTS in a pI/Mw Range"></p>
+
+<p><input onmouseup="javascript:ClickMenu('Combined','/cgi-bin/2d/2d.cgi')" type="image" src="/icons/2d_menu_combined.gif" onmouseover="window.status='Combining Queries on Differnet Fields';return true" alt="* Combining Queries on Differnet Fields"></p>
+
+<hr><span class="MenuTitle">Maps&nbsp;</span>
+<p><input onmouseup="javascript:ClickMenu('MapExpInfo','/cgi-bin/2d/2d.cgi')" type="image" src="/icons/2d_menu_map_exp_info.gif" onmouseover="window.status='List Experimental Information for a given Map';return true" alt="* List Experimental Information for a given Map"></p>
+
+<p><input onmouseup="javascript:ClickMenu('Map','/cgi-bin/2d/2d.cgi')" type="image" src="/icons/2d_menu_protein_list.gif" onmouseover="window.status='List Identified Proteins for a given Map';return true" alt="* List Identified Proteins for a given Map"></p>
+
+<p><a href="/cgi-bin/2d/2d_view_map.cgi"><img border="0" src="/icons/2d_menu_graphical_viewer.gif" onmouseover="window.status='NAVIGATE graphically through the MAPS';return true" alt="Graphical Viewer"></a><br class="breakCategory1"></p>
+
+<hr><br>
+<table><tr><td bgcolor="#99FFFF">&nbsp;</td>
+<td bgcolor="#F0FFFF">&nbsp;&nbsp;</td>
+<td>
+<strong>Query Remote Interfaces:</strong><br><table><tr><th>[All Interfaces]</th><td><input type="checkbox" name="selected_remoteinterfaces" value="&lt;strong&gt;[All Interfaces]&lt;/strong&gt;"></td></tr><tr><th><a target="_blank" href="http://www.expasy.org/swiss-2dpage">SWISS-2DPAGE</a></th><td><input type="checkbox" name="selected_remoteinterfaces" value="SWISS-2DPAGE"></td></tr><tr><th><a target="_blank" href="http://www.expasy.org/world-2dpage">World-2DPAGE</a></th><td><input type="checkbox" name="selected_remoteinterfaces" value="World-2DPAGE"></td></tr></table>
+<hr><input type="checkbox" name="selected_remoteinterfaces_and_noLocalDBs" value="on"> Exclude local DBs
+
+<br><em><span class="Estomped">has only effect if a remote<br>interface is selected</span></em>
+</td>
+</tr>
+</table>
+</td></tr></table></td>
+<td>&nbsp;</td>
+<td bgcolor="#99FFFF">&nbsp;</td>
+<td>&nbsp;</td>
+<td valign="top" width="91%">
+<em class="Comment">This is the main interface of the <a href="http://www.expasy.org/ch2d/make2ddb/">Make2D-DB II tool</a> to query SIENA 2D-DATABASE.</em><br>
+<h1>SIENA 2D-DATABASE</h1><strong>Home page of the 2D-PAGE server to query SIENA 2D-DATABASE</strong><br><br>
+<input type="submit" name="Expand: Facts and statistics" value="+" class="expandableOn" >&nbsp;&nbsp;&nbsp<strong>[Facts and statistics]</strong><p><input type="hidden" name="keepFactsOpened" value="0" >
+<strong><em class="underlined">Search by</em></strong><br>You can perform simple search queries:<br>
+<ul>
+<li><strong>by accession number</strong>: search SIENA 2D-DATABASE by accession number or by entry name (AC or ID)</li>
+<li><strong>by description, ID or gene name</strong>: search by description (DE), entry name (ID), gene name (GN) or UniProtKB/Swiss-Prot keywords (KW)</li>
+<li><strong>by author</strong>: search authors list by giving an AC or an ID, or list all entries for a given author</li>
+<li><strong>by spot id / serial number</strong>: search by spot ID / serial numbers</li>
+<li><strong>by identification methods</strong>: search by identification methods</li>
+<li><strong>by pI/Mw range</strong>: search for spots located within a pI/Mw range. You can limit your search to a specific map</li>
+</ul>
+You can also perform much more complex queries using the <strong>'combined fields'</strong> link.
+This option lets you construct your own query by combining various keywords and boolean operators (SRS-like interface).
+You can choose the output fields to show and decide to save results as a text file on your own computer.<br><br>
+<strong><em class="underlined">Maps</em></strong><br>Several actions can be performed for the maps:<br>
+<ul>
+<li><strong>'experimental info'</strong> allows you to display <strong>experimental information</strong>
+ for a given map.</li>
+<li><strong>'protein list'</strong> allows you to list in a table all the <strong>protein entries</strong> identified for a given reference map, with related
+ 2-DE information on spot ID, experimental pI and Mw (read from map), mapping procedures, references, etc..
+ You can export the table in text format to your computer.</li>
+<li><strong>'graphical viewer'</strong> is the viewer for the maps. This viewer lets you navigate graphically and zoom between the different maps. You can display all spots or just show those of particular interest.
+By dragging your mouse over the different spots, available experimental information will be dynamically displayed.</li>
+</ul>
+<br><hr><strong><em class="underlined">Query Remote Interfaces</em></strong><br>
+This interface has been configured to automatically access other similar <strong>remote interfaces</strong>. You may select one or several interfaces for your queries. Please, note that there are some few limitations on queries with remote interfaces (e.g. the 'graphical interface' does not directly access remote databases).<br>
+Note also that, by default, there is at least one selected 'local' database. If you want to exclude 'local' databases from your queries (restricting queries to remote interfaces), turn on the '<em>Exclude local DBs</em>' box.<br>
+Finally, you should be aware that selecting many remote databases simultaneously will cause a slow down of your queries' response.<p>
+<p><hr><p><table>
+<tr>
+<td><input type="button" value="Admin login" onclick="window.location.href=&#39;http://www.bio-mol.unisi.it/cgi-bin/2d/2d.core.cgi&#39;" onmouseover="window.status='Login to the administration interface';return true" class="colored"></td>
+<td><span class="smallComment">&nbsp;&nbsp;--&nbsp;Login for administrators</span></td>
+</tr>
+</table>
+<p class="center"><a class="Transparent" href="/cgi-bin/2d/2d.cgi"><img border="0" src="/icons/make2DBLogo.gif" alt="SIENA 2D-DATABASE image" width="100"></a></p>
+</td></tr>
+</table>
+<div><input type="hidden" name=".cgifields" value="selected_remoteinterfaces_and_noLocalDBs" ><input type="hidden" name=".cgifields" value="selected_remoteinterfaces" ></div>
+</form>
+<hr><h3>Gateways to other related servers</h3>
+<ul>
+<li><a href="http://www.expasy.org/ch2d/">SWISS-2DPAGE</a> - The two-dimensional polyacrylamide gel electrophoresis database of the <a href="http://www.isb-sib.ch/">Swiss Institute of Bioinformatics</a> in Geneva</li>
+<li><a href="http://www.expasy.org/ch2d/2d-index.html">WORLD-2DPAGE</a> - Index to other Federated 2-D PAGE databases</li>
+<li><a href="http://www.expasy.org/">ExPASy</a> - The proteomics web server of the <a href="http://www.isb-sib.ch/">Swiss Institute of Bioinformatics</a>, in Geneva</li>
+</ul>
+<hr><em>This database was constructed and maintained by <a href="mailto:bini@unisi.it">Luca Bini</a>, using the <a href="http://www.expasy.org/ch2d/make2ddb/">Make2D-DB II</a>
+ package (<a target="_blank" href="/2d/data/1.Readme_main.html">ver. 2.50.1</a>) from the <a href="http://www.expasy.org/ch2d/2d-index.html">WORLD-2DPAGE</a> of the <a href="http://www.expasy.org/">ExPASy web server</a></em>
+&nbsp;&nbsp;  <a href="http://validator.w3.org/check?uri=referer">
+    <img src="/icons/valid-html401.png" align="middle"
+     alt="Valid HTML 4.01 Transitional" height="31" width="88">
+  </a>
+<hr><hr><h4 class="center">[<a href="/">Home</a>]</h4><br>
+
+</body>
+</html>

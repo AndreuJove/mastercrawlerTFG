@@ -1,0 +1,12 @@
+Date: Mon, 30 Mar 2020 18:49:24 GMT
+Server: Apache/2.4.7
+Content-Location: index.html
+Vary: negotiate,Accept-Encoding
+Tcn: choice
+Access-Control-Allow-Origin: (null)
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Cache-Control: max-age=0
+Expires: Mon, 30 Mar 2020 18:49:24 GMT
+Content-Type: text/html
+Content-Language: en

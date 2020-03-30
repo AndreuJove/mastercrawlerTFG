@@ -1,0 +1,184 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>CAR: Contig Assembly of Prokaryotic Draft Genomes Using Rearrangements</title>
+<style type="text/css">
+<!--
+.bg1 {background-color: #FF4444;}
+.ff1 {font-family: "Times New Roman", Times, serif;}
+.ff2 {font-family: "Georgia", Times, serif;}
+.fc2 {color:white;}
+.fsT {font-size:24; font-weight: bold;}
+.fs1 {font-size:20;}
+.fs2 {font-size:22; font-weight: bold;}
+.fs3 {font-size:22;}
+.fc1 {color:blue;}
+.fcR {color:red;}
+.fI {font-weight: italic;}
+.hr{margin:2 0;padding:0;}
+tr {height:38px;}
+-->
+</style>
+</head>
+
+<script language="javascript">
+function showExText(e){
+	var eI = e.selectedIndex;
+	if(eI >= 1){
+		document.getElementById("draftID").innerHTML="<input name=draftEx class=\"ff1 fs1\" type=text size=60 id=text_draft readonly> or upload file: <input class=fs1 type=file name=draft onClick=\"disable_draft();\">";
+		document.getElementById("refID").innerHTML="<input name=refEx class=\"ff1 fs1\" type=text size=60 id=text_ref readonly> or upload file: <input class=fs1 type=file name=ref onClick=\"disable_ref();\">";
+	}
+	else{
+		document.getElementById("draftID").innerHTML="<input class=fs1 type=file name=draft>";
+		document.getElementById("refID").innerHTML="<input class=fs1 type=file name=ref>";
+	}
+
+	var ev = e.value;
+	if(ev == "P1"){
+		document.getElementById("text_draft").value="Brucella melitensis bv. 1 str. 16M Chr. I (NC_003317)";
+		document.getElementById("text_ref").value="Brucella melitensis bv. 1 str. 16M Chr. I (NC_003317)";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "P2"){
+		document.getElementById("text_draft").value="Brucella melitensis bv. 1 str. 16M Chr. I (NC_003317)";
+		document.getElementById("text_ref").value="Brucella melitensis ATCC 23457 Chr. I (NC_012441)";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "P3"){
+		document.getElementById("text_draft").value="Brucella pinnipedialis B2/94 Chr. 1 (NC_015857)";
+		document.getElementById("text_ref").value="Brucella pinnipedialis B2/94 Chr. 1 (NC_015857)";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "P4"){
+		document.getElementById("text_draft").value="Brucella pinnipedialis B2/94 Chr. 1 (NC_015857)";
+		document.getElementById("text_ref").value="Brucella abortus S19 Chr. 1 (NC_010742)";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "P5"){
+		document.getElementById("text_draft").value="Vibrio sp. Ex25 Chr. 1 (NC_013456)";
+		document.getElementById("text_ref").value="Vibrio sp. Ex25 Chr. 1 (NC_013456)";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "P6"){
+		document.getElementById("text_draft").value="Vibrio sp. Ex25 Chr. 1 (NC_013456)";
+		document.getElementById("text_ref").value="Vibrio parahaemolyticus RIMD 2210633 Chr. 1 (NC_004603)";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "E1"){
+		document.getElementById("text_draft").value="Saccharomyces cerevisiae Chr. 14";
+		document.getElementById("text_ref").value="Saccharomyces cerevisiae Chr. 14";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "E2"){
+		document.getElementById("text_draft").value="Saccharomyces cerevisiae Chr. 14";
+		document.getElementById("text_ref").value="Saccharomyces cerevisiae S288c Chr. 14";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "E3"){
+		document.getElementById("text_draft").value="Saccharomyces cerevisiae Chr. 4";
+		document.getElementById("text_ref").value="Saccharomyces cerevisiae Chr. 4";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "E4"){
+		document.getElementById("text_draft").value="Saccharomyces cerevisiae Chr. 4";
+		document.getElementById("text_ref").value="Saccharomyces cerevisiae S288c Chr. 4";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "E5"){
+		document.getElementById("text_draft").value="Plasmodium cynomolgi Chr. 11";
+		document.getElementById("text_ref").value="Plasmodium cynomolgi Chr. 11";
+		document.getElementById("NUC").checked=true;
+	}
+	else if(ev == "E6"){
+		document.getElementById("text_draft").value="Plasmodium cynomolgi Chr. 11";
+		document.getElementById("text_ref").value="Plasmodium knowlesi Chr. 11";
+		document.getElementById("NUC").checked=true;
+	}
+
+}
+
+function disable_draft(){
+	document.getElementById("text_draft").value="";
+}
+
+function disable_ref(){
+	document.getElementById("text_ref").value="";
+}
+
+function showEx(e){
+	var ev = e.value;
+	if(ev=="M1"){
+		document.forms[1].elements["markers"].value=">contig 1\n-3\n-2\n-1\n>contig 2\n4\n5\n-9\n-8\n-7\n>contig 3\n-6\n10\n>contig 4\n-11\n12\n";
+	}
+	else if(ev=="M2"){
+		document.forms[1].elements["markers"].value=">contig 1\n1\n4\n>contig 2\n2\n>contig 3\n3\n5\n10\n6\n8\n9\n11\n>contig 4\n12\n7\n";
+	}
+	else if(ev=="M3"){
+		document.forms[1].elements["markers"].value=">contig 1\n-10\n-9\n6\n>contig 2\n8\n-7\n-5\n-4\n-3\n-2\n>contig 3\n-1\n>contig 4\n11\n12\n";
+	}
+	else if(ev=="M4"){
+		document.forms[1].elements["markers"].value=">contig 1\n-6\n-5\n-4\n-3\n-2\n-1\n7\n8\n9\n10\n11\n>contig 2\n12\n13\n14\n-17\n-16\n-15\n-29\n-28\n-27\n-26\n-25\n>contig 3\n22\n23\n24\n18\n19\n20\n21\n30\n31\n32\n33\n34\n-35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n>contig 4\n50\n51\n52\n53\n54\n>contig 5\n-55\n56\n57\n>contig 6\n58\n59\n60\n61\n-64\n-63\n-62\n65\n66\n>contig 7\n67\n68\n69\n70\n71\n>contig 8\n-75\n-74\n-73\n-72\n>contig 9\n76\n>contig 10\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n-87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n100\n";
+	}
+	else if(ev=="M5"){
+		document.forms[1].elements["markers"].value=">contig 1\n6\n1\n2\n3\n4\n>contig 2\n5\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n22\n25\n26\n27\n28\n33\n>contig 3\n34\n36\n29\n30\n31\n>contig 4\n32\n37\n38\n39\n40\n35\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n>contig 5\n60\n61\n62\n>contig 6\n63\n64\n65\n>contig 7\n66\n68\n71\n>contig 8\n72\n74\n67\n75\n73\n76\n>contig 9\n69\n70\n77\n78\n79\n80\n81\n84\n85\n82\n83\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n>contig 10\n96\n97\n99\n100\n98\n21\n23\n24\n";
+	}
+	else if(ev=="M6"){
+		document.forms[1].elements["markers"].value=">contig 1\n-62\n>contig 2\n-61\n-60\n-59\n-58\n-57\n-56\n-55\n-54\n-53\n-52\n-51\n-50\n-49\n>contig 3\n-43\n-42\n-41\n-40\n-39\n-38\n44\n45\n46\n47\n48\n1\n>contig 4\n2\n-14\n-13\n-12\n-11\n-10\n-4\n-3\n>contig 5\n5\n-7\n-6\n9\n>contig 6\n8\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n>contig 7\n27\n28\n29\n30\n31\n32\n33\n>contig 8\n34\n>contig 9\n35\n36\n37\n-100\n94\n95\n96\n97\n98\n99\n-93\n-92\n-91\n-90\n-89\n-88\n-87\n-86\n-85\n-84\n-83\n-82\n-81\n-80\n-79\n-78\n>contig 10\n-77\n-76\n72\n73\n74\n75\n-71\n-70\n-69\n-68\n-67\n-66\n-65\n-64\n-63\n";
+	}
+}
+
+function resetUp(){
+	document.getElementById("draftID").innerHTML="<input class=fs1 type=file name=draft>";
+	document.getElementById("refID").innerHTML="<input class=fs1 type=file name=ref>";
+	return 0;
+}
+</script>
+
+<body>
+<hr>
+<div class="bg1">
+<span class="ff2 fsT"><font class="fc2">CAR</font>: <font class="fc2">C</font>ontig <font class="fc2">A</font>ssembly of Prokaryotic Draft Genomes Using <font class="fc2">R</font>earrangements</font>&nbsp;&nbsp; [<a href="help/help.php" target=_blank>Help</a>] [<a href="stand_alone/CAR.tar.gz" target=_blank>Download</a>]</span>
+</div>
+<hr>
+<div class="ff2 fs1">
+
+	<form style="display:inline; margin:0px;" method=POST name=exec1 action="prepro2.php" target=_blank enctype="multipart/form-data">
+		<table border=0 class="fs1">
+			<tr><td><span class="fs2 fc1">Input nucleotide sequences of draft and reference chromosomes:</span>
+					<select id=selectEx class="ff1 fs3" name="example_draft_ref" onchange="showExText(this);">
+						<option value ="0" selected>Choose one example</option>
+						<optgroup label="Prokaryotic chromosome (Draft / Reference)">
+							<option value ="P1">B. melitensis bv. 1 str. / B. melitensis bv. 1 str.</option>
+							<option value ="P2">B. melitensis bv. 1 str. / B. melitensis ATCC 23457</option>
+							<option value ="P3">B. pinnipedialis (B2/94) / B. pinnipedialis (B2/94)</option>
+							<option value ="P4">B. pinnipedialis (B2/94) / B. abortus S19</option>
+							<option value ="P5">Vibrio sp. Ex25 / Vibrio sp. Ex25</option>
+							<option value ="P6">Vibrio sp. Ex25 / V. parahaemolyticus RIMD 2210633</option>
+						</optgroup>
+					<!--	<optgroup label="Eukaryotic chromosome (Draft / Reference)">
+							<option value ="E1">S. cerevisiae Chr. 14 / S. cerevisiae Chr. 14</option>
+							<option value ="E2">S. cerevisiae Chr. 14 / S. cerevisiae S288c Chr. 14</option>
+							<option value ="E3">S. cerevisiae Chr. 4 / S. cerevisiae Chr. 4</option>
+							<option value ="E4">S. cerevisiae Chr. 4 / S. cerevisiae S288c Chr. 4</option>
+							<option value ="E5">P. cynomolgi Chr. 11 / P. cynomolgi Chr. 11</option>
+							<option value ="E6">P. cynomolgi Chr. 11 / P. knowlesi Chr. 11</option>
+						</optgroup> -->
+			</select></td></tr>
+			<tr><td><b><li>Draft chromosome: </b><span id="draftID"><input class="fs1" type="file" name="draft"></span></td></tr>
+			<tr><td><b><li>Reference chromosome: </b><span id="refID"><input class="fs1" type="file" name="ref"></span></td></tr>
+			<tr><td><b><li>Identify conserved genetic markers using: </b><input id="NUC" type="radio" name="alignment" value="nucmer" checked>nucleotides </input><input id="PRO" type="radio" name="alignment" value="promer">translated amino acids</input></td></tr>
+			<tr><td><input type="checkbox" name="emailCheck"><label><strong>Enter e-mail address (optional): </strong><input class="ff2 fs1 fI" type="text" size="35" name="emailAdr" value="Please type your e-mail address here" onFocus="this.value='';"></label></td></tr>
+			<tr><td><input class="ff2 fs1" type="submit" name="submit1" value="Run CAR"> <input class="ff2 fs1" type="reset" name="reset1" value="Reset" onclick="resetUp();"></td></tr>
+		</table>
+	</form>
+</div>
+<hr>
+
+<span class="ff2 fs1">
+<a href="http://www.cs.nthu.edu.tw/~cllu/"> Algorithm and Bioinformatics Laboratory</a>,
+<a href="http://web-en.cs.nthu.edu.tw/bin/home.php">Department of Computer Science</a>,
+<a href="http://www.nthu.edu.tw/english/index.php">National Tsing Hua University</a>,
+<a href="http://en.wikipedia.org/wiki/Taiwan">Taiwan</a>
+</span>
+</body>
+</html>

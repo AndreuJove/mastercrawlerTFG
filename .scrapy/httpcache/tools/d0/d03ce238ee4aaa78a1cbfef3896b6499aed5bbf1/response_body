@@ -1,0 +1,255 @@
+
+<html>
+
+    <head>
+        <title>AthaMap</title>
+        <meta http-equiv="expires" content="0">
+            
+<script type="text/javascript">
+<!--
+    //function to hide a div:
+    function hideDiv(divName){
+        var divObjects = document.getElementsByTagName("div");
+        divObjects[divName].style.display = 'none';
+    }
+    //function to show a div:
+    function showDiv(divName){
+        var divObjects = document.getElementsByTagName("div");
+        divObjects[divName].style.display = '';
+    }
+    //function for switching between two div-tags
+    //attributes: showDivName: name of the div to be shown
+    //            hideDivName: name of the div to hide
+    function switchDivs(showDivName, hideDivName){
+        var divObjects = document.getElementsByTagName("div");
+        divObjects[showDivName].style.display = '';
+        divObjects[hideDivName].style.display = 'none';
+    }
+//-->
+</script>
+
+<link rel=stylesheet type="text/css" href="css/main.css">    </head>
+
+    <body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" height="320" class="windowHeight"> <!--height defined for older browsers-->
+                        <tr>
+                            <td colspan="2">
+                                <table border="0" cellpadding="5" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td class="header">
+                                            <img src="pictures/AthaMap.gif" border="0" alt="AthaMap">
+                                        </td>
+		                                                <td class="header" align="right">
+                                            <img src="pictures/TU-Logo.gif" border="0" alt="TU-Logo">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr><tr>
+                            <td width="150" height="100%" valign="top" rowspan="2" class="menu">
+                                <table border="0" cellpadding="0" cellspacing="0" width="200"><tr><td class="menuLines"> <!--for border-color-->
+                                            <table border="0" cellpadding="3" cellspacing="1" width="100%">
+                                                <tr>
+                                                    <td class="highlightedmenu"                                                        onclick="javascript:window.location.href = 'index.php'">
+                                                        <a href="index.php" class="hiddenLink">
+                                                            Home
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'menu'"
+                      class="menu"                                                        onclick="javascript:window.location.href = 'tools.php'">
+                                                        <a href="tools.php" class="hiddenLink">
+                                                            Tools
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'submenu'"
+                      class="submenu"                                                        onclick="javascript:window.location.href = 'search.php'">
+                                                        <a href="search.php" class="hiddenLink">
+                                                            &nbsp;&nbsp;-&nbsp;Search
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'submenu'"
+                      class="submenu"                                                        onclick="javascript:window.location.href = 'search_colocalization.php'">
+                                                        <a href="search_colocalization.php" class="hiddenLink">
+                                                            &nbsp;&nbsp;-&nbsp;Colocalization
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'submenu'"
+                      class="submenu"                                                        onclick="javascript:window.location.href = 'search_gene.php'">
+                                                        <a href="search_gene.php" class="hiddenLink">
+                                                            &nbsp;&nbsp;-&nbsp;Gene&nbsp;Analysis
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'submenu'"
+                      class="submenu"                                                        onclick="javascript:window.location.href = 'gene_ident.php'">
+                                                        <a href="gene_ident.php" class="hiddenLink">
+                                                            &nbsp;&nbsp;-&nbsp;Gene&nbsp;Identification
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'submenu'"
+                      class="submenu"                                                        onclick="javascript:window.location.href = 'smallRNA_targets.php'">
+                                                        <a href="smallRNA_targets.php" class="hiddenLink">
+                                                            &nbsp;&nbsp;-&nbsp;Small&nbsp;RNA&nbsp;Targets
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'submenu'"
+                      class="submenu"                                                        onclick="javascript:window.location.href = 'miRNA_ident.php'">
+                                                        <a href="miRNA_ident.php" class="hiddenLink">
+                                                            &nbsp;&nbsp;-&nbsp;MicroRNA&nbsp;Targets
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'menu'"
+                      class="menu"                                                        onclick="javascript:window.location.href = 'description.php'">
+                                                        <a href="description.php" class="hiddenLink">
+                                                            Description
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                                                                        <tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'menu'"
+                      class="menu"                                                        onclick="javascript:window.location.href = 'documentation.php'">
+                                                        <a href="documentation.php" class="hiddenLink">
+                                                            Documentation
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                                                                        <tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'menu'"
+                      class="menu"                                                        onclick="javascript:window.location.href = 'citations.php'">
+                                                        <a href="citations.php" class="hiddenLink">
+                                                            Citations
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'menu'"
+                      class="menu"                                                        onclick="javascript:window.location.href = 'downloads.php'">
+                                                        <a href="downloads.php" class="hiddenLink">
+                                                            Downloads
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'menu'"
+                      class="menu"                                                        onclick="javascript:window.location.href = 'publications.php'">
+                                                        <a href="publications.php" class="hiddenLink">
+                                                            Publications
+                                                        </a>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'menu'"
+                      class="menu"                                                        onclick="javascript:window.location.href = 'history.php'">
+                                                        <a href="history.php" class="hiddenLink">
+                                                            History
+                                                        </a>
+                                                    </td>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'menu'"
+                      class="menu"                                                        onclick="javascript:window.location.href = 'contact.php'">
+                                                        <a href="contact.php" class="hiddenLink">
+                                                            Contact
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'menu'"
+                      class="menu"                                                        onclick="javascript:window.location.href = 'links.php'">
+                                                        <a href="links.php" class="hiddenLink">
+                                                            Links
+                                                        </a>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td onMouseover="javascript:this.className = 'highlightedmenu'"
+                      onMouseout="javascript:this.className = 'menu'"
+                      class="menu"                                                        onclick="javascript:window.location.href = 'disclaimer.php'">
+                                                        <a href="disclaimer.php" class="hiddenLink">
+                                                            Disclaimer
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td></tr></table>
+                            </td>
+                            <td valign="top" width="100%" height="100%">
+                                <noscript>
+                                    <div class="highlightedText">
+                                        <br><br>&nbsp;
+                                        For complete usage of AthaMap please enable JavaScript in the settings of
+                                        your browser!
+                                        <br><br>
+                                        </div>
+                                            </noscript>
+                                                    
+<table class="textpages" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+        <td class="headline">
+            AthaMap
+        </td>
+    </tr><tr>
+        <td>
+            AthaMap provides a genome-wide map of potential transcription factor and small RNA binding
+            sites in <i>Arabidopsis thaliana</i>. Please refer to the <a href="description.php">description</a>
+            page for detailed instructions on how to use the AthaMap <a href="tools.php">tools</a>.
+            Please cite the corresponding <a href="publications.php">publications</a> when using AthaMap.
+        </td>
+    </tr><tr>
+        <td>
+            <img src="pictures/athamap.jpg" alt="AthaMap screenshot">
+        </td>
+    </tr><tr>
+        <td>
+            This work was supported by the German Ministry of Education and Research 
+            and was started as part of the Intergenomics network Braunschweig 
+            (BMBF grant no. 031U110C/031U210C). Further funding was provided within 
+            the GABI-ADVANCIS and Plant-KBBE STREG networks (BMBF grant no. 0315037B and 0315459A).
+        </td>
+    </tr><tr>
+        <td>
+            AthaMap is a free resource for non-comercial users. By using this Web site you agree to be bound
+            by all of the terms and conditions mentioned in the 
+            <a href="disclaimer.php">disclaimer and terms of use</a>.
+        </td>
+    </tr><tr>
+        <td>
+            Last update: 2019-11-08 <br>
+            Version 8
+        </td>
+    </tr>
+</table>
+</td>
+</tr>
+    <tr>
+    <td valign='bottom'><br>&nbsp;
+
+        <a href="/index.php?print=true" class="hiddenlink">
+            <img src="pictures/print.gif" border="0" alt="">
+        </a>&nbsp;
+        <a href="/index.php?print=true">
+            printer-friendly version
+        </a>
+    </td>
+</tr>
+        </table>
+</body>
+
+</html>
+   

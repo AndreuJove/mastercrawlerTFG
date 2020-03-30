@@ -1,0 +1,2057 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+    <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=ISO-8859-1">
+    <meta name="author" content="David Vallenet">
+    <meta name="description" content="Gene Prediction SoftWare for Bacteria. Annotation of MIcrobial Genes : AMIGene. Markov models. Gene finding software.">
+    <meta name="keywords" content="microbial,annotation,gene,genes,codon usage,prediction,amiga,bacteria,model,models,complete,genome,genomes,markof,markov,software,analysis,program,matrix,sequence,genomic sequence,sequence analysis,archaea,genemark,glimmer,training,algorithm,hmm,CDS,CDSs,Coding sequences">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-control" CONTENT="no-cache">
+
+    <LINK TYPE="text/css" REL="stylesheet" HREF="../html/style.css">
+    <TITLE>Gene prediction software : AMIGene (Annotation of MIcrobial Genes)</TITLE>
+    <SCRIPT LANGUAGE="JavaScript" src="../javascript/popUp.js"></SCRIPT>
+</HEAD>
+<BODY bgcolor="#FFFFFF" align="CENTER">
+<BR>
+<CENTER>
+<TABLE bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" align="CENTER" width=750>
+ <TR>
+  <TD align="LEFT" valign="MIDDLE">
+   <A HREF="../html/AmigaMethod.html?AMIGA=f6f99583e356eb25eff6b263b06fa3a2" target="_blank"  ALT="AM I a Gene?"><IMG ALT="AM I a Gene?" BORDER="0" SRC="../Images/amigenlogo.gif"></A>
+  </TD>
+<TD align="RIGHT" valign="MIDDLE">
+  <IMG ALT="AGC logo" BORDER="0" SRC="../Images/chouette.gif">
+</TD>
+ </TR>
+</TABLE>
+</CENTER>
+<BR><BR>
+
+<CENTER>
+<TABLE bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" align="CENTER" width=750>
+ <TR>
+  <TD WIDTH="50%"><A href="../html/helpForm.html?AMIGA=f6f99583e356eb25eff6b263b06fa3a2" target="_blank" class="lien1">How to submit your query ?</A></TD>
+  <TD WIDTH="50%" align=Right><A href="../html/Method.html?AMIGA=f6f99583e356eb25eff6b263b06fa3a2" target="_blank" class="lien1">How does AMIGene work ?</A></TD>
+ </TR>
+</TABLE>
+<TABLE bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" align="CENTER" width=750>
+ <TR>
+  <TD>
+    
+
+    
+    
+    
+    <FORM name="amigene" enctype="multipart/form-data" action="form.php?AMIGA=f6f99583e356eb25eff6b263b06fa3a2" method=POST><input type="hidden" name="AMIGA" value="f6f99583e356eb25eff6b263b06fa3a2" />
+    
+    
+    <HR>
+    <TABLE border="0" width="100%"><TR><TD width=220></TD><TD align="center"><FONT face="ARIAL" size=4 color="#4D4DFF"><B>Gene Model</B> <A href="../html/Method.html?AMIGA=f6f99583e356eb25eff6b263b06fa3a2#1" target="_blank" class="lien1">(?)</A></FONT></TD><TD align="right" width=220> <INPUT type="button" name=""  value="Current Database Status" onClick="window.open('../../micheck/html/database_status.html')"></TD></TD></TABLE>
+    <HR>
+    
+    	<INPUT type="radio" name="AutoMatrix" value="Automatic" CHECKED> <B>Build one new Gene Model</B>
+     	<BR><BR>
+    	<B>OR</B>
+	<BR><BR>
+	<INPUT type="radio" name="AutoMatrix" value="Generated" > <B>Use specific Gene Models for an organism : &nbsp;</B>
+	<SELECT name="species" onChange="radioMatrixActivation()">
+<OPTION>Acaryochloris_marina_MBIC11017</OPTION>
+<OPTION>Acetobacterium_woodii_DSM_1030</OPTION>
+<OPTION>Acholeplasma_laidlawii_PG_8A_uid58901</OPTION>
+<OPTION>Achromobacter_arsenitoxydans_SY8</OPTION>
+<OPTION>Achromobacter_piechaudii_HLE</OPTION>
+<OPTION>Acidaminococcus_fermentans_DSM_20731_uid43471</OPTION>
+<OPTION>Acidianus_hospitalis_W1_uid66875</OPTION>
+<OPTION>Acidiphilium_multivorum_AIU301_uid63345</OPTION>
+<OPTION>Acidithiobacillus_caldus_ATCC_51756</OPTION>
+<OPTION>Acidithiobacillus_caldus_SM_1</OPTION>
+<OPTION>Acidithiobacillus_ferrivorans_CF27</OPTION>
+<OPTION>Acidithiobacillus_ferrivorans_SS3</OPTION>
+<OPTION>Acidithiobacillus_ferrooxidans_ATCC_23270</OPTION>
+<OPTION>Acidithiobacillus_ferrooxidans_ATCC_53993</OPTION>
+<OPTION>Acidithiobacillus_thiooxidans_ATCC_19377</OPTION>
+<OPTION>Acidobacteria_bacterium_Ellin345</OPTION>
+<OPTION>Acidothermus_cellulolyticus_ATCC_43068</OPTION>
+<OPTION>Acidovorax_JS42_uid58427</OPTION>
+<OPTION>Acidovorax_KKS102_uid176500</OPTION>
+<OPTION>Acidovorax_avenae_ATCC_19860_uid42497</OPTION>
+<OPTION>Acidovorax_citrulli_AAC00_1_uid58429</OPTION>
+<OPTION>Acidovorax_ebreus_TPSY_uid59233</OPTION>
+<OPTION>Acinetobacter_AalM_Mm6</OPTION>
+<OPTION>Acinetobacter_KZOAIM</OPTION>
+<OPTION>Acinetobacter_RADIORESISTENS</OPTION>
+<OPTION>Acinetobacter_baumannii_1656_2_uid158677</OPTION>
+<OPTION>Acinetobacter_baumannii_BM4587</OPTION>
+<OPTION>Acinetobacter_baumannii_SDF</OPTION>
+<OPTION>Acinetobacter_baumannii_VEB</OPTION>
+<OPTION>Acinetobacter_guillouiae_20B</OPTION>
+<OPTION>Acinetobacter_lwoffii_NIPH_512</OPTION>
+<OPTION>Acinetobacter_lwoffii_WJ10621</OPTION>
+<OPTION>Acinetobacter_parvus</OPTION>
+<OPTION>Acinetobacter_sp-_HA</OPTION>
+<OPTION>Acinetobacter_sp_ADP1</OPTION>
+<OPTION>ActY_Streptomyces_GoGS12</OPTION>
+<OPTION>Actinobacillus_pleuropneumoniae_serovar_3_JL03</OPTION>
+<OPTION>Actinobaculum_schaalii_CCUG_27420</OPTION>
+<OPTION>Aeromonas_dhakensis_AAK1</OPTION>
+<OPTION>Aeromonas_hydrophila_ATCC_7966</OPTION>
+<OPTION>Aeromonas_hydrophila_ML09_119_uid205540</OPTION>
+<OPTION>Aeromonas_hydrophila_SSU</OPTION>
+<OPTION>Aeromonas_salmonicida_A449</OPTION>
+<OPTION>Aeropyrum_pernix</OPTION>
+<OPTION>Agrobacterium_albertimagni_AOL15</OPTION>
+<OPTION>Agrobacterium_radiobacter_DSM_30147</OPTION>
+<OPTION>Agrobacterium_sp-_10MFCol1-1</OPTION>
+<OPTION>Agrobacterium_sp-_224MFTsu3-1</OPTION>
+<OPTION>Agrobacterium_sp_ATCC31749</OPTION>
+<OPTION>Agrobacterium_tumefaciens_5A</OPTION>
+<OPTION>Agrobacterium_tumefaciens_B6</OPTION>
+<OPTION>Agrobacterium_tumefaciens_B6_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_B6_pB</OPTION>
+<OPTION>Agrobacterium_tumefaciens_C58_Cereon</OPTION>
+<OPTION>Agrobacterium_tumefaciens_C58_Cereon_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_CCNWGS0286</OPTION>
+<OPTION>Agrobacterium_tumefaciens_CFBP5621</OPTION>
+<OPTION>Agrobacterium_tumefaciens_CFBP5621_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_CFBP5771</OPTION>
+<OPTION>Agrobacterium_tumefaciens_CFBP5771_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_CFBP6927</OPTION>
+<OPTION>Agrobacterium_tumefaciens_CFBP6927_B</OPTION>
+<OPTION>Agrobacterium_tumefaciens_CFBP6927_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_CIP497-74_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_F2</OPTION>
+<OPTION>Agrobacterium_tumefaciens_JO-7</OPTION>
+<OPTION>Agrobacterium_tumefaciens_JO-7_B</OPTION>
+<OPTION>Agrobacterium_tumefaciens_JO-7_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_Kerr14</OPTION>
+<OPTION>Agrobacterium_tumefaciens_NCPPB1641</OPTION>
+<OPTION>Agrobacterium_tumefaciens_NCPPB1641_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_NCPPB925</OPTION>
+<OPTION>Agrobacterium_tumefaciens_NCPPB925_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_RV3</OPTION>
+<OPTION>Agrobacterium_tumefaciens_S56</OPTION>
+<OPTION>Agrobacterium_tumefaciens_S56_II</OPTION>
+<OPTION>Agrobacterium_tumefaciens_S56_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_TT111</OPTION>
+<OPTION>Agrobacterium_tumefaciens_TT111_B</OPTION>
+<OPTION>Agrobacterium_tumefaciens_TT111_p</OPTION>
+<OPTION>Agrobacterium_tumefaciens_Zutra_3-1</OPTION>
+<OPTION>Agrobacterium_tumefaciens_Zutra_3-1_B</OPTION>
+<OPTION>Agromonas_oligotrophica_S58_uid192186</OPTION>
+<OPTION>Akkermansia_muciniphila_ATCC_BAA_835_uid58985</OPTION>
+<OPTION>Akkermansia_muciniphila_YL44</OPTION>
+<OPTION>Alcaligenes_faecalis_subsp-_faecalis_NCIB_8687</OPTION>
+<OPTION>Alcanivorax_borkumensis_SK2</OPTION>
+<OPTION>Aliivibrio_salmonicida_LFI1238</OPTION>
+<OPTION>Alkalilimnicola_ehrlichei_MLHE-1</OPTION>
+<OPTION>Allochromatium_vinosum_DSM_180</OPTION>
+<OPTION>Alteromonas_SN2_uid67349</OPTION>
+<OPTION>Alteromonas_macleodii_ATCC_27126_uid55253</OPTION>
+<OPTION>Alteromonas_macleodii_AltDE1_uid179068</OPTION>
+<OPTION>Alteromonas_macleodii__Aegean_Sea_MED64__uid231689</OPTION>
+<OPTION>Alteromonas_macleodii__Balearic_Sea_AD45__uid176366</OPTION>
+<OPTION>Alteromonas_macleodii__Black_Sea_11__uid176365</OPTION>
+<OPTION>Alteromonas_macleodii__Deep_ecotype__uid58251</OPTION>
+<OPTION>Alteromonas_macleodii__English_Channel_615__uid210781</OPTION>
+<OPTION>Alteromonas_macleodii__English_Channel_673__uid176367</OPTION>
+<OPTION>Alteromonas_macleodii__Ionian_Sea_U4__uid210780</OPTION>
+<OPTION>Alteromonas_macleodii__Ionian_Sea_U7__uid210785</OPTION>
+<OPTION>Alteromonas_macleodii__Ionian_Sea_U8__uid210782</OPTION>
+<OPTION>Alteromonas_macleodii__Ionian_Sea_UM4b__uid210784</OPTION>
+<OPTION>Alteromonas_macleodii__Ionian_Sea_UM7__uid210783</OPTION>
+<OPTION>Aminobacterium_colombiense_DSM_12261</OPTION>
+<OPTION>Aminomonas_paucivorans_DSM_12260</OPTION>
+<OPTION>Amycolatopsis_mediterranei_U32</OPTION>
+<OPTION>Anabaena_ATC_33047</OPTION>
+<OPTION>Anabaena_circinalis_ACBU02</OPTION>
+<OPTION>Anabaena_cylindrica_PCC7122</OPTION>
+<OPTION>Anabaena_sp_90</OPTION>
+<OPTION>Anabaena_sp_PCC_7108</OPTION>
+<OPTION>Anabaena_variabilis_ATCC_29413</OPTION>
+<OPTION>Anaeromyxobacter_dehalogenans_2CP-1</OPTION>
+<OPTION>Anaerotruncus_KB18</OPTION>
+<OPTION>Aphanizomenon_sp_CYA626</OPTION>
+<OPTION>Aquifex_aeolicus_VF5</OPTION>
+<OPTION>Archaeoglobus_fulgidus_DSM_4304</OPTION>
+<OPTION>Arthrobacter_aurescens_TC1</OPTION>
+<OPTION>Arthrobacter_phenanthrenivorans_Sphe3</OPTION>
+<OPTION>Arthrospira</OPTION>
+<OPTION>Arthrospira_sp_PCC_8005</OPTION>
+<OPTION>Asaia_M107</OPTION>
+<OPTION>Aster_yellows_witches_broom_phytoplasma_AYWB_uid58297</OPTION>
+<OPTION>Austwickia_chelonae_NBRC_105200</OPTION>
+<OPTION>Azospirillum_amazonense_Y2</OPTION>
+<OPTION>Azospirillum_brasilense_Az39</OPTION>
+<OPTION>Azorhizobium_caulinodans_ORS_571</OPTION>
+<OPTION>Azospirillum_brasilense_CGB497</OPTION>
+<OPTION>Azospirillum_brasilense_FP2</OPTION>
+<OPTION>Azospirillum_halopraeferens_DSM_3675</OPTION>
+<OPTION>Azospirillum_irakense_DSM_11586</OPTION>
+<OPTION>Azospirillum_lipoferum</OPTION>
+<OPTION>Azospirillum_lipoferum_CRT1</OPTION>
+<OPTION>Azospirillum_sp_B510</OPTION>
+<OPTION>BDB_Mardi_Banana</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_5036</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_CC178_uid226115</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_DSM_7</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_LFB112_uid232246</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_LL3</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_TA208</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_UCMB-5033</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_UCMB5113</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_XH7</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_plantarum_CAU_B946</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_plantarum_NAU_B3_uid222816</OPTION>
+<OPTION>Bacillus_amyloliquefaciens_plantarum_YAU_B9601_Y2</OPTION>
+<OPTION>Bacillus_anthracis_A1055</OPTION>
+<OPTION>Bacillus_anthracis_Ames</OPTION>
+<OPTION>Bacillus_anthracis_Ames_0581</OPTION>
+<OPTION>Bacillus_cereus_ATCC14579</OPTION>
+<OPTION>Bacillus_cereus_ATCC_10987</OPTION>
+<OPTION>Bacillus_halodurans</OPTION>
+<OPTION>Bacillus_licheniformis_ATCC_14580</OPTION>
+<OPTION>Bacillus_selenitireducens_MLS10_uid49513</OPTION>
+<OPTION>Bacillus_subtilis</OPTION>
+<OPTION>Bacillus_thuringiensis_serovar_konkukian_str_97-27</OPTION>
+<OPTION>Bacteroides_acidifaciens_A40</OPTION>
+<OPTION>Bacteroides_fragilis_NCTC_9343</OPTION>
+<OPTION>Bacteroides_ovatus_SD_CMC_3f</OPTION>
+<OPTION>Bacteroides_reticulotermitis_JCM_10512</OPTION>
+<OPTION>Bacteroides_thetaiotaomicron_VPI-5482</OPTION>
+<OPTION>Bacteroides_xylanisolvens_XB1A_uid197168</OPTION>
+<OPTION>Barnesiella_YL27</OPTION>
+<OPTION>Barnesiella_YL5</OPTION>
+<OPTION>Barnesiella_YL7</OPTION>
+<OPTION>Bartonella_bacilliformis_KC583</OPTION>
+<OPTION>Bartonella_grahamii_as4aup</OPTION>
+<OPTION>Bartonella_henselae_Houston-1</OPTION>
+<OPTION>Bartonella_quintana_Toulouse</OPTION>
+<OPTION>Bartonella_schoenbuchensis</OPTION>
+<OPTION>Baumannia_cicadellinicola_Homalodisca_coagulata</OPTION>
+<OPTION>Bdellovibrio_bacteriovorus</OPTION>
+<OPTION>Bdellovibrio_bacteriovorus_W</OPTION>
+<OPTION>Beggiatoa_sp_Orange_Guaymas</OPTION>
+<OPTION>Beijerinckia_indica_ATCC_9039</OPTION>
+<OPTION>Beijerinckia_indica_ATCC_9039_p</OPTION>
+<OPTION>Beijerinckiaceae_Ms08</OPTION>
+<OPTION>Beutenbergia_cavernae_DSM_12333</OPTION>
+<OPTION>Bifidobacterium_animalis_subsp_lactis_AD011</OPTION>
+<OPTION>Bifidobacterium_bifidum_NCIMB_41171</OPTION>
+<OPTION>Bifidobacterium_bifidum_PRL2010_uid59883</OPTION>
+<OPTION>Bifidobacterium_breve_ACS_071_V_Sch8b_uid158863</OPTION>
+<OPTION>Bifidobacterium_breve_DSM_20213</OPTION>
+<OPTION>Bifidobacterium_longum_NCC2705</OPTION>
+<OPTION>Blastococcus_saxobsidens</OPTION>
+<OPTION>Blattabacterium_sp_Blattella_germanica_Bge</OPTION>
+<OPTION>Blattabacterium_sp_Periplaneta_americana_BPLAN</OPTION>
+<OPTION>Blautia_sp_YL58</OPTION>
+<OPTION>Bordetella_bronchiseptica_RB50</OPTION>
+<OPTION>Bordetella_parapertussis_12822</OPTION>
+<OPTION>Bordetella_pertussis_Tohama_I</OPTION>
+<OPTION>Bordetella_petrii</OPTION>
+<OPTION>Borrelia_afzelii_PKo</OPTION>
+<OPTION>Borrelia_burgdorferi</OPTION>
+<OPTION>Borrelia_garinii_PBi</OPTION>
+<OPTION>Brachybacterium_faecium_DSM_4810</OPTION>
+<OPTION>Bradyrhizobium_DOA9</OPTION>
+<OPTION>Bradyrhizobium_S23321</OPTION>
+<OPTION>Bradyrhizobium_elkanii_USDA_76</OPTION>
+<OPTION>Bradyrhizobium_japonicum</OPTION>
+<OPTION>Bradyrhizobium_sp_BTAi_plasmide</OPTION>
+<OPTION>Bradyrhizobium_sp_ORS278</OPTION>
+<OPTION>Bradyrhizobium_sp_SUTN92</OPTION>
+<OPTION>Brevibacillus_agri_BAB-2500</OPTION>
+<OPTION>Brevibacillus_brevis_NBRC_100599_uid59175</OPTION>
+<OPTION>Brevibacillus_laterosporus_DSM_25</OPTION>
+<OPTION>Brevibacillus_massiliensis_NULL</OPTION>
+<OPTION>Brevibacillus_panacihumi_W25</OPTION>
+<OPTION>Brevibacillus_thermoruber_423</OPTION>
+<OPTION>Brucella_abortus_S19</OPTION>
+<OPTION>Brucella_canis_ATCC_23365</OPTION>
+<OPTION>Brucella_melitensis_ATCC_23457</OPTION>
+<OPTION>Brucella_melitensis_NI_uid158853</OPTION>
+<OPTION>Brucella_melitensis_biovar_Abortus_2308</OPTION>
+<OPTION>Brucella_microti_CCM_4915</OPTION>
+<OPTION>Brucella_pinnipedialis_B2_94_uid71131</OPTION>
+<OPTION>Buchnera_aphidicola_str_APS</OPTION>
+<OPTION>Buchnera_aphidicola_str_Bp</OPTION>
+<OPTION>Buchnera_aphidicola_str_Sg</OPTION>
+<OPTION>Burkholderia_Burkholderia_glathei</OPTION>
+<OPTION>Burkholderia_CCGE1003</OPTION>
+<OPTION>Burkholderia_ambifaria_AMMD</OPTION>
+<OPTION>Burkholderia_bryophila_376MFSha3-1</OPTION>
+<OPTION>Burkholderia_cenocepacia_BC7_NULL</OPTION>
+<OPTION>Burkholderia_cenocepacia_F01</OPTION>
+<OPTION>Burkholderia_cenocepacia_H111</OPTION>
+<OPTION>Burkholderia_cenocepacia_J2315_uid57953</OPTION>
+<OPTION>Burkholderia_cenocepacia_K56-2Valvano</OPTION>
+<OPTION>Burkholderia_gladioli_BSR3</OPTION>
+<OPTION>Burkholderia_glathei_LMG14190</OPTION>
+<OPTION>Burkholderia_glumae_BGR1</OPTION>
+<OPTION>Burkholderia_graminis_C4D1M</OPTION>
+<OPTION>Burkholderia_kururiensis_M130</OPTION>
+<OPTION>Burkholderia_mallei_ATCC_23344</OPTION>
+<OPTION>Burkholderia_mimosarum_STM3621</OPTION>
+<OPTION>Burkholderia_multivorans_ATCC_17616_uid58909</OPTION>
+<OPTION>Burkholderia_phenoliruptrix_BR3459a</OPTION>
+<OPTION>Burkholderia_phymatum_STM815</OPTION>
+<OPTION>Burkholderia_phytofirmans_BIFAS53</OPTION>
+<OPTION>Burkholderia_phytofirmans_BS455</OPTION>
+<OPTION>Burkholderia_phytofirmans_J1U5</OPTION>
+<OPTION>Burkholderia_phytofirmans_PsJN</OPTION>
+<OPTION>Burkholderia_pseudomallei_K96243</OPTION>
+<OPTION>Burkholderia_pyrrocinia_CH-67</OPTION>
+<OPTION>Burkholderia_rhizoxinica_HKI_454</OPTION>
+<OPTION>Burkholderia_sp-_JPY251</OPTION>
+<OPTION>Burkholderia_sp-_JPY347</OPTION>
+<OPTION>Burkholderia_sp-_WSM4176</OPTION>
+<OPTION>Burkholderia_sp_CCGE1002</OPTION>
+<OPTION>Burkholderia_terrae_BS001</OPTION>
+<OPTION>Burkholderia_terrae_BS007</OPTION>
+<OPTION>Burkholderia_terrae_BS110</OPTION>
+<OPTION>Burkholderia_terrae_BS437</OPTION>
+<OPTION>Burkholderia_vietnamiensis_G4</OPTION>
+<OPTION>CH1038_K_pneumoniae</OPTION>
+<OPTION>Caldicellulosiruptor_saccharolyticus_DSM_8903</OPTION>
+<OPTION>Caldisphaera_lagunensis_DSM_15908_uid183486</OPTION>
+<OPTION>Calescamantes_GBS_SCG</OPTION>
+<OPTION>Calothrix_sp_PCC_6303</OPTION>
+<OPTION>Campylobacter_jejuni</OPTION>
+<OPTION>Campylobacter_jejuni_81116_uid58771</OPTION>
+<OPTION>Campylobacter_jejuni_81_176_uid58503</OPTION>
+<OPTION>Campylobacter_jejuni_M1_uid159535</OPTION>
+<OPTION>Campylobacter_jejuni_subsp-_jejuni_305</OPTION>
+<OPTION>Campylobacter_jejuni_subsp-_jejuni_DFVF1099</OPTION>
+<OPTION>Candidatus_Accumulibacter_aalborgensis_S1</OPTION>
+<OPTION>Candidatus_Accumulibacter_phosphatis_clade_IIA_UW_1</OPTION>
+<OPTION>Candidatus_Betaproteobacterium_kamchatka</OPTION>
+<OPTION>Candidatus_Betaproteobacterium_kamchatka_B</OPTION>
+<OPTION>Candidatus_Blochmannia_floridanus</OPTION>
+<OPTION>Candidatus_Blochmannia_pennsylvanicus_BPEN</OPTION>
+<OPTION>Candidatus_Burkholderia_kirkii_UZHbot1</OPTION>
+<OPTION>Candidatus_Cardinium_hertigii_Zchori-Fein</OPTION>
+<OPTION>Candidatus_Carsonella_ruddii_PV</OPTION>
+<OPTION>Candidatus_Clavochlamydia_salmonicola</OPTION>
+<OPTION>Candidatus_Competibacter_phosphatis_dec11</OPTION>
+<OPTION>Candidatus_Endomicrobium_trichonymphae_Rsa215</OPTION>
+<OPTION>Candidatus_Glomeribacter_gigasporarum</OPTION>
+<OPTION>Candidatus_Hamiltonella_defensa_5AT_Acyrthosiphon_pisum</OPTION>
+<OPTION>Candidatus_Hamiltonella_symbiont_of_Bemisia_tabaci_biotype_B</OPTION>
+<OPTION>Candidatus_Hepatoplasma_Hepato</OPTION>
+<OPTION>Candidatus_Korarchaeum_cryptofilum_OPF8</OPTION>
+<OPTION>Candidatus_Koribacter_versatilis_Ellin345</OPTION>
+<OPTION>Candidatus_Magnetobacterium_casensis</OPTION>
+<OPTION>Candidatus_Methanomethylophilus_alvus_Mx1201</OPTION>
+<OPTION>Candidatus_Methylopumilus_planktonicus_MMS_2_53</OPTION>
+<OPTION>Candidatus_Methylopumilus_turicensis_MMS_10A_171</OPTION>
+<OPTION>Candidatus_Nitrosoarchaeum_limnia_BG20</OPTION>
+<OPTION>Candidatus_Nitrosoarchaeum_limnia_SFB1</OPTION>
+<OPTION>Candidatus_Nitrosopumilus_salaria_BD31</OPTION>
+<OPTION>Candidatus_Nitrososphaera_evergladensis_SR1_NULL</OPTION>
+<OPTION>Candidatus_Nitrosotalea_koreensis_CS</OPTION>
+<OPTION>Candidatus_Odyssella_thessalonicensis_L13</OPTION>
+<OPTION>Candidatus_nitrospira_defluvii</OPTION>
+<OPTION>Capnocytophaga_canimorsus_Cc5_uid70727</OPTION>
+<OPTION>Candidatus_Pelagibacter_ubique_HTCC1062</OPTION>
+<OPTION>Candidatus_Phytoplasma_australiense_uid61641</OPTION>
+<OPTION>Candidatus_Propionivibrio_aalburgensis_S1</OPTION>
+<OPTION>Candidatus_Regiella_insecticola_R5-15</OPTION>
+<OPTION>Candidatus_SR1_aalborgensis_S1</OPTION>
+<OPTION>Candidatus_Sulcia_muelleri_SMDSEM</OPTION>
+<OPTION>Candidatus_Zinderia_insecticola_CARI</OPTION>
+<OPTION>Capnocytophaga_ochracea_DSM_7271</OPTION>
+<OPTION>Carboxydothermus_hydrogenoformans_Z-2901</OPTION>
+<OPTION>Carnobacterium_maltaromaticum_LMA28</OPTION>
+<OPTION>Carnobacterium_sp-_AT7</OPTION>
+<OPTION>Carnoules1</OPTION>
+<OPTION>Carnoules2</OPTION>
+<OPTION>Carnoules3</OPTION>
+<OPTION>Carnoules4</OPTION>
+<OPTION>Carnoules5</OPTION>
+<OPTION>Carnoules7</OPTION>
+<OPTION>Catellibacterium_DW</OPTION>
+<OPTION>Catenulispora_acidiphila_DSM_44928</OPTION>
+<OPTION>Caulobacter_K31_uid58551</OPTION>
+<OPTION>Caulobacter_crescentus_CB15</OPTION>
+<OPTION>Caulobacter_crescentus_CbK_R_Mot_minus_C_crescentus</OPTION>
+<OPTION>Caulobacter_crescentus_NA1000_uid59307</OPTION>
+<OPTION>Caulobacter_crescentus_OR37</OPTION>
+<OPTION>Cedecea_davisae_DSM_4568</OPTION>
+<OPTION>Cellulomonas_flavigena_DSM_20109</OPTION>
+<OPTION>Cellulophaga_lytica_HI</OPTION>
+<OPTION>Cenarchaeum_symbiosum_A</OPTION>
+<OPTION>Chamaesiphon_sp_PCC_6605</OPTION>
+<OPTION>Chelativorans_BNC1</OPTION>
+<OPTION>Chitinophaga_pinensis_DSM_2588</OPTION>
+<OPTION>Chlamydia_muridarum_MopnTet14</OPTION>
+<OPTION>Chlamydia_trachomatis</OPTION>
+<OPTION>Chlamydophila_pneumoniae_J138</OPTION>
+<OPTION>Chlorobium_limicola_DSM_245_uid58127</OPTION>
+<OPTION>Chlorobium_phaeobacteroides_BS1_uid58131</OPTION>
+<OPTION>Chlorobium_tepidum_TLS</OPTION>
+<OPTION>Chloroflexi_0092_K2</OPTION>
+<OPTION>Chloroflexi_AD_CAMBI_1</OPTION>
+<OPTION>Chloroflexus_aurantiacus_J-10-fl</OPTION>
+<OPTION>Chlorogloeopsis_fritschii_PCC_6912</OPTION>
+<OPTION>Chlorogloeopsis_sp_PCC_7702</OPTION>
+<OPTION>Chromobacterium_violaceum_ATCC_12472_uid58001</OPTION>
+<OPTION>Chromohalobacter_salexigens_DSM_3043_uid62921</OPTION>
+<OPTION>Chroococcidiopsis_thermalis_PCC_7203</OPTION>
+<OPTION>Citrobacter_amalonaticus_L8A</OPTION>
+<OPTION>Citrobacter_freundii_GTC_09479</OPTION>
+<OPTION>Citrobacter_koseri_ATCC_BAA_895</OPTION>
+<OPTION>Clostridium_Septicum</OPTION>
+<OPTION>Clostridium_Septicum_JGS7006</OPTION>
+<OPTION>Clostridium_acetobutylicum</OPTION>
+<OPTION>Clostridium_acetobutylicum_ATCC39236</OPTION>
+<OPTION>Clostridium_aurantibutyricum_DSMZ793</OPTION>
+<OPTION>Clostridium_beijerinckii_DSM_6423</OPTION>
+<OPTION>Clostridium_beijerinckii_G117</OPTION>
+<OPTION>Clostridium_botulinum_A_ATCC_3502</OPTION>
+<OPTION>Clostridium_butyricum_1002</OPTION>
+<OPTION>Clostridium_butyricum_169</OPTION>
+<OPTION>Clostridium_butyricum_247</OPTION>
+<OPTION>Clostridium_butyricum_5521</OPTION>
+<OPTION>Clostridium_butyricum_60E-3</OPTION>
+<OPTION>Clostridium_butyricum_CB10</OPTION>
+<OPTION>Clostridium_butyricum_CB6</OPTION>
+<OPTION>Clostridium_butyricum_CB8</OPTION>
+<OPTION>Clostridium_butyricum_DKU-01</OPTION>
+<OPTION>Clostridium_butyricum_E4_BoNT_E_BL5262</OPTION>
+<OPTION>Clostridium_butyricum_IFP923</OPTION>
+<OPTION>Clostridium_butyricum_VPI3266</OPTION>
+<OPTION>Clostridium_difficile_MID13</OPTION>
+<OPTION>Clostridium_lentocellum_DSM_5427_uid49117</OPTION>
+<OPTION>Clostridium_neonatale_13_07</OPTION>
+<OPTION>Clostridium_neonatale_250_09</OPTION>
+<OPTION>Clostridium_saccharolyticum_WM1</OPTION>
+<OPTION>Clostridium_ultunense_Esp</OPTION>
+<OPTION>Comamonas_testosteroni_KF1</OPTION>
+<OPTION>Conexibacter_woesei_DSM_14684</OPTION>
+<OPTION>Corynebacterium_efficiens_YS-314</OPTION>
+<OPTION>Corynebacterium_glutamicum_ATCC_13032</OPTION>
+<OPTION>Corynebacterium_striatum_U2A4042</OPTION>
+<OPTION>Coxiella_burnetii_RSA_493</OPTION>
+<OPTION>Crinalium_epipsammum_PCC_9333</OPTION>
+<OPTION>Croceibacter_atlanticus_HTCC2559</OPTION>
+<OPTION>Crocosphaera_watsonii_WH_8501</OPTION>
+<OPTION>Cupriavidus_metallidurans_NA1</OPTION>
+<OPTION>Cupriavidus_necator_B9</OPTION>
+<OPTION>Cupriavidus_necator_N_1</OPTION>
+<OPTION>Cupriavidus_necator_N_1_p</OPTION>
+<OPTION>Cupriavidus_oxalaticus_LMG2235</OPTION>
+<OPTION>Cupriavidus_taiwanensis_STM6070</OPTION>
+<OPTION>Cupriavidus_taiwanensis_STM618</OPTION>
+<OPTION>Cyanobacterium_UCYN-A</OPTION>
+<OPTION>Cyanobacterium_stanieri_PCC_7202</OPTION>
+<OPTION>Cyanobium_gracile_PCC_6307</OPTION>
+<OPTION>Cyanothece_PCC_7424</OPTION>
+<OPTION>Cyanothece_PCC_7425</OPTION>
+<OPTION>Cyanothece_sp_PCC_7822</OPTION>
+<OPTION>Cyanothece_sp_PCC_8802</OPTION>
+<OPTION>Cylindrospermopsis_raciborskii_CS-505</OPTION>
+<OPTION>DaMo</OPTION>
+<OPTION>Dactylococcopsis_salina_PCC_8305</OPTION>
+<OPTION>Defluvicoccus_vanus</OPTION>
+<OPTION>Dehalobacter_sp_DCA</OPTION>
+<OPTION>Dehalococcoides_BAV1</OPTION>
+<OPTION>Dehalococcoides_ethenogenes_195</OPTION>
+<OPTION>Dehalococcoides_sp_GT</OPTION>
+<OPTION>Dehalogenimonas_lykanthroporepellens_BL-DC-9</OPTION>
+<OPTION>Deinococcus_deserti_VCD115</OPTION>
+<OPTION>Deinococcus_maricopensis_DSM_21211_uid62225</OPTION>
+<OPTION>Deinococcus_radiodurans_R1</OPTION>
+<OPTION>Deinococcus_radiodurans_R1_p</OPTION>
+<OPTION>Delftia_acidovorans_SPH-1</OPTION>
+<OPTION>Delta_proteobacterium_NaphS2</OPTION>
+<OPTION>Desulfamplus_magnetomortis_BW-1</OPTION>
+<OPTION>Desulfitobacterium_dehalogenans_ATCC_51507</OPTION>
+<OPTION>Desulfitobacterium_dichloroeliminans_LMG_P-21439</OPTION>
+<OPTION>Desulfitobacterium_hafniense_DCB-2</OPTION>
+<OPTION>Desulfitobacterium_hafniense_Y51</OPTION>
+<OPTION>Desulfobacterium_autotrophicum_HRM2</OPTION>
+<OPTION>Desulfococcus_multivorans_DSM_2059</OPTION>
+<OPTION>Desulfomonile_tiedjei_DSM_6799</OPTION>
+<OPTION>Desulfonatronum_thiodismutans_MLF1</OPTION>
+<OPTION>Desulfosporosinus_SII</OPTION>
+<OPTION>Desulfosporosinus_orientis_DSM_765</OPTION>
+<OPTION>Desulfosporosinus_sp_OT</OPTION>
+<OPTION>Desulfotalea_psychrophila_LSv54</OPTION>
+<OPTION>Desulfotomaculum_acetoxidans_DSM_771</OPTION>
+<OPTION>Desulfotomaculum_alcoholivorax_DSM_16058</OPTION>
+<OPTION>Desulfotomaculum_hydrothermale</OPTION>
+<OPTION>Desulfotomaculum_reducens_MI-1</OPTION>
+<OPTION>Desulfovibrio_africanus_Walvis_Bay</OPTION>
+<OPTION>Desulfovibrio_desulfuricans_ATCC_27774</OPTION>
+<OPTION>Desulfovibrio_desulfuricans_G20</OPTION>
+<OPTION>Desulfovibrio_fructosovorans_JJ</OPTION>
+<OPTION>Desulfovibrio_gigas_DSM_1382_=_ATCC_19364</OPTION>
+<OPTION>Desulfovibrio_hydrothermalis_sp_nov_AM13</OPTION>
+<OPTION>Desulfovibrio_magneticus_RS_1</OPTION>
+<OPTION>Desulfovibrio_piezophilus_sp_nov_C1TLV30</OPTION>
+<OPTION>Desulfovibrio_salexigens_DSM_2638</OPTION>
+<OPTION>Desulfovibrio_vulgaris_DP4</OPTION>
+<OPTION>Desulfovibrio_vulgaris_Hildenborough</OPTION>
+<OPTION>Desulfurispora_thermophila_DSM_16022</OPTION>
+<OPTION>Desulfosporosinus_acidiphilus_DSM_22704</OPTION>
+<OPTION>Desulfosporosinus_meridiei_DSM_13257</OPTION>
+<OPTION>Desulfosporosinus_orientis_DSM765</OPTION>
+<OPTION>Desulfosporosinus_youngiae_DSM_17734</OPTION>
+<OPTION>Desulfurivibrio_alkaliphilus_AHT2</OPTION>
+<OPTION>Dickeya_chrysanthemi_1591</OPTION>
+<OPTION>Dickeya_dadantii_3937</OPTION>
+<OPTION>Dickeya_dianthicola_04_9</OPTION>
+<OPTION>Dickeya_paradisiaca_703</OPTION>
+<OPTION>Dickeya_solani_08_23_3_1</OPTION>
+<OPTION>Dickeya_solani_M005</OPTION>
+<OPTION>Dickeya_zeae_586</OPTION>
+<OPTION>Dictyoglomus_turgidum_DSM_6724</OPTION>
+<OPTION>Diplorickettsia_massiliensis_20B</OPTION>
+<OPTION>Dyadobacter_fermentans_DSM_18053</OPTION>
+<OPTION>Dysgonomonas_gadei_ATCC_BAA-286</OPTION>
+<OPTION>Dysgonomonas_mossii_DSM_22836</OPTION>
+<OPTION>Elizabethkingia_anophelis_V0378064</OPTION>
+<OPTION>Elusimicrobium_minutum_Pei191_uid58949</OPTION>
+<OPTION>Elizabethkingia_anophelis_Po0527107</OPTION>
+<OPTION>Endomicrobium_trichonymphae_Rsa215</OPTION>
+<OPTION>Enterobacter_638</OPTION>
+<OPTION>Enterobacter_MR1_MR1</OPTION>
+<OPTION>Enterobacter_R4_368_uid208672</OPTION>
+<OPTION>Enterobacter_cloacae_162_plasmid</OPTION>
+<OPTION>Enterobacter_cloacae_ATCC_13047_uid48363</OPTION>
+<OPTION>Enterobacter_cloacae_ENHKU01_uid172463</OPTION>
+<OPTION>Enterobacter_cloacae_MR2</OPTION>
+<OPTION>Enterobacter_cloacae_SCF1_uid59969</OPTION>
+<OPTION>Enterobacter_cloacae_dissolvens_SDM_uid168997</OPTION>
+<OPTION>Enterobacter_cloacae_subsp-_cloacae_GS1</OPTION>
+<OPTION>Enterobacter_cloacae_subsp-_dissolvens_SP1</OPTION>
+<OPTION>Enterobacter_radicincitans_DSM16656</OPTION>
+<OPTION>Enterobacter_sp-_SST3</OPTION>
+<OPTION>Enterococcus_faecalis_V583</OPTION>
+<OPTION>Enterococcus_gallinarum_KB15</OPTION>
+<OPTION>Epulopiscium_sp_Type_B</OPTION>
+<OPTION>Erwinia_carotovora_atroseptica_SCRI1043</OPTION>
+<OPTION>Erysipelotrichaceae_sp_I46</OPTION>
+<OPTION>Escherichia_Coli_01_111A_03</OPTION>
+<OPTION>Escherichia_coli_042</OPTION>
+<OPTION>Escherichia_coli_092</OPTION>
+<OPTION>Escherichia_coli_26_AU_GLYBX</OPTION>
+<OPTION>Escherichia_coli_536</OPTION>
+<OPTION>Escherichia_coli_55989</OPTION>
+<OPTION>Escherichia_coli_APEC_AGI-5</OPTION>
+<OPTION>Escherichia_coli_APEC_O1</OPTION>
+<OPTION>Escherichia_coli_B</OPTION>
+<OPTION>Escherichia_coli_CFT073</OPTION>
+<OPTION>Escherichia_coli_DAEC_14</OPTION>
+<OPTION>Escherichia_coli_E2348-69</OPTION>
+<OPTION>Escherichia_coli_ED1a</OPTION>
+<OPTION>Escherichia_coli_Fergusonii</OPTION>
+<OPTION>Escherichia_coli_HN280</OPTION>
+<OPTION>Escherichia_coli_IAI1</OPTION>
+<OPTION>Escherichia_coli_IAI39</OPTION>
+<OPTION>Escherichia_coli_K12_MG1655</OPTION>
+<OPTION>Escherichia_coli_O157H7</OPTION>
+<OPTION>Escherichia_coli_O157H7_EDL933</OPTION>
+<OPTION>Escherichia_coli_O26H11_21765</OPTION>
+<OPTION>Escherichia_coli_S88</OPTION>
+<OPTION>Escherichia_coli_TN48</OPTION>
+<OPTION>Escherichia_coli_UMN026</OPTION>
+<OPTION>Escherichia_coli_UTI89</OPTION>
+<OPTION>Escherichia_sp-_3_2_53FAA</OPTION>
+<OPTION>Escherichia_sp-_4_1_40B</OPTION>
+<OPTION>Ewingella_americana_C024</OPTION>
+<OPTION>Exiguobacterium_N39</OPTION>
+<OPTION>Fervidobacterium_nodosum_Rt17-B1</OPTION>
+<OPTION>Fervidobacterium_pennivorans_DSM_9078</OPTION>
+<OPTION>Filomicrobium_W</OPTION>
+<OPTION>Filomicrobium_Y</OPTION>
+<OPTION>Firmicutes_sp_ASF500</OPTION>
+<OPTION>Fischerella_sp_JSC-11</OPTION>
+<OPTION>Fischerella_sp_PCC_9431</OPTION>
+<OPTION>Flavobacteriaceae_bacterium_3519_10</OPTION>
+<OPTION>Flavobacterium_columnare_ATCC_49512</OPTION>
+<OPTION>Flavobacterium_johnsoniae_UW101</OPTION>
+<OPTION>Flavobacterium_psychrophilum_JIP</OPTION>
+<OPTION>Flavobacterium_psychrophilum_OSU_THC0290</OPTION>
+<OPTION>Fluoribacter_dumoffii_Tex-KL</OPTION>
+<OPTION>Francisella_tularensis_tularensis</OPTION>
+<OPTION>Frankia_CcI3</OPTION>
+<OPTION>Frankia_EAN1pec</OPTION>
+<OPTION>Frankia_alni_ACN14a</OPTION>
+<OPTION>Gallionella_capsiferriformans_ES_2</OPTION>
+<OPTION>Geitlerinema_PCC_8501</OPTION>
+<OPTION>Geitlerinema_sp_PCC_7105</OPTION>
+<OPTION>Geitlerinema_sp_PCC_7407</OPTION>
+<OPTION>Geobacter_sulfurreducens_PCA</OPTION>
+<OPTION>Geodermatophilus_obscurus_DSM_43160</OPTION>
+<OPTION>Glaciecola_psychrophila_170_uid193711</OPTION>
+<OPTION>Gloeobacter_violaceus_PCC_7421</OPTION>
+<OPTION>Gloeocapsa_sp_PCC_7428</OPTION>
+<OPTION>Gordonia_RT</OPTION>
+<OPTION>Gordonia_bronchialis_DSM_43247</OPTION>
+<OPTION>Gordonia_effusa_NBRC_100432</OPTION>
+<OPTION>Gordonia_malaquae_NBRC_108250</OPTION>
+<OPTION>Gramella_forsetii_KT0803</OPTION>
+<OPTION>Haemophilus_influenzae</OPTION>
+<OPTION>Hafnia_alvei_ATCC_51873</OPTION>
+<OPTION>Hafnia_alvei_FB1</OPTION>
+<OPTION>Haloarcula_marismortui_ATCC_43049</OPTION>
+<OPTION>Haloarcula_marismortui_ATCC_43049_k2</OPTION>
+<OPTION>Halobacterium_salinarum_R1_uid61571</OPTION>
+<OPTION>Halobacterium_sp</OPTION>
+<OPTION>Haloferax_volcanii_DS2_uid46845</OPTION>
+<OPTION>Halomonas_elongata_DSM_2581</OPTION>
+<OPTION>Halomonas_lionensis_RHS90</OPTION>
+<OPTION>Halomonas_sp_GFAJ-1</OPTION>
+<OPTION>Halomonas_sp_HAL1</OPTION>
+<OPTION>Halomonas_sp_KM-1</OPTION>
+<OPTION>Halomonas_titanicae_BH1</OPTION>
+<OPTION>Haloquadratum_walsbyi</OPTION>
+<OPTION>Halorhabdus_utahensis_DSM_12940_uid59189</OPTION>
+<OPTION>Haloterrigena_turkmenica_DSM_5511</OPTION>
+<OPTION>Halothece_sp_PCC_7418</OPTION>
+<OPTION>Helicobacter_hepaticus</OPTION>
+<OPTION>Helicobacter_pylori_26695</OPTION>
+<OPTION>Helicobacter_pylori_35A_uid49903</OPTION>
+<OPTION>Helicobacter_pylori_51_uid161925</OPTION>
+<OPTION>Helicobacter_pylori_83_uid161153</OPTION>
+<OPTION>Helicobacter_pylori_HLJHP193</OPTION>
+<OPTION>Herbaspirillum_seropedicae_SmR1_uid50427</OPTION>
+<OPTION>Herminiimonas_arsenicoxydans</OPTION>
+<OPTION>Hirschia_NT1</OPTION>
+<OPTION>Hyd24_12_AD_Damh_1</OPTION>
+<OPTION>Hyd24_12_Randers_1_Randers_1</OPTION>
+<OPTION>Hyd24_12_Viborg_1_Viborg_1</OPTION>
+<OPTION>Hyperthermus_butylicus</OPTION>
+<OPTION>Hyphomicrobium_denitrificans_1NES1_uid179904</OPTION>
+<OPTION>Hyphomicrobium_denitrificans_ATCC_51888</OPTION>
+<OPTION>Hyphomicrobium_facile_Bras3</OPTION>
+<OPTION>Hyphomicrobium_methylovorum_Bras1</OPTION>
+<OPTION>Hyphomicrobium_nitrativorans_NL23_uid230615</OPTION>
+<OPTION>Hyphomicrobium_sp-_99</OPTION>
+<OPTION>Hyphomicrobium_sp_GJ21</OPTION>
+<OPTION>Hyphomicrobium_sp_MC1</OPTION>
+<OPTION>Hyphomicrobium_sp_VS</OPTION>
+<OPTION>Hyphomicrobium_sulfonivorans_S1</OPTION>
+<OPTION>Hyphomicrobium_zarzanii_ATCC_27496</OPTION>
+<OPTION>Ianthella_basta_alpha_symbiont</OPTION>
+<OPTION>Ianthella_basta_gamma_symbiont</OPTION>
+<OPTION>Ianthella_basta_plancto_symbiont</OPTION>
+<OPTION>Ianthella_basta_thaum_symbiont</OPTION>
+<OPTION>Ianthella_basta_unbinned</OPTION>
+<OPTION>Ignicoccus_hospitalis_KIN4-I</OPTION>
+<OPTION>Janibacter_sp_HTCC2649</OPTION>
+<OPTION>Janthinobacterium_Marseille</OPTION>
+<OPTION>Jonesia_denitrificans_DSM_20603</OPTION>
+<OPTION>KV6268_6268</OPTION>
+<OPTION>Kingella_kingae_KWG1</OPTION>
+<OPTION>Kingella_kingae_SIMLA</OPTION>
+<OPTION>Kingella_kingae_SIMS</OPTION>
+<OPTION>Kingella_kingae_STF4A</OPTION>
+<OPTION>Kitasatospora_setae_KM_6054</OPTION>
+<OPTION>Klebisella_pneumoniae_CH1157</OPTION>
+<OPTION>Klebsiella_michiganensis_SB2908</OPTION>
+<OPTION>Klebsiella_michiganensis_SB9</OPTION>
+<OPTION>Klebsiella_oxytoca_SB3355</OPTION>
+<OPTION>Klebsiella_oxytoca_SB3356</OPTION>
+<OPTION>Klebsiella_oxytoca_SB73</OPTION>
+<OPTION>Klebsiella_pneumoniae_342</OPTION>
+<OPTION>Klebsiella_pneumoniae_CG43_plasmid</OPTION>
+<OPTION>Klebsiella_pneumoniae_CH1034</OPTION>
+<OPTION>Klebsiella_pneumoniae_Kp52145</OPTION>
+<OPTION>Klebsiella_pneumoniae_SB11_pacbio</OPTION>
+<OPTION>Klebsiella_pneumoniae_SB30_pacbio</OPTION>
+<OPTION>Klebsiella_pneumoniae_SB3332_pacbio</OPTION>
+<OPTION>Klebsiella_pneumoniae_SB33_pacbio</OPTION>
+<OPTION>Klebsiella_pneumoniae_SB4021_pacbio</OPTION>
+<OPTION>Klebsiella_pneumoniae_SB4021_pacbio_p</OPTION>
+<OPTION>Klebsiella_pneumoniae_SB4496_pacbio</OPTION>
+<OPTION>Klebsiella_pneumoniae_SB4536_pacbio</OPTION>
+<OPTION>Klebsiella_pneumoniae_SB94_pacbio</OPTION>
+<OPTION>Klebsiella_pneumoniae_subsp-_pneumoniae_DSM_30104</OPTION>
+<OPTION>Klebsiella_pneumoniae_uid203334</OPTION>
+<OPTION>Klebsiella_sp_01A030</OPTION>
+<OPTION>Klebsiella_variicola_10w11</OPTION>
+<OPTION>Klebsiella_oxytoca_strain_SB175</OPTION>
+<OPTION>Klebsiella_variicola_At_22</OPTION>
+<OPTION>Kosmotoga_olearia_TBF_19_5_1</OPTION>
+<OPTION>Kribbella_flavida_DSM_17836</OPTION>
+<OPTION>Kuenenia_stuttgartiensis</OPTION>
+<OPTION>Kytococcus_sedentarius_DSM_20547</OPTION>
+<OPTION>Lachnospiraceae_sp_ASF356</OPTION>
+<OPTION>Lachnospiraceae_sp_YL32</OPTION>
+<OPTION>Lactobacillus_acidophilus_NCFM</OPTION>
+<OPTION>Lactobacillus_casei_ATCC_334</OPTION>
+<OPTION>Lactobacillus_casei_BL23</OPTION>
+<OPTION>Lactobacillus_curvatus_CRL_705</OPTION>
+<OPTION>Lactobacillus_delbrueckii_subsp_bulgaricus_ATCC_BAA-365</OPTION>
+<OPTION>Lactobacillus_fermentum_IFO_3956</OPTION>
+<OPTION>Lactobacillus_helveticus_DPC_4571</OPTION>
+<OPTION>Lactobacillus_johnsonii_FI9785</OPTION>
+<OPTION>Lactobacillus_mucosae_DN-135015</OPTION>
+<OPTION>Lactobacillus_murinus_ASF361_UV</OPTION>
+<OPTION>Lactobacillus_paracasei_subsp.paracasei_8700:2</OPTION>
+<OPTION>Lactobacillus_plantarum_ST_III</OPTION>
+<OPTION>Lactobacillus_plantarum_WCFS1</OPTION>
+<OPTION>Lactobacillus_plantarum_subsp_plantarum_ATCC_14917</OPTION>
+<OPTION>Lactobacillus_reuteri_I49</OPTION>
+<OPTION>Lactobacillus_rhamnosus_GG</OPTION>
+<OPTION>Lactobacillus_rhamnosus_HN001</OPTION>
+<OPTION>Lactobacillus_rhamnosus_Lc_705</OPTION>
+<OPTION>Lactobacillus_sakei_23K_uid58281</OPTION>
+<OPTION>Lactobacillus_salivarius_ATCC_11741</OPTION>
+<OPTION>Lactobacillus_salivarius_GJ-24</OPTION>
+<OPTION>Lactobacillus_salivarius_NIAS840</OPTION>
+<OPTION>Lactobacillus_salivarius_SMXD51</OPTION>
+<OPTION>Lactobacillus_salivarius_SMXD51_v1</OPTION>
+<OPTION>Lactobacillus_salivarius_UCC118</OPTION>
+<OPTION>Lactococcus_garvieae_ATCC_49156_uid73413</OPTION>
+<OPTION>Lactococcus_lactis</OPTION>
+<OPTION>Lactococcus_lactis_subsp_cremoris_MG1363</OPTION>
+<OPTION>Lactococcus_piscium_EU2241</OPTION>
+<OPTION>Lactococcus_raffinolactis_4877</OPTION>
+<OPTION>Lawsonia_intracellularis_PHE_MN1-00</OPTION>
+<OPTION>Legionella-Like_Amoebal_Pathogens_10</OPTION>
+<OPTION>Legionella_hackeliae</OPTION>
+<OPTION>Legionella_longbeachae</OPTION>
+<OPTION>Legionella_longbeachae_D-4968</OPTION>
+<OPTION>Legionella_micdadei</OPTION>
+<OPTION>Legionella_pneumophila_Lens</OPTION>
+<OPTION>Legionella_pneumophila_Lorraine</OPTION>
+<OPTION>Legionella_pneumophila_Philadelphia_1</OPTION>
+<OPTION>Legionella_pneumophila_environmentale</OPTION>
+<OPTION>Leisingera_methylohalidivorans_MB2</OPTION>
+<OPTION>Leptolynbya_PCC_73110</OPTION>
+<OPTION>Leptolyngbya_sp_PCC_7104</OPTION>
+<OPTION>Leptolyngbya_sp_PCC_7124</OPTION>
+<OPTION>Leptolyngbya_sp_PCC7376</OPTION>
+<OPTION>Leptolyngbya_sp_PCC_7375</OPTION>
+<OPTION>Leptospira_biflexa_serovar_Patoc_Patoc</OPTION>
+<OPTION>Leptospira_borgpetersenii_200901122</OPTION>
+<OPTION>Leptospira_borgpetersenii_serovar_Hardjo-bovis_JB197</OPTION>
+<OPTION>Leptospira_interrogans_serovar_Copenhageni_str_Fiocruz_L1-130</OPTION>
+<OPTION>Leptospira_interrogans_serovar_Icterohaemorrhagiae_Verdun_LP</OPTION>
+<OPTION>Leptospira_interrogans_serovar_Lai_str_56601</OPTION>
+<OPTION>Leptospira_interrogans_serovar_Manilae_L495</OPTION>
+<OPTION>Leptospira_kirschneri_200801774</OPTION>
+<OPTION>Leptospira_licerasiae_serovar_Varillal_VAR_010</OPTION>
+<OPTION>Leptospira_santarosai_serovar_Shermani_str_1342KT</OPTION>
+<OPTION>Leptothrix_cholodnii_SP_6</OPTION>
+<OPTION>Leuconostoc_gelidum_JB7_uid175682</OPTION>
+<OPTION>Listeria_grayi_DSM_20601</OPTION>
+<OPTION>Listeria_innocua_Clip11262</OPTION>
+<OPTION>Listeria_ivanovii_FSL_F6-596</OPTION>
+<OPTION>Listeria_marthii_FSL_S4-120</OPTION>
+<OPTION>Listeria_monocytogenes_10403S</OPTION>
+<OPTION>Listeria_monocytogenes_4423</OPTION>
+<OPTION>Listeria_monocytogenes_EGD_e</OPTION>
+<OPTION>Listeria_monocytogenes_FSL_R2_561</OPTION>
+<OPTION>Listeria_monocytogenes_Finland_1998</OPTION>
+<OPTION>Listeria_monocytogenes_G6006</OPTION>
+<OPTION>Listeria_monocytogenes_J0161</OPTION>
+<OPTION>Listeria_monocytogenes_JF5171</OPTION>
+<OPTION>Listeria_monocytogenes_M7</OPTION>
+<OPTION>Listeria_monocytogenes_PF49</OPTION>
+<OPTION>Listeria_monocytogenes_QOC1</OPTION>
+<OPTION>Listeria_monocytogenes_QOC2</OPTION>
+<OPTION>Listeria_monocytogenes_R479a</OPTION>
+<OPTION>Listeria_monocytogenes_SLCC2755</OPTION>
+<OPTION>Listeria_monocytogenes_serotype_4a_L99</OPTION>
+<OPTION>Listeria_seeligeri_serovar_1_2b_SLCC3954</OPTION>
+<OPTION>Listeria_welshimeri_serovar_6b_str_SLCC5334</OPTION>
+<OPTION>Lokis_Caste_LKC1BA_M01C_LokiBin</OPTION>
+<OPTION>Louisa_chamberiensis_130333</OPTION>
+<OPTION>Lyngbya_majuscula_3L</OPTION>
+<OPTION>Lyngbya_sp_CY9616</OPTION>
+<OPTION>Macrococcus_caseolyticus_JCSC5402_uid59003</OPTION>
+<OPTION>Magnetite-containing_magnetic_vibrio_strain_MV-1</OPTION>
+<OPTION>Magnetobacterium_casensis_Mcasensis</OPTION>
+<OPTION>Magnetococcus_MC-1</OPTION>
+<OPTION>Magnetospirillum_ME</OPTION>
+<OPTION>Magnetospirillum_gryphiswaldense_MSR-1</OPTION>
+<OPTION>Magnetospirillum_magneticum_AMB-1</OPTION>
+<OPTION>Magnetospirillum_magnetotacticum_MS-1</OPTION>
+<OPTION>Magnetospirillum_marine_QH-2</OPTION>
+<OPTION>Magnetospirillum_nanocrystal_MO-1</OPTION>
+<OPTION>Magnetospirillum_sp-_SO-1</OPTION>
+<OPTION>Magnetotactic_Thiotrichales_BW2</OPTION>
+<OPTION>Magnetotactic_multicellular_prokaryotes_pine_cone_like</OPTION>
+<OPTION>Magnetotactic_ovoidal_bacterium_MO-1</OPTION>
+<OPTION>Magnetotactic_ovoidal_bacterium_MO-2</OPTION>
+<OPTION>Magnetotactic_sp_FH-1</OPTION>
+<OPTION>Mannheimia_haemolytica_D153_uid212303</OPTION>
+<OPTION>Mannheimia_haemolytica_D171_uid212304</OPTION>
+<OPTION>Mannheimia_haemolytica_D174_uid212305</OPTION>
+<OPTION>Mannheimia_haemolytica_M42548_uid198769</OPTION>
+<OPTION>Mannheimia_haemolytica_USDA_ARS_SAM_185_uid195457</OPTION>
+<OPTION>Mannheimia_haemolytica_USDA_ARS_USMARC_183_uid195458</OPTION>
+<OPTION>Mannheimia_haemolytica_USMARC_2286_uid213228</OPTION>
+<OPTION>Marine_11b_thaumarchaeon_SCGC_AB_629_J07</OPTION>
+<OPTION>Mariniflexile_fucanivorans_SW5</OPTION>
+<OPTION>Marinitoga_piezophila_KA3</OPTION>
+<OPTION>Marinobacter_adhaerens_HP15_uid162009</OPTION>
+<OPTION>Marinobacter_hydrocarbonoclasticus_ATCC49840</OPTION>
+<OPTION>Marinobacter_santoriniensis_NKSG1</OPTION>
+<OPTION>Marinomonas_mediterranea_MMB_1_uid64753</OPTION>
+<OPTION>Mastigocladopsis_repens_MORA</OPTION>
+<OPTION>Meganema_perideroedes_Gr1</OPTION>
+<OPTION>Mesoplasma_florum_L1</OPTION>
+<OPTION>Mesorhizobium_LM</OPTION>
+<OPTION>Mesorhizobium_loti_str_MAFF303099</OPTION>
+<OPTION>Mesorhizobium_metallidurans_STM2683</OPTION>
+<OPTION>Mesorhizobium_metallidurans_STM4661</OPTION>
+<OPTION>Mesorhizobium_plurifarium_Dj20</OPTION>
+<OPTION>Mesorhizobium_plurifarium_ORS_1032</OPTION>
+<OPTION>Mesorhizobium_plurifarium_ORS_3356</OPTION>
+<OPTION>Mesorhizobium_plurifarium_ORS_3365</OPTION>
+<OPTION>Mesorhizobium_plurifarium_STM7562</OPTION>
+<OPTION>Mesorhizobium_plurifarium_STM7563</OPTION>
+<OPTION>Mesorhizobium_plurifarium_Sod10</OPTION>
+<OPTION>Mesotoga_infera_str_VNs100</OPTION>
+<OPTION>Mesotoga_prima_MesG1_Ag_4_2</OPTION>
+<OPTION>Mesotoga_sulfurreducens</OPTION>
+<OPTION>Metallosphaera_cuprina_Ar_4_uid66329</OPTION>
+<OPTION>Metallosphaera_sedula_DSM_5348</OPTION>
+<OPTION>Methanobacterium_thermoautotrophicum</OPTION>
+<OPTION>Methanobrevibacter_smithii_ATCC_35061</OPTION>
+<OPTION>Methanocaldococcus_fervens_AG86_uid59347</OPTION>
+<OPTION>Methanocaldococcus_villosus_KIN24T80</OPTION>
+<OPTION>Methanococcoides_burtonii_DSM_6242</OPTION>
+<OPTION>Methanococcus_aeolicus_Nankai-3</OPTION>
+<OPTION>Methanococcus_jannaschii</OPTION>
+<OPTION>Methanococcus_maripaludis_C5</OPTION>
+<OPTION>Methanococcus_maripaludis_X1_uid70729</OPTION>
+<OPTION>Methanococcus_vannielii_SB</OPTION>
+<OPTION>Methanococcus_voltae_A3_uid49529</OPTION>
+<OPTION>Methanocorpusculum_labreanum_Z</OPTION>
+<OPTION>Methanoculleus_bourgensis_MS2</OPTION>
+<OPTION>Methanoculleus_marisnigri_JR1</OPTION>
+<OPTION>Methanoculleus_sp_MAB1</OPTION>
+<OPTION>Methanomassiliicoccus_luminyensis_B10</OPTION>
+<OPTION>Methanomethylovorans_hollandica_DSM_15978_uid184864</OPTION>
+<OPTION>Methanopyrus_kandleri</OPTION>
+<OPTION>Methanoregula_boonei_6A8_uid58815</OPTION>
+<OPTION>Methanosaeta_concilii_GP-6</OPTION>
+<OPTION>Methanosaeta_thermophila_PT</OPTION>
+<OPTION>Methanosarcina_acetivorans</OPTION>
+<OPTION>Methanosarcina_barkeri_fusaro</OPTION>
+<OPTION>Methanosphaera_stadtmanae</OPTION>
+<OPTION>Methanospirillum_hungatei_JF-1</OPTION>
+<OPTION>Methanothermobacter_marburgensis_Marburg_uid51637</OPTION>
+<OPTION>Methanotorris_igneus_Kol_5_uid67321</OPTION>
+<OPTION>Methylacidiphilum_fumariolicum_SolV</OPTION>
+<OPTION>Methylacidiphilum_infernorum_V4</OPTION>
+<OPTION>Methylibium_petroleiphilum_PM1</OPTION>
+<OPTION>Methyloaurella_12</OPTION>
+<OPTION>Methylobacillus_flagellatus_KT</OPTION>
+<OPTION>Methylobacter_3132</OPTION>
+<OPTION>Methylobacter_luteus_IMV-B-3098T</OPTION>
+<OPTION>Methylobacter_marinus_A45</OPTION>
+<OPTION>Methylobacter_sp-_UW_659-2-G11</OPTION>
+<OPTION>Methylobacter_sp-_UW_659-2-H10</OPTION>
+<OPTION>Methylobacter_tundripaludum_SV96</OPTION>
+<OPTION>Methylobacterium_alcaliphilus_20Z</OPTION>
+<OPTION>Methylobacterium_extorquens_AM1</OPTION>
+<OPTION>Methylobacterium_extorquens_CM4</OPTION>
+<OPTION>Methylobacterium_extorquens_CM4_plasmide</OPTION>
+<OPTION>Methylobacterium_extorquens_DM4</OPTION>
+<OPTION>Methylobacterium_mesophilicum_SR1-6-6</OPTION>
+<OPTION>Methylobacterium_nodulans_ORS_2060</OPTION>
+<OPTION>Methylobacterium_populi_BJ001</OPTION>
+<OPTION>Methylobacterium_radiotolerans_JCM_2831</OPTION>
+<OPTION>Methylobacterium_sp-_285MFTsu5-1</OPTION>
+<OPTION>Methylobacterium_sp-_77</OPTION>
+<OPTION>Methylobacterium_sp-_88A</OPTION>
+<OPTION>Methylobacterium_sp-_WSM2598</OPTION>
+<OPTION>Methylobacterium_sp_4-46</OPTION>
+<OPTION>Methylocaldum_szegediense_O-12</OPTION>
+<OPTION>Methylocapsa_acidiphila_B2</OPTION>
+<OPTION>Methylocapsa_acidiphila_B2_p</OPTION>
+<OPTION>Methylocella_silvestris_BL2</OPTION>
+<OPTION>Methylococcus_capsulatus_Bath</OPTION>
+<OPTION>Methylocystis_SC2</OPTION>
+<OPTION>Methylocystis_rosea_SV97T</OPTION>
+<OPTION>Methylocystis_soil</OPTION>
+<OPTION>Methyloferula_stellata_AR4</OPTION>
+<OPTION>Methyloglobulus_morosus_KoM1</OPTION>
+<OPTION>Methylohalobius_crimeensis_10Ki</OPTION>
+<OPTION>Methylomicrobium_album_BG8</OPTION>
+<OPTION>Methylomicrobium_buryatense_5G</OPTION>
+<OPTION>Methylomonas_JS</OPTION>
+<OPTION>Methylomonas_methanica_MC09</OPTION>
+<OPTION>Methylomonas_sp_11b</OPTION>
+<OPTION>Methylomonas_sp_LW13</OPTION>
+<OPTION>Methylophaga_JAM1</OPTION>
+<OPTION>Methylophaga_JAM7</OPTION>
+<OPTION>Methylophaga_lonarensis_MPL</OPTION>
+<OPTION>Methylophaga_thiooxidans_DMS010</OPTION>
+<OPTION>Methylophilus_methylotrophus_DSM_46235_-_ATCC_53528</OPTION>
+<OPTION>Methylophilus_sp-_1</OPTION>
+<OPTION>Methylophilus_sp-_42</OPTION>
+<OPTION>Methylopila_sp-_M107</OPTION>
+<OPTION>Methylosarcina_fibrata_AML-C10</OPTION>
+<OPTION>Methylosarcina_lacus_LW14</OPTION>
+<OPTION>Methylosinus_sp_LW3</OPTION>
+<OPTION>Methylosinus_sp_LW4</OPTION>
+<OPTION>Methylosinus_trichosporium_OB3b</OPTION>
+<OPTION>Methylotenera_mobilis_JLW8_uid59373</OPTION>
+<OPTION>Methylotenera_sp-_1P-1</OPTION>
+<OPTION>Methylotenera_versatilis_79</OPTION>
+<OPTION>Methyloversatilis_sp-_RZ18-153</OPTION>
+<OPTION>Methyloversatilis_universalis_FAM5</OPTION>
+<OPTION>Methylovorus_glucosetrophus_SIP3_4_uid59367</OPTION>
+<OPTION>Methylovulum_miyakonense_strain_HT12</OPTION>
+<OPTION>Micavibrio_EPB_uid194120</OPTION>
+<OPTION>Micavibrio_aeruginosavorus_ARL-13</OPTION>
+<OPTION>Microbacterium_C448</OPTION>
+<OPTION>Microbacterium_pyrene_degrading_M</OPTION>
+<OPTION>Microchaete_sp_PCC_7126</OPTION>
+<OPTION>Micrococcus_luteus</OPTION>
+<OPTION>Micrococcus_luteus_NCTC_2665</OPTION>
+<OPTION>Microcoleus_chthonoplastes_PCC_7420</OPTION>
+<OPTION>Microcoleus_sp_PCC_7113</OPTION>
+<OPTION>Microcoleus_vaginatus_FGP-2</OPTION>
+<OPTION>Microcystis_aeruginosa_NIES_843</OPTION>
+<OPTION>Microcystis_aeruginosa_SPC777</OPTION>
+<OPTION>Microcystis_aeruginosa_TAIHU98</OPTION>
+<OPTION>Microcystis_aeruginosa_10108</OPTION>
+<OPTION>Microcystis_aeruginosa_7941</OPTION>
+<OPTION>Microcystis_aeruginosa_9432</OPTION>
+<OPTION>Microcystis_aeruginosa_9443</OPTION>
+<OPTION>Microcystis_aeruginosa_9717</OPTION>
+<OPTION>Microcystis_aeruginosa_9806</OPTION>
+<OPTION>Microcystis_aeruginosa_9807</OPTION>
+<OPTION>Microcystis_aeruginosa_9808</OPTION>
+<OPTION>Microcystis_aeruginosa_9809</OPTION>
+<OPTION>Microcystis_aeruginosa_DIANCHI905</OPTION>
+<OPTION>Microcystis_aeruginosa_9701</OPTION>
+<OPTION>Micromonospora_lupini_lupac_08</OPTION>
+<OPTION>Microlunatus_Phosphovorus</OPTION>
+<OPTION>Microthrix_parvicella_RN1</OPTION>
+<OPTION>Modestobacter_multiseptatus_BC501</OPTION>
+<OPTION>Moorea_producens_3L</OPTION>
+<OPTION>Moorella_thermoacetica_ATCC_39073</OPTION>
+<OPTION>Moraxella_catarrhalis_BBH18_uid48809</OPTION>
+<OPTION>Moritella_dasanensis_ArB_0140</OPTION>
+<OPTION>Moritella_marina_ATCC_15381</OPTION>
+<OPTION>Moritella_marina_ATCC_15381_MP-1</OPTION>
+<OPTION>Moritella_sp-_PE36</OPTION>
+<OPTION>Moritella_yayanosii_DB21MT_5</OPTION>
+<OPTION>Mucispirillum_schaedleri_ASF_457</OPTION>
+<OPTION>Multicellular_magnetotactic_prokaryotes_pineapple_like</OPTION>
+<OPTION>Mycobacterium_MOTT36Y</OPTION>
+<OPTION>Mycobacterium_abscessus_137</OPTION>
+<OPTION>Mycobacterium_abscessus_MAB_082312_2273</OPTION>
+<OPTION>Mycobacterium_africanum_GM041182</OPTION>
+<OPTION>Mycobacterium_bolletii_CIP_108541T</OPTION>
+<OPTION>Mycobacterium_canettii</OPTION>
+<OPTION>Mycobacterium_chelonae_ATCC_35752</OPTION>
+<OPTION>Mycobacterium_chubuense_NBB4</OPTION>
+<OPTION>Mycobacterium_gilvum_Spyr1</OPTION>
+<OPTION>Mycobacterium_leprae</OPTION>
+<OPTION>Mycobacterium_massiliense_CIP_108297_T</OPTION>
+<OPTION>Mycobacterium_microti_ATCC35782</OPTION>
+<OPTION>Mycobacterium_microti_MausIV</OPTION>
+<OPTION>Mycobacterium_microti_Myc_94-2272</OPTION>
+<OPTION>Mycobacterium_microti_OV254</OPTION>
+<OPTION>Mycobacterium_orygis_08-564</OPTION>
+<OPTION>Mycobacterium_phlei_RIVM601174</OPTION>
+<OPTION>Mycobacterium_pinnipedii</OPTION>
+<OPTION>Mycobacterium_pyrene_degrading_H</OPTION>
+<OPTION>Mycobacterium_pyrene_degrading_M</OPTION>
+<OPTION>Mycobacterium_rhodesiae_NBB3</OPTION>
+<OPTION>Mycobacterium_sp_JDM601</OPTION>
+<OPTION>Mycobacterium_tuberculosis_CDC1551</OPTION>
+<OPTION>Mycobacterium_tuberculosis_CTRI-4</OPTION>
+<OPTION>Mycobacterium_tuberculosis_CCDC5079</OPTION>
+<OPTION>Mycobacterium_tuberculosis_H37Rv</OPTION>
+<OPTION>Mycobacterium_tuberculosis_HN878</OPTION>
+<OPTION>Mycobacterium_tuberculosis_T85</OPTION>
+<OPTION>Mycobacterium_tuberculosis_W-148</OPTION>
+<OPTION>Mycobacterium_tuberculosis_X122</OPTION>
+<OPTION>Mycobacterium_tuberculosis_02_1987</OPTION>
+<OPTION>Mycobacterium_tuberculosis_210</OPTION>
+<OPTION>Mycobacterium_tuberculosis_94_M4241A</OPTION>
+<OPTION>Mycoplasma_agalactiae_PG2_uid61619</OPTION>
+<OPTION>Mycoplasma_bovis_PG45_uid60859</OPTION>
+<OPTION>Mycoplasma_capricolum_ATCC_27343_uid58525</OPTION>
+<OPTION>Mycoplasma_capricolum_susbp_capripneumoniae_Abomsa</OPTION>
+<OPTION>Mycoplasma_fermentans_PG18_uid197154</OPTION>
+<OPTION>Mycoplasma_flocculare_ATCC_27716</OPTION>
+<OPTION>Mycoplasma_genitalium</OPTION>
+<OPTION>Mycoplasma_haemocanis_Illinois_uid82367</OPTION>
+<OPTION>Mycoplasma_hominis</OPTION>
+<OPTION>Mycoplasma_hominis_132</OPTION>
+<OPTION>Mycoplasma_hominis_2477</OPTION>
+<OPTION>Mycoplasma_hominis_2674</OPTION>
+<OPTION>Mycoplasma_hominis_3299</OPTION>
+<OPTION>Mycoplasma_hominis_331</OPTION>
+<OPTION>Mycoplasma_hominis_3364</OPTION>
+<OPTION>Mycoplasma_hominis_35</OPTION>
+<OPTION>Mycoplasma_hominis_3631</OPTION>
+<OPTION>Mycoplasma_hominis_4016</OPTION>
+<OPTION>Mycoplasma_hominis_4235</OPTION>
+<OPTION>Mycoplasma_hyopneumoniae_168</OPTION>
+<OPTION>Mycoplasma_hyopneumoniae_232</OPTION>
+<OPTION>Mycoplasma_hyopneumoniae_7422</OPTION>
+<OPTION>Mycoplasma_hyorhinis_HUB_1</OPTION>
+<OPTION>Mycoplasma_leachii_PG50_uid60849</OPTION>
+<OPTION>Mycoplasma_mobile_163K_uid58077</OPTION>
+<OPTION>Mycoplasma_mycoides_SC_PG1</OPTION>
+<OPTION>Mycoplasma_pneumoniae</OPTION>
+<OPTION>Mycoplasma_pneumoniae_FH_uid162027</OPTION>
+<OPTION>Mycoplasma_putrefaciens_Mput9231_uid198525</OPTION>
+<OPTION>Myxococcus_fulvus_HW_1_uid68443</OPTION>
+<OPTION>Myxococcus_stipitatus_DSM_14675_uid186549</OPTION>
+<OPTION>Myxococcus_xanthus_DK_1622_uid58003</OPTION>
+<OPTION>Nanoarchaeum_equitans</OPTION>
+<OPTION>Natrinema_pellirubrum_DSM_15624_uid74437</OPTION>
+<OPTION>Natronomonas_moolapensis_8_8_11_uid190182</OPTION>
+<OPTION>Natronomonas_pharaonis</OPTION>
+<OPTION>Neisseria_gonorrhoeae_FA_1090</OPTION>
+<OPTION>Neisseria_gonorrhoeae_MS11</OPTION>
+<OPTION>Neisseria_meningitidis_FAM18</OPTION>
+<OPTION>Neisseria_meningitidis_MC58</OPTION>
+<OPTION>Neisseria_meningitidis_NEM8013</OPTION>
+<OPTION>Neisseria_meningitidis_Z2491</OPTION>
+<OPTION>Neochlamydia_sp_TUME</OPTION>
+<OPTION>Niastella_koreensis_GR20_10</OPTION>
+<OPTION>Nitrobacter_hamburgensis_X14</OPTION>
+<OPTION>Nitrococcus_mobilis_Nb-231</OPTION>
+<OPTION>Nitrolancetus_hollandicus</OPTION>
+<OPTION>Nitrosoarchaeum_Texel</OPTION>
+<OPTION>Nitrosococcus_halophilus_Nc4</OPTION>
+<OPTION>Nitrosococcus_oceani_AFC27</OPTION>
+<OPTION>Nitrosococcus_oceani_ATCC_19707</OPTION>
+<OPTION>Nitrosococcus_watsonii_C_113</OPTION>
+<OPTION>Nitrosominus_uzonensis_APF-1</OPTION>
+<OPTION>Nitrosomonas_AL212</OPTION>
+<OPTION>Nitrosomonas_Is79A3</OPTION>
+<OPTION>Nitrosomonas_europaea</OPTION>
+<OPTION>Nitrosomonas_eutropha_C71</OPTION>
+<OPTION>Nitrosopumilus_maritimus_D3C</OPTION>
+<OPTION>Nitrosopumilus_maritimus_NF5</OPTION>
+<OPTION>Nitrosopumilus_maritimus_SCM1</OPTION>
+<OPTION>Nitrosopumilus_sp-_AR</OPTION>
+<OPTION>Nitrosopumilus_sp-_SJ</OPTION>
+<OPTION>Nitrososphaera_gargensis</OPTION>
+<OPTION>Nitrososphaera_viennensis_EN76</OPTION>
+<OPTION>Nitrosospira_multiformis_ATCC_25196</OPTION>
+<OPTION>Nitrosotalea_devanaterra</OPTION>
+<OPTION>Nitrospina_gracilis_Nb-211</OPTION>
+<OPTION>Nitrospina_sp_Texel</OPTION>
+<OPTION>Nitrospira_lenta_BS10</OPTION>
+<OPTION>Nitrospira_moscoviensis</OPTION>
+<OPTION>Nitrotoga_arctica</OPTION>
+<OPTION>Nitrotoga_arctica_6680</OPTION>
+<OPTION>Nocardia_brasiliensis_ATCC_700358</OPTION>
+<OPTION>Nocardia_cyriacigeorgica</OPTION>
+<OPTION>Nocardioides_JS614</OPTION>
+<OPTION>Nocardiopsis_alba_ATCC_BAA-2165</OPTION>
+<OPTION>Nodularia_spumigena_CCY9414</OPTION>
+<OPTION>Nonomuraea_DSMM008</OPTION>
+<OPTION>Nonomuraea_coxensis_DSM_45129</OPTION>
+<OPTION>Nostoc_azollae_0708</OPTION>
+<OPTION>Nostoc_sp</OPTION>
+<OPTION>Novel_deltaproteobacteria_SWCR50</OPTION>
+<OPTION>Novosphingobium_aromaticivorans_DSM_12444_uid57747</OPTION>
+<OPTION>Novosphingobium_pentaromativorans_US6-1</OPTION>
+<OPTION>Oceanobacillus_iheyensis</OPTION>
+<OPTION>Ochrobactrum_anthropi_ATCC_49188</OPTION>
+<OPTION>Oligotropha_carboxidovorans_OM5</OPTION>
+<OPTION>Onion_yellows_phytoplasma_OY_M_uid58015</OPTION>
+<OPTION>Opitutus_terrae_PB90_1</OPTION>
+<OPTION>Orientia_tsutsugamushi_Boryong</OPTION>
+<OPTION>Oscillatoria_acuminata_PCC_6304</OPTION>
+<OPTION>Oscillatoria_formosa_PCC_6407</OPTION>
+<OPTION>Oscillatoria_nigro_viridis_PCC_7112</OPTION>
+<OPTION>Oscillatoria_sp_PCC_6506</OPTION>
+<OPTION>Oscillatoria_sp_PCC_10802</OPTION>
+<OPTION>Paenibacillus_JDR_2_uid59021</OPTION>
+<OPTION>Paenibacillus_Y412MC10_uid41127</OPTION>
+<OPTION>Paenibacillus_elgii_B69</OPTION>
+<OPTION>Paenibacillus_polymyxa_A26</OPTION>
+<OPTION>Paenibacillus_polymyxa_CR1_uid231659</OPTION>
+<OPTION>Paenibacillus_polymyxa_E681_uid53477</OPTION>
+<OPTION>Paenibacillus_polymyxa_LMG_27872</OPTION>
+<OPTION>Paenibacillus_polymyxa_SC2_uid59583</OPTION>
+<OPTION>Paenibacillus_terrae_HPL_003_uid82371</OPTION>
+<OPTION>Pandoraea_RB_44_uid231151</OPTION>
+<OPTION>Pandoraea_sp_B6</OPTION>
+<OPTION>Pantoea_M85</OPTION>
+<OPTION>Pantoea_RB25</OPTION>
+<OPTION>Pantoea_agglomerans_299R</OPTION>
+<OPTION>Pantoea_agglomerans_IG1</OPTION>
+<OPTION>Pantoea_agglomerans_Tx10</OPTION>
+<OPTION>Pantoea_ananatis</OPTION>
+<OPTION>Pantoea_ananatis_B1-9</OPTION>
+<OPTION>Pantoea_ananatis_BRT175</OPTION>
+<OPTION>Pantoea_dispersa_EGD-AAK13</OPTION>
+<OPTION>Pantoea_sp-_GM01</OPTION>
+<OPTION>Pantoea_sp-_YR343</OPTION>
+<OPTION>Parabacteroides_sp-_20_3</OPTION>
+<OPTION>Parabacteroides_sp_ASF519_UV</OPTION>
+<OPTION>Parachlamydia_acanthamoebae_Halls_coccus</OPTION>
+<OPTION>Parasutterella_sp_YL45</OPTION>
+<OPTION>Pasteurella_multocida_3480</OPTION>
+<OPTION>Pectobacterium_caratovorum_YL115</OPTION>
+<OPTION>Pediococcus_pentosaceus_ATCC_25745</OPTION>
+<OPTION>Pedobacter_heparinus_DSM_2366</OPTION>
+<OPTION>Pedobacter_saltans_DSM_12145_uid61349</OPTION>
+<OPTION>Pelosinus_fermentans_A11</OPTION>
+<OPTION>Pelosinus_fermentans_B4</OPTION>
+<OPTION>Pelosinus_fermentans_DSM_17108_R7</OPTION>
+<OPTION>Pelosinus_fermentans_JBW45</OPTION>
+<OPTION>Pelosinus_sp-_HCF1</OPTION>
+<OPTION>Pelotomaculum_thermopropionicum_SI</OPTION>
+<OPTION>Petrotoga_mobilis_SJ95</OPTION>
+<OPTION>Phaeobacter_arcticus</OPTION>
+<OPTION>Phaeobacter_leonis</OPTION>
+<OPTION>Phaeospirillum_molischianum_DSM120</OPTION>
+<OPTION>Photobacterium_angustum_S14</OPTION>
+<OPTION>Photobacterium_damselae_subsp-_damselae_CIP_102761</OPTION>
+<OPTION>Photobacterium_leiognathi_subsp-_mandapamensis_svers-1-1</OPTION>
+<OPTION>Photobacterium_phosphoreum_ANT220</OPTION>
+<OPTION>Photobacterium_profundum_SS9</OPTION>
+<OPTION>Photobacterium_sp-_AK15</OPTION>
+<OPTION>Photorhabdus_luminescens_TT01</OPTION>
+<OPTION>Picrophilus_torridus_DSM_9790</OPTION>
+<OPTION>Pirellula_staleyi_DSM_6068</OPTION>
+<OPTION>Piscirickettsiaceae_B23</OPTION>
+<OPTION>Piscirickettsiaceae_C13</OPTION>
+<OPTION>Planktothrix_agardhii_7805</OPTION>
+<OPTION>Planktothrix_mougeotii_NIVA-CYA_405</OPTION>
+<OPTION>Planktothrix_rubescens_7821</OPTION>
+<OPTION>Planktothrix_sp_PCC_8927</OPTION>
+<OPTION>Pleomorphomonas_koreensis_DSM_23070</OPTION>
+<OPTION>Pleomorphomonas_oryzae_DSM_16300</OPTION>
+<OPTION>Pleurocapsa_sp_PCC_7319</OPTION>
+<OPTION>Pleurocapsa_sp_PCC_7327</OPTION>
+<OPTION>Polynucleobacter_necessarius_STIR1</OPTION>
+<OPTION>Polynucleobacter_necessarius_asymbioticus_FSW08_15</OPTION>
+<OPTION>Polynucleobacter_necessarius_asymbioticus_QLW_P1DMWA_1</OPTION>
+<OPTION>Porphyromonas_gingivalis_ATCC_33277_uid58879</OPTION>
+<OPTION>Porphyromonas_gingivalis_TDC60_uid67407</OPTION>
+<OPTION>Porphyromonas_gingivalis_W83_uid57641</OPTION>
+<OPTION>Prochlorococcus_marinus_AS9601</OPTION>
+<OPTION>Prochlorococcus_marinus_CCMP1375</OPTION>
+<OPTION>Prochlorococcus_marinus_MIT_9211</OPTION>
+<OPTION>Prochlorococcus_marinus_MIT9303</OPTION>
+<OPTION>Prochlorococcus_marinus_MIT_9515</OPTION>
+<OPTION>Prochlorococcus_marinus_NATL1A</OPTION>
+<OPTION>Prochloron_didemni_P1</OPTION>
+<OPTION>Prochlorothrix_hollandica_PCC_9006</OPTION>
+<OPTION>Propionibacterium_acnes_KPA171202</OPTION>
+<OPTION>Propionibacterium_sp_oral_taxon_191_str_F0233</OPTION>
+<OPTION>Pseudaminobacter_salicylatoxidans_KCT001</OPTION>
+<OPTION>Pseudanabaena_PCC_7704</OPTION>
+<OPTION>Pseudanabaena_PCC_7904</OPTION>
+<OPTION>Pseudanabaena_PCC_9635</OPTION>
+<OPTION>Pseudanabaena_sp_PCC_6802</OPTION>
+<OPTION>Pseudanabaena_sp_PCC_7367</OPTION>
+<OPTION>Pseudoalteromonas_SANK71007</OPTION>
+<OPTION>Pseudoalteromonas_SM9913_uid61247</OPTION>
+<OPTION>Pseudoalteromonas_atlantica_T6c_uid58283</OPTION>
+<OPTION>Pseudoalteromonas_carrageenovora_ATCC43555T</OPTION>
+<OPTION>Pseudoalteromonas_haloplanktis</OPTION>
+<OPTION>Pseudoalteromonas_luteoviolacea_2ta16</OPTION>
+<OPTION>Pseudoalteromonas_luteoviolacea_B_-_ATCC_29581</OPTION>
+<OPTION>Pseudoanabaena_PCC_9416</OPTION>
+<OPTION>Pseudomonas_aeruginosa</OPTION>
+<OPTION>Pseudomonas_aeruginosa_LESB58</OPTION>
+<OPTION>Pseudomonas_aeruginosa_UCBPP-PA14</OPTION>
+<OPTION>Pseudomonas_chlororaphis_subsp-_aureofaciens_30-84</OPTION>
+<OPTION>Pseudomonas_fluorescens_HK44</OPTION>
+<OPTION>Pseudomonas_fluorescens_Pf-5</OPTION>
+<OPTION>Pseudomonas_fluorescens_SBW25_p</OPTION>
+<OPTION>Pseudomonas_fragi_A22</OPTION>
+<OPTION>Pseudomonas_fragi_B25</OPTION>
+<OPTION>Pseudomonas_putida_F1</OPTION>
+<OPTION>Pseudomonas_putida_KT2440</OPTION>
+<OPTION>Pseudomonas_stutzeri_CCUG_29243_uid168379</OPTION>
+<OPTION>Pseudomonas_stutzeri_DSM_10701_uid170940</OPTION>
+<OPTION>Pseudomonas_stutzeri_DSM_4166_uid162113</OPTION>
+<OPTION>Pseudomonas_stutzeri_S11</OPTION>
+<OPTION>Pseudomonas_stutzeri_TS44</OPTION>
+<OPTION>Pseudomonas_syringae</OPTION>
+<OPTION>Pseudomonas_syringae_pv_B728a</OPTION>
+<OPTION>Pseudovibrio_Denitrificans_JCM_12308</OPTION>
+<OPTION>Psychrobacter_sp_253-4</OPTION>
+<OPTION>Pyrobaculum_aerophilum</OPTION>
+<OPTION>Pyrobaculum_islandicum_DSM_4184</OPTION>
+<OPTION>Pyrococcus_NA2_uid66551</OPTION>
+<OPTION>Pyrococcus_ST04_uid167261</OPTION>
+<OPTION>Pyrococcus_abyssi</OPTION>
+<OPTION>Pyrococcus_endeavori_ES4</OPTION>
+<OPTION>Pyrococcus_furiosus</OPTION>
+<OPTION>Pyrococcus_horikoshii</OPTION>
+<OPTION>Pyrococcus_yayanosii_CH1_uid68281</OPTION>
+<OPTION>Rahnella_Y9602_uid62715</OPTION>
+<OPTION>Ralstonia_eutropha_H16</OPTION>
+<OPTION>Ralstonia_eutropha_H16_plasmid</OPTION>
+<OPTION>Ralstonia_eutropha_JMP134</OPTION>
+<OPTION>Ralstonia_metallidurans_CH34</OPTION>
+<OPTION>Ralstonia_metallidurans_CH34_K2</OPTION>
+<OPTION>Ralstonia_pickettii_12J</OPTION>
+<OPTION>Ralstonia_pickettii_49V2</OPTION>
+<OPTION>Ralstonia_pickettii_R21F</OPTION>
+<OPTION>Ralstonia_solanacearum</OPTION>
+<OPTION>Ralstonia_syzygii</OPTION>
+<OPTION>Ralstonia_taiwanensis_plasmid</OPTION>
+<OPTION>Raoultella_ornithinolytica_B6_uid198431</OPTION>
+<OPTION>Raoultella_ornithinolytica_SB171</OPTION>
+<OPTION>Raoultella_planticola_SB1141</OPTION>
+<OPTION>Raoultella_planticola_SB174</OPTION>
+<OPTION>Raoultella_terrigena_SB170</OPTION>
+<OPTION>Raoultella_terrigena_SB3412</OPTION>
+<OPTION>Raphidiopsis_brookii_D9</OPTION>
+<OPTION>Rhizobium_MGL06</OPTION>
+<OPTION>Rhizobium_alkalisoli_CCBAU_01393T</OPTION>
+<OPTION>Rhizobium_freirei_PRF_81</OPTION>
+<OPTION>Rhizobium_gallicum_bv-_gallicum_R602sp</OPTION>
+<OPTION>Rhizobium_giardinii_bv-_giardinii_H152</OPTION>
+<OPTION>Rhizobium_grahamii_CCGE_502</OPTION>
+<OPTION>Rhizobium_leguminosarum_bv-_phaseoli_4292</OPTION>
+<OPTION>Rhizobium_leguminosarum_bv_trifolii_WSM1325</OPTION>
+<OPTION>Rhizobium_leguminosarum_bv_viciae_3841</OPTION>
+<OPTION>Rhizobium_lupini_HPC-L</OPTION>
+<OPTION>Rhizobium_mesoamericanum_STM6155</OPTION>
+<OPTION>Rhizobium_mongolense_USDA_1844</OPTION>
+<OPTION>Rhizobium_phaseoli_Ch24-10</OPTION>
+<OPTION>Rhizobium_radiobacter_IRBL74</OPTION>
+<OPTION>Rhizobium_radiobacter_IRBL74_p</OPTION>
+<OPTION>Rhizobium_sp-_AP16</OPTION>
+<OPTION>Rhizobium_sp_NT-26</OPTION>
+<OPTION>Rhizobium_sp_STM3625</OPTION>
+<OPTION>Rhizobium_sullae_STM9086</OPTION>
+<OPTION>Rhizobium_sullae_WSM1592</OPTION>
+<OPTION>Rhizobium_tropici_CIAT_899_uid185179</OPTION>
+<OPTION>Rhizobium_vignae_CCBAU_05176T</OPTION>
+<OPTION>Rhodobacter_sphaeroides_2_4_1</OPTION>
+<OPTION>Rhodococcus_RD62</OPTION>
+<OPTION>Rhodococcus_equi_103S</OPTION>
+<OPTION>Rhodococcus_erythropolis_PR4</OPTION>
+<OPTION>Rhodococcus_jostii_RHA1</OPTION>
+<OPTION>Rhodococcus_opacus_B4</OPTION>
+<OPTION>Rhodococcus_ruber_IEGM_231</OPTION>
+<OPTION>Rhodococcus_spp_Mel</OPTION>
+<OPTION>Rhodocyclales_RZ94</OPTION>
+<OPTION>Rhodopseudomonas_palustris_CGA009</OPTION>
+<OPTION>Rhodospirillum_rubrum_ATCC_11170</OPTION>
+<OPTION>Rhodospirillum_rubrum_F11_uid162149</OPTION>
+<OPTION>Rhodospirillum_rubrum_S1H</OPTION>
+<OPTION>Rickettsia_bellii_RML369-C</OPTION>
+<OPTION>Rickettsia_conorii</OPTION>
+<OPTION>Rickettsia_felis_URRWXCal2</OPTION>
+<OPTION>Rickettsia_prowazekii</OPTION>
+<OPTION>Rickettsia_sp_MEAM1</OPTION>
+<OPTION>Rickettsiella_grylli</OPTION>
+<OPTION>Roseobacter_denitrificans_OCh_114</OPTION>
+<OPTION>Roseobacter_litoralis_Och_149_uid54719</OPTION>
+<OPTION>Roseovarius_nubinhibens_ISM</OPTION>
+<OPTION>Rothia_mucilaginosa_uid43093</OPTION>
+<OPTION>Rubrivivax_benzoatilyticus_JA2</OPTION>
+<OPTION>Rubrivivax_gelatinosus_IL144</OPTION>
+<OPTION>Rubrivivax_gelatinosus_S1</OPTION>
+<OPTION>Ruminococcaceae_YL31</OPTION>
+<OPTION>Ruminococcus_gnavus_E1</OPTION>
+<OPTION>Saccharothrix_espanaensis_DSM_44229_uid184826</OPTION>
+<OPTION>Salinibacter_ruber_DSM_13855</OPTION>
+<OPTION>Salinibacter_ruber_DSM_13855_p</OPTION>
+<OPTION>Salinispora_arenicola_CNS-205</OPTION>
+<OPTION>Salinispora_tropica_CNB-440</OPTION>
+<OPTION>Salmonella_bongori_NCTC_12419</OPTION>
+<OPTION>Salmonella_enterica_arizonae_serovar_62_z4_z23__RSK2980</OPTION>
+<OPTION>Salmonella_enterica_Choleraesuis</OPTION>
+<OPTION>Salmonella_enterica_serovar_Agona_SL483</OPTION>
+<OPTION>Salmonella_enterica_serovar_Enteritidis_P125109</OPTION>
+<OPTION>Salmonella_enterica_serovar_Heidelberg_SL476</OPTION>
+<OPTION>Salmonella_enterica_serovar_Paratyphi_C_RKS4594</OPTION>
+<OPTION>Salmonella_enterica_serovar_Schwarzengrund_CVM19633</OPTION>
+<OPTION>Salmonella_enterica_serovar_Typhi_str_CT18</OPTION>
+<OPTION>Salmonella_enterica_serovar_Typhimurium_14028S</OPTION>
+<OPTION>Salmonella_enterica_subsp_houtenae_1565K</OPTION>
+<OPTION>Salmonella_enterica_subsp_indica_1240K</OPTION>
+<OPTION>Salmonella_enterica_subsp_salamae_1383_73</OPTION>
+<OPTION>Salmonella_enterica_subsp_salamae_strain_1351K</OPTION>
+<OPTION>Salmonella_enterica_subsp_unknown_9744_07</OPTION>
+<OPTION>Salmonella_typhimurium_LT2</OPTION>
+<OPTION>Sanguibacter_keddieii_DSM_10542</OPTION>
+<OPTION>Scu1Conti_Mre</OPTION>
+<OPTION>Scytonema_sp_PCC_10023</OPTION>
+<OPTION>SAR324_cluster_bacterium_SCGC_AAA240-J09</OPTION>
+<OPTION>Saccharopolyspora_spinosa_NRRL_18395</OPTION>
+<OPTION>Segniliparus_rotundus_DSM_44985</OPTION>
+<OPTION>Serratia_fonticola_AU-AP2C</OPTION>
+<OPTION>Serratia_fonticola_AU-P3-3</OPTION>
+<OPTION>Serratia_marcescens_FGI94</OPTION>
+<OPTION>Serratia_marcescens_PWN146</OPTION>
+<OPTION>Serratia_marcescens_WW4_uid188478</OPTION>
+<OPTION>Serratia_plymuthica_4Rx13</OPTION>
+<OPTION>Serratia_plymuthica_A30</OPTION>
+<OPTION>Serratia_plymuthica_AS9</OPTION>
+<OPTION>Serratia_proteamaculans_568</OPTION>
+<OPTION>Serratia_symbiotica_Afabae</OPTION>
+<OPTION>Serratia_symbiotica_Afabae_CISA</OPTION>
+<OPTION>Serratia_symbiotica_Cinara_cedri</OPTION>
+<OPTION>Serratia_symbiotica_HGAP2</OPTION>
+<OPTION>Serratia_symbiotica_SCt</OPTION>
+<OPTION>Shewanella_ANA_3_uid58347</OPTION>
+<OPTION>Shewanella_benthica_DB21MT_2</OPTION>
+<OPTION>Shewanella_benthica_KT99</OPTION>
+<OPTION>Shewanella_oneidensis</OPTION>
+<OPTION>Shewanella_piezotolerans_WP3</OPTION>
+<OPTION>Shewanella_putrefaciens_200_uid161927</OPTION>
+<OPTION>Shewanella_putrefaciens_CN_32_uid58267</OPTION>
+<OPTION>Shewanella_violacea_DSS12</OPTION>
+<OPTION>Shigella_flexneri_2a_2457T</OPTION>
+<OPTION>Shigella_flexneri_2a_2457T_p</OPTION>
+<OPTION>Shinella_zoogloeoides_DD12</OPTION>
+<OPTION>Simkania_negevensis_Z</OPTION>
+<OPTION>Sinorhizobium_41</OPTION>
+<OPTION>Sinorhizobium_A321</OPTION>
+<OPTION>Sinorhizobium_HM006-1</OPTION>
+<OPTION>Sinorhizobium_KH12g</OPTION>
+<OPTION>Sinorhizobium_KH16b</OPTION>
+<OPTION>Sinorhizobium_KH46b</OPTION>
+<OPTION>Sinorhizobium_M10</OPTION>
+<OPTION>Sinorhizobium_N6B1</OPTION>
+<OPTION>Sinorhizobium_Sadowsky_M1</OPTION>
+<OPTION>Sinorhizobium_T027</OPTION>
+<OPTION>Sinorhizobium_USDA1002</OPTION>
+<OPTION>Sinorhizobium_meliloti_str_1021</OPTION>
+<OPTION>Sinorhizobium_sp_STM7854</OPTION>
+<OPTION>Sodalis_glossinidius_morsitans</OPTION>
+<OPTION>Soil_Thaumarchaeote_Schl1</OPTION>
+<OPTION>Sphingobacterium_sp_PM2P129</OPTION>
+<OPTION>Sphingobium_baderi_LL03</OPTION>
+<OPTION>Sphingobium_chinhatense_IP26</OPTION>
+<OPTION>Sphingobium_indicum_B90A</OPTION>
+<OPTION>Sphingobium_japonicum_BiD32</OPTION>
+<OPTION>Sphingobium_japonicum_UT26</OPTION>
+<OPTION>Sphingobium_japonicum_UT26S_uid47077</OPTION>
+<OPTION>Sphingobium_lactosutens_ds20</OPTION>
+<OPTION>Sphingobium_quisquilarium_P25</OPTION>
+<OPTION>Sphingobium_sp_HDIPO4</OPTION>
+<OPTION>Sphingobium_sp_f2</OPTION>
+<OPTION>Sphingobium_ummariense_RL3</OPTION>
+<OPTION>Sphingomonas</OPTION>
+<OPTION>Sphingomonas_sp_LH128</OPTION>
+<OPTION>Sphingomonas_sp_S2U11</OPTION>
+<OPTION>Sphingomonas_sp_S3H21</OPTION>
+<OPTION>Sphingopyxis_alaskensis_RB2256_uid58351</OPTION>
+<OPTION>Sphingopyxis_baekryungensis_DSM_16222</OPTION>
+<OPTION>Sphingopyxis_pyrene_degrading_H</OPTION>
+<OPTION>Sphingopyxis_sp-_MC1</OPTION>
+<OPTION>Spiroplasma_apis_B31_uid230613</OPTION>
+<OPTION>Spiroplasma_chrysopicola_DF_1_uid205053</OPTION>
+<OPTION>Spiroplasma_diminutum_CUAS_1_uid212976</OPTION>
+<OPTION>Spiroplasma_syrphidicola_EA_1_uid205054</OPTION>
+<OPTION>Spiroplasma_taiwanense_CT_1_uid212975</OPTION>
+<OPTION>Spirosoma_linguale_DSM_74</OPTION>
+<OPTION>Spirulina_subsalsa_PCC_9445</OPTION>
+<OPTION>Sporomusa_Sporomusa_KB1</OPTION>
+<OPTION>Sporomusa_ovata_DSM_2662</OPTION>
+<OPTION>Stanieria_cyanosphaera_PCC_7437</OPTION>
+<OPTION>Staphylococcus_aureus_2442</OPTION>
+<OPTION>Staphylococcus_aureus_3185</OPTION>
+<OPTION>Staphylococcus_aureus_3571</OPTION>
+<OPTION>Staphylococcus_aureus_Bmb9393</OPTION>
+<OPTION>Staphylococcus_aureus_ET23</OPTION>
+<OPTION>Staphylococcus_aureus_ET34</OPTION>
+<OPTION>Staphylococcus_aureus_JKD6008</OPTION>
+<OPTION>Staphylococcus_aureus_MRSA252</OPTION>
+<OPTION>Staphylococcus_aureus_Mu50</OPTION>
+<OPTION>Staphylococcus_aureus_RJ226</OPTION>
+<OPTION>Staphylococcus_aureus_T0131</OPTION>
+<OPTION>Staphylococcus_aureus_USA300_FPR3757</OPTION>
+<OPTION>Staphylococcus_aureus_subsp_aureus_Gv69</OPTION>
+<OPTION>Staphylococcus_aureus_subspecies_aureus_USA400</OPTION>
+<OPTION>Staphylococcus_capitis_HOJ2SBS02</OPTION>
+<OPTION>Staphylococcus_epidermidis_RP62A</OPTION>
+<OPTION>Staphylococcus_haemolyticus_JCSC1435</OPTION>
+<OPTION>Staphylococcus_lugdunensis_HKU09_01</OPTION>
+<OPTION>Staphylococcus_saprophyticus_ATCC_15305</OPTION>
+<OPTION>Staphylococcus_saprophyticus_N041</OPTION>
+<OPTION>Staphylothermus_marinus_F1</OPTION>
+<OPTION>Staphyococcus_aureus_subspecies_aureus_USA400_0051</OPTION>
+<OPTION>Starkeya_novella_DSM_506_uid48815</OPTION>
+<OPTION>Stenotrophomonas_maltophilia_BurE1</OPTION>
+<OPTION>Stenotrophomonas_maltophilia_JV3</OPTION>
+<OPTION>Stenotrophomonas_maltophilia_K279a</OPTION>
+<OPTION>Stenotrophomonas_maltophilia_PierC1</OPTION>
+<OPTION>Stenotrophomonas_maltophilia_R551-3</OPTION>
+<OPTION>Stenotrophomonas_pyrene_degrading_H</OPTION>
+<OPTION>Stenotrophomonas_sp_SKA14</OPTION>
+<OPTION>Sterolibacterium_denitrificans_Chol</OPTION>
+<OPTION>Stigmatella_aurantiaca_DW4_3_1</OPTION>
+<OPTION>Strawberry_lethal_yellows_phytoplasma__CPA__NZSb11_uid203392</OPTION>
+<OPTION>Streptococcus_agalactiae_2603</OPTION>
+<OPTION>Streptococcus_agalactiae_STIR-CD-07</OPTION>
+<OPTION>Streptococcus_agalactiae_STIR-CD-17</OPTION>
+<OPTION>Streptococcus_mutans</OPTION>
+<OPTION>Streptococcus_pneumoniae_D39</OPTION>
+<OPTION>Streptococcus_pneumoniae_TIGR4</OPTION>
+<OPTION>Streptococcus_pyogenes_M1</OPTION>
+<OPTION>Streptococcus_pyogenes_M1_GAS</OPTION>
+<OPTION>Streptococcus_sanguinis_2908</OPTION>
+<OPTION>Streptococcus_sanguinis_SK36</OPTION>
+<OPTION>Streptococcus_suis_05ZYH33</OPTION>
+<OPTION>Streptococcus_thermophilus_CNRZ1066</OPTION>
+<OPTION>Streptomyces_SirexAA</OPTION>
+<OPTION>Streptomyces_albulus_CCRC_11814</OPTION>
+<OPTION>Streptomyces_albulus_ZPM</OPTION>
+<OPTION>Streptomyces_avermitilis</OPTION>
+<OPTION>Streptomyces_bingchenggensis_BCW_1</OPTION>
+<OPTION>Streptomyces_clavuligerus_ATCC_27064</OPTION>
+<OPTION>Streptomyces_coelicolor</OPTION>
+<OPTION>Streptomyces_griseus_NBRC_13350</OPTION>
+<OPTION>Streptomyces_scabiei_87_22</OPTION>
+<OPTION>Streptomyces_somaliensis_DSM_40738</OPTION>
+<OPTION>Streptomyces_sp_LMA-545</OPTION>
+<OPTION>Streptomyces_sviceus_ATCC_29083</OPTION>
+<OPTION>Streptomyces_violaceusniger_Tu_4113_uid52609</OPTION>
+<OPTION>Streptosporangium_roseum_DSM_43021</OPTION>
+<OPTION>Sulfolobus_acidocaldarius_DSM_639</OPTION>
+<OPTION>Sulfolobus_islandicus_M_16_27_uid58851</OPTION>
+<OPTION>Sulfolobus_solfataricus</OPTION>
+<OPTION>Sulfolobus_tokodaii</OPTION>
+<OPTION>Sulfurimonas_gotlandica_Sulfurimonas</OPTION>
+<OPTION>Symbiote_Ectocarpus</OPTION>
+<OPTION>Symploca_PCC8002</OPTION>
+<OPTION>Synechococcus_CC9311</OPTION>
+<OPTION>Synechococcus_CC9605</OPTION>
+<OPTION>Synechococcus_CC9902</OPTION>
+<OPTION>Synechococcus_elongatus_PCC_6301</OPTION>
+<OPTION>Synechococcus_sp_BL_107</OPTION>
+<OPTION>Synechococcus_sp_CB0101</OPTION>
+<OPTION>Synechococcus_sp_JA-2-3B_a_2-13</OPTION>
+<OPTION>Synechococcus_sp_PCC_7002</OPTION>
+<OPTION>Synechococcus_sp_PCC_7335</OPTION>
+<OPTION>Synechococcus_sp_PCC_7336</OPTION>
+<OPTION>Synechococcus_sp_RCC307</OPTION>
+<OPTION>Synechococcus_sp_RS9916</OPTION>
+<OPTION>Synechococcus_sp_WH_7803</OPTION>
+<OPTION>Synechococcus_sp_WH_7805</OPTION>
+<OPTION>Synechococcus_sp_WH_8016</OPTION>
+<OPTION>Synechococcus_sp_WH_8102</OPTION>
+<OPTION>Synechocystis_PCC6803</OPTION>
+<OPTION>Synechocystis_sp_PCC_7509</OPTION>
+<OPTION>Syntrophaceticus_schinkii_SP3</OPTION>
+<OPTION>Syntrophobacter_fumaroxidans_MPOB</OPTION>
+<OPTION>Syntrophomonas_wolfei_Goettingen</OPTION>
+<OPTION>Syntrophus</OPTION>
+<OPTION>Syntrophus_aciditrophicus_SB</OPTION>
+<OPTION>Syntrophus_syntrophus</OPTION>
+<OPTION>TD_MD_Escherichia_coli</OPTION>
+<OPTION>Tepidanaerobacter_Re1</OPTION>
+<OPTION>Tetrasphaera_Jenkinsii</OPTION>
+<OPTION>Tetrasphaera_australiensis</OPTION>
+<OPTION>Tetrasphaera_japonica</OPTION>
+<OPTION>Thauera_MZ1T_uid58987</OPTION>
+<OPTION>Thauera_phenylacetica_B4P</OPTION>
+<OPTION>Thauera_sp27</OPTION>
+<OPTION>Thauera_terpenica_58Eu</OPTION>
+<OPTION>Thermacetogenium_phaeum_DSM_12270</OPTION>
+<OPTION>Thermanaerovibrio_acidaminovorans_DSM_6589</OPTION>
+<OPTION>Thermincola_potens_JR</OPTION>
+<OPTION>Thermoanaerobacter_sp_X514</OPTION>
+<OPTION>Thermoanaerobacter_tengcongensis_MB4_uid57813</OPTION>
+<OPTION>Thermobifida_fusca</OPTION>
+<OPTION>Thermobifida_fusca_YX</OPTION>
+<OPTION>Thermococcus_4557</OPTION>
+<OPTION>Thermococcus_AM4</OPTION>
+<OPTION>Thermococcus_CL1_uid168259</OPTION>
+<OPTION>Thermococcus_barophilus_423_3_23</OPTION>
+<OPTION>Thermococcus_barophilus_CH1</OPTION>
+<OPTION>Thermococcus_barophilus_DT4</OPTION>
+<OPTION>Thermococcus_barophilus_MP</OPTION>
+<OPTION>Thermococcus_gammatolerans_EJ3</OPTION>
+<OPTION>Thermococcus_kodakaraensis_KOD1</OPTION>
+<OPTION>Thermococcus_litoralis_strain_DSM5463</OPTION>
+<OPTION>Thermococcus_onnurineus_NA1</OPTION>
+<OPTION>Thermococcus_profundus_DSM_9503</OPTION>
+<OPTION>Thermococcus_sibiricus_MM_739</OPTION>
+<OPTION>Thermodesulfovibrio_yellowstonii_DSM_11347</OPTION>
+<OPTION>Thermofilum_pendens_Hrk_5</OPTION>
+<OPTION>Thermomicrobium_roseum_DSM_5159</OPTION>
+<OPTION>Thermoplasma_acidophilum</OPTION>
+<OPTION>Thermoplasma_volcanium</OPTION>
+<OPTION>Thermosediminibacter_oceani_DSM_16646</OPTION>
+<OPTION>Thermosipho_africanus_TCF52B</OPTION>
+<OPTION>Thermosynechococcus_elongatus</OPTION>
+<OPTION>Thermotoga_lettingae_TMO</OPTION>
+<OPTION>Thermotoga_maritima</OPTION>
+<OPTION>Thermotoga_naphthophila_RKU_10</OPTION>
+<OPTION>Thermotoga_neapolitana_DSM_4359</OPTION>
+<OPTION>Thermotoga_petrophila_RKU_1</OPTION>
+<OPTION>Thermotoga_RQ2</OPTION>
+<OPTION>Thermotoga_thermarum_DSM_5069</OPTION>
+<OPTION>Thermus_thermophilus_HB8</OPTION>
+<OPTION>Thioalkalivibrio_sulfidophilus_HL_EbGr7</OPTION>
+<OPTION>Thiocapsa_KS1_B</OPTION>
+<OPTION>Thiocapsa_sp_KS1</OPTION>
+<OPTION>Thiomicrospira_crunogena_XCL-2</OPTION>
+<OPTION>Thiomicrospira_denitrificans_ATCC_33889</OPTION>
+<OPTION>Thiomonas_ACOSEMN3</OPTION>
+<OPTION>Thiomonas_ACOSN7</OPTION>
+<OPTION>Thiomonas_Bio17B3</OPTION>
+<OPTION>Thiomonas_CB1</OPTION>
+<OPTION>Thiomonas_CB3</OPTION>
+<OPTION>Thiomonas_CB6</OPTION>
+<OPTION>Thiomonas_Sup16B3</OPTION>
+<OPTION>Thiomonas_delicata_DSM16361</OPTION>
+<OPTION>Thiomonas_intermedia_K12</OPTION>
+<OPTION>Thiomonas_sp</OPTION>
+<OPTION>Thiomonas_sp_CB2</OPTION>
+<OPTION>Thiotrichales_bacterium_SS-5</OPTION>
+<OPTION>Tissierella_F6</OPTION>
+<OPTION>Tissierella_TP1</OPTION>
+<OPTION>TM7.1</OPTION>
+<OPTION>TM7.2</OPTION>
+<OPTION>TM7.3</OPTION>
+<OPTION>TM7.4</OPTION>
+<OPTION>Tenacibaculum_adriaticum_B390</OPTION>
+<OPTION>Tenacibaculum_aestuarii_SMK4</OPTION>
+<OPTION>Tenacibaculum_aiptasiae_a4</OPTION>
+<OPTION>Tenacibaculum_amylolyticum_CIP107214T</OPTION>
+<OPTION>Tenacibaculum_caenipelagi_KCTC32323T</OPTION>
+<OPTION>Tenacibaculum_crassostreae_JO1</OPTION>
+<OPTION>Tenacibaculum_dicentrarchi_3509T</OPTION>
+<OPTION>Tenacibaculum_discolor_9A5</OPTION>
+<OPTION>Tenacibaculum_discolor_P451</OPTION>
+<OPTION>Tenacibaculum_discolor_YSR01</OPTION>
+<OPTION>Tenacibaculum_gallaicum_NCIMB14147T</OPTION>
+<OPTION>Tenacibaculum_geojense_YCS6</OPTION>
+<OPTION>Tenacibaculum_halocynthiae_KCTC32262T</OPTION>
+<OPTION>Tenacibaculum_jejuense_CNURIC013</OPTION>
+<OPTION>Tenacibaculum_litopenaei_LMG23706T</OPTION>
+<OPTION>Tenacibaculum_litoreum_CL_TF13</OPTION>
+<OPTION>Tenacibaculum_lutimaris_TF26</OPTION>
+<OPTION>Tenacibaculum_maritimum_CIP_103528</OPTION>
+<OPTION>Tenacibaculum_mesophilum_CIP107215</OPTION>
+<OPTION>Tenacibaculum_ovolyticum_EKD002T</OPTION>
+<OPTION>Tenacibaculum_skagerrakense_DSM14836T</OPTION>
+<OPTION>Tenacibaculum_soleae_LL041217T</OPTION>
+<OPTION>Tenacibaculum_xiamenense_LMG27422T</OPTION>
+<OPTION>Tolypothrix_sp_PCC_9009</OPTION>
+<OPTION>Treponema_denticola</OPTION>
+<OPTION>Treponema_medium_ATCC_700293</OPTION>
+<OPTION>Treponema_pallidum</OPTION>
+<OPTION>Treponema_pedis_T_A4_uid215715</OPTION>
+<OPTION>Treponema_phagedenis_V1</OPTION>
+<OPTION>Treponema_putidum_ATCC700334</OPTION>
+<OPTION>Treponema_species_Phylgroup_1_OMZ_838</OPTION>
+<OPTION>Treponema_vincentii_ATCC_35580</OPTION>
+<OPTION>Trichodesmium_erythraeum_IMS101</OPTION>
+<OPTION>Tropheryma_whipplei_TW08_27</OPTION>
+<OPTION>Tsukamurella_paurometabola_DSM_20162</OPTION>
+<OPTION>Uncultured_Dehalococcoides_J10</OPTION>
+<OPTION>Uncultured_methanogenic_archaeon_RC-I</OPTION>
+<OPTION>Unknown_IAFE</OPTION>
+<OPTION>uncultured_Termite_group_1_bacterium_phylotype_Rs_D17_uid59059</OPTION>
+<OPTION>Unknown_deltaproteobacteria_SWCR60</OPTION>
+<OPTION>VanLanen_Stri</OPTION>
+<OPTION>Variovorax_paradoxus_4MFCol3-1</OPTION>
+<OPTION>Variovorax_paradoxus_HB44</OPTION>
+<OPTION>Variovorax_sp-_CF313</OPTION>
+<OPTION>Variovorax_sp_SRS16</OPTION>
+<OPTION>Verminephrobacter_eiseniae_EF01_2_uid58675</OPTION>
+<OPTION>Verrucomicrobiae_bacterium_DG1235</OPTION>
+<OPTION>Verrucomicrobium_sp_3C</OPTION>
+<OPTION>Verrucomicrobium_spinosum_DSM_4136</OPTION>
+<OPTION>Verrucosispora_maris_AB_18_032</OPTION>
+<OPTION>Vibrio_aestuarianus</OPTION>
+<OPTION>Vibrio_caribbeanicus_T14</OPTION>
+<OPTION>Vibrio_cholerae</OPTION>
+<OPTION>Vibrio_cholerae_HC_63A1</OPTION>
+<OPTION>Vibrio_crassostreae_LGP107</OPTION>
+<OPTION>Vibrio_diabolicus_CNCM_I-1629</OPTION>
+<OPTION>Vibrio_fischeri_ES114</OPTION>
+<OPTION>Vibrio_nigripulchritudo</OPTION>
+<OPTION>Vibrio_penaeicida_AQ115</OPTION>
+<OPTION>Vibrio_tapetis_4600</OPTION>
+<OPTION>Vibrio_vulnificus_CMCP6</OPTION>
+<OPTION>Vulcanisaeta_moutnovskia_768_28_uid63631</OPTION>
+<OPTION>Waddlia_chondrophila_WSU_86-1044</OPTION>
+<OPTION>Wigglesworthia_brevipalpis</OPTION>
+<OPTION>Wolbachia_endosymbiont_of_Brugia_malayi_TRS</OPTION>
+<OPTION>Wolbachia_endosymbiont_of_Culex_quinquefasciatus_Pel</OPTION>
+<OPTION>Wolbachia_endosymbiont_of_Drosophila_melanogaster</OPTION>
+<OPTION>Wolbachia_endosymbiont_of_Muscidifurax_uniraptor</OPTION>
+<OPTION>Wolbachia_pipientis_wAlbB</OPTION>
+<OPTION>Wolbachia_pipientis_wAtab3</OPTION>
+<OPTION>Wolbachia_pipientis_wRec</OPTION>
+<OPTION>Wolbachia_wRi</OPTION>
+<OPTION>Wolinella_succinogenes</OPTION>
+<OPTION>Xanthobacter_autotrophicus_Py2_uid58453</OPTION>
+<OPTION>Xanthobacter_autotrophicus_Py2_uid58453_p</OPTION>
+<OPTION>Xanthomonas_axonopodis_citrumelo_F1</OPTION>
+<OPTION>Xanthomonas_campestris_vesicatoria_85_10</OPTION>
+<OPTION>Xanthomonas_citri_pv_citri_LG98</OPTION>
+<OPTION>Xanthomonas_oryzae_KACC10331</OPTION>
+<OPTION>Xanthomonas_oryzae_MAFF_311018</OPTION>
+<OPTION>Xanthomonas_oryzae_PXO99A</OPTION>
+<OPTION>Xenococcus_sp_PCC_7305</OPTION>
+<OPTION>Xenorhabdus_bovienii</OPTION>
+<OPTION>Xenorhabdus_innexi</OPTION>
+<OPTION>Xenorhabdus_nematophila_AN6_1</OPTION>
+<OPTION>Xenorhabdus_nematophila_anatoliense</OPTION>
+<OPTION>Xenorhabdus_nematophila_websteri</OPTION>
+<OPTION>Xenorhabdus_szentirmaii_DSM16338</OPTION>
+<OPTION>Xylanimonas_cellulosilytica_DSM_15894</OPTION>
+<OPTION>Xylella_fastidiosa</OPTION>
+<OPTION>Yersinia_enterocolitica_8081</OPTION>
+<OPTION>Yersinia_pestis_CO92</OPTION>
+<OPTION>Yersinia_pestis_KIM</OPTION>
+<OPTION>Yersinia_pseudotuberculosis_IP32953</OPTION>
+<OPTION>Zobellia_galactanivorans_uid70621</OPTION>
+<OPTION>Zobellia_uliginosa_Type_strain</OPTION>
+<OPTION>Zunongwangia_profunda_SM_A87</OPTION>
+</SELECT>
+
+    	
+   
+    <BR><BR>
+
+      <HR>
+      <CENTER><FONT face="ARIAL" size=4 color="#4D4DFF"><B>AMIGene parameters</B> <A href="../html/Method.html?AMIGA=f6f99583e356eb25eff6b263b06fa3a2#2" target="_blank" class="lien1">(?)</A></FONT></CENTER>
+      <HR>
+      
+      
+    	<INPUT type="radio" name="AutoSeuil" value="Automatic" CHECKED> <B>Use predefined parameter values : </B>GC percent&nbsp;
+	<SELECT name="GC">
+<OPTION>Low</OPTION>
+<OPTION SELECTED>Medium</OPTION>
+<OPTION>High</OPTION>
+</SELECT>
+
+     	<BR><BR>
+    	<B>OR</B>
+	<BR><BR>
+	<INPUT type="radio" name="AutoSeuil" value="Chosen" > <B>Choose your own parameters :</B> (default values are little constrained)
+      	
+
+      <TABLE border="0" cellspacing="10" cellpadding="0" width=700>
+       <TR>
+        <TH align="LEFT">
+         Abrv.
+        </TH>
+        <TH align="LEFT">
+         Definition
+        </TH>
+        <TH align="LEFT">
+          Value
+        </TH>
+       </TR>
+
+       
+       <TR>
+        <TD VALIGN="TOP">
+         <I><B>Sure_Pc</B></I>
+        </TD>
+        <TD VALIGN="TOP">
+         <P><B>C</B>oding <B>P</B>robability above which a CDS is interpreted as a <B>sure</B> CDS.</P>
+        </TD>
+        <TD VALIGN="TOP">
+          <SELECT name="Sure_Pc">
+<OPTION>0.1</OPTION>
+<OPTION>0.15</OPTION>
+<OPTION>0.2</OPTION>
+<OPTION>0.25</OPTION>
+<OPTION>0.3</OPTION>
+<OPTION>0.35</OPTION>
+<OPTION>0.4</OPTION>
+<OPTION>0.45</OPTION>
+<OPTION>0.5</OPTION>
+<OPTION>0.55</OPTION>
+<OPTION SELECTED>0.6</OPTION>
+<OPTION>0.65</OPTION>
+<OPTION>0.7</OPTION>
+<OPTION>0.75</OPTION>
+<OPTION>0.8</OPTION>
+<OPTION>0.85</OPTION>
+<OPTION>0.9</OPTION>
+<OPTION>0.95</OPTION>
+<OPTION>1</OPTION>
+</SELECT>
+
+        </TD>
+       </TR>
+       
+       <TR>
+        <TD VALIGN="TOP">
+         <I><B>Sure_LMin</B></I>
+        </TD>
+        <TD VALIGN="TOP">
+         <P><B>Min</B>imum <B>L</B>ength of a <B>sure</B> CDS selected.</P>
+        </TD>
+        <TD VALIGN="TOP">
+          <SELECT name="Sure_LMin">
+<OPTION SELECTED>60</OPTION>
+<OPTION>70</OPTION>
+<OPTION>80</OPTION>
+<OPTION>90</OPTION>
+<OPTION>100</OPTION>
+<OPTION>110</OPTION>
+<OPTION>120</OPTION>
+<OPTION>130</OPTION>
+<OPTION>140</OPTION>
+<OPTION>150</OPTION>
+<OPTION>160</OPTION>
+<OPTION>170</OPTION>
+<OPTION>180</OPTION>
+<OPTION>190</OPTION>
+<OPTION>200</OPTION>
+<OPTION>210</OPTION>
+<OPTION>220</OPTION>
+<OPTION>230</OPTION>
+<OPTION>240</OPTION>
+<OPTION>250</OPTION>
+<OPTION>260</OPTION>
+<OPTION>270</OPTION>
+<OPTION>280</OPTION>
+<OPTION>290</OPTION>
+<OPTION>300</OPTION>
+</SELECT>
+
+        </TD>
+       </TR>
+       
+       <TR>
+        <TD VALIGN="TOP">
+         <I><B>Prob_Pc</B></I>
+        </TD>
+        <TD VALIGN="TOP">
+         <P>Between the <I><B>Sure-Pc</B></I> and <I><B>Prob-Pc</B></I> 
+	     thresholds a CDS is interpreted as a <B>probable</B> CDS.</P>
+        </TD>
+        <TD VALIGN="TOP">
+          <SELECT name="Prob_Pc">
+<OPTION>0</OPTION>
+<OPTION>0.05</OPTION>
+<OPTION>0.1</OPTION>
+<OPTION>0.15</OPTION>
+<OPTION>0.2</OPTION>
+<OPTION SELECTED>0.25</OPTION>
+<OPTION>0.3</OPTION>
+<OPTION>0.35</OPTION>
+<OPTION>0.4</OPTION>
+<OPTION>0.45</OPTION>
+<OPTION>0.5</OPTION>
+<OPTION>0.55</OPTION>
+<OPTION>0.6</OPTION>
+<OPTION>0.65</OPTION>
+<OPTION>0.7</OPTION>
+<OPTION>0.75</OPTION>
+<OPTION>0.8</OPTION>
+<OPTION>0.85</OPTION>
+<OPTION>0.9</OPTION>
+<OPTION>0.95</OPTION>
+<OPTION>1</OPTION>
+</SELECT>
+
+        </TD>
+       </TR>
+       
+       <TR>
+        <TD VALIGN="TOP">
+         <I><B>Prob_LMin</B></I>
+        </TD>
+        <TD VALIGN="TOP">
+         <P><B>Min</B>imum <B>L</B>ength of a <B>probable</B> CDS
+	       selected.</P>
+        </TD>
+        <TD VALIGN="TOP">
+          <SELECT name="Prob_LMin">
+<OPTION>60</OPTION>
+<OPTION>70</OPTION>
+<OPTION>80</OPTION>
+<OPTION>90</OPTION>
+<OPTION>100</OPTION>
+<OPTION>110</OPTION>
+<OPTION SELECTED>120</OPTION>
+<OPTION>130</OPTION>
+<OPTION>140</OPTION>
+<OPTION>150</OPTION>
+<OPTION>160</OPTION>
+<OPTION>170</OPTION>
+<OPTION>180</OPTION>
+<OPTION>190</OPTION>
+<OPTION>200</OPTION>
+<OPTION>210</OPTION>
+<OPTION>220</OPTION>
+<OPTION>230</OPTION>
+<OPTION>240</OPTION>
+<OPTION>250</OPTION>
+<OPTION>260</OPTION>
+<OPTION>270</OPTION>
+<OPTION>280</OPTION>
+<OPTION>290</OPTION>
+<OPTION>300</OPTION>
+</SELECT>
+
+        </TD>
+       </TR>
+       
+       <TR>
+        <TD VALIGN="TOP">
+         <I><B>Sure_ss_I</B></I>
+        </TD>
+        <TD VALIGN="TOP">
+         <P>Minimum <B>I</B>nclusion percentage between two <B>sure</B> 
+	       CDSs transcribed on the <B>s</B>ame <B>s</B>trands.</P>
+        </TD>
+        <TD VALIGN="TOP">
+          <SELECT name="Sure_ss_I">
+<OPTION>0</OPTION>
+<OPTION>5</OPTION>
+<OPTION SELECTED>10</OPTION>
+<OPTION>15</OPTION>
+<OPTION>20</OPTION>
+<OPTION>25</OPTION>
+<OPTION>30</OPTION>
+<OPTION>35</OPTION>
+<OPTION>40</OPTION>
+<OPTION>45</OPTION>
+<OPTION>50</OPTION>
+<OPTION>55</OPTION>
+<OPTION>60</OPTION>
+<OPTION>65</OPTION>
+<OPTION>70</OPTION>
+<OPTION>75</OPTION>
+<OPTION>80</OPTION>
+<OPTION>85</OPTION>
+<OPTION>90</OPTION>
+<OPTION>95</OPTION>
+<OPTION>100</OPTION>
+</SELECT>
+
+        </TD>
+       </TR>
+       
+       <TR>
+        <TD VALIGN="TOP">
+         <I><B>Sure_os_I</B></I>
+        </TD>
+        <TD VALIGN="TOP">
+         <P>Minimum <B>I</B>nclusion percentage between two <B>sure</B> 
+	       CDSs transcribed on the <B>o</B>pposite <B>s</B>trands.</P>
+        </TD>
+        <TD VALIGN="TOP">
+          <SELECT name="Sure_os_I">
+<OPTION>0</OPTION>
+<OPTION>5</OPTION>
+<OPTION>10</OPTION>
+<OPTION>15</OPTION>
+<OPTION>20</OPTION>
+<OPTION>25</OPTION>
+<OPTION>30</OPTION>
+<OPTION>35</OPTION>
+<OPTION>40</OPTION>
+<OPTION>45</OPTION>
+<OPTION>50</OPTION>
+<OPTION SELECTED>55</OPTION>
+<OPTION>60</OPTION>
+<OPTION>65</OPTION>
+<OPTION>70</OPTION>
+<OPTION>75</OPTION>
+<OPTION>80</OPTION>
+<OPTION>85</OPTION>
+<OPTION>90</OPTION>
+<OPTION>95</OPTION>
+<OPTION>100</OPTION>
+</SELECT>
+
+        </TD>
+       </TR>
+       
+       <TR>
+        <TD VALIGN="TOP">
+         <I><B>Sure_prob_O</B></I>
+        </TD>
+        <TD VALIGN="TOP">
+         <P>Maximum <B>O</B>verlapping percentage between a <B>sure</B> 
+		 and a <B>probable</B> CDSs transcribed on the opposite strands.</P>
+        </TD>
+        <TD VALIGN="TOP">
+          <SELECT name="Sure_prob_O">
+<OPTION>0</OPTION>
+<OPTION>5</OPTION>
+<OPTION SELECTED>10</OPTION>
+<OPTION>15</OPTION>
+<OPTION>20</OPTION>
+<OPTION>25</OPTION>
+<OPTION>30</OPTION>
+<OPTION>35</OPTION>
+<OPTION>40</OPTION>
+<OPTION>45</OPTION>
+<OPTION>50</OPTION>
+<OPTION>55</OPTION>
+<OPTION>60</OPTION>
+<OPTION>65</OPTION>
+<OPTION>70</OPTION>
+<OPTION>75</OPTION>
+<OPTION>80</OPTION>
+<OPTION>85</OPTION>
+<OPTION>90</OPTION>
+<OPTION>95</OPTION>
+<OPTION>100</OPTION>
+</SELECT>
+
+        </TD>
+       </TR>
+       
+       <TR>
+        <TD VALIGN="TOP">
+         <I><B>Prob_glob_IO</B></I>
+        </TD>
+        <TD VALIGN="TOP">
+         <P>Maximum <B>glob</B>al score, including both <B>I</B>nclusion and 
+		  <B>O</B>verlapping situations, between a <B>probable</B>
+		  CDS and all other <B>probable</B> CDSs being partially or completely in 
+		  overlap with this CDS.</P>
+        </TD>
+        <TD VALIGN="TOP">
+          <SELECT name="Prob_glob_IO">
+<OPTION>0</OPTION>
+<OPTION>5</OPTION>
+<OPTION>10</OPTION>
+<OPTION>15</OPTION>
+<OPTION>20</OPTION>
+<OPTION>25</OPTION>
+<OPTION>30</OPTION>
+<OPTION>35</OPTION>
+<OPTION>40</OPTION>
+<OPTION>45</OPTION>
+<OPTION>50</OPTION>
+<OPTION>55</OPTION>
+<OPTION>60</OPTION>
+<OPTION>65</OPTION>
+<OPTION>70</OPTION>
+<OPTION SELECTED>75</OPTION>
+<OPTION>80</OPTION>
+<OPTION>85</OPTION>
+<OPTION>90</OPTION>
+<OPTION>95</OPTION>
+<OPTION>100</OPTION>
+<OPTION>110</OPTION>
+<OPTION>120</OPTION>
+<OPTION>130</OPTION>
+<OPTION>140</OPTION>
+<OPTION>150</OPTION>
+<OPTION>160</OPTION>
+<OPTION>170</OPTION>
+<OPTION>180</OPTION>
+<OPTION>190</OPTION>
+<OPTION>200</OPTION>
+</SELECT>
+
+        </TD>
+       </TR>
+       
+      </TABLE>
+   
+   <BR><BR>
+
+   
+   <HR>
+   <CENTER><FONT face="ARIAL" size=4 color="#4D4DFF"><B>Sequence</B> <A href="../html/Method.html?AMIGA=f6f99583e356eb25eff6b263b06fa3a2#3" target="_blank" class="lien1">(?)</A></FONT></CENTER>
+   <HR>
+   
+   
+    <B>Sequence Label</B> (Only alphanumeric characters, without space) <B>:&nbsp;</B>
+	<INPUT type="text" name="labelseq" size=15 maxlength=20 value="">
+    <BR><BR>	
+    <B>DNA sequence in Fasta format</B> (Undetermined bases will be replaced by N) <B>: </B>
+    					<INPUT type="button" name="Reset" value="Reset"
+    					onClick="return document.forms[0].sequence.value='';">
+    <BR><BR>
+    <TEXTAREA name="sequence" rows=10 cols=70></TEXTAREA>
+    <BR><BR>
+    
+    <B>Upload a file : </B>
+    <INPUT TYPE="hidden" name="MAX_FILE_SIZE" value="15000000">
+    <INPUT type="file" name="userfile">
+    
+    
+    
+    
+    <BR><BR>
+    <B>Genetic Code : </B><BR><BR>
+    <TABLE border="1">
+    <TR>
+     <TD>
+    	START Codons : <INPUT type="checkbox" name="ATG" value="CHECKED" CHECKED> ATG |
+    	<INPUT type="checkbox" name="GTG" value="CHECKED" CHECKED> GTG |
+    	<INPUT type="checkbox" name="TTG" value="CHECKED" CHECKED> TTG |
+    	<INPUT type="checkbox" name="CTG" value="CHECKED" > CTG
+      </TD>
+    </TR>
+    <TR>
+     <TD>
+    	<INPUT type="checkbox" name="TGA" value="CHECKED" > TGA =  Trp (Mycoplasma)
+     </TD>
+    </TR>
+    </TABLE>
+   
+
+   <BR><BR>
+
+
+   <HR>
+   <CENTER><FONT face="ARIAL" size=4 color="#4D4DFF"><B>Options</B> <A href="../html/Method.html?AMIGA=f6f99583e356eb25eff6b263b06fa3a2#4" target="_blank" class="lien1">(?)</A></FONT></CENTER>
+   <HR>
+
+   <TABLE border="0" cellspacing="10" cellpadding="0" width=700>
+   
+   
+    <TR>
+     <TD COLSPAN="2">
+      <B>Email address</B> (for full access during one week) <B>:&nbsp;</B>
+      <INPUT type="text" name="mail" size=30 maxlength=50 value="">
+     </TD>
+    </TR>
+    <TR><TD>&nbsp;</TD></TR>
+    <TR>
+     <TD>
+      <INPUT type="checkbox" name="translate" value="CHECKED" CHECKED>  <B>Translate CDSs</B>
+     </TD>
+     <TD>
+      <INPUT type="checkbox" name="profed" value="CHECKED" CHECKED>  <B>Add FrameShift Errors Detection (ProFED)</B>
+     </TD>
+    </TR> 
+   
+     <TR><TD>&nbsp;</TD></TR>
+     <TR>
+     <TD>
+   	<INPUT type="submit" name="submit" value="Submit">
+  	<INPUT type="submit" name="submit" value="Default">
+     </TD>
+   </TR>
+   </TABLE>
+   <BR><HR>
+   </FORM>
+  </TD>
+ </TR>
+</TABLE>
+</CENTER>
+<BR>
+<CENTER>
+<TABLE bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" align="CENTER" width=750>
+ <TR>
+	<TD ALIGN="justify">If you use the AMIGene software please cite: Bocs, S., Cruveiller, S., Vallenet, D., Nuel, G. And M&eacute;digue C. : <B>AMIGENE</B>: Annotation of Microbial Genes. <I>Nucleic Acids Res.</I> 13(31) (2003) 3723-3726.</TD></TR>
+   <TR><TD>&nbsp;</TD></TR>
+   <TR>
+   <TD ALIGN="center">
+   <A href="Mailto:claudine.medigue@genoscope.cns.fr" class="lien1"><FONT SIZE="-1">Contact Us</FONT></A>
+   <BR>
+   <FONT SIZE="-1">&copy; 2003 AGC</FONT>
+  </TD>
+</TABLE>
+</CENTER>
+  </BODY>
+</HTML>
+
+

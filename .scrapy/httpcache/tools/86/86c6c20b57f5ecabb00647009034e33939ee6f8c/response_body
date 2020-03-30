@@ -1,0 +1,358 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-US" prefix="bioschema: http://bioschemas.org/">
+
+<HEAD>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"><!-- automatically added by Apache -->
+<script type="application/ld+json">{
+		"@context" : [ "https://schema.org/" ],
+		"@type" : "Organization",
+		"url" : "https://web.expasy.org/cellosaurus",
+  		"name": "Cellosaurus"
+		
+		, "memberof" : {
+				"@type" : "NGO",
+				"name"  : "SIB Swiss Institute of Bioinformatics",
+				"url"   : "https://sib.swiss/"
+			        }
+		, "parentOrganization" : 
+				{
+				"@type" : "Organization",
+                                "name"  : "ExPASy",
+                                "url"   : "https://www.expasy.org/"
+				}
+		}</script><!-- automatically added by Apache -->
+    <link rel="icon" href="https://web.expasy.org/favicon.ico" ><!-- automatically added by Apache -->
+    <link rel="stylesheet" href="/css/sib_css/sib.css" type="text/css" media="screen" charset="utf-8" >
+	   <link rel="stylesheet" href="/css/sib_css/sib_print.css" type="text/css" media="print" charset="utf-8" >
+           <!--[if lte IE 6]>
+	   <link rel="stylesheet" href="/css/sib_css/sib_ie6.css" type="text/css" media="screen" title="" charset="utf-8">
+           <![endif]-->
+           <link rel="stylesheet" href="/css/base.css" type="text/css"><!-- automatically added by Apache -->
+<TITLE>ExPASy - Cellosaurus</TITLE>
+
+<meta name="description" content="Cellosaurus, a cell line database, cell line catalogue, cell line ontology">
+
+<script type="application/ld+json">
+
+{
+
+  "@context": "http://schema.org/",
+
+  "@type": "DataSet",
+
+  "name": "Cellosaurus",
+
+  "description": "Knowledge resource on cell lines",
+
+  "url": "https://web.expasy.org/cellosaurus/",
+
+  "keywords": "cell line, cell culture, cancer, STR,  iPSC, ESC",
+
+  "identifier": "https://identifiers.org/MIR:00000598",
+
+  "dateModified": "2018-11-23",
+
+  "temporalCoverage": "1943/..",
+
+  "thumbnailUrl": "https://www.expasy.org/img/icon_resources/1030.png",
+
+
+
+  "license": {
+
+        "@type": "CreativeWork",
+
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+
+  },
+
+
+
+  "citation": {
+
+  	"@type": "CreativeWork",
+
+  	"name": "The Cellosaurus, a cell line knowledge resource.",
+
+  	"author": {
+
+  		"@type": "Person",
+
+  		"givenName": "Bairoch",
+
+  		"familyName": "Amos",
+
+  		"identifier": "http://orcid.org/0000-0003-2826-6444"
+
+  	},
+
+  	"identifier": "http://dx.doi.org/10.7171/jbt.18-2902-002",
+
+        "sameas": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5945021/"
+
+  },
+
+  "publisher":{
+
+     "@type": "Organization",
+
+     "name": "SIB Swiss Institute of Bioinformatics",
+
+     "url": "https://www.sib.swiss/"
+
+  },
+
+
+
+  "creator":{
+
+     "@type": "Person",
+
+     "givenName": "Bairoch",
+
+     "familyName": "Amos",
+
+     "contactPoint":{
+
+        "@type": "ContactPoint",
+
+        "contactType": "technical support",
+
+        "url": "https://www.sib.swiss/amos-bairoch-lydie-lane-group"
+
+     }
+
+  },
+
+
+
+  "distribution":[
+
+     {
+
+        "@type": "DataDownload",
+
+        "encodingFormat": "application/XML",
+
+        "contentUrl": "ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.xml"
+
+     },
+
+     {
+
+        "@type": "DataDownload",
+
+        "encodingFormat": "OBO",
+
+        "contentUrl": "ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.obo"
+
+     },
+
+     {
+
+        "@type": "DataDownload",
+
+        "encodingFormat": "text/markdown",
+
+        "contentUrl": "ftp://ftp.expasy.org/databases/cellosaurus/cellosaurus.txt"
+
+     }
+
+  ],
+
+
+
+ "potentialAction": {
+
+    "@type": "SearchAction",
+
+    "target": "https://web.expasy.org/cgi-bin/cellosaurus/search?input={search_term_string}",
+
+    "query-input": "required name=search_term_string"
+
+  }
+
+
+
+}
+
+</script>
+
+
+
+</HEAD>
+
+<body
+ typeof="schema:WebPage"> 
+<!-- ********************************************************************************************** -->
+<!-- START OF HEADER information on top of the page -->
+<div id='sib_top'><a name='TOP'></a></div>
+<div id='sib_container'>
+
+<!-- TODO: Change id to "sib_header" or "sib_header_small" -->
+<div id='sib_header_small'>
+
+<!-- SIB-ExPASy -->
+<div id="sib_expasy_logo" property="schema:isPartOf" typeof="schema:CreativeWork" >
+<a href="https://sib.swiss/" id="sib_link" title="SIB Swiss Institute of Bioinformatics"></a>
+<a property="schema:url" href="https://www.expasy.org" id="expasy_link" title="ExPASy - SIB Bioinformatics Resource Portal"></a>
+</div>
+<!-- SIB-ExPASy END -->
+
+<div class='sib_title_no_logo'>
+<h1><a href="https://web.expasy.org/cellosaurus">Cellosaurus</a></h1>
+</div>
+
+<! -- Additionnal resource header -->
+<div id='resource_header'></div>
+	<div id='sib_header_nav'>
+		<a property="" href="https://web.expasy.org/cellosaurus" title="Home page">Home</a>
+		&nbsp;|&nbsp;
+		<a style="font-weight: bold; color: rgb(204,0,0) !important;" href="/contact" title="Contact">Contact</a>
+	</div>
+</div>
+<!-- END OF HEADER -->
+<!-- ********************************************************************************************** -->
+<div id='sib_body'>
+<!-- automatically added by Apache -->
+
+
+<table><tr><td><img src="cellosaurus.jpg" width="100" alt="Cellosaurus logo"></td><td><h1>Cellosaurus - a knowledge resource on cell lines</h1></td></tr></table>
+
+
+
+<HR>
+
+<table><tr><td>
+
+<div>
+
+
+
+<form method=POST action="/cgi-bin/cellosaurus/search">
+
+<input name="input" size=40>
+
+<input type=submit value="Search"><input type="reset" value="Clear" name="reset">
+
+</form>
+
+<p>
+
+</p>
+
+<p>
+
+Release information:
+
+Version 34 (March 2020) <br/>
+
+118785 cell lines (88553 human, 20872 mouse, 2136 rat)<br/>
+
+</p>
+
+<p>
+
+<a href="/cellosaurus/description.html">Description of the Cellosaurus</a><br/>
+
+<a href="/cgi-bin/cellosaurus/browse_by_group">Browse by cell line group</a><br/>
+
+<a href="/cgi-bin/cellosaurus/browse_by_panel">Browse by cell line panel</a><br/>
+
+<a href="/cgi-bin/cellosaurus/search?input='problematic cell line'">Browse problematic (contaminated/misidentified) cell lines</a><br/>
+
+<a href="/cellosaurus-str-search">CLASTR</a> - STR similarity search<br/> 
+
+<a href="ftp://ftp.expasy.org/databases/cellosaurus">Download complete Cellosaurus data in various formats</a></p>
+
+<p>
+
+<img src="/images/others/New_icon_bluestar16_bold.svg" alt="new icon" height="40" width="40" align="center"><a href="/cellosaurus/sars-cov-2.html">SARS-CoV-2 relevant information</a>
+
+</p>
+
+<a href="/cellosaurus/cellosaurus_relnotes.txt">Release notes</a><br/>
+
+<a href="/cgi-bin/cellosaurus/faq">Frequently asked questions (FAQ)</a><br/>
+
+<a href="/cellosaurus/questions_cell_lines.html">Questions/answers relevant to cell lines</a><br/>
+
+<a href="/cellosaurus/news_archive/">News archive</a><br/>
+
+<a href="/cellosaurus/references.html">References</a><br/>
+
+<a href="/cellosaurus/overview_rii.html">Overview of the Research Identification Initiative</a><br/></p>
+
+<a href="/cellosaurus/invitromaticists/"><img src="/images/others/spotlight-clipart.png" alt="spotlight icon" height="40" width="40" align="center">Invitromaticists spotlight</a><br/>
+
+
+
+
+
+<p><i>The Cellosaurus is developed by Amos Bairoch of the <a href="http://www.sib.swiss/bairoch-amos-lane-lydie/">CALIPHO group</A> at the SIB - Swiss Institute of Bioinformatics as part of the <a href="http://www.nextprot.org/">neXtProt</A> project.</i></p>
+
+</div>
+
+</td>
+
+
+
+<td width="25%"><div class="panel nbr panel-default">
+
+            <div class="panel-body ntbp">
+
+                <div class="row p1px">
+
+                    <a class="twitter-timeline"  href="https://twitter.com/Cellosaurus" data-widget-id="642268788906422272">Tweets by @Cellosaurus</a>
+
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+</td></tr>
+
+</table>
+
+<!-- sib_body -->
+<br clear="left" />
+</div>
+<!-- ********************************************************************************************** -->
+<!-- START OF FOOTER information at the bottom of the page -->
+<div id = 'sib_footer'>			
+  <!-- This part of the footer is _left_ justified and should contain SIB on the very left -->	
+  <div id = 'sib_footer_content' property="schema:creator" typeof="schema:NGO">
+    <a property="schema:url" href="https://sib.swiss/" ><span property="schema:name">SIB Swiss Institute of Bioinformatics</span></a>&nbsp;|&nbsp;<a href = "https://www.expasy.org/disclaimer.html">Disclaimer</a>
+	<!-- This part of the footer is _right_ justified -->
+	<div id = "sib_footer_right">	
+      <a href="#TOP" id = "sib_footer_gototop"><span style = "padding-left: 10px">Back to the Top</span></a>				
+    </div>
+  </div>
+</div>
+<!-- END OF FOOTER -->
+</div> 
+<!-- sib_container -->
+
+<script async="async" src='https://www.google-analytics.com/analytics.js' type="text/javascript"></script>
+<script type="text/javascript"/>
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-23625305-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+</script>
+<!-- automatically added by Apache -->
+<!-- automatically added by Apache -->
+</body>
+
+</html>
+
+
+

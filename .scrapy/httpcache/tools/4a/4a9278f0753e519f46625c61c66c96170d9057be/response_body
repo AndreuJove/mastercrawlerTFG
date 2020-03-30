@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home - HDX Workbench</title>
+
+	<!-- For third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="">
+
+	<!-- For iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="">
+
+	<!-- For first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="">
+
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="">
+
+	<link rel="icon" href="">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://hdxworkbench.com/xmlrpc.php">
+	
+<!-- This site is optimized with the Yoast SEO plugin v9.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="HDX Workbench, hydrogen/deuterium exchange, hydrogen/deuterium exchange software, HDX software, HD Desktop, HXMS, HDX"/>
+<link rel="canonical" href="http://hdxworkbench.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Home - HDX Workbench" />
+<meta property="og:description" content="HDX Workbench, hydrogen/deuterium exchange, hydrogen/deuterium exchange software, HDX software, HD Desktop, HXMS, HDX" />
+<meta property="og:url" content="http://hdxworkbench.com/" />
+<meta property="og:site_name" content="HDX Workbench" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="HDX Workbench, hydrogen/deuterium exchange, hydrogen/deuterium exchange software, HDX software, HD Desktop, HXMS, HDX" />
+<meta name="twitter:title" content="Home - HDX Workbench" />
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"WebSite","@id":"http://hdxworkbench.com/#website","url":"http://hdxworkbench.com/","name":"HDX Workbench","potentialAction":{"@type":"SearchAction","target":"http://hdxworkbench.com/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"Organization","url":"http://hdxworkbench.com/","sameAs":[],"@id":"http://hdxworkbench.com/#organization","name":"Omics Informatics","logo":""}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="HDX Workbench &raquo; Feed" href="http://hdxworkbench.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HDX Workbench &raquo; Comments Feed" href="http://hdxworkbench.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/hdxworkbench.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='papercite_css-css'  href='http://hdxworkbench.com/wp-content/plugins/papercite/papercite.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://hdxworkbench.com/wp-includes/css/dist/block-library/style.min.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://hdxworkbench.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='siteorigin-panels-front-css'  href='http://hdxworkbench.com/wp-content/plugins/siteorigin-panels/css/front-flex.min.css?ver=2.10.2' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-my-login-css'  href='http://hdxworkbench.com/wp-content/plugins/theme-my-login/assets/styles/theme-my-login.min.css?ver=7.0.13' type='text/css' media='all' />
+<link rel='stylesheet' id='flaton-font-bitter-css'  href='//fonts.googleapis.com/css?family=Bitter%3A400%2C700&#038;ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='flaton-font-source-sans-pro-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700%2C600&#038;ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='skeleton-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/skeleton.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elusive-webfont-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/elusive-webfont.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/font-awesome.min.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='eislide-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/eislide.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/flexslider.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='slicknav-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/slicknav.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='tabulous-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/tabulous.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='prettyPhoto-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/prettyPhoto.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='webulous-default-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/default.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='webulous-style-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/style.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='webulous-animate-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/animated.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='webulous-animations-css'  href='http://hdxworkbench.com/wp-content/themes/flatonpro/css/animations.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='redux-google-fonts-webulous_options-css'  href='http://fonts.googleapis.com/css?family=Abel%3A400%7CRoboto%3A400%7CBree+Serif%3A400&#038;subset=latin&#038;ver=1527645833' type='text/css' media='all' />
+<link rel='stylesheet' id='redux-google-fonts-redux_demo-css'  href='http://fonts.googleapis.com/css?family=Abel%3A400&#038;ver=1525675584' type='text/css' media='all' />
+<script type='text/javascript' src='http://hdxworkbench.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/plugins/papercite/js/papercite.js?ver=5.1.4'></script>
+<link rel='https://api.w.org/' href='http://hdxworkbench.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://hdxworkbench.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://hdxworkbench.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.1.4" />
+<link rel='shortlink' href='http://hdxworkbench.com/' />
+<link rel="alternate" type="application/json+oembed" href="http://hdxworkbench.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhdxworkbench.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://hdxworkbench.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhdxworkbench.com%2F&#038;format=xml" />
+<style type="text/css"></style>	        <script type="text/javascript">
+				jQuery(document).ready(function(){
+
+					//Check to see if the window is top if not then display button
+					jQuery(window).scroll(function(){ 
+						if (jQuery(this).scrollTop() > 100) {
+							jQuery('.scroll-to-top').fadeIn();
+						} else {
+							jQuery('.scroll-to-top').fadeOut();  
+						}
+					});
+
+					//Click event to scroll to top
+					jQuery('.scroll-to-top').click(function(){
+						jQuery('html, body').animate({scrollTop : 0},800);
+						return false;
+					});		
+				});
+		    </script>
+    <script type="text/javascript" >
+    jQuery(function ($) {
+        var ajax_options = {
+            type: "POST",
+            action: 'link_click_counter',
+            nonce: '250f3ef156',
+            ajaxurl: 'http://hdxworkbench.com/wp-admin/admin-ajax.php',
+            post_id: '204'
+        };
+
+        $( '.countable_link' ).on( 'click', function() {
+            console.log("Clicked");
+            var self = $( this );
+            $.post( ajax_options.ajaxurl, ajax_options, function() {
+                //window.location.href = self.attr( "href" );
+                console.log(ajax_options.post_id);
+            });
+            return false;
+        });
+    });
+    </script>
+                <style type="text/css" media="all"
+                       id="siteorigin-panels-layouts-head">/* Layout 204 */ #pgc-204-0-0 , #pgc-204-1-0 , #pgc-204-2-0 , #pgc-204-3-0 { width:100%;width:calc(100% - ( 0 * 30px ) ) } #pl-204 #panel-204-0-0-0 , #pl-204 #panel-204-1-0-0 , #pl-204 #panel-204-1-0-1 , #pl-204 #panel-204-2-0-0 , #pl-204 #panel-204-3-0-0 {  } #pg-204-0 , #pg-204-1 , #pl-204 .so-panel { margin-bottom:35px } #pg-204-2 , #pg-204-3 { margin-bottom:100px } #pl-204 .so-panel:last-child { margin-bottom:0px } #pg-204-2.panel-no-style, #pg-204-2.panel-has-style > .panel-row-style { -webkit-align-items:flex-start;align-items:flex-start } #pg-204-3> .panel-row-style { border:1px solid #f0f2f3 } @media (max-width:780px){ #pg-204-0.panel-no-style, #pg-204-0.panel-has-style > .panel-row-style , #pg-204-1.panel-no-style, #pg-204-1.panel-has-style > .panel-row-style , #pg-204-2.panel-no-style, #pg-204-2.panel-has-style > .panel-row-style , #pg-204-3.panel-no-style, #pg-204-3.panel-has-style > .panel-row-style { -webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column } #pg-204-0 .panel-grid-cell , #pg-204-1 .panel-grid-cell , #pg-204-2 .panel-grid-cell , #pg-204-3 .panel-grid-cell { margin-right:0 } #pg-204-0 .panel-grid-cell , #pg-204-1 .panel-grid-cell , #pg-204-2 .panel-grid-cell , #pg-204-3 .panel-grid-cell { width:100% } #pl-204 .panel-grid-cell { padding:0 } #pl-204 .panel-grid .panel-grid-cell-empty { display:none } #pl-204 .panel-grid .panel-grid-cell-mobile-last { margin-bottom:0px }  } </style>		<style type="text/css" media="screen"> 
+            .main-navigation li {
+            	float: none;
+            	display: inline-block;
+            }
+            .main-navigation {
+            	text-align: center;
+            }
+            .main-navigation ul ul {
+                 text-align: left;
+            }
+            .main-navigation ul ul li {
+            	float: left;
+            	display: block;
+            }
+
+		</style>
+    <style type="text/css" title="dynamic-css" class="options-output">.footer-image,.footer-top,.footer-bottom{background-color:#272727;}body,body.custom-background{background-color:#;}.flex-caption{background-color:rgba(37,37,37,0.5);}.flex-caption{margin-bottom:7px;margin-left:0;}</style><style type="text/css" title="dynamic-css" class="options-output">.site-title{color:#000000;}.site-header{border-top:3px solid #1e73be;border-bottom:3px solid #1e73be;border-left:3px solid #1e73be;border-right:3px solid #1e73be;}.site-header{border-top:3px solid #1e73be;border-bottom:3px solid #1e73be;border-left:3px solid #1e73be;border-right:3px solid #1e73be;}.site-header{margin-top:1px;margin-right:2px;margin-bottom:3px;margin-left:4px;}h1, h2, h3, h4{font-family:Arial,Helvetica,sans-serif;font-weight:Normal;font-style:normal;color:#dd9933;font-size:30px;}.site-description{font-family:Abel;line-height:40px;font-weight:normal;font-style:700;color:#333;font-size:33px;}</style></head>
+
+<body class="home page-template-default page page-id-204 siteorigin-panels siteorigin-panels-before-js siteorigin-panels-home"> 
+	<div id="page" class="hfeed site ">  
+
+	  
+  
+		<header id="masthead" class="site-header header-wrap" role="banner">
+			
+							<div class="top-nav">
+				        <div class="container">
+							<div class="eight columns">
+								<div class="cart-left">
+									<aside id="text-2" class="widget widget_text">			<div class="textwidget"><ul> <li><i class="fa fa-envelope-o"></i>  <a href="mailto:info@omicsinformatics.com">info@omicsinformatics.com</a></li> <li><i class="fa fa-phone"></i> Call Us: (866) HDX-SOFT      (866) 439-7638</li> </ul></div>
+		</aside>								</div>
+							</div>
+
+							<div class="eight columns">
+								<div class="cart-right">
+									<aside id="text-3" class="widget widget_text">			<div class="textwidget"><ul>
+<li><i class="fa fa-map-marker"></i>Omics Informatics, 1050 Bishop Street #517, Honolulu, HI 96813</li>
+</ul></div>
+		</aside>  
+								</div>
+							</div>
+						</div>
+				</div> <!-- .top-nav -->
+			            <div class="container">
+				<div class="logo site-branding eight columns">
+
+											<a href="http://hdxworkbench.com/" rel="home"><img src="http://hdxworkbench.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-13-at-2.12.06-PM.png" alt="logo" ></a>
+					 
+													<h2 class="site-description"></h2>
+											
+					
+				</div><!-- .site-branding -->
+
+				<div class="eight columns">
+					<div class="top-right">
+						<aside id="social-networks-widget-1" class="widget widget_social-networks-widget"><h3 class="widget-title">Social Networks</h3><ul id="social-widget"></ul></aside>					</div>					
+				</div>
+
+			</div>
+		</header><!-- #masthead -->
+		<div class="nav-wrap" id="primary-nav">
+			<div class="container">
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<h1 class="menu-toggle">Menu</h1>
+					<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+					<div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-2537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-204 current_page_item menu-item-2537"><a href="http://hdxworkbench.com/" aria-current="page">Home</a></li>
+<li id="menu-item-2539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2539"><a href="http://hdxworkbench.com/features-3/">Features</a></li>
+<li id="menu-item-2967" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2967"><a href="http://hdxworkbench.com/publications/">Publications</a></li>
+<li id="menu-item-3238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3238"><a href="http://hdxworkbench.com/tutorials/">Tutorials</a></li>
+<li id="menu-item-3037" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3037"><a href="http://hdxworkbench.com/faq/">FAQ</a></li>
+<li id="menu-item-2562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2562"><a href="http://hdxworkbench.com/contact-us/">Contact Us</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			</div>
+		</div>		<div class="flex-container"><div class="flexslider"><ul class="slides"><li><div class="flex-image"><img width="1110" height="381" src="http://hdxworkbench.com/wp-content/uploads/2019/05/consolidated_ec_plots1.png" class="attachment-full_width size-full_width wp-post-image" alt="" srcset="http://hdxworkbench.com/wp-content/uploads/2019/05/consolidated_ec_plots1.png 1110w, http://hdxworkbench.com/wp-content/uploads/2019/05/consolidated_ec_plots1-300x103.png 300w, http://hdxworkbench.com/wp-content/uploads/2019/05/consolidated_ec_plots1-768x264.png 768w, http://hdxworkbench.com/wp-content/uploads/2019/05/consolidated_ec_plots1-1024x351.png 1024w" sizes="(max-width: 1110px) 100vw, 1110px" /></div></li><li><div class="flex-image"><img width="1734" height="595" src="http://hdxworkbench.com/wp-content/uploads/2019/05/ETDMS2_1.png" class="attachment-full_width size-full_width wp-post-image" alt="" srcset="http://hdxworkbench.com/wp-content/uploads/2019/05/ETDMS2_1.png 1734w, http://hdxworkbench.com/wp-content/uploads/2019/05/ETDMS2_1-300x103.png 300w, http://hdxworkbench.com/wp-content/uploads/2019/05/ETDMS2_1-768x264.png 768w, http://hdxworkbench.com/wp-content/uploads/2019/05/ETDMS2_1-1024x351.png 1024w" sizes="(max-width: 1734px) 100vw, 1734px" /></div></li><li><div class="flex-image"><img width="1024" height="344" src="http://hdxworkbench.com/wp-content/uploads/2018/05/waterhdx-1.png" class="attachment-full_width size-full_width wp-post-image" alt="" srcset="http://hdxworkbench.com/wp-content/uploads/2018/05/waterhdx-1.png 1024w, http://hdxworkbench.com/wp-content/uploads/2018/05/waterhdx-1-300x101.png 300w, http://hdxworkbench.com/wp-content/uploads/2018/05/waterhdx-1-768x258.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></div></li><li><div class="flex-image"><img width="2005" height="673" src="http://hdxworkbench.com/wp-content/uploads/2018/05/experiment_comparison_slider.png" class="attachment-full_width size-full_width wp-post-image" alt="" srcset="http://hdxworkbench.com/wp-content/uploads/2018/05/experiment_comparison_slider.png 2005w, http://hdxworkbench.com/wp-content/uploads/2018/05/experiment_comparison_slider-300x101.png 300w, http://hdxworkbench.com/wp-content/uploads/2018/05/experiment_comparison_slider-768x258.png 768w, http://hdxworkbench.com/wp-content/uploads/2018/05/experiment_comparison_slider-1024x344.png 1024w" sizes="(max-width: 2005px) 100vw, 2005px" /></div></li><li><div class="flex-image"><img width="2516" height="823" src="http://hdxworkbench.com/wp-content/uploads/2018/05/residue_consolidation-slider.png" class="attachment-full_width size-full_width wp-post-image" alt="" srcset="http://hdxworkbench.com/wp-content/uploads/2018/05/residue_consolidation-slider.png 2516w, http://hdxworkbench.com/wp-content/uploads/2018/05/residue_consolidation-slider-300x98.png 300w, http://hdxworkbench.com/wp-content/uploads/2018/05/residue_consolidation-slider-768x251.png 768w, http://hdxworkbench.com/wp-content/uploads/2018/05/residue_consolidation-slider-1024x335.png 1024w" sizes="(max-width: 2516px) 100vw, 2516px" /></div><div class="flex-caption">See deuteration changes in at the residue level stacked across multiple experiments presented in a heat map.</div></li><li><div class="flex-image"><img width="1871" height="642" src="http://hdxworkbench.com/wp-content/uploads/2018/05/seq_cov_consol_pymol_3.png" class="attachment-full_width size-full_width wp-post-image" alt="" srcset="http://hdxworkbench.com/wp-content/uploads/2018/05/seq_cov_consol_pymol_3.png 1871w, http://hdxworkbench.com/wp-content/uploads/2018/05/seq_cov_consol_pymol_3-300x103.png 300w, http://hdxworkbench.com/wp-content/uploads/2018/05/seq_cov_consol_pymol_3-768x264.png 768w, http://hdxworkbench.com/wp-content/uploads/2018/05/seq_cov_consol_pymol_3-1024x351.png 1024w" sizes="(max-width: 1871px) 100vw, 1871px" /></div></li><li><div class="flex-image"><img width="2317" height="777" src="http://hdxworkbench.com/wp-content/uploads/2018/05/N15_experiment_slider.png" class="attachment-full_width size-full_width wp-post-image" alt="" srcset="http://hdxworkbench.com/wp-content/uploads/2018/05/N15_experiment_slider.png 2317w, http://hdxworkbench.com/wp-content/uploads/2018/05/N15_experiment_slider-300x101.png 300w, http://hdxworkbench.com/wp-content/uploads/2018/05/N15_experiment_slider-768x258.png 768w, http://hdxworkbench.com/wp-content/uploads/2018/05/N15_experiment_slider-1024x343.png 1024w" sizes="(max-width: 2317px) 100vw, 2317px" /></div></li></ul></div></div><div id="content" class="site-content container">
+		<div id="primary" class="content-area sixteen columns">  
+				<main id="main" class="site-main" role="main">
+
+				<div id="pl-204"  class="panel-layout" ><div id="pg-204-0"  class="panel-grid panel-no-style" ><div id="pgc-204-0-0"  class="panel-grid-cell" ><div id="panel-204-0-0-0" class="so-panel widget widget_gap-widget panel-first-child panel-last-child" data-index="0" ><div class="gap" style="height: 50px;"></div></div></div></div><div id="pg-204-1"  class="panel-grid panel-has-style" ><div style="padding-top: 30px; " class="panel-row-style panel-row-style-for-204-1" ><div id="pgc-204-1-0"  class="panel-grid-cell" ><div id="panel-204-1-0-0" class="so-panel widget widget_text panel-first-child" data-index="1" >			<div class="textwidget"><h1 class="tcenter widget-title">Hydrogen / deuterium exchange data analysis that makes sense.</h1>
+<!-- Hotjar Tracking Code for hdxworkbench.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:921856,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script></div>
+		</div><div id="panel-204-1-0-1" class="so-panel widget widget_text panel-last-child" data-index="2" >			<div class="textwidget">HDX Workbench is an established feature rich software platform for the analysis of hydrogen/deuterium exchange (HDX) mass spectrometry data from Waters or Thermo instruments. Allowing users to quickly calculate deuteration levels for peptides, it integrates intuitive visualization tools to provides everything you need to understand and report protein conformation in the presence of HDX.</div>
+		</div></div></div></div><div id="pg-204-2"  class="panel-grid panel-no-style" ><div id="pgc-204-2-0"  class="panel-grid-cell" ><div id="panel-204-2-0-0" class="so-panel widget widget_text panel-first-child panel-last-child" data-index="3" >			<div class="textwidget"><div class="tabs center"><ul class="tab_heading"><li><a href="#tab_5e823f6cad433031335261"> Speed</a></li><li><a href="#tab_5e823f6cad43e302882135"> Accuracy</a></li><li><a href="#tab_5e823f6cad442858369636"> Design</a></li><li><a href="#tab_5e823f6cad445240551213"> Reports</a></li></ul><div class="tabs_container"><div id="tab_5e823f6cad433031335261">
+<div  class="fa fa-rocket"></div>
+<h2>Speed</h2>
+Software improvements have greatly reduced the time it takes to complete data analysis of HDX data but there remains much room for improvement. The statistical filter tool allows for quick and automatic identification and removal of outliers. The bulk discard tool, native library access and ability to curate multiple peptide data simultaneously allows you to get through your data as fast as possible.</div><div id="tab_5e823f6cad43e302882135"><div  class="fa fa-bullseye"></div>
+<h2>Accuracy</h2>
+Improvements in the detection algorithm have produced more true positive identifications. The spectral view tools provide the means to understand and calculate centroids accurately so you can have confidence in your downstream results.</div><div id="tab_5e823f6cad442858369636"><div  class="fa fa-cubes"></div>
+<h2>Design</h2>
+View your data from the raw spectra to sequence coverage heat maps and tabular views in a way that is relevant. Understand exactly how to get from averaged isotopic envelopes, to centroids, to individual peptides on sequence coverage maps, to residue calculated results in an easy to use interface.</div><div id="tab_5e823f6cad445240551213"><div  class="fa fa-bar-chart"></div>
+<h2>Reports</h2>
+Presentation is everything when trying to distill information from large data sets. Present your results in sequence coverage heat maps, residue consolidated heat maps across multiple differential experiments, color coded tables or onto a 3D protein structure. View your results in a way that makes sense.</div></div></div></div>
+		</div></div></div><div id="pg-204-3"  class="panel-grid panel-has-style" ><div class="section-divider siteorigin-panels-stretch panel-row-style panel-row-style-for-204-3" data-stretch-type="full" ><div id="pgc-204-3-0"  class="panel-grid-cell" ></div></div></div></div>				
+			</main><!-- #main -->
+	    </div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer footer-image" role="contentinfo">
+			<div class="footer-top">
+			<div class="container">
+		<div class="one-third column">
+			<aside id="media_image-2" class="widget widget_media_image"><img width="300" height="300" src="http://hdxworkbench.com/wp-content/uploads/2018/05/sc_logo_trans-300x300.png" class="image wp-image-3041  attachment-medium size-medium" alt="" style="max-width: 100%; height: auto;" srcset="http://hdxworkbench.com/wp-content/uploads/2018/05/sc_logo_trans-300x300.png 300w, http://hdxworkbench.com/wp-content/uploads/2018/05/sc_logo_trans-150x150.png 150w, http://hdxworkbench.com/wp-content/uploads/2018/05/sc_logo_trans-768x768.png 768w, http://hdxworkbench.com/wp-content/uploads/2018/05/sc_logo_trans-1024x1024.png 1024w, http://hdxworkbench.com/wp-content/uploads/2018/05/sc_logo_trans-250x250.png 250w, http://hdxworkbench.com/wp-content/uploads/2018/05/sc_logo_trans.png 1199w" sizes="(max-width: 300px) 100vw, 300px" /></aside>					
+		</div>
+
+
+		<div class="one-third column">
+			<aside id="text-8" class="widget widget_text"><h3 class="widget-title">Omics Informatics</h3>			<div class="textwidget"><p>http://www.omicsinformatics.com</p>
+<p>info@omicsinformatics.com<br />
+(866) HDX-SOFT<br />
+(866) 439-7638</p>
+</div>
+		</aside>					
+		</div>
+
+
+		<div class="one-third column">
+			<aside id="text-9" class="widget widget_text"><h3 class="widget-title">HDX Workbench</h3>			<div class="textwidget"><p>HDX Workbench is an established feature rich software platform for the analysis of hydrogen/deuterium exchange (HDX) mass spectrometry data from Waters or Thermo instruments. Allowing users to quickly calculate deuteration levels for peptides, it integrates intuitive visualization tools to provides everything you need to understand and report protein conformation in the presence of HDX.</p>
+</div>
+		</aside>					
+		</div>
+
+
+		
+			</div>
+		</div>
+		
+		<div class="footer-bottom copy">
+			<div class="container">
+				<div class="eight columns">
+					   
+						<p>Copyright © 2018 HDX WORKBENCH</p>
+									</div>
+							</div>
+		</div><!-- .site-info -->	
+		<div class="scroll-to-top"><i class="fa fa-angle-up"></i></div><!-- .scroll-to-top -->		
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+    <!-- GoSquared Start -->
+    <!-- Integration by Garman.IO -->
+    <script>
+      !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+      arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+      d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+      insertBefore(d,q)}(window,document,'script','_gs');
+
+      _gs('GSN-523456-Z');
+
+          </script>
+    <!-- GoSquared End -->
+  <script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/hdxworkbench.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var themeMyLogin = {"action":"","errors":[]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/plugins/theme-my-login/assets/scripts/theme-my-login.min.js?ver=7.0.13'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/navigation.js?ver=20120206'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/jquery.flexslider-min.js?ver=2.2.2'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/jquery.easing.1.3.js?ver=1.3'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/jquery.eislideshow.js?ver=1.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/raphael.min.js?ver=2.1.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/isotope.pkgd.min.js?ver=2.0.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/jquery.slicknav.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/tagchange.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/tabulous.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/jquery.prettyPhoto.js?ver=3.1.5'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/doubletaptogo.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-includes/js/jquery/ui/accordion.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/custom.js?ver=1.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/custom-sticky.js?ver=1.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/home-animate.js?ver=1.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/themes/flatonpro/js/animate.js?ver=1.0'></script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-includes/js/wp-embed.min.js?ver=5.1.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var panelsStyles = {"fullContainer":"body"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hdxworkbench.com/wp-content/plugins/siteorigin-panels/js/styling-2102.min.js?ver=2.10.2'></script>
+<script type="text/javascript">
+
+</script><script type="text/javascript">document.body.className = document.body.className.replace("siteorigin-panels-before-js","");</script>	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$('.flexslider').flexslider({
+				//controlsContainer: ".flex-container",
+				animation: "fade",
+				direction: "horizontal",
+				slideshowSpeed: 7000,
+				animationSpeed: 1000,
+				slideshow: true,
+				smoothHeight: false,
+				directionNav: true,
+				controlNav: true,
+				multipleKeyboard: false,
+				mousewheel: false,
+				pauseplay: false,
+				randomize: false,
+				animationLoop: true,
+				pauseOnAction: false,
+				pauseOnHover: false,
+				prevText: "Previous",
+				nextText: "Next",
+				playText: "Play",
+				pauseText: "Pause",
+			});
+			
+			$('.flexcarousel').flexslider({
+			    animation: "slide",
+			    animationLoop: false,
+			    itemWidth: 230,
+			    itemMargin: 5
+			});
+
+			$("a[rel^='prettyPhoto']").prettyPhoto({
+				animation_speed: "1",
+				slideshow: 5000,
+				autoplay_slideshow: false,
+				opacity: 0.7,
+				show_title: true,
+				theme: "pp_default",
+				overlay_gallery: true,
+							});
+		
+		});
+	</script>
+</body>
+</html>

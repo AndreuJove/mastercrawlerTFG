@@ -1,0 +1,342 @@
+<html>
+<head><base href="http://webs.iiitd.edu.in/raghava/bhairpred/">
+<title>&#946;hairPred - &#946;hairpin prediction server from protein sequences </title>
+</head>
+
+<body>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-width: 0" bordercolor="#111111" width="98%" id="AutoNumber1" height="12">
+  <tr>
+    <td width="100%" bgcolor="#1F68A5" style="border-style: none; border-width: medium" height="17">
+    <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-width: 0" bordercolor="#111111" width="102%" id="AutoNumber6" height="81">
+      <tr>
+        <td width="20%" style="border-style: none; border-width: medium" height="79" bgcolor="#006666">
+        <p align="left" style="margin-left: 5; margin-top: 0; margin-bottom: 0">
+        <img border="0" src="index.8.jpg" width="122" height="60"><br>
+&nbsp;</td>
+        <td width="82%" style="border-style: none; border-width: medium" height="79" bgcolor="#006666">
+        <p align="center" style="margin-top: 0; margin-bottom: 0">
+	<img border="0" src="index.42.jpg" width="600" height="70"></p>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" style="border-left: medium none #111111; border-right: medium none #111111; border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium" height="16" bgcolor="#FFCC66">
+    <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-top-width:0" bordercolor="#1F68A5" width="100%" id="AutoNumber11" height="6">
+      <tr>
+        <td width="20%" style="border-left-style: none; border-left-width: medium; border-right-style: solid; border-right-width: 1; border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium" bgcolor="#009999
+"align="center" height="4">
+        <p style="margin-top: 2; margin-bottom: 2"><b>
+        <font face="Verdana" size="2" color="#FFFFFF">
+        <a href="index.html" style="text-decoration: none">
+        <font color="#FFFFFF" face = "Arial">Home</font></font></b></td>
+        <td width="20%" style="border-left-style: solid; border-left-width: 1; border-right-style: solid; border-right-width: 1; border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium" bgcolor="#009999" align="center" height="4">
+        <p style="margin-top: 2; margin-bottom: 2"><b>
+        <font face="Verdana" size="2" color="#FFFFFF">
+        <a href="index.html" style="text-decoration: none">
+        <font color="#FFFFFF" face = "Arial">Submission</font></font></b></td>
+        <td width="20%" style="border-left-style: solid; border-left-width: 1; border-right-style: solid; border-right-width: 1; border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium" bgcolor="#009999" align="center" height="4">
+        <p style="margin-top: 2; margin-bottom: 2"><b>
+        <font face="Verdana" size="2" color="#FFFFFF">
+        <a href="method.html" style="text-decoration: none">
+        <font color="#FFFFFF" face = "Arial">Prediction Method</font></font></b></td>
+        <td width="20%" style="border-left-style: solid; border-left-width: 1; border-right-style: solid; border-right-width: 1; border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium" bgcolor="#009999" align="center" height="4">
+        <p style="margin-top: 2; margin-bottom: 2"><b>
+        <font face="Verdana" size="2" color="#FFFFFF">
+        <a href="refer.html" style="text-decoration: none">
+        <font color="#FFFFFF" face = "Arial">References</font></font></b></td>
+        <td width="20%" style="border-left-style: solid; border-left-width: 1; border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium" bgcolor="#009999
+" align="center" height="4">
+        <p style="margin-top: 2; margin-bottom: 2"><b>
+        <font face="Verdana" size="2" color="#FFFFFF">
+        <a href="team.html" style="text-decoration: none">
+        <font color="#FFFFFF" face = "Arial">Team</font></font></b></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" style="border-left: medium none #111111; border-right: medium none #111111; border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium" height="16" bgcolor="#FFCC66">
+    <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-width: 0" bordercolor="#111111" width="100%" id="AutoNumber12" height="1">
+      <tr>
+        <td width="100%" style="border-style: none; border-width: medium" colspan="5" height="17">
+        <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-width: 0" bordercolor="#111111" width="101%" id="AutoNumber16">
+          <tr>
+            <td width="34%" style="border-style: none; border-width: medium" bgcolor="#00CC99">
+            <p style="margin-left: 5"><b>
+            <font face="Verdana" size="2" color="#006666">
+            <a href="http://imtech.res.in" style="text-decoration: none">
+            <font color="#006666">IMTECH</font></font></b></td>
+            <td width="33%" style="border-style: none; border-width: medium" bgcolor="#00CC99">&nbsp;</td>
+            <td width="33%" style="border-style: none; border-width: medium" bgcolor="#00CC99">
+    <p align="right" style="margin-right: 6; margin-top: 2; margin-bottom: 2">
+    <b><font face="Verdana" size="2" color="#006666">
+    <a href="http://imtech.res.in/bic" style="text-decoration: none">
+    <font color="#006666">BIOINFORMATICS CENTRE</font></b></td>
+          </tr>
+          <tr>
+            <td width="100%" style="border-style: none; border-width: medium" bgcolor="#FFFFFF" colspan="3">
+            </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="20%" style="border-style: none; border-width: medium" bgcolor="#FFFFFF" valign="top" height="1">
+        <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#006666" width="119%" id="AutoNumber13" height="520">
+          <tr>
+            <td width="100%" bgcolor="#009999" style="border-left-color: #003399; border-left-width: 2; border-right-color: #003399; border-right-width: 2; border-top-color:#003399; border-bottom-color:#003399" height="20">
+            <p style="margin: 2 3">
+            
+            <b><font face="Arial" size="2"><a href="index.html" style="text-decoration: none"><font color="#111111">Sumbission</font></a></font></b></td>
+          </tr>
+<!--
+          <tr>
+            <td width="100%" bgcolor="#FFFFFF" style="border-left:1px " height="24">
+            <p style="margin: 2 3; "><b>
+            <font face="Arial" size="2" color="#006666">
+            <a href="index.html" style="text-decoration: none">
+            <font color="#006666">Submission</font></font></b></td>
+          </tr>
+-->
+          <tr>
+            <td width="100%" bgcolor="#FFFFFF" style="border-left:1px " height="24">
+            <p style="margin: 2 3; "><b>
+            <font face="Arial" size="2" color="#006666">
+            <a href="method.html" style="text-decoration: none">
+            <font color="#006666">Prediction Method</font></font></b></td>
+          </tr>
+          <tr>
+            <td width="100%" bgcolor="#FFFFFF" style="border-left:1px "height="24">
+            <p style="margin: 2 3; "><b>
+            <font face="Arial" size="2" color="#006666">
+            <a href="refer.html" style="text-decoration: none">
+            <font color="#006666">References</font></font></b></td>
+          </tr>
+          <tr>
+            <td width="100%" bgcolor="#FFFFFF" style="border-left:1px " height="24">
+            <p style="margin: 2 3; "><b>
+            <font face="Arial" size="2" color="#006666">
+            <a href="team.html" style="text-decoration: none">
+            <font color="#006666">Team</font></font></b></td>
+          </tr>
+          <tr>
+            <td width="100%" bgcolor="#FFFFFF" style="border-left:1px " height="24">
+            <p style="margin: 2 3; "><b>
+            <font face="Arial" size="2" color="#006666">
+            <a href="contact.html" style="text-decoration: none">
+            <font color="#006666">Contact us</font></a></font></b></td>
+          </tr>
+          <tr>
+            <td width="100%" bgcolor="#FFFFFF" style="border-left:1px " height="24">
+	    <p style="margin: 2 3; "><b>
+	    <font face="Arial" size="2" color="#006666">
+	    <a href="help.html" style="text-decoration: none">
+	    <font color="#006666">Help</font></a></font></b></td>
+          </tr>
+
+	  <tr>
+            <td width="100%" bgcolor="#FFFFFF" style="border-left:1px " height="24">
+            <p style="margin: 2 3; "><b>
+            <font face="Arial" size="2" color="#006666">
+            <a href="supli.html" style="text-decoration: none">
+            <font color="#006666">Suplimentary Materials</font></a></font></b></td>
+          </tr>
+
+          <tr>
+            <td width="100%" bgcolor="#FFFFFF" style="border-left:1px " height="340">
+            <p style="margin: 2 3; ">&nbsp;</td>
+          </tr>
+        </table>
+
+        </td>
+        <td width="2%" style="border-style: none; border-width: medium" bgcolor="#FFFFFF" height="1">&nbsp;</td>
+        <td width="59%" style="border-style: none; border-width: medium" bgcolor="#FFFFFF" valign="top" height="1">
+        <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#808080" width="100%" id="AutoNumber14" height="230">
+          <tr>
+            <td width="100%" height="19" bgcolor="#C0C0C0" valign="top" style="border-left-color: #808080; border-left-width: 2; border-right-color: #808080; border-right-width: 2; border-bottom-style: none; border-bottom-width: medium">
+<HR 20><marquee behavior=alternate scrollamount=1 ><a href="http://osddlinux.osdd.net/">OSDDlinux for Standalone, Galaxy & Local version</a>  </marquee><HR 20>            <p align="center" style="margin-bottom: 4"><b>
+            <font  size="2" color="#333333" face = "Arial">Submission</font></b></td>
+          </tr>
+          <tr>
+            <td width="100%" height="209" style="border-left: 2px solid #808080; border-right: 2px solid #808080; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1">
+          <table border="1" cellpadding="2" cellspacing="3" style="border-collapse: collapse" width="100%" id="AutoNumber1" bordercolor="#FFFFFF">
+
+<!-- submission from  -->
+
+<FORM ENCTYPE="multipart/form-data" name=form onsubmit="return validate();"ACTION="/cgibin/bhairpred/Valid.pl" METHOD="post">
+
+ <tr>&nbsp;
+    <p><td width="26%"><font face="Arial" color = "#006666" size="2"><b>Email:</b></font></td>
+    <td width="74%" colspan = "2"><input type = "text" name = "email" value="only alphanumeric and underscore" size = "30" ></td></p>
+  </tr>
+
+  <tr>&nbsp;&nbsp;
+    <p><td width="26%"><font face="Arial" color = "#006666" size="2"><b>Sequence Name:</b></font></td>
+    <td width="74%" colspan = "2"><input type = "text" name = "seqname" size = "30" ></td></p>
+  </tr>
+
+  <tr>
+    <td width="26%"><font face="Arial" color = "#006666" size="2" ><b>Paste Sequence:</b></font></td>
+    <td width="74%"><textarea name= "seq" rows= "8" cols ="50"></textarea></td>
+  </tr>
+  <tr>
+    <td width="26%"><font face="Arial" color = "red" ><b><blink> OR</blink> </font> <font face="Arial" color = "#006666" size="2" > Upload Sequence file </b></font></td>
+    <td width="74%"><INPUT type="file" name="file" size="20"></td>
+  </tr>
+  <tr>
+
+<!-- options for sequence  format-->
+    <td width="26%"><font face="Arial" size="2" color="#006666"><b>Sequence format</b></font></td>
+     <td width="74%"><SELECT name="format">
+    <OPTION value="sformat">Only Amino acid sequence
+    <OPTION SELECTED value="nformat">Format (PIR/FASTA/EMBL)
+    </SELECT></td>
+  </tr>
+
+<!--- for secondary structure-->
+
+<!--  <tr>
+    <td width="26%"><font face="Arial" color = "#006666" size="2" ><b>Paste Secondary Structure:</b></font></td>
+    <td width="74%"><textarea name= "s_str" rows= "8" cols ="50"></textarea></td>
+  </tr>
+-->
+
+<!-- Prediction method  -->
+ <tr>
+    <td width="26%"><font face="Arial" size="2" color="#006666"><b>Prediction Approach </b></font></td>
+ <td width="30%"><br><font face="Arial" size="2"><b>SVM </b><input type=radio name="method" value="SVM" checked></td>
+  </tr>
+
+ <!--<tr>
+    <td width="26%">&nbsp;</td>
+    <td width="30%"><font face="Arial"  size="2" ><b>ANN </b><input type=radio name="method" value="ANN" ></td>
+  </tr>-->
+
+<tr>
+    <td width="26%"><b><font face="Arial" size="2" color="#006666" >Threshold</b></td>
+    <!--<td width="26%"><b><font face="Arial" size="2">&nbsp;</b></td>-->
+    <td width="34%"><font face="Arial" ><br><font face="Arial"  size="2">
+<!--	<td width="34%"><font face="Arial" ><br><font face="Arial"  size="2"><b>SVM</b>&nbsp;&nbsp;-->
+<SELECT name="svm_th">
+<OPTION value="-1.0">-1.0
+<OPTION value="-0.9">-0.9
+<OPTION value="-0.8">-0.8
+<OPTION value="-0.7">-0.7
+<OPTION value="-0.6">-0.6
+<OPTION value="-0.5">-0.5
+<OPTION value="-0.4">-0.4
+<OPTION value="-0.3">-0.3
+<OPTION value="-0.2">-0.2
+<OPTION value="-0.1">-0.1
+<OPTION SELECTED value="0">0.0
+<OPTION value=".1">0.1
+<OPTION value=".2">0.2
+<OPTION value=".3">0.3
+<OPTION value=".4">0.4
+<OPTION value="0.5">0.5
+<OPTION value=".6">0.6
+<OPTION value=".7">0.7
+<OPTION value=".8">0.8
+<OPTION value=".9">0.9
+<OPTION value="1">1.0
+</SELECT>
+
+   <!-- <tr>
+<tr>
+    
+<td width="34%"><font face="Arial" ><br><font face="Arial" size="2"><b>ANN</b>&nbsp;&nbsp;
+<SELECT name="ann_th">
+<OPTION value=".1"> 0.1
+<OPTION value=".2">0.2
+<OPTION value=".3">0.3
+<OPTION value=".4">0.4
+<OPTION SELECTED value="0.5">0.5
+<OPTION value=".6">0.6
+<OPTION value=".7">0.7
+<OPTION value=".8">0.8
+<OPTION value=".9">0.9
+</SELECT>
+</td>-->
+
+</td>
+</tr>
+<tr><td colspan=2>&nbsp;</td></tr>
+
+    <tr>
+    <td colspan=2 align="center" ><INPUT type="Submit" value="Run Prediction" size="20">
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="Reset" value="Reset" size="20"></td>
+    </tr>
+
+<tr>
+<td colspan=2 align="center"><font face="Arial" color = "#002777" size="2" ><b>Advance Option (Default Psi-pred Predicted Secondary Structure)</b></font>
+</td>
+</tr>
+
+
+<!--- for secondary structure-->
+  <tr>
+    <td width="26%"><font face="Arial" color = "#006666" size="2" ><b>Paste Secondary Structure</b></font></td>
+    <td width="74%"><textarea name= "s_str" rows= "8" cols ="50"></textarea></td>
+  </tr>
+
+    <tr>
+    <td colspan=2 align="center" ><INPUT type="Submit" value="Run Prediction" size="20">
+    </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="Reset" value="Reset" size="20"></td>
+    </tr>
+</table>
+
+            </td>
+	   </tr>
+        </table>
+        </td>	      
+        <td width="1%" style="border-style: none; border-width: medium" bgcolor="#FFFFFF" height="1">&nbsp;</td>
+        <td width="21%" style="border-style: none; border-width: medium" bgcolor="#FFFFFF" height="1" valign="top">
+        <table border="1" cellpadding="0" cellspacing="0" style="border-width:0; border-collapse: collapse" bordercolor="#003399" width="101%" id="AutoNumber15" height="107">
+          <tr>
+              <td width="100%" valign="top" bgcolor="#009999" height="1" style="border-left: medium none #003399; border-right: medium none #003399; border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium">
+
+              <p style="margin-left: 5; margin-bottom: 4" align="center"><b>
+              <font face="Verdana" size="2" color="#FFFFFF">1NXB-Neurotoxin</font></b></td>
+            </tr>
+          <tr>
+              <td width="100%" valign="top" height="161" bgcolor="#CCFFF2" style="border-style: none; border-width: medium">
+                  <p align="left" style="margin-top: 5; margin-bottom: 0; margin-left:4; margin-right:4"> 
+                    <font face="Arial" size="2" color="#333333"><b>
+                    <img border="0" src="index.1.jpg" width="141" height="215"></b> 
+                    From Sea -Snake - <b><i>Laticauda semifaciata</i></b> 
+                    revealing  beta-hairpin motifs.</font><p align="right" style="margin-top: 5; margin-bottom: 0; margin-left:4; margin-right:4"><br>
+                    <br>
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" style="border-style: none; border-width: medium" bgcolor="#FFFFFF" valign="top" height="1" colspan="5">
+        <p style="margin-top: -5; margin-bottom: -5">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="100%" style="border-style: none; border-width: medium" bgcolor="#00CC99" valign="center" height="35" colspan="5">
+        <p style="margin-top: -5; margin-bottom: -5">&nbsp;
+	<font color="red">If you use BhairPred, please cite: Kumar M, Bhasin M, Natt NK and Raghava, GPS (2005). BhairPred: prediction of beta-hairpins in a protein from multiple alignment information using ANN and SVM techniques. Nucleic Acids Research, 33, W154-9.</font></a></font></b></td>
+	</td>
+      </tr>
+      <tr>
+        <td width="100%" style="border-style: none; border-width: medium" bgcolor="#006666" height="15" colspan="5">
+        <p align="center" style="margin-top: 5; margin-bottom: 5"><b>
+        <font color="#FFFFFF" face="Arial"><a href = "http://webs.iiitd.edu.in" target="top">
+        <font color="#FFFFFF">Institute Of Microbial Technology - INDIA</font></a></font></b></td>
+
+      </tr>
+    </table>
+    </td>
+  </tr>
+  </table>
+
+</body>
+
+</html>

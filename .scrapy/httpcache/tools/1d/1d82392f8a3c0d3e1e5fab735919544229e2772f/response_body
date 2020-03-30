@@ -1,0 +1,123 @@
+
+<html>
+<head>
+<title>&Delta;G predictor</title>
+
+<link type="text/css" rel="StyleSheet" href="DG.css">
+
+<SCRIPT LANGUAGE="Javascript">
+<!--
+
+if (document.images) {
+i1off = new Image(); i1off.src = "topmenu/home.off.png";
+i2off = new Image(); i2off.src = "topmenu/TMpred.off.png";
+i3off = new Image(); i3off.src = "topmenu/fullscan.off.png";
+i4off = new Image(); i4off.src = "topmenu/instructions.off.png";
+i5off = new Image(); i5off.src = "topmenu/publications.off.png";
+i6off = new Image(); i6off.src = "topmenu/contact.off.png";
+i1on = new Image(); i1on.src = "topmenu/home.on.png";
+i2on = new Image(); i2on.src = "topmenu/TMpred.on.png";
+i3on = new Image(); i3on.src = "topmenu/fullscan.on.png";
+i4on = new Image(); i4on.src = "topmenu/instructions.on.png";
+i5on = new Image(); i5on.src = "topmenu/publications.on.png";
+i6on = new Image(); i6on.src = "topmenu/contact.on.png";
+arrow = new Image(); arrow.src = "arrow.png";
+arrow90 = new Image(); arrow90.src = "arrow90.png";
+}
+
+function img_over(imgName) {
+ if (document.images) {
+  document[imgName].src = eval(imgName + "on.src");
+ }
+}
+function img_out(imgName) {
+ if (document.images) {
+  document[imgName].src = eval(imgName + "off.src");
+ }
+}
+
+function hideShow(element){
+  if((document.getElementById(element).style.display == 'none') || (document.getElementById(element).style.display == ''))
+     {
+       document.getElementById(element).style.display = 'block';
+       if (document.images) {
+         document.getElementById("arrow").src=arrow.src;
+       }
+     }
+     else if(document.getElementById(element).style.display == 'block')
+     {
+       document.getElementById(element).style.display = 'none';
+       if (document.images) {
+         document.getElementById("arrow").src=arrow90.src;
+       }
+     }
+}
+//-->
+
+</script>
+</head>
+<body>
+
+<table cellspacing="0" cellpadding="0" border="0" width="780">
+<tr><td><table cellspacing=0 cellpadding=0 border=0 width="780" class="tableBorder"><tr><td><img src="0.gif" width=1 height=1></td></tr></table></td></tr>
+<tr>
+  <td align=left><img src="noray.png" width=780 height=200 border=0></td>
+</tr>
+<tr>
+  <td>
+    <table cellspacing=0 cellpadding=0 border=0 width="780" class="tableBorder">
+    <tr><td><img src="0.gif" width=1 height=1></td></tr>
+    </table>
+    <table cellspacing=0 cellpadding=0 border=0 width="780" ><tr>
+    <td align='center'><a href='index.php?p=home'><img name='i1' border=0 src="topmenu/home.act.png" width=130 height=29></a></td>
+<td align='center'><a href='index.php?p=TMpred' onMouseover="img_over('i2');" onMouseout="img_out('i2');"><img name='i2' border=0 src="topmenu/TMpred.off.png" width=130 height=29></a></td>
+<td align='center'><a href='index.php?p=fullscan' onMouseover="img_over('i3');" onMouseout="img_out('i3');"><img name='i3' border=0 src="topmenu/fullscan.off.png" width=130 height=29></a></td>
+<td align='center'><a href='index.php?p=instructions' onMouseover="img_over('i4');" onMouseout="img_out('i4');"><img name='i4' border=0 src="topmenu/instructions.off.png" width=130 height=29></a></td>
+<td align='center'><a href='index.php?p=publications' onMouseover="img_over('i5');" onMouseout="img_out('i5');"><img name='i5' border=0 src="topmenu/publications.off.png" width=130 height=29></a></td>
+<td align='center'><a href='index.php?p=contact' onMouseover="img_over('i6');" onMouseout="img_out('i6');"><img name='i6' border=0 src="topmenu/contact.off.png" width=130 height=29></a></td>
+    </tr></table>
+    <table cellspacing=0 cellpadding=0 border=0 width="780" class="tableBorder"><tr><td><img src="0.gif" width=1 height=1></td></tr></table>
+  </td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="780" class="TableGrey">
+<tr><td align=center colspan=2><img src="0.gif" border=0 width=720 height=30></td><td rowspan=100><img src='0.gif' height=1 width=30></td></tr>
+<tr><td align="left" valign="top" colspan=2>
+<table cellspacing=0 cellpadding=0 border=0><tr><td class="header">
+<img src='0.gif' border=0 height=1 width=30><big><big><big>&Delta;G prediction server v1.0</big></big></big>
+<table width="100%" cellspacing=0 cellpadding=0 border=0 class="tableBorder"><tr><td><img src='0.gif' width=1 height=1></td></tr></table>
+</td></tr></table>
+<br><br>
+</td></tr>
+
+<tr><td rowspan=100><img src="0.gif" border=0 width=30 height=1></td></tr>
+<tr><td>
+<img src="0.gif" border=0 width=720 height=1><br>
+Given the amino acid sequence of a putative transmembrane (TM) helix, the server gives a prediction of the corresponding apparent free energy difference, &Delta;G<small><span style="vertical-align: sub">app</span></small>, for insertion of this sequence into the Endoplasmic Reticulum (ER) membrane by means of the Sec61 translocon. The server runs in two different &#34;modes&#34;, for two different types of queries:<br>
+<ul>
+<li> <a href="index.php?p=TMpred">&Delta;G prediction</a>. Predict &Delta;G<small><span style="vertical-align: sub">app</span></small> for membrane insertion of a potential TM helix. 
+<li> <a href="index.php?p=fullscan">Full protein scan</a>. Scan a protein sequence for putative TM helices. 
+</ul>
+<br><br>
+For detailed information and examples, please see the <a href="index.php?p=instructions">instructions</a> page.
+
+<br><br><br><br>
+
+</td></tr>
+
+</table>
+<html>
+<table cellspacing=0 cellpadding=0 border=0 width="780" class="tableBorder"><tr><td><img src="0.gif" width=1 height=1></td></tr></table>
+<table cellspacing="0" cellpadding="0" border="0" width="780" class="TableGrey">
+<tr><td colspan=2><img src='0.gif' width=1 height=5></td></tr>
+<tr><td align="left" valign="bottom"><a href="http://www.cbr.su.se"><img border="0" src="img/cbr_logo100.png" title="Stockholm Center for Biomembrane Research" alt="Stockholm Center for Biomembrane Research"></a><img src='0.gif' height=1 width=5 border=0><a href="http://www.su.se"><img border="0" src="img/sulogo80.gif" title="Stockholm University" alt="Stockholm University"></a><img src='0.gif' height=1 width=10 border=0><a href="http://www.biosapiens.info"><img src="img/biosapiens70.gif" border=0></td><td align="right" valign="bottom">
+<small># Helices predicted: </small><img border=0 src='digits/5.png'><img border=0 src='digits/7.png'><img border=0 src='digits/4.png'><img border=0 src='digits/5.png'><img border=0 src='digits/6.png'><img border=0 src='digits/3.png'><img border=0 src='digits/9.png'><img src='0.gif' width='10' border='0'><br></td><tr>
+<tr><td colspan=2><img src='0.gif' width=1 height=5></td></tr>
+</table>
+<table cellspacing=0 cellpadding=0 border=0 width="780" class="tableBorder"><tr><td><img src="0.gif" width=1 height=1></td></tr></table>
+</html>
+
+
+
+<br>
+</body></html>

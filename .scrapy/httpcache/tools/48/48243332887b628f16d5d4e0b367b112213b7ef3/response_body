@@ -1,0 +1,62 @@
+
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>conco.ebc.ee</title>
+<meta name="description" content="CONCO project" />
+<link rel="stylesheet" href="default.css" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<div id="page-container">
+<div id="login">
+<form id="loginForm" name="loginForm" method="post" action="login.php">
+Username:
+<input type="text" name="username" id="username" class="login_input"/>
+Password:
+<input type="password" name="password" id="password" class="login_input"/>
+<input type="submit" name="Submit" value="Log in" class="theSubmit"/>
+<a href="index.php?pid=10">Register</a>
+ 
+</form></div>
+<div id="header"></div>
+<script language="javascript" type="text/javascript">
+sfHover = function() {
+  var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+  for (var i=0; i<sfEls.length; i++) {
+      sfEls[i].onmouseover=function() {
+          this.className+=" sfhover";
+      }
+      sfEls[i].onmouseout=function() {
+          this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+      }
+  }
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+</script>  
+
+
+
+<div id="navbar">
+<ul id="nav">
+
+
+
+<li><a href="index.php?pid=1">Home</a></li>
+<li><a href="index.php?pid=3">ConoDB</a></li>   	
+<li><a href="index.php?pid=17">ConoDictor</a></li>
+
+<!---->
+
+
+
+</div><!--navbar-->
+</div><!--nav-->
+<div id="content">
+<body>
+<p>More information about the project at <a href="http://conco.eu"><b>conco.eu</b></a></p>
+</body>
+</div><!--content-->
+</div><!--page-container-->
+</html>

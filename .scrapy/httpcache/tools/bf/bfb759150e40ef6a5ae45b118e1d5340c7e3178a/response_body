@@ -1,0 +1,147 @@
+<html lang="en">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 5">
+		<title>CONSEL home page</title>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102198842-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </head>
+
+	<body bgcolor="#ffffff">
+		<div align="center">
+		  <h3><strong>CONSEL HOME PAGE</strong></h3>
+		</div>
+		<p></p>
+		<div align="center">
+			<p>CONSEL: for assessing the confidence of phylogenetic tree selection</p>
+            <p>
+            
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=0z3HG7JCnh7SUbIkSwTemJOgMT51s5ste2nBb5bOdy8"></script>
+            </p>
+
+		</div>
+		<p></p>
+		<h4><i>WHAT IS CONSEL?</i></h4>
+		<p>CONSEL is a program package consists of small programs written in C language. It calculates the probability value (i.e., p-value) to assess the confidence in the selection problem. Although CONSEL is applicable to any selection problem, it is mainly designed for the phylogenetic tree selection. CONSEL does not estimate the phylogenetic tree by itself, but CONSEL does read the output of the other phylogenetic packages, such as <em>Molphy, PAML, PAUP*,  TREE-PUZZLE, and PhyML</em>. CONSEL calculates the p-value using several testing procedures; the bootstrap probability, the Kishino-Hasegawa test, the Shimodaira-Hasegawa test, and the weighted Shimodaira-Hasegawa test. In addition to these conventional tests, CONSEL calculates the p-value based on the approximately unbiased test using the multi-scale bootstrap technique. This newly developed method gives less biased results than the conventional methods.</p>
+<p><br>
+		</p>
+		<h4><i>QUICK GUIDE:</i> <a href="quick.html">Using CONSEL is Easy!</a>  (updated 2008/09/12 for PAUP; 2010/01/30 for PhyML)</h4>
+		<h4><em>Handicraft: tree of life</em> (<a href="../../kumin2010/handicraft phylogeny 20100627.pdf">PDF</a>, <a href="http://www.youtube.com/user/myhshimodaira#p/a/u/0/PwiWgVdJ4Y8">YouTube</a> and <a href="../../kumin2010/index-e.html">More</a>)</h4>
+<p>
+  <object width="480" height="385">
+    <param name="movie" value="http://www.youtube.com/v/PwiWgVdJ4Y8&amp;hl=ja_JP&amp;fs=1">
+    </param>
+    <param name="allowFullScreen" value="true">
+    </param>
+    <param name="allowscriptaccess" value="always">
+    </param>
+    <embed src="http://www.youtube.com/v/PwiWgVdJ4Y8&amp;hl=ja_JP&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed>
+  </object>
+</p>
+<p><br>
+</p>
+<h4><i>REFERENCES</i></h4>
+		<p>The computer software CONSEL and the theory behind it are described in the following papers. For the use of CONSEL, Shimodaira &amp; Hasegawa (2001) may be referenced.</p>
+		<ul>
+			<li>Shimodaira, H. An application of multiple comparison techniques to model selection. <i>Ann. Inst. Statist. Math.</i> <b>50,</b> 1-13 (1998).
+			<li>Shimodaira, H. Multiple comparisons of log-likelihoods and combining nonnested models with applications to phylogenetic tree selection. <i>Comm. in Statist., Part A - Theory Meth.</i> <b>30,</b> 1751-1772 (2001).
+			<li>Shimodaira, H. An approximately unbiased test of phylogenetic tree selection. <i>Syst. Biol.</i> <i>,</i> <b>51</b>, 492-508 (2002).
+			<li>Shimodaira, H. &amp; Hasegawa, M. Multiple comparisons of log-likelihoods with applications to phylogenetic inference. <i>Mol. Biol. Evol.</i> <b>16,</b> 1114-1116 (1999).
+		  <li>Shimodaira, H. &amp; Hasegawa, M. CONSEL: for assessing the confidence of phylogenetic tree selection. <i>Bioinformatics</i> <b>17,</b> 1246-1247 (2001).            
+			<li>Shimodaira, H. (2004) "Approximately unbiased tests of      regions using multistep-multiscale bootstrap resampling,"       Annals of Statistics, 32, 2616-2641.
+            <li>Shimodaira, H. (2008) "Testing Regions with Nonsmooth      Boundaries via Multiscale Bootstrap," Journal of Statistical      Planning and Inference, 138, 1227-1241.      http://dx.doi.org/10.1016/j.jspi.2007.04.001
+              	<li>Shimodaira, H. (2006-2008) "scaleboot: Approximately Unbiased      P-values via Multiscale Bootstrap"       http://cran.r-project.org/web/packages/scaleboot/index.html
+                	</ul>
+<p><br>
+		</p>
+		<h4><i>LINKS</i></h4>
+		<ul>
+			<li><a href="../scaleboot/index.html">scaleboot (an R package for multiscale bootstrap)</a> 
+			<li><a href="http://evolution.genetics.washington.edu/phylip/software.html">A vast list of phylogeny programs compiled by Joe Felsenstein at UW</a>
+			<li><a href="http://www.ism.ac.jp/software/ismlib/softother.e.html#molphy">Molphy (Jun Adachi)</a>
+			<li><a href="http://abacus.gene.ucl.ac.uk/software/paml.html">PAML (Ziheng Yang at UCL)</a>
+			<li><a href="http://paup.csit.fsu.edu/index.html">PAUP* (David Swofford at FSU)</a>
+			<li><a href="http://www.tree-puzzle.de/">TREE-PUZZLE (Schmidt, H.A., K. Strimmer, M. Vingron, and A. von Haeseler)</a>
+	      <li><a href="http://atgc.lirmm.fr/phyml/">PhyML (S. Guindon and O. Gascuel) </a>
+		</ul>
+<p><br>
+		</p>
+		<h4><img src="images/consel.gif" width="32" height="32" border="0" alt="CONSEL"> <i>DOCUMENTS </i></h4>
+		<ul>
+			<li><a href="doc/README.TXT">README</a> (Please read this first)
+			<li><a href="doc/DOSUSER.txt">DOSUSER</a> (Dos, Windows 98, 2000, XP)<li><a href="doc/UNIXUSER.txt">UNIXUSER</a> (Linux or Unix)
+			<li><a href="doc/program.pdf">User's Guide 0.1</a> (Read this after installation)
+
+			<li><a href="doc/CHANGE.txt">CHANGE</a> (History of updates)
+		</ul>
+		<p><br>
+		</p>
+		<h4><img src="images/installer.gif" width="32" height="32" border="0" alt="DOWNLOAD"> <i>DOWNLOAD </i></h4>
+		<h4><i>LATEST version 0.20, 2011-05-12</i></h4>
+		<ul>
+          <li><a href="pub/cnsls020.tgz">cnsls020.tgz</a> (UNIX-SOURCE, documents, examples)
+            : rename dprintf and psort to avoid compilation errors
+          <li>DOS-BINARY is not made. You can compile the above source for dos/windows.
+            
+    </ul>
+		<h4><i>PREVIOUS version 0.1k, 2010-01-30</i></h4>
+<ul>
+          <li><a href="pub/cnsls01k.tgz">cnsls01k.tgz</a> (UNIX-SOURCE, documents, examples)
+          : includes PhyML support<li>DOS-BINARY is not made. You can compile the above source for dos/windows.
+          
+	</ul>
+		<h4><i>ANOTHER version 0.1j, 2008-09-12</i></h4>
+<ul>
+			<li><a href="pub/cnsls01j.tgz">cnsls01j.tgz</a> (UNIX-SOURCE, documents, examples)
+			<li><a href="pub/consel01j.zip">consel01j.zip</a> (DOS-BINARY, documents, examples)
+		: 2010/01/18 Tristan Gross and Silvia E. Smith complied this version for Windows. The Makefile was modified to work with the mingw  cross compiler. The binary executables are in bin directory. I appreciate their help.
+		</ul>
+	<h4><i>OLDER version  0.1i, 2005-09-26</i></h4>
+		<ul>
+			<li><a href="pub/cnslb01i.exe">cnslb01i.exe</a> (DOS-BINARY, documents, examples)
+			
+			
+			<li><a href="pub/cnsls01i.tgz">cnsls01i.tgz</a> (UNIX-SOURCE, documents, examples)
+		
+		
+		</ul>
+		<h4><br>
+		</h4>
+        
+        <h4><img src="images/shimo.gif" width="55" height="73" border="0" alt="SHIMO"> <i>CONTACT</i></h4>
+        
+        	<table cool width="627" height="154" usegridx usegridy showgridx showgridy gridx="16" gridy="16" border="0" cellpadding="0" cellspacing="0">
+			<tr height="32">
+				<td width="32" height="153" rowspan="2"></td>
+				<td content csheight="32" width="192" height="32" valign="top" align="left" xpos="32">
+					<p><b>Hidetoshi Shimodaira</b></p>
+				</td>
+				<td width="402" height="32" colspan="2"></td>
+				<td width="1" height="32"><spacer type="block" width="1" height="32"></td>
+			</tr>
+			<tr height="121">
+				<td content csheight="121" width="592" height="121" colspan="2" valign="top" align="left" xpos="32">
+					<dl>
+						<div align="left">
+                            <dd><a href="http://www.i.kyoto-u.ac.jp/en/">Graduate School of Informatics, Kyoto University</a>
+							<dd><a href="http://stat.sys.i.kyoto-u.ac.jp/">http://stat.sys.i.kyoto-u.ac.jp/</a>
+						</div>
+					</dl>
+				</td>
+			</tr>
+		</table>
+        
+        </body>
+
+</html>

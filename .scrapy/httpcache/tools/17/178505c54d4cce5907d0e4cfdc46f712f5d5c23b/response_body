@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title> Bioinformatics Laboratory </title>             
+	<link rel="stylesheet" type="text/css" media="all" href="style.css">
+	<script type='text/javascript' src='js/jquery/jquery.js?ver=1.7.2'></script>
+	<script type='text/javascript' src='javascripts/ddsmoothmenu.js?ver=3.4.2'></script>
+	<script type='text/javascript' src='javascripts/jquery.flexslider-min.js?ver=3.4.2'></script>
+	<script type='text/javascript' src='javascripts/mobilemenu.js?ver=3.4.2'></script>
+	<script type='text/javascript' src='javascripts/custom.js?ver=3.4.2'></script>
+	
+</head>
+
+<body class="home blog" id="regal_body">
+	<div class="banner">
+		<a href="http://www.buffalo.edu/">
+			<div class="inner"></div>
+		</a>
+	</div>
+	
+	<div class="page">
+			<div class="page-inner">
+				<div class="page-inner-1">
+					<div class="page-inner-2">
+						<div class="page-inner-2a">  </div>
+						<div class="page-inner-3">
+							<div class="container_24">
+								<div class="grid_24">
+									<div class="header">
+										<h1><a href="index.html" style="color:#000000;"> Bioinformatics Laboratory </a></h1>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+					
+							<div class="menu-container">
+								<div class="container_24">
+									<div class="grid_24">
+										<div class="grid_sub_19 sub_alpha"> 
+											<!--Start Menu_Wrapper-->
+											<div class="menu_wrapper">
+												<div id="menu" class="ddsmoothmenu">
+													<ul id="menu-my-menu" class="ddsmoothmenu">
+														<li id="menu-item-119" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-119">
+															<a href="index.html">Home</a>
+														</li>
+														<li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118">
+															<a href="projects.html">Projects</a>
+														</li>
+														<li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114">
+															<a href="publications.html">Publications</a>
+															<ul class="sub-menu">
+																<li id="menu-item-344" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-344"><a href="publications.html#machine">Machine Learning</a></li>
+																<li id="menu-item-345" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-345"><a href="publications.html#bio">Bioinformatics</a></li>
+															</ul>
+														</li>
+														<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-20 current_page_item menu-item-116">
+															<a href="software.html">Software</a>
+														</li>
+														<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117">
+															<a href="people.html">People</a>
+														</li>
+														<li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115">
+															<a href="openings.html">Openings</a>
+														</li>
+														<li id="menu-item-120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120">
+															<a href="contact.html">Contact</a>
+														</li>
+													</ul>
+												</div>									
+										</div>
+											<!--End Menu Wrapper-->
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+			
+							<!--Start Page Heading -->
+							<div class="page-heading-container">
+	    						<div class="container_24">
+	        						<div class="grid_24">
+	            						<div class="page-heading">
+	                						<h1 class="page-title">Software</h1>
+	          							</div> 
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<!--End Page Heading -->
+							
+							<!--Start Page Content -->
+							<div class="page-content-container">
+									<div class="container_24">
+										<div class="grid_24" style="width:960px; margin:0">
+											<div class="page-content">
+												<div class="grid_sub_24 sub_alpha">
+			                    					<div class="content-bar">
+                                                        <h3 style="text-align: justify;"><strong>DeepType: Deep Learning Approach to Identifying Disease Subtypes from High-Dimensional Genomic Data</strong></h3>
+                                                        <p style="text-align: justify;"><strong></strong>Cancer subtype classification has great potential value for disease diagnosis and individualized patient management. Current approaches for the derivation of molecular subtypes are limited by the influence of misleading, irrelevant factors, resulting in ambiguous and overlapping subtypes, and by their capacity to handle extremely high-dimensional data. To address the above issues, we propose a novel approach by leveraging the power of deep learning to disentangle and eliminate irrelevant factors. Specifically, we design a deep-learning framework, referred to as DeepType, that jointly performs supervised classification, unsupervised clustering and dimensionality reduction to learn a cancer-relevant data representation with cluster structure. We apply DeepType to the METABRIC breast cancer dataset and compare its performance to the state-of-the-art cancer subtyping methods. DeepType significantly outperforms the existing methods, identifying more robust subtype information by using fewer genes. The new approach provides a framework for the derivation of more accurate and robust molecular cancer subtypes from increasingly complex, multi-source data.</p>
+
+
+                                                        <h3 style="text-align: justify;"><a href="https://github.com/runpuchen/DeepType">Source code and documentation</a></h3>
+                                                        <!--
+														<h3 style="text-align: justify;">Publication</h3>
+														<p style="text-align: justify;">Y. Cai* and <strong>Y. Sun*</strong>, ESPRIT-Tree: Hierarchical Clustering Analysis of Millions of 16S rRNA Pyrosequences in Quasilinear Time</a>,<em> Nucleic Acids Research</em>, vol. 39, no. 14, e95, 2011.</p>
+														<h3 style="text-align: justify;"><strong></strong>Documents</h3>
+														<ul style="text-align: justify;">
+															<li> <a href=" http://nar.oxfordjournals.org/content/early/2011/05/19/nar.gkr349.full">Manuscript</a>  and <a href=" http://nar.oxfordjournals.org/content/early/2011/05/19/nar.gkr349.full">supplement</a> accepted by Nucleic Acids Research
+															<li> <a href=" http://plaza.ufl.edu/sunyijun/Paper/ESTree_User.pdf">User guide </a>  
+															<li> <a href=" https://sites.google.com/site/espritcode/esprit/ESPRITTree11152011.zip?attredirects=0&d=1">Program source code </a>  
+															<li> <a href=" https://sites.google.com/site/espritcode/esprit/sequences.zip?attredirects=0&d=1"> Simulation data </a> and  <a href=" https://sites.google.com/site/espritcode/esprit/Code.zip?attredirects=0&d=1"> code </a>  used in the benchmark study
+																																														<ul>
+																</ul>
+															</li>
+														</ul>
+                                                        -->
+													</div>
+												</div>                
+							   	 			</div>
+						   				</div>
+									</div>
+								</div>
+							<!--End Page Content -->
+										
+			   				<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<!--Start Footer Wrapper-->
+	<div class="footer-wrapper">
+    <!--Start Wrapper-->
+		<div class="container_24">
+        	<div class="grid_24">
+            	<div class="footer">
+             		<div class="container_5">
+						<div class="grid_14">
+							<img src="images/UB_seal.png" alt="seal" style="float:right;">
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+        	<div class="clear"></div>
+		</div>
+	</div>
+	<!--End Wrapper-->
+	<!--End Footer Wrapper-->
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta  name="keywords" content="Driver mutations,driver mutations,Mutual exclusivity,biological database, bioinformatics">
+	<meta  name="description" content="Search and download the information for the Mutual exclusivity. MutExGenome is a database of Mutual Exclusive mutations in mutiple species.">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="shortcut icon" href="images/favicon.png"> 
+    <title>CFEA</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jquery-ui -->
+	<link rel="stylesheet" href="css/jquery-ui-1.10.0.custom.css">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+<!--     <link href="css/nprogress.css" rel="stylesheet"> -->
+    <!-- Custom Theme Style -->
+    <link href="css/custom.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jquery UI -->
+	<script src="js/jQueryUI/jquery-ui.min.js"></script>
+    <!-- NProgress -->
+<!--     <script src="js/nprogress.js"></script> -->
+    
+    <style> 
+.div-height{border:1px; border-style:solid; border-color:#B3B9BF; padding: 5px; height:300px;min-height:300px} 
+    </style> 
+    <style>
+  .ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    /* 闃叉姘村钩婊氬姩鏉� */
+    overflow-x: hidden;
+  }
+  /* IE 6 涓嶆敮鎸� max-height
+   * 鎴戜滑浣跨敤 height 浠ｆ浛锛屼絾鏄繖浼氬己鍒惰彍鍗曟�绘槸鏄剧ず涓洪偅涓珮搴�
+   */
+  * html .ui-autocomplete {
+    height: 100px;
+  }
+  
+ 
+  </style>
+  </head>
+
+  <body class="nav-md"><!--  style="min-height:800px !important;" -->
+    <div class="container body" id="containerBody">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+            <div style="margin-top:10px;">
+              <a href="/CFEA/index.jsp" class="site_title"><img src="./images/logo.png" style="width:200px"/></a>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <!-- /menu profile quick info -->
+            <br />
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                 <ul class="nav side-menu">
+                  <li><a href="/CFEA/index.jsp"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-right"></span></a></li>
+                  <li><a href="/CFEA/jsp/Cancer-stage.jsp"><i class="fa fa-search"></i> Cancer stage browser<span class="fa fa-chevron-right"></span></a></li>
+                  <li><a href="/CFEA/jsp/Pipelines.jsp"><i class="fa fa-film"></i> CFEA pipelines <span class="fa fa-chevron-right"></span></a></li>
+                  <li><a href="/CFEA/jsp/Statistics.jsp"><i class="fa fa-tasks"></i> Statistics <span class="fa fa-chevron-right"></span></a></li>
+                  <li><a href="/CFEA/jsp/Tutorial.jsp"><i class="fa fa-book"></i> Tutorial <span class="fa fa-chevron-right"></span></a></li>
+                  <li><a href="/CFEA/jsp/Download.jsp"><i class="fa fa-download"></i> Download <span class="fa fa-chevron-right"></span></a></li>
+                  <li><a href="/CFEA/jsp/Contact.jsp"><i class="fa fa-envelope"></i> Contact <span class="fa fa-chevron-right"></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /top navigation -->
+        <!-- page content -->
+        <div class="right_col" role="main" id="pageContent">
+          <div class="" >
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2 style="font-size:20px;color:rgb(0,0,0);"> Welcome to CFEA (Cell-Free Epigenome Atlas)</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <div class="col-md-4">
+                      <div class="div-height"> 
+                             <div align="center">
+                               <h4><b>cell-free DNA methylation (5mC)</b></h4>
+                  <a href="/CFEA/jsp/DNAmethylation_Search.jsp"><img src="./images/mainPage/DNAmethylation.png" style="width:100px"></a>            
+                                <br> 
+                                <br> 
+<!--                                <p>Cytosine methylation (formation of 5-methylcytosine, 5mC) is a well-established epigenetic mechanism that affects global gene expression.</p> -->
+                               <br>
+                               <p>The 5mC browser contains 661 methylomes for healthy controls and patients associated with 10 diseases.</p>
+                              
+                  <div class="wrapper text-center"><a class="btn btn-default" href="/CFEA/jsp/DNAmethylation_Search.jsp" role="button" style="background-color: #3a949d; color: white">Go to 5mC browser</a></div>
+                  </div>
+                       </div>
+                      </div>
+                      
+                      <div class="col-md-4"> 
+                          <div class="div-height"> 
+                             <div align="center">
+                               <h4><b>cell-free DNA hydroxymethylation (5hmC)</b></h4>
+                  <a href="/CFEA/jsp/DNAhydroxymethylation_Search.jsp"><img src="./images/mainPage/DNAhydroxymethylation.png" style="width:100px"></a>
+                                <br> 
+                                <br> 
+<!--                                <p>Active demethylation in the mammalian genome is mediated by the TET (Ten-Eleven Translocation) family of dioxygenases that oxidize the 5mC modification to 5-hydroxymethylcytosine (5hmC).</p> -->
+                               <br>
+                               <p>The 5hmC browser contains 952 hydroxymethylomes for healthy controls and patients associated with 12 diseases.</p>
+                              
+                  <div class="wrapper text-center"><a class="btn btn-default" href="/CFEA/jsp/DNAhydroxymethylation_Search.jsp" role="button" style="background-color: #3a949d; color: white">Go to 5hmC browser</a></div>
+                  </div>
+                       </div>
+                      </div>
+                       
+                      <div class="col-md-4">
+                          <div class="div-height">
+                      <div align="center">
+                        <h4><b>cell-free nucleosome positioning (NP)</b></h4>
+                  <a href="/CFEA/jsp/Nucleosomepositioning_Search.jsp"><img src="./images/mainPage/Nucleosomepositioning.png" style="width:100px"></a>
+                        <br>
+                        <br>
+<!--                                <p>Nucleosome positioning indicates where nucleosomes are located with respect to the genomic DNA sequence and its dynamics affects chromatin state, transcription and all other biological processes occurring on genomic DNA.</p> -->
+                                <br>
+                                <p>The NP browser contains 56 individuals including healthy controls and patients associated with 17 diseases.</p> 
+                  <div class="wrapper text-center"><a class="btn btn-default" href="/CFEA/jsp/Nucleosomepositioning_Search.jsp" role="button" style="background-color: #3a949d; color: white">Go to NP browser</a></div></div>
+                      </div>
+                    </div>
+                     	    
+                     	   		
+<!-- 					 		<div style="width:370px; margin:0 auto;"> -->
+<!-- 			                  <script type="text/javascript" src="//ra.revolvermaps.com/0/0/7.js?i=023iw84dfj8&amp;m=6&amp;c=ff0000&amp;cr1=ffffff&amp;sx=0" async="async"></script> -->
+<!-- 					 		</div> -->
+                     	</div>
+                     	<div class="row">
+                     	<div class="col-md-12 col-sm-12 col-xs-12">
+                     	  <div style="margin-right:20px;">
+                     	  	<p style="margin-left:5px;padding-left:0px;font-size:16px;line-height:160%;">
+									<B style="color:rgb(0,0,0);">Introduction for CFEA</B><br/>
+The cell-free DNA (cfDNA) was shown to be a powerful tool for the noninvasive diagnosis of various diseases and accumulating evidence suggests large-scale epigenetic alterations such as cfDNA methylation (5mC), cfDNA hydroxymethylation (5hmC) and cfDNA nucleosome positioning (NP) can sensitively detect and classify cancers. The CFEA (Cell-Free Epigenome Atlas) data portal is the first database dedicated to human cell-free epigenomes.
+</div>
+                     	<div style="margin-right:20px;">
+                     	  	<p style="margin-left:5px;padding-left:0px;font-size:16px;line-height:160%;">
+									<B style="color:rgb(0,0,0);">What can users do in CFEA</B><br/>
+-The users can browse the genome-wide epigenomic data (5mC, 5hmC, and NP) of cell-free DNA from blood (plasma or serum) of healthy individuals and patients with chronic inflammatory and autoimmune diseases, benign and various malignant cancers.<br>
+-For researchers interested in the cancer research field, users can easily browse the cfDNA epigenomes at specific stage (such as benign-, early-, late- or metastasis-stage) during cancer development.<br>
+-For the interested data of cfDNA or genomic DNA from disease-matched solid tissue, CFEA provide direct visualization and comparison with UCSC genome browser.<br>
+-The users can freely download the cell-free epigenomes data processed by standardized pipelines which were suitable for a broad range of technologies.<br>
+-The users can process and analyze the public or private cell-free epigenomes data using the CFEA Pipeline.
+</div> 
+<div style="margin-right:20px;">
+                     	  	<p style="margin-left:5px;padding-left:0px;font-size:16px;line-height:160%;">
+									<B style="color:rgb(0,0,0);">Cite</B><br/>
+If you use CFEA in your work, please cite our publication: <br>
+	 CFEA : a cell-free epigenome atlas in human diseases.
+
+</div> 
+                     	 <br><br><div style="margin-right:20px;">
+                     	  	<p style="margin-left:5px;padding-left:0px;font-size:16px;line-height:160%;text-align:center">
+									<B style="color:rgb(58,148,157);">Use Google Chrome or Firefox for better display.</B>
+									</div>
+                     	</div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- /page content -->
+        <!-- footer content -->
+        <footer>
+          <div class="pull-center">
+            <strong>Copyright &copy; Institution of Biomedical Big Data, Wenzhou Medical University</strong> All rights reserved.<span><script type="text/javascript" src="//ra.revolvermaps.com/0/0/3.js?i=0e4hv6i8yu6&amp;b=0&amp;s=21&amp;m=0&amp;cl=ffffff&amp;co=010020&amp;cd=aa0000&amp;v0=60&amp;v1=60&amp;r=1" async="async"></script></span>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+<!-- Custom Theme Scripts -->
+    <script src="js/custom.min.js"></script>
+    <script type="text/javascript">
+    //document.getElementById('containerBody').style.height = 'auto';
+    
+    </script>
+  </body>
+</html>

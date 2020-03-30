@@ -1,0 +1,8 @@
+Date: Mon, 30 Mar 2020 18:37:57 GMT
+Server: Apache-Coyote/1.1
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Content-Type: text/html;charset=utf-8
+Set-Cookie: JSESSIONID=45784D3EBC66A807B04263284D191BEB; Path=/; Secure; HttpOnly
+Vary: Accept-Encoding
+X-Frame-Options: sameorigin
+Access-Control-Allow-Origin: *

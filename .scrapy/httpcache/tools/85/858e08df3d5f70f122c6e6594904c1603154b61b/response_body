@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+<title>ACDC Challenge</title>
+<meta name="author" content="bernard" />
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+<meta http-equiv="Content-Language" content="en" />
+<meta name="keywords" lang="en" content="miccai,challenge,left ventricle, right ventricle, segmentation, diagnosis, 3D, MRI" />
+<meta name="description" content="MICCAI challenge 2014"/>
+<link href=".//files/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+
+<body>
+<div id="main">
+	
+
+	<!-- START PAGE HEADER CONTAINER -->
+	<div id="header">
+		<div style="padding: 20px 70px; font-size: 150%; font-family: Verdana, Arial, Helvetica, sans-serif; text-align: right;">Automated Cardiac Diagnosis Challenge (ACDC)<br>
+		<span style="padding:0px 0px; font-size: 85%; font-family: Verdana, Arial, Helvetica, sans-serif; text-align: right;">MICCAI challenge 2017</span>
+<br>
+<span style="padding:0px 0px; font-size: 60%; font-family: Verdana, Arial, Helvetica, sans-serif; text-align: right;"><a target="_blank "href="http://stacom2017.cardiacatlas.org/" style="color: #FFFFFF">in conjonction with the STACOM workshop</a></span>
+<br>
+		<span style="padding:0px 0px; font-size: 60%; font-family: Verdana, Arial, Helvetica, sans-serif; text-align: right;"><a target="_blank" href="http://acdc.creatis.insa-lyon.fr/#challenges">Go to evaluation platform</a></span>
+		</div>
+	</div>		
+	<!-- END PAGE HEADER CONTAINER -->
+	
+	
+	<!-- START MAIN NAVIGATION CONTAINER -->
+	<div id="navigation">
+	
+		<a href="./index.html" class="navigation">Overview</a>
+		<a href="./participation.html" class="navigation">Participation</a>
+		<a href="./databases.html" class="navigation">Databases</a>
+		<a href="./evaluation.html" class="navigation">Evaluation</a>
+		<a href="./code.html" class="navigation">Code</a>
+		<a href="./miccai_results.html" class="navigation">MICCAI'17 results</a>
+		<a href="./contact.html" class="navigation">Contact</a>
+
+		
+	</div>
+	<!-- END MAIN NAVIGATION CONTAINER -->
+	
+
+	<!-- START MAIN CONTENT BLOCK -->
+	<div id="content">	
+	
+		<h1>Databases</h1>
+	
+		<div class="navigation" id="top">
+			<div class="tabs">
+			<ul>
+				<li class="current"><a href="./databases.html"><span>Overview</span></a></li>
+				<li><a href="./databasesTraining.html"><span>Training dataset</span></a></li>
+				<li><a href="./databasesTesting.html"><span>Testing dataset</span></a></li>
+				<li><a href="./databasesClassification.html"><span>Classification rules</span></a></li>
+			</ul>
+		</div>
+		</div>
+
+
+		<dl>
+		<dd>
+
+			<p style="margin: 85px 0px 0px 0px;"><strong>Database access</strong></p>
+			
+			<p style="text-align: justify; padding: 0 30px 0 0;">
+			The overall ACDC dataset was created from real clinical exams acquired at the University Hospital of Dijon. Acquired data were fully anonymized and handled within the regulations set by the local ethical committee of the Hospital of Dijon (France). Our dataset covers several well-defined pathologies with enough cases to (1) properly train machine learning methods and (2) clearly assess the variations of the main physiological parameters obtained from cine-MRI (in particular diastolic volume and ejection fraction).  The dataset is composed of 150 exams (all from different patients) divided into 5 evenly distributed subgroups (4 pathological plus 1 healthy subject groups) as described below. Furthermore, each patient comes with the following additional information : weight, height, as well as the diastolic and systolic phase instants. <br><br>
+
+			The database is made available to participants through two datasets from the dedicated <a target="_blank" href="http://acdc.creatis.insa-lyon.fr/#challenges">online evaluation website</a> after a personal registration: <em>i)</em> a training dataset of 100 patients along with the corresponding manual references based on the analysis of one clinical expert; <em>ii)</em> a testing dataset composed of 50 new patients, without manual annotations but with the patient information given above. The raw input images are provided through the Nifti format.
+
+			</p>
+
+			<p style="margin: 25px 0px 0px 0px;"><strong>Study population</strong></p>
+
+			<p style="text-align: justify; padding: 0 30px 0 0;">
+			The targeted population for the study is composed of 150 patients divided into 5 subgroups as follows:
+			<ul>
+				<li>30 normal subjects - NOR<br><br></li>
+				<li>30 patients with previous myocardial infarction (ejection fraction of the left ventricle lower than 40% and several myocardial segments with abnormal contraction) - MINF<br><br></li>
+				<li>30 patients with dilated cardiomyopathy (diastolic left ventricular volume >100 mL/m<sup>2</sup> and an ejection fraction of the left ventricle lower than 40%) - DCM<br><br></li>
+				<li>30 patients with hypertrophic cardiomyopathy (left ventricular cardiac mass high than 110 g/m<sup>2</sup>, several myocardial segments with a thickness higher than 15 mm in diastole and a normal ejecetion fraction) - HCM<br><br></li>
+				<li>30 patients with abnormal right ventricle (volume of the right ventricular cavity higher than 110 mL/m<sup>2</sup> or ejection fraction of the rigth ventricle lower than 40%) - RV<br><br></li>
+			</ul>
+
+			Each group was clearly defined according to physiological parameter, such as the left or right diastolic volume or ejection fraction, the local contraction of the LV, the LV mass and the maximum thickness of the myocardium. More details can be foud on the <a href="./databasesClassification.html">Classification rules</a> tab.<br><br>
+
+			<p><strong>Involved systems</strong></p>
+
+			<p style="text-align: justify; padding: 0 30px 0 0;">
+			The acquisitions were obtained over a 6 year period using two MRI scanners of different magnetic strengths (1.5 T (Siemens Area, Siemens Medical Solutions, Germany) and 3.0 T (Siemens Trio Tim, Siemens Medical Solutions, Germany)). Cine MR images were acquired in breath hold with a retrospective or prospective gating and with a SSFP sequence in short axis orientation. Particularly, a series of short axis slices cover the LV from the base to the apex, with a thickness of 5 mm (or sometimes 8 mm) and sometimes an interslice gap of 5 mm (then one image every 5 or 10 mm, according to the examination). The spatial resolution goes from 1.37 to 1.68 mm2/pixel and 28 to 40 images cover completely or partially the cardiac cycle (in the second case, with prospective gating, only 5 to 10 % of the end of the cardiac cycle was omitted), all depending on the patient.
+			</p>
+
+		</dd>
+		</dl>
+	
+	</div>
+	<!-- END MAIN CONTENT CONTAINER -->	
+
+	
+</div>
+</body>
+
+
+</html>
+
+
+

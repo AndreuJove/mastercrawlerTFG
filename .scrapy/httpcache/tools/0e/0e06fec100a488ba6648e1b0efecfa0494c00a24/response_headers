@@ -1,0 +1,16 @@
+Date: Mon, 30 Mar 2020 18:46:52 GMT
+Server: Apache
+Cache-Control: max-age=0, private, must-revalidate
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Runtime: 1.257087
+X-Request-Id: 06e85ce5-7260-48e7-add4-e2c4bad09523
+X-Powered-By: Phusion Passenger
+Set-Cookie: _session_id=154cb60e3d71114bd5cce9a4cf8c910c; path=/; expires=Tue, 31 Mar 2020 18:46:54 GMT; HttpOnly
+Set-Cookie: BIGipServer~BMIR~pool_ncboprodui_80=1540692908.20480.0000; path=/; Httponly
+Etag: W/"0a1ed0e322b6e24ffd7d6cec00f65795-gzip"
+Status: 200 OK
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/html; charset=utf-8

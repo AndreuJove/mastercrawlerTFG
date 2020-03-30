@@ -1,0 +1,78 @@
+<html>
+<head><base href="http://webs.iiitd.edu.in/raghava/bcepred/">
+<title>
+BCEPRED Main page
+</title>
+<meta name="description" content="B- cell epitope prediction using physico-chemical properties.">
+<meta name="keywords" content="B cell epitope, prediction server, vaccine, physico-chemical properties, Hydrophilicity, Flexibility, Polarity, Exposed surface">
+<meta name="author" content="Suipto saha, Research Fellow, BIC, IMTECH; G.P.S Raghava, Coordinator and Scientist, BIC, IMTECH">
+<meta name="generator" content="Written by Sudipto saha">
+</head>
+<body bgcolor="white">
+<table bgcolor="#FFFFFF"  border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td  width=20%><img src="bcell25.gif" width="100%"  border="0"></td>
+<td  width=80%><table align="left" border="2" cellspacing="0" cellpadding="0" width="100%">
+<tr> <td width="100%"><img src="main1.jpg" width="100%"  border="0"></td></tr></table>
+</td>
+</table>
+<hr>
+<table bgcolor="#FFFFFF" width="100%" border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td bgcolor="#308850" width=17% align=center><a href ="index.html"><font color="#ffffff"><b> Home </b></font></a> </td>
+<td width="2"><img src="space.gif" width="2" height="18"</td>
+
+<td bgcolor="#308850" width=17% align=center><a href ="bcepred_submission.html" ><font color="#ffffff"><b> submission </b></font></a> </td>
+<td width="2"><img src="space.gif" width="2" height="18"</td>
+
+<td bgcolor="#308850" width=17% align=center><a href ="bcepred_help.html"><font color="#ffffff"><b> Help </b></font></a> </td>
+<td width="2"><img src="space.gif" width="2" height="18"</td>
+
+<td bgcolor="#308850" width=17% align=center><a href ="bcepred_output.html"><font color="#ffffff"><b> Output format </b></font></a> </td>
+<td width="2"><img src="space.gif" width="2" height="18"</td>
+
+
+<td bgcolor="#308850" width=17% align=center><a href ="bcepred_algorithm.html"><font color="#ffffff"><b> Algorithm </b></font></a> </td>
+<td width="2"><img src="space.gif" width="2" height="18"</td>
+
+<td bgcolor="#308850" width=17% align=center><a href ="bcepred_team.html"><font color="#ffffff"><b> Team </b></font></a> </td>
+</tr>
+</table>
+<div align="left">
+<HR 20><marquee behavior=alternate scrollamount=1 ><a href="http://osddlinux.osdd.net/">OSDDlinux for Standalone, Galaxy & Local version</a>  </marquee><HR 20>
+
+<font size="+2" color="#330000"><b>Bcepred:</b> Prediction of linear B-cell epitopes, using physico-chemical properties</font><br><br>
+
+<table bgcolor="#FFFFFF"  border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td><p align=justify><font size="4">We evaluated the performance of existing linear B-cell epitope prediction methods based on physico-chemical properties on a non-redundant dataset. The dataset consists of 1029 B-cell epitopes obtained from  <a href="http://webs.iiitd.edu.in/raghava/bcipep"> Bcipep database</a> and equally number of non-epitopes obtained randomly from Swiss-Prot database. The prediction accuracy for models based of various properties varies from 52.92% and 57.53%. We achived highest accuracy of 58.70% at threshold  2.38, when we combined four amino acid properties( hydrophilicity, flexibility, polarity and exposed surface).
+</font> 
+<br><br>
+<font size="+1" color="black">
+
+Based on our evaluation and analysis we have developed a web server Bcepred for predicting linear B-cell epitopes in a protein sequence. This server allows users to predict B-cell epitopes using any of the physico-chemical properties (<b> hydrophilicity, flexibility/mobility, accessibility, polarity, exposed surface</b> and<b> turns</b>) or combination of properties. <br><br>
+
+It presents the results in graphical and tabular frame. In case of graphical frame, this server plot the residue properties along protein backbone, which assist the users in rapid visulaziation of B-cell epitope on protein. The peak of the amino acid residue segment above the threshold value (default is 2.38) is considered as predicted B-cell epitope. The tabular output is in the form of a table, which will give the normalized score of the selected properties with the corresponding amino acid residue of a protein along with the maximum, minimum and averages values of the combined methods, selected.
+<br><br>
+ The server is able to predict epitopes with 58.7% accuracy using <i>Flexibility, Hydrophilicity, Polarity, </i> and <i> Surface</i> properties combined  at a threshold of 2.38.
+<br><br>
+<b>If you use this web server, please cite:</b><br>
+<font color='red'><A href="http://www.springerlink.com/content/ex360mjlwahflwmw/">Saha.S and Raghava G.P.S. BcePred:Prediction of Continuous B-Cell Epitopes in Antigenic Sequences Using Physico-chemical Properties. In G.Nicosia, V.Cutello, P.J. Bentley and J.Timis (Eds.) ICARIS 2004, LNCS 3239, 197-204, Springer,2004.</A> </font>
+</p></font>
+</tr></td>
+</table>
+</div>
+<hr>
+<div align='center'>
+	contact: <a href="http://webs.iiitd.edu.in/raghava"><font color="#006000">&nbsp; G.P.S.Raghava</font></a>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://webs.iiitd.edu.in/bic"><font color="#006000">Bioinformatics Centre</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://webs.iiitd.edu.in"><font color="#006000">IMTECH</font></a>
+<hr>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,18 @@
+Date: Mon, 30 Mar 2020 18:50:13 GMT
+Content-Type: text/html;charset=utf-8
+Content-Language: en
+Etag: W/"3982b015e077f70200befb354eea82f6"
+Link: <https://static.parastorage.com/>; rel=preconnect; crossorigin,<https://fonts.gstatic.com>; rel=preconnect; crossorigin,<https://static.wixstatic.com/>; rel=preconnect;,<https://static.parastorage.com/unpkg/requirejs-bolt@2.3.6/requirejs.min.js>; rel=preload; as=script;,<https://static.parastorage.com/unpkg/lodash@4.17.15/lodash.min.js>; rel=preload; as=script ; crossorigin=anonymous;,<https://static.parastorage.com/unpkg/zepto@1.2.0/dist/zepto.min.js>; rel=preload; as=script ; crossorigin=anonymous;,<https://static.wixstatic.com/>; rel=preconnect; crossorigin;,<https://nishio470.wixsite.com/clinical-ngs-db/_api/v2/dynamicmodel>; rel=preload; as=fetch ; crossorigin=anonymous;,<https://static.parastorage.com/services/wix-bolt/1.5478.0/bolt-main/app/main-r.min.js>; rel=preload; as=script ; crossorigin=anonymous;
+Age: 1231
+Set-Cookie: ssr-caching="cache,desc=hit,varnish=hit, dc,desc=euw2";Version=1;Expires=Mon, 30-Mar-2020 18:30:02 GMT;Max-Age=20
+Set-Cookie: hs=-685850414; Path=/; Domain=nishio470.wixsite.com; HTTPOnly
+Set-Cookie: svSession=610ea5e57939c87de19cae9de18823c9f5df29fb2566b28376f6a474fc7de2bf5fe6b8cc104c7e83acf10d8d1ac1463c1e60994d53964e647acf431e4f798bcd2cdf31b5cdf6b00f483febd305df31be5094fe0df4dce34f5a2103d268693cc2; Max-Age=63072000; Expires=Wed, 30 Mar 2022 18:50:13 GMT; Path=/clinical-ngs-db; Domain=nishio470.wixsite.com
+Set-Cookie: XSRF-TOKEN=1585594213|DlgNjzWAXNE_; Path=/; Domain=nishio470.wixsite.com
+Server-Timing: cache;desc=hit, varnish;desc=hit, dc;desc=euw2
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Vary: Accept-Encoding
+X-Seen-By: sHU62EDOGnH2FBkJkG/Wx8EeXWsWdHrhlvbxtlynkVjSyJ7GSQKoXM9lseYdHjIA,2d58ifebGbosy5xc+FRaloPX4ngKfQM8fEHbwELHijkqxMZvnmmqAYXvv1RUDwiJWIHlCalF7YnfvOr2cMPpyw==,Nlv1KFVtIvAfa3AK9dRsI7BVC93YiKOuCeaM0z/uEIUfbJaKSXYQ/lskq2jK6SGP,2UNV7KOq4oGjA5+PKsX47F8xRgV30iIDzySL0NmaUxo=
+X-Wix-Request-Id: 1585594213.85124113465312152
+Cache-Control: private,max-age=0,must-revalidate
+Server: Pepyaka/1.15.10
+Content-Encoding: gzip

@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link href="interface/favicon.ico" rel="SHORTCUT ICON" type="image/x-icon" />
+<title>AtSubP Analysis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" src="demo.js"></script>
+<link rel="stylesheet" href="interface/style.css" type="text/css"></head><body>
+
+<script src="interface/gui.js"></script>  
+
+</head>
+
+<body>
+
+<!-- title -->
+<table class="mainframe" border="0" cellpadding="0" cellspacing="0" align="center">
+  <tbody> 
+  
+  <tr><td>
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+    <tbody>
+      <tr>
+	 <td align="right" background="interface/noble_bk.jpg" height="5" valign="top" width="180">&nbsp;</td>
+	 <td align="left" background="interface/foundation_bk.jpg" height="5" valign="top">&nbsp;
+
+<!--  
+<font color='red'>Update: We have updated the AtSubP server... If you find any bugs, please report them to  <script type="text/javascript">document.write('<a href="mai' + 'lto:' + 'bioinfo&#' + (108-44) + ';noble&#46;org" style="color:red">bioinfo@noble.org</a>')</script></font>
+-->	 
+
+</td>
+      </tr>
+   </tbody>
+   </table>
+  </td></tr>
+
+  <tr><td bgcolor="#001a81" height="70">
+        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+	<tbody>
+           <tr>
+              <td align="left" valign="bottom" width="180"><div style="margin-left: 10px;"><a href="http://www.noble.org/" target="_blank"><img src="interface/nflogo.gif" border="0"></a></div></td>
+              <td align="left" valign="bottom"><div style="font-size: 14px; font-weight: bold; color: rgb(200, 200, 200); margin-top: 2px; margin-left: 5px; margin-bottom: 10px;">
+              <a class="menu" href="http://bioinfo.noble.org/">The Zhao Bioinformatics Laboratory</a></div>
+              <div style="font-size: 18px; font-weight: bold; color: rgb(255, 255, 255); margin-left: 5px; margin-bottom: 10px; text-align:right; font-style:italic">
+              AtSubP: the Arabidopsis Subcellular Localization Prediction Server &nbsp;&nbsp;</div>
+             </td>
+	   </tr>
+        </tbody>
+        </table>
+  </td></tr>
+
+</table>
+<!-- menu -->
+<table class="mainframe" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr bgcolor="#EEEEEE">
+	  <td width="65%">&nbsp;</td>
+	  <td align="center"><a href="/AtSubP/index.php?dowhat=About" class=text1>About</a>&nbsp;|&nbsp;</td>
+      <td align="center"><a href="/AtSubP/index.php?dowhat=AtSubP" class=text1>AtSubP</a>&nbsp;|&nbsp;</td>
+      <td align="center"><a href="/AtSubP/index.php?dowhat=Datasets" class=text1>Datasets</a>&nbsp;|&nbsp;</td>
+      <td align="center"><a href="/AtSubP/index.php?dowhat=Appendix" class=text1>Appendix</a>&nbsp;|&nbsp;</td>
+      <td align="center"><a href="/AtSubP/index.php?dowhat=Help" class=text1>Help</a></td>
+	</tr>
+    <tr>
+      <td align="left" valign="bottom" colspan="4" height="30"><b>Location:&nbsp;&nbsp;</b>
+About      </td>
+    </tr>
+</table>
+<!-- menu -->
+<br>
+<table class="mainframe"  width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+  
+  <tr align="justify"><td align="center" bgcolor="#DDDDFF" width="100%" height="30"><b>INTRODUCTION</b></td></tr>
+  
+    <tr><td bgcolor="#EEEEEE" colspan="0">
+
+<table border="0" width="100%" align="justify" cellpadding="0" cellspacing="0"  class="table1" border="0">
+  <tr><td colspan="2">&nbsp;</td></tr>
+  <tr align="justify">  
+    <td width="2%"></td>
+    <td width="96%" align="justify">The present tool is developed as a part of our broader study focused on investigating the advantages of developing "<b>organism-specific</b>" predictors over the "<b>general</b>" ones to predict protein subcellular localization. To demonstrate this, we perform a systematic study in <i>Arabidopsis thaliana</i> and create an integrative Support Vector Machine-based localization predictor called '<a href="/AtSubP/index.php?dowhat=AtSubP" class=text1><b>AtSubP</b></a>' that is based on the combinatorial presence of diverse protein features such as its amino acid composition, sequence-order effects, terminal information, PSSM and the similarity search-based PSI-BLAST information. When used to predict on seven compartments (Chloroplast, Cytoplasm, Golgi apparatus, Mitochondrion, Extracellular, Nucleus, Plasma membrane) through a <b>5-fold cross-validation test</b>, our hybrid-based best classifier achieves an overall accuracy of <b>90.95%</b> with a high confidence precision and MCC values of 90.86% and 0.89, respectively. Benchmarking <b>AtSubP</b> on two independent datasets, one from <a href="http://expasy.org/sprot/" target="_blank">Swiss-Prot</a> and another containing GFP & Mass Spectrometry determined proteins from <a href="http://www.plantenergy.uwa.edu.au/suba2/" target="_blank">SUBA</a> and <a href="http://gpcr.biocomp.unibo.it/esldb/" target="_blank">eSLDB</a> databases, shows a significant improvement in the prediction accuracy of '<i>species-specific</i>' <b>AtSubP</b> over some widely used '<i>general</i>' tools such as <a href="http://www.cbs.dtu.dk/services/TargetP/" target="_blank">TargetP</a>, <a href="http://cubic.bioc.columbia.edu/services/LOCtree/" target="_blank">LOCtree</a>, <a href="http://www.cs.ualberta.ca/~bioinfo/PA/Sub/" target="_blank">PA-SUB</a>, <a href="http://www-bs.informatik.uni-tuebingen.de/Services/MultiLoc/" target="_blank">MultiLoc</a>, <a href="http://wolfpsort.org/" target="_blank">WoLF PSORT</a> and <a href="http://www.csbio.sjtu.edu.cn/bioinf/plant/" target="_blank">Plant-PLoc</a> as well as our newly created '<b>All-Plant</b>' method. As another rigorous testing, the cross-comparison of Arabidopsis-specific classifier on six non-trained eukaryotic organisms (Rice, Soybean, Human, Yeast, Fruit fly, Worm) reveals too inferior predictions.<p>Thereby, this comprehensive case study strongly reveals the presence of some '<i>species-specific</i>' sorting patterns or signals among the individual organisms that are being skipped in the training process while developing '<i>general</i>' prediction methods. We suggest to actively develop similar genome-specific systems in other organisms to fasten-up their individual proteome annotation process rather than relying on some general prediction tools. <b>Five diverse prediction modules</b> based on various features of a protein sequence have been implemented on the World Wide Web as a dynamic web server '<a href="/AtSubP/index.php?dowhat=AtSubP" class=text1>AtSubP</a>' that provide wider options to the users extracting different features from their query protein sequences e.g. the simple amino acid composition, sequence-order based dipeptide composition, terminal-based information, Position Specific Scoring Matrix (PSSM), similarity-based PSI-BLAST, including our best performing hybrid classifier.</p><p>Currently, the <a href="http://www.arabidopsis.org/" target="_blank">TAIR</a> community is actively using <a href="http://www.cbs.dtu.dk/services/TargetP/" target="_blank">TargetP</a> for annotating the complete Arabidopsis proteome (<a href="ftp://ftp.arabidopsis.org/home/tair/Proteins/Properties/TargetP_analysis.tair10" target="_blank">ftp://ftp.arabidopsis.org/home/tair/Proteins/Properties/TargetP_analysis.tair10</a>). However, in our independent comparison on various test datasets, '<b>AtSubP</b>' shows better accuracy and wider location coverage as compared to 'TargetP'. Therefore, we believe that '<a href="/AtSubP/index.php?dowhat=AtSubP" class=text1>AtSubP</a>' can serve as a better complement to accurately annotate the <i>Arabidopsis thaliana</i> proteome. The complete list of subcellular predictions generated through '<b>AtSubP</b>' are available under the '<a href="/AtSubP/index.php?dowhat=Datasets" class=text1>Datasets</a>' section.</p>
+</td>
+    <td width="2%"></td>
+  </tr>
+  
+</table>
+  
+  </td>
+  </tr>
+
+  </tbody>
+</table>
+<BR>
+<table class="mainframe" width="70%" bgcolor="#EEEEEE" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td width="2%"></td>
+<td width="96%" align="justify">
+If you are using this server, <u>please cite</u>:
+</td>
+<td width="2%"></td>
+</tr>
+<tr><td><br></td></tr>
+<tr><td width="2%"></td>
+<td width="96%" align="justify">
+<div>Kaundal, R., Saini, R. and Zhao, P.X. <b>2010</b>. <a href="http://www.plantphysiol.org/cgi/content/full/154/1/36" class=text1 target="_blank">Combining Machine Learning and Homology-based Approaches to Accurately Predict Subcellular Localization in Arabidopsis</a>. <b><i>Plant Physiology</i></b> 154(1): 36-54.</div> 
+</td>
+<td width="2%"></td>
+</tr>
+
+
+ <td width="2%">&nbsp;</td>
+    <td width="96%"><p>To contact us, please write to: bioinfo@noble.org</p></td>
+    <td width="2%">&nbsp;</td>
+</table>
+
+
+<table class="mainframe" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr valign="middle"><td colspan="4"><hr></td></tr>
+<tr><td colspan="4"><table width="100%" align="center" cellpadding="0" cellspacing="0"  class="table1" border="0">
+  <tr bgcolor="#DDDDFF">
+      <td >&nbsp;</td>
+      <td height="30" align="center">
+         <div>
+         © 2012 by The Samuel Roberts Noble Foundation, Inc.
+         <br>
+         
+<!--  
+<b>Designer:</b> J, Bioinformatics Lab, Plant Biology Division<br>
+<b>Contact:</b> please write to <i>? AT noble.org</i> or <i>bioinfo AT noble.org</i>
+-->
+
+</div>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+</table>
+
+</td></tr>
+</table>
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119048537-10"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119048537-10');
+</script>
+
+
+</body>
+</html>

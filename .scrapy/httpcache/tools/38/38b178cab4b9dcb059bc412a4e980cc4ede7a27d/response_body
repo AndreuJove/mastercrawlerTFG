@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BSDB - Homepage</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;FF=3;" />
+
+<script language="text/javascript" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="galeria/adapter/shadowbox-jquery.js"></script>
+<script type="text/javascript" src="galeria/shadowbox.js"></script>
+<script type="text/javascript" src="galeria/skin/classic/skin.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<meta http-equiv="content-language" content="pl" />
+<meta name="Author" content="Bartlomiej Witkowski" />
+<meta name="creation-date" content="30-07-2009" />
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<script type="text/javascript">Shadowbox.loadSkin('classic', 'galeria/skin');
+    Shadowbox.loadLanguage('pl', 'galeria/lang');
+    Shadowbox.loadPlayer(['img', 'qt'], 'galeria/player');
+    window.onload = Shadowbox.init;</script>
+<div class="top_bg">
+<div class="top">
+    <div style="padding-top: 10px;"><img src="img/belka_l.jpg" style="float: left" alt=""/>
+        <div style="float: left; height: 52px; background-image: url('img/belka_m.jpg'); background-repeat: repeat-x; color: white; font-size: 15px; padding-top: 15px;">
+        <form action="index.php" method="get">
+        <input type="hidden" name="quick" value="1" />
+        <input type="hidden" name="by" value="id" /> 
+        SEARCH BY
+        <!--<input type="radio" name="by" value="id" style="margin-left: 30px;" checked="checked" />-->
+        PDB ID 
+        <!--<input type="radio" name="by" value="name" style="margin-left: 30px;" />-->
+        <input type="text" name="key" style="width: 50px; font-size: 12px; margin-left: 30px;" />
+        <input type="submit" value=" SEARCH " style="font-size: 10px; margin-left: 30px;" />
+        <a href="index.php?adv_search" style="color: white; margin-left: 30px; font-size: 12px; ">Advanced search</a>
+        
+        </form></div>
+        <img src="img/belka_r.jpg" alt=""/>
+    </div>
+
+</div>
+</div>    
+
+
+
+<table style="width: 1000px; margin: auto" cellspacing="0" cellpadding="0">
+<tr><td style="width: 250px">
+
+    <div class="box">
+        <form action="index.php" method="get" style="font-size: 10px; ">
+        <input type="hidden" name="quick" value="1" />
+        <input type="hidden" name="by" value="id" /> 
+        <b>Quick search (PDB ID):</b> 
+        <!--<input type="radio" name="by" value="name" style="margin-left: 30px;" />-->
+        <input type="text" name="key" style="width: 50px;" />
+        <input type="submit" value=" GO " style="font-size: 9px;" />
+        
+        </form>		<br /><br />
+        <a href="index.php">Home</a>
+        <a href="index.php?text=description&amp;title=Description of BSDB">Description of BSDB</a>
+				<a href="index.php?text=force_clamps&amp;title=Types of mechanical clamps">Types of mechanical clamps</a>
+				<a href="index.php?text=faq&amp;title=Frequently Asked Questions">FAQ</a>
+        <hr /> 
+        <div style="padding-bottom: 5px;font-size: 13px; font-weight: bold;">THEORETICAL RESULTS</div>
+        <div style="padding-bottom: 5px;font-size: 11px; font-weight: bold; padding-left: 15px; text-transform: uppercase">Survey within the structure-based model</div>
+        
+				<a href="index.php?survey" style="padding-left: 30px">Results of simulations described in PLoS</a>
+				<a href="index.php?survey&amp;user" style="padding-left: 30px">Proteins requested by BSDB users</a>
+				<a href="index.php?text=all_atom&amp;title=Results of all-atom simulations" style="padding-left: 10px">Results of all-atom simulations</a>
+				<hr />
+        <div style="padding-bottom: 5px;font-size: 13px; font-weight: bold;">EXPERIMENTAL RESULTS</div>
+        <a href="index.php?text=experimental&amp;title=Experimental results" style="padding-left: 10px">Survey of experimental data</a>
+        <hr />
+        
+        <a href="index.php?new">Add new protein!</a>
+        <hr />
+        
+        <div style="padding-bottom: 5px;font-size: 13px; font-weight: bold;">OTHER DATABASE</div>
+        <a href="http://www.rcsb.org/pdb/home/home.do" target="new" rel="nofollow">PDB</a>  
+        <a href="http://www.cathdb.info/" target="new" rel="nofollow">CATH</a>  
+        <a href="http://scop.berkeley.edu/" target="new" rel="nofollow">SCOP</a> 
+        
+           
+				
+				<br /><hr />
+				<div style="padding-bottom: 5px;font-size: 10px; font-weight: bold;">Please direct questions and comments to
+</div>
+				<a href="mailto:bsdb@ifpan.edu.p" style=" text-transform: lowercase">bsdb@ifpan.edu.pl</a>
+
+    </div>
+<br style="clear: both" /><br />		
+</td><td style="border-left: solid 4px rgb(100,100,100); width: 750px;">
+<div class="naglowek" style="background-color: white;">
+    <a href="javascript: history.go(-1);" style="font-size: 9px; color: blue; float: right;">Back</a>
+    Homepage
+    </div>
+    <div class="main">
+    
+    <p style="text-align: center; font-weight: bold; font-size: 15px;">Welcome to the Bio-molecule Stretching Database</p>
+
+<p>The Biomolecule Stretching Database (BSDB) contains information related to mechanical
+stretching of biomolecules. Currently, the database is restricted to proteins
+and to stretching at constant velocity.When plotting the force of resistance to
+pulling, <i>F</i>, versus the pulling distance, <i>d</i>, one may encounter one or more isolated
+force peaks on the way to full stretching. the characteristic scale of <i>F</i> is characterized
+by <i>F<sub>max</sub></i> - the maximum force in an isolated force peak. If no force peak
+develops, <i>F<sub>max</sub></i> is assigned a value of zero. Usually, this happens when some disulphide
+bonds prevent full stretching.</p>
+
+<p>The Database lists results obtained theoretically within a structure-based coarsegrained
+model, initially, for 17 134 structures with no more than 250 amino acids
+as discussed in reference: M. Sikora, J. I. Sułkowska, and M. Cieplak, 
+<a href='http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1000547'><u>Mechanical
+strength of 17 134 model proteins and cysteine slipknots</u></a>, PLoS Computational
+Biology, <b>5</b> e1000547 (2009).
+The database is further described in: M. Sikora, J. I. Sulkowska, B. S. Witkowski, and M. Cieplak, 
+<a href='http://nar.oxfordjournals.org/content/39/suppl_1/D443.abstract'><u>BSDB: the biomolecule 
+stretching database</u></a>, Nucl. Acid Res. 39, D443-D450 (2011).</p>
+
+<p>Multi-domain proteins are discussed in reference: M. Sikora and M.
+Cieplak.
+   <a href="http://onlinelibrary.wiley.com/doi/10.1002/prot.23001/pdf"><u>Mechanical stability of multi-domain proteins and novel mechanical clamps</u></a>,
+   Proteins: Struct. Funct., and Bioinf. <b>79</b>(6) 2011, where 315 proteins are considered.</p>
+	 
+	 <p>In the first two papers, we have used terms "cysteine knot" and "cysteine
+   slipknots" instead of the correct terms "cystine knot" and "cystine
+slipknot"
+   respectively. Further analysis of the cystine slipknot proteins can be
+found in
+   reference: L. Peplowski, M. Sikora, W. Nowak, and M. Cieplak,
+   <a href='http://m.jcp.aip.org/resource/1/jcpsa6/v134/i8/p085102_s1'><u>Molecular jamming - the cystine slipknot mechanical clamp in all-atom
+   simulations</u></a>, J. Chem. Phys. 134, 085102 (2011).</p>
+
+
+<p>It also lists experimental results on <i>F<sub>max</sub></i> that are available in the literature. Furthermore,
+it provides information on <i>F<sub>max</sub></i> as obtained within all-atom simulations. The
+users are encouraged to submit new theoretical and experimental entries to us and
+to request calculations for proteins that are not yet stored in BSDB.</p>
+
+<p STYLE="TEXT-ALIGN: CENTER; FONT-SIZE: 10PX;">The research leading to creation of
+ this database has received funding from the European Community's Seventh Framework 
+Programme (FP7/2007-2013) under grant agreement 213382 
+(<a href="http://www.tyndall.ie/projects/funmol/" target="new" rel="nofollow">FUNMOL</a>) </p>
+
+    
+    </div>
+
+<br />
+</td></tr></table>
+
+<div class="stopka">
+<div style="float: left; font-size: 10px; padding-left: 5px; color: rgb(40,22,111);">Institute of Physics, Polish Academy of Sciences 2010</div>
+<span style="color: rgb(40,22,111); text-decoration: none; font-size: 10px;">Authors: Mateusz Sikora, Marek Cieplak, Joanna I. Sułkowska&nbsp; &nbsp; Realization: Bartłomiej S. Witkowski</span></div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11031213-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body></html>

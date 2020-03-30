@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>HOME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ABOUT AMP</title>
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="100%">
+    <p align="center">
+    <img src="http://www.bioinformatics.org/antimicrobial/logo.gif" width="267" height="130"/> </body></html></p>
+  <table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" bordercolorlight="#00FF00" bordercolordark="#008000" background="http://bioinformatics.org/antimicrobial/rice.jpg">
+      <tr>
+        <td width="100%" bgcolor="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font color="#FFFFFF">&nbsp;<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://www.bioinformatics.org/antimicrobial/" style="text-decoration: none">
+        <font color="#FFFFFF">HOME </font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://bioinformatics.org/antimicrobial/int1.html" style="text-decoration: none">
+        <font color="#FFFFFF">ABOUT AMP </font></a>&nbsp;&nbsp; </b></font><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font color="#FFFFFF">&nbsp;<a href="http://www.bioinformatics.org/LuGenD/contact.html" style="text-decoration: none"><font color="#FFFFFF"><a style="text-decoration: none" href="http://www.bioinformatics.org/LuGenD/my/contact.html"><font color="#FFFFFF">CONTACT ME</font></a></font></a><a style="text-decoration: none" href="http://www.bioinformatics.org/LuGenD/my/contact.html"><font color="#FFFFFF">&nbsp;
+        </font></a> </font></b></td>
+      </tr>
+      <tr>
+        <td width="100%">
+        <p align="justify" style="word-spacing: 4; margin-top: 4; margin-bottom: 4"><b><big>
+        <font color="#808080" face="Arial" size="2">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+        <font color="#000080" face="Arial" size="2">
+        &nbsp;</font><font color="#666699" face="Arial" size="2">Antimicrobial peptides are molecules produced by the immune system of 
+        animals and plants are being considered potential novel antibiotic 
+        candidates to combat emerging drug-resistant bacterial strains. The 
+        peptides are known to kill bacterial cells by direct membrane attack. 
+        Peptide membrane systems are not pliable from crystallization and 
+        invariable involve a large number of interacting molecules. Knowledge 
+        from X-ray and NMR experiments has been therefore restricted. </font>
+        </big></b></p>
+        <p align="justify" style="word-spacing: 4; margin-top: 4; margin-bottom: 4"><b>
+        <font color="#666699" face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In&nbsp; 
+        this server&nbsp; you can predict the Antimicrobial activity of given 
+        sequence. The activity may be antifungal, antiviral and antibacterial 
+        .The input protein sequence may be in Fasta or raw format .This server 
+        works based on Multidimensional signatures of antimicrobial 
+        peptides (Yount and Yeaman.2004).</font></b></p>
+        <p><font color="#333333" face="Arial, Helvetica, sans-serif" size="2"><big>
+<big style="FONT-FAMILY: times"><span style="FONT-WEIGHT: bold">Prediction</span></big></big></font></p>
+<form action="http://bioinformatics.org/antimicrobial/cgi-bin/old_script.cgi" encType="multipart/form-data" method="post">
+  <p align="center">&nbsp;<span style="COLOR: rgb(102,51,0); FONT-WEIGHT: bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  Enter your sequence
+  here in</span><span style="FONT-WEIGHT: bold"> </span><a href="http://bioinformatics.org/antimicrobial/fasta.html">FASTA</a> <span style="COLOR: rgb(102,51,0); FONT-WEIGHT: bold">or
+  raw format: &nbsp;&nbsp;&nbsp;</span>&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  <p align="center"><textarea cols="40" name="SEQUENCE" rows="7"></textarea><br>
+  <br>
+  </p>
+  <dl>
+    <dd>
+      <p align="center" style="COLOR: rgb(102,51,0); FONT-WEIGHT: bold"><big>Sequence
+      data file name:</big></p>
+      <p align="center"><b><input name="SEQUENCE_FILE" size="50" type="file"><br>
+      </b></p>
+    <dd>
+      <p align="center"><br>
+      <input type="submit" value="Predict"><input type="reset" value="Clear"></p>
+    </dd>
+  </dl>
+</form>
+
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <font color="#800000">Core Graphic Module and web implementation&nbsp; by</font>
+        <font color="#000080">Leonsoji.T</font> </font></p>
+        <p align="center"><font size="2" color="#0000FF">leonsoji@gmail.com</font></p>
+        <p>&nbsp;</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+
+</html>

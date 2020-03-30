@@ -1,0 +1,13 @@
+Cache-Control: no-cache, must-revalidate
+Content-Type: text/html;charset=UTF-8
+Content-Security-Policy: frame-ancestors 'self'
+Strict-Transport-Security: max-age=0
+Date: Mon, 30 Mar 2020 18:47:39 GMT
+X-Asen: SEN-193206
+Location: /seqdb/confluence/login.action?os_destination=%2Fpages%2Fviewpage.action%3FpageId%3D54653532&permissionViolation=true
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=F1C464424BB1D131C1A44527D355E4B9; Path=/seqdb/confluence; HttpOnly
+X-Confluence-Request-Time: 1585594059797
+X-Frame-Options: SAMEORIGIN

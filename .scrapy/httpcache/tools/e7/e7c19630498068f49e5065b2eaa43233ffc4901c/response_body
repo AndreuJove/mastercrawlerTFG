@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <link rel="stylesheet" href="/static_files/styles/gtt_lab_styles.css" type="text/css" media="all" charset="utf-8">
+        <link rel="stylesheet" href="/static_files/pages/catrapid_group/additional.css" type="text/css" media="all" charset="utf-8">
+
+		<title>catRAPID</title>
+	</head>
+
+	<body>
+
+		<div id="topbar">
+			<div id="home_panel">
+			<p><a href="/">Portal Home</a></p>
+			</div>
+			<div id="title_server">
+				<h1><i>cat</i>RAPID
+</h1>
+			</div>
+			<div id="navbar_server">
+				<h3>
+				[
+                        <a target="" href="/static_files/shared/documentation.html">Documentation
+</a>
+                         -
+                        <a target="" href="/static_files/shared/tutorial.html">Tutorial
+</a>
+                         -
+                        <a target="" href="/static_files/shared/faqs.html">FAQs
+</a>
+                         -
+                        <a target="" href="/static_files/shared/catrapid_publications.html">Relevant publications
+</a>
+                         -
+                        <a target="" href="/static_files/shared/licensing_notice.html">Licensing Notice
+</a>
+                         -
+                        <a target="" href="http://www.crg.eu/en/programmes-groups/gene-function-and-evolution">Group page @ CRG
+</a>
+				]</h3>
+                <!-- TODO - add default navigation -->
+			</div>
+		</div>
+		<div id="welcome_server">
+			<div id="left_column">
+			  <img src="/static_files/pages/catrapid_group/logo.png" />
+			</div>
+
+			<div id="right_column" style="margin-top:6em;">
+							<p id="task_description"><p><i>cat</i>RAPID is an algorithm to estimate the binding propensity of protein-RNA pairs. By combining secondary structure, hydrogen bonding and van der Waals contributions, <i>cat</i>RAPID predicts protein-RNA associations with great accuracy. </p> <!--<p><strong>Dear user, over the week-end we experienced unexpected technical problems with the <i>cat</i>RAPID computation server. We apologize for the inconvenience. We are currently working for restoring the service.</strong> (the catRAPID team) </p> <br> <p><strong>The <i>cat</i>RAPID web server provides users with distinct modules to run their predictions:</strong></p>--> <br> <p>The original catRAPID server is available <a href="http://service.tartaglialab.com/new_submission/catrapid_graphic">here</a>. <br> To run the software locally, you should agree to the terms of the Academic License Agreement, which can be found <a href="http://service.tartaglialab.com/static_files/shared/Global Score - Academic License Agreement (2016).pdf">here</a>. <br> Information about the software license is available <a href="http://technologies.tbdo.crg.eu/technology/21539">here</a>. <br><br> Developments based on catRAPID algorithm are listed below.</p>
+</p>
+                <dl>
+                <!-- {&#039;title_styled&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID fragments\n&#039;, &#039;description&#039;: &#039;&lt;p&gt;This module is based on a procedure which involves division of polypeptide and nucleotide sequences into fragments followed by prediction of their interaction propensities.&lt;/p&gt;\n&#039;, &#039;algorithm&#039;: {&#039;command&#039;: &#039;catrapid_fragments.py -output_dir=&lt;output_dir&gt;&#039;, &#039;processing_timeout&#039;: 3600}, &#039;title&#039;: &#039;catRAPID fragments&#039;, &#039;description_short&#039;: &#039;Division of polypeptide and nucleotide sequences into fragments followed by prediction of the individual interaction propensities\n&#039;, &#039;form_fields&#039;: [{&#039;required&#039;: False, &#039;type&#039;: &#039;text&#039;, &#039;name&#039;: &#039;title&#039;, &#039;description&#039;: &#039;Submission label (optional)&#039;}, {&#039;min_length&#039;: 50, &#039;required&#039;: True, &#039;type&#039;: &#039;textarea&#039;, &#039;name&#039;: &#039;protein_seq&#039;, &#039;description&#039;: &#039;Protein sequence (FASTA format - min 50 aa)&#039;}, {&#039;min_length&#039;: 50, &#039;required&#039;: True, &#039;type&#039;: &#039;textarea&#039;, &#039;name&#039;: &#039;rna_seq&#039;, &#039;description&#039;: &#039;RNA sequence (FASTA format - min 50 nt)&#039;}, {&#039;description&#039;: &#039;Fragmentation option&#039;, &#039;required&#039;: True, &#039;type&#039;: &#039;radio&#039;, &#039;name&#039;: &#039;protFrag&#039;, &#039;entries&#039;: [{&#039;value&#039;: &#039;uniform&#039;, &#039;title&#039;: &#039;Protein and RNA (&quot;Uniform&quot; fragmentation)&#039;}, {&#039;value&#039;: &#039;weighted&#039;, &#039;title&#039;: &#039;Long RNA (&quot;Weighted&quot; fragmentation)&#039;}]}, {&#039;required&#039;: False, &#039;type&#039;: &#039;email&#039;, &#039;name&#039;: &#039;email&#039;, &#039;description&#039;: &#039;Email address (optional, used for notification)&#039;}], &#039;version&#039;: 1.0, &#039;examples&#039;: [{&#039;title&#039;: &#039;FMRP autoregulation&#039;, &#039;description&#039;: &#039;The interaction between the FMR1 protein and its mRNA [&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/11532944&quot; target=&quot;_blank&quot;&gt;Schaeffer et al., 2001&lt;/a&gt;]&#039;, &#039;reference_id&#039;: 4557}, {&#039;title&#039;: &#039;SRSF1 and Xist RNA&#039;, &#039;description&#039;: &#039;The interaction between SRSF1 and the long noncoding RNA Xist [&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/20657585&quot; target=&quot;_blank&quot;&gt;Royce-Tolland et al., 2010&lt;/a&gt;]&#039;, &#039;reference_id&#039;: 4558}], &#039;type&#039;: &#039;algorithm&#039;, &#039;output&#039;: [None], &#039;nav_links&#039;: [{&#039;href&#039;: &#039;http://service.tartaglialab.com/page/catrapid_group\n&#039;, &#039;title&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID home\n&#039;}, {&#039;href&#039;: &#039;http://service.tartaglialab.com/static_files/shared/documentation.html#8\n&#039;, &#039;title&#039;: &#039;Documentation\n&#039;}, {&#039;href&#039;: &#039;http://service.tartaglialab.com/static_files/shared/tutorial.html\n&#039;, &#039;title&#039;: &#039;Tutorial\n&#039;}, {&#039;href&#039;: &#039;http://service.tartaglialab.com/static_files/shared/faqs.html\n&#039;, &#039;title&#039;: &#039;FAQs\n&#039;}, {&#039;href&#039;: &#039;http://pasteur.crg.es/portal/page/portal/827A462EAB6802B3E04012AC0E01291B\n&#039;, &#039;title&#039;: &#039;Group page @ CRG\n&#039;}], &#039;name&#039;: &#039;catrapid_fragments&#039;} -->
+                    <dt>
+                        <a href="/new_submission/catrapid_fragments">
+                            <i>cat</i>RAPID fragments
+
+                        </a>
+                    </dt>
+                    <dd>
+                        Division of polypeptide and nucleotide sequences into fragments followed by prediction of the individual interaction propensities
+
+                    </dd>
+                    <br />
+                <!-- {&#039;title_styled&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID strength\n&#039;, &#039;description&#039;: &#039;&lt;p&gt;This module computes the interaction strength of a protein-RNA pair with respect to a reference set. Reference sequences have the same lengths of the protein-RNA pair of interest.&lt;/p&gt;\n&#039;, &#039;algorithm&#039;: {&#039;command&#039;: &#039;catrapid_strength.py -output_dir=&lt;output_dir&gt;&#039;, &#039;processing_timeout&#039;: 36000}, &#039;title&#039;: &#039;catRAPID strength&#039;, &#039;description_short&#039;: &#039;Computes the strength of a protein-RNA pair with respect to a reference set\n&#039;, &#039;form_fields&#039;: [{&#039;required&#039;: False, &#039;type&#039;: &#039;text&#039;, &#039;name&#039;: &#039;title&#039;, &#039;description&#039;: &#039;Submission label (optional)&#039;}, {&#039;min_length&#039;: 50, &#039;max_length&#039;: 800, &#039;name&#039;: &#039;protein_seq&#039;, &#039;required&#039;: True, &#039;type&#039;: &#039;textarea&#039;, &#039;description&#039;: &#039;Protein sequence (FASTA format 50-750 aa)&#039;}, {&#039;min_length&#039;: 50, &#039;max_length&#039;: 1300, &#039;name&#039;: &#039;rna_seq&#039;, &#039;required&#039;: True, &#039;type&#039;: &#039;textarea&#039;, &#039;description&#039;: &#039;RNA sequence (FASTA format 50-1200 nt)&#039;}, {&#039;description&#039;: &#039;Reference Set&#039;, &#039;required&#039;: True, &#039;type&#039;: &#039;radio&#039;, &#039;name&#039;: &#039;type&#039;, &#039;entries&#039;: [{&#039;value&#039;: &#039;random&#039;, &#039;title&#039;: &#039;Random&#039;}, {&#039;value&#039;: &#039;mutations&#039;, &#039;title&#039;: &#039;Mutations&#039;}]}, {&#039;required&#039;: False, &#039;type&#039;: &#039;email&#039;, &#039;name&#039;: &#039;email&#039;, &#039;description&#039;: &#039;Email address (optional, used for notification)&#039;}], &#039;version&#039;: 1.0, &#039;examples&#039;: [{&#039;title&#039;: &#039;PRC2 complex and Xist RNA&#039;, &#039;description&#039;: &#039;Interaction between the protein subunit EZH2 and the Repeat A region of the long noncoding RNA Xist [&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/18974356&quot; target=&quot;_blank&quot;&gt;Zhao et al., 2008&lt;/a&gt;]&#039;, &#039;reference_id&#039;: 4542}], &#039;type&#039;: &#039;algorithm&#039;, &#039;output&#039;: [None], &#039;nav_links&#039;: [{&#039;href&#039;: &#039;http://service.tartaglialab.com/page/catrapid_group   \n&#039;, &#039;title&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID home\n&#039;}, {&#039;href&#039;: &#039;http://service.tartaglialab.com/static_files/shared/documentation.html#5        \n&#039;, &#039;title&#039;: &#039;Documentation\n&#039;}, {&#039;href&#039;: &#039;http://service.tartaglialab.com/static_files/shared/tutorial.html        \n&#039;, &#039;title&#039;: &#039;Tutorial\n&#039;}, {&#039;href&#039;: &#039;http://service.tartaglialab.com/static_files/shared/faqs.html        \n&#039;, &#039;title&#039;: &#039;FAQs\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/licensing_notice.html  \n&#039;, &#039;title&#039;: &#039;Licensing Notice\n&#039;}, {&#039;href&#039;: &#039;http://pasteur.crg.es/portal/page/portal/827A462EAB6802B3E04012AC0E01291B\n&#039;, &#039;title&#039;: &#039;Group page @ CRG\n&#039;}], &#039;name&#039;: &#039;catrapid_strength&#039;} -->
+                    <dt>
+                        <a href="/new_submission/catrapid_strength">
+                            <i>cat</i>RAPID strength
+
+                        </a>
+                    </dt>
+                    <dd>
+                        Computes the strength of a protein-RNA pair with respect to a reference set
+
+                    </dd>
+                    <br />
+                <!-- {&#039;title_styled&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID omics\n&#039;, &#039;description&#039;: &quot;&lt;p&gt;&lt;i&gt;cat&lt;/i&gt;RAPID &#039;omics&#039; predicts protein-RNA interaction propensities in a number of model organisms. Two options are available: &lt;/p&gt; &lt;!--&lt;p&gt;&lt;strong&gt;Dear user, over the week-end we experienced unexpected technical problems with the &lt;i&gt;cat&lt;/i&gt;RAPID computation server. We apologize for the inconvenience. We are currently working for restoring the service.&lt;/strong&gt; (the catRAPID team)&lt;/p&gt;--&gt;\n&quot;, &#039;title&#039;: &#039;catRAPID omics&#039;, &#039;items&#039;: [{&#039;type&#039;: &#039;algorithm&#039;, &#039;name&#039;: &#039;catrapid_omics_protein&#039;}, {&#039;type&#039;: &#039;algorithm&#039;, &#039;name&#039;: &#039;catrapid_omics_transcript&#039;}], &#039;text_before&#039;: &#039;&lt;br style=&quot;clear:both;&quot;/&gt;\n\n &lt;div style=&quot;margin:auto;width:670px;&quot;&gt;\n     &lt;img style=&quot;width:600px;&quot; src=&quot;/static_files/pages/catrapid_omics_group/omics_scheme.png&quot;&gt;&lt;/img&gt;\n &lt;/div&gt;\n \n &lt;style type=&quot;text/css&quot;&gt;\n     #right_column {\n         position:relative;\n         top: -2em;\n     }\n &lt;/style&gt;\n\n &lt;br style=&quot;clear:both;&quot;/&gt;\n\n &lt;br /&gt;&lt;br /&gt;\n&#039;, &#039;description_short&#039;: &#039;Computes the interaction between a molecule (protein/transcript) and the reference set (transcriptome/nucleotide-binding proteome) of a model organism.\n&#039;, &#039;type&#039;: &#039;page&#039;, &#039;text_after&#039;: &#039;\n&lt;p&gt; Please, have a look at the &lt;a href=&quot;http://service.tartaglialab.com/static_files/shared/documentation.html&quot;&gt;documentation&lt;/a&gt;, at the &lt;a href=&quot;http://service.tartaglialab.com/static_files/shared/tutorial.html&quot;&gt;tutorial&lt;/a&gt; and at the &lt;a href=&quot;http://service.tartaglialab.com/static_files/shared/faqs.html&quot;&gt;FAQs&lt;/a&gt; before starting using &lt;i&gt;cat&lt;/i&gt;RAPID \&#039;omics\&#039;. &lt;br&gt; &lt;br&gt; &lt;h2&gt;&lt;b&gt;To run the software locally, you should agree to the terms of the Academic License Agreement, which can be found &lt;a href=&quot;http://service.tartaglialab.com/static_files/shared/catRAPID - Academic License Agreement (2016).pdf&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;\n&#039;, &#039;nav_links&#039;: [{&#039;href&#039;: &#039;http://service.tartaglialab.com/page/catrapid_group\n&#039;, &#039;title&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID home\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/documentation.html        \n&#039;, &#039;title&#039;: &#039;Documentation\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/tutorial.html\n&#039;, &#039;title&#039;: &#039;Tutorial\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/faqs.html        \n&#039;, &#039;title&#039;: &#039;FAQs\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/catrapid_publications.html            \n&#039;, &#039;title&#039;: &#039;Relevant publications\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/licensing_notice.html                               \n&#039;, &#039;title&#039;: &#039;Licensing Notice\n&#039;}, {&#039;href&#039;: &#039;http://pasteur.crg.es/portal/page/portal/827A462EAB6802B3E04012AC0E01291B\n&#039;, &#039;title&#039;: &#039;Group page @ CRG\n&#039;}], &#039;name&#039;: &#039;catrapid_omics_group&#039;} -->
+                    <a href="/page/catrapid_omics_group">
+                        <i>cat</i>RAPID omics
+
+                    </a>
+                    </dt>
+                    <dd>
+                        Computes the interaction between a molecule (protein/transcript) and the reference set (transcriptome/nucleotide-binding proteome) of a model organism.
+
+                    </dd>
+                    <br />
+                <!-- {&#039;title_styled&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID express\n&#039;, &#039;description&#039;: &quot;&lt;p&gt;&lt;i&gt;cat&lt;/i&gt;RAPID &#039;express&#039; and &lt;i&gt;cat&lt;/i&gt;RAPID &#039;express&#039; omics allow the identification of co-expressed protein and RNA pairs in human tissues.&lt;br&gt; Expression data were derived from the integration of the Human Protein Atlas (Version 11.0) and Human BodyMap (HBM) 2.0 Project.&lt;/p&gt;\n&quot;, &#039;title&#039;: &#039;catRAPID express&#039;, &#039;items&#039;: [{&#039;type&#039;: &#039;algorithm&#039;, &#039;name&#039;: &#039;catrapid_express&#039;}, {&#039;type&#039;: &#039;algorithm&#039;, &#039;name&#039;: &#039;catrapid_express_protein&#039;}, {&#039;type&#039;: &#039;algorithm&#039;, &#039;name&#039;: &#039;catrapid_express_transcript&#039;}], &#039;description_short&#039;: &quot;&lt;i&gt;cat&lt;/i&gt;RAPID &#039;express&#039; and &lt;i&gt;cat&lt;/i&gt;RAPID &#039;express&#039; omics allow the identification of co-expressed protein and RNA pairs in human tissues.\n&quot;, &#039;type&#039;: &#039;page&#039;, &#039;text_after&#039;: &#039;&lt;h2&gt;RBP-mRNA reference associations&lt;/h2&gt; &lt;p&gt; &lt;a href=&quot;http://service.tartaglialab.com/static_files/pages/catrapid_express_group/top.0.95.cor.txt&quot;&gt;Interacting and Correlating (IC) subset&lt;/a&gt;&lt;br&gt; &lt;a href=&quot;http://service.tartaglialab.com/static_files/pages/catrapid_express_group/top.0.95.acor.txt&quot;&gt;Interacting and Anti-Correlating (IA) subset&lt;/a&gt;&lt;br&gt; &lt;/p&gt;\n&#039;, &#039;nav_links&#039;: [{&#039;href&#039;: &#039;http://service.tartaglialab.com/page/catrapid_express_group\n&#039;, &#039;title&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID express home\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/documentation.html        \n&#039;, &#039;title&#039;: &#039;Documentation\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/tutorial.html\n&#039;, &#039;title&#039;: &#039;Tutorial\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/faqs.html        \n&#039;, &#039;title&#039;: &#039;FAQs\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/catrapid_publications.html                        \n&#039;, &#039;title&#039;: &#039;Relevant publications\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/licensing_notice.html                   \n&#039;, &#039;title&#039;: &#039;Licensing Notice\n&#039;}, {&#039;href&#039;: &#039;http://pasteur.crg.es/portal/page/portal/827A462EAB6802B3E04012AC0E01291B\n&#039;, &#039;title&#039;: &#039;Group page @ CRG\n&#039;}], &#039;name&#039;: &#039;catrapid_express_group&#039;} -->
+                    <a href="/page/catrapid_express_group">
+                        <i>cat</i>RAPID express
+
+                    </a>
+                    </dt>
+                    <dd>
+                        <i>cat</i>RAPID 'express' and <i>cat</i>RAPID 'express' omics allow the identification of co-expressed protein and RNA pairs in human tissues.
+
+                    </dd>
+                    <br />
+                <!-- {&#039;title_styled&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID signature\n&#039;, &#039;description&#039;: &#039;&lt;p&gt;The algorithm calculates the overall RNA-binding propensity followed by the prediction of RNA-binding regions&lt;/p&gt;\n&#039;, &#039;algorithm&#039;: {&#039;command&#039;: &#039;signature.py -text=Yes -output_dir=&lt;output_dir&gt;&#039;, &#039;processing_timeout&#039;: 7200}, &#039;title&#039;: &#039;catRAPID signature&#039;, &#039;description_short&#039;: &#039;Searches for RNA-binding regions\n&#039;, &#039;form_fields&#039;: [{&#039;required&#039;: False, &#039;type&#039;: &#039;text&#039;, &#039;name&#039;: &#039;title&#039;, &#039;description&#039;: &#039;Submission label (optional)&#039;}, {&#039;min_length&#039;: 60, &#039;max_length&#039;: 100000, &#039;name&#039;: &#039;protein_seq&#039;, &#039;required&#039;: True, &#039;type&#039;: &#039;textarea&#039;, &#039;description&#039;: &#039;Protein sequence (FASTA format)&#039;}, {&#039;required&#039;: False, &#039;type&#039;: &#039;freetext&#039;, &#039;name&#039;: &#039;freetext_desc&#039;, &#039;description&#039;: &#039;This module accepts text in fasta format. There is &lt;a href=&quot;/new_submission/signature_file&quot;&gt;another version&lt;/a&gt; available that allows submission via file upload.&lt;/a&gt;\n&#039;}, {&#039;required&#039;: False, &#039;type&#039;: &#039;email&#039;, &#039;name&#039;: &#039;email&#039;, &#039;description&#039;: &#039;Email address (optional). Please note: the email address is required for submissions with MORE than one protein!\n&#039;}], &#039;version&#039;: 1.0, &#039;examples&#039;: [{&#039;title&#039;: &#039;FMRP&#039;, &#039;description&#039;: &#039;an RNA-binding protein (&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/25416280&quot; target=&quot;_blank&quot;&gt;Myrick et al. Hum Mol Genet. 2015&lt;/a&gt;)&#039;, &#039;reference_id&#039;: 58967}, {&#039;title&#039;: &#039;TMM70&#039;, &#039;description&#039;: &#039;a non RNA-binding protein (&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/22658674&quot; target=&quot;_blank&quot;&gt;Castello et al. Cell 2012&lt;/a&gt;)&#039;, &#039;reference_id&#039;: 58968}], &#039;type&#039;: &#039;algorithm&#039;, &#039;output&#039;: [None], &#039;nav_links&#039;: [{&#039;href&#039;: &#039;http://service.tartaglialab.com/new_submission/signature\n&#039;, &#039;title&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID signature home\n&#039;}, {&#039;href&#039;: &#039;http://service.tartaglialab.com/static_files/shared/tutorial_signature.html\n&#039;, &#039;title&#039;: &#039;Tutorial\n&#039;}, {&#039;href&#039;: &#039;http://service.tartaglialab.com/static_files/shared/documentation_signature.html\n&#039;, &#039;title&#039;: &#039;Documentation\n&#039;}, {&#039;href&#039;: &#039;http://pasteur.crg.es/portal/page/portal/827A462EAB6802B3E04012AC0E01291B\n&#039;, &#039;title&#039;: &#039;Group page @ CRG\n&#039;}], &#039;name&#039;: &#039;signature&#039;} -->
+                    <dt>
+                        <a href="/new_submission/signature">
+                            <i>cat</i>RAPID signature
+
+                        </a>
+                    </dt>
+                    <dd>
+                        Searches for RNA-binding regions
+
+                    </dd>
+                    <br />
+                <!-- {&#039;type&#039;: &#039;page&#039;, &#039;title_styled&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID interactions with large RNAs\n&#039;, &#039;description&#039;: &#039;&lt;p&gt;We developed two methods that allow fast and quantitative predictions of protein interactions with large RNAs&lt;/p&gt;\n&#039;, &#039;title&#039;: &#039;catRAPID interactions with large RNAs&#039;, &#039;items&#039;: [{&#039;type&#039;: &#039;algorithm&#039;, &#039;name&#039;: &#039;catrapid_fragments_ultra_fast&#039;}, {&#039;type&#039;: &#039;algorithm&#039;, &#039;name&#039;: &#039;omixcore&#039;}], &#039;description_short&#039;: &#039;Division of polypeptide and nucleotide sequences into fragments followed by prediction of the overall interaction propensity.\n&#039;, &#039;nav_links&#039;: [{&#039;href&#039;: &#039;http://service.tartaglialab.com/page/ccsol_group\n&#039;, &#039;title&#039;: &#039;&lt;i&gt;cat&lt;/i&gt;RAPID home\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/documentation_omixcore.html#7\n&#039;, &#039;title&#039;: &#039;Documentation\n&#039;}, {&#039;href&#039;: &#039;http://service.tartaglialab.com/page/contact\n&#039;, &#039;title&#039;: &#039;Relevant publications\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/licensing_notice.html\n&#039;, &#039;title&#039;: &#039;Licensing Notice\n&#039;}, {&#039;href&#039;: &#039;http://pasteur.crg.es/portal/page/portal/827A462EAB6802B3E04012AC0E01291B\n&#039;, &#039;title&#039;: &#039;Group page @ CRG\n&#039;}], &#039;name&#039;: &#039;largeRNAs_group&#039;} -->
+                    <a href="/page/largeRNAs_group">
+                        <i>cat</i>RAPID interactions with large RNAs
+
+                    </a>
+                    </dt>
+                    <dd>
+                        Division of polypeptide and nucleotide sequences into fragments followed by prediction of the overall interaction propensity.
+
+                    </dd>
+                    <br />
+                </dl>
+
+                    <p id="after_text">
+                        <p> Please, have a look at the <a href="http://service.tartaglialab.com/static_files/shared/documentation.html">documentation</a>, at the <a href="http://service.tartaglialab.com/static_files/shared/tutorial.html">tutorial</a> and at the <a href="http://service.tartaglialab.com/static_files/shared/faqs.html">FAQs</a> before starting using <i>cat</i>RAPID. </p> <p> FOR MULTIPLE SUBMISSIONS PLEASE CONTACT <script type="text/javascript" src="/static_files/js/email_one.js"></script>. We will try to help you out! </p> <!--<p> Previous version of the <i>cat</i>RAPID algorithms can be found <a href="http://tartaglialab.crg.es/index-old.php" target="_blank">here</a><img src="/static_files/shared/images/external_link.png" alt="link" class="link">. </p>-->
+
+                    </p>
+			</div>
+			<br>
+
+			<div id="footer_main">
+				<hr>
+				<p>&copy; 2012 - <a href="http://big.crg.cat/gene_function_and_evolution" target="_blank">Gene Function and Evolution</a> - <a href="http://www.crg.eu" target="_blank">Center for Genomic Regulation (CRG)</a></p>
+			</div>
+		</div>
+	</body>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38065167-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</html>

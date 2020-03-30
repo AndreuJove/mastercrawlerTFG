@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <link href="css/style.css" rel="stylesheet" type="text/css" /><head id="j_idt2"><link type="text/css" rel="stylesheet" href="/faces/javax.faces.resource/theme.css?ln=primefaces-aristo" /><link type="text/css" rel="stylesheet" href="/faces/javax.faces.resource/components.css;jsessionid=cc7241f2d6384fa69d4e7241b120?ln=primefaces&amp;v=6.0" /><script type="text/javascript" src="/faces/javax.faces.resource/jquery/jquery.js;jsessionid=cc7241f2d6384fa69d4e7241b120?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/faces/javax.faces.resource/jquery/jquery-plugins.js;jsessionid=cc7241f2d6384fa69d4e7241b120?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/faces/javax.faces.resource/core.js;jsessionid=cc7241f2d6384fa69d4e7241b120?ln=primefaces&amp;v=6.0"></script><script type="text/javascript" src="/faces/javax.faces.resource/components.js;jsessionid=cc7241f2d6384fa69d4e7241b120?ln=primefaces&amp;v=6.0"></script><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
+        <title>Histone Base Page</title>
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-54594747-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+          <link rel="shortcut icon" href="" />
+          <link rel="stylesheet" type="text/css" href="d3.slider.css" /></head><body>
+<form id="tform" name="tform" method="post" action="/faces/welcome.xhtml;jsessionid=cc7241f2d6384fa69d4e7241b120" enctype="multipart/form-data">
+<input type="hidden" name="tform" value="tform" />
+
+                <!-- NAVIGATION --><table id="j_idt7" class="ui-panelgrid ui-widget noBorders" style="width:100%" role="grid"><tbody><tr class="ui-widget-content ui-panelgrid-even" role="row"><td role="gridcell" class="ui-panelgrid-cell"><div id="j_idt10" class="ui-menu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" role="menu"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.addSubmitParam('tform',{'j_idt11':'j_idt11'}).submit('tform');return false;"><span class="ui-menuitem-text">Home</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.addSubmitParam('tform',{'j_idt12':'j_idt12'}).submit('tform');return false;"><span class="ui-menuitem-text">Available data sets</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.addSubmitParam('tform',{'j_idt13':'j_idt13'}).submit('tform');return false;"><span class="ui-menuitem-text">Show all entries</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.addSubmitParam('tform',{'j_idt14':'j_idt14'}).submit('tform');return false;"><span class="ui-menuitem-text">Search</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.addSubmitParam('tform',{'j_idt17':'j_idt17'}).submit('tform');return false;"><span class="ui-menuitem-text">Table of modifications</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.addSubmitParam('tform',{'j_idt18':'j_idt18'}).submit('tform');return false;"><span class="ui-menuitem-text">Users / Register</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#" onclick="PrimeFaces.addSubmitParam('tform',{'j_idt19':'j_idt19'}).submit('tform');return false;"><span class="ui-menuitem-text">About us / Feedback</span></a></li></ul></div><script id="j_idt10_s" type="text/javascript">$(function(){PrimeFaces.cw("PlainMenu","widget_j_idt10",{id:"j_idt10"});});</script>
+                                                <br /></td><td role="gridcell" class="ui-panelgrid-cell" colspan="2"><div id="j_idt22" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt22"><div id="j_idt22_content" class="ui-panel-content ui-widget-content">
+                        <img src="css/LOGO.svg" /></div></div><script id="j_idt22_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt22",{id:"j_idt22"});</script></td><td role="gridcell" class="ui-panelgrid-cell"><div id="j_idt25" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt25"><div id="j_idt25_content" class="ui-panel-content ui-widget-content"><html xmlns="http://www.w3.org/1999/xhtml">
+    <link href="css/style.css" rel="stylesheet" type="text/css" /><head id="j_idt27"><link type="text/css" rel="stylesheet" href="/faces/javax.faces.resource/theme.css?ln=primefaces-aristo" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
+        <title>Login</title></head><body><table id="login" class="ui-panelgrid ui-widget" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"><label class="small">User: </label></td><td role="gridcell" class="ui-panelgrid-cell"><input id="name" name="name" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all small" /><script id="name_s" type="text/javascript">PrimeFaces.cw("InputText","widget_name",{id:"name"});</script></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"><label class="small">Password: </label></td><td role="gridcell" class="ui-panelgrid-cell"><input id="password" name="password" type="password" class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all small" /><script id="password_s" type="text/javascript">$(function(){PrimeFaces.cw("Password","widget_password",{id:"password"});});</script></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"><label class="small"> </label></td><td role="gridcell" class="ui-panelgrid-cell"><button id="j_idt33" name="j_idt33" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only small" onclick="" type="submit"><span class="ui-button-text ui-c">Login</span></button><script id="j_idt33_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt33",{id:"j_idt33"});</script></td></tr></tbody></table><div id="j_idt38" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt38_title" class="ui-dialog-title">Passwords</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content"><table cellpadding="3">
+<tbody>
+<tr>
+<td><label>old password*: </label></td>
+<td><input id="old" name="old" type="password" class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all" /><script id="old_s" type="text/javascript">$(function(){PrimeFaces.cw("Password","widget_old",{id:"old"});});</script></td>
+</tr>
+<tr>
+<td><label>new password*: </label></td>
+<td><input id="new1" name="new1" type="password" class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all" /><script id="new1_s" type="text/javascript">$(function(){PrimeFaces.cw("Password","widget_new1",{id:"new1"});});</script></td>
+</tr>
+<tr>
+<td><label>new password again: </label></td>
+<td><input id="new2" name="new2" type="password" class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all" /><script id="new2_s" type="text/javascript">$(function(){PrimeFaces.cw("Password","widget_new2",{id:"new2"});});</script></td>
+</tr>
+</tbody>
+</table>
+<button id="j_idt43" name="j_idt43" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="" type="submit"><span class="ui-button-text ui-c">change password</span></button><script id="j_idt43_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt43",{id:"j_idt43"});</script></div></div><script id="j_idt38_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","updatePass",{id:"j_idt38"});});</script></body>
+</html></div></div><script id="j_idt25_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt25",{id:"j_idt25"});</script></td></tr></tbody></table>
+<form id="j_idt45" name="j_idt45" method="post" action="/faces/welcome.xhtml;jsessionid=cc7241f2d6384fa69d4e7241b120" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt45" value="j_idt45" />
+<table style="margin-left:0%;margin-right:0%">
+<tbody>
+<tr>
+<td>                    <br /></td>
+</tr>
+<tr>
+<td><div id="j_idt45:j_idt48" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt45_j_idt48"><div id="j_idt45:j_idt48_content" class="ui-panel-content ui-widget-content">
+                                <h2>Welcome to CrosstalkDB!</h2><br /><br />
+ This database aims to collect mass spectrometry 
+data of multiply modified proteins or long peptide sequences.
+                                You can search, analyze and download data from this database without having to log in.
+				<br /><br />
+				Peptide quantification can be based on either spectral counting or peak intensities.
+<br />
+				We recommend <a href="http://github.com/middle-down/Software">isoScale</a> and
+				<a href="http://github.com/middle-down/Software">Histone Coder</a> for spectra validation and quantification.
+                                <br />
+                                <br />
+                                For details of the database, see our two publications<br />
+                                <a href="http://www.ncbi.nlm.nih.gov/pubmed/27302890"> Schwämmle, V.; Sidoli, S., Ruminowicz C., Wu X., Lee C. F., Helin K.,and 
+Jensen, O. N. <i>Systems Level Analysis of Histone H3 Post-translational 
+                                        Modifications (PTMs) Reveals Features of
+ PTM Crosstalk in Chromatin Regulation.</i> Mol Cell Proteomics, 2016, <b>15</b>
+, 2715-2729</a>                                
+                                <br />and 
+                                   <br /><a href="http://www.ncbi.nlm.nih.gov/pubmed /24741113"> Schwämmle, V.; Aspalter, C.-M.; Sidoli, S. and Jensen, O. N. <i>Large-scale analysis of co-existing 
+                                        post-translational modifications on histone tails reveals global fine-structure of crosstalk</i> Mol Cell Proteomics, 20
+14, <b>13</b>, 1855-1865</a>
+
+                                <br />
+                                <br />
+                                We encourage users to register and upload their 
+data from mass spectrometry experiments.
+                                Registration is only formal and no private data 
+(not even your email) will be required. After uploading your
+                                data, you will still be able to correct errors or delete selected entries.
+                                <br />
+                                <br />
+                                The statistics page offers calculation of interaction (crosstalk) patterns between different protein 
+                                modifications amongst many other exciting visualizations. 
+                                <br />
+                         <br />
+                                We are sure that this software is not exempt from bugs. Please send us a message 
+                                (at the <a id="j_idt45:j_idt50" href="#" class="ui-commandlink ui-widget" onclick="PrimeFaces.ab({s:&quot;j_idt45:j_idt50&quot;});return false;">Feedback page</a>) describing your problem(s).                       
+                            </div></div><script id="j_idt45:j_idt48_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt45_j_idt48",{id:"j_idt45:j_idt48"});</script></td>
+</tr>
+<tr>
+<td><br /></td>
+</tr>
+<tr>
+<td><div id="j_idt45:j_idt53" class="ui-panel ui-widget ui-widget-content ui-corner-all" data-widget="widget_j_idt45_j_idt53"><div id="j_idt45:j_idt53_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">News and Changes</span></div><div id="j_idt45:j_idt53_content" class="ui-panel-content ui-widget-content"><div id="j_idt45:j_idt54" class="ui-outputpanel ui-widget"><div class="ui-outputpanel-loading ui-widget"></div></div><script id="j_idt45:j_idt54_s" type="text/javascript">$(function(){PrimeFaces.cw("OutputPanel","widget_j_idt45_j_idt54",{id:"j_idt45:j_idt54",deferred:true,deferredMode:"load"});});</script></div></div><script id="j_idt45:j_idt53_s" type="text/javascript">PrimeFaces.cw("Panel","widget_j_idt45_j_idt53",{id:"j_idt45:j_idt53"});</script></td>
+</tr>
+</tbody>
+</table>
+<input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-7041216700004593769:-8055023616458139643" autocomplete="off" />
+</form><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-7041216700004593769:-8055023616458139643" autocomplete="off" />
+</form></body>
+
+</html>

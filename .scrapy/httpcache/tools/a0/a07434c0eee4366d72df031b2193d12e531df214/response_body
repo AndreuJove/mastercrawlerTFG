@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+ <style>
+  h1 {color: #46709D;}
+  header {padding: 10Px;
+    text-indent: 40px;
+    max-width: 700px;
+    font-family: "Lucida sans";}
+  p {
+    font-family: "Lucida sans";
+    font-size: 10pt;
+    max-width: 700px;
+    }
+  ul {font-family: "Lucida sans";
+  font-size: 10pt;
+    max-width: 750px;}
+  table {font-family: "Lucida sans";}
+    footer {color: gray;
+    font: 10pt "Times New Roman", Times, serif;
+    padding:20px;
+    text-align:center;}
+  font-size: 10pt;}
+  footer {color: gray;
+    font: 10pt "Times New Roman", Times, serif;
+    padding:20px;
+    text-align:center;}
+  small { font: 8pt}
+  </style>
+  <style type="text/css">
+ .row { vertical-align: top; height:auto !important; }
+ .table {display:none; }
+ .show {display: none; }
+ .hide:target + .show {display: inline; }
+ .hide:target {display: none; }
+ .hide:target ~ .table {display:inline; }
+ @media print { .hide, .show { display: none; } }
+ </style>
+ </head>
+ <header>
+  <h1><a href="index.html"><img src="logo.png" style="width:200px;height:128px;"></a>Anglerfish</h1>
+   <p><center><a href="help.html">Help</a> / <a href="index.html">Main</a></center></p>
+ </header>
+  <title>Anglerfish main page</title>
+  <link rel="import" href="/header.html">
+ <body>  
+  <p>Anglerfish is a method of determining the orientation of an &alpha;-helix relative to a defined axis in a rotationally symmetric protein structure such as a membrane protein channel. This axis (Axis in the figure) is the axis of rotational symmetry within the structure, which is defined as the normal to a plane containing the C atoms of a given residue from each monomer (A). For example, given a channel this will be the pore axis. The helix is defined between a start residue (N) and end residue (C). The orientation is split into 2 components:<br>The tilt (&theta;t): the angle between the helix and a parallel to the axis at N.<br>The swing (&theta;s): the angle between the axis and C at N in the plane perpendicular to the axis.</p>
+<p>For more information on running anglerfish see the<a href="help.html"> help</a> page or the <a href="https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwjRrJCRqIPUAhWhC8AKHRX5DQUQFggsMAE&url=https%3A%2F%2Fbioinformatics.oxfordjournals.org%2Fcontent%2Fearly%2F2016%2F12%2F29%2Fbioinformatics.btw781.full.pdf%2Bhtml&usg=AFQjCNGcXv-mpSklYnE0vZuLHPB9UAg7YA&sig2=2chrNPTqBJ4dI_pm23TMQw"> paper: </a> Colledge and Wallace (2016) Bioinformatics 33(8), 1233-1234 </p>
+  <img src="axisdefinition.png" alt="axis_definition" style="width:191px;height:284px;padding:20px;align:center;">
+  <img src="angledefinition.png" alt="angle_definition" style="width:186px;height:274px;padding:20px;align:center;">
+  <p>To run Anglerfish you will need:
+  <ul>
+   <li>A PDB file containing a symmetric homomer with at least 3 chains</li>
+   <li>The number of start and end residues of the helix in question in the PDB file</li>
+   <li>The number of any residue that is symmetric in all chains to define the axis</li>
+  </ul>
+  </p>
+  <form action="../cgi-bin/anglerfish.pl" name="input" method="post" ENCTYPE = "multipart/form-data">
+  <table>
+   <tr>
+    <td>Choose PDB File:</td>
+    <td><input type="file" name="PDBfile" required></td>
+   </tr>
+   <tr>
+    <td>Number of first residue in helix (N):</td>
+    <td><input type ="number" name="Ni" required></td>
+   </tr>
+   <tr>
+    <td>Number of last residue in helix (C):</td>
+    <td><input type ="number" name="Ci" required></td>
+   </tr>
+   </table>
+<div class="row">
+<a href="#hide1" class="hide" id="hide1">Advanced Options:</a>
+<a href="#show1" class="show" id="show1">Collapse</a>
+<div class="table">
+	<table>
+	<tr>
+    <td>Number of residue to define axis (A):</td>
+    <td><input type="number" name="Axi"></td>
+   </tr>
+   <tr>
+    <td>Model number to use:</td>
+    <td><input type="number" name="Modelno"> <small>Default: best</small></td>
+   </tr>
+   <tr>
+    <td>Chains to use:</td>
+    <td><input type="text" name="Chains"> <small>Enter in capitals separated by commas</small></td>
+   </tr>
+   <tr>
+    <td>Chains to define axis:</td>
+    <td><input type="text" name="Axchains"> <small>Enter in capitals separated by commas</small></td>
+   </tr>
+	</table>
+</div>
+</div> 
+  <input type="submit"><br>
+  </form>
+  </body>
+  <footer> 
+    Anglerfish is designed by Matthew Colledge of the Wallace group<br>Institute of Structural and Molecular Biology, Birkbeck College, University of london <br> please cite:Colledge and Wallace (2016)  AnglerFish: a webserver for defining the geometry of &#945-helices in membrane proteins, Bioinformatics 33(8), 1233-1234
+  </footer>
+
+
+</html>

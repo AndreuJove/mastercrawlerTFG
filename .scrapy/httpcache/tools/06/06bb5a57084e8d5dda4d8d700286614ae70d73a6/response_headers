@@ -1,0 +1,12 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:48:21 GMT
+Content-Type: text/html; charset=UTF-8
+Strict-Transport-Security: max-age=86400
+Vary: Accept-Encoding
+Vary: Cookie
+Host-Header: WordPress.com
+Set-Cookie: wpNgConfig=%7B%22modules%22%3A%7B%22wpNgRest%22%3A%7B%22restNonceVal%22%3A%2212e0bcbfc2%22%7D%7D%7D; expires=Tue, 30-Mar-2021 18:48:21 GMT; Max-Age=31536000; path=/
+Link: <https://cfirguide.org/wp-json/>; rel="https://api.w.org/"
+Link: <https://wp.me/P82ITF-E>; rel=shortlink
+Content-Encoding: gzip
+X-Ac: 3.mad _atomic_dca

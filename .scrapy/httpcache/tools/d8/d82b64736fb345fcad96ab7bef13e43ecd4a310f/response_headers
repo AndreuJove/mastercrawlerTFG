@@ -1,0 +1,7 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:49:17 GMT
+Content-Type: text/html; charset=UTF-8
+Expires: Wed, 11 Jan 1984 05:00:00 GMT
+Cache-Control: no-cache, must-revalidate, max-age=0
+X-Redirect-By: WordPress
+Location: http://gwyndafevans.co.uk/chooch.html

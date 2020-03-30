@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script type="application/shiny-singletons">d8c60db150872d11698b006209126d68eff7bfb1,b5e7e2f049fd623874c58cb94aa8ed2b58662eb2,af57e3e7fa608a0e37c907491a2b9db8d1858b5c,e4a5b2110e0924735265302829a2f00348a7b6aa</script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.11.1];shiny[0.12.2];font-awesome[4.2.0];selectize[0.11.2];htmlwidgets[0.5];datatables-binding[0.1];ionrangeslider[2.0.12];strftime[0.9.2];bootstrap[3.3.1];AdminLTE[2.0.6];shinydashboard[0.5.1]</script>
+<script src="shared/json2-min.js"></script>
+<script src="jquery-1.11.1/jquery.min.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.min.js"></script>
+<link href="shared/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<link href="shared/selectize/css/selectize.bootstrap3.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+<script src="shared/selectize/js/es5-shim.min.js"></script>
+<![endif]-->
+<script src="shared/selectize/js/selectize.min.js"></script>
+<script src="htmlwidgets-0.5/htmlwidgets.js"></script>
+<script src="datatables-binding-0.1/datatables.js"></script>
+<link href="shared/ionrangeslider/css/ion.rangeSlider.css" rel="stylesheet" />
+<link href="shared/ionrangeslider/css/ion.rangeSlider.skinShiny.css" rel="stylesheet" />
+<script src="shared/ionrangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="shared/strftime/strftime-min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="shared/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="shared/bootstrap/js/bootstrap.min.js"></script>
+<script src="shared/bootstrap/shim/html5shiv.min.js"></script>
+<script src="shared/bootstrap/shim/respond.min.js"></script>
+<link href="AdminLTE-2.0.6/AdminLTE.min.css" rel="stylesheet" />
+<link href="AdminLTE-2.0.6/_all-skins.min.css" rel="stylesheet" />
+<script src="AdminLTE-2.0.6/app.min.js"></script>
+<link href="shinydashboard-0.5.1/shinydashboard.css" rel="stylesheet" />
+<script src="shinydashboard-0.5.1/shinydashboard.js"></script>
+  <title></title>
+  <script src="custom.js"></script>
+  <script src="custom2.js"></script>
+  <script src="custom3.js"></script>
+  <script src="custom4.js"></script>
+  <script src="customprova.js"></script>
+  <style type="text/css">.my-item{color:black;background-color:ghostwhite;font-style:italic;font-weight:bold;} .skin-black</style>
+  <style type="text/css">h1,h2,h3,h4,h5{font-weight:bold;padding: 25px 25px;}</style>
+  <style>.shiny-output-error-validation {color: mediumvioletred;font-style:italic;font-weight:bold;font-size:15px}</style>
+  <script src="highcharts/js/highcharts.js" type="text/javascript"></script>
+  <script src="highcharts/js/highcharts-more.js" type="text/javascript"></script>
+  <script src="highcharts/js/exporting.js" type="text/javascript"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <title>Istituto Nazionale</title>
+<script src="__assets__/sockjs-0.3.min.js"></script>
+<script src="__assets__/shiny-server.js"></script>
+
+</head>
+<body class="skin-black" style="min-height: 611px;">
+  <div class="wrapper">
+    <header class="main-header">
+      <span class="logo">CombiROC</span>
+      <nav class="navbar navbar-static-top" role="navigation">
+        <span style="display:none;">
+          <i class="fa fa-bars"></i>
+        </span>
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav"></ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <hr/>
+        <ul id="tabs" class="sidebar-menu">
+          <li>
+            <a href="#shiny-tab-main" data-toggle="tab" data-value="main">
+              <i class="fa fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="treeview">
+            <a href="#shiny-tab-data">
+              <i class="fa fa-gear"></i>
+              <span>Data</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="#shiny-tab-upload" data-toggle="tab" data-value="upload">
+                  <i class="fa fa-angle-double-right"></i>
+                  Upload
+                </a>
+              </li>
+              <li>
+                <a href="#shiny-tab-plots" data-toggle="tab" data-value="plots">
+                  <i class="fa fa-angle-double-right"></i>
+                  Plots
+                </a>
+              </li>
+              <li>
+                <a href="#shiny-tab-preprocessing" data-toggle="tab" data-value="preprocessing">
+                  <i class="fa fa-angle-double-right"></i>
+                  Pre-processing (optional)
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#shiny-tab-analysis">
+              <i class="fa fa-spinner"></i>
+              <span>Analysis</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="#shiny-tab-combi" data-toggle="tab" data-value="combi">
+                  <i class="fa fa-angle-double-right"></i>
+                  Combinatorial analysis
+                </a>
+              </li>
+              <li>
+                <a href="#shiny-tab-gold" data-toggle="tab" data-value="gold">
+                  <i class="fa fa-angle-double-right"></i>
+                  Gold combinations
+                </a>
+              </li>
+              <li>
+                <a href="#shiny-tab-roc" data-toggle="tab" data-value="roc">
+                  <i class="fa fa-angle-double-right"></i>
+                  ROC analysis
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#shiny-tab-download" data-toggle="tab" data-value="download">
+              <i class="fa fa-download"></i>
+              <span>Download</span>
+            </a>
+          </li>
+          <li class="treeview">
+            <a href="#shiny-tab-accessories">
+              <i class="fa fa-paperclip"></i>
+              <span>Accessories</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="#shiny-tab-tutorial" data-toggle="tab" data-value="tutorial">
+                  <i class="fa fa-angle-double-right"></i>
+                  Tutorial
+                </a>
+              </li>
+              <li>
+                <a href="#shiny-tab-history" data-toggle="tab" data-value="history">
+                  <i class="fa fa-angle-double-right"></i>
+                  Logs
+                </a>
+              </li>
+              <li>
+                <a href="#shiny-tab-contact" data-toggle="tab" data-value="contact">
+                  <i class="fa fa-angle-double-right"></i>
+                  Contacts
+                </a>
+              </li>
+              <li>
+                <a href="#shiny-tab-FAQ" data-toggle="tab" data-value="FAQ">
+                  <i class="fa fa-angle-double-right"></i>
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr/>
+        <div data-display-if="input.tabs==&#39;plots&#39; ">
+          <ul class="sidebar-menu">
+            <div class="my-item">
+              <li class="treeview">
+                <a href="#shiny-tab-display">
+                  <i class="fa fa-chevron-circle-right"></i>
+                  <span>Display</span>
+                  <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                      <div id="display" class="form-group shiny-input-radiogroup shiny-input-container">
+                        <label class="control-label" for="display"></label>
+                        <div class="shiny-options-group">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="display" value="1" checked="checked"/>
+                              <span>Box plot</span>
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="display" value="3"/>
+                              <span>Marker plot</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+            </div>
+            <br/>
+            <div class="my-item">
+              <li class="treeview">
+                <a href="#shiny-tab-options">
+                  <i class="fa fa-chevron-circle-right"></i>
+                  <span>Options</span>
+                  <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                      <div id="data_option" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                        <div class="shiny-options-group">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" name="data_option" value="TRUE"/>
+                              <span>change data options</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                      <div id="display_option" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                        <div class="shiny-options-group">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" name="display_option" value="TRUE"/>
+                              <span>change display option</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                      <div id="plot_option" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                        <div class="shiny-options-group">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" name="plot_option" value="TRUE"/>
+                              <span>change plot labels</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div data-display-if="input.tabs==&#39;tutorial&#39; ">
+          <ul class="sidebar-menu">
+            <div class="my-item">
+              <li class="treeview">
+                <a href="#shiny-tab-help">
+                  <i class="fa fa-chevron-circle-right"></i>
+                  <span>Tutorial</span>
+                  <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                      <a href="#general">OVERVIEW</a>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                      <a href="#data">DATA</a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <a href="#dataupload">Upload</a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <a href="#dataplots">Plots</a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <a href="#datapreprocessing">Pre-processing (optional)</a>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                      <a href="#analysis">ANALYSIS</a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <a href="#analysiscombinatorial">Combinatorial Analysis</a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <a href="#analysisgold">Gold combinations</a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <a href="#analysisroc">ROC analysis</a>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                      <a href="#download">DOWNLOAD</a>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                      <a href="#accessories">ACCESSORIES</a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <a href="#tutorial">Tutorial</a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <a href="#logs">Logs</a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <a href="#contacts">Contacts</a>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <a href="#faq">Faq</a>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </section>
+    </aside>
+    <div class="content-wrapper">
+      <section class="content">
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-main">
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="box box-solid box-primary">
+                  <div class="box-header">
+                    <h3 class="box-title">CombiROC</h3>
+                  </div>
+                  <div class="box-body">
+                    <br/>
+                    <br/>
+                    <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.img {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+    border: 6px double #ccc;
+
+    width: auto;
+    height: 400px;
+}	
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 80%;
+    height: 250px;
+}
+
+div.desc {
+    font-size: 250%;
+    padding: 25px;
+    text-align: center;
+    color: #0085ca
+    
+}
+</style>
+</head>
+<body>
+
+<div class="img">
+ 
+    <img src="homepage.png" alt="panel" width="400" height="1000">
+ 
+  <div class="desc"><b>Welcome to CombiROC!</b></div>
+</div>
+
+
+
+</body>
+</html>
+                    <h4>
+                      CombiROC is a web app for guided and interactive generation of multimarker panels. Click
+                      <em>Data</em>
+                      in the sidepanel to get started or
+                      <em>Accessories/Tutorial</em>
+                      for full instructions.
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="shiny-html-output col-sm-4" id="users"></div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-upload">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Data upload</h3>
+                </div>
+                <div class="box-body">
+                  <div class="col-sm-13">
+                    <div class="box">
+                      <div class="box-header">
+                        <div class="box-tools pull-right">
+                          <button class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="box-body">
+                        <div class="my-class" style="height: 70px;font-family: &#39;Lobster&#39;, cursive; font-size: 15px; line-height: 1.1; color: #4d3a7d;padding: 25px;  text-align: justify;&#10;                      border-style:ridge;background-color: #F0FFFF;visibility:visible;">In this page you can upload your own data or load a demo dataset. Then you can preview them in tabular form and verify their summary statistics</div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="box box-solid box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Enter data</h3>
+                          <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse">
+                              <i class="fa fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="box-body">
+                          <span class="help-block">Select a demo data or upload your data:</span>
+                          <div class="form-group shiny-input-container">
+                            <label class="control-label" for="DataInput">
+                              <h5>Choose your data:</h5>
+                            </label>
+                            <div>
+                              <select id="DataInput"><option value="1">Load demo data (proteomics)</option>
+<option value="5">Load demo data (transcriptomics)</option>
+<option value="2">Upload file</option>
+<option value="4" selected>Select</option></select>
+                              <script type="application/json" data-for="DataInput" data-nonempty="">{}</script>
+                            </div>
+                          </div>
+                          <div data-display-if="input.DataInput == 2">
+                            <p>
+                              Note: your data should be structured as a 
+                              <a target="_blank" href="http://en.wikipedia.org/wiki/Comma-separated_values">csv file</a>
+                            </p>
+                            <div class="form-group shiny-input-container">
+                              <label>
+                                <strong>File Input:</strong>
+                              </label>
+                              <input id="file" name="file" type="file" accept="text/csv,text/comma-separated-values,text/tab-separated-values,text/plain,.csv,.tsv"/>
+                              <div id="file_progress" class="progress progress-striped active shiny-file-input-progress">
+                                <div class="progress-bar"></div>
+                              </div>
+                            </div>
+                            <div data-display-if="input.DataInput == 1"></div>
+                            <div class="form-group shiny-input-container">
+                              <div class="checkbox">
+                                <label>
+                                  <input id="header" type="checkbox" checked="checked"/>
+                                  <span>Header</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="form-group shiny-input-container">
+                              <label class="control-label" for="sep">
+                                <strong>Separator:</strong>
+                              </label>
+                              <div>
+                                <select id="sep"><option value=",">Comma</option>
+<option value=";" selected>Semicolon</option>
+<option value="	">Tab</option></select>
+                                <script type="application/json" data-for="sep" data-nonempty="">{}</script>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="box box-solid box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Table</h3>
+                          <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse">
+                              <i class="fa fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="box-body">
+                          <span class="help-block">These are the data you are going to analyze, shown in tabular form</span>
+                          <div data-display-if="input.DataInput == 1">
+                            <h4>
+                              <em>Proteomics demo data</em>
+                            </h4>
+                          </div>
+                          <div data-display-if="input.DataInput == 5">
+                            <h4>
+                              <em>Transcriptomics demo data</em>
+                            </h4>
+                          </div>
+                          <div id="AgTable" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <div class="box box-solid box-primary collapsed-box">
+                        <div class="box-header">
+                          <h3 class="box-title">Details of uploaded dataset</h3>
+                          <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse">
+                              <i class="fa fa-plus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="box-body">
+                          <span class="help-block">Data information:</span>
+                          <div id="uploadDetails" class="shiny-html-output"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-plots">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Data Plots</h3>
+                </div>
+                <div class="box-body">
+                  <div class="col-sm-13">
+                    <div class="box">
+                      <div class="box-header">
+                        <div class="box-tools pull-right">
+                          <button class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="box-body">
+                        <div class="my-class" style="height: 70px;font-family: &#39;Lobster&#39;, cursive; font-size: 15px; line-height: 1.1; color: #4d3a7d;padding: 25px; text-align: justify;&#10;                    border-style:ridge;background-color: #F0FFFF;visibility:visible;">In this page you can preview plots and tabular statistics of your uploaded data. Use the "Display" submenu (on the lower left)  to change plot type and "Option" submenu to customize the boxplot visualization</div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div data-display-if=" input.tabs==&#39;plots&#39; &amp; input.display==&#39;1&#39;">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="box box-primary" style="height: 850px">
+                          <div class="box-header">
+                            <h3 class="box-title"> Box Plot</h3>
+                          </div>
+                          <div class="box-body">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <h4>Class A</h4>
+                              </div>
+                              <div class="col-sm-6">
+                                <h4>Class B</h4>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-5">
+                                <div id="A_boxPlot" class="shiny-plot-output" style="width: 30% ; height: 40%"></div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div id="B_boxPlot" class="shiny-plot-output" style="width: 20% ; height: 40%"></div>
+                                <div class="col-sm-12">
+                                  <a id="downloadBoxPlotPDF" class="btn btn-default shiny-download-link " href="" target="_blank">
+                                    <i class="fa fa-download"></i>
+                                    Download PDF-file
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="shiny-tab-options">
+                      <div data-display-if=" input.tabs==&#39;plots&#39; &amp; input.display==&#39;1&#39; &amp; input.data_option !=&#39;&#39;">
+                        <div class="row">
+                          <h5>Data options</h5>
+                          <div class="col-sm-4">
+                            <div class="box box-primary">
+                              <div class="box-body">
+                                <div class="form-group shiny-input-container">
+                                  <label class="control-label" for="whisker">Select the whisker type:</label>
+                                  <div>
+                                    <select id="whisker" class="form-control"><option value="Tukey" selected>Tukey</option>
+<option value="Spear">Spear</option>
+<option value="Altman">Altman</option></select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="box box-primary">
+                              <div class="box-body">
+                                <div class="form-group shiny-input-container">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input id="NPoints" type="checkbox"/>
+                                      <span>Show the number of data points</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input id="MMeans" type="checkbox"/>
+                                      <span>Show the variable means</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div data-display-if=" input.tabs==&#39;plots&#39; &amp; input.display==&#39;1&#39; &amp; input.display_option !=&#39;&#39;">
+                        <div class="row">
+                          <h5>Display options</h5>
+                          <div class="col-sm-4">
+                            <div class="box box-primary">
+                              <div class="box-body">
+                                <div class="form-group shiny-input-container">
+                                  <label class="control-label" for="colour_A">Select the color class A</label>
+                                  <div>
+                                    <select id="colour_A" class="form-control"><option value="lightblue">lightblue</option>
+<option value="white">white</option>
+<option value="lightgreen">lightgreen</option>
+<option value="salmon">salmon</option>
+<option value="plum">plum</option>
+<option value="orange">orange</option>
+<option value="darkred">darkred</option>
+<option value="darkmagenta">darkmagenta</option>
+<option value="aliceblue">aliceblue</option>
+<option value="forestgreen">forestgreen</option>
+<option value="yellow">yellow</option>
+<option value="cornflowerblue">cornflowerblue</option>
+<option value="palevioletred" selected>palevioletred</option></select>
+                                  </div>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label class="control-label" for="colour_B">Select the color class B</label>
+                                  <div>
+                                    <select id="colour_B" class="form-control"><option value="lightblue">lightblue</option>
+<option value="white">white</option>
+<option value="lightgreen">lightgreen</option>
+<option value="salmon">salmon</option>
+<option value="plum">plum</option>
+<option value="orange">orange</option>
+<option value="darkred">darkred</option>
+<option value="darkmagenta">darkmagenta</option>
+<option value="aliceblue">aliceblue</option>
+<option value="forestgreen">forestgreen</option>
+<option value="yellow">yellow</option>
+<option value="cornflowerblue" selected>cornflowerblue</option>
+<option value="palevioletred">palevioletred</option></select>
+                                  </div>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label class="control-label" for="addgrid">Add grid:</label>
+                                  <div>
+                                    <select id="addgrid" class="form-control"><option value="x and y" selected>x and y</option>
+<option value="x">x</option>
+<option value="y">y</option>
+<option value="none">none</option></select>
+                                  </div>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label class="control-label" for="orientation">Select the orientation:</label>
+                                  <div>
+                                    <select id="orientation" class="form-control"><option value="vertical" selected>vertical</option>
+<option value="horizontal">horizontal</option></select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="box box-primary">
+                              <div class="box-body">
+                                <div class="form-group shiny-input-container">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input id="scale" type="checkbox"/>
+                                      <span>Scale variables</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <br/>
+                                <div class="form-group shiny-input-container">
+                                  <label for="plotheight">Adjust plot height</label>
+                                  <input id="plotheight" type="number" class="form-control" value="500" step="50"/>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label for="plotwidth">Adjust plot width:</label>
+                                  <input id="plotwidth" type="number" class="form-control" value="500" step="50"/>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label for="ylimit">Adjust Y-axis range (i.e. '0,5000')</label>
+                                  <input id="ylimit" type="text" class="form-control" value=""/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div data-display-if=" input.tabs==&#39;plots&#39; &amp; input.display==&#39;1&#39; &amp; input.plot_option !=&#39;&#39;">
+                        <div class="row">
+                          <h5>Label options</h5>
+                          <div class="col-sm-4">
+                            <div class="box box-primary">
+                              <div class="box-body">
+                                <div class="form-group shiny-input-container">
+                                  <label class="control-label" for="labels_title">Select labels and title:</label>
+                                  <div>
+                                    <select id="labels_title" class="form-control"><option value="x axis label" selected>x axis label</option>
+<option value="y axis label">y axis label</option>
+<option value="box plot title_classA">box plot title_classA</option>
+<option value="box plot title_classB">box plot title_classB</option></select>
+                                  </div>
+                                </div>
+                                <div data-display-if="input.labels_title == &#39;x axis label&#39;">
+                                  <div class="form-group shiny-input-container">
+                                    <label for="myxlab">x axis label:</label>
+                                    <input id="myxlab" type="text" class="form-control" value=""/>
+                                  </div>
+                                </div>
+                                <div data-display-if="input.labels_title == &#39;y axis label&#39;">
+                                  <div class="form-group shiny-input-container">
+                                    <label for="myylab">y axis label:</label>
+                                    <input id="myylab" type="text" class="form-control" value=""/>
+                                  </div>
+                                </div>
+                                <div data-display-if="input.labels_title == &#39;box plot title_classA&#39;">
+                                  <div class="form-group shiny-input-container">
+                                    <label for="myboxtitle_A">box plot title:</label>
+                                    <input id="myboxtitle_A" type="text" class="form-control" value=""/>
+                                  </div>
+                                </div>
+                                <div data-display-if="input.labels_title == &#39;box plot title_classB&#39;">
+                                  <div class="form-group shiny-input-container">
+                                    <label for="myboxtitle_B">box plot title:</label>
+                                    <input id="myboxtitle_B" type="text" class="form-control" value=""/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="box box-primary">
+                              <div class="box-body">
+                                <div class="form-group shiny-input-container">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input id="rotationlabels" type="checkbox"/>
+                                      <span>Rotate the x ticks</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label class="control-label" for="fontsizetitle">Font size of title</label>
+                                  <input class="js-range-slider" id="fontsizetitle" data-min="1" data-max="25" data-from="15" data-step="1" data-grid="true" data-grid-num="8" data-grid-snap="false" data-prettify-separator="," data-keyboard="true" data-keyboard-step="4.16666666666667" data-drag-interval="true" data-data-type="number"/>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label class="control-label" for="fontsizeaxis">Font size of axis</label>
+                                  <input class="js-range-slider" id="fontsizeaxis" data-min="1" data-max="25" data-from="9" data-step="1" data-grid="true" data-grid-num="8" data-grid-snap="false" data-prettify-separator="," data-keyboard="true" data-keyboard-step="4.16666666666667" data-drag-interval="true" data-data-type="number"/>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label class="control-label" for="fontsizeaxislabel">Font size of axis label</label>
+                                  <input class="js-range-slider" id="fontsizeaxislabel" data-min="1" data-max="25" data-from="9" data-step="1" data-grid="true" data-grid-num="8" data-grid-snap="false" data-prettify-separator="," data-keyboard="true" data-keyboard-step="4.16666666666667" data-drag-interval="true" data-data-type="number"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <h4>Box plot statistics</h4>
+                        <div id="A_boxstatistics" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                      </div>
+                      <div class="col-sm-6">
+                        <h4>Box plot statistics</h4>
+                        <div id="B_boxstatistics" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-display-if=" input.tabs==&#39;plots&#39; &amp; input.display==&#39;2&#39;">
+                    <h4>Correlation plot here</h4>
+                  </div>
+                  <div data-display-if=" input.tabs==&#39;plots&#39; &amp; input.display==&#39;3&#39;">
+                    <div class="col-sm-12">
+                      <div class="box box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Marker Profile Plot (for each individual sample mean fluorescence intensity is displayed)</h3>
+                        </div>
+                        <div class="box-body">
+                          <div class="row">
+                            <div class="col-sm-7">
+                              <span class="help-block">Hover over the datapoints to display sample's details</span>
+                              <div id="myChart" class="shiny-html-output rChart highcharts"></div>
+                            </div>
+                            <div class="col-sm-5">
+                              <div id="MarkerPlotTable" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div>
+                              <div class="box box-solid box-primary">
+                                <div class="box-body">
+                                  <span class="help-block">Select the marker to plot from drop down menu:</span>
+                                  <div id="Profilevariable" class="shiny-html-output"></div>
+                                  <div class="col-sm-4"></div>
+                                  <button id="profileButton" type="button" class="btn btn-default action-button">plot graph</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-preprocessing">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Data pre-processing</h3>
+                </div>
+                <div class="box-body">
+                  <div class="col-sm-13">
+                    <div class="box">
+                      <div class="box-header">
+                        <div class="box-tools pull-right">
+                          <button class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="box-body">
+                        <div class="my-class" style="height: 70px;font-family: &#39;Lobster&#39;, cursive; font-size: 15px; line-height: 1.1; color: #4d3a7d;padding: 25px; text-align: justify;&#10;                    border-style:ridge;background-color: #F0FFFF;visibility:visible;">In this page you can reshape the data to facilitate data analysis and model interpretation</div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="box box-danger">
+                        <div class="box-header">
+                          <h3 class="box-title">Pre-processing options</h3>
+                        </div>
+                        <div class="box-body">
+                          <span class="help-block">Select a pre-treatment options in order to transform the data into a suitable form for the analysis</span>
+                          <br/>
+                          <div class="form-group shiny-input-container">
+                            <label class="control-label" for="datatransf">Data transformation</label>
+                            <div>
+                              <select id="datatransf" class="form-control"><option value="none" selected>none</option>
+<option value="natural logarithm (log2)">natural logarithm (log2)</option></select>
+                            </div>
+                          </div>
+                          <br/>
+                          <div class="form-group shiny-input-container">
+                            <label class="control-label" for="datascaling">Data scaling</label>
+                            <div>
+                              <select id="datascaling" class="form-control"><option value="none" selected>none</option>
+<option value="unit variance scaling">unit variance scaling</option>
+<option value="pareto scaling">pareto scaling</option></select>
+                            </div>
+                          </div>
+                          <br/>
+                          <br/>
+                          <div id="Error" class="shiny-html-output"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-8">
+                      <div class="box box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Table</h3>
+                        </div>
+                        <div class="box-body">
+                          <span class="help-block">These are the data you are going to analyze, shown in tabular form</span>
+                          <br/>
+                          <div id="preproctable" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-combi">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Combinatorial Analysis</h3>
+                </div>
+                <div class="box-body">
+                  <div class="col-sm-13">
+                    <div class="box">
+                      <div class="box-header">
+                        <div class="box-tools pull-right">
+                          <button class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="box-body">
+                        <div class="my-class" style="height: 70px;font-family: &#39;Lobster&#39;, cursive; font-size: 15px; line-height: 1.1; color: #4d3a7d;padding: 25px;  text-align: justify;&#10;                      border-style:ridge;background-color: #F0FFFF;visibility:visible;">In this page you can set the parameters (threshold, cutoffs etc) to evaluate the markers combinations and choose the best one with higher response.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="box box-solid box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Graphics</h3>
+                          <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse">
+                              <i class="fa fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="box-body">
+                          <span class="help-block">Insert here the thresholds on your uploaded data</span>
+                          <div data-display-if="input.DataInput== 1">
+                            <div class="row">
+                              <div class="col-sm-5">
+                                <div class="form-group shiny-input-container">
+                                  <label for="signalthr">Set the test signal cutoff (data above this value are considered positive):</label>
+                                  <input id="signalthr" type="number" class="form-control" value="450" min="1"/>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label for="combithr">Minimum features (the minimum number of positive markers)</label>
+                                  <input id="combithr" type="number" class="form-control" value="1" min="1"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-1"></div>
+                              <div class="col-sm-8">
+                                <button id="runButton" type="button" class="btn btn-default action-button">distributions</button>
+                              </div>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <div class="col-sm-8">
+                                <p>Click the button to update the value displayed in the plot panel.</p>
+                              </div>
+                              <br/>
+                              <div class="col-sm-12">
+                                <div id="barDistribution" class="shiny-html-output rChart highcharts"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div data-display-if="input.DataInput== 5">
+                            <div class="row">
+                              <div class="col-sm-5">
+                                <div class="form-group shiny-input-container">
+                                  <label for="signalthr_3">Set the test signal cutoff (data above this value are considered positive):</label>
+                                  <input id="signalthr_3" type="number" class="form-control" value="8" min="1"/>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label for="combithr_3">Minimum features (the minimum number of positive markers)</label>
+                                  <input id="combithr_3" type="number" class="form-control" value="1" min="1"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-1"></div>
+                              <div class="col-sm-8">
+                                <button id="runButton_3" type="button" class="btn btn-default action-button">distributions</button>
+                              </div>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <div class="col-sm-8">
+                                <p>Click the button to update the value displayed in the plot panel.</p>
+                              </div>
+                              <br/>
+                              <div class="col-sm-12">
+                                <div id="barDistribution_3" class="shiny-html-output rChart highcharts"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div data-display-if="input.DataInput !=1 &amp; input.DataInput != 5">
+                            <div class="row">
+                              <div class="col-sm-5">
+                                <div class="form-group shiny-input-container">
+                                  <label for="signalthr_2">Set the test signal cutoff (data above this value are considered positive):</label>
+                                  <input id="signalthr_2" type="number" class="form-control" value="NA"/>
+                                </div>
+                                <div class="form-group shiny-input-container">
+                                  <label for="combithr_2">Minimum features (the minimum number of positive markers)</label>
+                                  <input id="combithr_2" type="number" class="form-control" value="NA" min="1"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-1"></div>
+                              <div class="col-sm-8">
+                                <button id="runButton_2" type="button" class="btn btn-default action-button">distributions</button>
+                              </div>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <div class="col-sm-8">
+                                <p>Click the button to update the value displayed in the plot panel.</p>
+                              </div>
+                              <br/>
+                              <div class="col-sm-12">
+                                <div id="barDistribution_2" class="shiny-html-output rChart highcharts"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <br/>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <div class="box box-solid box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title"> Mathematical details</h3>
+                          <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse">
+                              <i class="fa fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="box-body">
+                          <span class="help-block">Definition and Formula</span>
+                          <script>MathJax.Hub.Queue(["Typeset", MathJax.Hub]);</script>
+                          <p>The total number of enumerable combinations is:</p>
+
+<p>\[C_{tot}= \sum_{k=0}^{N} C(N,k)=2^{N}-1\]</p>
+
+<p>where <em>N</em> is the total number of items and <em>k</em> the desidered number of components in the combination.</p>
+
+<p>For more theoretical details see:</p>
+
+<p><a href="http://www.pearsonhighered.com/educator/product/Introductory-Combinatorics/9780136020400.page">Introductory Combinatorics (5th Edition), Brualdi RA</a></p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="box box-solid box-primary" style="height: auto">
+                        <div class="box-header">
+                          <h3 class="box-title"> Combo list</h3>
+                          <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse">
+                              <i class="fa fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="box-body">
+                          <span class="help-block">All possible combinations</span>
+                          <div data-display-if="input.DataInput== 1">
+                            <div id="SE_SPtable" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                          </div>
+                          <div data-display-if="input.DataInput== 5">
+                            <div id="SE_SPtable_3" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                          </div>
+                          <div data-display-if="input.DataInput!=1">
+                            <div id="SE_SPtable_2" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                          </div>
+                          <br/>
+                          <br/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div data-display-if="input.runButton!=0 | input.runButton_3!=0 | input.runButton_2!=0">
+                    <div class="row">
+                      <div class="col-sm-8"></div>
+                      <div class="shiny-html-output col-sm-3" id="kpi_summary_box_1"></div>
+                    </div>
+                  </div>
+                  <div data-display-if="input.runButton==0 &amp; input.runButton_3==0 &amp; input.runButton_2==0">
+                    <div class="row">
+                      <div class="col-sm-8"></div>
+                      <div class="shiny-html-output col-sm-3" id="prova_tag"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-gold">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Gold Combinations</h3>
+                </div>
+                <div class="box-body">
+                  <div class="col-sm-13">
+                    <div class="box">
+                      <div class="box-header">
+                        <div class="box-tools pull-right">
+                          <button class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="box-body">
+                        <div class="my-class" style="height: 70px;font-family: &#39;Lobster&#39;, cursive; font-size: 15px; line-height: 1.1; color: #4d3a7d;padding: 25px;  text-align: justify;&#10;                      border-style:ridge;background-color: #F0FFFF;visibility:visible;">In this page you can explore the specificity and sensitivity space, in order to choose the optimal cutoffs </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="box box-danger">
+                        <div class="box-header">
+                          <h3 class="box-title">Explore SE and SP values</h3>
+                        </div>
+                        <div class="box-body">
+                          Select the sensitivity and/or specificity filters:
+                          <br/>
+                          <br/>
+                          <br/>
+                          <div class="form-group shiny-input-container">
+                            <label class="control-label" for="sinePhase">Sensitivity</label>
+                            <input class="js-range-slider" id="sinePhase" data-min="0" data-max="100" data-from="40" data-step="2" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-keyboard="true" data-keyboard-step="2" data-drag-interval="true" data-data-type="number"/>
+                            <div class="slider-animate-container">
+                              <a href="#" class="slider-animate-button" data-target-id="sinePhase" data-interval="1000" data-loop="TRUE">
+                                <span class="play">
+                                  <i class="glyphicon glyphicon-play"></i>
+                                </span>
+                                <span class="pause">
+                                  <i class="glyphicon glyphicon-pause"></i>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="form-group shiny-input-container">
+                            <label class="control-label" for="sineAmplitude">Specificity</label>
+                            <input class="js-range-slider" id="sineAmplitude" data-min="0" data-max="100" data-from="80" data-step="2" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-keyboard="true" data-keyboard-step="2" data-drag-interval="true" data-data-type="number"/>
+                            <div class="slider-animate-container">
+                              <a href="#" class="slider-animate-button" data-target-id="sineAmplitude" data-interval="1000" data-loop="TRUE">
+                                <span class="play">
+                                  <i class="glyphicon glyphicon-play"></i>
+                                </span>
+                                <span class="pause">
+                                  <i class="glyphicon glyphicon-pause"></i>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-8">
+                      <div class="box box-primary" style="height: 800px">
+                        <div class="box-header">
+                          <h3 class="box-title">Gold combination bubble plot</h3>
+                        </div>
+                        <div class="box-body">
+                          Visualize the SE and SP space
+                          <br/>
+                          <br/>
+                          <div id="highbubble" class="shiny-html-output rChart highcharts"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="box box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Gold table</h3>
+                        </div>
+                        <div class="box-body">
+                          <span class="help-block">Confirm the selected thresholds:</span>
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <div id="numericSe" class="shiny-html-output"></div>
+                              <div id="numericSp" class="shiny-html-output"></div>
+                              <div class="col-sm-4"></div>
+                              <button id="submitButton1" type="button" class="btn btn-default action-button">Submit</button>
+                              <p>Click the button to confirm thresholds and visualize the corresponding gold combinations.</p>
+                            </div>
+                            <div class="col-sm-8">
+                              <div id="Goldtable1" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="shiny-html-output col-sm-3" id="kpi_summary_box_2"></div>
+                    <div data-display-if="input.submitButton1==0">
+                      <div class="shiny-html-output col-sm-3" id="kpi_summary_box_5"></div>
+                    </div>
+                    <div data-display-if="input.submitButton1!=0 ">
+                      <div class="shiny-html-output col-sm-3" id="kpi_summary_box_3"></div>
+                    </div>
+                  </div>
+                  <br/>
+                  <br/>
+                  <br/>
+                </div>
+              </div>
+            </div>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-roc">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">ROC analysis</h3>
+                </div>
+                <div class="box-body">
+                  <div class="col-sm-13">
+                    <div class="box">
+                      <div class="box-header">
+                        <div class="box-tools pull-right">
+                          <button class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="box-body">
+                        <div class="my-class" style="height: 70px;font-family: &#39;Lobster&#39;, cursive; font-size: 15px; line-height: 1.1; color: #4d3a7d;padding: 25px;  text-align: justify;&#10;                      border-style:ridge;background-color: #F0FFFF;visibility:visible;">In this page you can perform ROC analysis according to previously set parameters.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="box box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Select Combos</h3>
+                        </div>
+                        <div class="box-body">
+                          <div class="form-group shiny-input-container">
+                            <div class="checkbox">
+                              <label>
+                                <input id="multi" type="checkbox"/>
+                                <span>Check to plot multiple curves</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group shiny-input-container">
+                            <div class="checkbox">
+                              <label>
+                                <input id="permut" type="checkbox"/>
+                                <span>Check to perform permutation test (single curves only)</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div data-display-if="input.multi == false &amp; input.permut == false &amp; input.submitButton1!=&#39;0&#39;">
+                            <p>Select the combination/s from drop down menu.</p>
+                            <br/>
+                            <div id="Mvariable" class="shiny-html-output"></div>
+                            <br/>
+                            <div class="col-sm-3"></div>
+                          </div>
+                          <div data-display-if="input.multi == false &amp; input.submitButton1==&#39;0&#39;">
+                            <div id="Mgoldtable" class="shiny-html-output"></div>
+                          </div>
+                          <div data-display-if="input.multi == true &amp; input.submitButton1==&#39;0&#39;">
+                            <div id="Mgoldtable2" class="shiny-html-output"></div>
+                          </div>
+                          <div data-display-if="input.multi == true &amp; input.permut == false &amp; input.submitButton1!=&#39;0&#39;">
+                            <p>Select the combination/s from drop down menu.</p>
+                            <br/>
+                            <div id="Mvariable2" class="shiny-html-output"></div>
+                          </div>
+                          <div data-display-if="input.permut == true &amp; input.multi == false &amp; input.submitButton1!=&#39;0&#39;">
+                            <p>Select the combination/s from drop down menu.</p>
+                            <br/>
+                            <div id="Mvariable3" class="shiny-html-output"></div>
+                          </div>
+                          <div data-display-if="input.permut == true &amp; input.multi == true &amp; input.submitButton1!=&#39;0&#39;">
+                            <div id="Mgoldtable3" class="shiny-html-output"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-8">
+                      <div class="box box-primary">
+                        <div class="box-header">
+                          <h3 class="box-title">Results</h3>
+                        </div>
+                        <div class="box-body">
+                          <div data-display-if="input.multi ==false &amp; input.permut== false &amp; input.submitButton1!=&#39;0&#39;">
+                            <h4>
+                              <em>ROC curve</em>
+                            </h4>
+                            <div class="row">
+                              <div class="span4">
+                                <div id="ROCcurve2" class="shiny-html-output rChart highcharts"></div>
+                              </div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div id="ROCtable1" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                          </div>
+                          <div data-display-if="input.multi ==true &amp; input.permut== false &amp; input.submitButton1!=&#39;0&#39;">
+                            <h4>
+                              <em>ROC curve</em>
+                            </h4>
+                            <div id="multipleROC" class="shiny-html-output rChart highcharts"></div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div id="ROCmultipletable" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                          </div>
+                          <div data-display-if="input.multi ==false &amp; input.permut== false &amp;input.submitButton1!=&#39;0&#39;">
+                            <h4>
+                              <em>Predictions</em>
+                            </h4>
+                            <div id="ClassPred1" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div id="pie" class="shiny-html-output rChart highcharts"></div>
+                          </div>
+                          <div data-display-if="input.multi ==false &amp; input.permut== false &amp; input.submitButton1!=&#39;0&#39;">
+                            <h4>
+                              <em>Performance Analysis</em>
+                            </h4>
+                            <h4>Cross-validation</h4>
+                            <div class="row">
+                              <div class="span4">
+                                <div id="Chart2" class="shiny-html-output rChart highcharts"></div>
+                              </div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div id="Perftable" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                            <br/>
+                            <br/>
+                          </div>
+                          <div data-display-if="input.permut ==true &amp; input.multi==false &amp; input.submitButton1!=&#39;0&#39;">
+                            <h4>
+                              <em>Permutation test</em>
+                            </h4>
+                            <div id="histDistribution" class="shiny-html-output rChart highcharts"></div>
+                            <br/>
+                            <br/>
+                            <div id="PermPerftable" style="width:100%; height:auto" class="datatables html-widget html-widget-output"></div>
+                            <br/>
+                            <br/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div data-display-if="input.submitButton1!=0">
+                      <div class="shiny-html-output col-sm-3" id="kpi_summary_box_4"></div>
+                    </div>
+                  </div>
+                  <br/>
+                  <br/>
+                  <br/>
+                </div>
+              </div>
+            </div>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-download">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Download</h3>
+                </div>
+                <div class="box-body">
+                  <div class="col-sm-13">
+                    <div class="box">
+                      <div class="box-header">
+                        <div class="box-tools pull-right">
+                          <button class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="box-body">
+                        <div class="my-class" style="height: 70px;font-family: &#39;Lobster&#39;, cursive; font-size: 15px; line-height: 1.1; color: #4d3a7d;padding: 25px;  text-align: justify;&#10;                      border-style:ridge;background-color: #F0FFFF;visibility:visible;">In this page you can download the tabular file of the "demo data" and a printable pdf file of the tutorial.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div class="col-sm-1"></div>
+                    <a id="downloadDemoData" class="btn btn-default shiny-download-link " href="" target="_blank">
+                      <i class="fa fa-download"></i>
+                      Download proteomics demo data as .CSV file
+                    </a>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div class="col-sm-1"></div>
+                    <p align="justify">
+                      <a target="_blank" href="CombiROC_tutorial_FINAL_II.pdf">Click here</a>
+                       to downlaod the tutorial as single PDF file.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-tutorial">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Tutorial</h3>
+                </div>
+                <div class="box-body">
+                  <h3 id="general">Overview of the CombiROC wokflow.</h3>
+                  <p align="justify">
+                    CombiROC delivers a simple workflow to help researchers in selecting the optimal combination(s) of markers through a simple analytical method based on the introduction of a double filter scoring.
+                    <strong>Figure 1</strong>
+                    , left, illustrates the general workflow of the application: after uploading multi markers profiling data in text format, users are offered a choice of simple data viewing with plotting and optional data processing methods. Users can define the stringency of their test (i.e. the signal cutoff and minimum number of positive features). Then, thresholds on sensitivity (SE) and specificity (SP) can be freely explored and interactively adjusted graphically observing how many markers’ combinations survive the cutoffs; finally, the best combinations can be chosen and their ROC curves automatically generated. Users can review results and download combinatorial analyses results and ROC curves.
+                  </p>
+                  <p align="justify">CombiROC’s analytical approach is based on sensitivity and specificity filters, interpreted in terms of recognition frequency, optimizing the number of potentially interesting panels rising from a previous combinatorial analysis step.  CombiROC does not take for granted a default algorithm-driven marker threshold, but it allows users to interactively choose the thresholds according to their requirements: in doing so it dramatically reduces the computational burden for the subsequent analytical steps. CombiROC also makes the analysis of biomarkers panels of diverse nature easier, lowering false negative rate given by fixed thresholds.</p>
+                  <p align="justify">
+                    Paragraphs of this tutorial are ordered following the structure of the application's main menu (
+                    <strong>Figure 1</strong>
+                    , right).
+                  </p>
+                  <p align="justify">
+                    This tutorial can be downloaded as single PDF file
+                    <a target="_blank" href="CombiROC_tutorial_FINAL_I.pdf">here</a>
+                    .
+                  </p>
+                  <br/>
+                  <br/>
+                  <img src="tutorial_fig1.jpg" style="text-align: center;" height="400" width="600"/>
+                  <br/>
+                  <br/>
+                  <div class="my-class" id="data" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #070B11;padding: 5px;  text-align: justify;border-style:none;background-color: #A3BDDC;visibility:visible;">DATA</div>
+                  <br/>
+                  <div class="my-class" id="dataupload" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:solid none none solid;">UPLOAD</div>
+                  <br/>
+                  <p align="justigy">Data can be uploaded to the CombiROC application. Before being uploaded the data in the application, data need to be correctly formatted as text files (csv, tab or semicolon separated). Make sure you are using the English locale for decimal separators (use the dot "." to separate decimals in numerical fields).</p>
+                  <p>
+                    You can prepare your data in your favorite spreadsheet software or application as long as it contains (see
+                    <strong>Figure 2</strong>
+                    ):
+                  </p>
+                  <ul><li>in the first column, the samples IDs (i.e. patients),</li>
+                        <li>in the second column, the class category (i.e. disease and healthy; marked "A" and "B")</li>
+                        <li>from the third column onward, the data values (i.e. detection levels) </li></ul>
+                  <p align="justify">
+                    The first row can contain a header. An example is given in
+                    <strong>Figure 2</strong>
+                     and a preformatted demo file can be also downloaded
+                    <a target="_blank" href="demodata.csv"> here</a>
+                    .
+                  </p>
+                  <ul><li>the header of the first column must be "Sample_ID"</li>
+                        <li>the header of the second column must be "Class"</li>
+                        <li>the header of columns from the third onward must be "Marker#", where "#" is a progressive integer (i.e. Marker1, Marker2, Marker3,....).</li></ul>
+                  <p align="justify">
+                    In the second column, dedicated to the classes/categories of samples (i.e. healthy and diseases; treated and untreated) an arbitrary number of classes are accepted in the file but
+                    <em>the application will consider for the analyses only the first 2 classes for pairwise comparisons</em>
+                    . Thus, for clarity we recommend to limit in the uploaded file the number of classes to 2, tagged with "A" and "B".
+                  </p>
+                  <p align="justify">Once your data are correctly formatted you can upload them using the "Data / Upload" link in the main menu on the left: in the "Enter data" widget select the "Upload file" option then select the file from your workstation. In case it’s not automatically recognized,  you can indicate the presence or absence of the header and specify the separator used (comma, semicolon or tab). From the very same menu you are also offered the possibility to use the pre-loaded demo data choosing the "Load demo data" options.</p>
+                  <br/>
+                  <img src="tutorial_fig2.png" style="text-align: center;" height="400" width="600"/>
+                  <p align="justify">Immediately after loading the data, they will be visualized in a tabular form in the "Table" widget on the right; if the data are correctly formatted you will be able to see the header and data as they appear in the original file. Only the first ten entries (rows) are displayed by default but you can adjust this number with the upper left selection in the Table widget. </p>
+                  <p align="justify">The displayed rows can be copied, downloaded as csv, or as pdf clicking on the "Copy","CSV" or "PDF" buttons respectively, on the upper right corner of the widget. Please note that only entries displayed on screen will be downloaded or printed, so if you want the entire file to be downloaded make sure to select all entries with the "Show ALL entries" toggle selection on the left.</p>
+                  <p align="justify">The widget "Details of uploaded dataset" will summarize some details of your data: the number of samples, markers and categories, the data value’s type and the presence of missing values. If errors are detected a warning will be displayed in this widget.</p>
+                  <br/>
+                  <div class="my-class" id="dataplots" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:solid none none solid;">PLOTS</div>
+                  <br/>
+                  <p align="justify">The Plots page of CombiROC automatically displays two types of plots and statistics overview of the uploaded data. Upon clicking to the Data / Plots menu, ancillary options become active on the lower bottom of the main menu: they are "Display" , used to choose from two different type of plots (box plot and marker profile plot), and "Options" (available for the box plot only) used to change data, display and label options of the box plot. </p>
+                  <p align="justify">Among the options that can be changed for the box plot type are the whisker type, the color of boxes, the orientation, height and width of the plot. The Y-axis ranges of the two classes’ plots are scaled individually by default, according to minimum and maximum values in the dataset. If you need to have box plot panels in the same range you can adjust this range in the "Adjust Y-axis range" field typing it in the format "0,1000" (lower value - comma - upper value). Beware that adjusting Y-axis range the value extremes could be not visualized. Finally, labels can be edited with custom text and font size.</p>
+                  <p align="justify">The box plot is used to visualize the distribution of single markers values across the samples (i.e. patients). Upon loading the demo data two box plots are obtained colored in red-pink for Class A and blue for Class B; markers are visualized in each class and their distributions observed.</p>
+                  <p align="justify">In the box plot page is also visible the "Box plot statistics" tables for both classes: they include distribution parameters which allow the user to choose the best cutoff values for the subsequent step (combinatorial analysis).</p>
+                  <p align="justify">The marker plot displays the signal intensity of each single sample for each marker. Select the marker you want to display from the drop down menu on the left, click on "plot graph" and the profile plot will be displayed. You then can hover over data points to reveal single samples details.</p>
+                  <br/>
+                  <div class="my-class" id="datapreprocessing" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:solid none none solid;">PRE-PROCESSING (OPTIONAL)</div>
+                  <br/>
+                  <p align="justify">In this page data can be processed with a few transformations if they need to be reshaped. From the drop down menu you can choose among a data transformation (log2 transformation), and two methods of scaling (unit variance scaling; pareto scaling).</p>
+                  <p align="justify">The "unit variance scaling", also known as autoscaling is commonly applied and uses the standard deviation as the scaling factor; in the "pareto scaling" the square root of the standard deviation is used as the scaling factor instead.</p>
+                  <p align="justify">On the right side of the page the transformed and/or scaled data are displayed in tabular form. As for the other tables visualized in the application, only the first ten entries (rows) are displayed by default but you can adjust this number with the upper left selection in the Table widget.</p>
+                  <p align="justify">
+                    <strong>PLEASE NOTE:</strong>
+                    <em>
+                      CombiROC is neither a transformation nor a data visualization tool: the steps "Plots" and "Preprocessing" are not strictly necessary for the completion of the analysis. The "Plot" function and the optional transformation tools are meant to allow users to look their data's structure, but data themselves should be correctly formatted
+                      <strong>before</strong>
+                      being uploaded to CombiROC.
+                    </em>
+                  </p>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <div class="my-class" id="analysis" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #070B11;padding: 5px;  text-align: justify;border-style:none;background-color: #A3BDDC;visibility:visible;">ANALYSIS</div>
+                  <br/>
+                  <div class="my-class" id="analysiscombinatorial" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:solid none none solid;">COMBINATORIAL ANALYSIS</div>
+                  <br/>
+                  <p align="justify">The Combinatorial Analysis, also called combinatorics, is a branch of mathematics concerned with the theory of enumeration, or combinations and permutations, in order to solve problems about the possibility of constructing arrangements of objects which satisfy specified conditions.</p>
+                  <p align="justify">
+                    In the page "Analysis / Combinatorial Analysis" you will find tools to obtain all possible markers combinations and choose the best one, i.e. the one with the higher response. Three main widgets "
+                    <strong>Graphics</strong>
+                    ", "
+                    <strong>Mathematical details</strong>
+                    " and "
+                    <strong>Combo List</strong>
+                    " are describe below.
+                  </p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:dotted none none dotted;border-width: 1px;">GRAPHICS</div>
+                  <br/>
+                  <p align="justify">
+                    In the "Graphics" widget you can set, according to the specific nature of your experiment (the test), the cutoff above which the features' values are considered positive (the "
+                    <em>test's signal cutoff</em>
+                    "); you can also insert the minimum number of positive features that need to reach the previously set cutoff.
+                  </p>
+                  <p align="justify">As an example, upon loading the "Demo data (proteomics)" provided by the application you will find the pre-set cutoff value of "450" (e.g. Fluorescence Intensities, representing the mean value of buffer control class plus three times the standard deviation). The minimum number of positive features is, for the demo data, pre-set to "1", i.e. with the minimum stringency, which means that at least 1 marker must reach the value of 450.</p>
+                  <p align="justify">
+                    Once you have set the proper thresholds click on the "
+                    <em>Distribution</em>
+                    " button to visualize in an histogram graph the distributions of
+                    <em>Sensitivity</em>
+                    and
+                    <em>Specificity</em>
+                    of the combinations satisfying the set cutoffs (
+                    <strong>Figure 3</strong>
+                    :
+                    <em>Sensitivity</em>
+                     (SE, blue bars) is defined as the true positive rate in percentage of your sample.
+                    <em>Specificity</em>
+                    (SP, black bars) is defined as the true negative rate in control class in percentage. In x-axis is shown the number of each positive feature as frequency (left wise blue bars for SE intervals, right wise black bars for SP intervals) while in y-axis the SE and SP distributions intervals in percent. You can hover over bars to see values.
+                  </p>
+                  <img src="tutorial_fig3.jpg" style="text-align: center;" height="480" width="600"/>
+                  
+                  <br/>
+                  <p align="justify">
+                    This histogram plot helps the user to evaluate the intervals from which the best SP/SE values will be chosen, and on which markers’ "
+                    <em>Gold Combinations</em>
+                    " will be calculated in further steps of the analysis. In the specific "Demo data (proteomics)" example, to which the plot in
+                    <strong>Figure 3</strong>
+                    refers, the graph shows that most markers’ combinations have sensitivity higher than 40%, with a peak of 12 combinations in the 81-90% sensitivity  range; for the specificity distributions all combinations have SP higher than 50% and a substantial number of them are above 80%. Any evaluation and choice at this point is strictly dependent on the specific nature of the experiment that generated the data and on the aim of the user: using the demo data as an example the preloaded values of sensitivity &gt;40% and specificity &gt;80% can be found, since they may serve the purpose of a usable tradeoff with the data at hand. 
+                  </p>
+                  <p align="justify">Once these "hard" thresholds are set, further browsing and evaluation of sensitivity and specificity values can be done in the subsequent "Gold combinations" section. </p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:dotted none none dotted;border-width: 1px;">MATHEMATICAL DETAILS</div>
+                  <br/>
+                  <p align="justify">In this widget is shown the formula used for the combinatorial analysis:</p>
+                  <img src="tutorial_fig_formula.jpg" style="text-align: center;" height="80" width="250"/>
+                  <p align="justify">
+                    N= the total number of items; k= the desiderate number of components in the combination. For more theoretical details see:
+                    <a target="_blank" href="http://www.pearsonhighered.com/educator/product/Introductory-Combinatorics/9780136020400.page"> Introductory Combinatorics (5th Edition), Brualdi RA.</a>
+                  </p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:dotted none none dotted;border-width: 1px;">COMBO LIST</div>
+                  <br/>
+                  <p align="justify">The table in the "Combo List" widget shows a numerical overview of the sensitivity and specificity of combination of markers thereof according to the thresholds set in the "Graphic" widget. In the "Demo data (proteomics)" example the table shows the sensitivity and specificity values of 31 features, a list that includes each marker and all possible combinations generated using the pre-set threshold (at least 1 feature with ≥ 450 detection, i.e. at least 1 feature with "positive" value).</p>
+                  <br/>
+                  <div class="my-class" id="analysisgold" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:solid none none solid;">GOLD COMBINATIONS</div>
+                  <br/>
+                  <p align="justify">
+                    Once the hard thresholds (
+                    <em>i.e.</em>
+                     cutoffs on detection value and minimal number of markers) have been set, the array of obtained markers’ combinations ("Combos") can be more deeply evaluated in order to select only the few (the Gold ones) that satisfy a minimal SP and SE. 
+                  </p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:dotted none none dotted;border-width: 1px;">EXPLORE SE AND SP VALUES / GOLD COMBINATION BUBBLE PLOT</div>
+                  <br/>
+                  <p align="justify">In this section two sliders are available to explore the SE and SP ranges. On the Bubble chart on the right of the page sensitivity (Y axis) and specificity (X axis) of all the marker combinations are automatically plotted; the size of the bubbles is proportional to the number of markers in the combo, the bigger the bubble, the more the markers. Combinations that do not bypass the SE &amp; SP thresholds set with the sliders on the left are depicted as blue bubbles (the "under the thresholds" combos), otherwise the bubbles are yellow (the "Gold" combos). To start off, you can move the sensitivity and specificity sliders and observe how many bubbles (=markers combos) remain yellow at higher SE and SP values.</p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:dotted none none dotted;border-width: 1px;">GOLD TABLE</div>
+                  <p align="justify">
+                    Once you reach a reasonable tradeoff between SE, SP and number of combos to go further in the analysis you need to confirm SE and SP values in the "Gold Table" section, in the lower half of the page (you’ll notice that SE and SP values set with the sliders are automatically reported in the "Gold Table" section below, for the "Demo data (proteomics)" values of 40% Sensitivity and 80% Specificity are suggestsed and preloaded). Click on "Submit" and a table detailing - and naming - the selected combinations will be displayed in the lower right of the page
+                    <strong>Figure 4</strong>
+                    .
+                          This table lists each single marker and/or combination of markers that have been selected from the values of Specificity and Sensitivity used. Using the "Demo data (proteomics)", and the preloaded SP and SE values (see also discussion in the previous section "Combinatorial Analysis"), 14 combinations out of the 31 in the original input list are selected and consequently displayed in the gold table: this table displays the percentages of Specificity and Sensitivity corresponding to each marker or combination. As other tables in the application, this one can be copied and downloaded as a csv or pdf file.
+                  </p>
+                  <br/>
+                  <img src="tutorial_fig4.jpg" style="text-align: center;" height="500" width="500"/>
+                  <br/>
+                  <br/>
+                  <div class="my-class" id="analysisroc" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:solid none none solid;">ROC ANALYSIS</div>
+                  <br/>
+                  <p align="justify">After having set all the thresholds on your dataset and obtained a number of "Gold combinations" of markers, then you finally need to see how these combinations perform. Receiver operating characteristic (ROC) curves are used in medicine to determine a cutoff value for a clinical test. When creating a diagnostic test, a ROC curve helps us visualize and understand the tradeoff between high Sensitivity and high Specificity when discriminating between clinically "normal" and clinically "abnormal" laboratory values.</p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:dotted none none dotted;border-width: 1px;">SELECT COMBOS / RESULTS</div>
+                  <br/>
+                  <p align="justify">
+                    First, you have to select from the drop down menu the single combination to visualize the corresponding ROC curves. If you want to directly compare multiple markers or combinations in the same plot thick the "Check to plot multiple curves" mark (see further). The names of markers and combinations in the drop down menu ("Marker#" if single markers or "Combo" followed by roman numeral) are the same as those reported in the "Gold table" in the previous page of the workflow.
+                    <br/>
+                    Once you select a marker/combo from the dropdown, the ROC curve, Predictions and Performance Analysis are automatically visualized.
+                  </p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:none none solid none;border-width: 1px;">ROC CURVES</div>
+                  <p align="justify">
+                    The ROC curve (
+                    <strong>Figure 5</strong>
+                    ) is a graph of "sensitivity" (y-axis) vs "1 – specificity" (x-axis). Large "y" values on the ROC curve plot correspond to higher sensitivity, while small "x" values correspond to higher specificity. The shape of the curve depicts the combinatorial variation of these two important parameters. Below the ROC curve you will be able to see the AUC (Area Under the Curve), SE, SP and optimal cutoff numerical values of the analyzed combo in tabular form. 
+                    <br/>
+                    The results are reported in fractions from 0 to 1. A diagonal line of identity is reported such as the point of optimal cut-off. However, you can choose whether to display it or not, just by clicking on it.
+                  </p>
+                  <img src="tutorial_fig5.jpg" style="text-align: center;" height="500" width="500"/>
+                  <br/>
+                  <br/>
+                  <p align="justify">
+                    <strong>Figure 5</strong>
+                     shows the ROC curve of "Combo II" obtained using the "Demo data (proteomics)". A table for each single marker or combo that have been selected from the marker dialog, will also appear below the plot, showing the values of Area Under Curve, Sensitivity, Specificity (in percentage) and Optimal cut-off. As other tables/figures in the application, this one can be copied and downloaded as a csv or pdf file.
+                  </p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:none none solid none;border-width: 1px;">PREDICTIONS</div>
+                  <br/>
+                  <p align="justify">
+                    The "Predictions" section of the page displays a violin plot and a pie chart.
+                    <br/>
+                    The violin plot is a combination of a box plot and a kernel density plot, showing the "probability density" of the data at different values. Prediction probabilities are plotted for both classes (class A and B, disease/healthy, treated/untreated) according to the previously obtained optimal cutoff. The four possible categories are then visualized: False Negative (FN); False Positives (FP); True Negative (TN); True Positive (TP). This plot helps to visualize the proportion of samples falling in the four possible quadrants, especially in those of the TN and TP predicted categories, in order to evaluate the goodness of the underlying markers.
+                  </p>
+                  <p align="justify">The pie chart shows the very same information in a different way. In this plot can be easily visualized which fraction of false predictions (false positive or false negative) there are in each class (class A/B, disease/healthy) as opposed on how big is the fraction of true predictions and inside the total fraction of markers in each class. Obviously the smaller the false predictions fractions, the better performing is the marker or the combination.</p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:none none solid none;border-width: 1px;">PERFORMANCE ANALYSIS</div>
+                  <br/>
+                  <p align="justify">In the lower section of the page the same ROC curve of the selected combo is overlaid with the corresponding Cross Validation (CV) in order to evaluate its performance. The table below this last plot reports the accuracy (ACC) and error rate of the whole cohort and 10-fold CV, as well as the corresponding sensitivity (SE), specificity (SP) and Area Under the Curve value (AUC).</p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:none none solid none;border-width: 1px;">PLOTTING MULTIPLE CURVES</div>
+                  <br/>
+                  <p align="justify">
+                    If you want to visualize and compare ROC curves of multiple markers and combinations among those selected in the Gold table you need to check the "Check to plot multiple curves" tick mark in the "Select Combos" widget at the top (upper left) of the page.
+                    <br/>
+                     In the drop down selection menu you will be able to choose, one after the other, all the single markers and/or combos in the gold table that you want to compare: a graph of overlaid ROC curves will be automatically displayed in a single plot. Below the graph SE, SP and AUC for each curve will be reported in a tabular form. As other tables/figures in the application, this one can be copied and downloaded as a csv or pdf file.
+                  </p>
+                  <p align="justify">Please note that prediction and performance analyses as described before are available for single markers or combinations only, not when multiple markers/combos are compared in the same ROC curve plot.</p>
+                  <br/>
+                  <div class="my-class" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:none none solid none;border-width: 1px;">PERMUTATION TEST</div>
+                  <br/>
+                  <p align="justify">
+                    In order to test the statistical significance of AUC value you can hit the "Check to perform permutation test (single curves only)" tick mark in the "Select Combos" widget at the top (upper left) of the page.
+                    <br/>
+                     In the drop down selection menu you will be able to choose a marker (single markers or combos) in the gold table that you want to verify and a graph will be displayed. This plot shows the density plot of the AUC values in the analysis of 500 permutation test and the grey line  the real AUC value. The table below the plot reports the accuracy (ACC) and error rate of the whole cohort and the permutated models, as well as the corresponding sensitivity (SE), specificity (SP) and Area Under Curve (AUC).
+                  </p>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <div class="my-class" id="download" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #070B11;padding: 5px;  text-align: justify;border-style:none;background-color: #A3BDDC;visibility:visible;">DOWNLOAD</div>
+                  <br/>
+                  <p align="justify">In this section you can download the tabular file of the "demo data" and a printable pdf file of the tutorial.</p>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <div class="my-class" id="accessories" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #070B11;padding: 5px;  text-align: justify;border-style:none;background-color: #A3BDDC;visibility:visible;">ACCESSORIES</div>
+                  <br/>
+                  <div class="my-class" id="tutorial" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:solid none none solid;">TUTORIAL</div>
+                  <br/>
+                  <p align="justify">
+                    This section describe how to use CombiROC step by step. Real dataset is used as example as "Demo data (proteomics)". The demo dataset is obtained from 
+                    <a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0137927">Mazzara et al. 2015, PLos One 10(9):e0137927</a>
+                    and can also be downloaded from the "Download" section of the application. 
+                  </p>
+                  <p align="justify">
+                    Other "Demo data (transcriptomics)" available on the CombiROC website are obtained from 
+                    <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/21200023">Baraniskin et al. 2011, Blood 117(11):3140-6.</a>
+                  </p>
+                  <br/>
+                  <div class="my-class" id="logs" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:solid none none solid;">LOGS</div>
+                  <br/>
+                  <p align="justify">This section contains the version history of the CombiROC web application. All relevant changes and upgrades will be reported here in the future.</p>
+                  <br/>
+                  <div class="my-class" id="contacts" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:solid none none solid;">CONTACTS</div>
+                  <br/>
+                  <p align="justify">
+                    This application was created by the
+                    <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+                     and 
+                    <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+                     units at Istituto Nazionale Genetica Molecolare "Romeo ed Enrica Invernizzi" (INGM), Milan, Italy. 
+                  </p>
+                  <p align="justify">
+                    If you have questions or comments, please contact Saveria Mazzara at
+                    <a href="mailto:saveria.mazzara@gmail.com">saveria.mazzara@gmail.com</a>
+                    This application was implemented using Shiny (for web interface) and other R packages (for data manipulation).
+                  </p>
+                  <br/>
+                  <div class="my-class" id="faq" style="height: 40px;font-family: &#39;Calibri&#39;, cursive; font-size: 20px; line-height: 1.1; color: #4579B9;padding: 5px;  text-align: justify;border-style:solid none none solid;">FAQ</div>
+                  <p align="justify">In this section frequently asked questions on the application and its usage will be added as soon as they will be available.</p>
+                  <br/>
+                  <br/>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-history">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Logs</h3>
+                </div>
+                <div class="box-body">
+                  <h4>Version History</h4>
+                  <p>
+                    Current version of CombiROC is v.1.2 (
+                    <strong>February 10th, 2017</strong>
+                    ): expanded the app in the "ROC analysis" step with the permuatation test, few bugs fixed.
+                  </p>
+                  <p>
+                    CombiROC v.1.1 (
+                    <strong>December 22nd, 2015</strong>
+                    ): added multiple curves plotting functionalities, few bugs fixed.
+                  </p>
+                  <p>
+                    CombiROC v.1.0 (
+                    <strong>September 7th, 2015</strong>
+                    ): first web version running on Shiny server.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-contact">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">Contacts</h3>
+                </div>
+                <div class="box-body">
+                  <div class="col-sm-12">
+                    <h1>
+                      <img src="logo_INGM.jpg" style="text-align: center;" height="90" width="280"/>
+                      
+                    </h1>
+                  </div>
+                  <h3>Istituto Nazionale Genetica Molecolare "Romeo ed Enrica Invernizzi"</h3>
+                  <br/>
+                  <br/>
+                  <p>This application was created by the Protein Microarray and Bioinformatics facilities at Istituto Nazionale Genetica Molecolare "Romeo ed Enrica Invernizzi" (INGM), Milan, Italy. </p>
+                  <h4>Bioinformatics- Unit</h4>
+                  <p>
+                    The 
+                    <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics </a>
+                     unit is a team of professional scientists focusing on study, development, and optimization of tools for the analysis of genomic data generated by INGM scientists. Our mission is to work closely with the Institute’s programs facilitating access to biological data analyses and elaborations to all research groups, while supporting translational research with standard analytical expertise and providing access to up-to-date and novel analytical methods.
+                  </p>
+                  <h4>Protein Microarray- Unit</h4>
+                  <p>
+                    The 
+                    <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Unit</a>
+                     provides access to Protein Microarray for biomedical research. The provided services cover all the main needs of basic and advanced research by using Protein Microarray.The major objectives of the facility are:
+                  </p>
+                  <ul><li>Set up, maintain and develop Protein Microarray Technology for basic and advanced research.</li>
+                        <li>Provide protein spotting, as such as antigens, antibodies for, extract cell for INGM researchers and external collaborators.</li>
+                        <li>Directly provide sample spotting and analysis in specific applications for INGM researchers and external collaborators.</li>
+                        <li>Provide on-site training and assistance to prepare biomedical researchers to the use of instrumentations and to introduce to protein microarray applications.</li>
+                        <li>Perform independent and collaborative research for the development of advanced protein microarray protocols.</li>
+                        <li>Perform collaborative research with INGM groups where highly specific protein microarray platform competences are required.</li></ul>
+                  <h4>Developers</h4>
+                  <ul><li>Saveria Mazzara, PhD</li>
+                        <li>Riccardo L. Rossi, PhD</li>
+                        <li>Mauro Bombaci, PhD</li></ul>
+                  <h4>Contact</h4>
+                  <p>
+                    We welcome your feedback. If you have suggestions for improvements, questions and difficulties, please contact Saveria Mazzara at
+                    <a href="mailto:saveria.mazzara@gmail.com">saveria.mazzara@gmail.com</a>
+                  </p>
+                  <br/>
+                  <div class="row"></div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="shiny-tab-FAQ">
+            <div>
+              <div class="box box-solid box-info">
+                <div class="box-header">
+                  <h3 class="box-title">FAQ</h3>
+                </div>
+                <div class="box-body">
+                  <a href="#q1">
+                    <h4>Q: Can I use combiROC to screen for biomarkers?</h4>
+                  </a>
+                  <p align="justify">CombiROC is not a screening tool. You should be able to select your potential biomarkers using traditional screening methodologies such as differential expression for genes, microRNA or proteins by arrays, sequencing or mass spec. Once you have shortlisted a number of potential biomarkers, i.e. your "signature", you can explore the performance of their combinations with CombiROC</p>
+                  <a href="#q2">
+                    <h4>Q: How many biomarkers can CombiROC handle?</h4>
+                  </a>
+                  <p align="justify">There is no theoretic limit to the number of biomarkers. Practically a limit is imposed by computational load given by  big numbers: "n" markers can combine in "2^n -1" way (i.e. 31 combinations of 5 markers; 1032 combinations of 10 markers; more than 1 nonillion combinations for 100 markers). Thus CombiROC best performs for marker lists composed of up to 10 markers, which is a reasonable and sufficiently high number of potential biomarkers in the clinical practice.</p>
+                  <a href="#q3">
+                    <h4>Q: Are there hard thresholds to set up?</h4>
+                  </a>
+                  <p align="justify">There are no mandatory hard threshold to set up after uploading the data. Nevertheless, the application asks the user to "set the test signal cutoff" (in the Analysis / Combinatorial analysis step), which is strictly inherent to each and every dataset uploaded and is aimed at eliminating the noise from the signal under the technical detection thresholds given by the specific experimental methods used. The user can virtually set this threshold equal to the minimum value in the dataset (no zeroes are allowed) or, better, extimate a "true" signal value observing the value distributions in the box plot panels and the relative box plot statistics generated by the app after the data have been uploaded.</p>
+                  <a href="#q4">
+                    <h4>Q: When should I use the preprocessing tab?</h4>
+                  </a>
+                  <p align="justify">The choice of data prepreocessing depends on the biological/clinical data under investigation. In general, the aim of this optional step is to facilitate data analysis and model intepretation removing instrumental noise and making the measurements of the samples comparable.</p>
+                  <ul><li> For example, a variable/biomarker could contain one or few extreme measurements which may dominate over the other measurements; in other words, this variable/marker departs from normality. One way to achieve a more symmetric data distribution is by transforamtion such as the "log-transformation".</li>
+                        <li>Data scaling is equivalent to giving all of the variables equal importance, hence this procedure could be particularly useful in "omics" datasets where variables are characterized by large scale effects. There are nmany ways to scale the data, but the most common technique is the "unit variance" or the "pareto scaling".</li>
+                        </ul>
+                  <a href="#q5">
+                    <h4>Q: Can I customize the name of markers in the header of my file?</h4>
+                  </a>
+                  <p align="justify">Unfortunately, not yet. This first public version of CombiROC is able to 
+correctly handle only datasets whose markers in the header are named with "Marker1", "Marker2", ... , "MarkerN". </p>
+                  <a href="#q6">
+                    <h4>Q: What happens if I don't put any SE/SP cutoff in the Gold Combination bubble plot step?</h4>
+                  </a>
+                  <p align="justify">You do not necessarily have to raise the SE/SP filtering cutoffs in the gold combination step. If you don't put any cutoff all the possible combinations will be considered as "gold" and will be taken further in the analysis. Raising the cutoffs allows you to shortlist to the best performing ones.</p>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h6>
+              Mazzara S et al.
+              <a target="_blank" href="https://www.nature.com/articles/srep45477">
+                <b>CombiROC: an interactive web tool for selecting accurate marker combinations of omics data.</b>
+              </a>
+              This application was created by the
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/protein-microarray">Protein Microarray</a>
+               and 
+              <a target="_blank" href="http://www.ingm.org/en/research/facilities/bioinformatics">Bioinformatics</a>
+               units at INGM. If you have questions or comments, please contact Saveria Mazzara (saveria.mazzara(at)gmail.com). This application was implemented using shiny (for web interface) and other additional R packages (for data manipulation).
+            </h6>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

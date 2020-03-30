@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<title>		
+		CORNET: CORrelation NETworks in plants.		
+	</title>
+	<link href="/cornet/favicon.ico" type="image/x-icon" rel="icon" /><link href="/cornet/favicon.ico" type="image/x-icon" rel="shortcut icon" /><link rel="stylesheet" type="text/css" href="/cornet/css/bootstrap.css" /><link rel="stylesheet" type="text/css" href="/cornet/css/plaza3.css" /><script type="text/javascript" src="/cornet/js/modernizr-2.6.2-respond-1.1.0.min.js"></script><script type="text/javascript" src="/cornet/js/jquery.js"></script><script type="text/javascript" src="/cornet/js/bootstrap.min.js"></script></head>
+<body>
+    <div id="header">
+    <div class="jumbotron mastheader">
+      <div class="container">
+        <div class="col-lg-4 col-sm-6">
+		<a href="https://bioinformatics.psb.ugent.be/cornet/">
+		<img src="/cornet/img/logo.png" id="logo" style="margin-top:-30px;" alt="" />		</a>	
+	</div>
+        <!-- <div class="header-backdrop col-lg-8 col-sm-6"><p>Comparative genomics in plants.</p></div> -->
+      </div>
+    </div>
+	
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+	 <div class="col-lg-2 col-md-3 col-xs-3">
+		<!--
+		<h1 class="plaza-logo">
+			<span aria-hidden="true" data-icon="&#xe600;" class="down-arrow">
+			</span>
+		</h1>
+		-->	
+	</div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+                   <div class="navbar-right col-lg-7" style="padding-left: 0px">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Selection <b class="caret"></b></a>
+              <ul class="dropdown-menu  navbar-inverse">
+		<li class='dropdown-header'>Current Versions</li>
+<li><a href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet_maize1.0/'>CORNET Maize 1.0</a></li><li><a href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet2.0/'>CORNET 2.0</a></li><li><a href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet3.0/'>CORNET 3.0</a></li><li class='divider'></li>
+<li class='dropdown-header'>Archived Versions</li>
+<li><a href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet1.0/'>CORNET 1.0</a></li>              </ul>
+            </li>
+           </ul>
+           </div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>		
+</div>
+
+	<div  class="main-content" id="container">
+		<div class="container" id="content">
+
+			
+			<div class="col-lg-12" style="margin-bottom:5px;">
+	<h2>Available CORNET versions <small>(select the most appropriate)</small></h2>		
+	<div class='row'><div class='col-lg-6 col-sm-6 col-xs-12'>
+<div class='panel panel-default'>
+<div class='panel-heading'>
+<div class='title_div_1' id='title_div_1_3' ><h3><a href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet3.0/' style='text-decoration:none;'>CORNET 3.0</a><small>&nbsp;(2015)</small>
+</div>
+</div>
+<div class='panel-body'><div class='content_div' id='content_div_3'>
+<strong>Summary</strong>
+<div class='same-height'>
+<p class='database-description'>An update of the CORNET project where the PPI data is robustly updated, and an RNA-seq compendium is added to the list of available expression compendiums.</p>
+<p class='database-publication'>No publication available</p></div>
+<div class='row'>
+<div class='col-lg-12'>
+<a class='btn btn-primary pull-right' style='margin-top:15px'  href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet3.0/'>Go to CORNET 3.0 </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-lg-6 col-sm-6 col-xs-12'>
+<div class='panel panel-default'>
+<div class='panel-heading'>
+<div class='title_div_1' id='title_div_1_2' ><h3><a href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet2.0/' style='text-decoration:none;'>CORNET 2.0</a><small>&nbsp;(2012)</small>
+</div>
+</div>
+<div class='panel-body'><div class='content_div' id='content_div_2'>
+<strong>Summary</strong>
+<div class='same-height'>
+<p class='database-description'>The second iteration of the CORNET project. In addition to the coexpression data and protein-protein interactions present in CORNET1.0, a third data type is added as well: the regulatory data (transcription factors, etc..).<br/>
+An update of the expression compendia and the PPI data is included as well, in addition to new functional annotation resources for the genes. 
+</p>
+<p class='database-publication'><a href='http://www.ncbi.nlm.nih.gov/pubmed/22651224'>CORNET 2.0: integrating plant coexpression, protein-protein interactions, regulatory interactions, gene associations and functional annotations.</a></p>
+</div>
+<div class='row'>
+<div class='col-lg-12'>
+<a class='btn btn-primary pull-right' style='margin-top:15px'  href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet2.0/'>Go to CORNET 2.0 </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class='row'>
+<div class='col-lg-6 col-sm-6 col-xs-12'>
+<div class='panel panel-default'>
+<div class='panel-heading'>
+<div class='title_div_1' id='title_div_1_4' ><h3><a href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet_maize1.0/' style='text-decoration:none;'>CORNET Maize 1.0</a><small>&nbsp;(2012)</small>
+</div>
+</div>
+<div class='panel-body'><div class='content_div' id='content_div_4'>
+<strong>Summary</strong>
+<div class='same-height'>
+<p class='database-description'>Released at the same time as CORNET2.0, this project is based on the same codebase and principles, but has Maize as its core species.
+
+Arabidopsis genes can be given as input though, as they will be converted through the orthology relationships provided by PLAZA. </p>
+<p class='database-publication'><a href='http://www.ncbi.nlm.nih.gov/pubmed/22651224'>CORNET 2.0: integrating plant coexpression, protein-protein interactions, regulatory interactions, gene associations and functional annotations.</a></p>
+</div>
+<div class='row'>
+<div class='col-lg-12'>
+<a class='btn btn-primary pull-right' style='margin-top:15px'  href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet_maize1.0/'>Go to CORNET Maize 1.0 </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='panel-group' id='accordion'>
+<div class='panel panel-default'>
+<div class='panel-heading'>
+<h3 class='panel-title'><a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#archive'>Archived Versions</a></h4></div>
+<div class='panel-collapse collapse out' id='archive'><div class='panel-body'>
+<div class='row'><div class='col-lg-6 col-sm-6 col-xs-12'>
+<div class='panel panel-default'>
+<div class='panel-heading'>
+<div class='title_div_1' id='title_div_1_1' ><h3><a href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet1.0/' style='text-decoration:none;'>CORNET 1.0</a><small>&nbsp;(2010)</small>
+</div>
+</div>
+<div class='panel-body'><div class='content_div' id='content_div_1'>
+<strong>Summary</strong>
+<div class='same-height'>
+<p class='database-description'>The original CORrelation NETworks project, which encompasses both coexpression data and protein-protein interactions (PPI), which are accessible through separate tools.</p>
+<p class='database-publication'><a href='http://www.ncbi.nlm.nih.gov/pubmed/20053712'>CORNET: a user-friendly tool for data mining and integration.</a></p>
+</div>
+<div class='row'>
+<div class='col-lg-12'>
+<a class='btn btn-primary pull-right' style='margin-top:15px'  href='https://bioinformatics.psb.ugent.be/cornet/versions/cornet1.0/'>Go to CORNET 1.0 </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	
+
+           <script type="text/javascript">
+		//script to make all panels equal in height
+                jQuery.noConflict();
+
+
+                function setPanelHeight() {
+			jQuery('.same-height').css("height", "auto");//set size back to auto
+			var maxHeight = 0;
+
+			//determine panel with the biggest height
+			jQuery('.same-height').each(function(i, obj) {
+    				if (jQuery(this).height() > maxHeight) {
+					maxHeight = jQuery(this).height();
+				}
+			});
+
+			//set all heights
+                        jQuery('.same-height').height(maxHeight);
+
+                }
+                jQuery(document).ready(function ( $ ) {
+                        setPanelHeight();
+                });
+                jQuery(window).resize(function ( $ ) {
+                        setPanelHeight();
+                });
+                
+
+
+
+           </script>    
+
+
+	<script type='text/javascript'>
+		//<![CDATA[
+		function more_info(link_div_id){			
+			var t	= document.getElementById(link_div_id);
+			if(t.style.display=="" || t.style.display=="none"){
+				$("#"+link_div_id).slideDown();
+			}
+			else{
+				$("#"+link_div_id).slideUp();
+			}
+		}		
+		//]]>
+
+		
+	</script>
+
+</div>
+<br/>
+		</div>
+	</div>
+	<footer id="footer">
+	<div class="footer navbar-inverse">
+   		<div class="container">
+	   		<div class="row">
+          			<div class="col-lg-4 col-sm-6">
+					<ul class="footer-list">
+						<li><a href="/cornet/">Home</a></li>
+						<li><a href="/cornet/pages/credits">Credits</a></li>
+						
+					</ul>
+          			</div>
+          			<div class="col-lg-4 col-sm-6">
+		  			<ul class="footer-list">
+		  				<li><a href="/cornet/pages/publications">Publications</a></li>
+						<li><a href="/cornet/pages/workshops">Workshops</a></li>
+		  			</ul>
+          			</div>
+         			<div class="col-lg-4 col-sm-6">
+					<ul class="footer-list">						
+						<li><a href="/cornet/pages/contact">Contact</a></li>
+						<li><a href="/cornet/pages/licensing">Licensing</a></li>
+					</ul>
+       				</div>			
+	   		</div>
+	   		<div class="row pull-right">
+		  		<p>&copy; CORNET 2020</p>
+		 	</div>		
+    		</div>
+	</div>
+</footer>	
+	   <script type="text/javascript">
+		//<![CDATA[
+		jQuery.noConflict();
+		function moveFooter() {
+			jQuery('#content').css('height', "auto");
+			jQuery('#content').css('min-height', 500);
+			var pageHeight = jQuery('#header').height() + jQuery('#footer').height() + jQuery('#content').height();
+			//window.alert( jQuery(window).height()  + " " + pageHeight );
+			var extra = jQuery(window).height() - jQuery('#header').height() - jQuery('#footer').height() + 10; //10px overlap with navbar needs to be accounted for
+     			if (jQuery(window).height() > pageHeight && extra > 500)
+        		{
+       				jQuery('#content').height(extra);
+				jQuery('#content').css('height', extra);
+				jQuery('#content').css('min-height', extra);
+        		} 		
+
+		}
+		jQuery(document).ready(function ( $ ) {
+			moveFooter();
+		});
+		jQuery(document).click(function( $ ) {
+			moveFooter();
+		});
+		jQuery(window).resize(function ( $ ) {
+			moveFooter();
+		});
+		
+
+		window.setInterval(function(){
+			moveFooter();
+		}, 250);
+
+		//]]>
+	   </script>	
+
+
+	  <script type="text/javascript">
+		 /* <![CDATA[ */			
+		//PLAZA specific
+  		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-5314627-8']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();		  
+		 /* ]]> */
+	    </script> 	
+	   <script type="text/javascript">
+		 /* <![CDATA[ */
+		//Bioinformatics PSB
+  		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-3992537-1']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();		  
+		 /* ]]> */
+	    </script> 	   
+
+</body>
+</html>

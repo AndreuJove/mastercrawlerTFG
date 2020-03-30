@@ -1,0 +1,10 @@
+Server: openresty
+Date: Mon, 30 Mar 2020 18:47:58 GMT
+Content-Type: text/html; charset=UTF-8
+Last-Modified: Mon, 30 Mar 2020 17:55:40 GMT
+Cache-Control: max-age=462, must-revalidate
+Vary: Cookie
+Link: <https://tyolab.northwestern.edu/wp-json/>; rel="https://api.w.org/"
+Link: <https://tyolab.northwestern.edu/?p=635>; rel=shortlink
+Set-Cookie: xid=rB4HI16CPt6aYQBhA0GXAg==; expires=Wed, 29-Apr-20 18:47:58 GMT; path=/
+Content-Encoding: gzip

@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta name="description" content="A Chimera plugin to construct RNA 3D architectures" />
+	<meta name="author" content="" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="http://www.bioinformatics.org/assemble/css/main.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="http://www.bioinformatics.org/assemble/css/nivo.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="http://www.bioinformatics.org/assemble/css/skin.css" />
+	<!--[if IE 6]><script src="javascript/pngfix.js"></script><script>DD_belatedPNG.fix('#logo img, #nav li a, #nav li a span, #nav-icons img, #twitter, #imac');</script><![endif]-->
+	<script type="text/javascript" src="http://www.bioinformatics.org/assemble/javascript/jquery.js"></script>
+	<script type="text/javascript" src="http://www.bioinformatics.org/assemble/javascript/jquery.nivo.js"></script>
+	<script type="text/javascript" src="http://www.bioinformatics.org/assemble/javascript/cufon-yui.js"></script>
+	<script type="text/javascript" src="http://www.bioinformatics.org/assemble/javascript/font.font.js"></script>
+	<script type="text/javascript">
+	Cufon.replace('h1, h2', {hover:true});
+	$(window).load(function() {
+		$('#slider').nivoSlider({
+		effect:'sliceDown',
+		slices:20,
+		animSpeed:500,
+		pauseTime:3000,
+		startSlide:0,
+		directionNav:false,
+		directionNavHide:false,
+		controlNav:false,
+		controlNavThumbs:false,
+		controlNavThumbsFromRel:false,
+		keyboardNav:false,
+		pauseOnHover:true,
+		manualAdvance:false,
+		captionOpacity:0.5,
+		beforeChange:function(){},
+		afterChange:function(){},
+		slideshowEnd:function(){}
+		});
+	});
+	</script>
+	<title>Assemble2</title>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42941790-1', 'bioinformatics.org');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+
+<body id="hp">
+
+<div id="main">
+
+	<!-- HEADER -->
+	<div id="header" class="box">
+
+		<p id="logo"><a href="http://www.bioinformatics.org/assemble/index.html" title="[Go to homepage]"><img src="http://www.bioinformatics.org/assemble/design/logo.png" alt="" /></a></p>
+		<!-- INFO: Used font is named "BALLPARK", you can download it for free here: http://www.fontsquirrel.com/fonts/Ballpark -->
+
+		<!-- NAVIGATION -->
+		<ul id="nav">
+			<li class="current"><a href="http://www.bioinformatics.org/assemble/index.html"><span>Homepage</span></a></li>
+			<li><a href="http://assemble2.wordpress.com/screenshots/" target="_blank"><span>Screenshots</span></a></li>
+			<li><a href="http://www.bioinformatics.org/assemble/downloads.html"><span>Downloads</span></a></li>
+			<li><a href="http://assemble2.wordpress.com/"><span>Blog</span></a></li>
+            <li><a href="http://www.bioinformatics.org/assemble/manual.html"><span>Manual</span></a></li>
+			<li><a href="http://www.bioinformatics.org/assemble/contacts.html"><span>Contact us</span></a></li>
+		</ul>
+
+	</div> <!-- /header -->
+
+	<!-- WELCOME -->
+	<div id="welcome" class="box">
+
+		<div id="welcome-inner">
+
+			<h2>Study and construct RNA 3D architectures interactively...</h2>
+
+			<p>Assemble2 allows you to design your RNA 2D structure interactively and to create and assemble the corresponding RNA 3D modules directly in <a href="http://www.cgl.ucsf.edu/chimera/">UCSF Chimera</a>:
+				<ul class="ul">
+					<li>install Chimera and Assemble2 for your operating system,</li>
+					<li>give the install location of Chimera to Assemble2,</li>
+					<li>you can start to work...</li>
+				</ul>
+			</p>
+
+		</div> <!-- /welcome-inner -->
+
+		<!-- TWITTER -->
+		<!--<div id="twitter" class="box">
+
+			<ul>
+				<li>I like this new version!!!&ndash; <a href="#">58 minutes ago</a></li>
+			</ul>
+
+		</div>--> <!-- /twitter -->
+
+		<div id="imac">
+
+			<!-- images here should be width:371, height:211 -->
+			<div id="slider" class="nivoSlider">
+				<img src="http://www.bioinformatics.org/assemble/images/slide-01.jpg" alt="" />
+				<img src="http://www.bioinformatics.org/assemble/images/slide-02.jpg" alt="" />
+				<img src="http://www.bioinformatics.org/assemble/images/slide-03.jpg" alt="" />
+			</div> <!-- /slider -->
+
+		</div> <!-- /imac -->
+	</div> <!-- /welcome -->
+	<!-- COLUMNS -->
+	<div id="section" class="box">
+
+		<!-- CONTENT -->
+		<div id="content">
+
+			<h2 class="nom">Assemble2 Features</h2>
+
+			<ul class="products">
+                <li class="box">
+                    <div class="products-img"><img src="http://www.bioinformatics.org/assemble/images/3D_modeling_workflow.png" alt="" /></div>
+                    <div class="products-desc">
+                        <h3>A Complete 3D Modeling Workflow</h3>
+                        <p>Assemble 2 allows you to construct your RNA 3D model interactively, starting from a solved tertiary structure and the orthologous sequence to model. But you can also use Assemble2 for more simple tasks: the prediction and manipulation of a secondary structure, the annotation and exploration of a solved tertiary structure.</p>
+                    </div>
+                </li>
+				<li class="box">
+					<div class="products-img"><img src="http://www.bioinformatics.org/assemble/images/2D.png" alt="" /></div>
+					<div class="products-desc">
+						<h3>Prediction and Edition of 2D Structures</h3>
+						<p>In Assemble2, your RNA 3D model is based on a secondary structure that can be loaded from a file or predicted using RNA algorithms wrapped as Web Services. Once loaded into Assemble2, this secondary structure can be edited interactively or used to explore a solved tertiary structure.</p>
+					</div>
+				</li>
+                <li class="box">
+                    <div class="products-img"><img src="http://www.bioinformatics.org/assemble/images/structural_alignment.png" alt="" /></div>
+                    <div class="products-desc">
+                        <h3>Construction of Structural Alignments</h3>
+                        <p>Assemble2 provides the alignment panel that was initally available with <a href="http://goo.gl/zRaZQH" target="_blank">S2S</a>. You can align an orthologous sequence against a solved tertiary structure, infer automatically its 2D and 3D structures, and pursue the modeling process without leaving Assemble2.</p>
+                    </div>
+                </li>
+				<li class="box">
+					<div class="products-img"><img src="http://www.bioinformatics.org/assemble/images/product-02.jpg" alt="" /></div>
+					<div class="products-desc">
+						<h3>Guided 3D Modeling</h3>
+						<p>The RNA secondary structure allows you to define and select modules (helices and junctions) and to create their 3D fold directly in Chimera. For RNA junctions like apical loops, you can easily switch between different 3D folds extracted from solved tertiary structures and choose the one that fits best your assumptions. Chimera assembles a new 3D module automatically if a perfect match of module ends is found in the 3D model.</p>
+					</div>
+				</li>
+				<li class="box">
+					<div class="products-img"><img src="http://www.bioinformatics.org/assemble/images/density_map.png" alt="" /></div>
+					<div class="products-desc">
+						<h3>3D Modeling in Density Maps</h3>
+						<p>Using the connection between Assemble2 and Chimera, you can use the fantastic vizualisation abilities of Chimera to guide the construction of your 3D model. Load a density map into Chimera, select an RNA junction into Assemble2 and switch between the different 3D folds to find the one that fit best your experimental data.</p>
+					</div>
+				</li>
+				<li class="box">
+					<div class="products-img"><img src="http://www.bioinformatics.org/assemble/images/product-04.jpg" alt="" /></div>
+					<div class="products-desc">
+						<h3>Built-in 3D Refinement</h3>
+						<p>Assemble2 provides a geometric refinement function to optimize structural parameters like nucleotide stereochemistry, sugar pucker, and atoms distances deduced from the base–base interactions defined in the 2D panel. You can refine from few residues to the full 3D model. The refined structure is added to Chimera as a new layer, allowing you to compare 3D folds before and after refinement.</p>
+					</div>
+				</li>
+				<li class="box">
+					<div class="products-img"><img src="http://www.bioinformatics.org/assemble/images/product-05.jpg" alt="" /></div>
+					<div class="products-desc">
+						<h3>Powered by Web Services</h3>
+						<p>Assemble2 is a semi-automatic environment where several tasks (RNA 2D prediction, RNA 3D modules search,...) are delegated to Web Services. You can use the public Web Services or deploy your own ones with the <a href="http://jossinetlab.github.io/RNA-Science-Toolbox/" target="_blank">RNA Science Toolbox project.</a>
+.</p>
+					</div>
+				</li>
+				<li class="last box">
+					<div class="products-img"><img src="http://www.bioinformatics.org/assemble/images/run_everywhere.jpg" alt="" /></div>
+					<div class="products-desc">
+						<h3>Run Everywhere</h3>
+						<p>Assemble2 has been developed with the Java language on MacOSX. But it can run on any operating system having a Java environment.</p>
+					</div>
+				</li>
+			</ul>
+
+		</div> <!-- /content -->
+
+		<!-- SIDEBAR -->
+		<div id="aside">
+
+			<a class="twitter-timeline" href="https://twitter.com/RnaSciToolbox" data-widget-id="720546371019927553">Tweets by @RnaSciToolbox</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div> <!-- /aside -->
+
+	</div> <!-- /section -->
+
+	<!-- CONTACT -->
+	<div id="contact">
+
+		<address>
+			Fabrice Jossinet, PhD <span>|</span>
+			<a href="#">University of Strasbourg, ARN</a> <span>|</span>
+			<a href="#">UPR 9002 of CNRS</a> <span>|</span>
+            <a href="mailto:f[dot]jossinet[at]ibmc-cnrs[dot]unistra[dot]fr">f[dot]jossinet[at]ibmc-cnrs[dot]unistra[dot]fr</a>
+		</address>
+
+	</div> <!-- /contact -->
+
+	<!-- FOOTER -->
+	<div id="footer" class="box">
+		<!-- Would you like to remove this line? Visit www.templatesdock.com/terms.php -->
+		<p class="f-right t-right"><a href="http://www.templatesdock.com/">Free web templates</a> by TemplatesDock
+		<!-- Would you like to remove this line? Visit www.templatesdock.com/terms.php -->
+	</div> <!-- /footer -->
+
+</div> <!-- /main -->
+
+<script type="text/javascript"> Cufon.now(); </script>
+
+</body>
+</html>

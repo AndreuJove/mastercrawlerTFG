@@ -1,0 +1,259 @@
+<HTML>
+<!-- DW6 --> 
+<HEAD>
+<title>AltAnalyze - Software for Extended Alternative Splicing Analysis</title>
+<link rel="stylesheet" href="/genmapp.css">
+<script language="JavaScript">
+<!--
+
+
+
+<!--
+
+/-->//-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.title {
+	font-size: 18px;
+}
+.red {
+	color: #FF0607;
+}
+-->
+</style>
+</HEAD>
+<body bgcolor="#FFFFFF" text="#000000" onLoad="MM_preloadImages('/graphics/menu/acknowledge2.gif','/graphics/menu/geneselect2.gif','/graphics/menu/links2.gif','/graphics/bar/Download0.gif','/graphics/bar/aboutus_off.gif','/graphics/bar/contactus_off.gif','/graphics/bar/help_off.gif','/graphics/bar/home0.gif')" MARGINWIDTH="0" MARGINHEIGHT="0" LEFTMARGIN=0 TOPMARGIN=0 link="#0099FF" vlink="#004879" alink="#004879">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td colspan="4" valign="middle" height="40"><img src="graphics/logoX1.gif" width="387" height="51"></td>
+    <td valign="bottom" align="right" width="2%" height="40"> 
+      <div align="right"><a href="https://www.cincinnatichildrens.org/research/divisions/b/bmi/labs/salomonis/research-areas"><img src="cchmc-logo.png" alt="" width="170" height="50" border="0"></a></div>
+    </td>
+  <tr> 
+    <td colspan="4" bgcolor="#000000" align="left" valign="middle" background="graphics/background.gif" height="15">&nbsp;</td>
+    <td bgcolor="#FFFFFF" align="right" valign="middle" width="2%" bordercolor="#CCCCCC" background="graphics/background.gif" height="15">&nbsp;    </td>
+  
+  <tr> 
+    <td colspan="5" valign="top"><img src="/graphics/transparent.gif" width="2" height="2"></td>
+  <tr> 
+    <td colspan="5" valign="top" height="71"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="1%" height="761"><img src="/graphics/transparent.gif" width="4" height="4"></td>
+          <td width="99%" valign="top"><img src="/graphics/transparent.gif" width="4" height="4"><br>
+            <table width="800" border="0" height="701">
+              <tr align="left" valign="top"> 
+                <td height="697"> 
+                  <table width="755" border="0" cellpadding="1" cellspacing="1">
+                    <tr> 
+                      <td width="237" height="675" align="left" valign="top"> 
+                        <table width="222" border="0" height="380">
+                          <tr align="left" valign="top"> 
+                            <td height="76"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="231" height="127">
+                                <param name=movie value="AltAnalyze_logo.swf">
+                                <param name=quality value=high>
+                                <embed src="AltAnalyze_logo.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="231" height="127">                                </embed> 
+                              </object> </td>
+                          </tr>
+                          <tr> 
+                            <td height="181" valign="top"> 
+                              <table width="231" border="0" height="331">
+                                <tr> 
+                                  <td width="223" height="47" align="center"><p><font size="2" face="Arial, Helvetica, sans-serif"><em>Downloaded over <strong>18,000</strong> times and cited in over <strong><a href="http://altanalyze.readthedocs.io/en/latest/CitingArticles">250</a></strong><a href="http://altanalyze.readthedocs.io/en/latest/CitingArticles"> peer-reviewed</a> publications. AltAnalyze has hundreds of active users and is being actively developed as an open-source project.</em></font></p>
+                                  <p><em><font size="2" face="Arial, Helvetica, sans-serif">AltAnalyze recieves funding from NIH National Cancer Institute (R01CA226802).</font></em></p></td>
+                                  <td width="10" height="47">&nbsp;</td>
+                                </tr>
+                                <tr> 
+                                  <td width="223" height="169"><p><em><font size="2" face="Arial, Helvetica, sans-serif"><strong><br>
+                                    News</strong>: A  new manuscript describing the <a href="https://www.biorxiv.org/content/early/2018/09/22/412080">cellHarmony</a> workflow in AltAnlayze and its application to the <a href="https://www.humancellatlas.org/">Human Cell Atlas</a> is described <a href="https://www.ncbi.nlm.nih.gov/pubmed/30243574">here</a>.</font></em></p>
+                                  <p>&nbsp;</p>
+                                  <p>&nbsp;</p></td>
+                                  <td width="10" height="169">&nbsp;</td>
+                                </tr>
+                              </table>
+                            <br>                            </td>
+                          </tr>
+                        </table>                      </td>
+                      <td width="1" height="675" align="left" valign="top">&nbsp; </td>
+                      <td width="503" height="675" align="left" valign="top"> 
+                        <table width="510" border="0" cellpadding="0">
+                          <tr> 
+                            <td height="5"> 
+                              <table width="563" border="0" cellspacing="0" cellpadding="0">
+                                <tr> 
+                                  <td width="554" height="37" colspan="2"><font color="#00CC00" face="Verdana, Arial, Helvetica, sans-serif"><b><i><font color="#006600" class="title">AltAnalyze 
+                                    - Comprehensive Transcriptome Analysis</font></i></b></font></td>
+                                </tr>
+                              </table>                            </td>
+                          </tr>
+                          <tr align="left" valign="top"> 
+                            <td height="630"> 
+                              <table width="558" border="0">
+                                <tr align="left" valign="top"> 
+                                  <td width="552" height="186"> <p><font face="Arial, Helvetica, sans-serif" size="2">AltAnalyze is an easy-to-use  application for the end-to-end analysis of single-cell (<a href="ICGS.html">ICGS</a>/<a href="http://www.altanalyze.org/cellHarmony"> cellHarmony</a>) and bulk <a href="https://github.com/nsalomonis/altanalyze/wiki/Kallisto-Splice">RNA-Seq</a> data. For splicing sensitive platforms (single cell/bulk <a href="https://github.com/nsalomonis/altanalyze/wiki/Kallisto-Splice">RNA-Seq</a> or <a href="http://altanalyze.readthedocs.io/en/latest/CompatibleArrays"> microarrays</a>), AltAnalyze identities alternative splicing events,impacted protein isoforms, <a href="http://altanalyze.readthedocs.io/en/latest/DomainAnalysis">domain composition</a> and <a href="help.htm#microrna">microRNA targeting</a>. AltAnalyze automates every step of gene expression and splicing analysis other  data (<a href="https://www.youtube.com/watch?v=Jylu-V7FmpY">FASTQ processing</a>, <a href="http://altanalyze.readthedocs.io/en/latest/RMA">RMA summarization</a>, <a href="http://altanalyze.readthedocs.io/en/latest/combat">batch-effect removal</a>, <a href="http://altanalyze.readthedocs.io/en/latest/QualityControl">QC</a>, <a href="http://altanalyze.readthedocs.io/en/latest/AltAnalyzeStatistics">statistics</a>, <a href="http://altanalyze.readthedocs.io/en/latest/Annotations">annotation</a>, <a href="http://altanalyze.readthedocs.io/en/latest/Heatmaps/">clustering</a>, <a href="http://altanalyze.readthedocs.io/en/latest/NetPerspective">network creation</a>, <a href="http://altanalyze.readthedocs.io/en/latest/LineageProfiler">lineage characterization</a>, <a href="http://altanalyze.readthedocs.io/en/latest/AltExonViewer">alternative exon visualization</a>, <a href="http://altanalyze.readthedocs.io/en/latest/GOElite">gene-set enrichement</a> and <a href="http://altanalyze.readthedocs.io/en/latest">more</a>). Easy to follow <b>video tutorials</b> can be found <a href="https://www.google.com/#q=altanalyze&tbm=vid">here</a>. Updates can be found on our <a href="http://altanalyze.blogspot.com/">blog</a> and examples in our <a href="ICGS.html">interactive browsers</a>.</font></p>
+                                    <p><font face="Arial, Helvetica, sans-serif" size="2">AltAnalyze can be run through an inutitive <a href="http://altanalyze.readthedocs.io/en/latest/RunningAltAnalyze/">graphical user interface</a> or <a href="http://altanalyze.readthedocs.io/en/latest/CommandLineMode">command-line</a> and requires no advanced knowledge of bioinformatics programs or scripting. Alternative 
+                                      regulated splicing events can be  visualized 
+                                      in the context of proteins, domains, microRNA 
+                                      binding sites and using SashimiPlots in this software. 
+                                      For program details and to get answers 
+                                  to common questions, check out our <a href="http://altanalyze.readthedocs.io/en/latest"><strong>Manual</strong></a>, <strong><a href="Data/examples.html">Sample Data</a></strong>,<strong><a href="http://altanalyze.readthedocs.io/en/latest"> Wiki</a></strong>, <font size="3"><font size="2"><a href="http://altanalyze.readthedocs.io/en/latest/FAQ"><strong>FAQ</strong></a></font></font>, <font size="3" color="#0000FF"><b><font size="2"><a href="http://altanalyze.readthedocs.io/en/latest/Tutorials" target="_blank">Tutorials</a></font></b></font> or <a href="http://groups.google.com/group/alt_predictions"><strong>User Group</strong></a>.<br>
+                                  </font></p></td>
+                                </tr>
+                              </table>
+                              <table width="563" border="0" cellpadding="0" cellspacing="0">
+                                <tr align="left" valign="top">
+                                  <td width="1" height="342">&nbsp;</td>
+                                  <td width="552" height="342"><div align="left">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td height="33"><b><font color="#000099" face="Verdana, Arial, Helvetica, sans-serif"><b><i><font color="#666666">Downloads</font></i></b></font></b></td>
+                                      </tr>
+                                    </table>
+                                    <table width="552" border="0" cellpadding="0" cellspacing="0">
+                                      <tr align="left" valign="top">
+                                        <td height="162"><br>
+                                          <font color="#000099" face="Verdana, Arial, Helvetica, sans-serif"><i><font color="#666666"><font size="2">Release version 2.1.3 - 4/24/19</font></font></i></font><br>
+                                          <table width="514" border="0" cellpadding="0" cellspacing="0">
+                                            <tr align="left" valign="top">
+                                              <td height="89" width="10">&nbsp;</td>
+                                              <td height="89" width="504"><table width="498" border="0">
+                                                <tr>
+                                                  <td width="22" height="19" align="right"><font face="Arial, Helvetica, sans-serif" size="2"><img src="graphics/mac.jpg" alt="-" width="21" height="22"><font face="Arial, Helvetica, sans-serif" size="2"><b></b></font></font></td>
+                                                  <td height="15"><font face="Arial, Helvetica, sans-serif" size="2"><b><a href="http://altanalyze.org/downloads/AltAnalyze_v.2.1.3_OSX-64bit.dmg">Mac 
+                                                    OSX Installer (.dmg)</a></b></font></td>
+                                                  <td width="14" height="15" bgcolor="#FFFFFF"><font face="Arial, Helvetica, sans-serif" size="2"> </font></td>
+                                                  <td width="35" height="15" bgcolor="#FFFFFF">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                  <td width="22" height="19" align="right"><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2"><b><img src="graphics/win.jpg" alt="-" width="21" height="22"></b></font></font></td>
+                                                  <td height="24"><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2"><b><a href="http://altanalyze.org/downloads/AltAnalyze_v.2.1.3-Win64.zip">Windows 
+                                                    Archive (.zip)</a></b></font></font></td>
+                                                  <td height="24" width="14">&nbsp;</td>
+                                                  <td height="24" width="35">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                  <td height="19" align="right"><font face="Arial, Helvetica, sans-serif" size="2"><img src="graphics/dos.jpg" alt="-" width="21" height="22"><font face="Arial, Helvetica, sans-serif" size="2"><b></b></font></font></td>
+                                                  <td height="24"><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif" size="2"><a href="https://github.com/nsalomonis/altanalyze"><b>Cross 
+                                                    Platform GitHub Source-Code</b></a></font></font></td>
+                                                  <td height="24">&nbsp;</td>
+                                                  <td height="24">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                  <td width="22" height="19" align="right">&nbsp;</td>
+                                                  <td height="24"><font face="Arial, Helvetica, sans-serif" size="2"><font color="#000099" face="Verdana, Arial, Helvetica, sans-serif"><font color="#666666"><font size="2"><font color="#0000FF" face="Arial, Helvetica, sans-serif"><strong><a href="https://github.com/nsalomonis/altanalyze/wiki/PyPi">pip install altanalyze</a></strong></font><font face="Arial, Helvetica, sans-serif">(PyPi python package installation)</font></font></font></font></font></td>
+                                                  <td height="24" width="14">&nbsp;</td>
+                                                  <td height="24" width="35">&nbsp;</td>
+                                                </tr>
+                                              </table></td>
+                                            </tr>
+                                          </table></td>
+                                      </tr>
+                                    </table>
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td height="26"><b><font color="#000099" face="Verdana, Arial, Helvetica, sans-serif"><b><i><font color="#666666">Documentation</font></i></b></font></b></td>
+                                      </tr>
+                                    </table>
+                                    <table width="545" border="0">
+                                      <tr align="left" valign="top">
+                                        <td height="148" width="10">&nbsp;</td>
+                                        <td height="148" width="525"><table width="538" border="0">
+                                          <tr>
+                                            <td height="20" width="22"><img src="graphics/blue_box.gif" alt="null" width="6" height="6" align="right"></td>
+                                            <td width="506" height="20"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3" color="#0000FF"><b><font size="2"><a href="https://github.com/nsalomonis/altanalyze/wiki/RunningAltAnalyze">Running AltAnalyze</a></font></b></font></font></td>
+                                            </tr>
+                                          <tr>
+                                            <td height="20"><img src="graphics/blue_box.gif" alt="null" width="6" height="6" align="right"></td>
+                                            <td height="20"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3" color="#0000FF"><b><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://altanalyze.readthedocs.io/en/latest/Tutorials"><b>Tutorials</b></a></font></b></font></font></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="20"><img src="graphics/blue_box.gif" alt="null" width="6" height="6" align="right"></td>
+                                            <td height="20"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3" color="#0000FF"><b><font face="Arial, Helvetica, sans-serif" size="2"><font size="3"><font size="2"><a href="http://altanalyze.readthedocs.io/en/latest/News"><b>News 
+                                              and Updates</b></a></font></font></font><font size="2"><a href="http://altanalyze.readthedocs.io/en/latest/Tutorial_GeneExpressionAnalysis"></a></font></b></font></font></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="20"><img src="graphics/blue_box.gif" alt="null" width="6" height="6" align="right"></td>
+                                            <td height="20"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3" color="#0000FF"><b><font face="Arial, Helvetica, sans-serif" size="2"><font size="3"><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://altanalyze.readthedocs.io/en/latest/AboutUs#Citing">How to Cite</a></font></font></font></b></font></font></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="20"><img src="graphics/blue_box.gif" alt="null" width="6" height="6" align="right"></td>
+                                            <td height="20"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3" color="#0000FF"><b><font face="Arial, Helvetica, sans-serif" size="2"><font size="3"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3"><font size="2"><a href="http://altanalyze.readthedocs.io/en/latest/ContactUs">Contact Us</a></font></font></font></font></font><font size="2"><a href="http://altanalyze.readthedocs.io/en/latest/Tutorial_GeneExpressionAnalysis"></a></font></b></font></font></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="20"><img src="graphics/blue_box.gif" alt="null" width="6" height="6" align="right"></td>
+                                            <td height="20"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3" color="#0000FF"><b><font face="Arial, Helvetica, sans-serif" size="2"><font size="3"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3"><font size="2"><a href="http://altanalyze.readthedocs.io/en/latest/AboutUs">AboutUs</a></font></font></font></font></font></font></font><font size="2"><a href="http://altanalyze.readthedocs.io/en/latest/Tutorial_GeneExpressionAnalysis"></a></font></b></font></font></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="20"><img src="graphics/blue_box.gif" alt="null" width="6" height="6" align="right"></td>
+                                            <td height="20"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3" color="#0000FF"><b><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://altanalyze.blogspot.com/">Blog</a></font></b></font></font></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="20"><img src="graphics/blue_box.gif" alt="null" width="6" height="6" align="right"></td>
+                                            <td height="20"><font face="Arial, Helvetica, sans-serif" size="2"><font size="3" color="#0000FF"><b><font face="Arial, Helvetica, sans-serif" size="2"><font size="3"><font size="2"><a href="http://altanalyze.readthedocs.io/en/latest/FAQ">FAQ</a></font></font></font><font size="2"><a href="http://altanalyze.readthedocs.io/en/latest/Tutorial_GeneExpressionAnalysis"></a></font></b></font></font></td>
+                                          </tr>
+                                          </table>
+                                          <div align="left"></div></td>
+                                        </tr>
+                                    </table>
+                                  </div></td>
+                                </tr>
+                            </table></td>
+                          </tr>
+                        </table>                      </td>
+                    </tr>
+                  </table>
+                <br>                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p> 
+            <div align="right"><br>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  <tr align="center"> 
+    <td colspan="5" height="3" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#DDDDDD"> 
+          <td><img src="/graphics/transparent.gif" width="1" height="1"></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="center"><a href="default.html" class="typeface"><font size="1" face="Arial, Helvetica, sans-serif"><i>Home</i></font></a><font size="1" face="Arial, Helvetica, sans-serif"><i> 
+              | <a href="http://altanalyze.readthedocs.io/en/latest/AboutUs" class="typeface"><font size="1" face="Arial, Helvetica, sans-serif">About 
+              Us</font></a><font size="1" face="Arial, Helvetica, sans-serif"> 
+              | <a href="http://altanalyze.readthedocs.io/en/latest/ContactUs" class="typeface"><font size="1" face="Arial, Helvetica, sans-serif">Contact 
+              Us</font></a><font size="1" face="Arial, Helvetica, sans-serif"> 
+              | <a href="help_main.htm" class="typeface"><font size="1" face="Arial, Helvetica, sans-serif">Help</font></a><font size="1" face="Arial, Helvetica, sans-serif"> 
+              | <a href="http://altanalyze.readthedocs.io/en/latest/AltAnalyze" class="typeface"><font size="1" face="Arial, Helvetica, sans-serif">Introduction</font></a><font size="1" face="Arial, Helvetica, sans-serif"> 
+              | <a href="http://altanalyze.readthedocs.io/en/latest/News" class="typeface"><font size="1" face="Arial, Helvetica, sans-serif">News</font></a><font size="1" face="Arial, Helvetica, sans-serif"> 
+              | <a href="http://altanalyze.readthedocs.io/en/latest/DomainGraph" class="typeface"><font size="1" face="Arial, Helvetica, sans-serif">DomainGraph</font></a><font size="1" face="Arial, Helvetica, sans-serif"> 
+              | <a href="https://sourceforge.net/projects/altanalyze/files/" class="typeface"><font size="1" face="Arial, Helvetica, sans-serif">Downloads</font></a></font></font></font></font></font></font></i></font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="center"><img src="/graphics/transparent.gif" width="4" height="4"></div>
+          </td>
+        </tr>
+        <tr bgcolor="#DDDDDD"> 
+          <td><img src="/graphics/transparent.gif" width="1" height="1"></td>
+        </tr>
+      </table>
+    </td>
+</table>
+<br>
+<script src="http:/www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-428666-1";
+urchinTracker();
+</script>
+</BODY>
+</HTML>

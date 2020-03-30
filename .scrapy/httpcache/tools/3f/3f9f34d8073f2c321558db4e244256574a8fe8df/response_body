@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="Kenny Billiau (kenny dot billiau at psb dot ugent dot be)" />
+        <link rel="icon" href="/img/logo.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon" />
+        <title>An integrated network of Arabidopsis growth regulators and its use for prioritization</title>
+        <link rel="stylesheet" type="text/css" href="/css/cmijn.css" />
+        <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+        <!--[if lt IE 7]>
+        <style type="text/css">
+             h1 div, h2 div {
+                right: 110px;
+            }
+
+        </style>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div id="header">
+
+            <div class="banner">
+                 <div style="position: relative; top: 0px; left: -80px; margin-left: auto; margin-right: auto; padding-bottom: 5px;">
+                     <a href="/"><div class="beg_cutout">Bioinformatics &amp; Evolutionary Genomics</div></a>
+                </div>
+                <ul class="nav_top" id='menu'>
+                    <li><a href="/people">People</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/research">Research</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/genomes">Genomes</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/publications">Publications</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/software">Software</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/links">Links</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/intranet">Intranet</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/links/press">Press</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="body">
+            <div id="chest">
+                <table style="border: 0px; background: #eee; padding: 0px; margin: 0px;">
+                    <tr>
+                        <td rowspan="2" style="background-color: #fff; border: 1px #aaa solid; padding: 0px; margin: 0px; width: 630px;">
+
+<style>
+h1, h2{
+  text-align: center;
+}
+
+#inner-content{
+margin-left: 1em;
+}
+</style>
+
+
+<h1>An integrated network of Arabidopsis growth regulators and its use for prioritization</h1>
+<h2>Ehsan Sabaghian<sup>1,2</sup>, Zuzanna Drebert<sup>1,2,3</sup>, Dirk Inz&eacute;<sup>*1,2</sup>, Yvan Saeys<sup>*1,2,4&sect;</sup></h2>
+
+<div id="inner-content">
+<div id="aff">
+<p><sup>1</sup> Department of Plant Systems Biology, VIB, Technologiepark 927, 9052 Gent, Belgium.</p>
+<p><sup>2</sup> Department of Plant Biotechnology and Bioinformatics, Ghent University, Technologiepark 927, 9052 Gent, Belgium.</p>
+<p><sup>3</sup> Current address: Department of Radiation Oncology and Experimental Cancer Research, Laboratory of Experimental Cancer Research, Ghent University Hospital, 9052 Ghent, Belgium.</p>
+<p><sup>4</sup> Department of Molecular Biomedical Research, VIB, Technologiepark 927, 9052 Gent, Belgium</p>
+
+<p>
+<sup>&sect;</sup> Corresponding author <br />
+<sup>*</sup> Contributed equally
+</p>
+<p>
+Email addresses:
+<ul>
+<li>ES: <a href="mailto:ehsan.sabaghian@psb.vib-ugent.be">ehsan.sabaghian@psb.vib-ugent.be</a></li>
+<li>ZD: <a href="mailto:zuzanna.drebert@ugent.be">zuzanna.drebert@ugent.be</a></li>
+<li>DI: <a href="mailto:dirk.inze@psb.vib-ugent.be">dirk.inze@psb.vib-ugent.be</a></li>
+<li>YS: <a href="mailto:yvan.saeys@ugent.be">yvan.saeys@ugent.be</a></li>
+</ul>
+</p>
+</div>
+
+<div id="content">
+<h3>ABSTRACT</h3>
+<p>
+Elucidating the molecular mechanisms that govern plant growth has been an important topic in plant research, and current advances in large scale data generation call for computational tools that efficiently combine these different data sources to generate novel hypotheses.  In this work, we present a novel, integrated network that combines multiple large scale data sources to characterize growth regulatory genes in Arabidopsis, one of the main plant model organisms.  The contributions of this work are two-fold: first we characterize a set of carefully selected growth regulators with respect to their connectivity patterns in the integrated network, and subsequently we explore to which extent these connectivity patterns can be used to suggest new growth regulators.  Using a large-scale comparative study, we design new supervised machine learning methods to prioritize growth regulators.  Our results show that these methods significantly improve upon current state-of-the-art prioritization techniques, and are able to suggest meaningful new growth regulators.   In addition, the integrated network is made available to the scientific community, providing a rich data source that will be useful for many biological processes, not necessarily restricted to plant growth.
+</p>
+
+<h3>DOWNLOADS</h3>
+<p>
+<strong>Networks</strong>
+<ul>
+<li><a href="AGRIS.rar">AGRIS</a></li>
+<li><a href="GeneMANIA.rar">GeneMANIA</a></li>
+<li><a href="GENIE3.rar">GENIE3</a></li>
+<li><a href="MaMut.rar">MaMut</a></li>
+<li><a href="PCC.rar">PCC</a></li>
+<li><a href="PPI.rar">PPI</a></li>
+<li><a href="Text_mining.rar">Text mining</a></li>
+<li><a href="Total.rar">Total network</a></li>
+</ul>
+<strong>Final ranking</strong>
+<ul>
+<li><a href="Ranking.pdf">List of all ranking's method output</a></li>
+</ul>
+</p>
+
+</div>
+
+                        </td>
+                        <td style="padding: 0px; padding-left: 5px; margin: 0px; width: 165px;">
+                            <div id="logo"><a href="/"><img src="/img/logos/beg_logo.png" class="nopadding" style="background-color: #FFF; border: 5px #FFF solid;"></a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: bottom; padding: 0px; padding-left: 5px; margin: 0px;">
+                            <div id="credits">
+                                <div style="border: 1px #ccc solid; background-color: #fff; padding: 4px;">
+												<a href="http://www.psb.ugent.be/" target="_new"><img src="/img/logos/psb_logo.png" alt="Logo PSB" style="padding: 0px 0px 4px 0px;" /></a>
+                                    <a href="http://www.vib.be/" target="_new"><img src="/img/logos/VIB_logo_transp_pos_100px.png" border="0" alt="Logo VIB" style="padding: 0px 2px 0px 0px;" /></a>
+
+                                    <a href="http://www.ugent.be/" target="_new"><img src="/img/logos/logo_UGent_EN_RGB_140_color_cropped.png" border="0" alt="Logo Ugent" style="padding: 0px;" /></a>
+                                    <div style="text-align: center;"><a href="/links/credits">credits</a></div>
+                                </div>
+                                <br />
+                                <div class="begtinytext">
+                                    <strong>Contact: </strong><br />
+                                    VIB / UGent<br />
+
+                                    Bioinformatics &amp; Evolutionary Genomics<br />
+                                    Technologiepark 927<br />
+                                    B-9052 Gent<br />
+                                    BELGIUM<br />
+                                    +32 (0) 9 33 13807 (phone)<br />
+
+                                    +32 (0) 9 33 13809 (fax)<br />
+                                    <span style="white-space: nowrap;">
+                                    <script type="text/javascript">
+//<![CDATA[
+<!--
+            var pre = 'yves.vandepeer';
+        var post = 'psb.vib-ugent.be';
+        document.write('<a h' + 'r' + 'e' + 'f' + '=\'m' +  'a' + 'i' + 'l' + 't' + 'o:' + pre + '' + '' + '' + '@'  + '' + '' + '' + post + '\'>');
+        document.write(pre + '' + '@' + '' + post + '</a>');
+        //-->
+        //]]>
+        </script>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <div class="banner">
+                <ul class="nav_top">
+                    <li><a href="/people">People</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/research">Research</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/genomes">Genomes</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/publications">Publications</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/software">Software</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/links">Links</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/intranet">Intranet</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/links/press">Press</a></li>
+                </ul>
+            </div>
+            <div id="search">
+                <!-- Google CSE Search Box Begins  -->
+                  <form id="searchbox_011301089360580776749:r_af4s3tibs" action="http://www.google.com/cse" style="display: inline;">
+                    <input type="hidden" name="cx" value="011301089360580776749:r_af4s3tibs" />
+
+                    <input type="hidden" name="cof" value="FORID:0" />
+                    <input name="q" type="text" size="40" />
+                    <input type="submit" name="sa" value="Search this website" />
+                  </form>
+                  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_011301089360580776749%3Ar_af4s3tibs"></script>
+                <!-- Google CSE Search Box Ends -->
+            </div>
+        </div>
+
+        <hr />
+        <div style="text-align: center; left: -80px; position: relative; padding-bottom:5px">Don't hesitate to contact the <script type="text/javascript">
+        //<![CDATA[
+        <!--
+            var pre = 'bsb-webmaster';
+        var post = 'psb.vib-ugent.be';
+        document.write('<a h' + 'r' + 'e' + 'f' + '=\'m' +  'a' + 'i' + 'l' + 't' + 'o:' + pre + '' + '' + '' + '@'  + '' + '' + '' + post + '\'>');
+        document.write('webmaster' + '</a>');
+        //-->
+        //]]>
+        </script> in case of problems with the website!</div>
+                            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+            var pageTracker = _gat._getTracker("UA-3992537-1");
+            pageTracker._initData();
+            pageTracker._trackPageview();
+            </script>
+				
+				        		  
+     </body>
+</html>

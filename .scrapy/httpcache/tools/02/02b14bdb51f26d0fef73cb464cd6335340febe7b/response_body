@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="static/ico/favicon.ico">
+
+    <title>ComParaLogS - CAB Unina</title>
+                              
+    
+    
+        <link href="/static/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="/static/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+
+	<!--
+        <link href="/static/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="/static/fa/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
+	-->
+        <script src="/static/js/modernizr.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+        <script src="/static/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="/static/js/retina-1.1.0.js" type="text/javascript"></script>
+        <script src="/static/js/jquery.hoverdir.js" type="text/javascript"></script>
+        <script src="/static/js/jquery.hoverex.min.js" type="text/javascript"></script>
+        <script src="/static/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+        <script src="/static/js/jquery.isotope.min.js" type="text/javascript"></script>
+        <script src="/static/js/custom.js" type="text/javascript"></script>
+    
+    <script src="/static/js/jquery.paging.js" type="text/javascript"></script>
+    <script src="/static/js/cola.js" type="text/javascript"></script>
+    <script src="/static/js/cytoscape.min.js" type="text/javascript"></script>
+    <script src="/static/js/cytoscape-cola.js" type="text/javascript"></script>
+    <script src="/static/js/search.js" type="text/javascript"></script>
+    <script src="/static/js/view.js" type="text/javascript"></script>
+    <script src="/static/js/blazy.min.js" type="text/javascript"></script>
+    <script src="/static/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="/static/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://d3js.org/d3.v4.min.js" type="text/javascript"></script>
+    <script src="/static/js/highcharts/highcharts.js" type="text/javascript"></script>
+    <script src="/static/js/highcharts/highcharts-more.js" type="text/javascript"></script>
+    <script src="/static/js/highcharts/highcharts-3d.js" type="text/javascript"></script>
+    <script src="/static/js/highcharts/modules/exporting.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+</head>
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/gene/search">ComParaLogS: a COMparative platform of PARAlog and orthoLOG geneS from Tomato and Grapevine</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="http://biosrv.cab.unina.it">HOME</a></li>
+            <li><a href="/comparalogs/about">ABOUT</a></li>
+            <li><a href="/comparalogs/contact">CONTACTS</a></li>
+            <!--<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="single-post.html">SINGLE POST</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="single-project.html">SINGLE PROJECT</a></li>
+              </ul>
+            </li>-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div id="page-content">
+    
+	<!-- *****************************************************************************************************************
+	 BLUE WRAP
+	 ***************************************************************************************************************** -->
+
+
+	<!-- *****************************************************************************************************************
+	 TITLE & CONTENT
+	 ***************************************************************************************************************** -->
+
+    <div class="row"><div class="spacing"></div></div>
+	 <div class="container mt">
+	 	<div class="row">
+		<h3>What is ComParaLogS?</h3>
+	    <p>ComParaLogS is a comparative platform to investigate orthologs and paralogs from tomato and grapevine, defined exploiting a multilevel approach based on similarities detected simultaneously at gene, transcript and protein level (see "About" section). Moreover, reconciled functional descriptions, as well as common or peculiar enzymatic classes and protein domains from tomato and grapevine, together with a trascriptional characterization of both plants, contributed a comprehensive set of information useful to comparatively exploit the two species gene annotations and investigate on differences between species with climacteric and non-climacteric fruits. </p>
+		 	<h3>Database search</h3>
+            <p>You can search the database typing any keyword (eg.: gene ID, functional definition, other) in the field below. Results will appear while you type a keyword.</p>
+		 	<div class="col-lg-9 col-lg-offset-0">
+                <form action="http://biosrv.cab.unina.it/gene/searchpost" id="genesearchform" method="POST">
+                <div class="form-row">
+                    Term: 
+                    <input type="text" id="sterm" name="sterm" autocomplete="off">
+                </div>
+                </form>
+
+                <div id="sresbox">
+                </div>
+                <div id="gene-results">
+
+                </div>
+		 	</div>
+		 	
+		 	<div class="col-lg-3 col-lg-offset-0">
+                <img src="/static/img/comparalogs_logo.png" class="logo">
+                <img src="/static/img/logo_cost.png" class="logo">
+                <img src="/static/img/logo_federico.png" class="logo">
+
+		 	</div>
+		 	
+	 	</div><! --/row -->
+            <div class="alert alert-warning" role="alert">
+                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> This database is under costant maintenance. Please send your comments if you believe it could improve our service. </strong>
+            </div>
+        <div class="spacing"></div>
+	 </div><! --/container -->
+	 
+
+
+	 	 
+
+
+
+    <script>
+// Portfolio
+(function($) {
+	"use strict";
+	var $container = $('.portfolio'),
+		$items = $container.find('.portfolio-item'),
+		portfolioLayout = 'fitRows';
+		
+		if( $container.hasClass('portfolio-centered') ) {
+			portfolioLayout = 'masonry';
+		}
+				
+		$container.isotope({
+			filter: '*',
+			animationEngine: 'best-available',
+			layoutMode: portfolioLayout,
+			animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false
+		},
+		masonry: {
+		}
+		}, refreshWaypoints());
+		
+		function refreshWaypoints() {
+			setTimeout(function() {
+			}, 1000);   
+		}
+				
+		$('nav.portfolio-filter ul a').on('click', function() {
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector }, refreshWaypoints());
+				$('nav.portfolio-filter ul a').removeClass('active');
+				$(this).addClass('active');
+				return false;
+		});
+		
+		function getColumnNumber() { 
+			var winWidth = $(window).width(), 
+			columnNumber = 1;
+		
+			if (winWidth > 1200) {
+				columnNumber = 5;
+			} else if (winWidth > 950) {
+				columnNumber = 4;
+			} else if (winWidth > 600) {
+				columnNumber = 3;
+			} else if (winWidth > 400) {
+				columnNumber = 2;
+			} else if (winWidth > 250) {
+				columnNumber = 1;
+			}
+				return columnNumber;
+			}       
+			
+			function setColumns() {
+				var winWidth = $(window).width(), 
+				columnNumber = getColumnNumber(), 
+				itemWidth = Math.floor(winWidth / columnNumber);
+				
+				$container.find('.portfolio-item').each(function() { 
+					$(this).css( { 
+					width : itemWidth + 'px' 
+				});
+			});
+		}
+		
+		function setPortfolio() { 
+			setColumns();
+			$container.isotope('reLayout');
+		}
+			
+		$container.imagesLoaded(function () { 
+			setPortfolio();
+		});
+		
+		$(window).on('resize', function () { 
+		setPortfolio();          
+	});
+})(jQuery);
+</script>
+
+
+	
+	<!-- *****************************************************************************************************************
+	 FOOTER
+	 ***************************************************************************************************************** -->
+	 <div id="footerwrap">
+	 	<div class="container">
+		 	<div class="row">
+		 		<!--
+				<div class="col-lg-4">
+		 			<h4>About</h4>
+		 			<div class="hline-w"></div>
+		 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+		 		</div>
+		 		<div class="col-lg-4">
+		 			<h4>Social Links</h4>
+		 			<div class="hline-w"></div>
+		 			<p>
+		 				<a href="#"><i class="fa fa-dribbble"></i></a>
+		 				<a href="#"><i class="fa fa-facebook"></i></a>
+		 				<a href="#"><i class="fa fa-twitter"></i></a>
+		 				<a href="#"><i class="fa fa-instagram"></i></a>
+		 				<a href="#"><i class="fa fa-tumblr"></i></a>
+		 			</p>
+		 		</div>
+		 		<div class="col-lg-4">
+		 			<h4>Our Bunker</h4>
+		 			<div class="hline-w"></div>
+		 			<p>
+		 				Some Ave, 987,<br/>
+		 				23890, New York,<br/>
+		 				United States.<br/>
+		 			</p>
+		 		</div>
+		 		-->
+		 	</div><! --/row -->
+	 	</div><! --/container -->
+	 </div><! --/footerwrap -->
+	 
+    </div>
+</body>
+</html>

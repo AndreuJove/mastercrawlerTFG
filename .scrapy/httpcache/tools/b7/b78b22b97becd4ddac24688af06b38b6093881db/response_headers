@@ -1,0 +1,23 @@
+Content-Type: text/html; charset=UTF-8
+Date: Mon, 30 Mar 2020 18:45:08 GMT
+Server: nginx/1.17.5
+X-Drupal-Dynamic-Cache: HIT
+Link: <https://www.ecdc.europa.eu/en/publications-data/toolkit-application-calculate-dalys>; rel="alternate"; hreflang="en", <https://www.ecdc.europa.eu/en/publications-data/toolkit-application-calculate-dalys>; rel="canonical", <https://www.ecdc.europa.eu/en/node/17603>; rel="shortlink", <https://www.ecdc.europa.eu/en/publications-data/toolkit-application-calculate-dalys>; rel="revision"
+X-Ua-Compatible: IE=edge
+Content-Language: en
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Vary: Cookie,Accept-Encoding
+X-Generator: Drupal 8 (https://www.drupal.org)
+Last-Modified: Mon, 30 Mar 2020 18:45:08 GMT
+Etag: "1585593908-gzip"
+Content-Encoding: gzip
+Cache-Control: public,max-age=0,s-maxage=0
+X-Varnish: 760657748
+Via: 1.1 varnish (Varnish/6.0), 1.1 eb28dde7b66308b26496e3a543c93412.cloudfront.net (CloudFront)
+Accept-Ranges: bytes
+X-Cache: Miss from cloudfront
+X-Amz-Cf-Pop: MAD50-C1
+X-Amz-Cf-Id: 8A2XlBJfV4PAG42djAyMLRn1YlHaqDfQ-iEylpiDqULuUaUXjC4Rlg==
+Age: 0

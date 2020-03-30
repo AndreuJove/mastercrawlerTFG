@@ -1,0 +1,22 @@
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Type: text/html; charset=UTF-8
+P3P: CP="CAO PSA OUR"
+Server: Apache
+X-Akamai-Transformed: 9 32827 0 pmb=mNONE,1mTOE,2mRUM,3
+Expires: Mon, 30 Mar 2020 18:44:22 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 30 Mar 2020 18:44:22 GMT
+Vary: Accept-Encoding
+Set-Cookie: AKA_A2=A; expires=Mon, 30-Mar-2020 19:44:22 GMT; path=/; domain=thermofisher.com; secure; HttpOnly
+Set-Cookie: ak_bmsc=F459DE4504FE877DF7496E020488BC94B92BB423715C0000063E825E23BC5501~pleFrr64cjb3CeFSqHsyBPDaAvKrfCOF0mbxT0Mlwhb7aRo6PJffBfm82TUd0x4JBv6HmBoNY54w4oIvMZbI4lG/oD52/TXrVi1DGAA/l1p6u61hrR5u6OAinK7QzzW+4m1/EQiAML5zZ0Cjbgyv/YMrt53sE0GN3kDNA5T8kIo/ZzHqUaAzU48ii6YHOy7bnQtYlhIkmQiyieHvSToHRN/JaTUBNr37sgLunI0ZxjV6E=; expires=Mon, 30 Mar 2020 20:44:22 GMT; max-age=7200; path=/; domain=.thermofisher.com; HttpOnly
+Set-Cookie: CK_LANG_CODE=es; Domain=.thermofisher.com; Path=/; Secure; SameSite=None
+Set-Cookie: CK_ISO_CODE=es; Domain=.thermofisher.com; Path=/; Secure; SameSite=None
+Set-Cookie: akacd_Prod_AWS_Publish=3763046661~rv=25~id=90b5ff89d28955ba75c8eb3c9bc9d77c; path=/;; Secure; SameSite=None
+Set-Cookie: bm_mi=E571BD32670471FEA81B03DC9212454B~OC6xkQbf0hPxroPvy8Iy5+yeZzgnY5kvpIdqr3A+bgPXG46MM5Mw1J/xua9U02QNTffciH6+7/nNU5oth2GBFvAMQ+uPoEKq5W7yHo3ZRipvuWqXYtpHcEW4stuUUIkKr6XFjGwhnlKSkW2LxEeBdUblPygi2DsR4+N/cfGJj3C+ifzdkWYa2azXrHDCDMMYGnT6ZsSof4wtlFHGa2N5PII5IVZYqEYP1kePKWh6ZEeLxAEk4a+g2xE9zQclGNRDtthjft/OIxZw0TxpJze01MBoDSe55yEKJ9eGYOxeWv88vmvLoRRUDx3Z0de6mB0j5yMCakqbBWHNbzdpGFafsYrcKeZ+qrsDdzSQskjKft15BvbvuQWfkbz/ZOVM80rrkvMI39iZyOOMzhLcmkICsm2PpjFmDGh7bV/fVyJqF3UKiiPBqIOmOhO/fkgLexo6; Domain=.thermofisher.com; Path=/; Max-Age=0; HttpOnly
+Server-Timing: cdn-cache; desc=MISS
+Server-Timing: edge; dur=127
+Server-Timing: origin; dur=376
+X-Akam-Sw-Version: 0.5.0
+X-Tls-Version: tls1.3

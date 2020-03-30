@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="bioinformatics, computer science, RNA structure, algorithms, graph theory, machine learning">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="RI.css">
+	<title>RNA Informatics Research at UGA</title>
+</head>
+
+<body class="RIbody">
+
+<div class="RIlogocontainer">
+	<a class="RIlogoitem" href="index.php"><img class="w3-image" src="00_images/Logo-RNA-Informatics_B.gif" width="280" height="80" alt="Logo RNA Informatics"></a>
+	<a class="RIlogoitem" href="https://www.uga.edu/"><img class="w3-image" src="00_images/Logo-UGA.png" width="280" height="80" alt="Logo UGA"></a>
+</div>
+
+<!-- /* flex container for main menu */ --> 
+<div class="RImenumaincontainer w3-border w3-border-black">
+	<a class="RImenumainselect" href="index.php">Overview</a>
+	<a class="RImenumainitem" href="01_research.php">Research</a>
+	<a class="RImenumainitem" href="02_people.php">People</a>
+	<a class="RImenumainitem" href="03_news.php">News</a>
+</div>
+
+<!-- /* contents for overview page */ --> 
+<div class="w3-container w3-pale-yellow w3-text-black">
+	<figure class=" RIfigFlexLeft">
+		<img class="w3-image" src="00_images/cai.jpg" width="144" height="148" alt="Liming Cai">
+		<figcaption class="RIfigcaptionB">Liming Cai</figcaption>
+	</figure>
+	<figure class=" RIfigFlexRight">
+		<img class="w3-image" src="00_images/robinson.jpg" width="144" height="144" alt="Bob Robinson">
+		<figcaption class="RIfigcaptionB">Bob Robinson</figcaption>
+	</figure>
+	<figure class=" RIfigFlexLeft">
+		<img class="w3-image" src="00_images/malmberg.jpg" width="144" height="144" alt="Russell Malmberg">
+		<figcaption class="RIfigcaptionB">Russell Malmberg</figcaption>
+	</figure>
+	<figure class=" RIfigFlexRight">
+		<img class="w3-image" src="00_images/momany.jpg" width="144" height="144" alt="Cory Momany">
+		<figcaption class="RIfigcaptionB">Cory Momany</figcaption>
+	</figure>
+	<h1>Overview</h1>
+	<p>The RNA Informatics group is a collaborative effort among computer scientist / mathematicians and biologists at the 
+		University of Georgia which currently includes four faculty - Liming Cai (Computer Science), Russell Malmberg (Plant Biology), 
+		Bob Robinson (Computer Science and Mathematics), and Cory Momany (Pharmaceutical and Biomedical Sciences) - we began in 2002 
+		when Liming and Russell met and found common interests.  We work in a number of areas of bioinformatics, especially those 
+		which require development and implementation of new computational methods.</p>
+	<p>The specific focus of our efforts has been the biological macromolecule RNA and its structure.  RNAs are key molecules in 
+		cells and organisms, with roles as informational molecules, functional (enzymatic) molecules, and regulatory functions controlling 
+		other molecules and processes.  There are tens of thousands of kinds of RNAs, with large amounts of primary sequence data being 
+		continually generated; computational algorithms are needed to analyze all the data and to predict features, structures and 
+		functions for these RNA sequences.  In our research we develop novel algorithms and software to model RNA structure and predict 
+		various features of RNAs from their primary sequence.</p>
+	<p>The computational methods we use are often based upon graph theory and on machine learning as methods to model RNA structures.  
+		We develop new approaches to reducing computational complexity, making a problem, which initially seems to have high computational 
+		complexity, feasible to solve in a reasonable time.  Most of these ideas are Liming's.</p>
+	<p>We are especially pleased with the successes our student alumni have had in their careers, since graduating from the University 
+		of Georgia and from our research group.</p>
+</div>
+
+<div class="w3-container RIfooter">
+<p>The content and opinions expressed on this Web page do not necessarily reflect the views 
+of, nor are they endorsed by, the University of Georgia or the University System of Georgia.  
+Copyright &copy; 2019.</p>
+</div>
+
+</body>
+</html>

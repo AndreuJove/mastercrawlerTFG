@@ -1,0 +1,29 @@
+Accept-Ranges: bytes
+Age: 28
+Cache-Control: max-age=16588800, public
+Content-Encoding: gzip
+Content-Language: en
+Content-Security-Policy: report-uri /report-csp-violation
+Content-Type: text/html; charset=UTF-8
+Date: Mon, 30 Mar 2020 18:46:02 GMT
+Etag: "1585593933"
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Last-Modified: Mon, 30 Mar 2020 18:45:33 GMT
+Link: <https://www.anl.gov/>; rel="shortlink", <https://www.anl.gov/>; rel="canonical"
+Link: <https://www.anl.gov/node/64816>; rel="revision"
+Server: nginx
+Strict-Transport-Security: max-age=31536000
+Vary: Cookie,Accept-Encoding
+Via: varnish
+X-Ah-Environment: prod
+X-Cache: HIT
+X-Cache-Hits: 3
+X-Content-Security-Policy: report-uri /report-csp-violation
+X-Content-Type-Options: nosniff
+X-Drupal-Dynamic-Cache: UNCACHEABLE
+X-Frame-Options: SameOrigin
+X-Generator: Drupal 8 (https://www.drupal.org)
+X-Request-Id: v-a334a4dc-72b6-11ea-be32-a7bdc14663ac
+X-Ua-Compatible: IE=edge
+X-Webkit-Csp: report-uri /report-csp-violation
+X-Xss-Protection: 1; mode=block

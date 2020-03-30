@@ -1,0 +1,192 @@
+<html>
+<head><title>bioinformatics@IBCN-iMinds: BLSSPELLER</title>
+<style>
+table,th,td
+{
+border:1px solid black;
+}
+</style>
+</head>
+
+<body>
+<h2>BLSSPELLER: A Software package for exhaustive comparative motif discovery in the cloud </h2>
+
+  
+<h3>Contact</h3>			
+<ul>
+<li> <a href="http://bioinformatics.oxfordjournals.org/content/early/2015/08/08/bioinformatics.btv466.abstract">BLSSpeller: exhaustive comparative discovery of conserved cis-regulatory elements
+ </a>
+<li>Authors:      Dieter De Witte, Jan Van De Velde, Dries Decap, Michiel Van Bel, Pieter Audenaert, Piet Demeester, Bart Dhoedt, Klaas Vandepoele and Jan Fostier 
+<li>Department of Information Technology, Internet Based Communication Networks and Services (IBCN), Ghent University - iMinds
+<li>First published online: August 8, 2015</li>
+<li>Email: <a href="mailto:drdwitte@gmail.com">drdwitte@gmail.com</a> or <a href="mailto:jan.fostier@intec.ugent.be">jan.fostier@intec.ugent.be</a>
+</ul>  
+
+<h3> Supplementary Visualizations </h3>
+  
+<ul>
+<!-- <li><a href="MotifVisualizations/AFABGlobal.html"> Global FDR comparison between Alignment-Free and Alignment-based discovery  </a> <a href="MotifVisualizations/AFABGlobal.gif"> DEMO </a></li> -->
+<li><a href="AFABHistograms.html"> FDR comparison for specific motif types (motif length k, motif degeneracy s) </a> </li>
+<li><a href="NumberOfMotifs.html"> Number of motifs in a single gene family (100 measurements) for different motif lengths and alphabets </li>
+<li><a href="MotifDiscoveryTime.html"> Time to explore motif search space for a single gene family (100 measurements) </a></li>
+<!--<li><a href="MotifVisualizations/MotifDiscoveryTimeMR.html"> Comparison of gene family processing time with MapReduce implementation (including streaming to disk)</a></li>-->
+</ul>
+
+<h3> Supplementary BED files used for overlap analysis  </h3>
+
+<p>
+<a href="BLSSpeller_suppdata_Jvdv20150810.tar.gz">Archive of BED files: </a>
+<ul>
+<li>BLS files (contain phylogenetic conserved genomic regions given certain cutoffs, in bed file format): osa/zma_C90F20B15.bed </li>
+
+<li>Conserved known motif files (conserved known motif files, from CisBP database v1.02): osa/zma_conserved_known_motifs_BLS15/95.bed </li>
+
+<li>DNase hypersensitive sites (regions of open chromatin, in bed file format): DNase1_hypersensitive_sites_osa.bed</li>
+
+
+
+</ul>
+
+
+<h3>License</h3>  
+The software is published under the GNU GENERAL PUBLIC LICENSE (Copyright (C) 2007 Free Software Foundation), of which a copy is included with the software. Alternatively, you can find the license <a href="http://www.gnu.org/licenses/gpl.html">here</a>.
+  
+<h3>Disclaimer</h3>					 
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+
+<h3>Source code and JARS from CloudSpeller software package </h3>
+
+<table style="width:1100px">
+<tr>
+  <td>Description </td>
+  <td>Standalone JAR (local testing) </td>		
+  <td>Stripped JAR (distributed processing)</td>
+  <td>Last update</td> 
+  </tr>
+<tr>
+  <td><p><b>Source code</b></p></td>
+  <td><a href="SourceCodeCloudSpeller.zip"> Original Source code </a></td>
+  <td><a href="https://github.com/drdwitte/CloudSpeller"> Latest version of code on Github </a></td>	  
+  <td> July 15, 2015</td>
+</tr>
+
+
+<tr>
+  <td><p><b>Cloud algorithm</b></p></td>
+  <td><p></p></td>		
+  <td><p></p></td>
+  <td><p></p></td>
+</tr>
+
+<tr>
+  <td> CloudSpeller (both AF and AB) </td>
+  <td> <a href="CloudSpellerSA.jar"> CloudSpellerSA </a> </td>		
+  <td> <a href="CloudSpeller.jar"> CloudSpeller </a> </td>
+  <td> February 18, 2014 </td>
+</tr>
+<tr>
+  <td> Example settings file AF </td>
+  <td> <a href="settingsAF.txt"> settingsAF </a> </td>		
+  <td><p></p></td>
+  <td> February 18, 2014 </td>
+</tr>
+<tr>
+  <td> Example settings file AB </td>
+  <td> <a href="settingsAB.txt"> settingsAB </a> </td>		
+  <td><p></p></td>
+  <td> February 18, 2014 </td>
+</tr>
+
+<tr>
+  <td><p><b>Post processing</b></p></td>
+  <td><p></p></td>		
+  <td><p></p></td>
+  <td><p></p></td>
+</tr>
+
+<tr>
+  <td><p>Distributed AF Pattern Matcher</b></p></td>
+  <td> <a href="DBPMSA.jar"> DBPMSA </a> </td>		
+  <td> <a href="DBPM.jar"> DBPM </a> </td>
+  <td>February 18, 2014</td>
+</tr>
+
+<tr>
+  <td><p>Distributed AB Pattern Matcher</b></p></td>
+  <td> <a href="DBABPMSA.jar"> DBPMSA </a> </td>		
+  <td> <a href="DBABPM.jar"> DBPM </a> </td>
+  <td>February 18, 2014</td>
+</tr>
+
+<tr>
+  <td><p>Database Filter (C,F,BLS)  </b></p></td>
+  <td> <a href="FilterSA.jar"> FilterSA </a> </td>		
+  <td> <a href="Filter.jar"> Filter </a> </td>
+  <td>February 18, 2014</td>
+</tr>
+
+<tr>
+  <td><p> Best K Motifs per Permutation Group </b></p></td>
+  <td> <a href="BestKSA.jar"> BestKSA </a> </td>		
+  <td> <a href="BestK.jar"> BestK </a> </td>
+  <td>February 18, 2014</td>
+</tr>
+
+
+<tr>
+  <td><p><b>Monocots Datasets </b></p></td>
+  <td><p></p></td>  
+  <td><p></p></td>
+  <td><p></p></td>
+</tr>
+
+<tr>
+  <td><p>Monocots AF Real Dataset </p></td>
+  <td> <a href="MonocotFamiliesAgg10PBL1em6.zip"> AF real </a> </td>		
+  <td><p></p></td>
+  <td>February 18, 2014</td>
+</tr>
+
+<tr>
+  <td><p>Monocots AF Shuffled Dataset </p></td>
+  <td> <a href="MonocotFamiliesAgg10PBL1em6Shuffled1.zip"> AF shuffled </a> </td>		
+  <td><p></p></td>
+  <td>February 18, 2014</td>
+</tr>
+
+<tr>
+  <td><p>Monocots AB Real Dataset </p></td>
+  <td> <a href="MonocotFamiliesAgg10PBL1em6AB.zip"> AB real </a> </td>		
+  <td><p></p></td>
+  <td>February 18, 2014</td>
+</tr>
+
+<tr>
+  <td><p>Monocots AB Shuffled Dataset </p></td>
+  <td> <a href="AlignedFams2kbShuffledPerFamily.zip"> AB shuffled </a> </td>		
+  <td><p></p></td>
+  <td>February 18, 2014</td>
+</tr>
+
+
+<tr>
+  <td><p><b>User manual</b></p></td>
+  <td> <a href="CloudSpellerManual.pdf"> Manual </a> </td>
+  <td><p></p></td>		
+  <td>March 4, 2014</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>
+
+
+
+
+
+</body>
+</html>
+

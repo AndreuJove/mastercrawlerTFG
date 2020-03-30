@@ -1,0 +1,10 @@
+Cache-Control: public, max-age=0, must-revalidate
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 27 Mar 2020 06:28:44 GMT
+Etag: "0133acaa69127c5eaa2d7b706fddf126-ssl-df"
+Strict-Transport-Security: max-age=31536000
+Content-Encoding: gzip
+Age: 303514
+Server: Netlify
+Vary: Accept-Encoding
+X-Nf-Request-Id: 47e749ab-6dd3-4caa-a064-b65d1c02c44c-9591969

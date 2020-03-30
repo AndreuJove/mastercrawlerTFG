@@ -1,0 +1,19 @@
+Date: Mon, 30 Mar 2020 18:47:46 GMT
+Content-Type: text/html; charset=utf-8
+Server: GitHub.com
+Status: 200 OK
+Vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With
+Etag: W/"3eb58c6c040b195ed17716d1872a4759"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Expect-Ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+Content-Security-Policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com wss://live.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com
+Content-Encoding: gzip
+Set-Cookie: _gh_sess=Ze9p1ArGTymKpl%2BZ1taafmtEVCv0NNSf8L0P0urg1mPx6I3TAp1Cn1mRSUineVByn7sBWEC9gNaZWMr9kH7JBNDmDSN8MeJoBqpuOnGgQcHrsMpmHVl7WzMC07B83lEUBFCL%2Bi1lm3RdywrdZzCKMblOuSSU0zNr0HfxR%2B42dNMEU5cbhXWB%2BRLmbLVyDMYVIE1YdeM7GQQOmzzlEWEPSULZAPqURt%2FCtM3drJiwo9eHa4LHfe1Q8uKC3uEF4V8sS3oSsWrIw0JqE2HCb4ZajA%3D%3D--Z%2BEy8BLPqELV50gv--SsEzhWXskkBYMkK%2FilWW7Q%3D%3D; Path=/; HttpOnly; Secure
+Set-Cookie: _octo=GH1.1.671076184.1585594065; Path=/; Domain=github.com; Expires=Tue, 30 Mar 2021 18:47:45 GMT; Secure
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Tue, 30 Mar 2021 18:47:45 GMT; HttpOnly; Secure
+Accept-Ranges: bytes
+X-Github-Request-Id: D9E2:2D3AF:3A13D02:5491BD5:5E823ED1

@@ -1,0 +1,16 @@
+Date: Mon, 30 Mar 2020 18:50:08 GMT
+Content-Type: text/html; charset=utf-8
+Set-Cookie: __cfduid=dbeec218f3657cddbb3732ffeb7521bb31585594208; expires=Wed, 29-Apr-20 18:50:08 GMT; path=/; domain=.clickgenome.org; HttpOnly; SameSite=Lax
+Last-Modified: Sat, 28 Mar 2020 10:00:40 GMT
+Vary: Accept-Encoding
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'self' http: https: data: blob: 'unsafe-inline'
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 57c403ba8b66d681-MAD
+Content-Encoding: gzip

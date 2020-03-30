@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Collector landing page</TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.6  (Linux)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20130514;11495500">
+	<STYLE TYPE="text/css">
+		html{font-family: Verdana, sans-serif, Arial, Helvetica;}
+	</STYLE>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-41021111-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</HEAD>
+<BODY LANG="ca-ES" DIR="LTR">
+<DIV ALIGN="CENTER">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" >
+	<TR>
+		<TD HEIGHT="32" VALIGN="bottom">&nbsp;</TD>
+	</TR>
+	<TR>
+		<TD STYLE="background-color:#74afad">
+			<IMG SRC="logo.png" ALIGN="LEFT" BORDER="0">
+		</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" VALIGN="bottom">&nbsp;</TD>
+	</TR>
+	<TR>
+		<TD>
+			<TABLE WIDTH="100%"  BORDER="0" STYLE="border-spacing: 0px 0px" CELLPADDING="5">
+			<TR>
+				<TD STYLE="background-color:#74afad">
+					<P STYLE="font-family: Verdana, sans-serif, Arial, Helvetica; color: white; font-weight:bold"> WHAT IS</P>
+				</TD>
+				<TD WIDTH="10" STYLE="border: 0">
+				</TD>
+				<TD STYLE="background-color:#74afad">
+					<P STYLE="font-family: Verdana, sans-serif, Arial, Helvetica; color: white; font-weight:bold"> WHO</P>
+				</TD>
+			</TR>
+			<TR>
+				<TD STYLE="border: 2px solid #74afad">
+						<P STYLE="margin-bottom: 0cm; text-align:justify;">Collector is a tool that allows extracting from the
+						<A HREF="http://www.openphacts.org/">Open PHACTS Discovery
+						platform</A> series of compounds annotated with experimental data
+						that can be used directly for building QSAR predictive models. Currently it is being used in
+						the framework of the <A HREF="http://www.etoxproject.eu/">eTOX
+						project</A>.
+						</P>
+						<P STYLE="margin-bottom: 0cm">Collector implements a flexible
+						collection of filters for selecting the target, the biological
+						data ranges and the physicochemical properties of the compounds.
+						</P>
+						<P>Collector was intended to be installed locally and implements a
+						local database for keeping record of the data extracted. The
+						application provides a web based user a command line user
+						interface.
+						</P>
+				</TD>
+				<TD WIDTH="10" STYLE="border: 0">
+				</TD>
+				<TD STYLE="border: 2px solid #74afad">
+					<P STYLE="margin-bottom: 0cm; text-align:justify;">Collector is being developed at the
+						<A HREF="http://phi.imim.es/">Pharmacoinformatics group (PhI)</A>, of the
+                                                <A HREF="http://grib.imim.es/">Research Programme on Biomedical Informatics (GRIB)</A>, IMIM/UPF, located in Barcelona (Spain).
+					</P>
+					<P> Contacts: </P>
+					<P> Manuel Pastor: manuel.pastor@upf.edu</P>
+					<P> Oriol L. Massaguer: oriol.lopez@upf.edu</P>
+				</TD>
+			</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="10" VALIGN="bottom">&nbsp;</TD>
+	</TR>
+	<TR>
+		<TD >
+			<TABLE WIDTH="100%"  BORDER="0" STYLE="border-spacing: 0px 0px"  CELLPADDING="0">
+			<TR>
+				<TD ROWSPAN="2" STYLE="border: 0;background-color:#74afad " align="center">
+					<IMG SRC="index_html_m6d3b61a2.png" WIDTH="570" HEIGHT="363" BORDER="0">
+				</TD>
+				<TD WIDTH="10" STYLE="border: 0">
+				</TD>
+				<TD STYLE="background-color:#74afad">
+					<P STYLE="font-family: Verdana, sans-serif, Arial, Helvetica; color: white; font-weight:bold"> DOWNLOAD</P>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH="10" STYLE="border: 0">
+
+				</TD>
+				<TD STYLE="border: 2px solid #74afad">
+					<UL>
+						<P>Installing instructions and links to the binary package (linux):</P>
+						<LI><P><A HREF="README">Collector v1.5.0 README</A></P>
+						<LI><P><A HREF="collector-1.5.0.tar.gz">Collector binary 1.5.0.tar.gz</A></P>
+					</UL>
+				</TD>
+			</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="10" VALIGN="bottom">&nbsp;</TD>
+	</TR>
+	<TR>
+		<TD >
+			<TABLE WIDTH="100%" STYLE="border-spacing: 0px 0px"  CELLPADDING="5">
+			<TR>
+				<TD STYLE="background-color:#74afad">
+					<P STYLE="font-family: Verdana, sans-serif, Arial, Helvetica; color: white; font-weight:bold">USER MANUAL</P>
+				</TD>
+				<TD WIDTH="10" STYLE="border: 0">
+				</TD>
+				<TD ROWSPAN="2"  STYLE="border: 0;background-color:#74afad " align="center">
+					<IMG SRC="index_html_m74261257.png" NAME="graphics1" ALIGN="CENTER" WIDTH=570 HEIGHT=363 BORDER=0>
+				</TD>
+			</TR>
+			<TR>
+				<TD STYLE="border: 2px solid #74afad">
+					<UL>
+						<P>Quickstart guide and User manual:</P>
+						<LI><P STYLE="margin-bottom: 0cm"><A HREF="Collector_readme_&amp;_quickstart_v1.5.0.pdf">Collector readme &amp; quickstart v1.5.0</A></P>
+						<LI><P><A HREF="Collector_Setup_and_user_manual_v1.5.0.pdf">Collector setup and user manual v1.5.0</A></P>
+					</UL>
+				</TD>
+				<TD WIDTH="10" STYLE="border: 0">
+				</TD>
+			</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="10" VALIGN="bottom">&nbsp;</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" VALIGN="bottom" STYLE="background-color:#74afad">&nbsp;</TD>
+	</TR>
+	<TR>
+		<TD >
+			<TABLE WIDTH="100%" BORDER="0" >
+				<TR>
+					<TD align="center">
+						<IMG SRC="index_html_m66cd1a97.jpg" NAME="graphics5" ALIGN=LEFT WIDTH=232 HEIGHT=221 BORDER=0 >
+					</TD>
+					<TD align="center">
+						<IMG SRC="index_html_72985aa3.png" NAME="graphics4" ALIGN=LEFT WIDTH=315 HEIGHT=118 BORDER=0>
+					</TD>
+					<TD align="center">
+						<IMG SRC="index_html_m43118eb4.jpg" NAME="graphics3" ALIGN=LEFT WIDTH=199 HEIGHT=97 BORDER=0>
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" VALIGN="bottom" STYLE="background-color:#74afad">
+			<P ALIGN=CENTER STYLE="margin-bottom: 0cm">Collector is distributed under <A HREF="http://www.gnu.org/licenses/gpl.html">GPL v3 license</A>.
+		</TD>
+	</TR>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

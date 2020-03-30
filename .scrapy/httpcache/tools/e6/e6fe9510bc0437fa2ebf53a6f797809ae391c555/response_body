@@ -1,0 +1,59 @@
+
+<html>
+
+<head>
+<title>Bayz Manual</title>
+<link rel="stylesheet" type="text/css" href="bayzbiz.css">
+</head>
+
+<body>
+
+<!-- the title part is the top of the page with text bayz manual 
+I wanted to make it a link with special formatting (not showing as a link) using: <a class="hiddenH1link" href="index.php">Bayz Manual</a>
+and hiddenH1link has formatting of a: elements as H1, but it doesn't work yet.....
+--!>
+<div id="title">
+<span class="titlelink"><a  href="index.php">Bayz Manual</a></span>
+</div>
+
+<!-- the header is now just a blue line, no text or links in it! --!>
+<div id="header">
+</div>
+
+<!-- the nav and section div's make the body, navigation bar on the left --!>
+<div id="nav">
+              <span class="actseclink"><a href="index.php?sc=01">Home</a><br></span>
+                              <span class="actpagelink"><a href="index.php?sc=01&pg=01"><b>-</b> Home</a><br></span>
+                              <span class="seclink"><a href="index.php?sc=02">Downloads</a><br></span>
+                      <span class="seclink"><a href="index.php?sc=03">Bayz in R</a><br></span>
+                      <span class="seclink"><a href="index.php?sc=04">Bayz Scripts</a><br></span>
+                      <span class="seclink"><a href="index.php?sc=08">Output Summaries</a><br></span>
+                      <span class="seclink"><a href="index.php?sc=09">Various Subjects</a><br></span>
+                      <span class="seclink"><a href="index.php?sc=10">Error Messages</a><br></span>
+                      <span class="seclink"><a href="index.php?sc=11">Foulum Users</a><br></span>
+           
+</div>
+
+<div id="section">
+    <h2>Latest version</h2>
+<p>The latest available version is 2.59. See the <a href="index.php?sc=02">downloads</a> page for download and installation instructions.</p>
+
+<h2>Using bayz</h2>
+<p>Bayz can be used in two ways: on a unix/linux/windows prompt, or from R (available for Mac and Windows). Use from R is limited to some standard models and is now mostly suited for using smaller data sets.
+See the <a href="index.php?sc=03">Bayz in R</a> section. Use from a prompt is more versatile but requires writing a bayz script, examples are in the <a href="index.php?sc=04">Bayz2.5 Examples</a> section.
+</p>
+
+<p>Running bayz is a two-step procedure: first the main bayz program runs the Monte Carlo Markov Chain and produces a file with the posterior samples from the specified model.
+After that, a number of output analyses and summaries can be made, ranging from simply obtaining the posterior mean and SD of model parameters to more advanced output diagnosis such as computation of
+posterior distributions of functions, retrieval of the Deviance Information Criterion, etc. To retrieve parameter estimates and all other output summaries see the <a href="index.php?sc=08">Output Summaries</a> section.
+</p>
+</div>
+
+<!-- there is a style for a footer, but not using that now
+  <div id="footer">
+  </div>
+--!>
+
+</body>
+</html>
+	

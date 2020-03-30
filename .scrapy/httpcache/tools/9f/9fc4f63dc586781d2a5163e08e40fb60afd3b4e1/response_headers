@@ -1,0 +1,14 @@
+Date: Mon, 30 Mar 2020 18:49:35 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Cache-Control: max-age=0, private, must-revalidate
+Content-Type: text/html; charset=utf-8
+Etag: W/"b033d3fd4394d048566d094fd136e7f4-gzip"
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Request-Id: 0ac01d14-93f0-4a01-be33-c573e768f03c
+X-Runtime: 0.309714
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+Set-Cookie: _gitlab_session=18a486712b794b896ac6a03bb5a3de14; path=/; HttpOnly
+Vary: Accept-Encoding
+Content-Encoding: gzip

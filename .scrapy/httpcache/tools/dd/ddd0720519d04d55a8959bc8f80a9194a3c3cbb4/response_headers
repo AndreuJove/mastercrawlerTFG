@@ -1,0 +1,14 @@
+Server: GitHub.com
+Content-Type: text/html
+Location: http://biom-format.org/
+X-Github-Request-Id: 6398:158F:6095CB:791456:5E8239BF
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 18:46:52 GMT
+Via: 1.1 varnish
+Age: 1245
+X-Served-By: cache-mad22031-MAD
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1585594013.752682,VS0,VE0
+Vary: Accept-Encoding
+X-Fastly-Request-Id: 4a75388872edf1271621b895131a3aa308efa6d0

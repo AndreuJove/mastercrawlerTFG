@@ -1,0 +1,6 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:50:12 GMT
+Content-Type: text/html
+Location: https://cluspro.bu.edu/login.php
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15768000

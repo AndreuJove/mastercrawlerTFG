@@ -1,0 +1,19 @@
+Date: Mon, 30 Mar 2020 18:47:38 GMT
+Content-Type: text/html; charset=utf-8
+Server: GitHub.com
+Status: 200 OK
+Vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With
+Etag: W/"4e503f20b9c18086d7fb61e3508bfb62"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Expect-Ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+Content-Security-Policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com wss://live.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com
+Content-Encoding: gzip
+Set-Cookie: _gh_sess=uIqoSG85ISrOuBavqoxCohpTxge7dEfVRxIVO6oadteaX5BNghZKuMcywePMKho8Dyw2UQY7%2FR6VKOrhazMJfYIeQkDsbMXfFUBiwImS7ldjg%2B0uPnSoeI2nAqKCOAfCprIAiJn7wnqpFFJKznXqfSCG75I2oau5YjKT54r7dbhayQf%2B%2FeZAHCh7D%2B2rCoQ5jnPSzgMkUgHKls5qvnAHXTqWfr52IJybZ7yweoQrowyOut5gP3WWg0Ng%2Fh%2FonPJucDMy5GsL6uX1t1PhfN1zXA%3D%3D--wrCQHPIMDhtLAfXi--PKHGnu9HWe19GyESNGf22Q%3D%3D; Path=/; HttpOnly; Secure
+Set-Cookie: _octo=GH1.1.1131999039.1585594058; Path=/; Domain=github.com; Expires=Tue, 30 Mar 2021 18:47:38 GMT; Secure
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Tue, 30 Mar 2021 18:47:38 GMT; HttpOnly; Secure
+Accept-Ranges: bytes
+X-Github-Request-Id: CE06:EEC2:3AEE456:55A1397:5E823EC7

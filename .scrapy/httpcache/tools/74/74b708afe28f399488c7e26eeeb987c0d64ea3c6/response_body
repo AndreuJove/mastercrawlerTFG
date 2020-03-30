@@ -1,0 +1,499 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" 
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+  <head>
+<base href="http://www.cisred.org/" />
+
+  <title>cisRED: cis-regulatory element database</title>
+          
+  <link rel="Stylesheet" type="text/css"
+        href="http://www.cisred.org/specific.css" />
+                             
+  <script src="http://www.cisred.org/javaws.js"
+          language="JavaScript"></script>
+  <script src="http://www.cisred.org/javaws.vbs"
+          language="VBScript"></script>
+
+</head>
+  <body>
+  
+  <div id="masterbox">
+   
+  <div id="portal-top">
+
+  <div id="portal-logo">
+    <a id="portal-logo-link" href="http://www.cisred.org">cisred.org</a>
+  </div>
+  
+  <div id="portal-colour-top"></div>
+
+    <div id="portal-database">
+    	
+    <ul id="portal-globalnav">
+    
+        <li id="portaltab-index_html" class="">
+        <a href="http://www.cisred.org/"><img
+    src="http://www.cisred.org/navicon.png" alt="" /><b>cisRED</b>&nbsp; Home</a>
+        </li>
+                 
+        
+        <li class="">
+        <a href="http://www.cisred.org/content/databases_methods/"><img
+    src="http://www.cisred.org/navicon.png" alt="" />Databases &amp; Methods</a>	 
+         </li>
+        
+        
+        <li class="">
+        <a href="http://www.cisred.org/content/methods/"><img
+    src="http://www.cisred.org/navicon.png" alt="" />Documents</a>	 
+         </li>
+        
+        
+        <li class="">
+        <a href="http://www.cisred.org/content/software/"><img
+    src="http://www.cisred.org/navicon.png" alt="" />Software</a>	 
+         </li>
+        
+        
+        <li class="">
+        <a href="http://www.cisred.org/content/publications/"><img
+    src="http://www.cisred.org/navicon.png" alt="" />Publications</a>	 
+         </li>
+        
+        
+        <li class="">
+        <a href="http://www.cisred.org/content/acknowledgements/"><img
+    src="http://www.cisred.org/navicon.png" alt="" />Acknowledgements</a>	 
+         </li>
+        
+    
+    </ul>
+    
+	</div>
+    
+    <div id="portal-colour-bottom"></div>
+  
+</div>
+  <div id="portal-linkbar-content">
+    <!--<p></p>-->
+	<p class="breadcrumbs">
+    
+    
+            <a href="http://www.cisred.org/">cisRED</a>
+            <span class="breadcrumbSeparator"> > </span>
+    
+    
+    <span>
+        
+            
+            
+            <span>Home</span>
+         
+    </span>
+    </p>
+</div> 
+  
+   
+  <div class="content">
+
+    <table>
+    <tr valign="top">
+    	<td colspan="2">
+    	<h1>Databases of genome-wide regulatory module and element predictions</h1>
+    	<table class="data" style="font-size: 80%;">
+    	<tr>
+    	<th class="mainpage">Database</th>
+    	<th class="mainpage">Assembly</th>
+    	<th class="mainpage">Search<br>regions</th>
+    	<th class="mainpage">Search<br>region<br>type</th>
+    	<th class="mainpage">Nbr. of<br>input<br>species</th>
+    	<th class="mainpage">Conserved<br>motifs</th>
+    	<th class="mainpage">Discovery<br><nobr>p-value</nobr><br>threshold</th>
+    	<th class="mainpage">Ensembl<br>compatibility</th>
+    	<th class="mainpage">Release<br>date</th>
+    	</tr>
+    	<tr>
+    	<td class="mainpage"><a href="/human9/"><nobr><b>Human 9</b></nobr></a></td>
+    	<td class="mainpage">NCBI v36b</td>
+    	<td class="mainpage" align="center">18.7k</td>
+    	<td class="mainpage">promoter</td>
+    	<td class="mainpage" align="center">41</td>
+    	<td class="mainpage" align="center">236k</td>
+    	<td class="mainpage" align="center">0.01</td>
+    	<td class="mainpage" align="center"> Build 38-49</td>
+    	<td class="mainpage"><nobr>26 Jul. 2007</nobr></td>
+    	</tr>
+    	<tr>
+    	<td class="mainpage"><a href="/mouse4/"><nobr><b>Mouse 4</b></nobr></a></td>
+    	<td class="mainpage">NCBI m37</td>
+    	<td class="mainpage" align="center">17.5k</td>
+    	<td class="mainpage">promoter</td>
+    	<td class="mainpage" align="center">38</td>
+    	<td class="mainpage" align="center">223k</td>
+    	<td class="mainpage" align="center">0.1</td>
+    	<td class="mainpage" align="center">Build 47-49</td>
+    	<td class="mainpage"><nobr>26 Sep. 2007</nobr></td>
+    	</tr>
+    	<tr>
+    	<td class="mainpage"><a href="/mouse3/"><nobr><b>Mouse 3.1</b></nobr></a></td>
+    	<td class="mainpage">NCBI m35</td>
+    	<td class="mainpage" align="center">17.5k</td>
+    	<td class="mainpage">promoter</td>
+    	<td class="mainpage" align="center">38</td>
+    	<td class="mainpage" align="center">223k</td>
+    	<td class="mainpage" align="center">0.1</td>
+    	<td class="mainpage" align="center">Build 38</td>
+    	<td class="mainpage"><nobr>18 Apr. 2007</nobr></td>
+    	</tr>
+    	<tr>
+    	<td class="mainpage"><a href="/rat1.1/"><nobr><b>Rat 1.1</b></nobr></a></td>
+    	<td class="mainpage">RGSC v3.1</td>
+    	<td class="mainpage" align="center">6.7k</td>
+    	<td class="mainpage">promoter</td>
+    	<td class="mainpage" align="center">28</td>
+    	<td class="mainpage" align="center">116k</td>
+    	<td class="mainpage" align="center">0.25</td>
+    	<td class="mainpage" align="center">n/a</td>
+    	<td class="mainpage"><nobr>12 Feb. 2006</nobr></td>
+    	</tr>
+    	<tr>
+    	<td class="mainpage"><a href="/c.elegans4/"><nobr><b>C.elegans 4</b></nobr></a></td>
+    	<td class="mainpage">WormBase WS170</td>
+    	<td class="mainpage" align="center">3.8k</td>
+    	<td class="mainpage">promoter</td>
+    	<td class="mainpage" align="center">8</td>
+    	<td class="mainpage" align="center">158k</td>
+    	<td class="mainpage" align="center">1.0</td>
+    	<td class="mainpage" align="center">Build 44-46</td>
+    	<td class="mainpage"><nobr>18 Jul. 2008</nobr></td>
+    	</tr>
+    	<!--<tr>
+    	<td class="mainpage"><a href="/c.elegans3/"><nobr><b>C.elegans 3</b></nobr></a></td>
+    	<td class="mainpage">WormBase WS170</td>
+    	<td class="mainpage" align="center">2.4k</td>
+    	<td class="mainpage">promoter</td>
+    	<td class="mainpage" align="center">6</td>
+    	<td class="mainpage" align="center">91.5k</td>
+    	<td class="mainpage" align="center">1.0</td>
+    	<td class="mainpage" align="center">Build 44-46</td>
+    	<td class="mainpage"><nobr>11 Apr. 2008</nobr></td>
+    	</tr>-->
+    	<tr>
+    	<td class="mainpage"><a href="/human8Stat1ChIPpeaks/"><nobr><b>Human Stat1 ChIP-seq peaks 1</b></nobr></a></td>
+    	<td class="mainpage">NCBI v35</td>
+    	<td class="mainpage" align="center">226</td>
+    	<td class="mainpage">ChIP-seq</td>
+    	<td class="mainpage" align="center">23</td>
+    	<td class="mainpage" align="center">~6k</td>
+    	<td class="mainpage" align="center">1.0</td>
+    	<td class="mainpage" align="center">n/a</td>
+    	<td class="mainpage"><nobr>03 Apr. 2007</nobr></td>
+    	</tr>
+    	</table>
+    	</td>	
+    </tr>
+      <tr valign="top">
+      <td width="65%" style="padding-right: 2em;" valign="top">
+        <h1 class="mainpage_subtitles">Overview</h1>
+<font size=-1>
+
+<p>
+The cisRED database holds conserved sequence motifs identified by genome scale motif discovery, similarity, 
+clustering, co-occurrence and coexpression calculations. Sequence inputs include
+<a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Abstract&list_uids=17038343">low-coverage genome sequence</a> 
+data and <a href="http://www.genome.gov/10005107">ENCODE</a> data. 
+A Nucleic Acids Research 
+<a href="http://nar.oxfordjournals.org/cgi/content/full/34/suppl_1/D68">article</a> 
+describes the system architecture; please use this publication to cite cisRED. PubMed publications that cite 
+cisRED are listed <a href="http://www.pubmedcentral.nih.gov/tocrender.fcgi?action=cited&artid=1347438">here</a>.
+</p>
+<p>
+cisRED makes three levels of information available for regulatory elements:
+</p>
+<ol>
+<li><b>'Atomic' motifs</b>: These are conserved, over-represented, sequence sets, typically 6 to 12 bp long, that have been discovered in a 'search region' sequence set.</li>
+<li><b>Groups of 'similar' motifs</b>: These are identified either by a) annotating motifs with site sequences from TRANSFAC, JASPAR and ORegAnno databases (annotation-based groups), or by b) 'de novo' hierarchical clustering with the OPTICS algorithm ('de novo' groups).</li> 
+<li><b>Patterns of motif group labels that co-occur in many search regions</b>: These putative regulatory modules are ranked using genome-scale statistical and functional properties. Motifs in highly ranked patterns are likely the most reliable predictions.</li>
+</ol>
+<p>
+In promoter-based cisRED databases, sequence search regions for motif discovery extend from 1.5 Kb 
+upstream to 200b downstream of a transcription start site, net of most types of repeats and of coding exons. 
+Many transcription factor binding sites are located in such regions. For each target gene's search region, 
+we use a base set of probabilistic <i>ab initio</i> discovery tools, in parallel, to 
+find over-represented atomic motifs. Discovery methods use comparative genomics with over 40 
+vertebrate input genomes.</p>
+
+<p>In <a href="http://www.cisred.org/content/publications/#stat1">ChIP-seq-based cisRED databases</a>, sequence search regions for motif discovery 
+correspond to significant peaks that represent genome-wide sites of protein-DNA binding. 
+Because such peaks occur in a wide range of genic and intergenic locations, ChIP-seq and promoter-based
+ databases are complementary. Currently, motif discovery for ChIP-seq data uses scan-based approaches 
+ that make more explicit use of sets of sequences known to be functional transcription factor binding 
+ sites, and that consider a wide range of levels of conservation. For the human STAT1 ChIP-seq database 
+ search regions in the target species (human) was selected +/- 300 bp around the ChIP-seq peak maximum. 
+ Repeats and coding regions were masked. Multiple sequence alignment were used to assemble orthologous input 
+ sequences from other species.</p>
+
+<p>You can access cisRED's data in three ways:
+<ol>
+<li>view predicted regulatory elements directly in cisRED's web user interface. From this interface, motifs can be viewed 'live' in the UCSC or Ensembl genome browsers.</li>
+<li>download the data and SQL structure for each species' MySQL 4.x database, with a schema diagram and example SQL queries, from the Databases and Methods tab.</li>
+<li>query the databases directly with SQL at db.cisred.org. Queries can be driven from command line or graphical clients (e.g. the MySQL <a href="http://www.mysql.com/products/tools/query-browser/">QueryBrowser</a>), or programmatically from Perl, Python, Java, Ruby, etc. The username is 'anonymous' and the password should be left blank.</li>
+</ol>
+</p>
+
+<p>cisRED human motifs are available as a native data type at the Ensembl genome browser.</p>
+<p>cisRED is an ongoing project. Updates will be released frequently.</p>
+</font>
+<hr height=1 color="#000000"/>
+<h1 class="mainpage_subtitles">Usage Notes</h1>
+<font size=-1>
+<b>Filters and Cookies</b><br>
+cisRED manages your 'Filter' settings via a browser 'cookie'. <br>
+You must allow your web browser to accept cookies from cisred.org for your filter settings to take effect.
+</font>
+
+      </td>
+      <td width="35%">
+        <h1 class="mainpage_subtitles">News</h1>
+        
+        <table>
+        
+        
+        
+        
+          <tr valign="bottom">
+            <td style="padding-top: 15px">
+             <font size="-1" style="line-height: 110%;">
+              <a href="/content/methods/news/celegans4_pub_nar09">C. elegans v4 database published</a></font></td>
+            <td align="right" style="padding-top: 15px">
+              <nobr><div style="border: None;" class="date">January 16, 2009</div></nobr>
+            </td>
+ 
+          </tr>
+
+          <tr valign="top">
+            
+            <td colspan="2"
+                style="border-top: solid #1f2b65 1px; font-size: 80%;">The C. elegans cisRED database has been published in Nucleic Acids Research.</td>
+           
+          </tr>
+
+          
+        
+        
+        
+        
+        
+          <tr valign="bottom">
+            <td style="padding-top: 15px">
+             <font size="-1" style="line-height: 110%;">
+              <a href="/content/methods/news/cele4_is_public">C. elegans v4 tables are now public</a></font></td>
+            <td align="right" style="padding-top: 15px">
+              <nobr><div style="border: None;" class="date">August 25, 2008</div></nobr>
+            </td>
+ 
+          </tr>
+
+          <tr valign="top">
+            
+            <td colspan="2"
+                style="border-top: solid #1f2b65 1px; font-size: 80%;">The new C. elegans database has been added to our public MySQL server.</td>
+           
+          </tr>
+
+          
+        
+        
+        
+        
+        
+          <tr valign="bottom">
+            <td style="padding-top: 15px">
+             <font size="-1" style="line-height: 110%;">
+              <a href="/content/methods/news/cele4_release">C. elegans v4 database</a></font></td>
+            <td align="right" style="padding-top: 15px">
+              <nobr><div style="border: None;" class="date">July 18, 2008</div></nobr>
+            </td>
+ 
+          </tr>
+
+          <tr valign="top">
+            
+            <td colspan="2"
+                style="border-top: solid #1f2b65 1px; font-size: 80%;">This version of the C. elegans cisRED database features 8 nematode genomes and 3847 highly conserved transcripts.</td>
+           
+          </tr>
+
+          
+        
+        
+        
+        
+        
+          <tr valign="bottom">
+            <td style="padding-top: 15px">
+             <font size="-1" style="line-height: 110%;">
+              <a href="/content/methods/news/mouse4_initial_release">New mouse v4 database</a></font></td>
+            <td align="right" style="padding-top: 15px">
+              <nobr><div style="border: None;" class="date">September 26, 2007</div></nobr>
+            </td>
+ 
+          </tr>
+
+          <tr valign="top">
+            
+            <td colspan="2"
+                style="border-top: solid #1f2b65 1px; font-size: 80%;">The v3.1 motif coordinates were 'lifted' to the NCBI m37 (mm9) assembly. The v4 motifs are compatible with (and will be available at) Ensembl 47.</td>
+           
+          </tr>
+
+          
+        
+        
+        
+        
+        
+          <tr valign="bottom">
+            <td style="padding-top: 15px">
+             <font size="-1" style="line-height: 110%;">
+              <a href="/content/methods/news/human_9_released">New human v9 database</a></font></td>
+            <td align="right" style="padding-top: 15px">
+              <nobr><div style="border: None;" class="date">July 26, 2007</div></nobr>
+            </td>
+ 
+          </tr>
+
+          <tr valign="top">
+            
+            <td colspan="2"
+                style="border-top: solid #1f2b65 1px; font-size: 80%;">The new human database offers regulatory modules predicted with sequence data from 41 vertebrate species.
+</td>
+           
+          </tr>
+
+          
+        
+        
+        
+        
+        
+          <tr valign="bottom">
+            <td style="padding-top: 15px">
+             <font size="-1" style="line-height: 110%;">
+              <a href="/content/methods/news/more_browse_search_options_for_mouse">New browse/search options for the mouse database</a></font></td>
+            <td align="right" style="padding-top: 15px">
+              <nobr><div style="border: None;" class="date">June 20, 2007</div></nobr>
+            </td>
+ 
+          </tr>
+
+          <tr valign="top">
+            
+            <td colspan="2"
+                style="border-top: solid #1f2b65 1px; font-size: 80%;">You can now browse/search modules using GO terms, and by chromosome.</td>
+           
+          </tr>
+
+          
+        
+        
+        
+        
+        
+          <tr valign="bottom">
+            <td style="padding-top: 15px">
+             <font size="-1" style="line-height: 110%;">
+              <a href="/content/methods/news/browse_by_location">Browse by location</a></font></td>
+            <td align="right" style="padding-top: 15px">
+              <nobr><div style="border: None;" class="date">June 20, 2007</div></nobr>
+            </td>
+ 
+          </tr>
+
+          <tr valign="top">
+            
+            <td colspan="2"
+                style="border-top: solid #1f2b65 1px; font-size: 80%;">You can now find all search regions that overlap a genomic region defined by coordinates.</td>
+           
+          </tr>
+
+          
+        
+        
+        
+        
+        
+          <tr valign="bottom">
+            <td style="padding-top: 15px">
+             <font size="-1" style="line-height: 110%;">
+              <a href="/content/methods/news/region_masks_in_ucsc_images">Search region masks</a></font></td>
+            <td align="right" style="padding-top: 15px">
+              <nobr><div style="border: None;" class="date">June 14, 2007</div></nobr>
+            </td>
+ 
+          </tr>
+
+          <tr valign="top">
+            
+            <td colspan="2"
+                style="border-top: solid #1f2b65 1px; font-size: 80%;">Our UCSC genome browser images now show the search region masks. </td>
+           
+          </tr>
+
+          
+        
+        
+        
+        
+        
+          <tr valign="bottom">
+            <td style="padding-top: 15px">
+             <font size="-1" style="line-height: 110%;">
+              <a href="/content/methods/news/more_search_options">Improved search tools</a></font></td>
+            <td align="right" style="padding-top: 15px">
+              <nobr><div style="border: None;" class="date">June 13, 2007</div></nobr>
+            </td>
+ 
+          </tr>
+
+          <tr valign="top">
+            
+            <td colspan="2"
+                style="border-top: solid #1f2b65 1px; font-size: 80%;">You can now use IUPAC symbols in a motif search, or can search by cisRED
+group ID or cisRED module ID.</td>
+           
+          </tr>
+
+          
+        
+        
+        
+        </table>
+<p></p>
+         <table>
+          <tr valign="bottom">
+           <td>
+            <a href="http://www.oreganno.org/oregano/Index.jsp" target="_blank"><img src="content/software/images/oregano-med.png" alt="" size="15%" style="float: left;" /></a></td>
+          </tr>
+          <tr>
+           <td colspan="2" style="font-size: 80%;"> <p>ORegAnno is an open access, LGPL/open source database that holds annotations for regulatory elements and polymorphisms. Its data are submitted and reviewed by a global user community. cisRED uses ORegAnno data for optimizing and assessing predictive performance, and for annotating computationally predicted DNA sequence motifs.</p></td>
+          </tr>
+         </table>
+      
+      </td>
+      </tr>
+    </table>
+  
+</div>
+ 
+  <div id="portal-divider">
+  <p>Questions or comments: <a href="mailto:cisred@bcgsc.ca">cisred@bcgsc.ca</a></p>
+</div>
+  
+  </div>
+    
+  </body>
+  
+</html>

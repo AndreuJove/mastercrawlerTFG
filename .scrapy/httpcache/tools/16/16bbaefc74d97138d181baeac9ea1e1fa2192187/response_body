@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/assets/favicon.ico">
+
+    <title>CytoGPS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/assets/bootstrap.min-37722be5eea5421bdf222f1ef5d70d60.css"/>
+    <link rel="stylesheet" href="/assets/cytogps-a4b3ad31b60aa1c5f56211d54e60a53e.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Detect inappropriate browsers -->
+    <div class="alert" id="alert-div" style="display: none;">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        WARNING: Your browser is not fully supported by this website. Please use Google Chrome, Firefox, or Safari.
+    </div>
+    <script type="application/javascript">
+        window.onload = function() {
+            var browser_name = '';
+            var isIE = /*@cc_on!@*/false || !!document.documentMode;
+            var isEdge = !isIE && !!window.StyleMedia;
+            if (navigator.userAgent.indexOf("Chrome") != -1 && !isEdge) {
+                browser_name = 'chrome';
+            } else if (navigator.userAgent.indexOf("Safari") != -1 && !isEdge) {
+                browser_name = 'safari';
+            } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+                browser_name = 'firefox';
+            } else if (navigator.userAgent.indexOf("MSIE") != -1 || !!document.documentMode == true) {
+                browser_name = 'ie';
+            } else if (isEdge) {
+                browser_name = 'edge';
+            } else {
+                browser_name = 'other';
+            }
+            if (browser_name !== 'chrome' && browser_name !== 'safari' && browser_name !== 'firefox') {
+                $("#alert-div").css('display', 'block');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a id="homelink" class="navbar-brand" href="/">
+            <img src="/assets/icon-d1e2ade4128024715cba9aa51ffadcb7.png" class="brand-logo"/>CytoGPS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-lg-5">
+            <li class="nav-item">
+                <span>&nbsp;</span>
+            </li>
+            <li class="nav-item menu-item">
+                <span onclick="showAboutPage('/about');">About</span>
+            </li>
+            <li class="nav-item">
+                <span>&nbsp;</span>
+            </li>
+            <li class="nav-item menu-item">
+                <span onclick="showTermsPage('/terms');">User Agreement</span>
+            </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main role="main">
+
+    <div class="container-fluid main-top-div">
+        <div class="row main-row-div">
+            <div class="col-lg-12 skylander-title" >
+                <span style="color: rgb(224, 255, 255);"><b>CytoG</b></span>enetic <span style="color: rgb(224, 255, 255);"><b>P</b></span>attern <span style="color: rgb(224, 255, 255);"><b>S</b></span>leuth (CytoGPS) <br>
+                <div style="height: 12px;">&nbsp;</div>
+                <p class="description-title" style="color: hsl(0, 0%, 90%);">
+                    CytoGPS is a software tool to parse semi-structured ISCN-based karyotypes in text formats.
+                </p>
+            </div>
+            <div class="col-lg-6">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <a class="btn btn-primary btn-lg try-it-button" href="/karyotype_parser" role="button">Try it now!</a>
+            </div>
+            <div class="col-lg-10"></div>
+        </div>
+    </div>
+
+    <!-- Marketing messaging and featurettes
+      ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+        <div class="col-lg-4">
+            <div style="text-align: center;">
+                <i class="fas fa-check-circle fa-6x feature-icon"></i>
+                <h3 style="margin-bottom: 1.2rem;">Validation</h3>
+            </div>
+            <p>Built using ANTLR (ANother Tool for Language Recognition), first filters out unacceptable karyotype input. It then uses several ad-hoc algorithms to validate each cytogenetic aberration, including derivative chromosomes.  Detailed error messages are displayed to the user.</p>
+            
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div style="text-align: center;">
+                <i class="fas fa-briefcase-medical fa-6x feature-icon"></i>
+                <h3 style="margin-bottom: 1.2rem;">ISCN Correction</h3>
+            </div>
+            <p>For fixable parsing errors, e.g. incorrect types of brackets for cell numbers, a clean suggested revised karyotype will be presented to the user. For validation errors, a suggestion, whenever possible, will be given.</p>
+            
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <div style="text-align: center;">
+                <i class="fas fa-chart-bar fa-6x feature-icon"></i>
+                <h3 style="margin-bottom: 1.2rem;">Analysis</h3>
+            </div>
+            <p>Extracts biologically important data from text-based karyotypes, including but not limited to the number of occurrences of the biological events (loss, gain, and fusion) occurring at all the bands (or subbands) in the chromosome. This transformation makes quantitative analyses feasible which were previously not possible.</p>
+            
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading"><span class="text-muted"><b>Q:</b> Can CytoGPS software parse karyograms directly?</span></h2>
+                <p class="lead"><span class="text-muted" style="font-weight: bolder; font-size: xx-large;"><b>A:</b></span> No. Unlike commercial software programs which provide karyotyping solutions following the capture of digital images, CytoGPS aims to parse semi-structured ISCN-based karyotypes in text formats. To our knowledge, there is no commercial software available to read text-based karyotypes: CytoGPS is filling in this gap. We expect the user to enter text-based karyotypes following the International System for Human Cytogenomic Nomenclature (ISCN).</p>
+            </div>
+            <div class="col-md-5">
+                <img src="/assets/chromosomeBandNomenclature-b902e84681d08b901f0f3098aa3e5e96.jpg" class="featurette-image img-fluid mx-auto" style="width: 90%;"/>
+                <p style="font-size:70%; margin-top: 1em;">This figure is a derivative of <i>Normal male 46,XY human karyotype</i> by Wessex Reg. Genetics Centre, used under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY (v4.0)</a>. <a href="https://wellcomecollection.org/works/zd7rdetc">https://wellcomecollection.org/works/zd7rdetc</a></p>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading"><span class="text-muted"><b>Q:</b> How can cytogeneticists and biomedical data scientists use CytoGPS software?</span></h2>
+                <p class="lead"><span class="text-muted" style="font-weight: bolder; font-size: xx-large;"><b>A:</b></span> CytoGPS extracts biologically important, quantitative information for biomedical data scientists to do further analysis. These quantitative data include a tally of the cytogenetic events (loss, gain, and fusion) occurring at all G-850 bands (or subbands) in the chromosome. Other useful information provided to cytogeneticists includes number of cells in a clone, relationships among multiple clones, and detailed systems for characterizing derivative chromosomes.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="/assets/chrLGF-8635a0e045883f387323c1ac3bae28c4.jpeg" class="featurette-image img-fluid mx-auto"/>
+                <p style="font-size:70%; margin-top: 1em;">This figure is a derivative of Figure 1 from <i>Centromere fission, not telomere erosion, triggers chromosomal instability in human carcinomas</i> by Carlos Martínez-A and Karel H.M. van Wely, used under <a href="https://creativecommons.org/licenses/by-nc/2.5/">CC BY-NC (v2.5)</a>. <a href="https://academic.oup.com/carcin/article/32/6/796/2463874">https://doi.org/10.1093/carcin/bgr069</a></p>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading"><span class="text-muted"><b>Q:</b> Can CytoGPS software parse karyotypes using high resolution techniques?</span></h2>
+                <p class="lead"><span class="text-muted" style="font-weight: bolder; font-size: xx-large;"><b>A:</b></span> Not yet. Techniques utilizing fluorescent in situ hybridization (FISH) and chromosomal microarray (CMA) have become an adjunct to traditional chromosome analysis. FISH allows researchers to locate the positions of specific DNA sequences on chromosomes, while CMA detects copy number variations (CNVs) in the genomes. As major advances in human cytogenetics, both FISH and CMA have been increasingly used in karyotype reports. In the near future, we will extend CytoGPS to enable parsing of karyotypes using these high resolution techniques.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="/assets/microArray-157a33442b8f72f9b7dab45e800af155.jpg" class="featurette-image img-fluid mx-auto"/>
+                <p style="font-size:70%; margin-top: 1em;">This figure is a derivative of Figure 2 from <i>Duplication of C7orf58, WNT16 and FAM3C in an Obese Female with a t(7;22)(q32.1;q11.2) Chromosomal Translocation and Clinical Features Resembling Coffin-Siris Syndrome</i> by Jun Zhu, Jun Qiu, Gregg Magrane, et al, used under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY (v4.0)</a>. <a href="https://doi.org/10.1371/journal.pone.0052353">https://doi.org/10.1371/journal.pone.0052353</a></p>
+            </div>
+        </div>
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+<div style="height: 4em;">&nbsp;</div>
+
+<!-- FOOTER -->
+    <section class="cid-qHBqDyaoPj" id="footer1-a">
+  <div class="container">
+    <div class="media-container-row text-white row">
+      <div class="col-lg-12 footer-upper">
+        This project represents a collaboration between Washington University School of Medicine -
+        <a href="https://informatics.wustl.edu/">Institute for Informatics</a>
+        and The Ohio State University College of Medicine -
+        <a href="https://medicine.osu.edu/bmi/Pages/index.aspx">Department of Biomedical Informatics</a>
+        and
+        <a href="https://pathology.osu.edu/ext/default.html">Department of Pathology</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cid-qHBqDyaoPj copyright" id="copyright">
+  <div class="container">
+    <div class="media-container-row content text-white">
+      <div class="footer-lower">
+        <div class="media-container-row">
+          <div class="col-sm-12">
+            <hr></div>
+          </div>
+          <div class="media-container-row row">
+            <div class="col-sm-8">
+              <p class="mbr-text mbr-fonts-style display-7">
+                <div class="footer__washu-external--left">
+                  <a href="http://medicine.wustl.edu/">
+                    <img
+                      src="http://informatics.wustl.edu/wp-content/themes/i2/img/wusm-logo-footer.svg"
+                      onerror="this.src='http://informatics.wustl.edu/wp-content/themes/i2/img/wusm-logo-footer.png';this.onerror=null;"
+                      alt="Washington University School of Medicine in St. Louis"
+                      width="247"
+                      height="51"></a>
+                    <div class="footer__copyright">
+                      <a href="http://www.wustl.edu/policies/copyright.html">&copy; 2020 Washington University in St. Louis</a>
+                    </div>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="/assets/jquery-3.3.1.min-612c1bb8612cffd0b64169b6196cea71.js" ></script>
+<script type="text/javascript" src="/assets/bootstrap.bundle.min-b06658dcb4bcc586ab856af9b68ebc24.js" ></script>
+<script type="text/javascript" src="/assets/bootbox.min-05d23d3920015845ca00414081fd0ec6.js" ></script>
+<script type="text/javascript" src="/assets/fontawesome.min-13d931ccc5ec41bb7cb1b7d9e66057fb.js" ></script>
+<script type="text/javascript" src="/assets/data/bands/native/homo-sapiens-9b52c3a84d01fab5f2e0690e066406a4.js" ></script>
+<script type="text/javascript" src="/assets/ideogram.min-e0d36d572b65b665cb9e7e14684e472b.js" ></script>
+<script type="text/javascript" src="/assets/download-1c17e240cf03d4f0cdf4220dc5e65f70.js" ></script>
+<script type="text/javascript" src="/assets/cytogps-bbc38bd38b739aa7af032b52bb6b8cbc.js" ></script>
+
+
+
+</main>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
+</html>

@@ -1,0 +1,12 @@
+Date: Mon, 30 Mar 2020 18:44:50 GMT
+Server: Apache/2.2.3 (CentOS)
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack) 3.0.19
+X-Ua-Compatible: IE=Edge,chrome=1
+Etag: "8dc8e710496746900139b64a88e76e03"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 665c355712a550a14b78d120f85307bf
+X-Runtime: 1.836773
+X-Rack-Cache: miss
+Set-Cookie: _st_v2_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWE0ZTAyZmY3ODNkYmI4MDFlYTgyNGZlMWVjNTNhZTI4BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXoxZXphazFEdGxkUmtoT2xPaE1KTDV1SW05bUl2OFBqblRDbExTNEsxdGc9BjsARg%3D%3D--a4893f8d01686845a830f87fb224e3ff195838d9; path=/; HttpOnly
+Status: 200
+Content-Type: text/html; charset=utf-8

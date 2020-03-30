@@ -1,0 +1,17 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Search for degenerate oligonucleotide motifs</title>
+</head>
+
+<frameset cols="82%,*">
+  <frame name="left" src="argo_title.html" scrolling="auto">
+  <frame name="right" src="blank.html" target="Result" scrolling="auto">
+  <noframes>
+  <body>
+  <p>This page uses frames, but your browser doesn't support them.</p>
+  </body>
+  </noframes>
+</frameset>
+</html>

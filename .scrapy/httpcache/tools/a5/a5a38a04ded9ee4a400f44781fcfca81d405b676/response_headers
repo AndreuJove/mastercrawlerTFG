@@ -1,0 +1,20 @@
+Cache-Control: private, max-age=0
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Expires: Sun, 15 Mar 2020 18:49:37 GMT
+Last-Modified: Mon, 30 Mar 2020 18:49:37 GMT
+Vary: Accept-Encoding
+Server: Microsoft-IIS/8.5
+X-Sharepointhealthscore: 0
+X-Aspnet-Version: 4.0.30319
+Sprequestguid: 3eef439f-55fd-f0b9-e490-c713f01d2faf
+Request-Id: 3eef439f-55fd-f0b9-e490-c713f01d2faf
+X-Frame-Options: SAMEORIGIN
+Sprequestduration: 252
+Spiislatency: 0
+X-Powered-By: ASP.NET
+Microsoftsharepointteamservices: 15.0.0.5153
+X-Content-Type-Options: nosniff
+X-Ms-Invokeapp: 1; RequireReadOnly
+Date: Mon, 30 Mar 2020 18:49:37 GMT
+Set-Cookie: NSC_JOGPTXFCQ.VDTE.FEV-TOJ-WT=ffffffff09c48f2245525d5f4f58455e445a4a42378b;Version=1;Max-Age=120;path=/;secure;httponly

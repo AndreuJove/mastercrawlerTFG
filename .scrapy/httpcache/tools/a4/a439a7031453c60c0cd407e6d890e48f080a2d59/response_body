@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head><base href="http://webs.iiitd.edu.in/raghava/antiangiopred/">
+	<title>AntiAngioPred: Anti-Angiogenic Peptide prediction web-server</title>
+	<meta name="keywords" content="anti, angiogenic, peptide, prediction " />
+	<meta name="description" content="Anti-Angiogenic Peptide prediction web-server" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/magnific-popup.css" rel="stylesheet"> 
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+
+<body>
+	<div class="main-container">
+		<nav class="main-nav">
+			<div id="logo" class="left"><a href="#">AntiAngioPred</a></div>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61644225-1', 'auto');
+  ga('send', 'pageview');
+
+</script>		<ul class="nav right center-text">
+				<li class="btn active">Home</li>
+				<li class="btn"><a href="predict.html">Predict</a></li>
+				<li class="btn"><a href="multiple.html">Multiple Peptides</a></li>				
+				<li class="btn"><a href="dataset.html">Dataset</a></li>
+				<li class="btn"><a href="team.html">Team</a></li>
+				<li class="btn"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<div class="content-container">
+<marquee scrollamount="5">If you are using this server, please cite <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0136990" target=_new><font color=blue>"Ramaprasad et. al. (2015) AntiAngioPred: A Server for Prediction of Anti-Angiogenic Peptides. PLoS One, 10, e0136990 DOI: (10.1371/journal.pone.0136990)</font></a></marquee>
+			<header>
+			<h1 class="center-text">Welcome to Homepage of AntiAngioPred</h1>
+			<table><tr>
+			<td align=justify>
+			<h2>The process of growth of new capillary blood vessels  is used for healing and reproduction, which is known as angiogenesis. It occurs  for healing wounds and for restoring blood flow to tissues after injury. The angiogenesis  is controlled by producing inhibitory factors. The balance between  pro-angiogenic molecules and anti-angiogenic molecules are hypothesized to  regulate by an ‘on’ and the ‘off’, switch respectively. Angiogenesis-stimulating  growth factors are “on switches” and the &quot;off switches&quot; are known as  angiogenesis inhibitors. Recent studies have identified several  endogenous anti-angiogenic peptides identified from various biological sources  which regulate angiogenesis and tumor growth. </h2>
+			</td></tr><tr><td align=justify>
+			<h2>There are several peptides derived from various  proteins that inhibit Angiogenesis. The discovery of  new anti-angiogenic peptide inhibitors would contribute to the development of  therapeutic treatments for these diseases. The search for anti-angiogenic agents for the treatment of cancer is particularly prominent. This user-friendly web server  is to help the experimental biologist to predict the  anti-angiogenic peptides. </h2>
+			</td>
+			</tr></table>
+			</header>
+	</div>	<!-- /.content-container -->	
+
+		<footer>
+			<table width=100%><tr>
+			<td align=left><a href="http://webs.iiitd.edu.in">CSIR-IMTECH</a></td>
+			<td align=center><a href="http://webs.iiitd.edu.in">This is mirror site of <a href="http://clri.res.in/subramanian/tools/antiangiopred/index.html"><font color=blue>AntiAngioPred</font></a>.</a></td>
+			<td align=right><a href="http://www.clri.org">CSIR-CLRI</a></td>
+			</tr></table>
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> 
+	<script type="text/javascript" src="js/templatemo_script.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.pagination li').click(changePage);
+			$('.portfolio-item').magnificPopup({ 
+				type: 'image',
+				gallery:{
+					enabled:true
+				}
+			});
+		});
+	</script>	
+</body>
+</html>

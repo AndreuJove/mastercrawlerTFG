@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>canEvolve Query Interface</title>
+<style>
+	@import "themes/claro/claro.css";
+        @import "app.css";
+        @import "lib/dojo/dojo/resources/dojo.css";
+        @import "themes/claro/claro.css";
+        @import "app.css";
+        @import "lib/dojo/dojo/resources/dojo.css";
+        @import "lib/dojo/dojox/grid/resources/Grid.css";
+        @import "lib/dojo/dojox/grid/resources/claroGrid.css";
+        @import "dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+        @import "dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+	#grid {
+		width: 95%;
+		height: 30em;
+	}
+        #gridcn {
+                width: 95%;
+                height: 30em;
+        }
+        #gridmut {
+                width: 95%;
+                height: 30em;
+        }
+        #gridcngeall {
+                width: 95%;
+                height: 30em;
+        }
+        #gridcngeselect {
+                width: 95%;
+                height: 30em;
+        }
+        #griddiffge {
+                width: 95%;
+                height: 30em;
+        }
+        #gridsurv {
+                width: 95%;
+                height: 30em;
+        }
+</style>
+<script type="text/javascript" src="maqetta/maqetta.js"></script>
+<!--<script type="text/javascript" djConfig="parseOnLoad: true" src="lib/dojo/dojo/dojo.js"></script>
+-->
+<script djConfig="parseOnLoad: true" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.3/dojo/dojo.js"></script>
+<script djConfig="parseOnLoad: true" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.3/dijit/dijit-all.js"></script>
+
+<script type="text/javascript">
+dojo.require('dijit.layout.BorderContainer');
+dojo.require('dijit.layout.ContentPane');
+dojo.require('dijit.MenuBar');
+dojo.require('dijit.PopupMenuBarItem');
+dojo.require('dijit.MenuItem');
+dojo.require('dijit.Menu');
+dojo.require('dijit.layout.AccordionContainer');
+dojo.require('dijit.form.Select');
+dojo.require('dijit.form.Button');
+dojo.require('dijit.layout.TabContainer');
+dojo.require("dijit.Dialog");
+dojo.require("dojox.widget.Standby");
+dojo.require('dijit.form.Textarea');
+dojo.require("dojox.grid.EnhancedGrid");
+dojo.require("dojo.data.ItemFileWriteStore");
+dojo.require("dojox.grid.enhanced.plugins.DnD");
+dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
+dojo.require("dojox.grid.DataGrid");
+dojo.require("dojox.data.CsvStore");
+dojo.require("dojox.grid.enhanced.plugins.exporter.CSVWriter");
+dojo.require("dojo.parser");
+dojo.require("dijit.form.FilteringSelect");
+dojo.require("dojo.data.ItemFileReadStore");
+dojo.require('dijit.form.MultiSelect');
+</script>
+
+<script  type="text/javascript">
+if(dojo.isIE >= 4){
+	alert("canEvolve does not competiable with some version of IE. We recommend to use with Firefox or Chrome!");
+}
+</script>
+<script type="text/javascript">
+dojo.ready(function(){
+    /*set up data store*/
+    var data = {
+      identifier: 'id',
+      items: []
+    };
+    var data_list = [
+      { col1: "canEvolve", col2: true, col3: 'Analysis Results', col4: 1},
+      { col1: "canEvolve", col2: true, col3: 'Analysis Results', col4: 2},
+      { col1: "canEvolve", col2: true, col3: 'Analysis Results', col4: 3}
+    ];
+    var rows = 12;
+    for(var i=0, l=data_list.length; i<rows; i++){
+      data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+    }
+    var store = new dojo.data.ItemFileWriteStore({data: data});
+
+    /*set up layout*/
+    var layout = [[
+      {'name': 'canEvolve', 'field': 'id', 'width': '20%'},
+      {'name': 'Source', 'field': 'col2', 'width': '20%'},
+      {'name': 'Page', 'field': 'col3', 'width': '20%'},
+      {'name': 'Order', 'field': 'col4', 'width': '20%'}
+    ]];
+
+    /*create a new grid:*/
+    var grid = new dojox.grid.EnhancedGrid({
+        id: 'grid',
+		plugins: {indirectSelection: true,exporter: true},
+		selectionMode: "single",
+        store: store,
+        structure: layout,
+        rowSelector: '0px'},
+      document.createElement('div'));
+
+    var gridcn = new dojox.grid.EnhancedGrid({
+        id: 'gridcn',
+		plugins: {indirectSelection: true,exporter: true},
+		selectionMode: "single",
+        store: store,
+        structure: layout,
+        rowSelector: '0px'},
+      document.createElement('div'));
+
+    var gridmut = new dojox.grid.EnhancedGrid({
+        id: 'gridmut',
+                plugins: {indirectSelection: true,exporter: true},
+                selectionMode: "single",
+        store: store,
+        structure: layout,
+        rowSelector: '0px'},
+      document.createElement('div'));
+
+    var gridcngeall = new dojox.grid.EnhancedGrid({
+        id: 'gridcngeall',
+                plugins: {indirectSelection: true,exporter: true},
+                selectionMode: "single",
+        store: store,
+        structure: layout,
+        rowSelector: '0px'},
+      document.createElement('div'));
+
+    var gridcngeselect = new dojox.grid.EnhancedGrid({
+        id: 'gridcngeselect',
+                plugins: {indirectSelection: true,exporter: true},
+                selectionMode: "single",
+        store: store,
+        structure: layout,
+        rowSelector: '0px'},
+      document.createElement('div'));
+
+    var griddiffge = new dojox.grid.EnhancedGrid({
+        id: 'griddiffge',
+                plugins: {indirectSelection: true,exporter: true},
+                selectionMode: "single",
+        store: store,
+        structure: layout,
+        rowSelector: '0px'},
+      document.createElement('div'));
+
+    var gridsurv = new dojox.grid.EnhancedGrid({
+        id: 'gridsurv',
+                plugins: {indirectSelection: true,exporter: true},
+                selectionMode: "single",
+        store: store,
+        structure: layout,
+        rowSelector: '0px'},
+      document.createElement('div'));
+
+    var gridcmpres = new dojox.grid.EnhancedGrid({
+        id: 'gridcmpres',
+                plugins: {indirectSelection: true,exporter: true},
+                selectionMode: "single",
+        store: store,
+        structure: layout,
+        rowSelector: '0px'},
+      document.createElement('div'));
+
+    //var gridcmpcolors = new dojox.grid.EnhancedGrid({
+    //    id: 'gridcmpcolors',
+    //            plugins: {indirectSelection: true,exporter: true},
+    //            selectionMode: "single",
+    //    store: store,
+    //    structure: layout,
+    //    rowSelector: '0px'},
+    //  document.createElement('div'));
+
+    /*append the new grid to the div*/
+    dojo.byId("gridDiv").appendChild(grid.domNode);
+    dojo.byId("gridCopyNumber").appendChild(gridcn.domNode);
+    dojo.byId("gridMutation").appendChild(gridmut.domNode);
+    dojo.byId("gridCopyGEall").appendChild(gridcngeall.domNode);
+    dojo.byId("gridCopyGEselect").appendChild(gridcngeselect.domNode);
+    dojo.byId("gridDGE").appendChild(griddiffge.domNode);
+    dojo.byId("gridSurv").appendChild(gridsurv.domNode);
+    //dojo.byId("gridcmpcolors").appendChild(gridcmpcolors.domNode);
+    dojo.byId("gridcmpres").appendChild(gridcmpres.domNode);
+    /*Call startup() to render the grid*/
+    grid.startup();
+    gridcn.startup();
+    gridmut.startup();
+    gridcngeall.startup();
+    gridcngeselect.startup();
+    griddiffge.startup();
+    gridsurv.startup();
+    //gridcmpcolors.startup();
+    gridcmpres.startup();
+	document.getElementById('gridDiv').style.visibility = 'hidden';
+	document.getElementById('showGEresults').style.visibility = 'hidden';
+	document.getElementById('showNetworkresults').style.visibility = 'hidden';
+	document.getElementById('showSurvivalresults').style.visibility = 'hidden';
+	document.getElementById('showGSEAresults').style.visibility = 'hidden';
+	document.getElementById('showDRIresults').style.visibility = 'hidden';
+	document.getElementById('showWGCNAresults').style.visibility = 'hidden';
+	document.getElementById('showCNresults').style.visibility = 'hidden';
+        document.getElementById('showMutationResults').style.visibility = 'hidden';
+	document.getElementById('showGemiNiresults').style.visibility = 'hidden';
+	document.getElementById('pwselectDiv').style.visibility = 'hidden';
+        document.getElementById('survpwselectDiv').style.visibility = 'hidden';
+	document.getElementById('showCompare').style.visibility = 'hidden';
+	var lastsData = [
+	  {id:0, name:"None"}
+	];
+	lastsstore = new dojo.store.Memory({data: lastsData});
+	/*Call pathways */
+	var xhrArgs = {
+		url: "get_pathways.php",
+		handleAs: "text",
+		load: function(data){
+			var myStore = new dojo.data.ItemFileReadStore({
+				url: 'get_pathways.php'
+			});
+
+                        var myStore2 = new dojo.data.ItemFileReadStore({
+                                url: 'get_comp_std.php'
+                        });  
+                        var myStore3 = new dojo.data.ItemFileReadStore({
+                                url: 'get_comp_std_surv.php'
+                        });	
+		
+			var filteringSelect = new dijit.form.FilteringSelect({
+				id: "pathwaySelectGE",
+				name: "pathwaySelectGE",
+				store: myStore,
+				searchAttr: "name",
+				required: false,
+				value: "1",
+				queryExpr: "*${0}*",
+				autoComplete: false,
+				messages: "MSigDB Pathways"
+			},"pathwaySelectGE");
+                        var filteringSelect2 = new dijit.form.FilteringSelect({
+                                id: "pathwaySelectSurvival",
+                                name: "pathwaySelectSurvival",
+                                store: myStore,
+                                searchAttr: "name",
+                                required: false,
+                                value: "1",
+                                queryExpr: "*${0}*",
+                                autoComplete: false,
+                                messages: "MSigDB Pathways"
+                        },"pathwaySelectSurvival");
+                        var filteringSelect3 = new dijit.form.FilteringSelect({
+                                id: "pathwaySelectComp",
+                                name: "pathwaySelectComp",
+                                store: myStore,
+                                searchAttr: "name",
+                                required: false,
+                                value: "1",
+                                queryExpr: "*${0}*",
+                                autoComplete: false,
+                                style: "width: 300px;",
+                                messages: "MSigDB Pathways"
+                        },"pathwaySelectComp");
+                        var filteringSelect4 = new dijit.form.FilteringSelect({
+                                id: "stdSelectComp",
+                                name: "stdSelectComp",
+                                store: myStore2,
+                                searchAttr: "name",
+                                required: false,
+                                value: "1",
+                                queryExpr: "*${0}*",
+                                autoComplete: false,
+				style: "width: 300px;",
+                                messages: "Studies"
+                        },"stdSelectComp");
+                        var filteringSelect5 = new dijit.form.FilteringSelect({
+                                id: "survpathwaySelectComp",
+                                name: "survpathwaySelectComp",
+                                store: myStore,
+                                searchAttr: "name",
+                                required: false,
+                                value: "1",
+                                queryExpr: "*${0}*",
+                                autoComplete: false,
+                                style: "width: 300px;",
+                                messages: "MSigDB Pathways"
+                        },"survpathwaySelectComp");
+                        var filteringSelect6 = new dijit.form.FilteringSelect({
+                                id: "survstdSelectComp",
+                                name: "survstdSelectComp",
+                                store: myStore3,
+                                searchAttr: "name",
+                                required: false,
+                                value: "1",
+                                queryExpr: "*${0}*",
+                                autoComplete: false,
+                                style: "width: 300px;",
+                                messages: "Studies"
+                        },"survstdSelectComp");
+		},
+		error: function(error){
+		  alert(error);
+		}
+	}
+	var deferred = dojo.xhrGet(xhrArgs);
+	dojo.style("btnAddStd","width","295px");
+	dojo.style("btnAddPw","width","295px");
+        dojo.style("btnRemoveStd","width","295px");
+        dojo.style("btnRemovePw","width","295px");
+	dojo.style("btnCompare","width","295px");
+});
+ 
+</script>
+<script type="text/javascript" src="maqetta/States.js"></script>
+<script type="text/javascript" src="lib/analysis.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29740094-1']);
+  _gaq.push(['_setDomainName', '.canevolve.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
+ <div dojoType="dijit.layout.BorderContainer" id="allboarder" design="sidebar" persist="false" gutters="true" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;">
+   <div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" region="top" splitter="false" minSize="30" style="height: 25px; width: 85%;" doLayout="false" maxSize="30">
+		<span dojoType="dijit.MenuBar" tabIndex="0" style="width: 100%; height: 25px;">
+			<span dojoType="dijit.PopupMenuBarItem" label="Portal" iconClass="dijitNoIcon" disabled="false">
+				<span dojoType="dijit.Menu">
+				<span dojoType="dijit.MenuItem" label="Visit canEvolve Portal (Soon)" onclick=""></></span>
+				</span>
+			</span>
+			<span dojoType="dijit.PopupMenuBarItem" label="About" iconClass="dijitNoIcon" disabled="false">
+				<span dojoType="dijit.Menu">
+				<span dojoType="dijit.MenuItem" label="About Query Interface" onclick="showCanEvolve"></span>
+				<span dojoType="dijit.MenuItem" label="Statistics" onclick="showStatistic"></span>
+				</span>
+			</span>
+                        <span dojoType="dijit.PopupMenuBarItem" label="Social canEvolve" iconClass="dijitNoIcon" disabled="false">
+                                <span dojoType="dijit.Menu">
+                                <span dojoType="dijit.MenuItem" label="Follow us on Twitter!" onclick='window.open("http://www.twitter.com/canevolve")'></span>
+                                <span dojoType="dijit.MenuItem" label="Follow us on Facebook!" onclick='window.open("https://www.facebook.com/canEvolve")'></span>
+                                </span>
+                        </span>
+		</span>
+	</div>
+   <div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" region="bottom" splitter="true" style="height: 45%; width: 100%;" doLayout="false">
+		<div id="showGEresults" style="width: 100%; height: 100%;">
+			<span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+				<div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="geSummary" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="Heatmap" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="geHeatmap" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="Output">
+					<div id="gridDGE" style="height: 100%; width: 100%;"></div>
+					<div id="geOutput"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="Data Download">
+					<div id="geDownload" style="height: 100%; width: 100%;"></div>
+				</div>
+			</span>
+		</div>
+		<div id="showNetworkresults" style="position: absolute; top: 1px; left: 1px; width: 100%; height: 100%;">
+		</div>
+		<div id="showSurvivalresults" style="position: absolute; top: 1px; left: 1px; width: 100%; height: 100%;">
+			<span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+				<div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="survivalSummary" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="KM Plot" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="survivalKM" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="Output" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+                                        <div id="gridSurv" style="height: 100%; width: 100%;"></div>
+					<div id="survivalOutput"></div>
+				</div>
+                                <div dojoType="dijit.layout.ContentPane" title="Data Download" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+                                        <div id="dataSurv" style="height: 100%; width: 100%;"></div>
+                                </div>
+			</span>
+		</div>
+		<div id="showGSEAresults" style="position: absolute; top: 1px; left: 1px; width: 100%; height: 100%;">
+			<span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+				<div dojoType="dijit.layout.ContentPane" title="C5 [GO biological process] " extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="gseaC5bp" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="C3 [microRNA targets] " extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="gseaC3mir" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="C3 [transcription factor targets] " extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="gseaC3tft" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="C2 [BioCarta gene sets] " extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="gseaC2biocarta" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="C2 [canonical pathways] " extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="gseaC2cp" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="C2 [KEGG gene sets] " extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="gseaC2kegg" style="height: 100%; width: 100%;"></div>
+				</div>
+			</span>
+		</div>
+		<div id="showDRIresults" style="position: absolute; top: 1px; left: 1px; width: 100%; height: 100%;">
+			<span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+				<div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="driSummary" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="Genes that you are interested" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="gridCopyGEselect" style="height: 100%; width: 100%;"></div>
+					<div id="driInterested"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="All results" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="gridCopyGEall" style="height: 100%; width: 100%;"></div>
+					<div id="driAll" >
+                                        </div>
+				</div>
+			</span>
+		</div>
+		<div id="showWGCNAresults" style="position: absolute; top: 1px; left: 1px; width: 100%; height: 100%;">
+			<span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+				<div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="wgcnaSummary" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="Figure 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="wgcnaF1" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="Figure 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="wgcnaF2" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="Figure 3" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="wgcnaF3" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="Figure 4" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="wgcnaF4" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="Downloads" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="wgcnaDownloads" style="height: 100%; width: 100%;"></div>
+				</div>
+			</span>
+		</div>
+		<div id="showCNresults" style="position: absolute; top: 1px; left: 1px; width: 100%; height: 100%;">
+			<span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+				<div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 1313px; height: 992px;" doLayout="false">
+					<div id="cnSummary" style="height: 100%; width: 100%;"></div>
+				</div>
+				<div dojoType="dijit.layout.ContentPane" title="CN Results" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+					<div id="cnResults" style="height: 100%; width: 100%;">
+						<div id="gridCopyNumber" style="width: 100%; height: 100%;" >
+						</div>
+					</div>
+				</div>
+                                <div dojoType="dijit.layout.ContentPane" title="Box Plot" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+                                        <div id="boxplotCN" style="height: 100%; width: 100%;">
+					</div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Data Download" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+                                        <div id="dataCN" style="height: 100%; width: 100%;"></div>
+                                </div>
+			</span>
+		</div>
+<!-- yeni -->
+                <div id="showMutationResults" style="position: absolute; top: 1px; left: 1px; width: 100%; height: 100%;">
+                        <span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+                                <div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+                                        <div id="mutationSummary" style="height: 100%; width: 100%;"></div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Details" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+                                        <div id="mutationDetails" style="height: 100%; width: 100%;">
+                                                <div id="gridMutation" style="width: 100%; height: 100%;" >
+                                                </div>
+                                        </div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Expression-CN-Mutations" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+                                        <div id="mutationfigures" style="height: 100%; width: 100%;"></div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Analysis Output" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+                                        <div id="mutationanalysisoutput" style="height: 100%; width: 100%;"></div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Download" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+                                        <div id="mutationanalysisdownload" style="height: 100%; width: 100%;"></div>
+                                </div>
+                        </span>
+                </div>
+<!-- yeni -->
+                <div id="showGemiNiresults" style="position: absolute; top: 1px; left: 1px; width: 100%; height: 100%;">
+                        <span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+                                <div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+                                        <div id="geminiSummary" style="height: 100%; width: 100%;"></div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Figure 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+                                        <div id="geminiFig1" style="height: 100%;">
+                                        </div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Figure 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+                                        <div id="geminiFig2" style="height: 100%;">
+                                        </div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Figure 3" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+                                        <div id="geminiFig3" style="height: 100%;">
+                                        </div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Figure 4" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+                                        <div id="geminiFig4" style="height: 100%;">
+                                        </div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Figure 5" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+                                        <div id="geminiFig5" style="height: 100%;">
+                                        </div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Figure 6" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+                                        <div id="geminiFig6" style="height: 100%;">
+                                        </div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Figure 7" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+                                        <div id="geminiFig7" style="height: 100%;">
+                                        </div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="List Files" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+                                        <div id="geminiLists" style="height: 100%;">
+                                        </div>
+                                </div>
+                        </span>
+                </div>
+                <div id="showCompare" style="position: absolute; top: 1px; left: 1px; width: 100%; height: 100%;">
+                        <span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+                               <!-- <div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+					<div id="gridcmpcolors" style="height: 100%; width: 100%;"></div>
+                                </div> -->
+                                <div dojoType="dijit.layout.ContentPane" title="Results" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;"  doLayout="false">
+                                        <div id="compareResults" style="height: 100%; width: 100%;">
+						<div id="gridcmpres" style="height: 100%; width: 100%;"></div>
+                                        </div>
+                                </div>
+                                <div dojoType="dijit.layout.ContentPane" title="Figure" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+                                        <div id="compareFigure" style="height: 100%; width: 100%;"></div>
+                                </div>
+                               <!-- <div dojoType="dijit.layout.ContentPane" title="Figure 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+                                        <div id="compareFigure2" style="height: 100%; width: 100%;"></div>
+                                </div> -->
+                        </span>
+                </div>
+   </div>
+   <div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" region="left" splitter="true" doLayout="false" style="width:15%;">
+	   <span dojoType="dijit.layout.AccordionContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;">
+			<div dojoType="dijit.layout.ContentPane" title="About Query Interface" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="true" closable="false" doLayout="true">
+				<label>Dear canEvolve users;</br></br>
+					CanEvolve supports different type of analysis. Please choose your analysis below and configure your settings.</br>
+					You can access more detail about analysis from "Tutorial" tab. </br>
+					If you need more information or help please send us an e-mail. (help [at] canevolve {dot} org)</br></br>
+					Thank you.</br>
+					CanEvolve Team</br>
+Department of Biostatistics and Computational Biology, Dana-Farber Cancer Institute</br></br>
+To cite your use of the canEvolve project, please reference 
+				</label><a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0056228" target="_blank">canEvolve: A Web Portal for Integrative Oncogenomics</a>
+			</div>
+			<div dojoType="dijit.layout.ContentPane" title="Diff. Gene Expr. [PA]" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="true" closable="false" doLayout="true">
+				<label>Cancer Type:</label></br>
+				<select dojoType="dijit.form.Select" id="geType" type="text" value="geType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+					<option dvwidget="html.option" value="0" selected="true">Show All</option>
+					<option dvwidget="html.option" value="1" selected="true">Multiple Myeloma (47)</option>
+					<option dvwidget="html.option" value="2" selected="true">Lung Cancer (1)</option>
+					<option dvwidget="html.option" value="4" selected="false">Brain Cancer (2)</option>
+					<option dvwidget="html.option" value="5" selected="false">Breast Cancer (6)</option>
+					<option dvwidget="html.option" value="6" selected="false">Colorectal Cancer (3)</option>
+					<option dvwidget="html.option" value="8" selected="false">Liver Cancer (1)</option>
+					<option dvwidget="html.option" value="9" selected="false">Oesophageal Cancer (1)</option>
+					<option dvwidget="html.option" value="10" selected="false">Thyroid Cancer (1)</option>
+					<option dvwidget="html.option" value="11" selected="false">Kidney Cancer (2)</option>
+					<option dvwidget="html.option" value="13" selected="false">Prostate Cancer (2)</option>
+                                        <option dvwidget="html.option" value="15" selected="false">Pancreatic Cancer (1)</option>
+					<option dvwidget="html.option" value="14" selected="false">Ovarian Cancer (1)</option>				
+				</select>
+				</br>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getGEStudies()"></input><br/><br/>
+				<label>Your Gene List:</label><br/>
+				<textarea type="text" dojoType="dijit.form.Textarea" id="geGeneList" disabled="false" readOnly="false" intermediateChanges="false" rows="10" trim="true" uppercase="true" lowercase="false" propercase="false" style="height: 50px; width: 100%;" name="geGeneList"></textarea><br/>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Result" iconClass="dijitNoIcon" onclick="getGEResult()"></input><br/><br/>
+<br/>
+				<label>MSigDB defined pathways</label><br/>
+				<input id="pathwaySelectGE"><br/>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Pathway Members" iconClass="dijitNoIcon" onclick="getPathwayMembers(1)"></input><br/><br/>
+				<label>An Example:</label><br/>
+				<label>Click "Get Studies" button and select a dataset from right list (i.e. Results ID:5 GSE2113)</label><br/>
+				<label>Copy and paste the following gene symbols to the gene list input area and then click "Get Results"</label><br/>
+				<label>IL4<br/>
+PTPRC<br/>
+IL7<br/>
+CEBPG<br/>
+SLA2<br/>
+TNFSF13<br/>
+NFAM1<br/>
+INHA<br/>
+TPD52<br/>
+TGFB1<br/>
+HDAC5<br/>
+HDAC4<br/>
+INHBA<br/>
+LAT2<br/>
+CD40LG<br/>
+LAX1<br/>
+CD79A<br/>
+HDAC9<br/>
+NHEJ1</label>
+			</div>
+			<div dojoType="dijit.layout.ContentPane" title="Diff. miRNA Expr. [PA]" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="false" closable="false">
+				<label>Cancer Type:</label></br>
+				<select dojoType="dijit.form.Select" id="mirType" type="text" value="mirType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+					<option dvwidget="html.option" value="0" selected="true">Show All</option>
+					<option dvwidget="html.option" value="1" selected="true">Multiple Myeloma (15)</option>
+                                        <option dvwidget="html.option" value="8" selected="true">Liver Cancer (1)</option>
+                                        <option dvwidget="html.option" value="13" selected="true">Prostate Cancer (1)</option>
+                                        <option dvwidget="html.option" value="11" selected="false">Kidney Cancer (1)</option>
+                                        <option dvwidget="html.option" value="12" selected="false">Germ Cell Tumor (1)</option>
+				</select>
+				</br>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getmiRNAStudies()"></input><br/><br/>
+				<label>Your miRNA List:</label><br/>
+				<textarea type="text" dojoType="dijit.form.Textarea" id="mirGeneList" disabled="false" readOnly="false" intermediateChanges="false" rows="10" trim="true" uppercase="true" lowercase="false" propercase="false" style="height: 50px; width: 100%;" name="mirGeneList"></textarea><br/>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Result" iconClass="dijitNoIcon" onclick="getmirResult()"></input><br/><br/>
+				<label>An Example:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. Results ID:1 GSE16558)</label><br/>
+<label>Copy and paste the following miRNA symbols to the gene list input area and then click "Get Results"</label><br/>
+<label>HSA-MIR-99A<br/>
+HSA-MIR-99B<br/>
+HSA-MIR-98<br/>
+HSA-MIR-96<br/>
+HSA-MIR-95<br/></label>
+			</div>
+                        <div dojoType="dijit.layout.ContentPane" title="Copy Number [PA]" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="true" closable="false" doLayout="true">
+                                <label>Cancer Type:</label></br>
+                                <select dojoType="dijit.form.Select" id="cnType" type="text" value="cnType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+                                        <option dvwidget="html.option" value="0" selected="true">Show All</option>
+                                        <option dvwidget="html.option" value="1" selected="true">Multiple Myeloma (3)</option>
+                                        <option dvwidget="html.option" value="2" selected="true">Lung Cancer (3)</option>
+                                        <option dvwidget="html.option" value="4" selected="false">Brain Cancer (4)</option>
+                                        <option dvwidget="html.option" value="5" selected="false">Breast Cancer (5)</option>
+                                        <option dvwidget="html.option" value="6" selected="false">Colorectal Cancer (2)</option>
+                                        <option dvwidget="html.option" value="8" selected="false">Liver Cancer (1)</option>
+                                        <option dvwidget="html.option" value="9" selected="false">Oesophageal Cancer (2)</option>
+                                        <option dvwidget="html.option" value="7" selected="false">Leukemia (3)</option>
+                                        <option dvwidget="html.option" value="11" selected="false">Kidney Cancer (1)</option>
+                                        <option dvwidget="html.option" value="13" selected="false">Prostate Cancer (3)</option>
+                                        <option dvwidget="html.option" value="3" selected="false">Lymphoma (5)</option>
+                                </select>
+                                </br>
+                                <input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getCNStudies()"></input><br/><br/>
+                                <label>Your Gene List:</label><br/>
+                                <textarea type="text" dojoType="dijit.form.Textarea" id="cnGeneList" disabled="false" readOnly="false" intermediateChanges="false" rows="10" trim="true" uppercase="true" lowercase="false" propercase="false" style="height: 50px; width: 100%;" name="geGeneList"></textarea><br/>
+                                <input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Results" iconClass="dijitNoIcon" onclick="getCNResult()"></input><br/><br/>
+                                <label>An Example:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. Results ID:26 GSE9845)</label><br/>
+<label>Copy and paste the following gene symbols to the gene list input area and then click "Get Results"</label><br/>
+<label>TP53<br/>
+E2F2<br/></label>
+                        </div>
+                        <div dojoType="dijit.layout.ContentPane" title="Genomic Changes vs. Gene Expression [IA]" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="true" closable="false" doLayout="true">
+                                <label>Cancer Type:</label></br>
+                                <select dojoType="dijit.form.Select" id="mutationType" type="text" value="mutationType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+                                        <option dvwidget="html.option" value="0" selected="true">Show All</option>
+                                        <option dvwidget="html.option" value="101" selected="true">Bladder Cancer (1)</option>
+                                        <option dvwidget="html.option" value="102" selected="true">Lung Cancer (2)</option>
+                                        <option dvwidget="html.option" value="103" selected="true">Breast Cancer (1)</option>
+                                        <option dvwidget="html.option" value="104" selected="false">Cervical Cancer (1)</option>
+                                        <option dvwidget="html.option" value="105" selected="false">Colorectal Cancer (2)</option>
+                                        <option dvwidget="html.option" value="106" selected="false">Brain Cancer (1)</option>
+                                        <option dvwidget="html.option" value="107" selected="false">Kidney Cancer (1)</option>
+                                	<option dvwidget="html.option" value="108" selected="false">Leukemia (1)</option>
+                                	<option dvwidget="html.option" value="109" selected="false">Prostate Cancer (1)</option>
+                                	<option dvwidget="html.option" value="110" selected="false">Stomach Cancer (1)</option>
+                                	<option dvwidget="html.option" value="111" selected="false">Thyroid Cancer (1)</option>
+                                	<option dvwidget="html.option" value="112" selected="false">Endometrial Cancer (1)</option>
+                                </select>
+                                </br>
+                                <input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getMutationStudies()"></input><br/><br/>
+                                <label>Gene Symbol:</label><br/>
+<!--
+                                <textarea type="text" dojoType="dijit.form.Textarea" id="mutationGeneList" disabled="false" readOnly="false" intermediateChanges="false" rows="10" trim="true" uppercase="true" lowercase="false" propercase="false" style="height: 50px; width: 100%;" name="geGeneList"></textarea><br/>
+-->
+                                <input type="text" dojoType="dijit.form.TextBox" id="txtMutGene1" disabled="false" readOnly="false" intermediateChanges="false" trim="false" uppercase="true" lowercase="false" propercase="false" maxLength="20"></input><br/>                                
+				<label>If you want to use another gene symbol for gene expression data please specify it!</label><br/>
+				<input type="text" dojoType="dijit.form.TextBox" id="txtMutGene2" disabled="false" readOnly="false" intermediateChanges="false" trim="false" uppercase="true" lowercase="false" propercase="false" maxLength="20"></input><br/>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Results" iconClass="dijitNoIcon" onclick="getMutationResult()"></input><br/><br/>
+                                <label>Example 1:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. ID:2 LUAD)</label><br/>
+<label>Copy and paste the following gene symbol to the gene symbol input area and then click "Get Results"</label><br/>
+<label>TP53</label><br/>
+                                <label>Example 2:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. ID:2 LUAD)</label><br/>
+<label>Copy and paste "TP53" to the gene symbol input area and put "MYC" to the second input then click "Get Results"</label><br/>
+<label></label><br/>
+                        </div>
+<!-- samur ekledi -->
+                        <div dojoType="dijit.layout.ContentPane" title="Genomic Changes vs. Protein Expression [IA]" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="true" closable="false" doLayout="true">
+                                <label>Cancer Type:</label></br>
+                                <select dojoType="dijit.form.Select" id="mutationproteinType" type="text" value="mutationproteinType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+                                        <option dvwidget="html.option" value="0" selected="true">Show All</option>
+                                        <option dvwidget="html.option" value="102" selected="true">Lung Cancer (1)</option>
+                                        <option dvwidget="html.option" value="103" selected="true">Breast Cancer (1)</option>
+                                        <option dvwidget="html.option" value="105" selected="false">Colorectal Cancer (2)</option>
+                                        <option dvwidget="html.option" value="106" selected="false">Brain Cancer (1)</option>
+                                        <option dvwidget="html.option" value="107" selected="false">Kidney Cancer (1)</option>
+                                        <option dvwidget="html.option" value="111" selected="false">Thyroid Cancer (1)</option>
+                                        <option dvwidget="html.option" value="112" selected="false">Endometrial Cancer (1)</option>
+                                </select>
+                                </br>
+                                <input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getMutationProteinStudies()"></input><br/><br/>
+                                <label>Gene Symbol:</label><br/>
+                                <input type="text" dojoType="dijit.form.TextBox" id="txtProteinGene1" disabled="false" readOnly="false" intermediateChanges="false" trim="false" uppercase="true" lowercase="false" propercase="false" maxLength="20"></input><br/>
+                                <label>Select Protein Symbol:</label><br/>
+                                <select dojoType="dijit.form.FilteringSelect" id="mutationproteinName" type="text" value="mutationproteinName" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+<option dvwidget="html.option" value="14-3-3_epsilon-M-C" selected="true">14-3-3_epsilon-M-C</option>
+<option dvwidget="html.option" value="4E-BP1_pS65-R-V" selected="true">4E-BP1_pS65-R-V</option>
+<option dvwidget="html.option" value="4E-BP1_pT170-R-V" selected="true">4E-BP1_pT170-R-V</option>
+<option dvwidget="html.option" value="4E-BP1_pT37-R-V" selected="true">4E-BP1_pT37-R-V</option>
+<option dvwidget="html.option" value="4E-BP1_pT70-R-C" selected="true">4E-BP1_pT70-R-C</option>
+<option dvwidget="html.option" value="4E-BP1-R-V" selected="true">4E-BP1-R-V</option>
+<option dvwidget="html.option" value="53BP1-R-C" selected="true">53BP1-R-C</option>
+<option dvwidget="html.option" value="A-Raf_pS299-R-NA" selected="true">A-Raf_pS299-R-NA</option>
+<option dvwidget="html.option" value="ACC_pS79-R-V" selected="true">ACC_pS79-R-V</option>
+<option dvwidget="html.option" value="ACC1-R-C" selected="true">ACC1-R-C</option>
+<option dvwidget="html.option" value="AIB1-M-V" selected="true">AIB1-M-V</option>
+<option dvwidget="html.option" value="Akt_pS473-R-V" selected="true">Akt_pS473-R-V</option>
+<option dvwidget="html.option" value="Akt_pT308-R-V" selected="true">Akt_pT308-R-V</option>
+<option dvwidget="html.option" value="Akt-R-V" selected="true">Akt-R-V</option>
+<option dvwidget="html.option" value="alpha-Catenin-M-V" selected="true">alpha-Catenin-M-V</option>
+<option dvwidget="html.option" value="AMPK_alpha-R-C" selected="true">AMPK_alpha-R-C</option>
+<option dvwidget="html.option" value="AMPK_pT172-R-V" selected="true">AMPK_pT172-R-V</option>
+<option dvwidget="html.option" value="ANLN-M-NA" selected="true">ANLN-M-NA</option>
+<option dvwidget="html.option" value="Annexin_I-R-V" selected="true">Annexin_I-R-V</option>
+<option dvwidget="html.option" value="AR-R-V" selected="true">AR-R-V</option>
+<option dvwidget="html.option" value="ARID1A-M-V" selected="true">ARID1A-M-V</option>
+<option dvwidget="html.option" value="ASNS-R-C" selected="true">ASNS-R-C</option>
+<option dvwidget="html.option" value="ATM-R-C" selected="true">ATM-R-C</option>
+<option dvwidget="html.option" value="ATM-R-NA" selected="true">ATM-R-NA</option>
+<option dvwidget="html.option" value="B-Raf-M-NA" selected="true">B-Raf-M-NA</option>
+<option dvwidget="html.option" value="Bad_pS112-R-V" selected="true">Bad_pS112-R-V</option>
+<option dvwidget="html.option" value="Bak-R-C" selected="true">Bak-R-C</option>
+<option dvwidget="html.option" value="Bax-R-V" selected="true">Bax-R-V</option>
+<option dvwidget="html.option" value="Bcl-2-M-V" selected="true">Bcl-2-M-V</option>
+<option dvwidget="html.option" value="Bcl-2-R-C" selected="true">Bcl-2-R-C</option>
+<option dvwidget="html.option" value="Bcl-2-R-NA" selected="true">Bcl-2-R-NA</option>
+<option dvwidget="html.option" value="Bcl-X-R-C" selected="true">Bcl-X-R-C</option>
+<option dvwidget="html.option" value="Bcl-xL-R-C" selected="true">Bcl-xL-R-C</option>
+<option dvwidget="html.option" value="Bcl-xL-R-V" selected="true">Bcl-xL-R-V</option>
+<option dvwidget="html.option" value="Beclin-G-V" selected="true">Beclin-G-V</option>
+<option dvwidget="html.option" value="beta-Catenin-R-V" selected="true">beta-Catenin-R-V</option>
+<option dvwidget="html.option" value="Bid-R-C" selected="true">Bid-R-C</option>
+<option dvwidget="html.option" value="Bim-R-V" selected="true">Bim-R-V</option>
+<option dvwidget="html.option" value="c-Jun_pS73-R-C" selected="true">c-Jun_pS73-R-C</option>
+<option dvwidget="html.option" value="c-Kit-R-V" selected="true">c-Kit-R-V</option>
+<option dvwidget="html.option" value="c-Met_pY1235-R-C" selected="true">c-Met_pY1235-R-C</option>
+<option dvwidget="html.option" value="c-Met-M-C" selected="true">c-Met-M-C</option>
+<option dvwidget="html.option" value="c-Myc-R-C" selected="true">c-Myc-R-C</option>
+<option dvwidget="html.option" value="C-Raf_pS338-R-C" selected="true">C-Raf_pS338-R-C</option>
+<option dvwidget="html.option" value="C-Raf-R-V" selected="true">C-Raf-R-V</option>
+<option dvwidget="html.option" value="Caspase-3_active-R-C" selected="true">Caspase-3_active-R-C</option>
+<option dvwidget="html.option" value="Caspase-7_cleavedD198-R-C" selected="true">Caspase-7_cleavedD198-R-C</option>
+<option dvwidget="html.option" value="Caspase-8-M-C" selected="true">Caspase-8-M-C</option>
+<option dvwidget="html.option" value="Caspase-9_cleavedD330-R-C" selected="true">Caspase-9_cleavedD330-R-C</option>
+<option dvwidget="html.option" value="Caveolin-1-R-V" selected="true">Caveolin-1-R-V</option>
+<option dvwidget="html.option" value="CD20-R-C" selected="true">CD20-R-C</option>
+<option dvwidget="html.option" value="CD31-M-V" selected="true">CD31-M-V</option>
+<option dvwidget="html.option" value="CD49b-M-V" selected="true">CD49b-M-V</option>
+<option dvwidget="html.option" value="CDK1-R-V" selected="true">CDK1-R-V</option>
+<option dvwidget="html.option" value="Chk1_pS345-R-C" selected="true">Chk1_pS345-R-C</option>
+<option dvwidget="html.option" value="Chk1-R-C" selected="true">Chk1-R-C</option>
+<option dvwidget="html.option" value="Chk1-R-V" selected="true">Chk1-R-V</option>
+<option dvwidget="html.option" value="Chk2_pT68-R-C" selected="true">Chk2_pT68-R-C</option>
+<option dvwidget="html.option" value="Chk2-M-C" selected="true">Chk2-M-C</option>
+<option dvwidget="html.option" value="cIAP-R-V" selected="true">cIAP-R-V</option>
+<option dvwidget="html.option" value="Claudin-7-R-V" selected="true">Claudin-7-R-V</option>
+<option dvwidget="html.option" value="Collagen_VI-R-V" selected="true">Collagen_VI-R-V</option>
+<option dvwidget="html.option" value="COX-2-R-C" selected="true">COX-2-R-C</option>
+<option dvwidget="html.option" value="Cyclin_B1-R-V" selected="true">Cyclin_B1-R-V</option>
+<option dvwidget="html.option" value="Cyclin_D1-R-V" selected="true">Cyclin_D1-R-V</option>
+<option dvwidget="html.option" value="Cyclin_E1-M-V" selected="true">Cyclin_E1-M-V</option>
+<option dvwidget="html.option" value="Cyclin_E2-R-C" selected="true">Cyclin_E2-R-C</option>
+<option dvwidget="html.option" value="DJ-1-R-C" selected="true">DJ-1-R-C</option>
+<option dvwidget="html.option" value="Dvl3-R-V" selected="true">Dvl3-R-V</option>
+<option dvwidget="html.option" value="E-Cadherin-R-V" selected="true">E-Cadherin-R-V</option>
+<option dvwidget="html.option" value="eEF2-R-V" selected="true">eEF2-R-V</option>
+<option dvwidget="html.option" value="eEF2K-R-V" selected="true">eEF2K-R-V</option>
+<option dvwidget="html.option" value="EGFR_pY1068-R-V" selected="true">EGFR_pY1068-R-V</option>
+<option dvwidget="html.option" value="EGFR_pY1173-R-C" selected="true">EGFR_pY1173-R-C</option>
+<option dvwidget="html.option" value="EGFR_pY992-R-V" selected="true">EGFR_pY992-R-V</option>
+<option dvwidget="html.option" value="EGFR-R-C" selected="true">EGFR-R-C</option>
+<option dvwidget="html.option" value="eIF4E-R-V" selected="true">eIF4E-R-V</option>
+<option dvwidget="html.option" value="ER-alpha_pS118-R-V" selected="true">ER-alpha_pS118-R-V</option>
+<option dvwidget="html.option" value="ER-alpha-R-V" selected="true">ER-alpha-R-V</option>
+<option dvwidget="html.option" value="ERCC1-M-C" selected="true">ERCC1-M-C</option>
+<option dvwidget="html.option" value="ERK2-R-C" selected="true">ERK2-R-C</option>
+<option dvwidget="html.option" value="ERK2-R-NA" selected="true">ERK2-R-NA</option>
+<option dvwidget="html.option" value="FAK-R-C" selected="true">FAK-R-C</option>
+<option dvwidget="html.option" value="Fibronectin-R-C" selected="true">Fibronectin-R-C</option>
+<option dvwidget="html.option" value="FOXO3a_pS318_S321-R-C" selected="true">FOXO3a_pS318_S321-R-C</option>
+<option dvwidget="html.option" value="FOXO3a-R-C" selected="true">FOXO3a-R-C</option>
+<option dvwidget="html.option" value="GAB2-R-V" selected="true">GAB2-R-V</option>
+<option dvwidget="html.option" value="GATA3-M-V" selected="true">GATA3-M-V</option>
+<option dvwidget="html.option" value="GSK3_pS9-R-V" selected="true">GSK3_pS9-R-V</option>
+<option dvwidget="html.option" value="GSK3-alpha-beta_pS21_S9-R-V" selected="true">GSK3-alpha-beta_pS21_S9-R-V</option>
+<option dvwidget="html.option" value="GSK3-alpha-beta-M-V" selected="true">GSK3-alpha-beta-M-V</option>
+<option dvwidget="html.option" value="HER2_pY1248-R-NA" selected="true">HER2_pY1248-R-NA</option>
+<option dvwidget="html.option" value="HER2_pY1248-R-V" selected="true">HER2_pY1248-R-V</option>
+<option dvwidget="html.option" value="HER2-M-V" selected="true">HER2-M-V</option>
+<option dvwidget="html.option" value="HER3_pY1298-R-C" selected="true">HER3_pY1298-R-C</option>
+<option dvwidget="html.option" value="HER3_pY1298-R-V" selected="true">HER3_pY1298-R-V</option>
+<option dvwidget="html.option" value="HER3-M-C" selected="true">HER3-M-C</option>
+<option dvwidget="html.option" value="HER3-R-V" selected="true">HER3-R-V</option>
+<option dvwidget="html.option" value="HSP70-R-C" selected="true">HSP70-R-C</option>
+<option dvwidget="html.option" value="IGF-1R-beta-R-C" selected="true">IGF-1R-beta-R-C</option>
+<option dvwidget="html.option" value="IGFBP2-R-V" selected="true">IGFBP2-R-V</option>
+<option dvwidget="html.option" value="INPP4B-G-C" selected="true">INPP4B-G-C</option>
+<option dvwidget="html.option" value="IRS1-R-V" selected="true">IRS1-R-V</option>
+<option dvwidget="html.option" value="JNK_pT183_pT185-R-V" selected="true">JNK_pT183_pT185-R-V</option>
+<option dvwidget="html.option" value="JNK_pT183_Y185-R-V" selected="true">JNK_pT183_Y185-R-V</option>
+<option dvwidget="html.option" value="JNK2-R-C" selected="true">JNK2-R-C</option>
+<option dvwidget="html.option" value="K-Ras-M-C" selected="true">K-Ras-M-C</option>
+<option dvwidget="html.option" value="Ku80-R-C" selected="true">Ku80-R-C</option>
+<option dvwidget="html.option" value="LBK1-M-NA" selected="true">LBK1-M-NA</option>
+<option dvwidget="html.option" value="Lck-R-V" selected="true">Lck-R-V</option>
+<option dvwidget="html.option" value="LKB1-M-C" selected="true">LKB1-M-C</option>
+<option dvwidget="html.option" value="LKB1-M-NA" selected="true">LKB1-M-NA</option>
+<option dvwidget="html.option" value="MAPK_pT202_Y204-R-V" selected="true">MAPK_pT202_Y204-R-V</option>
+<option dvwidget="html.option" value="MEK1_pS217_S221-R-V" selected="true">MEK1_pS217_S221-R-V</option>
+<option dvwidget="html.option" value="MEK1-R-V" selected="true">MEK1-R-V</option>
+<option dvwidget="html.option" value="MIG-6-M-V" selected="true">MIG-6-M-V</option>
+<option dvwidget="html.option" value="Mre11-R-C" selected="true">Mre11-R-C</option>
+<option dvwidget="html.option" value="MSH2-M-C" selected="true">MSH2-M-C</option>
+<option dvwidget="html.option" value="MSH6-R-C" selected="true">MSH6-R-C</option>
+<option dvwidget="html.option" value="mTOR_pS2448-R-C" selected="true">mTOR_pS2448-R-C</option>
+<option dvwidget="html.option" value="mTOR-R-V" selected="true">mTOR-R-V</option>
+<option dvwidget="html.option" value="N-Cadherin-R-V" selected="true">N-Cadherin-R-V</option>
+<option dvwidget="html.option" value="NEK7-R-NA" selected="true">NEK7-R-NA</option>
+<option dvwidget="html.option" value="NF-kB-p65_pS536-R-C" selected="true">NF-kB-p65_pS536-R-C</option>
+<option dvwidget="html.option" value="NF2-R-C" selected="true">NF2-R-C</option>
+<option dvwidget="html.option" value="Notch1-R-V" selected="true">Notch1-R-V</option>
+<option dvwidget="html.option" value="Notch3-R-C" selected="true">Notch3-R-C</option>
+<option dvwidget="html.option" value="P-Cadherin-R-C" selected="true">P-Cadherin-R-C</option>
+<option dvwidget="html.option" value="P-REX1-R-NA" selected="true">P-REX1-R-NA</option>
+<option dvwidget="html.option" value="p21-R-C" selected="true">p21-R-C</option>
+<option dvwidget="html.option" value="p27_pT157-R-C" selected="true">p27_pT157-R-C</option>
+<option dvwidget="html.option" value="p27_pT198-R-V" selected="true">p27_pT198-R-V</option>
+<option dvwidget="html.option" value="p27-R-V" selected="true">p27-R-V</option>
+<option dvwidget="html.option" value="p38_MAPK-R-C" selected="true">p38_MAPK-R-C</option>
+<option dvwidget="html.option" value="p38_pT180_Y182-R-V" selected="true">p38_pT180_Y182-R-V</option>
+<option dvwidget="html.option" value="p53-R-V" selected="true">p53-R-V</option>
+<option dvwidget="html.option" value="p70S6K_pT389-R-V" selected="true">p70S6K_pT389-R-V</option>
+<option dvwidget="html.option" value="p70S6K-R-V" selected="true">p70S6K-R-V</option>
+<option dvwidget="html.option" value="p90RSK_pT359_S363-R-C" selected="true">p90RSK_pT359_S363-R-C</option>
+<option dvwidget="html.option" value="Pal-1-M-C" selected="true">Pal-1-M-C</option>
+<option dvwidget="html.option" value="PARP_cleaved-M-C" selected="true">PARP_cleaved-M-C</option>
+<option dvwidget="html.option" value="Paxillin-R-V" selected="true">Paxillin-R-V</option>
+<option dvwidget="html.option" value="PCNA-M-V" selected="true">PCNA-M-V</option>
+<option dvwidget="html.option" value="PDK1_pS241-R-V" selected="true">PDK1_pS241-R-V</option>
+<option dvwidget="html.option" value="Pea-15-R-V" selected="true">Pea-15-R-V</option>
+<option dvwidget="html.option" value="PEA-15-R-V" selected="true">PEA-15-R-V</option>
+<option dvwidget="html.option" value="PI3K-p110-alpha-R-C" selected="true">PI3K-p110-alpha-R-C</option>
+<option dvwidget="html.option" value="PI3K-p85-R-V" selected="true">PI3K-p85-R-V</option>
+<option dvwidget="html.option" value="PKC-alpha_pS657-R-V" selected="true">PKC-alpha_pS657-R-V</option>
+<option dvwidget="html.option" value="PKC-alpha-M-V" selected="true">PKC-alpha-M-V</option>
+<option dvwidget="html.option" value="PKC-delta_pS664-R-V" selected="true">PKC-delta_pS664-R-V</option>
+<option dvwidget="html.option" value="PR-R-V" selected="true">PR-R-V</option>
+<option dvwidget="html.option" value="PRAS40_pT246-R-V" selected="true">PRAS40_pT246-R-V</option>
+<option dvwidget="html.option" value="PRDX1-R-NA" selected="true">PRDX1-R-NA</option>
+<option dvwidget="html.option" value="PTCH-R-C" selected="true">PTCH-R-C</option>
+<option dvwidget="html.option" value="PTEN-R-V" selected="true">PTEN-R-V</option>
+<option dvwidget="html.option" value="Rab11-R-V" selected="true">Rab11-R-V</option>
+<option dvwidget="html.option" value="Rab25-R-C" selected="true">Rab25-R-C</option>
+<option dvwidget="html.option" value="Rad50-M-C" selected="true">Rad50-M-C</option>
+<option dvwidget="html.option" value="Rad51-M-C" selected="true">Rad51-M-C</option>
+<option dvwidget="html.option" value="Rb_pS807_S811-R-V" selected="true">Rb_pS807_S811-R-V</option>
+<option dvwidget="html.option" value="Rb-M-V" selected="true">Rb-M-V</option>
+<option dvwidget="html.option" value="RBM3-M-NA" selected="true">RBM3-M-NA</option>
+<option dvwidget="html.option" value="S6_pS235_S236-R-V" selected="true">S6_pS235_S236-R-V</option>
+<option dvwidget="html.option" value="S6_pS240_S244-R-V" selected="true">S6_pS240_S244-R-V</option>
+<option dvwidget="html.option" value="S6-R-C" selected="true">S6-R-C</option>
+<option dvwidget="html.option" value="S6-R-NA" selected="true">S6-R-NA</option>
+<option dvwidget="html.option" value="SETD2-R-C" selected="true">SETD2-R-C</option>
+<option dvwidget="html.option" value="SETD2-R-NA" selected="true">SETD2-R-NA</option>
+<option dvwidget="html.option" value="Shc_pY317-R-C" selected="true">Shc_pY317-R-C</option>
+<option dvwidget="html.option" value="Shc_pY317-R-NA" selected="true">Shc_pY317-R-NA</option>
+<option dvwidget="html.option" value="Smac-M-V" selected="true">Smac-M-V</option>
+<option dvwidget="html.option" value="Smad1-R-V" selected="true">Smad1-R-V</option>
+<option dvwidget="html.option" value="Smad3-R-V" selected="true">Smad3-R-V</option>
+<option dvwidget="html.option" value="Smad4-M-C" selected="true">Smad4-M-C</option>
+<option dvwidget="html.option" value="Smad4-M-V" selected="true">Smad4-M-V</option>
+<option dvwidget="html.option" value="Snail-M-C" selected="true">Snail-M-C</option>
+<option dvwidget="html.option" value="Src_pY416-R-C" selected="true">Src_pY416-R-C</option>
+<option dvwidget="html.option" value="Src_pY527-R-V" selected="true">Src_pY527-R-V</option>
+<option dvwidget="html.option" value="Src-M-V" selected="true">Src-M-V</option>
+<option dvwidget="html.option" value="STAT3_pY705-R-V" selected="true">STAT3_pY705-R-V</option>
+<option dvwidget="html.option" value="STAT5-alpha-R-V" selected="true">STAT5-alpha-R-V</option>
+<option dvwidget="html.option" value="Stathmin-R-V" selected="true">Stathmin-R-V</option>
+<option dvwidget="html.option" value="Syk-M-V" selected="true">Syk-M-V</option>
+<option dvwidget="html.option" value="Tau-M-C" selected="true">Tau-M-C</option>
+<option dvwidget="html.option" value="TAZ_pS89-R-C" selected="true">TAZ_pS89-R-C</option>
+<option dvwidget="html.option" value="TAZ-R-C" selected="true">TAZ-R-C</option>
+<option dvwidget="html.option" value="TFF1-R-V" selected="true">TFF1-R-V</option>
+<option dvwidget="html.option" value="TIGAR-R-V" selected="true">TIGAR-R-V</option>
+<option dvwidget="html.option" value="Transglutaminase-M-V" selected="true">Transglutaminase-M-V</option>
+<option dvwidget="html.option" value="Tuberin-R-C" selected="true">Tuberin-R-C</option>
+<option dvwidget="html.option" value="VASP-R-C" selected="true">VASP-R-C</option>
+<option dvwidget="html.option" value="VEGFR2-R-C" selected="true">VEGFR2-R-C</option>
+<option dvwidget="html.option" value="VEGFR2-R-V" selected="true">VEGFR2-R-V</option>
+<option dvwidget="html.option" value="XBP1-G-C" selected="true">XBP1-G-C</option>
+<option dvwidget="html.option" value="XIAP-R-C" selected="true">XIAP-R-C</option>
+<option dvwidget="html.option" value="XRCC1-R-C" selected="true">XRCC1-R-C</option>
+<option dvwidget="html.option" value="YAP_pS127-R-C" selected="true">YAP_pS127-R-C</option>
+<option dvwidget="html.option" value="YAP-R-V" selected="true">YAP-R-V</option>
+<option dvwidget="html.option" value="YB-1_pS102-R-V" selected="true">YB-1_pS102-R-V</option>
+<option dvwidget="html.option" value="YB-1-R-V" selected="true">YB-1-R-V</option>
+                                </select>
+                                </br>
+                                <input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Results" iconClass="dijitNoIcon" onclick="getMutationProteinResult()"></input><br/><br/>
+                                <label>Example:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. ID:5 LUAD)</label><br/>
+<label>Add "TP53" to the gene symbol input and select or write "ACC1-R-C" to the protein symbol input then click "Get Results"</label><br/>
+			</div>
+<!-- ek bitti -->
+			<div dojoType="dijit.layout.ContentPane" title="Regulatory Networks [Net]" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="false" closable="false">
+				<label>Cancer Type:</label></br>
+				<select dojoType="dijit.form.Select" id="regnetType" type="text" value="regnetType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+					<option dvwidget="html.option" value="0" selected="true">Show All</option>
+					<option dvwidget="html.option" value="1" selected="true">Multiple Myeloma (8)</option>
+                                        <option dvwidget="html.option" value="5" selected="true">Breast Cancer (1)</option>
+                                        <option dvwidget="html.option" value="6" selected="true">Colorectal Cancer (1)</option>
+                                        <option dvwidget="html.option" value="11" selected="true">Kidney Cancer (1)</option>
+                                        <option dvwidget="html.option" value="13" selected="true">Prostate Cancer (1)</option>
+                                        <option dvwidget="html.option" value="15" selected="true">Pancreatic Cancer (1)</option>
+				</select>
+				</br>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getRegNetStudies()"></input><br/><br/>
+				<label>Your Gene Symbol:</label><br/>
+				<input type="text" dojoType="dijit.form.TextBox" id="txtRegNet" disabled="false" readOnly="false" intermediateChanges="false" trim="false" uppercase="true" lowercase="false" propercase="false" maxLength="20"></input><br/>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Show Aracne Network" iconClass="dijitNoIcon" onclick="showRegNetwork()"></input><br/><br/>
+				<label>An Example:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. Results ID:1 GSE6477)</label><br/>
+<label>Write "SP1" to the gene symbol area and then click "Show Aracne Network"</label><br/>
+			</div>
+			<div dojoType="dijit.layout.ContentPane" title="WGCNA Networks [Net]" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="false" closable="false">
+				<label>Cancer Type:</label></br>
+				<select dojoType="dijit.form.Select" id="wgcnaType" type="text" value="wgcnaType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+					<option dvwidget="html.option" value="0" selected="true">Show All</option>
+					<option dvwidget="html.option" value="1" selected="true">Multiple Myeloma (8)</option>
+                                        <option dvwidget="html.option" value="5" selected="false">Breast Cancer (2)</option>
+                                        <option dvwidget="html.option" value="11" selected="false">Kidney Cancer (1)</option>
+                                        <option dvwidget="html.option" value="13" selected="false">Prostate Cancer (2)</option>
+                                        <option dvwidget="html.option" value="15" selected="false">Pancreatic Cancer (1)</option>
+                                        <option dvwidget="html.option" value="6" selected="false">Colorectal Cancer (1)</option>
+                                        <option dvwidget="html.option" value="4" selected="false">Brain Cancer (1)</option>
+				</select>
+				</br>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getWGCNAStudies()"></input><br/><br/>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Show WGCNA Results" iconClass="dijitNoIcon" onclick="getWGCNAResults()"></input><br/><br/>			
+				<label>An Example:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. Results ID:1 GSE6477)</label><br/>
+<label>Click "Show WGCNA Results"</label><br/>
+			</div>
+			<div dojoType="dijit.layout.ContentPane" title="Survival Analysis" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="false" closable="false">
+				<label>Cancer Type:</label></br>
+				<select dojoType="dijit.form.Select" id="survivalType" type="text" value="survivalType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+					<option dvwidget="html.option" value="0" selected="true">Show All</option>
+					<option dvwidget="html.option" value="1" selected="true">Multiple Myeloma (1)</option>
+					<option dvwidget="html.option" value="2" selected="true">Lung Cancer (6)</option>
+					<option dvwidget="html.option" value="3" selected="true">Lymphoma (2)</option>
+					<option dvwidget="html.option" value="4" selected="false">Brain Cancer (1)</option>
+					<option dvwidget="html.option" value="5" selected="false">Breast Cancer (5)</option>
+					<option dvwidget="html.option" value="6" selected="false">Colorectal Cancer (4)</option>
+					<option dvwidget="html.option" value="7" selected="false">Leukemia (3)</option>
+				</select>
+				</br>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getSurvivalStudies()"></input><br/><br/>
+				<label>Your Gene Symbol:</label><br/>
+<!--
+				<input type="text" dojoType="dijit.form.TextBox" id="txtSurvival" disabled="false" readOnly="false" intermediateChanges="false" trim="false" uppercase="true" lowercase="false" propercase="false" maxLength="20"></input><br/>
+-->
+				<textarea type="text" dojoType="dijit.form.Textarea" id="txtSurvival" disabled="false" readOnly="false" intermediateChanges="false" rows="10" trim="true" uppercase="true" lowercase="false" propercase="false" style="height: 50px; width: 100%;" name="txtSurvival"></textarea><br/>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Show Survival Result" iconClass="dijitNoIcon" onclick="showSurvival()"></input><br/><br/>				
+                                <label>MSigDB defined pathways</label><br/>
+                                <input id="pathwaySelectSurvival"><br/>
+                                <input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Pathway Members" iconClass="dijitNoIcon" onclick="getPathwayMembers(2)"></input><br/><br/>
+				<label>An Example:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. Results ID:1 GSE2658)</label><br/>
+<label>Write "C21ORF45" to the gene symbol area and then click "Show Survival Results"</label><br/><br/><br/>
+<label>Note: In KM plot red curve indicates the samples that gene expression levels higher than median and blue curve indicates the samples that gene expression levels lower than median!</label><br/>
+			</div>
+			<div dojoType="dijit.layout.ContentPane" title="Gene Set Enrichment [IA]" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="false" closable="false">
+				<label>Cancer Type:</label></br>
+				<select dojoType="dijit.form.Select" id="GSEAType" type="text" value="GSEAType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+					<option dvwidget="html.option" value="0" selected="true">Show All</option>
+					<option dvwidget="html.option" value="1" selected="true">Multiple Myeloma (5)</option>
+                                        <option dvwidget="html.option" value="4" selected="false">Brain Cancer (2)</option>
+                                        <option dvwidget="html.option" value="5" selected="false">Breast Cancer (4)</option>
+                                        <option dvwidget="html.option" value="6" selected="false">Colorectal Cancer (2)</option>
+                                        <option dvwidget="html.option" value="11" selected="false">Kidney Cancer (2)</option>
+                                        <option dvwidget="html.option" value="13" selected="false">Prostate Cancer (2)</option>
+                                        <option dvwidget="html.option" value="15" selected="false">Pancreatic Cancer (1)</option>
+                                        <option dvwidget="html.option" value="14" selected="false">Ovarian Cancer (1)</option>
+				</select>
+				</br>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getGSEAStudies()"></input><br/><br/>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Show GSEA Results" iconClass="dijitNoIcon" onclick="getGSEAResults()"></input><br/><br/>
+				<label>An Example:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. GSEA ID:12 GSE6477)</label><br/>
+<label>Click "Show GSEA Results"</label><br/>
+			</div>
+			<div dojoType="dijit.layout.ContentPane" title="GemiNi [IA]" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="false" closable="false">
+                                <label>Cancer Type:</label></br>
+                                <select dojoType="dijit.form.Select" id="geminiType" type="text" value="wgcnaType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+                                        <option dvwidget="html.option" value="0" selected="true">Show All</option>
+                                        <option dvwidget="html.option" value="2" selected="true">Lung Cancer (2)</option>
+                                        <option dvwidget="html.option" value="8" selected="false">Liver Cancer (1)</option>
+                                        <option dvwidget="html.option" value="11" selected="false">Kidney Cancer (1)</option>
+                                        <option dvwidget="html.option" value="13" selected="false">Prostate Cancer(1)</option>
+                                        <option dvwidget="html.option" value="12" selected="false">Germ Cell Tumor (1)</option>
+                                </select>
+                                </br>
+                                <input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getGeminiStudies()"></input><br/><br/>
+                                <input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Show GemiNi Results" iconClass="dijitNoIcon" onclick="getGeminiResults()"></input><br/><br/>
+                                <label>An Example:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. Results ID:1 GSE16441)</label><br/>
+<label>Click "Show GemiNi Results"</label><br/>
+			</div>
+			<div dojoType="dijit.layout.ContentPane" title="Copy Number &amp;amp; Gene Expr. [IA]" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="false" closable="false">
+				<label>Cancer Type:</label></br>
+				<select dojoType="dijit.form.Select" id="cngeType" type="text" value="cngeType" disabled="false" readOnly="false" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" multiple="false" scrollOnFocus="true" autoWidth="true" style="width: 100%;">
+					<option dvwidget="html.option" value="0" selected="true">Show All</option>
+					<option dvwidget="html.option" value="1" selected="true">Multiple Myeloma (2)</option>
+                                        <option dvwidget="html.option" value="5" selected="false">Breast Cancer (1)</option>
+                                        <option dvwidget="html.option" value="8" selected="false">Liver Cancer (1)</option>
+                                        <option dvwidget="html.option" value="13" selected="false">Prostate Cancer (1)</option>
+                                        <option dvwidget="html.option" value="14" selected="false">Ovarian Cancer (1)</option>
+				</select>
+				</br>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Studies" iconClass="dijitNoIcon" onclick="getCNGEStudies()"></input><br/><br/>
+				<label>Genes you are interested:</label><br/>
+				<textarea type="text" dojoType="dijit.form.Textarea" id="driGeneList" disabled="false" readOnly="false" intermediateChanges="false" rows="10" trim="true" uppercase="true" lowercase="false" propercase="false" style="height: 50px; width: 100%;" name="mirGeneList"></textarea><br/>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Get Result" iconClass="dijitNoIcon" onclick="getDRIResult()"></input><br/><br/>				
+				<label>An Example:</label><br/>
+<label>Click "Get Studies" button and select a dataset from right list (i.e. DRI ID:2 GSE23720)</label><br/>
+<label>Copy and paste the following gene symbols to the gene list input area and then click "Get Results"</label><br/>
+<label>WHSC1L1<br/>
+CLNS1A<br/>
+ERBB2<br/>
+GRB7<br/></label>
+			</div>
+			<div dojoType="dijit.layout.ContentPane" title="Protein-Protein Interaction [IA]">
+				<label>Your Gene Symbol:</label><br/>
+				<input type="text" dojoType="dijit.form.TextBox" id="txtProtein" disabled="false" readOnly="false" intermediateChanges="false" trim="false" uppercase="true" lowercase="false" propercase="false" maxLength="20"></input><br/><br/>
+				 <input type="text" dojoType="dijit.form.NumberSpinner" id="ProteinConPower" name="ProteinConPower" disabled="false" readOnly="false" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" maxLength="3" required="true" invalidMessage="Invalid value." rangeMessage="Out of range." value="999" constraints="{min:100,max:999,places:0}"></input><br/><br/>
+				<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Show Protein-Protein Interaction" iconClass="dijitNoIcon" onclick="showProteinNetwork()"></input><br/><br/>
+				<label>An Example:</label><br/>
+<label>Write "TP53" to the gene symbol area and then click "Show Protein-Protein Interaction" button</label><br/>
+			</div>
+<div dojoType="dijit.layout.ContentPane" title="Compare Studies">
+	<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Gene Expression comparison" iconClass="dijitNoIcon" onclick="showselection"></input><br/><br/>
+<input type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Survival comparison" iconClass="dijitNoIcon" onclick="showsurvselection"></input><br/><br/>
+<label>Please select multiple dataset and pathway to start analysis.</label><br/>
+</div>
+		</span>
+	</div>
+	<div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" region="center" splitter="false" style="height: 50%;" doLayout="false">
+		<span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+			<div dojoType="dijit.layout.ContentPane" title="Studies" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+				<div id="studies">Please select your analysis type and then use the "Get Studies" function! If you need more help, you can check the "Tutorial" tab!
+				</div>
+				<div id="gridDiv">
+				</div>
+                                <div id="pwselectDiv" style="position: absolute; top: 25px; left: 5px; width: 100%; height: 100%;">
+                                        <table width="95%" height="95%">
+                                          <tr>
+                                            <td width="25%">
+                                                 <label>MSigDB defined pathways</label><br/>
+                                                 <input id="pathwaySelectComp"><br/><br/>
+                                                 <input id="btnAddPw" type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Add pathway to comparision list" iconClass="dijitNoIcon" onclick="addpwtolist"></input><br/>
+                                                 <input id="btnRemovePw" type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Remove pathway from comparision list" iconClass="dijitNoIcon" onclick="removepwfromlist"></input><br/>
+					    </td>
+                                            <td width="10%">&nbsp;</td>
+                                            <td width="25%">
+                                                 <label>Select studies for comparision</label><br/>
+                                                 <input id="stdSelectComp"><br/><br/>
+                                                 <input id="btnAddStd" type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Add study to comparision list" iconClass="dijitNoIcon" onclick="addstdtolist"></input><br/>
+                                                 <input id="btnRemoveStd" type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Remove study from list" iconClass="dijitNoIcon" onclick="removestdfromlist"></input><br/>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                          </tr>
+                                          <tr>
+                                            <td width="25%">
+                                                <select id="mscPW" name="mscPW"  multiple="true" dojoType="dijit.form.MultiSelect" disabled="false" readOnly="false" intermediateChanges="false" style="width: 100%; height: 100px;"></select>
+                                            </td>
+                                            <td width="10%">&nbsp;</td>
+                                            <td width="25%">
+                                                <select id="mscSTD" name="mscSTD"  multiple="true" dojoType="dijit.form.MultiSelect" disabled="false" readOnly="false" intermediateChanges="false" style="width: 100%; height: 100px;"></select>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                                <input id="btnCompare" type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Compare Pathways based on studies" iconClass="dijitNoIcon" onclick="getCmpRes"></input><br/>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                          </tr>
+                                          <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                          </tr>
+                                        </table>
+                                </div>
+<!-- yeni ek-->
+                                <div id="survpwselectDiv" style="position: absolute; top: 25px; left: 5px; width: 100%; height: 100%;">
+                                        <table width="95%" height="95%">
+                                          <tr>
+                                            <td width="25%">
+                                                 <label>MSigDB defined pathways</label><br/>
+                                                 <input id="survpathwaySelectComp"><br/><br/>
+                                                 <input id="survbtnAddPw" type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Add pathway to comparision list" iconClass="dijitNoIcon" onclick="survaddpwtolist"></input><br/>
+                                                 <input id="survbtnRemovePw" type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Remove pathway from comparision list" iconClass="dijitNoIcon" onclick="survremovepwfromlist"></input><br/>
+                                            </td>
+                                            <td width="10%">&nbsp;</td>
+                                            <td width="25%">
+                                                 <label>Select studies for comparision</label><br/>
+                                                 <input id="survstdSelectComp"><br/><br/>
+                                                 <input id="survbtnAddStd" type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Add study to comparision list" iconClass="dijitNoIcon" onclick="survaddstdtolist"></input><br/>
+                                                 <input id="survbtnRemoveStd" type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Remove study from list" iconClass="dijitNoIcon" onclick="survremovestdfromlist"></input><br/>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                          </tr>
+                                          <tr>
+                                            <td width="25%">
+                                                <select id="survmscPW" name="survmscPW"  multiple="true" dojoType="dijit.form.MultiSelect" disabled="false" readOnly="false" intermediateChanges="false" style="width: 100%; height: 100px;"></select>
+                                            </td>
+                                            <td width="10%">&nbsp;</td>
+                                            <td width="25%">
+                                                <select id="survmscSTD" name="survmscSTD"  multiple="true" dojoType="dijit.form.MultiSelect" disabled="false" readOnly="false" intermediateChanges="false" style="width: 100%; height: 100px;"></select>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                                <input id="survbtnCompare" type="button" dojoType="dijit.form.Button" disabled="false" intermediateChanges="false" label="Compare Pathways based on studies" iconClass="dijitNoIcon" onclick="survgetCmpRes"></input><br/>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                          </tr>
+                                          <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                          </tr>
+                                        </table>
+                                </div>
+<!-- yeni ek son -->
+			</div>
+			<div dojoType="dijit.layout.ContentPane" title="Tutorial" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" style="width: 100%; height: 100%;" doLayout="false">
+				<iframe src="help.html" style="width: 100%; height: 100%;"></iframe>
+			</div>
+		</span>
+	</div>
+ </div>
+</body>
+</html>

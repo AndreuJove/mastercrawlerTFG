@@ -1,0 +1,12 @@
+Date: Mon, 30 Mar 2020 18:47:22 GMT
+Server: Apache
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: origin-when-cross-origin
+Content-Security-Policy: upgrade-insecure-requests
+Cache-Control: private
+Ncbi-Phid: 5AAB54CFE823EBA10000000000000001.m_1
+Ncbi-Sid: 5AAB54CFE823EBA1_0000SID
+Content-Type: text/html
+Set-Cookie: ncbi_sid=5AAB54CFE823EBA1_0000SID; domain=.nih.gov; path=/; expires=Tue, 30 Mar 2021 18:47:22 GMT
+X-Ua-Compatible: IE=Edge
+X-Xss-Protection: 1; mode=block

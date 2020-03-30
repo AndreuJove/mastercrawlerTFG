@@ -1,0 +1,19 @@
+Date: Mon, 30 Mar 2020 18:50:20 GMT
+Content-Type: text/html; charset=UTF-8
+Set-Cookie: __cfduid=d87613cbf8e13cdf00b92881c1a8dd9431585594220; expires=Wed, 29-Apr-20 18:50:20 GMT; path=/; domain=.dl.acm.org; HttpOnly; SameSite=Lax; Secure
+Cf-Ray: 57c404091ccd5478-MAD
+Age: 74042
+Cache-Control: public, max-age=86400
+Expires: Tue, 31 Mar 2020 18:50:20 GMT
+Strict-Transport-Security: max-age=15552000
+Vary: Accept-Encoding
+Cf-Cache-Status: HIT
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Webstats-Respid: 0db455e35b892fdff8d9f8d6a4cbda1c
+X-Xss-Protection: 1; mode=block
+Server: cloudflare
+Content-Encoding: gzip
+Alt-Svc: h3-27=":443"; ma=86400, h3-25=":443"; ma=86400, h3-24=":443"; ma=86400, h3-23=":443"; ma=86400

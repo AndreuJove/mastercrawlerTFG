@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <title>ClustalW Server</title>
+  <link rel="stylesheet" href="/sib_css/sib-20130605.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/sib_css/sib_print-20130605.css" type="text/css" media="print" />
+  <link rel="shortcut icon" href="/favicon.ico" />  
+ </head>
+
+<body>
+
+<div id='sib_top'><a name='TOP'></a></div>
+  <div id='sib_container'>
+  <div id='sib_header_small'>
+  <div id="sib_expasy_logo">
+<a href="http://www.sib.swiss" id="sib_link" title="SIB Swiss Institute of Bioinformatics"></a>
+<a href="http://www.expasy.org" id="expasy_link" title="ExPASy - SIB Bioinformatics Resource Portal"></a>
+  </div>
+  <div class='sib_title_no_logo'>
+  <h1>ClustalW</h1>
+</div>
+
+<div id='sib_header_nav'>
+<a href="/" title="Home page">Home</a>&nbsp;|&nbsp;<a href="/contact.html" title="Contact">Contact</a>&nbsp;
+</div>
+</div>
+<!-- END OF HEADER -->
+
+<div id='sib_body'>
+
+<center>
+   <table border="0" cellpadding="0" cellspacing="2" width="580" summary="ClustalW doc">
+    <tr>
+     <td>
+      <center>
+       <h3>Valid format for input is: FASTA(Pearson)<br/>
+       max number of sequences = <font color="#dc143c">30</font><br/>
+       max total length of sequences = <font color="#dc143c">10000</font><br/>
+</h3>
+<h3><a href="/software/ClustalW_help.html">Help page</a></h3>
+<!--h3>For more than 30 sequences please use <a href="/software/ClustalW-XXL.html">ClustalW-XXL</a></h3-->
+<hr/>
+<h3>More information on Clustal <a href="http://www.clustal.org">home page</a></h3>
+      </center>
+     </td>
+    </tr>
+   </table>
+   <form action="/cgi-bin/clustalw_parser" method="post">
+   <br/>
+<table border="0" cellpadding="0" cellspacing="2" width="580" summary="ClustalW parameters">
+    <tr bgcolor="#d3d3d3">
+     <td width="150">
+      <div align="right">
+       Scoring matrix :</div>
+     </td>
+     <td><select name="Matrix" size="1">
+       <option value="blosum" selected="selected">Blosum</option>
+       <option value="pam">Pam</option>
+       <option value="gonnet">Gonnet</option>
+       <option value="id">Identity</option>
+      </select></td>
+     <td width="150">&nbsp;</td>
+     <td>&nbsp;</td>
+    </tr>
+    <tr bgcolor="#d3d3d3">
+     <td width="150">
+      <div align="right">
+       Opening gap penalty :</div>
+     </td>
+     <td><input type="text" value="10" name="OpenGap" size="4" /></td>
+     <td width="150">
+      <div align="right">
+       Extending gap penalty :</div>
+     </td>
+     <td><input type="text" value="0.05" name="ExtendGap" size="4" /></td>
+    </tr>
+    <tr bgcolor="#d3d3d3">
+     <td width="150">
+      <div align="right">
+       End gap penalty :</div>
+     </td>
+     <td><input type="text" value="10" name="EndGap" size="4" /></td>
+     <td width="150">
+      <div align="right">
+       Separation gap penalty :</div>
+     </td>
+     <td><input type="text" value="0.05" name="DistGap" size="4" /></td>
+    </tr>
+    <tr bgcolor="#d3d3d3">
+     <td width="150">
+      <div align="right">
+       Output format :</div>
+     </td>
+     <td><select name="OutFormat" size="1">
+       <option value="gcg">GCG/MSF</option>
+       <option value="gde">GDE</option>
+       <option value="phylip">Phylip</option>
+       <option value="pir">PIR</option>
+       <option value="aln" selected="selected">Clustal</option>
+      </select></td>
+     <td width="150">
+      <div align="right">
+       Output order :</div>
+     </td>
+     <td><select name="Order" size="1">
+       <option value="input" selected="selected">Input</option>
+       <option value="aligned">Aligned</option>
+      </select></td>
+    </tr>
+   </table>
+<br/>
+<table border="0" cellpadding="0" cellspacing="2" width="580" summary="ClustalW input">
+<tr bgcolor="#d3d3d3">
+<td width="150"></td>
+<td></td>
+</tr>
+<tr bgcolor="#d3d3d3">
+<td width="150">
+<div align="right">
+
+       Input sequences:<br/>
+
+       (see above for valid formats)<input type="hidden" value="plain_text" name="Format" /></div>
+</td>
+<td><textarea name="Sequence" rows="6" cols="60"></textarea></td>
+</tr>
+</table>
+<br/>
+<table border="0" cellpadding="0" cellspacing="2" width="580" summary="ClustalW form">
+    <tr bgcolor="#d3d3d3">
+     <td width="290"></td>
+     <td></td>
+    </tr>
+    <tr bgcolor="#d3d3d3">
+     <td width="290">
+      <div align="right">
+       <input type="submit" value="Run ClustalW" /></div>
+     </td>
+     <td><input type="reset" value="Clear Input" /></td>
+    </tr>
+   </table>
+</form>
+  </center>
+</div>
+<!-- ********************************************************************************************** -->
+<div id='sib_footer'>
+  <div id='sib_footer_content'>
+    <a href="http://www.sib.swiss">SIB Swiss Institute of Bioinformatics</a>&nbsp;|&nbsp;<a href="/contact.html">Contact</a>
+    <div id="sib_footer_right">
+      <a href="#TOP" id="sib_footer_gototop"><span style="padding-left: 10px">Back to the Top</span></a>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16617489-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

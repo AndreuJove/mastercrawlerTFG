@@ -1,0 +1,50 @@
+<HTML>
+
+<HEAD>
+   <TITLE>Crystallography & NMR System</TITLE>
+</HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+   js=1
+// -->
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+   js=1.1
+// -->
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+  function redirect_cns()
+{
+  if (js>1)
+      location.replace("http://cns-online.org/v1.3/");
+  else
+      location.href = "http://cns-online.org/v1.3/";
+}
+// -->
+</SCRIPT>
+
+<BODY ONLOAD="redirect_cns();">
+
+<NOSCRIPT>
+<HR>
+<TABLE ALIGN=CENTER>
+<TR><TD>
+<FORM METHOD="GET"
+      ACTION="v1.3/index.html">
+<FONT SIZE=+1>
+To access the latest version of Crystallography & NMR System:
+</FONT>
+<INPUT TYPE="SUBMIT" VALUE="click here">
+</FORM>
+</TD></TR>
+</TABLE>
+<HR>
+</NOSCRIPT>
+
+</BODY>
+</HTML>

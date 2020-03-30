@@ -1,0 +1,19 @@
+Content-Type: text/html
+Content-Encoding: gzip
+Last-Modified: Mon, 18 Nov 2019 01:08:52 GMT
+Vary: Accept-Encoding
+Server: nginx
+X-Ms-Request-Id: 1a92710f-e01e-005a-27c4-065bba000000
+X-Ms-Version: 2009-09-19
+X-Ms-Lease-Status: unlocked
+X-Ms-Blob-Type: BlockBlob
+Access-Control-Allow-Origin: *
+X-Served: Nginx-Proxito-Sendfile
+X-Deity: web02
+Strict-Transport-Security: max-age=31536000;
+X-Rtd-Project: deploid
+X-Rtd-Version: latest
+X-Rtd-Path: /proxito/media/html/deploid/latest/index.html
+X-Rtd-Domain: deploid.readthedocs.io
+X-Rtd-Version-Method: subdomain
+Date: Mon, 30 Mar 2020 18:50:18 GMT

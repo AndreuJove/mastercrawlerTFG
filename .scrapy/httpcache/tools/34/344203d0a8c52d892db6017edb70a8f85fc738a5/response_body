@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>B6db home : Main Menu</TITLE>
+<META NAME="GENERATOR" VALUE="WODA 4.599 - http://www.ddatabase.com/">
+<LINK REL="search" TITLE="Search B6db home" HREF="http://bioinformatics.unipr.it/cgi-bin/bioinformatics/B6db/home.pl/SearchForm">
+<LINK REL="alternate" TITLE="B6db home RSS feed" HREF="http://bioinformatics.unipr.it/cgi-bin/bioinformatics/B6db/home.pl/Search?format=RSS&sort=TIME&max=10" TYPE="application/rss+xml">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<STYLE TYPE="text/css">
+<!-- 
+NewYork
+--></STYLE>
+<!-- WBB{script} empty -->
+<META name="description" content="B6db, Activities - Families - Sequences of B6-dependent enzymes">
+<META name="keywords" content="">
+<link REL="shortcut icon" HREF="/B6db/favicon.ico" type="image/x-icon" />
+<link href="/B6db/styles/NewYork/stylesheet.css" rel="stylesheet" type="text/css">
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/css/uikit.min.css__" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit-icons.min.js"></script>
+</HEAD>
+
+<BODY onLoad="self.focus();" BGCOLOR="#E0E0E0">
+<!-- body parameters came from WBB{pageBody} -->
+
+<STYLE type="text/css">
+ <!--
+ .SEARCHREFORMAT {
+ position:absolute;
+ visibility:hidden;
+ }
+ -->
+ </STYLE>
+
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100%>
+<!--Unipr logo -->
+<TH  NOWRAP align="right">
+<img   SRC=/B6db/unipr_small_logo.png TITLE="University of Parma" BORDER=0>
+<!--Elixir logo -->
+<img   SRC=/B6db/elixir_ita.png TITLE="Elixir Italy"  height="52" BORDER=0>
+</TH>
+</TABLE>
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=1 WIDTH=100%>
+<tr><td>
+<a href=/cgi-bin/bioinformatics/B6db/home.pl>
+<img SRC=/B6db/plp_logo.png BORDER=0>
+</a>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img   SRC=/B6db/fold/att/ft_1_95_80.png TITLE="FOLD TYPE I" BORDER=0>
+</td>
+<td>
+<img   SRC=/B6db/fold/att/ft_2_95_80.png TITLE="FOLD TYPE II" BORDER=0>
+</td>
+<td>
+<img   SRC=/B6db/fold/att/ft_3_95_80.png TITLE="FOLD TYPE III" BORDER=0>
+</td>
+<td>
+<img   SRC=/B6db/fold/att/ft_4_95_80.png TITLE="FOLD TYPE IV" BORDER=0>
+</td>
+<td>
+<img   SRC=/B6db/fold/att/ft_5_95_80.png TITLE="FOLD TYPE V" BORDER=0>
+</td>
+<td>
+<img   SRC=/B6db/fold/att/ft_6_95_80.png TITLE="FOLD TYPE VI" BORDER=0>
+</td>
+<td>
+<img   SRC=/B6db/fold/att/ft_7_95_80.png TITLE="FOLD TYPE VII" BORDER=0>
+</td>
+
+
+
+
+</TR>
+</TABLE>
+
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=1 WIDTH=100%>
+<tr><td>
+<div CLASS=NAVBAR>
+<TH  NOWRAP align="right" valign="bottom" ><a href=/cgi-bin/bioinformatics/B6db/activity.pl>Activities</a> | <a href=/cgi-bin/bioinformatics/B6db/fam.pl>Families</a> | <a href=/cgi-bin/bioinformatics/B6db/seq.pl>Sequences</a> | <a href=/cgi-bin/bioinformatics/B6db/fold.pl>Fold types</a> | <a href=/cgi-bin/bioinformatics/B6db/bib.pl>References</a> | <a href=/cgi-bin/bioinformatics/B6db/help.pl?>Help</a></TH>
+</DIV></td></tr></TABLE><A HREF="/cgi-bin/bioinformatics/B6db/home.pl/Trap"> </A>
+<!-- TITLE -->
+<TABLE CLASS=TITLE width=100%>
+<TR>
+<TD width=100% align=center>
+<A HREF=/cgi-bin/bioinformatics/B6db/home.pl/Home>B6db home:</A> Main Menu
+</TD>
+</TR>
+</TABLE>
+<!-- END TITLE --><!-- WBB{head;Home} would be here -->
+<DIV CLASS=CORE>
+<TABLE  WIDTH=100%>
+<TR VALIGN=TOP>
+<TD>
+<P>Home of B6-dependent enzymes
+<DIV CLASS=RECORDS><p>Enzymes that contain vitamin B6 &#8211; pyridoxal-5' phosphate (PLP) &#8211; as a cofactor are of great relevance to biology and medicine. B6-dependent enzymes belong to a small number of evolutionary lineages, but encompass more than 140 distinct catalytic functions, thus representing a remarkable example of divergent evolution. 
+
+</p>
+</DIV><hr>
+<b>You can access to the following information:</b>
+<ul>
+<li><a href=http://bioinformatics.unipr.it/cgi-bin/bioinformatics/B6db/activity.pl>activity</a>&nbsp; Activities involving the B6 cofactor<li><a href=http://bioinformatics.unipr.it/cgi-bin/bioinformatics/B6db/seq.pl>seq</a>&nbsp; Sequences of B6-dependent enzymes<li><a href=http://bioinformatics.unipr.it/cgi-bin/bioinformatics/B6db/bib.pl>bib</a>&nbsp; References on B6-dependent activities and proteins<li><a href=http://bioinformatics.unipr.it/cgi-bin/bioinformatics/B6db/fam.pl>fam</a>&nbsp; Families of B6-dependent proteins<li><a href=http://bioinformatics.unipr.it/cgi-bin/bioinformatics/B6db/help.pl>help</a>&nbsp; Help on the database usage
+</ul>
+<hr>
+<b>B6db statistics</b>
+<ul>
+<li>Number of activities: 238
+<ul><li>with EC number: 191
+    <li>with known genes: 169
+</ul>
+<li>Numer of families: 205
+<li>Number of sequences: 2751
+<li>Number of references: 2271
+</ul>
+</TD>
+<TD >
+<img SRC="/B6db/home/plp_torta.png">
+</TD>
+</TR>
+</TABLE>
+
+<!-- WBB{foot;Home} would be here --></DIV>
+
+<BR></TD></TR></TABLE>
+<!-- END MAIN TABLE -->
+<TABLE WIDTH=100% CLASS=TOOLBAR BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR>
+<TD CLASS=TITLE  ALIGN=LEFT><A HREF="/cgi-bin/bioinformatics/B6db/home.pl/Home" ><IMG 
+BORDER=0 HEIGHT=24 WIDTH=24 CLASS=ICON SRC="/woda/icons/home.gif" TITLE="HOME"></A>
+<A HREF=/cgi-bin/bioinformatics/B6db/home.pl/LoginOrRegister?referer=http%3a%2f%2fbioinformatics%2eunipr%2eit%2fcgi%2dbin%2fbioinformatics%2fB6db%2fhome%2epl%2f><IMG
+BORDER=0 HEIGHT=24 WIDTH=24 CLASS=ICON SRC="/woda/icons/uguest.gif" TITLE="LOGIN (you are user _anon_993335 from group guest)"></A>
+</TD><TD CLASS=TITLE  ALIGN=RIGHT>B6db home<!-- WBB{toolbarText} --></TD>
+</TR>
+</TABLE>
+
+<!-- WBB{pageFoot} would be here --><A HREF="/cgi-bin/bioinformatics/B6db/home.pl/Trap"> </A><DIV CLASS=HIDDEN>
+<CENTER>
+These pages are best viewed with any standards compliant browser (e.g. <A HREF="http://www.mozilla.org/">Mozilla</A>).
+</CENTER>
+</DIV>
+</BODY>
+</HTML>
+
+<!-- WODA LOG -------------
+
+0.05:	Perl compile overhead 
+Logging with COOKIES as ''
+Login without userTable
+Cookies:
+Set-Cookie: _user=_anon_993335; path=/cgi-bin/bioinformatics/B6db; expires=Wed, 1-Jan-2020 23:59:59 GMT
+Fields=
+0.06:	---- recSelect in table '' for search '' with fields '' started 
+0.06:	Begin re-indexing table 
+0.06:	Before reading FAT 
+0.06:	Parsed FAT 
+0.06:	Optimised FAT - -1+1 records 
+0.06:	Have new data 
+0.06:	Sorted 
+0.06:	Table reindexed 
+0.06:	Search parameters parsed 
+Working with table: 
+0.06:	Read with filter's '': -1+1 records in RAM 
+list=records ... -1+1
+... using list
+0.06:	Grep with user's search: -1+1 records remain. 
+	Search not cached - found -1+1
+	Quick trimmed to -1+1
+	-1+1 before format
+0.06:	-1+1 formated as DEFAULT ... recSelect done! 
+0.07:	---- recSelect in table 'activity' for search '' with fields 'ID' started 
+0.07:	Search parameters parsed 
+Working with table: activity
+0.07:	Read with filter's '': 235+1 records in RAM 
+list=records ... 235+1
+... using list
+0.07:	Grep with user's search: 235+1 records remain. 
+	Search not cached - found 235+1
+	Quick trimmed to 235+1
+	235+1 before format
+0.08:	235+1 formated as RAW ... recSelect done! 
+0.08:	---- recSelect in table 'fam' for search '' with fields 'CL' started 
+0.08:	Search parameters parsed 
+Working with table: fam
+0.08:	Read with filter's '': 202+1 records in RAM 
+list=records ... 202+1
+... using list
+0.08:	Grep with user's search: 202+1 records remain. 
+	Search not cached - found 202+1
+	Quick trimmed to 202+1
+	202+1 before format
+0.09:	202+1 formated as RAW ... recSelect done! 
+0.09:	---- recSelect in table 'seq' for search '' with fields '_id' started 
+0.09:	Search parameters parsed 
+Working with table: seq
+0.09:	Read with filter's '': 2751+1 records in RAM 
+list=records ... 2751+1
+... using list
+0.09:	Grep with user's search: 2751+1 records remain. 
+	Search not cached - found 2751+1
+	Quick trimmed to 2751+1
+	2751+1 before format
+0.22:	2751+1 formated as RAW ... recSelect done! 
+0.23:	---- recSelect in table 'bib' for search '' with fields '_id' started 
+0.23:	Search parameters parsed 
+Working with table: bib
+0.24:	Read with filter's '': 2271+1 records in RAM 
+list=records ... 2271+1
+... using list
+0.24:	Grep with user's search: 2271+1 records remain. 
+	Search not cached - found 2271+1
+	Quick trimmed to 2271+1
+	2271+1 before format
+0.38:	2271+1 formated as RAW ... recSelect done! 
+Using cached search0.38:	Done QRY 
+0.38:	Done 
+
+
+-->

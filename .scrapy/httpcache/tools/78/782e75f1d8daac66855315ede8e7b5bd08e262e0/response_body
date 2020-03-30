@@ -1,0 +1,281 @@
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="http://crispr-era.stanford.edu:80/">
+<title>CRISPR-ERA</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<style>
+.v4-tease {
+    display: block;
+    padding: 15px 20px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    background-color: #5cb85c;
+} 
+.v4-tease div {
+   -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    width: 1024px;
+}
+
+
+
+</style>
+</head>
+
+<body >
+<div href="https://getbootstrap.com/" class="v4-tease"><div>We sincerely apologize for the temporary shutdown of the CRISPR-ERA server in the past months to restore from an unexpected website attack. We have solved the problem and hope you continue to use the server for your research.</div></div>
+<br/>
+<table  align="center" width="1024" border="0" cellspacing="0" style=" background-color:FFFFFF;">
+  <tr  height="100">
+    <td colspan="7"  width="1024" ><img alt="" src="img/logo.jpg" height="100"/></td>
+    <td>A Fast and Comprehensive Guide RNA Design Tool for Genome Editing, Repression and Activation.</td>
+    <!--<table style="width: 646px; " align="left"><tr style="font-size:30px;"><td>CRISPR-ERA (editing, repression, activation)</td></tr>
+  			<tr><td><a href="http://www.tsinghua.edu.cn" style="text-decoration:none; color:000000"></a></td></tr></table>
+  			-->
+    
+      </td>
+  </tr>
+</table>
+<br/>
+<table  width="1024" align="center"   cellspacing="0" >
+  <tr>
+    <td><nav class="navbar navbar-inverse" role="navigation" >
+        <div class="container-fluid" >
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active" ><a href="index.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sgRNA Design &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+              <li ><a href="gain.jsp">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Genome Wide sgRNA design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+              <li ><a href="readme.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About  CRISPR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+              <li ><a href="help.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+              <li ><a href="contact.jsp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+              <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        -->
+            </ul>
+          </div>
+          <!-- /.navbar-collapse --> 
+        </div>
+        <!-- /.container-fluid --> 
+      </nav></td>
+  </tr>
+</table>
+<table  width="1024" align="center"   cellspacing="0" >
+  <tr>
+    <td valign="top"><div class="panel panel-primary">
+
+        <div class="panel-body" align="justify"> A Fast and Comprehensive Guide RNA Design Tool for Genome Editing, Repression and Activation (CRISPR-ERA)<br/>
+Here we describe a web tool called CRISPR-ERA for automated genome wide sgRNA design. CRISPR-ERA can provide different sgRNA searching approaches for genome editing, such as Cas9 nuclease. In addition, CRISPR-ERA also generate sgRNAs for gene activation or repression using our large-scale database of CRISPRi in different genomes. Now nine (two bacterial speices: E.coli, B. subtilis; one yeast: S. cerevasiae; C. elegans, fruit fly, zebrafish, mouse, rat, human) model organisms are provided in this web tool.
+<br/><strong>Note: We support the latest versions of the following browsers: Internet Explorer (>=v10), Firefox (>=v28), Chrome (>=v4), Opera (>=v10), Safari (>=v30)
+</strong>
+ </div>
+      </div>
+      <form action="CreateStep2.action" method="post"   ENCTYPE="multipart/form-data" name="form1">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            
+            <h3 class="panel-title">STEP 1: Specify the types of manipulation on the genome <a style="cursor: pointer;" id="step1Help"  data-toggle="popover" 
+    title="<p4 style='color:#000'>Choose one manipulation:</p4>" data-content="
+<p4 style='color:#000'><strong>Gene editing using nickase:</strong> <br/>offset distance (-50 bp, +100 bp).<br/>
+<strong>Gene editing using nuclease:<br/></strong> sgRNA is found in exon region <br/>
+<strong>Gene repression:<br/></strong> sgRNA is found in (-1500bp- 1500bp) relative to TSS.<br/>
+<strong>Gene activation:<br/></strong> sgRNA is found in (0-1500bp) relative to TSS.</p4> <a href='help.jsp#mt' target='_blank'>More...</a><br/><img width='250' src='img/help1-1.jpg'><br/><img width='250' src='img/help1-2.jpg'>"><span  class="glyphicon glyphicon-question-sign" ></span></a></h3>
+          </div>
+          <div class="panel-body">
+            <table width="700" border="0" cellspacing="0" align=center>
+              <tr >
+                <td width="320" style="background-color:EEEEEE; "><table >
+                    <tr>
+                      <td align="center" colspan="1">Gene editing </td>
+                    </tr>
+                    <tr valign="middle">
+                      <td align="center">&nbsp; &nbsp;&nbsp; &nbsp;
+                        <label class="radio-inline" >
+                          <input type="radio"name="step1" value="1" id="step11"  onClick="document.form1.submit();">
+                          Using nickase </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="step1" value="2" id="step12"  onClick="document.form1.submit();">
+                          Using nuclease </label></td>
+                      <!-- <td width="10"> </td>
+	  						<td>
+	  						<input type="radio" name="step1" value="1" id="step11" onclick="document.form1.submit();"/>
+	  						</td>
+	  						<td width="150" align="center">
+							
+							 Using nickase
+							</td>
+							<td>
+							<input type="radio" name="step1" value="2" id="step12" onclick="document.form1.submit();"/>
+	  						</td>
+	  						<td width="150" align="center">
+							
+							 Using nuclease
+							</td>--> 
+                    </tr>
+                  </table></td>
+                <td width="20"></td>
+                <td align="center" width="160" style=" background-color:EEEEEE;"><input type="radio" name="step1" value="3"  id="step13" checked="true"onClick="document.form1.submit();"/>
+                  Gene repression </td>
+                <td width="20"></td>
+                <td align="center" width="160" style="background-color:EEEEEE;"><input type="radio" name="step1" value="4" id="step14" onClick="document.form1.submit();"/>
+                  Gene activation </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </form>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">STEP 2: Specify the organism<a style="cursor: pointer;" id="step2Help"  data-toggle="popover" 
+    title="<p4 style='color:#000'>Choose one organism:</p4>" data-content="<p4 style='color:#000'>
+The genome and annotation file are from UCSC/NCBI/CCDS.</p4> <a href='help.jsp#or' target='_blank'>More...</a>">
+    	<span onmouseover="this.style.cursor='hand'" class="glyphicon glyphicon-question-sign" ></span>
+    </a></h3>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">STEP 3: Specify the gene manipulation <a style="cursor: pointer;" id="step3Help"  data-toggle="popover" 
+    title="<p4 style='color:#000'>Choose one input format:</p4>" data-content="
+
+<p4 style='color:#000'>Gene name / Location /Sequence</p4>
+
+ <a href='help.jsp#if' target='_blank'>More...</a>">
+    	<span onmouseover="this.style.cursor='hand'" class="glyphicon glyphicon-question-sign" ></span>
+    </a></h3>
+        </div>
+        <!-- <div class="panel-body">
+       You must finish STEP 2 first.
+      </div>--> 
+      </div>
+      
+      <script>$(function () 
+      { $("[data-toggle='popover']").popover({html : true });
+      });
+      
+      $(function () 
+      { $("[data-toggle!='popover']").popover({html : true });
+      });
+      $body.click(function(){
+        $('.popover').popover('hide');
+    });
+   </script>
+      <script>
+    $(function (){ $("#step1Help").popover({html : true });});
+$(function (){ $("#step2Help").popover({html : true });});
+$(function (){ $("#step3Help").popover({html : true });});
+    
+    (function(){
+    $body.find('.popovers').each(function(){
+        $(this).click(function(e){
+            $('.popover').remove();
+            e.preventDefault();
+            return false;
+        });
+        $(this).popover({
+            trigger : 'click'
+        });
+    });
+    $body.click(function(){
+        $('.popover').remove();
+    });
+})();
+    </script>
+      <table width="768">
+        <tr>
+          <td align="center"><button type="button" class="btn btn-primary" style="align:center;" onClick="document.form1.submit();">Submit Step 1, Next Step</button></td>
+        </tr>
+      </table >
+      
+      <!--<ul class="nav nav-pills" role="tablist">
+  
+    <li role="presentation" class="active"><a href="#">sgRNA Design</a></li>
+  <li role="presentation"><a href="#">Genome Wide sgRNA design</a></li>
+  <li role="presentation"><a href="#">About  CRISPR</a></li>
+  <li role="presentation"><a href="#">Help</a></li>
+</ul>--></td>
+    <td width="50"></td>
+    <td width="256" valign="top"><div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-envelope"></span> News and Updates </a></h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>11/20/2014 CRISPR-ERA v1.1</li>
+				<li>12/08/2014 CRISPR-ERA v1.2</li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-stats"></span> Statistics </a></h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+           <li> Total visit: 181065 </li>
+ <li>Today visit: 181065 </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><span class="glyphicon glyphicon-th-list"></span> Popular Resouces </a></h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li><a href="http://genome.ucsc.edu/index.html">UCSC Genome Bioinformatics</a></li>
+            <li><a href="http://www.ncbi.nlm.nih.gov/">NCBI</a></li>
+            <li><a href="http://www.addgene.org/ ">Addgene</a></li>
+            
+          </ul>
+        </div>
+      </div></td>
+  </tr>
+</table>
+<div class="jumbotron"> 
+  <!--  <h1>Hello, world!</h1>
+  <p>...</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+   -->
+  <table align="center">
+    <tr>
+      <td>Copyright Lei Stanley Qi Lab, Xiaowo Wang Lab. All right reserved. | CRISPR-ERA Version 1.2 | <a href="contact.jsp">Contact </a>  </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

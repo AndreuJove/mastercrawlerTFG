@@ -1,0 +1,9 @@
+Server: nginx/1.17.6
+Date: Mon, 30 Mar 2020 18:47:23 GMT
+Content-Type: text/html;charset=ISO-8859-1
+X-Powered-By: Servlet/4.0 JSP/2.3 (Payara Server  5.181 #badassfish Java/Oracle Corporation/1.8)
+Set-Cookie: JSESSIONID=cc50b03ce3fff3343086aa724756; Path=/; Secure; HttpOnly
+Location: https://www.bioextract.org/login/cookiecheck.jsp
+Content-Language: en
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15768000

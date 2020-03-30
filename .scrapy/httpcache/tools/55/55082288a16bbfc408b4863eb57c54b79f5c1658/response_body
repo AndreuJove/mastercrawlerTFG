@@ -1,0 +1,124 @@
+<html>
+<head><base href="http://webs.iiitd.edu.in/raghava/ccdb/">
+<meta name="generator" content="PhpED Version 5.9.5 (Build 5970eval)" />
+<title></title>
+<link rel="shortcut icon"  href="" />
+</head>
+</html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Title      : Woodenly
+Version    : 1.0
+Released   : 20100309
+Description: A two-column fixed-width template suitable for small websites.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><base href="http://webs.iiitd.edu.in/raghava/ccdb/">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CCDB- Cervical Cancer Gene Database </title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="logo">
+        <h1><a href="#">CCDB</a></h1>
+        <h2><a href="#">Cervical Cancer Gene Database</a></h2>
+    </div>
+    <!-- end div#logo -->
+</div>
+<!-- end div#header -->
+<div id="menu">
+    <ul>
+        <li class="active"><a href="index.php">Home</a></li>
+        <li><a href="browse.php">Browse</a></li>
+        <li><a href="mirna.php">miRNA</a></li>
+	<li><a href="blast.php">Blast</a></li>
+        <li><a href="stat.php">Database Statistics</a></li> 
+        <li><a href="faq.php">FAQ</a></li>
+    </ul>
+</div>
+
+
+      <!-- end div#menu -->
+  <div id="page">
+    <div id="page-bgtop">
+      <div id="content">
+        <div class="post">
+          <h1 class="title">Welcome to CCDB</h1>   <br/> 
+             <p> Cervical cancer is one of the leading cancers among women, which affects approximately 500,000 women each year, resulting in approximately 230,000 deaths worldwide. Of these 85% have been reported from developing countries including India. Inspite of the large population affected from malignacy still at present there is no database that catalogues genes involved in cervix cancer. As a result, it has become canonical to develop a specific database that would help in understanding the genes that regulate the proliferation of cervical cancer. </p>
+         <p><i> The Cervical Cancer Gene Database is a manually curated catalog of experimenatlly validated genes that are thought to be involved in the different stages of cervical carcinogenesis. Each entry contains information regarding the gene and protein sequences, its location, architecture, function, chromosomal positions, accession numbers, gene, CDS sizes, gene ontology and homology to other eukaryotic genomes. In addition we provide rich cross reference to other web resources like Unigene, HPRD, HGNC, Ensemble and OMIM augmenting CCDB-specific information with external data. CCDB also provides relevant literature references of genes included in the database.</i></p>
+ <p><marquee scrollDelay="120" width="1200" align="center" behavior=alternate
+scroll="continuous" loop=0 bgcolor=white>
+   <li class=MsoNormal style='mso-list:l1 level1 lfo2;tab-stops:list .5in'>Please cite following paper, if you are using this database <br/> Agarwal, S.M., Raghav, D., Singh, H. and <a href="http://webs.iiitd.edu.in/raghava/">Raghava, G. P. S.</a>. (2011) CCDB: a curated database of genes involved in Cervix Cancer <a href="http://nar.oxfordjournals.org/content/39/suppl_1/D975.full">Nucleic Acids Research (2011, 39, D975-D979) </a></b> <o:p></o:p></b></li> </a> 
+
+</marquee>
+</p>                      
+     
+                          
+
+           <div class="entry">
+            <p>
+          </div>
+          <div class="meta">
+           
+          </div>
+        </div>
+      </div>
+      <!-- end div#content -->
+      <div id="sidebar">
+    <ul>
+         <li id="search">
+           <h2 class="search">Search</h2>
+            <form method="post" action="searchresult.php">
+                <script type="text/javascript">
+                    function checkInput(){
+  						 var len = document.getElementById('search-text').value.length;
+                          if(len<1){
+                            alert('Please enter a search value');
+                            return false;
+                        }
+                    }
+                </script>
+                <fieldset>
+                    <input type="text" id="search-text" name="searchInput" value="" />
+                    <input type="submit" id="search-submit" value="Search" onclick="return checkInput();"/>
+                    <font id="search-label">Seach criteria </font>  <br /> 
+                    <select id="search-sel" name="selSearchType">
+                        <option value="gene_name">Gene Name</option>
+                        <option value="gene_id">Gene ID</option>
+                        <option value="chromosome">Chromosome</option>
+                       </select>
+                       </fieldset>
+                       </form>
+        <li><a href="submit.php"><h2 class="Submit Data">Submit Data</h2></a></li>
+        <li><a href="contactus.php"><h2 class="Contact us">Contact Us</h2></a></li>
+        <li><a href='CCDB_Help.ppt'><h2 class="Help">Help</h2></a></li>
+        <li><a href="team.php"><h2 class=" Team">Team</h2></a></li>
+        
+                     </li>
+            
+    </ul>
+
+      </div>
+        
+    
+      <!-- end div#sidebar -->
+      <div style="clear: both; height: 1px"></div>
+    </div>
+  </div>
+  <!-- end div#page -->
+  <div id="footer">
+    <p>Copyright &copy; 2010. Subhash M. Agagrwal. All Rights Reserved. <br /></p>
+  </div>
+  <!-- end div#footer -->
+</div>
+<!-- end div#wrapper -->
+</body>
+</html>

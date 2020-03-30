@@ -1,0 +1,303 @@
+
+
+
+
+
+
+
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="author" href="/coeus/humans.txt;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA" />
+            <link rel="icon" type="image/ico" href="/coeus/favicon.ico;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"></link> 
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="COEUS semantic web linkeddata linked data services rest integration heterogeneous distributed knowledge federation">
+            <meta name="author" content="Pedro Lopes pedrolopes@ua.pt; Pedro Sernadela sernadela@ua.pt; Jose Luis Oliveira jlo@ua.pt">
+            <title>COEUS</title>
+            
+                
+
+
+
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/coeus/assets/css/bootstrap3.css;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"/>
+<link rel="stylesheet" href="/coeus/assets/css/setup.css;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"/>
+<link rel="stylesheet" href="/coeus/assets/css/typeahead.css;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"/>
+<link rel="stylesheet" href="/coeus/assets/css/font-awesome.min.css;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"/>
+<!--[if IE 7]>
+<link rel="stylesheet" href="assets/css/fontawesome-ie7.css">
+<![endif]-->
+            
+        </head>
+        <body>
+            <noscript>
+            <div id="js">
+                COEUS requires that you enable Javascript.<br /><br /><br /><a href="http://support.google.com/bin/answer.py?hl=en&answer=23852" target="_blank">Take a look here if you do not know how.</a>
+            </div>
+            </noscript>
+
+
+            <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/coeus/;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA">COEUS Framework</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/coeus/;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                            <li><a target="_blank" href="/coeus/overview/;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"><i class="glyphicon glyphicon-send"></i> Live Demo</a></li>
+                            <li><a target="_blank" href="/coeus/documentation/;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"><i class="glyphicon glyphicon-book"></i> Documentation</a></li>
+                            <li><a data-toggle="modal" data-target="#contact" href="#contact"><i class="glyphicon glyphicon-envelope"></i> Contact</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container -->
+            </nav>
+
+            <!-- contact modal box -->
+            <div id="contact" class="modal fade" role="dialog" aria-labelledby="contact" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                            <h3 class="modal-title" >Contact Information</h3>
+                        </div>
+
+                        <div class="modal-body">
+                            <address>
+                                <strong>COEUS, A/C Pedro Lopes & Pedro Sernadela</strong><br>
+                                DETI/IEETA, University of Aveiro<br>
+                                Campus Universitario de Santiago<br>
+                                3810 - 193 Aveiro<br>
+                                Portugal
+                            </address>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="mailto:pedrolopes@ua.pt,sernadela@ua.pt?subject=[COEUS] feedback" class="btn btn-info">Send Mail <i class="icon-envelope icon-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        <div class="headline jumbotron masthead">
+            <div class="container text-center ">
+                <h1>COEUS</h1>
+                <h2>Streamlined back-end framework for rapid semantic web application development.</h2>
+                <p> 
+                    <a href="https://github.com/bioinformatics-ua/COEUS/archive/master.zip" class="btn btn-info btn-lg">Get COEUS <i class="glyphicon glyphicon-download-alt"></i></a>
+                </p>
+                <span class="masthead-links">
+                    <a href="https://github.com/bioinformatics-ua/COEUS" target="_blank">GitHub project</a>
+                </span>
+                <p>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=bioinformatics-ua&repo=coeus&type=watch&count=true"
+                            allowtransparency="true" frameborder="0" scrolling="0" width="75" height="20"></iframe>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=bioinformatics-ua&repo=coeus&type=fork&count=true"
+                            allowtransparency="true" frameborder="0" scrolling="0" width="75" height="20"></iframe>
+                   
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center hero-unit">
+             <p><h1>SWAT4LS Workshop <sup><span class="label label-warning">Last news!! <i class="icon-star icon-white"></i></span></sup></h1></p>
+            <p class="lead">A COEUS Workshop/Tutorial was presented in the 2013 edition of <a target="_blank" href="http://www.swat4ls.org/workshops/edinburgh2013/">SWAT4LS</a>.</p>
+            <p class="lead">This workshop was helded in Edinburgh, UK, December 9-12, 2013. </p>
+            <p><a target="_blank" href="./documentation/#science" class="btn btn-primary btn-lg">View more <i class="glyphicon glyphicon-forward"></i></a></p> 
+    </div>
+    <div class="container">
+
+
+        <div class="text-center marketing">
+            <hr class="soften" />
+            <h1 class="featurette-heading text-muted">Hello, Semantic Web!</h1>
+            <p class="lead">
+                <em>Ipsa scientia potestas est.</em> Knowledge itself is power.
+            </p>
+            <p></p>
+            <hr class="soften" />
+            <div class="row mar">
+                <div class="col-lg-4">
+                    <img src="./assets/img/integrate.png" width="150" height="150" alt="Integration"  />
+                    <h2>Integration</h2>
+                    <p><strong>Create custom warehouses</strong>, collecting distributed and
+                        heterogeneous data.
+                        <br />Integrate CSV, SQL, XML or SPARQL resources with advanced Extract-Transform-Load
+                        warehousing features.</p>
+                </div>
+                <!--<div class="col-lg-4">
+                    <img src="./assets/img/cloud.png" width="150" height="150" alt="Cloud-based" />
+                    <h2>Cloud-based</h2>
+                    <p><strong>Deploy your knowledgebase in the cloud</strong>, using any available
+                        host.
+                        <br />Your content - available any time, any where. And with full create, read,
+                        update, and delete support.</p>
+                </div>-->
+                 <div class="col-lg-4">
+                    <img src="./assets/img/nanopub_book.png" width="150" height="150" alt="Cloud-based" />
+                    <h2>Nanopublication</h2>
+                    <p><strong>Transform your data into Nanopublications</strong>, automatically through the web interface.
+                        <br />With the Nanopublications extension the data can be converted into a single publishable and citable entity.</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="./assets/img/semantic.png" width="150" height="150" alt="Semantic Web" />
+                    <h2>Semantics</h2>
+                    <p><strong>Use Semantic Web &amp; LinkedData technologies in all application layers.</strong>
+                        <br
+                            />Enable reasoning and inference over connected knowledge. Access data through
+                        LinkedData interfaces and enable a custom SPARQL endpoint.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="./assets/img/rapid.png" width="150" height="150" alt="RAD" />
+                    <h2>Rapid Dev Time</h2>
+                    <p><strong>Reduce development time.</strong> Get new applications up and running
+                        much faster using the latest rapid application development strategies.
+                        <br
+                            />COEUS is the back-end framework, the client-side is language-agnostic:
+                        PHP, Ruby, JavaScript, C#... COEUS' APIs work everywhere.</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="./assets/img/network.png" width="150" height="150" alt="Interoperability"/>
+                    <h2>Interoperability</h2>
+                    <p><strong>Use COEUS advanced API to connect multiple nodes together and with any other software.</strong>
+                        <br
+                            />Create your own knowledge network using SPARQL Federation enabling data-sharing
+                        amongst a scalable number of peers</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="./assets/img/distribute.png" width="150" height="150" alt="Ecosystem" />
+                    <h2>Ecosystem</h2>
+                    <p><strong>Launch your custom application ecosystem.</strong> Distribute your
+                        data to any platform or device.
+                        <br />Reach more users and create new semantic cloud-based software platforms.</p>
+                </div>
+            </div>
+            <hr class="soften" />
+            <h1 class="featurette-heading text-muted">Build the future with COEUS</h1>
+            <p class="lead">Semantic Web + Rapid Application Development = Next-Generation Applications.</p>
+            <hr class="soften" />
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Support</h2>
+                    <p>COEUS is an ongoing open-source project at the <a href="http://www.ua.pt"
+                                                                         target="_blank">University of Aveiro</a>'s <a href="http://bioinformatics.ua.pt"
+                                                                         target="_blank">bioinformatics group</a>.
+                        <br />If you are looking for support to launch your own system, please <a href="mailto:pedrolopes@ua.pt">contact us</a>.
+                        Private/commercial collaborations are also possible through <a href="http://bmd-software.com"
+                                                                                       target="_blank" title="View BMD Software">BMD Software</a>.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Cite</h2>
+                    <p>Multiple <a href="/coeus/documentation/;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA#science/" title="View COEUS publications">scientific publications</a> support COEUS architecture and
+                        development strategies. However, if you wish to cite COEUS in your work
+                        please use the following citation.</p>
+                    <dl> <dt>COEUS: "Semantic Web in a box" for biomedical applications</dt>
+                        <dd>Pedro Lopes and Jose Luis Oliveira</dd>
+                        <dd><em>Journal of Biomedical Semantics</em> 2012, 3:11</dd>
+                        <dd>DOI:<a href="http://dx.doi.org/10.1186/2041-1480-3-11" target="_blank" title="View COEUS publication">10.1186/2041-1480-3-11</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col-md-4">
+                    <h2>Featured</h2><a title="Go to Diseasecard" target="_blank" href="http://bioinformatics.ua.pt/diseasecard/"><img src="/coeus/assets/img/dc4.png;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA" width="200" height="29" alt="Diseasecard"></a>
+                    <br/><br/>
+                    <p>A new semantic rare diseases research portal. COEUS is the foundation
+                        of the internal application engine, enabling the delivery of advanced UI
+                        features and the exploration of collected knowledge programmatically.
+                    </p>
+                    <p><a title="Go to Diseasecard" target="_blank" class="btn btn-primary btn-info"
+                          href="http://bioinformatics.ua.pt/diseasecard/">Go to Diseasecard</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+
+        </body>
+
+        <footer id="footer">
+            <div class="">
+                <div class="page-wrapper">
+                    <div class="container">
+                        <p class="pull-right"><a href="#" title="Back to top"> <i class="fa fa-arrow-up"></i></a></p>
+                        <p class="text-muted credit">&copy; <a target="_blank" title="UA.PT Bioinformatics" href="http://bioinformatics.ua.pt/">University of Aveiro</a> <script> document.write(new Date().getFullYear()); </script> - Support provided by <a href="http://bmd-software.com" target="_blank">BMD Software, LDA</a> <a href="http://getbootstrap.com/" title="Go to Bootstrap" target="_blank"><small>(Layout with Bootstrap)</small></a></p> 
+                    </div>
+                </div>
+            </div>
+        </footer> 
+
+
+        
+            
+
+
+
+
+
+
+<script>var path = '/coeus';</script>
+<script src="/coeus/assets/js/jquery.js;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"></script>
+<script src="/coeus/assets/js/bootstrap3.js;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"></script>
+<script src="/coeus/assets/js/prettify.js;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"></script>
+<script src="/coeus/assets/js/lang-sql.js;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"></script>
+<script src="/coeus/assets/js/lang-css.js;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"></script>
+<script src="/coeus/assets/js/coeus.sparql.js;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"></script>
+<script src="/coeus/assets/js/coeus.setup.js;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"></script>
+<script src="/coeus/assets/js/bootstrap-tooltip.js;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"></script>
+<script type="text/javascript">
+    //code called on every page
+    $(document).ready(function() {
+        loadSeedsOnSidebar();
+    });
+</script>
+<script type="text/javascript">
+    var $buoop = {vs: {i: 8, f: 4, o: 11, s: 5, n: 9}}
+    $buoop.ol = window.onload;
+    window.onload = function() {
+        try {
+            if ($buoop.ol)
+                $buoop.ol();
+        } catch (e) {
+        }
+        var e = document.createElement("script");
+        e.setAttribute("type", "text/javascript");
+        e.setAttribute("src", "http://browser-update.org/update.js");
+        document.body.appendChild(e);
+    }
+</script>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12230872-7']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<script src="/coeus/assets/js/coeus.powered.js;jsessionid=06C123E0337472AB50E79C6E3D4AF2CA"></script>
+        
+        
+           
+        
+    </html>
+

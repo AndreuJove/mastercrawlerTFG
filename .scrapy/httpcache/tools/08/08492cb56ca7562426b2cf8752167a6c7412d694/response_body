@@ -1,0 +1,406 @@
+<!--
+ 2010 Structural Bioinformatics Lab
+ This Page is main page for ConPlex 
+ 
+ Last Update: 2010.04.04
+ By S.K Han, hsk1385@postech.ac.kr
+//--> 
+<html> 
+<head>
+<link rel="shortcut icon" href="/ConPlex/site_media/favicon.ico" /> 
+<link rel="stylesheet" href="/ConPlex/site_media/style.css" type="text/css" />
+<style type="text/css">
+	#uploadprogressbar { display: none; }
+</style>
+<title>ConPlex Server</title>
+<script language="JavaScript">
+function MM_goToURL() {
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+</script>
+<script language="JavaScript" src="/ConPlex/site_media/jquery.js"></script>
+<script language="JavaScript" src="/ConPlex/site_media/jquery.progressbar.js"></script>
+<script language="JavaScript" src="/ConPlex/site_media/jquery.uploadProgress.js"></script>
+<script language="JavaScript">
+	/* Uploading Script by WebPeace 09.08.23 */
+	$(document).ready(function() {
+		
+		
+		select_field();
+		if ($.browser.safari == false) { // cross-browsing error (safari is normal mode)
+			$("#uploadprogressbar").progressBar({ barImage: '/ConPlex/site_media/images/progressbg_black.gif'});
+			$("#registration-form").uploadProgress();
+		} 
+	});
+	
+	function select_field() {
+		if ($("#id_uFType_2:checked").val() == "pdbid") {
+			$("#id_uFile").attr("disabled", "disabled");
+			$("#id_uPDB").attr("disabled", ""); 
+		} else {
+			$("#id_uFile").attr("disabled", "");
+			$("#id_uPDB").attr("disabled", "disabled");
+		}
+	}
+	
+	function input_example() {
+		$("#id_uFType_2").click();
+		$("#id_uPDB").val("1a2k");
+		$("#id_chain1").val("AB");
+		$("#id_chain2").val("C");
+		$("#id_uName").val("test");
+		$("#id_uEmail").val("test@test.com");
+	}
+	
+	function alert_decoy() {
+		alert("The file name of archived decoys should be:\n[ prefix ]_[ rank number ][ postfix ]\nex) docking_1.pdb");
+	}
+</script>
+</head>
+<body>
+<div style="width:900px">
+<table border=0 width="900px">
+	<tr>	
+		<td rowspan="2" width="30px" valign="center">
+			<img src="/ConPlex/site_media/conplex_logo.png" border=0>
+		</td>
+		<td>
+			<a href="http://sbi.postech.ac.kr/ConPlex/" style="decoration:none; border:0;"><font color="#789DB3" size="5"><b>ConPlex</b></font></a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			ConPlex is a web application for evolutionary analysis of protein complex structures. With given protein complex structures, ConPlex automatically identifies protein interfaces and carries out evolutionary conservation analyses for the identified regions.
+		</td>
+	</tr>
+</table>
+
+<br>
+
+<!-- bar starts here -->
+
+<table	width="900"
+	cellpadding="0" cellspacing="0" style="border: 1px solid #789DB3">
+<tr>
+
+<td bgcolor="#F4F4F4" align=center width="150">	<!-- background.html -->
+  <a href="/ConPlex/">
+    <font color="#789DB3"><b>Submission</b></font>
+  </a>
+</td>
+
+
+<td width="2"><img src="/ConPlex/site_media/space.gif" width="2" height="18"></td>
+
+<td bgcolor="#F4F4F4" align=center width="165">	<!-- library.html -->
+  <a href="/ConPlex/library/">
+    <font color="#789DB3"><b>Pre-calculated Library</b></font>
+  </a>
+</td>
+
+
+
+<td width="2"><img src="/ConPlex/site_media/space.gif" width="2" height="18"></td>
+    
+<td bgcolor="#F4F4F4" align=center width="150">	<!-- abstract.html -->
+  <a href="/ConPlex/abstract/">
+    <font color="#789DB3"><b>Article Abstracts</b></font>
+  </a>
+</td>
+
+<td width="2"><img src="/ConPlex/site_media/space.gif" width="2" height="18"></td>
+
+<td bgcolor="#F4F4F4" align=center width="150">	<!-- background.html -->
+  <a href="/ConPlex/background/">
+    <font color="#789DB3"><b>Backgrounds</b></font>
+  </a>
+</td>
+
+<td width="2"><img src="/ConPlex/site_media/space.gif" width="2" height="18"></td>
+
+<td bgcolor="#F4F4F4" align=center width="140">	<!-- instructions.html -->
+  <a href="/ConPlex/instructions/">
+    <font color="#789DB3"><b>Instructions</b></font>
+  </a>
+</td>
+
+<td width="2"><img src="/ConPlex/site_media/space.gif" width="2" height="18"></td>
+    
+<td bgcolor="#F4F4F4" align=center width="150">	<!-- output.html -->
+  <a href="/ConPlex/output_example/">
+    <font color="#789DB3"><b>Output Example</b></font>
+  </a>
+</td>
+
+
+<!--
+<td width="2"><img src="/ConPlex/site_media/space.gif" width="2" height="18"></td>
+
+<td bgcolor="#F4F4F4" align=center width="165">	
+  <a href="/ConPlex/library/">
+    <font color="#789DB3"><b>&nbsp; Precalculated Library &nbsp; </b></font>
+  </a>
+</td>
+-->
+    
+</tr>
+</table>
+
+<!-- bar end -->
+
+<!-- Job Registration starts here -->
+<!--<form id="registration-form" target="progressFrame" enctype="multipart/form-data" method="post" action=".">//-->
+<p>
+<form id="registration-form" enctype="multipart/form-data" method="post" action="/ConPlex/">
+<table width="900px" border="0" cellpadding="0" cellspacing="0">
+	<tr class="special">
+		<td colspan=4><b><h2><font color="#789DB3">Job Submission
+		</font></b></h2>
+		<hr width="900px" style="border:1px thin #789DB3">
+		</td>
+	</tr>
+	<tr>
+		<td width="150px" rowspan=2>
+			<table>
+				<tr>
+					<td>Input Options</td>
+					<td><a href="/ConPlex/instructions/#input_option" target="new"><img src="/ConPlex/site_media/help_icon.png" border=0 /></a></td>
+				</tr>
+			</table>
+		</td>
+		<td width="400px" colspan=2 height="30px">
+			<label for="id_uFType_0"><input type="radio" id="id_uFType_0" value="pdb" name="uFType" checked="checked" onClick="select_field();" />PDB File (Single File)</label>&nbsp;
+			<label for="id_uFType_1"><input type="radio" id="id_uFType_1" value="decoy" name="uFType" onClick="select_field();alert_decoy();" />Docking Decoys (Archived)</label>&nbsp;
+		</td>
+		<td height="30px">
+			<label for="id_uFType_2"><input type="radio" id="id_uFType_2" value="pdbid" name="uFType" onClick="select_field();" />PDB ID</label>
+		</td>
+	</tr>
+	<tr>
+		<td width="400px" colspan=2 height="30px">
+			<input type="file" name="uFile" id="id_uFile" /> &nbsp; <span class="progressbar" id="uploadprogressbar">0%</span>
+		</td>
+		<td height="30px">
+			<input type="text" name="uPDB" id="id_uPDB" />
+		</td>
+	</tr>
+	
+	<tr>
+		<td height="30px" width="150px">
+			<table>
+				<tr>
+					<td>Chain.1</td>
+					<td><a href="/ConPlex/instructions/#chain_option" target="new"><img src="/ConPlex/site_media/help_icon.png" border=0 /></a></td>
+				</tr>
+			</table>
+		</td>
+		<td width="160px"><input type="text" name="chain1" id="id_chain1" /></td>
+		<td width="240px" colspan=2><font color="red"></font></td>
+	</tr>
+	<tr>
+		<td height="30px" width="150px">
+			<table>
+				<tr>
+					<td>Chain.2</td>
+				</tr>
+			</table>
+		</td>
+		<td width="160px"><input type="text" name="chain2" id="id_chain2" /></td>
+		<td width="240px" colspan=2><font color="red"></font></td>
+	</tr>
+	<tr>
+		<td height="30px" width="150px">
+			<table>
+				<tr>
+					<td>Name</td>
+				</tr>
+			</table>
+		</td>
+		<td width="160px"><input id="id_uName" type="text" name="uName" maxlength="30" /></td>
+		<td width="240px" colspan=2><font color="red"></font></td>
+	</tr>
+	<tr>
+		<td height="30px" width="150px">
+			<table>
+				<tr>
+					<td>E-mail (Optional)</td>
+				</tr>
+			</table>
+		</td>
+		<td width="160px"><input type="text" name="uEmail" id="id_uEmail" /></td>
+		<td width="240px" colspan=2><font color="red"></font></td>
+	</tr>
+	<tr>
+		<td height="30px"><br>
+			<input id="send" type="submit" value="Submit" />&nbsp
+			<input type="submit" value="Reset" onClick="MM_goToURL('parent','/ConPlex/');return document.MM_returnValue" />&nbsp;
+		</td>
+		<td></td>
+		<td width="200px"></td>
+		<td></td>
+	</tr>
+</table>
+<p>
+	<table>
+		<tr>
+			<td>[<a href=# onClick="input_example();">Input Example</a>]&nbsp;[<a href="/ConPlex/site_media/sample_decoy_A_B.zip">Download Sample Decoy</a>]</td>
+			<td><a href="/ConPlex/instructions/#example_run" target=new><img src="/ConPlex/site_media/help_icon.png" border=0 /></a></td>
+		</tr>
+	</table>
+<br>
+<table>
+	<tr>
+		<td><b>Advanced Options</b></td>
+		<td><a href="/ConPlex/instructions/#advanced_option" target=new><img src="/ConPlex/site_media/help_icon.png" border=0 /></a></td>
+	</tr>
+</table>
+<p>
+	<table>
+	<tr>
+		<td height="30px" width="180px">No. of PSI-BLAST Iteration</td>
+		<td><input name="max_psi_itr" type="text" value="1" style="width:50px" /></td>
+		<td><font color="red"></font></td>
+	</tr>
+	<tr>
+		<td height="30px">PSI-BLAST E-Value Cutoff</td>
+		<td><input name="psi_ev_coff" type="text" value="0.001" style="width:50px" /></td>
+		<td><font color="red"></font></td>
+	</tr>
+	<tr>
+        <td height="30px">Number of homologues</td>
+        <td>
+        	MIN:&nbsp;<input name="hmg_min_coff" type="text" value="5" style="width:50px" />&nbsp;/&nbsp;
+		    MAX:&nbsp;<input name="hmg_max_coff" type="text" value="50" style="width:50px" />	
+		</td>
+        <td><font color="red"></font></td>
+    </tr>
+	<tr>
+        <td height="30px">Sequence Identity Cutoff</td>
+        <td>
+        	MIN:&nbsp;<input name="sq_id_low_coff" type="text" value="20" style="width:50px" />&nbsp;/&nbsp;
+			MAX:&nbsp;<input name="sq_id_high_coff" type="text" value="100" style="width:50px" />
+		</td>
+        <td><font color="red"></font></td>
+        </tr>
+
+	<tr>
+		<td height="30px" width="180px">Core/Rim SASA Cutoff</td>
+		<td><input name="core_rim_coff" type="text" value="10" style="width:50px" /></td>
+		<td><font color="red"></font></td>
+	</tr>
+
+
+
+	</table>
+</p>
+
+</form>
+</p>
+<!-- Job Registration ends here -->
+<br>
+<!-- Job Search starts here -->
+<form id="search-form" method="get" action="/ConPlex/">
+<table width="900px" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan=2><b><h2><font color="#789DB3">Job Search</font></h2></b>
+		<hr width="900px" style="border:1px thin #789DB3">
+		</td>
+	</tr>
+	<tr>
+		<td height="30px" width="90px">
+			<select name="searchType">
+				<option value="jobNum">Job Num.</option>
+				<option value="uName">Name</option>
+				<option value="uEmail">E-mail</option>
+			</select>
+		</td>
+		<td>
+			<input type="text" name="jobSearch" id="id_jobSearch" />&nbsp;<input type="submit" value="Search" />&nbsp;
+			<input type="submit" value="Reset" onClick="MM_goToURL('parent','/ConPlex/');return document.MM_returnValue" />&nbsp;		
+		</td>
+	</tr>
+	
+		
+	
+</table>
+</form>
+<!-- Job Search ends here -->
+
+<!-- web service instruction -->
+<br>
+<table width="900px" border="0" cellpadding="0" cellspacing="0">
+<tr class="special"><td><b><h2><font color="#789DB3">Programmatic Interface</font></h2></b>
+<hr width="900px" style="border:1px thin #789DB3">
+</td></tr>
+<tr>
+	<td>
+		<p>For batch-scripting of ConPlex, we provide programmatic interface based on <b>Web Service Description Language (WSDL)</b></p>
+		<p>
+			<ul>
+				<li>
+					Soaplib-based Python Library <b>(requires Soaplib, Recommended)</b>:
+					<p>
+					<a href="/ConPlex/instructions/#plibrary" target='new'>Instruction Manual</a><br>
+					<a href="/ConPlex/site_media/plibrary_conplex.zip" target="_blank">Library & Example Code</a> | <a href="/ConPlex/site_media/soaplib.zip" target="_blank">Soaplib</a>
+					</p>
+				</li>
+				<li>
+					WSDL Interface File (for advanced users):
+					<p>
+						<a href="/ConPlex/instructions/#wsdl" target='new'>WSDL Interface File Documentation</a><br>
+						<a href="http://sbi.postech.ac.kr/ConPlex/service.wsdl" target="_blank">View WSDL Interface File</a>
+					</p>
+				</li>
+			</ul>
+		</p>
+	</td>
+</tr>
+</table>
+<!-- end of instruction -->
+
+<br>
+<table width="900px" border="0" cellpadding="0" cellspacing="0">
+<tr class="special"><td><b><h2><font color="#789DB3">Citations</font></h2></b>
+<hr width="900px" style="border:1px thin #789DB3">
+</td></tr>
+<tr><td>
+<p>For publication of results, please cite:
+<p>
+<ul>
+<li>ConPlex webservice:
+    <p>
+    <b>ConPlex: a web server for evolutionary conservation analysis of protein complex structures.</b><br>
+    <i>Choi YS, Han SK, Kim J, Yang JS, Jeon J, Ryu SH, Kim S.</i><br>
+	<b>Nucleic Acids Research. 2010</b> Apr 30. [Epub ahead of print].
+    <p>
+    View the <a href="http://www.ncbi.nlm.nih.gov/pubmed/20435678">abstract (PubMed)</a>.
+	&nbsp; &nbsp; &nbsp;
+	Download the full article in <a href="http://nar.oxfordjournals.org/cgi/reprint/gkq328?ijkey=uAMhzR1j7JCTd3t&keytype=ref">PDF</a>.
+    <p>
+<li>Original research paper:
+    <p>
+    <b>Evolutionary conservation in multiple faces of protein interaction.</b><br>
+    <i>Choi YS, Yang JS, Choi Y, Ryu SH, Kim S.</i><br>
+    <b>Proteins. 2009 </b> Feb 27;77(1):14-25. [Epub ahead of print].
+    <p>
+
+    View the <a href="http://www.ncbi.nlm.nih.gov/pubmed/19350617" target='new'>abstract (PubMed)</a>.
+    &nbsp; &nbsp; &nbsp; 
+    Download the full article in <a href="/ConPlex/site_media/ChoiYS_Proteins_2009.pdf">PDF</a>.
+    <p>
+
+</table>
+<hr width="900px" style="border:1px thin #789DB3">
+<center>
+<table>
+		<tr>
+			<td><a href="http://www.postech.ac.kr/lab/life/bioinformatics" target="_blank"><b>Structural Bioinformatics Lab</b></a></td>
+			<td>|</td>
+			<td><a href="/ConPlex/job_list/"><b>Admin Page</b></a></td>
+		</tr>
+</table>	
+</center>
+</div>
+</body>
+</html>

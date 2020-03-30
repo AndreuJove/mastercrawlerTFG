@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    <head profile="http://www.w3.org/1999/xhtml/vocab">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/phylo" />
+<link rel="shortlink" href="/node/40" />
+<link rel="shortcut icon" href="https://alurulab.cc.gatech.edu/sites/all/themes/gt/favicon.ico" type="image/vnd.microsoft.icon" />
+        <title>ALFRED-G : Distance Estimator for Phylogenetic Inference | hpcLaboratory</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css" media="all">
+@import url("https://alurulab.cc.gatech.edu/modules/system/system.base.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/modules/system/system.menus.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/modules/system/system.messages.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/modules/system/system.theme.css?q5hyr6");
+</style>
+<style type="text/css" media="all">
+@import url("https://alurulab.cc.gatech.edu/modules/comment/comment.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/modules/field/theme/field.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/modules/node/node.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/modules/user/user.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/modules/views/css/views.css?q5hyr6");
+</style>
+<style type="text/css" media="all">
+@import url("https://alurulab.cc.gatech.edu/sites/all/modules/ctools/css/ctools.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/modules/biblio/biblio.css?q5hyr6");
+</style>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic" media="all" />
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" media="all" />
+<style type="text/css" media="screen">
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/reset.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/default.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/fonts.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/typography.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/layout.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/blocks.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/content.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/editor.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/hg_reader.css?q5hyr6");
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/search.css?q5hyr6");
+</style>
+<style type="text/css" media="print">
+@import url("https://alurulab.cc.gatech.edu/sites/all/themes/gt/css/print.css?q5hyr6");
+</style>
+        <script type="text/javascript" src="https://alurulab.cc.gatech.edu/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="https://alurulab.cc.gatech.edu/misc/jquery-extend-3.4.0.js?v=1.4.4"></script>
+<script type="text/javascript" src="https://alurulab.cc.gatech.edu/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://alurulab.cc.gatech.edu/misc/drupal.js?q5hyr6"></script>
+<script type="text/javascript" src="https://alurulab.cc.gatech.edu/sites/all/themes/gt/js/html5shiv.js?q5hyr6"></script>
+<script type="text/javascript" src="https://alurulab.cc.gatech.edu/sites/all/themes/gt/js/gt.js?q5hyr6"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"gt","theme_token":"shRCONHWqi6RebtCgcReX7ljkWpUVKoAZq3cxMxMpNg","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/gt\/js\/html5shiv.js":1,"sites\/all\/themes\/gt\/js\/gt.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/biblio\/biblio.css":1,"https:\/\/maxcdn.bootstrapcdn.com\/font-awesome\/4.7.0\/css\/font-awesome.min.css":1,"https:\/\/fonts.googleapis.com\/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic":1,"https:\/\/fonts.googleapis.com\/css?family=Roboto+Slab:400,700":1,"sites\/all\/themes\/gt\/css\/reset.css":1,"sites\/all\/themes\/gt\/css\/default.css":1,"sites\/all\/themes\/gt\/css\/fonts.css":1,"sites\/all\/themes\/gt\/css\/typography.css":1,"sites\/all\/themes\/gt\/css\/layout.css":1,"sites\/all\/themes\/gt\/css\/blocks.css":1,"sites\/all\/themes\/gt\/css\/content.css":1,"sites\/all\/themes\/gt\/css\/editor.css":1,"sites\/all\/themes\/gt\/css\/hg_reader.css":1,"sites\/all\/themes\/gt\/css\/search.css":1,"sites\/all\/themes\/gt\/css\/print.css":1}},"urlIsAjaxTrusted":{"\/search\/node":true}});
+//--><!]]>
+</script>
+                  <link rel="stylesheet" href="/sites/all/themes/gt/css/base.css">
+                <!--[if lte IE 8]>
+        <style type="text/css" media="all">@import "/sites/all/themes/gt/css/ie.css";</style>
+        <![endif]-->
+    </head>
+    <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-40 node-type-page user-role-anonymous" >
+        <!--[if IE 7]>
+        <div class="ie-sucks-wrapper ie7"><![endif]-->
+        <!--[if IE 8]>
+        <div class="ie-sucks-wrapper ie8"><![endif]-->
+        <!--[if IE 9]>
+        <div class="ie-sucks-wrapper ie9"><![endif]-->
+        <p id="skip-links" class="element-invisible">
+            <a href="#main" class="element-invisible element-focusable">Skip to content</a>
+        </p>
+                
+<div id="page">
+
+    <header id="masthead">
+
+        <section id="identity" role="banner">
+            <div id="identity-wrapper" class="clearfix">
+                <h1 id="gt-logo">
+                    <img alt="Georgia Tech | College of Computing" src="/sites/all/themes/gt/images/logos/logo-gt-coc.png" />                    <a href="http://www.gatech.edu" id="gt-logo-mothership-link"
+                       title="Georgia Institute of Technology">Georgia Institute of Technology</a>
+                                             <a href="http://www.cc.gatech.edu" id="gt-logo-secondary-link"
+                         title="College of Computing">College of Computing</a>
+                                       </h1>
+                                  <h2 class="two-line" id="site-title" rel="home"><a
+                          href="/">Prof. Srinivas Aluru<br />Research group</a></h2>
+                                </div>
+        </section><!-- /#identity -->
+
+        <section id="primary-menus">
+            <div id="primary-menus-wrapper" class="clearfix">
+                <a id="primary-menus-toggle" class="hide-for-desktop"><span>Menu</span></a>
+                <div id="primary-menus-off-canvas" class="off-canvas">
+                    <a id="primary-menus-close" class="hide-for-desktop"><span>Close</span></a>
+                    <nav>
+                        <div id="main-menu-wrapper" role="navigation" aria-label="Primary">
+                                                          <ul class="menu"><li class="first leaf main-menu-link-218"><a href="/"><span>Home</span></a></li>
+<li class="expanded main-menu-link-352"><a href="/main-page"><span>Projects</span></a><ul class="menu"><li class="first leaf main-menu-link-518"><a href="/arabidopsis-networks"><span>Arabidopsis Networks Analysis</span></a></li>
+<li class="leaf main-menu-link-520"><a href="/connected-components"><span>Graph Connectivity</span></a></li>
+<li class="leaf main-menu-link-519"><a href="/microarray-pp"><span>MicoArray Preprocessing</span></a></li>
+<li class="leaf main-menu-link-568"><a href="/parbliss"><span>ParBLISS</span></a></li>
+<li class="last leaf main-menu-link-521"><a href="/parallel-ec"><span>Parallel Spectrum-based Error Correction</span></a></li>
+</ul></li>
+<li class="leaf main-menu-link-351"><a href="/biblio" title="All publications"><span>Publications</span></a></li>
+<li class="leaf main-menu-link-567"><a href="/software"><span>Software</span></a></li>
+<li class="last leaf main-menu-link-406"><a href="/people" title="Research team"><span>People</span></a></li>
+</ul>                                                                                  </div>
+                        <div id="action-items-wrapper" role="navigation" aria-label="Action">
+                                                                                                              </div>
+                    </nav>
+                    <div id="utility">
+                        <div class="row clearfix">
+
+                            <!-- #utility-links -->
+                            
+  <nav id="utility-links" role="navigation" aria-label="Georgia Tech Campus Information Links">
+    <ul class="menu">
+      <li class="mothership ulink"><a href="http://www.gatech.edu" title="Main campus web site for Georgia Tech ">Georgia Tech Home</a></li>
+      <li class="campus-map ulink"><a href="http://map.gatech.edu" title="Campus Map for Georgia Tech">Campus Map</a></li>
+      <li class="directories ulink"><a href="http://www.directory.gatech.edu" title="Locate faculty, staff, and students at Georgia Tech">Directory</a></li>
+      <li class="offices ulink"><a href="http://www.gatech.edu/offices-and-departments" title="List of Offices and Departments at Georgia Tech">Offices</a></li>
+    </ul>
+  </nav>                            <!-- /#utility-links -->
+
+                            <div id="social-media-links-wrapper" role="navigation" aria-label="Social Media">
+                                                                                                                              </div>
+                        </div>
+                    </div><!-- /#utility -->
+                </div>
+                <div id="site-search" class="search-local">
+                                          <a href="/search" id="site-search-container-switch" class="element-focusable">Search</a>
+                      <div id="site-search-container" class="element-invisible">
+                          <div id="search-local" role="search"><h2 class="element-invisible">Search form</h2><form class="search-form" action="/search/node" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys">
+  <label class="element-invisible" for="edit-keys">Enter your keywords </label>
+ <input aria-label="Search form box" class="element-focusable form-text" type="text" id="edit-keys" name="keys" value="" size="40" maxlength="150" />
+</div>
+<input class="element-invisible element-focusable form-submit" type="submit" id="edit-submit" name="op" value="Search Button" /></div><input type="hidden" name="form_build_id" value="form-j_y79nMznob8AyYFEG7BWBYT0pVLt4JnYEFTlfbpaBE" />
+<input type="hidden" name="form_id" value="search_form" />
+</div></form></div>                      </div>
+                                    </div><!-- /#site-search -->
+            </div><!-- /#primary-menus-wrapper -->
+            <div id="breadcrumb" class="hide-for-mobile">
+                <div class="row clearfix">
+                    <ul><li class="element-invisible">You are here: </li><li class="breadcrumb-item first"><a href="http://www.gatech.edu">GT Home</a></li><li class="breadcrumb-item last"><a href="/">Home</a></li></ul>
+                </div>
+            </div><!-- /#breadcrumb -->
+        </section><!-- /#primary-menus -->
+
+        
+        
+    </header><!-- /#masthead -->
+
+    <section role="main" id="main">
+        <div class="row clearfix">
+
+                                      <div id="page-title">
+                  <h2 class="title">ALFRED-G : Distance Estimator for Phylogenetic Inference</h2>
+              </div>
+                        
+            
+            
+            <div class="no-sidebars" id="content">
+
+                
+                                                  <div class="region region-content block-count1 clearfix">
+    <div id="block-system-main" class="block block-system   block-region-weight-1 odd">
+
+      
+  <div class="content block-body clearfix">
+    <div id="node-40" class="node node-page node-full clearfix" about="/phylo" typeof="foaf:Document">
+
+    
+            <span property="dc:title" content="ALFRED-G : Distance Estimator for Phylogenetic Inference" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+    
+    <div class="content node-body clearfix">
+        <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>ALFRED-G is an Alignment Free Distance Estimator software for Phylogenetic Inference. It takes as input a set of n sequences and ouputs an n x n matrix of distance estimate for use in Phylogenetic inference.</p>
+<h2>Downloads</h2>
+<hr /><ol><li><a href="sites/all/projectFiles/alfred/alfred.tar.gz">ALFRED source code</a></li>
+<li><a href="sites/all/projectFiles/alfred/datasets.tar.gz">Datasets</a></li>
+</ol><h2>Installation and Usage</h2>
+<hr /><h4>External Dependencies that need to be installed</h4>
+<ul><li>A modern, C++11 ready compiler such as <code>g++</code> version 4.8 or higher or <code>clang</code> version 3.2 or higher.</li>
+<li>The <a href="www.cmake.org">cmake</a> build system (Version &gt;= 2.8.11).</li>
+<li>A 64-bit operating system. Either Mac OS X or Linux are currently supported.</li>
+<li>Git version control system</li>
+</ul><h3>Dependices made available with the gz file</h3>
+<ul><li>
+<a href="https://code.google.com/p/googletest/">googletest</a> is included as git submodule.</li>
+<li>
+<a href="https://github.com/y-256/libdivsufsort">libdivsufsort</a> libraries are copied in the directory.</li>
+</ul><h3>Compilation</h3>
+<p>Download the alfred.tar.gz file available <a href="assets/docs/alfred.tar.gz">here</a>. Extract the contents as follows:</p>
+<pre><code>tar xvzf alfred.tar.gz
+</code></pre><p>Next, create a build directory. For example,</p>
+<pre><code> mkdir build
+ cd build
+</code></pre><p>Finally, configure and build the executable 'alfred.x'. Continuing the example,</p>
+<pre><code> cmake ..
+ make
+</code></pre><p>If successfully built, alfred.x should be available in the build directory.</p>
+<h2>Usage</h2>
+<hr /><h3>Preparing Input</h3>
+<p>Place the input sequences into a single fasta files. Make sure that the header of the fasta file has the appropriate sequence name. For example, PHYLIP doesn't accept sequence names longer than 10 characters. Also, make sure that the input file has one of 'fasta' or 'fa' or 'fas' file extension. Note that the program accepts only sequences with valid DNA or protien alphabets. An example is as shown below.</p>
+<pre><code>&gt;SeqName
+
+ACGTTAGAGTAAATGGAGTAGAAT
+</code></pre><h3>Compute greedy  alignment free estimator</h3>
+<p>Run the program by providing the pepared input file with -f option, the output file with the -o option, and the number of mismatches to allow with -x option. An example is shown below:</p>
+<pre><code>build/alfred.x -f primates.full.fas -o alfred.primates.x8.out -x 8
+</code></pre><p>Output is generated in a matrix format, which can be fed directly to PHYLIP</p>
+<h2>Datasets</h2>
+<hr /><p>Datasets used in our experiments are available from <a href="assets/docs/datasets.tar.gz">here</a>. The contents of the files are as follows:</p>
+<p><em>aliases.xlsx</em> contains the alises we used for the organism names so as to construct the tree.</p>
+<p><em>data</em> sub-directory contains all the input data files and the reference trees. The input files are in fasta format and has .fa extension and the refrence trees are in phylip format and has .tree extension. For roseobacter dataset, multiple sequence alignment is also given. MSA for BaliBASE datasets can be downloaded from the BaliBASE website.</p>
+<p><em>runs</em> sub-directory contains all the output matrix files and the trees with the best RF.dist score. Ouput matrix files use the format as accepted by PHYLIP.</p>
+<h2>Licensing</h2>
+<p>Our code is licensed under the Apache License 2.0 (<a href="https://www.apache.org/licenses/LICENSE-2.0.html">LICENSE</a>). The licensing does not apply to the data or the ext folder, which contains external dependencies which are under their own licensing terms.</p>
+<h2>Publications</h2>
+<hr /><ol><li>
+<p>Thankachan, S. V., Chockalingam, S. P., Liu, Y., Krishnan, A., &amp; Aluru, S.  <em>  A greedy alignment-free distance estimator for phylogenetic inference.</em> In Computational Advances in Bio and Medical Sciences (ICCABS), 2015 IEEE 5th International Conference on (pp. 1-1). IEEE.  2015.</p>
+</li>
+<li>
+<p> Thankachan, S.V., Chockalingam, S.P., Liu, Y., Apostolico, A. and Aluru, S., 2015. <em> ALFRED: a practical method for alignment-free distance computation. </em> Journal of Computational Biology. </p>
+</li>
+</ol><h3>Downloads</h3>
+<hr /><div class="field-item even">
+<table class="sticky-enabled"><thead><tr><th>File</th>
+<th>Size</th>
+</tr></thead><tbody><tr class="odd"><td><span class="file"><img class="file-icon" alt="" title="application/octet-stream" src="/modules/file/icons/application-octet-stream.png" /><a href="sites/all/projectFiles/alfred/alfred.tar.gz" type="application/octet-stream; length=1359032">alfred.tar.gz</a></span></td>
+<td>1.3 MB</td>
+</tr><tr class="odd"><td><span class="file"><img class="file-icon" alt="" title="application/octet-stream" src="/modules/file/icons/application-octet-stream.png" /><a href="sites/all/projectFiles/alfred/datasets.tar.gz" type="application/octet-stream; length=1359032">datasets.tar.gz</a></span></td>
+<td>3.1 MB</td>
+</tr></tbody></table></div>
+</div></div></div>    </div>
+
+    
+    
+</div>  </div>
+  
+</div>
+  </div>
+                                            </div><!-- /#content -->
+
+            
+            
+            
+        </div>
+    </section><!-- /#main -->
+
+    <div id="contentinfo" aria-label="Footers">
+        <!-- #superfooter/ -->
+        <div class="superfooter-trigger-wrapper clearfix"><a class="js__superfooter-trigger collapsed" href="#superfooter" id="superfooter-trigger">Resources</a></div><section id="superfooter" class="superfooter-gt-default-mini collapsible"><div class="row clearfix"><div class="superfooter-resource-links" id="gt-default-resource-links" role="navigation" aria-labelledby="gt-default-resource-links-title">
+    <h4 class="title" id="gt-default-resource-links-title">Georgia Tech Resources</h4>
+    <ul class="menu" id="gt-default-resources">
+      <li><a href="http://www.gatech.edu/offices-and-departments">Offices &amp; Departments</a></li>
+      <li><a href="http://www.news.gatech.edu">News Center</a></li>
+      <li><a href="http://www.gatech.edu/calendar">Campus Calendar</a></li>
+      <li><a href="http://www.specialevents.gatech.edu">Special Events</a></li>
+      <li><a href="http://www.greenbuzz.gatech.edu">GreenBuzz</a></li>
+      <li><a href="http://www.comm.gatech.edu">Institute Communications</a></li></ul></div><div class="superfooter-resource-links" id="gt-default-visitor-links" role="navigation" aria-labelledby="gt-default-visitor-links-title">
+      <h4 class="title" id="gt-default-visitor-links-title">Visitor Resources</h4>
+      <ul class="menu" id="gt-visitor-resources"><li class="gt-default-mini-left"><a href="http://www.admission.gatech.edu/visit">Campus Visits</a></li>
+    <li class="gt-default-mini-right"><a href="http://www.admission.gatech.edu/visit/directions-and-parking">Directions to Campus</a></li>
+    <li class="gt-default-mini-left"><a href="http://www.pts.gatech.edu/visitors/Pages/default.aspx">Visitor Parking Information</a></li>
+    <li class="gt-default-mini-right"><a href="http://www.lawn.gatech.edu/help/GTvisitor.html">GTvisitor Wireless Network Information</a></li>
+    <li class="gt-default-mini-left"><a href="https://pe.gatech.edu/global-learning-center">Georgia Tech Global Learning Center</a></li>
+    <li class="gt-default-mini-right"><a href="http://www.gatechhotel.com">Georgia Tech Hotel &amp; Conference Center</a></li>
+    <li class="gt-default-mini-left"><a href="http://www.gatech.bncollege.com">Barnes &amp; Noble at Georgia Tech</a></li>
+    <li class="gt-default-mini-right"><a href="http://www.ferstcenter.gatech.edu">Ferst Center for the Arts</a></li>
+    <li class="gt-default-mini-left"><a href="http://www.ipst.gatech.edu/amp">Robert C. Williams Paper Museum</a></li>
+  </ul>
+</div><div id="street-address-info"><a href="http://map.gtalumni.org"><img alt="Map of Georgia Tech" src="/sites/all/themes/gt/images/gt-map-image-default.jpg" /></a><div class="street-address"><p>Klaus Advanced Computing Building,<br />
+266 Ferst Drive,<br />
+Atlanta, GA</p>
+</div></div></div></section>        <!-- /#superfooter -->
+
+        <!-- #footer/ -->
+        <footer id="footer">
+    <div class="row clearfix">
+      <div id="footer-utility-links">
+        <div role="navigation" aria-label="Site Utility" class="gt-footer-utility-links-wrapper"></div><div class="gt-footer-legal-links-wrapper" role="navigation" aria-label="Legal"><ul class="menu gt-footer-legal-links"><li class="first"><a href="http://www.gatech.edu/emergency/">Emergency Information</a></li><li><a href="http://www.gatech.edu/legal/">Legal &amp; Privacy Information</a></li><li><a href="http://www.gatech.edu/accessibility/">Accessibility</a></li><li><a href="http://www.gatech.edu/accountability/">Accountability</a></li><li><a href="https://www.gatech.edu/accreditation/">Accreditation</a></li><li class="last"><a href="http://www.careers.gatech.edu">Employment</a></li></ul></div></div><div id="footer-logo"><a href="http://www.gatech.edu/"><img alt="Georgia Tech" src="/sites/all/themes/gt/images/logos/gt-logo-footer-retina.png" /></a><p>&copy; Georgia Institute of Technology</p></div></div></footer>        <!-- /#footer -->
+
+    </div>
+</div><!-- /#page -->
+
+                <!--[if IE 7]></div><![endif]-->
+        <!--[if IE 8]></div><![endif]-->
+        <!--[if IE 9]></div><![endif]-->
+
+    </body>
+</html>

@@ -1,0 +1,20 @@
+Server: GitHub.com
+Content-Type: text/html; charset=utf-8
+Last-Modified: Tue, 13 Oct 2015 15:46:31 GMT
+Etag: W/"561d2757-1178"
+Access-Control-Allow-Origin: *
+Expires: Mon, 30 Mar 2020 17:20:43 GMT
+Cache-Control: max-age=600
+Content-Encoding: gzip
+X-Proxy-Cache: MISS
+X-Github-Request-Id: FAC4:13C1:5BF89F:735F74:5E822812
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 18:48:17 GMT
+Via: 1.1 varnish
+Age: 0
+X-Served-By: cache-mad22044-MAD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1585594097.206896,VS0,VE121
+Vary: Accept-Encoding
+X-Fastly-Request-Id: bd0443d330979e56406324d4de982f757a59fbba

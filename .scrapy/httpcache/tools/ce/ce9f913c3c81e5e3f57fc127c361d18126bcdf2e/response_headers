@@ -1,0 +1,18 @@
+Server: Microsoft-IIS/8.5
+X-Pc-Cs-Wsvc: default
+X-Aspnet-Version: 4.0.30319
+Vary: Accept-Encoding
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+X-Bwcc: pub
+Content-Encoding: gzip
+Date: Mon, 30 Mar 2020 18:48:59 GMT
+X-Orig-Host: chemspider.com
+X-Orig-Path: /
+Set-Cookie: X-Mapping-kckcchol=A75FB376BEAE5824D31FD0FBD6ADBEAD; path=/
+Set-Cookie: ASP.NET_SessionId=d430b4u53tkbal5kfslqux1d; path=/; HttpOnly
+Set-Cookie: CSSESSID=5538051a-fdf2-42d6-8629-90ab1646a287; expires=Mon, 06-Apr-2020 18:49:00 GMT; path=/
+X-Powered-By: ASP.NET
+Correctip: true
+X-Sfbi: Run
+X-Sfbi: 79.152.50.41

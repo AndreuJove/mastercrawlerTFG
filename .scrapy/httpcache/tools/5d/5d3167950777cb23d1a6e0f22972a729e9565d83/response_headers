@@ -1,0 +1,12 @@
+Server: nginx/1.14.0 (Ubuntu)
+Date: Mon, 30 Mar 2020 18:48:35 GMT
+Content-Type: text/html
+Vary: Accept-Encoding
+Vary: Host
+Vary: Accept-Encoding
+Last-Modified: Wed, 06 Feb 2013 11:12:31 GMT
+Etag: W/"d6c-4d50c66fca5c0"
+Cache-Control: max-age=600
+Expires: Mon, 30 Mar 2020 18:58:35 GMT
+X-From: sfp-web-4
+Content-Encoding: gzip

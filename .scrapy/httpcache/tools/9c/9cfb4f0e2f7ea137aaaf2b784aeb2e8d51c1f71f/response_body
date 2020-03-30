@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+	  <base href="http://www.esa.ipb.pt/biochemcore/index.php/ds/c" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="biochemcore" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>BioChemCore - ChemT</title>
+  <link href="/biochemcore/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link href="http://www.esa.ipb.pt/biochemcore/index.php/component/search/?Itemid=505&amp;format=opensearch" rel="search" title="Search BioChemCore" type="application/opensearchdescription+xml" />
+  <link rel="stylesheet" href="/biochemcore/media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="/biochemcore/media/mod_vvisit_counter/digit_counter/default.css" type="text/css" />
+  <link rel="stylesheet" href="/biochemcore/media/mod_vvisit_counter/stats/comment.css" type="text/css" />
+  <link rel="stylesheet" href="/biochemcore/media/mod_pwebfblikebox/css/likebox.css" type="text/css" />
+  <style type="text/css">
+#scrollToTop {
+	cursor: pointer;
+	font-size: 0.9em;
+	position: fixed;
+	text-align: center;
+	z-index: 9999;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out;
+	-o-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
+
+	background: #a09da6;
+	color: #FFFFFF;
+	border-radius: 3px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	right: 20px; bottom: 20px;
+}
+
+#scrollToTop:hover {
+	background: #6DBCD6;
+	color: #FFFFFF;
+}
+
+#scrollToTop > img {
+	display: block;
+	margin: 0 auto;
+}
+  </style>
+  <script src="/biochemcore/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/biochemcore/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/biochemcore/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://www.esa.ipb.pt/biochemcore/plugins/system/sl_scrolltotop/assets/js/skyline_scrolltotop.min.js" type="text/javascript"></script>
+  <script src="/biochemcore/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="http://www.esa.ipb.pt/biochemcore/administrator/components/com_fgallery/js/swfobject.js" type="text/javascript"></script>
+  <script src="http://www.esa.ipb.pt/biochemcore/components/com_fgallery/views/gallery/js/swfhelper.js" type="text/javascript"></script>
+  <script src="/biochemcore/media/system/js/modal.js" type="text/javascript"></script>
+  <script src="/biochemcore/media/mod_pwebfblikebox/js/mootools.likebox.js" type="text/javascript"></script>
+  <script type="text/javascript">
+document.addEvent('domready', function() {
+	new Skyline_ScrollToTop({
+		'image':		'/biochemcore/images/scroll-to-top-img/scroll-to-top-2.png',
+		'text':			'',
+		'title':		'',
+		'className':	'scrollToTop',
+		'duration':		500,
+		'transition':	Fx.Transitions.linear
+	});
+});window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js,fjs);}(document,"script","facebook-jssdk"));
+  </script>
+  <!--[if lte IE 8]>
+<link rel="stylesheet" href="/biochemcore/media/mod_pwebfblikebox/css/ie.css" />
+<![endif]-->
+
+	<link rel="stylesheet" href="/biochemcore/templates/system/css/system.css" type="text/css" />
+	<link rel="stylesheet" href="/biochemcore/templates/system/css/general.css" type="text/css" />
+	<link rel="stylesheet" href="/biochemcore/templates/meembo-red/css/template.css" type="text/css" />
+	<script type="text/javascript" src="/biochemcore/templates/meembo-red/js/sfhover.js"></script>
+		<!-- Slides Scripts -->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/biochemcore/templates/meembo-red/js/slides.min.jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'templates/meembo-red/images/slides_loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true			});
+		});
+		
+		$(document).ready(function() {
+			$("#slides").hover(function() {
+		    	$(".slides_nav").css("display", "block");
+		  	},
+		  		function() {
+		    	$(".slides_nav").css("display", "none");
+		  	});
+
+		});
+	
+	</script>
+	</head>
+<body>
+
+<div id="wrapper">
+
+
+	<div id="header">
+
+
+		<!-- Logo -->
+		<div id="logo">
+
+							<a href="/biochemcore"><img src="/biochemcore/images/TeamImag/logo_head4.png"  alt="BioChemCore" /></a>
+						
+  		</div>
+
+		<!-- TopNav -->
+				<div id="topnav">
+					<div class="moduletable">
+					<h3>Search</h3>
+					<form action="/biochemcore/index.php/ds/c" method="post">
+	<div class="search">
+		<label for="mod-search-searchword">Search...</label><input name="searchword" id="mod-search-searchword" maxlength="20"  class="inputbox" type="text" size="15" value="Search..."  onblur="if (this.value=='') this.value='Search...';" onfocus="if (this.value=='Search...') this.value='';" />	<input type="hidden" name="task" value="search" />
+	<input type="hidden" name="option" value="com_search" />
+	<input type="hidden" name="Itemid" value="505" />
+	</div>
+</form>
+		</div>
+	
+		</div>
+		
+		<!-- Search -->
+		<div id="search">		
+			
+		</div>
+
+	</div>
+
+	<!-- Topmenu -->
+	<div id="topmenu">
+		
+	</div>	
+
+
+	<!-- Slides -->
+		<div id="slideshow">
+		<div id="slides">
+			<div class="slides_container">
+			    					<img src="/biochemcore/images/slideshow/test2.jpg" alt="" />							    					<img src="/biochemcore/images/slideshow/final1.jpg" alt="" />							    					<img src="/biochemcore/images/nova.jpg" alt="" />							    					<img src="/biochemcore/images/camp.jpg" alt="" />							    					<img src="/biochemcore/images/braganca.jpg" alt="" />							    			</div>
+			<div class="slides_nav">
+				<a href="#" class="prev"></a>
+				<a href="#" class="next"></a>
+			</div>
+		</div>
+	</div>
+		
+	
+
+
+	<!-- No Slides -->
+		
+
+
+	<!-- Content/Menu Wrap -->
+	<div id="content-menu_wrap">
+		
+
+				<!-- 2 Columns (Left Menu) ########################### -->
+			
+			<div id="container-leftmenu-content">
+				<div id="container-leftmenu-left">
+					
+					<!-- Left Menu -->
+					<div id="leftmenu">
+								<div class="moduletable">
+					
+<ul class="menu">
+<li class="item-506"><a href="/biochemcore/" >Home</a></li><li class="item-477 parent"><a href="/biochemcore/index.php/team" >Team</a></li><li class="item-475"><a href="/biochemcore/index.php/projects" >Projects</a></li><li class="item-478 parent"><a href="/biochemcore/index.php/publications" >Publications</a></li><li class="item-598"><a href="/biochemcore/index.php/list-plants" >Studied Plants</a></li><li class="item-626"><a href="/biochemcore/index.php/studied-mushrooms" >Studied Mushrooms</a></li><li class="item-503 active deeper parent"><a href="/biochemcore/index.php/ds" >Developed softwares</a><ul><li class="item-504"><a href="/biochemcore/index.php/ds/m" >MOLA</a></li><li class="item-505 current active"><a href="/biochemcore/index.php/ds/c" >ChemT</a></li></ul></li><li class="item-566"><a href="/biochemcore/index.php/aw" >Awards &amp; Distinctions</a></li><li class="item-565 parent"><a href="/biochemcore/index.php/collabs" >Collaborations</a></li><li class="item-567"><a href="/biochemcore/index.php/news" >News</a></li><li class="item-568 parent"><a href="/biochemcore/index.php/ev" >Events</a></li><li class="item-518"><a href="/biochemcore/index.php/photos" >Photos</a></li><li class="item-671"><a href="/biochemcore/index.php/videos" >Videos</a></li><li class="item-596"><a href="http://www.rsc.org/foodfunction" target="_blank" ><img src="/biochemcore/images/TeamImag/ff_bcc.jpg" alt="Food &amp; Function" /></a></li></ul>
+		</div>
+	
+								<div class="moduletable">
+					<!-- PWebFBLikeBox -->
+<div id="pwebfblikebox123" class="pwebfblikebox pwebfblikebox-left pwebfblikebox-radius pwebfblikebox-shadow slidebox ">
+	<div class="pwebfblikebox_tab facebook-white"></div>
+		<div class="pwebfblikebox_container" style="width:292px;"><div id="fb-root"></div><div class="fb-like-box" id="pwebfblikebox123_html5" data-href="https://www.facebook.com/Biochemcore" data-stream="true" data-width="292" data-show-border="false" data-force-wall="true"></div></div>
+</div>
+
+<script type="text/javascript">
+(function(){
+	pwebFBLikeBox123 = new pwebFBLikeBox({
+		id: 		123,
+		prefix: 	'pwebfblikebox123',
+		open: 		'click',
+		close: 		'click',
+				position: 	'left',
+		top: 		-1,
+		layout: 	'slidebox'
+	});
+})();
+if(typeof window.fbAsyncInit=="function")window.fbAsyncInitPweb=window.fbAsyncInit;window.fbAsyncInit=function(){FB.Event.subscribe("edge.create",function(u){if(typeof ga!="undefined")ga("send","social","facebook","like",u)});FB.Event.subscribe("edge.remove",function(u){if(typeof ga!="undefined")ga("send","social","facebook","unlike",u)});if(typeof window.fbAsyncInitPweb=="function")window.fbAsyncInitPweb.apply(this,arguments)};</script>
+<!-- PWebFBLikeBox end -->		</div>
+	
+								<div class="moduletable">
+					<!-- Vinaora Visitors Counter >> http://vinaora.com/ -->
+<style type="text/css">
+	.vfleft{float:left;}.vfright{float:right;}.vfclear{clear:both;}.valeft{text-align:left;}.varight{text-align:right;}.vacenter{text-align:center;}
+	#vvisit_counter125 .vstats_counter{margin-top: 5px;}
+	#vvisit_counter125 .vrow{height:24px;}
+	#vvisit_counter125 .vstats_icon{margin-right:5px;}
+	#vvisit_counter125{padding:5px;}</style>
+<div id="vvisit_counter125" class="vvisit_counter vacenter">
+	<div class="vdigit_counter"><span class="vdigit-2" title="Vinaora Visitors Counter">2</span><span class="vdigit-3" title="Vinaora Visitors Counter">3</span><span class="vdigit-0" title="Vinaora Visitors Counter">0</span><span class="vdigit-8" title="Vinaora Visitors Counter">8</span><span class="vdigit-1" title="Vinaora Visitors Counter">1</span><span class="vdigit-7" title="Vinaora Visitors Counter">7</span></div>
+	<div class="vstats_counter">
+		<div class="vstats_icon vfleft varight">
+			<div class="vrow vstats-vtoday" title="2020-03-30"></div><div class="vfclear"></div><div class="vrow vstats-vyesterday" title="2020-03-29"></div><div class="vfclear"></div><div class="vrow vstats-vxweek" title="2020-03-29"></div><div class="vfclear"></div><div class="vrow vstats-vxmonth" title="2020-03-01"></div><div class="vfclear"></div><div class="vrow vstats-vall" title=""></div><div class="vfclear"></div>		</div>
+		<div class="vstats_title vfleft valeft">
+			<div class="vrow" title="">Today</div><div class="vfclear"></div><div class="vrow" title="">Yesterday</div><div class="vfclear"></div><div class="vrow" title="">This Week</div><div class="vfclear"></div><div class="vrow" title="">This Month</div><div class="vfclear"></div><div class="vrow" title="">All days</div><div class="vfclear"></div>		</div>
+		<div class="vstats_number varight">
+			<div class="vrow" title="">127</div><div class="vrow" title="">167</div><div class="vrow" title="">294</div><div class="vrow" title="">4743</div><div class="vrow" title="">230817</div>		</div>
+		<div class="vfclear"></div>
+	</div>
+	<hr style="margin-bottom: 5px;"/>
+	<div style="margin-bottom: 5px;">Your IP: 185.220.101.216</div>
+	<div>Server Time: 2020-03-30 18:41:37</div>
+<div style="margin-top:5px;"><a href="http://vinaora.com/" title="Vinaora Visitors Counter" target="_blank">Visitors Counter</a></div></div>
+<!-- Vinaora Visitors Counter >> http://vinaora.com/ -->		</div>
+	
+					</div>
+					
+					<!-- Contents -->
+					<div id="content-leftmenu">	
+												<!-- Breadcrumbs -->
+												
+<div id="system-message-container">
+</div>
+						<div class="item-page">
+
+	<h2>
+			<a href="/biochemcore/index.php/medlab-resource/chemt">
+		ChemT </a>
+		</h2>
+
+
+
+
+
+
+
+
+<p style="text-align: justify;"><span style="color: #808080;">ChemT is an open-source software for building chemical compound libraries, based on a specific chemical template. The compound libraries generated can then be evaluated, using several Virtual Screening tools like molecular docking or QSAR modelling tools. Be sure to check the tutorial on the "Help&gt;Tutorial" menu.</span></p>
+<p style="text-align: justify;"><img style="border-style: initial; border-color: initial; font-size: 12px; color: #808080; display: block; margin-left: auto; margin-right: auto;" src="/biochemcore/images/ChemT.gif" alt="ChemT" width="500" height="300" /><br /><span style="color: #808080;">To test ChemT follow these steps:</span></p>
+<p style="text-align: justify;"><span style="color: #808080;">&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;Check if you have OpenBabelGUI (windows version of OpenBabel) installed. To download OpenBabelGUI go to this link:&nbsp;<a href="http://openbabel.org/wiki/Install"><span style="color: #808080;">OpenBabel.</span></a></span></p>
+<p style="text-align: justify;"><span style="color: #808080;">&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;Download and Install ChemT for Windows (XP, Vista or 7):</span><br /><span style="color: #808080;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<span style="color: #00ffff;">&nbsp;&nbsp;<a href="/biochemcore/../medchem/chemt/ChemT-1.1.0-x86-Installer.msi"><span style="color: #00ffff;">32-bit version</span></a></span>&nbsp;(works on all computers)</span><br /><span style="color: #808080;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span style="color: #00ffff;"><a href="/biochemcore/../medchem/chemt/ChemT-1.1.0-x64-Installer.msi"><span style="color: #00ffff;">64-bit version</span></a></span></span></p>
+<p style="text-align: justify;"><span style="color: #808080;">You will be automaticaly asked to install Microsoft .NET Framework 4.0 while installing ChemT (if not already installed). You can also let it here:&nbsp;<a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992"><span style="color: #808080;">.NET Framework 4.</span></a></span></p>
+<p style="text-align: justify;"><span style="color: #808080;">&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;Input the example files by clicking "File&gt;Example" menu. Alternatively you can download and use the example files for testing ChemT:&nbsp;<a href="/biochemcore/../medchem/chemt/template-example.mol"><span style="color: #808080;">template</span></a>&nbsp;example file (MOL format) and&nbsp;<a href="/biochemcore/../medchem/chemt/functional-groups-example.txt"><span style="color: #808080;">functional groups</span></a>&nbsp;text file (TXT format). Or use any template of functional group of your choice.</span></p>
+<p style="text-align: justify;"><span style="color: #808080;">A list with the most common functional groups is also available here in&nbsp;<a href="/biochemcore/../medchem/chemt/functional-group-smiles.pdf"><span style="color: #808080;">PDF</span></a>&nbsp;or&nbsp;<a href="/biochemcore/../medchem/chemt/functional-group-smiles.xls"><span style="color: #808080;">XLS</span></a>&nbsp;format. This list will continue to be updated.</span></p>
+<p style="text-align: justify;"><span style="color: #808080;"><br /></span></p>
+<p style="text-align: justify;">For more information consult&nbsp;the paper:</p>
+<ul style="text-align: justify;">
+<li><span style="color: #808080;"><a href="http://www.tandfonline.com/doi/abs/10.1080/1062936X.2011.604097"><span style="color: #808080;">Rui M.V. Abreu, Hugo J.C. Froufe, Pedro O.M. Daniel, Maria-João R.P. Queiroz, Isabel C.F.R. Ferreira. ChemT, an open-source software for building template-based chemical libraries. SAR and QSAR Environmental Research, 2011, 22, 603-610. IF 1,56.</span></a></span></li>
+</ul>
+<p style="text-align: justify;">Or contact:</p>
+<ul style="text-align: justify;">
+<li>Rui Abreu &nbsp; &nbsp; &nbsp; <span id="cloak34047">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+ //<!--
+ document.getElementById('cloak34047').innerHTML = '';
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy34047 = 'r&#117;&#105;&#97;br&#101;&#117;' + '&#64;';
+ addy34047 = addy34047 + '&#105;pb' + '&#46;' + 'pt';
+ document.getElementById('cloak34047').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy34047 + '\'>' + addy34047+'<\/a>';
+ //-->
+ </script></li>
+<li>Hugo Froufe &nbsp;<span id="cloak94656">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+ //<!--
+ document.getElementById('cloak94656').innerHTML = '';
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy94656 = 'hfr&#111;&#117;f&#101;' + '&#64;';
+ addy94656 = addy94656 + '&#105;pb' + '&#46;' + 'pt';
+ document.getElementById('cloak94656').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy94656 + '\'>' + addy94656+'<\/a>';
+ //-->
+ </script></li>
+</ul>
+<p style="text-align: justify;"><span class="style44 style67" style="color: #993300; font-size: 14px;"><span style="color: #990000;"><br /></span></span></p>
+<p style="text-align: justify;"><span style="color: #990000;"><span style="font-size: 14px;"><br /></span></span></p> 
+	
+</div>
+
+					</div>
+					
+				</div>	
+			</div>	
+			
+
+		
+
+	</div>
+
+
+	<!-- Footer -->
+		<div id="footer">
+		
+
+<div class="custom"  >
+	<p><sup><img src="/biochemcore/images/Copyright.png" alt="Copyright" width="15" height="15" /> <span style="color: #0e00a3;"><span id="cloak38523">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+ //<!--
+ document.getElementById('cloak38523').innerHTML = '';
+ var prefix = 'ma' + 'il' + 'to';
+ var path = 'hr' + 'ef' + '=';
+ var addy38523 = 'bastos' + '@';
+ addy38523 = addy38523 + 'ipb' + '.' + 'pt';
+ var addy_text38523 = '<span style="color: #0e00a3;">BioChemCore</span>';
+ document.getElementById('cloak38523').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy38523 + '\'>'+addy_text38523+'<\/a>';
+ //-->
+ </script></span></sup></p></div>
+
+	</div>
+	
+	
+	<!-- Banner/Links -->
+		
+	
+	
+	<div id="copyright">
+	&nbsp;
+	</div>
+
+</div>
+
+
+
+
+
+
+<!-- Page End -->
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31626099-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+							<div class="copy2"><!--<a href="http://www.biler.as"><img src="/biochemcore/templates/meembo-red/images/cpright3.jpg" alt="Biler" /></a><a href="http://www.children.as"><img src="/biochemcore/templates/meembo-red/images/cpright3.jpg" alt="Children" /></a><a href="http://www.legogspil.eu"><img src="/biochemcore/templates/meembo-red/images/cpright3.jpg" alt="Leg og Spil" /></a><a href="http://www.autobranchen.net"><img src="/biochemcore/templates/meembo-red/images/cpright3.jpg" alt="Autobranchen" /></a>-->&nbsp;</div>
+</body>
+</html>

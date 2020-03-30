@@ -1,0 +1,276 @@
+
+ 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>BEERE: Biomedical Entity Expansion, Ranking, and Exploration</title>
+		<script src="http://discovery.informatics.uab.edu/BEERE/www/js/datatables.min.js"></script>
+		<script src="http://discovery.informatics.uab.edu/BEERE/www/js/jquery.tablesorter.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/jquery.tablesorter.pager.js"></script>
+		<!-- jquery and datatables Ended up using CDN to correctly get proper setup for datatables..may want to swap for local later -->
+		<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/dt/jqc-1.12.0,dt-1.10.11,r-2.0.2/datatables.min.css"/>-->
+        <!-- datatable: -->
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/jquery-1.12.4.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/jquery.dataTables.min.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/dataTables.buttons.min.js"></script>    
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/buttons.flash.min.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/jszip.min.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/pdfmake.min.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/vfs_fonts.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/buttons.html5.min.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/buttons.print.min.js"></script>
+				
+		<!-- tagcloud -->
+		<script src="http://discovery.informatics.uab.edu/BEERE/www/js/wordCloud/wordfreq.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/wordCloud/wordfreq.worker.js"></script> 
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/wordCloud/wordcloud2.js"></script> 
+        
+        <!--jquery and datatables-->
+        <link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/jquery.dataTables.min.css' />
+        <link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/select.dataTables.min.css' />
+        <link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/jquery-ui.css' />
+        <link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/buttons.dataTables.min.css' />
+        <link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/editor.dataTables.min.css' />
+
+		<!--<script type="text/javascript" src="https://cdn.datatables.net/t/dt/jqc-1.12.0,dt-1.10.11,r-2.0.2/datatables.min.js"></script>-->
+		<link type='text/css' rel='stylesheet' href='http://discovery.informatics.uab.edu/BEERE/www/style/hovereffect.css' />
+        <link type='text/css' rel='stylesheet' href='http://discovery.informatics.uab.edu/BEERE/www/style/network.css' />
+        <link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/colorbox.css' />
+        <link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/coin-slider-styles.css' />
+        <link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/table-style.css' />
+        <link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/browse-style.css' />
+        <link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/collapsilble_list.css' />
+		<link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/sidebar.css' />
+		<link type="text/css" rel="stylesheet" href='http://discovery.informatics.uab.edu/BEERE/www/style/loader.css' />
+        
+        <!-- Bootstrap CSS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="http://discovery.informatics.uab.edu/BEERE/assets/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="http://discovery.informatics.uab.edu/BEERE/assets/css/bootstrap-responsive.min.css" />
+        <link type="text/css" rel="stylesheet" href="http://discovery.informatics.uab.edu/BEERE/assets/css/bootstrap-theme.min.css" />
+		
+
+<!--
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+-->
+
+        <!-- Bootstrap JS -->
+        <script src="http://discovery.informatics.uab.edu/BEERE/assets/js/bootstrap.min.js"></script> 
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/coin-slider.min.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/underscore-min.js"></script>
+        <script src="http://discovery.informatics.uab.edu/BEERE/www/js/CollapsibleLists.compressed.js"></script>
+				<!--<script type="text/javascript" src="//static.pubmed.gov/core/jig/1.13.1/js/jig.min.js"></script> --> 
+        <link rel="icon" type="image/png" href="http://discovery.informatics.uab.edu/BEERE/www/images/logo.png">
+
+
+<style type="text/css">
+a.current{background: #2580a2;color:#fff;padding-bottom: 8px;padding: 8px 20px;}
+.tooltipCus {
+  position: relative;
+  display: inline;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipCus:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+<!-- reload the page with the same position -->
+/////////////////////////////////////////////////////////
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+if ( window.location.href.indexOf('page_y') != -1 ) {
+    //var match = window.location.href.split('?')[1].split("&")[0].split("=");
+    //?(match) document.getElementsByTagName("body")[0].scrollTop = match[1]:null;
+}
+function refreshPage () {
+    var page_y = document.getElementsByTagName("body")[0].scrollTop;
+    console.log(page_y);
+	window.location.href = window.location.href;
+}
+function initiateButton(collapseID,ImageID){
+	console.log(collapseID+ImageID);
+	var x=document.getElementById(collapseID);
+	var y=document.getElementById(ImageID);
+	//console.log(y.src);
+	if (x.style.display !== "none"){
+		y.src="http://discovery.informatics.uab.edu/BEERE/www/style/menu-expanded.gif";
+	}else{
+		y.src="http://discovery.informatics.uab.edu/BEERE/www/style/menu-collapsed.gif";
+	}
+}
+
+function hiddenButton(collapseID,ImageID){
+	console.log(collapseID+ImageID);
+	var x=document.getElementById(collapseID);
+	var y=document.getElementById(ImageID);
+	//console.log(y.src);
+	if (x.style.display !== "none"){
+		x.style.display = "none";
+		y.src="http://discovery.informatics.uab.edu/BEERE/www/style/menu-collapsed.gif";
+	}else{
+		x.style.display = "block";
+		y.src="http://discovery.informatics.uab.edu/BEERE/www/style/menu-expanded.gif";
+	}
+}
+
+function post(path, params, method) {
+	method = method || "post"; // Set method to post by default if not specified.
+	//console.log(path);
+	// The rest of this code assumes you are not using a library.
+	// It can be made less wordy if you use one.
+	var form = document.createElement('form');
+	form.setAttribute("method", method);
+	form.setAttribute("action", path);
+	form.setAttribute("target", "_blank");
+	for(var key in params) {
+		if(params.hasOwnProperty(key)) {
+			var hiddenField = document.createElement("input");
+			hiddenField.setAttribute("style", "display:none;");
+			hiddenField.setAttribute("name", key);
+			hiddenField.setAttribute("value", params[key]);
+			form.appendChild(hiddenField);
+		}
+	}
+	document.body.appendChild(form);
+	form.submit();
+}
+
+//-->
+</script>
+    </head>
+    <body>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://discovery.informatics.uab.edu/BEERE/">
+        <img class="hidden-xs" style="margin-top: -10px; height: inherit" src="http://discovery.informatics.uab.edu/BEERE/www/images/title.png">
+        <img class="visible-xs" style="margin-top: -10px; height: inherit" src="http://discovery.informatics.uab.edu/BEERE/www/images/title.png">
+    </a>
+    </div>
+	<!--<div><p style="color:red; font-size: 15px;"> The server database will temporally down from June 18th to June 21th for technical maintenance, we are deeply sorry for inconvenience. </div>-->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <!-- ######################## Main Menu ######################## -->
+      <ul class="nav navbar-nav">
+        <li>
+            <a href="http://discovery.informatics.uab.edu/BEERE/">Home</a>
+        </li>
+        <li>
+            <a href="http://discovery.informatics.uab.edu/BEERE/index.php/search/search_redirect">Search</a>
+        </li>
+        <li>
+            <a href="http://discovery.informatics.uab.edu/BEERE/index.php/pages/help">Help</a>
+        </li>
+		<li>
+            <a href="http://discovery.informatics.uab.edu/BEERE/index.php/pages/about">About us</a>
+        </li>
+	  </ul>		
+  </div><!-- /.container-fluid -->
+</nav>
+  <div class="container" style="height:auto; align: center;">
+    	
+    	
+       
+<script src="http://discovery.informatics.uab.edu/BEERE/assets/js/standalone/selectize.min.js"></script>
+
+<div class="container">
+	<div class="page-header">
+		<a href = "http://discovery.informatics.uab.edu/BEERE/index.php/pages/help"><h1>BEERE: A Tool for <u>B</u>iomedical <u>E</u>ntity <u>E</u>xpansion, <u>R</u>anking, and <u>E</u>xploration </h1></a>
+	</div>
+	<!-- yzl -->
+	<div id='coin-slider' href="#">
+		<img src="http://discovery.informatics.uab.edu/BEERE/www/images/image01.png" width="850px" height="550px"/>
+		<span>
+			Step 1: Users can search the Database with a list of terms or genes.
+		</span>
+		<img src="http://discovery.informatics.uab.edu/BEERE/www/images/image02.png" width="850px" height="550px" />
+		<span>
+			Step 2: Users can verify retrieved bio-entities against search bio-entities.
+		</span>
+		<img src="http://discovery.informatics.uab.edu/BEERE/www/images/image03.png" width="850px" height="550px" />
+		<span>
+			Step 3: Users can retrieve related bio-entities to bio-entities relationships.
+		</span>
+		
+		<img src="http://discovery.informatics.uab.edu/BEERE/www/images/image04.png" width="850px" height="550px" />
+		<span>
+			Step 4: Users can rank genes/terms from the network.
+		</span>
+		<img src="http://discovery.informatics.uab.edu/BEERE/www/images/image05.png" width="850px" height="550px" />
+		<span>
+			Step 5: Users can visually explore and export network relationship data.
+		</span>
+	</div>
+
+	<div style="text-align: center; margin-bottom: 20px">
+		<button id = "retrieve" class="btn btn-primary" ><b>Try the tool</b></button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	// coin-slider
+	$('#coin-slider').coinslider({ width: 850, height: 620, delay: 3000, opacity:1});
+	// next button
+	document.getElementById("retrieve").addEventListener("click", function(){
+		window.location = 'http://discovery.informatics.uab.edu/BEERE/index.php/search/search_redirect';
+	});
+</script>
+
+
+
+</div>
+<div id='footer' style="position: relative; text-align: center; margin-top: 25px; width: 100%">
+    <hr />
+     <p style="font-size: small"><a href = "http://discovery.informatics.uab.edu/BEERE/index.php/search/download">The open access licence.</a>Copyright 2020  Last update: January 2019 </p>
+<!--<p style="margin-bottom: 10px">Cite: <a href="https://academic.oup.com/bioinformatics/article/31/12/i250/216681/PAGER-constructing-PAGs-and-new-PAG-PAG">Zongliang Yue, Madhura Kshirsagar, Thanh Nguyen, Chayaporn Suphavilai, Michael Neylon, Liugen Zhu, Timothy Ratliff, and Jake Y. Chen* PAGER: Constructing PAGs and new PAG-PAG Relationships for Network Biology. Bioinformatics (2015) 31 (12): i250-i257. doi: 10.1093/bioinformatics/btv265</a></p>
+-->
+    
+    <p style="font-size: small"><a href="http://zen.informatics.uab.edu/">I3 Informatics for Intelligent and Indivisualized Medicine Laboratory</a>, University of Alabama in Birmingham, Birmingham, USA</p>
+</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106170529-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106170529-2');
+</script>
+
+
+<script src="http://discovery.informatics.uab.edu/BEERE/www/js/network/jquery.colorbox-min.js"></script>
+<script src="http://discovery.informatics.uab.edu/BEERE/www/js/network/button.network.js"></script>
+</body>
+</html>

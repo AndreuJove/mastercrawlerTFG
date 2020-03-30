@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+<title>ALDER: Admixture-induced Linkage Disequilibrium for Evolutionary Relationships</title>
+</head>
+
+<body id="home">
+<div id="page">
+
+  <!-- begin navigation -->
+  <!-- Begin Navigation Header -->
+<!--
+  <div id="logo"><a href="http://math.mit.edu" ><img src="/images/logo-math.gif" alt="MIT" width="146" height="39" /></a></div>
+-->
+  <div id="name"><p>ALDER: Admixture-induced Linkage Disequilibrium for Evolutionary Relationships</p></div>
+  <div class="clear">&nbsp;</div>
+
+  <!-- Tabs for the top navigation -->
+<!--
+  <ul id="nav">
+  	  <li class="home"><a href="index.shtml">Home</a></li> 
+  	  <li class="papers"><a href="papers.shtml">Papers</a></li> 
+  	  <li class="talks"><a href="talks.shtml">Talks</a></li> 
+  	  <li class="fun"><a href="fun.shtml">Fun</a></li> 
+  	  <li class="cv"><a href="cv.shtml">Vitae</a></li> 
+  	  <li class="contact"><a href="contact.shtml">Contact</a></li> 
+  </ul>
+-->
+  <!-- End Navigation Header -->
+  <hr />
+
+  <!-- end navigation -->
+
+
+<div id="content">
+
+<h2>Current release: ALDER v1.03 (March 5, 2013)</h2>
+
+<p>
+The ALDER software computes the weighted linkage disequilibrium (LD)
+statistic for making inference about population admixture described
+in:
+<ul>
+<li>
+Loh P-R, Lipson M, Patterson N, Moorjani P, Pickrell JK, Reich D, and
+Berger B.  <a href="http://www.genetics.org/content/193/4/1233.full">Inferring
+Admixture Histories of Human Populations Using Linkage
+Disequilibrium.</a>  <i>Genetics,</i> 2013.
+</li>
+</ul>
+</p>
+
+<div class="picture right">
+<img src="images/home_cover.gif"/>
+<br/>
+<a href="http://www.genetics.org/content/193/4.cover-expansion"><i>Genetics</i> cover, April 2013</a>
+<br/>Image courtesy of Steven Lee, <a href="www.graphiko.com">www.graphiko.com</a>
+</div>
+
+</br>
+
+<p>
+<b>Abstract</b> (excerpt):
+
+Long-range migrations and the resulting admixture between populations
+have been an important force shaping human genetic diversity.  Most
+existing methods for detecting and reconstructing historical admixture
+events are based on allele frequency divergences or patterns of
+ancestry segments in chromosomes of admixed individuals.  An emerging
+new approach harnesses the exponential decay of admixture-induced
+linkage disequilibrium (LD) as a function of genetic distance.  Here,
+we comprehensively develop LD-based inference into a versatile tool
+for investigating admixture.  We present a new weighted LD statistic
+that can be used to infer mixture proportions as well as dates with
+fewer constraints on reference populations than previous methods.  We
+define an LD-based three-population test for admixture and identify
+scenarios in which it can detect admixture that previous formal tests
+cannot.  We further show that we can discover phylogenetic
+relationships between populations by comparing weighted LD curves
+obained using a suite of references.  Finally, we describe several
+improvements to the computation and fitting of weighted LD curves that
+greatly increase the robustness and speed of the computation.
+</p>
+
+<div class="picture center">
+<img src="images/Mbuti_curves.png"/>
+<br/>
+Weighted LD decay curves for Mbuti Pygmies using various reference populations.
+</div>
+
+<p>
+Admixture analysis using weighted LD decay curves was first proposed
+by <a href="http://www.plosgenetics.org/article/info%3Adoi%2F10.1371%2Fjournal.pgen.1001373">Moorjani et al. (PLoS Genetics, 2011)</a>, whose ROLLOFF software
+package, described more fully in <a href="http://genetics.med.harvard.edu/reich/Reich_Lab/Software_files/2012_Genetics_Patterson_112.145037.full.pdf">Patterson et al. (Genetics, 2012)</a>,
+infers admixture dates from weighted LD curves.  ALDER extends the
+general methodology of ROLLOFF, the most notable advances being:
+<ul>
+<li>a new form of the weighted LD statistic that is more robust and
+    makes the amplitude of the weighted LD curve interpretable
+</li>
+<li>a variant of the statistic that calculates unbiased weighted LD
+    using the test population itself as one reference
+</li>
+<li>a statistical test for admixture
+</li>
+<li>automatic determination of the minimum genetic distance at which
+    to start curve fitting (to avoid confounding signal from
+    background LD)
+</li>
+<li>calculation of the affine term (i.e., horizontal asymptote of the
+    curve) using inter-chromosome SNP pairs
+</li>
+<li>a fast Fourier transform (FFT) algorithm for computing weighted LD
+    that provides speedup of multiple orders of magnitude.
+</li>
+</ul>
+</p>
+<p>
+For reference, the ROLLOFF software is included in the ADMIXTOOLS package on the <a href="http://genetics.med.harvard.edu/reich/Reich_Lab/Software.html">Reich Lab software page</a>.
+</p>
+
+<h2>Source Code</h2>
+
+<p>
+Our source code and a Linux executable can be downloaded here for academic and non-profit use:
+<ul>
+<li>
+<a href="alder_v1.03.tar.gz">alder_v1.03.tar.gz</a>
+</li>
+</ul>
+</p>
+<p>
+The package contains a detailed README explaining how to install and use the software.
+</p>
+
+<h3>Change Log</h3>
+<ul>
+<li>
+Version 1.03 (Mar 5, 2013):
+<ul>
+<li>
+Applied compatibility patch for Mac OS X contributed by Ryan Rauum.  (Program behavior is identical to v1.02.)
+</li>
+</ul>
+</li>
+<li>
+Version 1.02 (Feb 9, 2013): <a href="alder_v1.02.tar.gz">alder_v1.02.tar.gz</a>
+<ul>
+<li>
+Added support for input in "packed geno" format (2 bits/genotype).
+</li>
+<li>
+Added option 'print_jackknife_fits' to display decay and amplitude fits
+corresponding to individual jackknife reps.
+</li>
+<li>
+Fixed bug causing crash in cases with long-range LD.
+</li>
+<li>
+Added check for empty parameters; exit with error message instead of
+crashing.
+</li>
+<li>
+Fixed bug in LD correlation check output when parameter
+'approx_ld_corr: NO' is set.
+</li>
+<li>
+Fixed bug causing failure to set LD correlation threshold to
+infinity in cases where long-range correlated LD is discovered on a
+pass after the first.
+</li>
+</ul>
+</li>
+
+<li>
+Version 1.01 (Nov 15, 2012; internal):
+<ul>
+<li>
+Added 'snp_outname' param: filename to which to write IDs of SNPs
+used in the analysis.
+</li>
+</ul>
+</li>
+
+<li>
+Version 1.0 (Oct 31, 2012): <a href="alder_v1.0.tar.gz">alder_v1.0.tar.gz</a>
+<ul>
+<li>
+Initial release.
+</li>
+</ul>
+</li>
+
+</ul>
+
+<h2>Contact</h2>
+
+<p>
+We welcome feedback, questions and suggestions.  Contact information is available at the primary authors' websites:
+<ul>
+<li><a href="http://math.mit.edu/~ploh/">Po-Ru Loh</a>, Mark Lipson, <a href="http://genetics.med.harvard.edu/reich/">David Reich</a>, <a href="http://people.csail.mit.edu/bab/">Bonnie Berger</a>
+</li>
+</ul>
+</p>
+
+</div>
+
+<!--Begin Footer -->
+<div id="footer">
+  <hr class="hr"/>
+  <a href="http://mit.edu" target="_new"><img src="images/logo-mit.gif" class="mit" alt="mit"/></a>
+  <p class="left"><a href="http://mit.edu" target="_new">Massachusetts Institute of Technology</a></p>
+  <p class="right"><a href="http://math.mit.edu" target="_new">Department of Mathematics</a></p>
+  <p class="right"><a href="http://csail.mit.edu" target="_new">Computer Science and Artificial Intelligence Laboratory</a></p>
+</div>
+
+<!--End Footer -->
+
+</div>
+</body>
+</html>

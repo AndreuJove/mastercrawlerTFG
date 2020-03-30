@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">  
+  <title>Home</title>
+  <link rel="stylesheet" href="/i/app_ui/css/Core.min.css?v=5.1.4.00.08" type="text/css" />
+<link rel="stylesheet" href="/i/app_ui/css/Theme-Standard.min.css?v=5.1.4.00.08" type="text/css" />
+<link rel="stylesheet" href="/i/libraries/jquery-ui/1.10.4/themes/base/jquery-ui.min.css?v=5.1.4.00.08" type="text/css" />
+
+  <link rel="stylesheet" href="/i/libraries/font-awesome/4.5.0/css/font-awesome.min.css?v=5.1.4.00.08" type="text/css" />
+<link rel="stylesheet" href="/i/themes/theme_42/1.0/css/Core.min.css?v=5.1.4.00.08" type="text/css" />
+
+  
+  <link rel="stylesheet" href="limsophy/r/116/files/theme/42/v89/61829584128265216.css" type="text/css" />
+
+  
+  <style type="text/css">
+.navlist li {
+     /*  float: left; */ 
+       /* or */ 
+    display: inline-block;
+
+    margin: 20px 0; 
+}
+</style>
+  
+  <link rel="shortcut icon" href="/i/favicon.ico">
+<link rel="icon" sizes="16x16" href="/i/favicon-16x16.png">
+<link rel="icon" sizes="32x32" href="/i/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/i/favicon-180x180.png">
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim   apex-top-nav apex-icons-fontawesome"  id="t_PageBody">
+<form action="wwv_flow.accept" method="post" name="wwv_flow" id="wwvFlowForm" novalidate >
+<input type="hidden" name="p_flow_id" value="116" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="1" id="pFlowStepId" /><input type="hidden" name="p_instance" value="6427412315546" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="51196522712925433593814366516453092635" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="A" id="pReloadOnSubmit" /><input type="hidden" value="51196522712925433593814366516453092635" id="pSalt" />
+<header class="t-Header" id="t_Header">
+  
+  <div class="t-Header-branding">
+    <div class="t-Header-controls">
+      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" id="t_Button_navControl" type="button"><span class="t-Icon fa-bars" aria-hidden="true"></span></button>
+    </div>
+    <div class="t-Header-logo">
+      <a href="f?p=116:1:6427412315546:::::" class="t-Header-logo-link"><img src="limsophy/r/116/files/static/v30/crest_logo_links_schrift_versetzt3.gif" style="text-align: left; padding-left:0cm; margin-left:0cm" /></a>
+    </div>
+    <div class="t-Header-navBar">
+      <ul class="t-NavigationBar " id="54097341369714277"><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="f?p=116:21:6427412315546::NO:::" role="button">
+    <span class="t-Icon "></span><span class="t-Button-label">About</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="f?p=116:18:6427412315546::NO:::" role="button">
+    <span class="t-Icon "></span><span class="t-Button-label">cDNA libraries</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="f?p=116:19:6427412315546::NO:::" role="button">
+    <span class="t-Icon "></span><span class="t-Button-label">Version history</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="http://www.ipk-gatersleben.de/signature/impressum/" role="button">
+    <span class="t-Icon "></span><span class="t-Button-label">Imprint</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="http://pgrc.ipk-gatersleben.de/cr-est/files/" role="button">
+    <span class="t-Icon "></span><span class="t-Button-label">Download</span><span class="t-Button-badge"></span>
+  </a>
+</li></ul>
+    </div>
+  </div>
+  <div class="t-Header-nav">
+    
+    
+  </div>
+</header>
+    <div class="t-Body">
+  
+  <div class="t-Body-main">
+      <div class="t-Body-title" id="t_Body_title">
+        
+      </div>
+      <div class="t-Body-content" id="t_Body_content">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="54060454112714200_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="54060454112714200_E" class="apex-page-error u-hidden"></span>
+        <div class="t-Body-contentInner">
+          <div class="container">
+<div class="row">
+<div class="col col-12 " >
+<div class="t-Region t-Region--scrollBody" id="R53674570844774602"  role="group" aria-labelledby="R53674570844774602_heading">
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <h2 class="t-Region-title" id="R53674570844774602_heading">Information</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <div class="container">
+<div class="row">
+<div class="col col-12 " >
+<div class="t-Form-fieldContainer t-Form-fieldContainer--hiddenLabel rel-col " id="P1_CREST_CONTAINER"><div class="t-Form-labelContainer t-Form-labelContainer--hiddenLabel col col-3">
+<label for="P1_CREST" id="P1_CREST_LABEL" class="t-Form-label u-VisuallyHidden">Crest</label>
+</div><div class="t-Form-inputContainer col col-9"><img  id="P1_CREST" class="display_image&#x20;apex-item-image" style="align:center;"  src="limsophy&#x2F;r&#x2F;116&#x2F;files&#x2F;static&#x2F;v30&#x2F;crest_large.gif" alt="Crest" title="Crest"><span id="P1_CREST_error_placeholder" class="a-Form-error" data-template-id="54091670895714253_ET"></span></div></div>
+</div>
+</div>
+</div>The Crop EST Database (CR-EST) is a public available online resource providing access to sequence, classification, clustering, and annotation data of crop EST projects at the IPK. A view of these information give the summarized numbers about genomic data of species listed in the adjacent table.
+This web application allows to BLAST against CR-EST ESTs and to query and retrieve data from Gene Ontology and metabolic pathway annotations as well as sequence similarities from stored results of BLASTX searches against the NRPEP database. CR-EST also features interactive JAVA-based tools, such as open reading frame visualization and explorative analysis of Gene Ontology mappings to ESTs.
+The development of CR-EST is a collaboration project of the IPK bioinformatics research groups Bioinformatics (BI) and Plant Data Warehouse (PDW) within the Bioinformatics Center Gatersleben-Halle (BIC-GH).
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+<div class="t-Region tr.highlight-row td:hover{ background-color:#298000; }  t-Region--scrollBody" id="R61853957464366602"  role="group" aria-labelledby="R61853957464366602_heading">
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <h2 class="t-Region-title" id="R61853957464366602_heading">Organism</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <div id="report_61853957464366602_catch"><div class="t-Report t-Report--stretch t-Report--altRowsDefault t-Report--rowHighlight t-Report--noBorders" id="report_R61853957464366602" >
+  <div class="t-Report-wrap">
+    <table class="t-Report-pagination" role="presentation"><tr><td></td></tr></table>
+    <div class="t-Report-tableWrap">
+    <table class="t-Report-report" summary="Organism">
+<thead><tr><th class="t-Report-colHead"  align="center"  id="ID" ></th><th class="t-Report-colHead"  align="center"  id="ICON" style="width:60px"></th><th class="t-Report-colHead"  align="center"  id="SPECIES" >Species</th><th class="t-Report-colHead"  align="center"  id="CDNA" >cDNA sequences</th><th class="t-Report-colHead"  align="center"  id="EST" >ESTs</th><th class="t-Report-colHead"  align="center"  id="BLAST_EST" >EST BLASTX</th><th class="t-Report-colHead"  align="center"  id="CONSENSUS" >Consensus sequences</th><th class="t-Report-colHead"  align="center"  id="BLAST_CON" >Consensus BLASTX</th><th class="t-Report-colHead"  align="center"  id="BILD" >Species statics</th></tr></thead>
+<tbody>
+<tr><td class="t-Report-cell"  headers="ID">1</td><td class="t-Report-cell"  headers="ICON"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_ID,P14_NAME,ORG_ICON,ORG_NAME&#x3A;Hordeum&#x25;20vulgare&#x25;20-&#x25;20barley,Hordeum&#x25;20vulgare&#x25;20-&#x25;20barley,barley_icon_new,Hordeum&#x25;20vulgare" > <img src="limsophy/r/116/files/static/v30/barley_icon_new.jpg"> </a></td><td class="t-Report-cell"  headers="SPECIES"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_NAME,ORG_ID,P14_NAME,ORG_ICON&#x3A;Hordeum&#x25;20vulgare,1,Hordeum&#x25;20vulgare&#x25;20-&#x25;20barley,barley_icon_new" >Hordeum vulgare - barley</a></td><td class="t-Report-cell"  headers="CDNA">        37</td><td class="t-Report-cell"  headers="EST">   206,640</td><td class="t-Report-cell"  headers="BLAST_EST">   197,021</td><td class="t-Report-cell"  headers="CONSENSUS">    40,280</td><td class="t-Report-cell"  headers="BLAST_CON">    39,582</td><td class="t-Report-cell"  headers="BILD"><a href="f&#x3F;p&#x3D;116&#x3A;14&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,14&#x3A;ORG_NAME,ORG_ICON,ORG_ID&#x3A;Hordeum&#x25;20vulgare&#x25;20-&#x25;20barley,barley_icon_new,1" ><span class="t-Icon fa-bar-chart"></span></a></td></tr>
+<tr><td class="t-Report-cell"  headers="ID">2</td><td class="t-Report-cell"  headers="ICON"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_ID,P14_NAME,ORG_ICON,ORG_NAME&#x3A;Pisum&#x25;20sativum&#x25;20-&#x25;20pea,Pisum&#x25;20sativum&#x25;20-&#x25;20pea,pea_icon_new,Pisum&#x25;20sativum" > <img src="limsophy/r/116/files/static/v30/pea_icon_new.jpg"> </a></td><td class="t-Report-cell"  headers="SPECIES"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_NAME,ORG_ID,P14_NAME,ORG_ICON&#x3A;Pisum&#x25;20sativum,2,Pisum&#x25;20sativum&#x25;20-&#x25;20pea,pea_icon_new" >Pisum sativum - pea</a></td><td class="t-Report-cell"  headers="CDNA">         2</td><td class="t-Report-cell"  headers="EST">     9,377</td><td class="t-Report-cell"  headers="BLAST_EST">     8,238</td><td class="t-Report-cell"  headers="CONSENSUS">     2,110</td><td class="t-Report-cell"  headers="BLAST_CON">     2,019</td><td class="t-Report-cell"  headers="BILD"><a href="f&#x3F;p&#x3D;116&#x3A;14&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,14&#x3A;ORG_NAME,ORG_ICON,ORG_ID&#x3A;Pisum&#x25;20sativum&#x25;20-&#x25;20pea,pea_icon_new,2" ><span class="t-Icon fa-bar-chart"></span></a></td></tr>
+<tr><td class="t-Report-cell"  headers="ID">3</td><td class="t-Report-cell"  headers="ICON"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_ID,P14_NAME,ORG_ICON,ORG_NAME&#x3A;Solanum&#x25;20tuberosum&#x25;20-&#x25;20potato,Solanum&#x25;20tuberosum&#x25;20-&#x25;20potato,potato_icon_new,Solanum&#x25;20tuberosum" > <img src="limsophy/r/116/files/static/v30/potato_icon_new.jpg"> </a></td><td class="t-Report-cell"  headers="SPECIES"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_NAME,ORG_ID,P14_NAME,ORG_ICON&#x3A;Solanum&#x25;20tuberosum,3,Solanum&#x25;20tuberosum&#x25;20-&#x25;20potato,potato_icon_new" >Solanum tuberosum - potato</a></td><td class="t-Report-cell"  headers="CDNA">         5</td><td class="t-Report-cell"  headers="EST">     6,833</td><td class="t-Report-cell"  headers="BLAST_EST">     6,003</td><td class="t-Report-cell"  headers="CONSENSUS">     1,506</td><td class="t-Report-cell"  headers="BLAST_CON">     1,432</td><td class="t-Report-cell"  headers="BILD"><a href="f&#x3F;p&#x3D;116&#x3A;14&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,14&#x3A;ORG_NAME,ORG_ICON,ORG_ID&#x3A;Solanum&#x25;20tuberosum&#x25;20-&#x25;20potato,potato_icon_new,3" ><span class="t-Icon fa-bar-chart"></span></a></td></tr>
+<tr><td class="t-Report-cell"  headers="ID">4</td><td class="t-Report-cell"  headers="ICON"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_ID,P14_NAME,ORG_ICON,ORG_NAME&#x3A;Triticum&#x25;20aestivum&#x25;20-&#x25;20wheat,Triticum&#x25;20aestivum&#x25;20-&#x25;20wheat,wheat_icon_new,Triticum&#x25;20aestivum" > <img src="limsophy/r/116/files/static/v30/wheat_icon_new.jpg"> </a></td><td class="t-Report-cell"  headers="SPECIES"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_NAME,ORG_ID,P14_NAME,ORG_ICON&#x3A;Triticum&#x25;20aestivum,4,Triticum&#x25;20aestivum&#x25;20-&#x25;20wheat,wheat_icon_new" >Triticum aestivum - wheat</a></td><td class="t-Report-cell"  headers="CDNA">         2</td><td class="t-Report-cell"  headers="EST">     2,824</td><td class="t-Report-cell"  headers="BLAST_EST">     2,199</td><td class="t-Report-cell"  headers="CONSENSUS">       539</td><td class="t-Report-cell"  headers="BLAST_CON">       484</td><td class="t-Report-cell"  headers="BILD"><a href="f&#x3F;p&#x3D;116&#x3A;14&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,14&#x3A;ORG_NAME,ORG_ICON,ORG_ID&#x3A;Triticum&#x25;20aestivum&#x25;20-&#x25;20wheat,wheat_icon_new,4" ><span class="t-Icon fa-bar-chart"></span></a></td></tr>
+<tr><td class="t-Report-cell"  headers="ID">5</td><td class="t-Report-cell"  headers="ICON"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_ID,P14_NAME,ORG_ICON,ORG_NAME&#x3A;Nicotiana&#x25;20tabacum&#x25;20-&#x25;20tobacco,Nicotiana&#x25;20tabacum&#x25;20-&#x25;20tobacco,tobacco_icon_new,Nicotiana&#x25;20tabacum" > <img src="limsophy/r/116/files/static/v30/tobacco_icon_new.jpg"> </a></td><td class="t-Report-cell"  headers="SPECIES"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_NAME,ORG_ID,P14_NAME,ORG_ICON&#x3A;Nicotiana&#x25;20tabacum,5,Nicotiana&#x25;20tabacum&#x25;20-&#x25;20tobacco,tobacco_icon_new" >Nicotiana tabacum - tobacco</a></td><td class="t-Report-cell"  headers="CDNA">         1</td><td class="t-Report-cell"  headers="EST">     1,650</td><td class="t-Report-cell"  headers="BLAST_EST">     1,569</td><td class="t-Report-cell"  headers="CONSENSUS">       292</td><td class="t-Report-cell"  headers="BLAST_CON">       289</td><td class="t-Report-cell"  headers="BILD"><a href="f&#x3F;p&#x3D;116&#x3A;14&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,14&#x3A;ORG_NAME,ORG_ICON,ORG_ID&#x3A;Nicotiana&#x25;20tabacum&#x25;20-&#x25;20tobacco,tobacco_icon_new,5" ><span class="t-Icon fa-bar-chart"></span></a></td></tr>
+<tr><td class="t-Report-cell"  headers="ID">6</td><td class="t-Report-cell"  headers="ICON"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_ID,P14_NAME,ORG_ICON,ORG_NAME&#x3A;Petunia&#x25;20hybrida&#x25;20-&#x25;20petunia,Petunia&#x25;20hybrida&#x25;20-&#x25;20petunia,petunia_icon_new,Petunia&#x25;20hybrida" > <img src="limsophy/r/116/files/static/v30/petunia_icon_new.jpg"> </a></td><td class="t-Report-cell"  headers="SPECIES"><a href="f&#x3F;p&#x3D;116&#x3A;2&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,2,14,5,6,7,26&#x3A;ORG_NAME,ORG_ID,P14_NAME,ORG_ICON&#x3A;Petunia&#x25;20hybrida,6,Petunia&#x25;20hybrida&#x25;20-&#x25;20petunia,petunia_icon_new" >Petunia hybrida - petunia</a></td><td class="t-Report-cell"  headers="CDNA">         1</td><td class="t-Report-cell"  headers="EST">     4,700</td><td class="t-Report-cell"  headers="BLAST_EST">     3,897</td><td class="t-Report-cell"  headers="CONSENSUS">     1,013</td><td class="t-Report-cell"  headers="BLAST_CON">       856</td><td class="t-Report-cell"  headers="BILD"><a href="f&#x3F;p&#x3D;116&#x3A;14&#x3A;6427412315546&#x3A;&#x3A;NO&#x3A;RP,14&#x3A;ORG_NAME,ORG_ICON,ORG_ID&#x3A;Petunia&#x25;20hybrida&#x25;20-&#x25;20petunia,petunia_icon_new,6" ><span class="t-Icon fa-bar-chart"></span></a></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="t-Report-links"></div>
+    <table class="t-Report-pagination t-Report-pagination--bottom" role="presentation"></table>
+  </div>
+</div></div>
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+
+</div>
+</div><div class="row">
+<div class="col col-12 " >
+<div id="R59524923416241903"  class=""> 
+<div id="report_59524923416241903_catch"><div class="t-Report t-Report--stretch t-Report--staticRowColors t-Report--rowHighlightOff t-Report--noBorders" id="report_R59524923416241903" >
+  <div class="t-Report-wrap">
+    <table class="t-Report-pagination" role="presentation"><tr><td></td></tr></table>
+    <div class="t-Report-tableWrap">
+    <table class="t-Report-report" summary="Copyright">
+<tr><td class="t-Report-cell"  align="right"  headers="TEST">© Copyright 2003 - 2020 , <a href="http://www.ipk-gatersleben.de">IPK Gatersleben</a> </td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="t-Report-links"></div>
+    <table class="t-Report-pagination t-Report-pagination--bottom" role="presentation"></table>
+  </div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+        <footer class="t-Footer">
+          release 1.0
+          
+          <a href="f?p=116:1:6427412315546:SET_SESSION_SCREEN_READER_ON::::">Set Screen Reader Mode On</a>
+          
+        </footer>
+      </div>
+  </div>
+</div>
+<div class="t-Body-inlineDialogs">
+  
+</div><input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="p5ItdRWlBWF8CsKIzJyJkA" /></form>
+
+
+<script type="text/javascript">
+var apex_img_dir = "/i/", htmldb_Img_Dir = apex_img_dir;
+</script>
+<!--[if lt IE 9]><script type="text/javascript" src="/i/libraries/jquery/1.12.3/jquery-1.12.3.min.js?v=5.1.4.00.08"></script><![endif]-->
+<!--[if gte IE 9]><!--><script type="text/javascript" src="/i/libraries/jquery/2.2.3/jquery-2.2.3.min.js?v=5.1.4.00.08"></script><!--<![endif]-->
+<script type="text/javascript" src="/i/libraries/apex/minified/desktop.min.js?v=5.1.4.00.08"></script>
+<script type="text/javascript" src="wwv_flow.js_messages?p_app_id=116&p_lang=en&p_version=5.1.4.00.08-6419537717856"></script>
+
+<script type="text/javascript">
+apex.da.initDaEventList = function(){
+apex.da.gEventList = [
+{"bindEventType":"ready","anyActionsFireOnInit":true,actionList:[{"eventResult":true,"executeOnPageInit":true,"stopExecutionOnError":true,javascriptFunction:function (){ jQuery("a[href*='f?p=116:']").each(function(){
+var vThis$ = jQuery(this);
+vThis$.attr("href",vThis$.attr("href").replace("=116:","=CREST:"));
+});
+},"action":"NATIVE_JAVASCRIPT_CODE"}]}];
+}
+</script>
+
+<script type="text/javascript" src="/i/libraries/apex/minified/widget.apexTabs.min.js?v=5.1.4.00.08"></script>
+<script type="text/javascript" src="/i/libraries/apex/minified/widget.stickyWidget.min.js?v=5.1.4.00.08"></script>
+<script type="text/javascript" src="/i/libraries/apex/minified/widget.stickyTableHeader.min.js?v=5.1.4.00.08"></script>
+<script type="text/javascript" src="/i/libraries/hammer/2.0.4/hammer-2.0.4.min.js?v=5.1.4.00.08"></script>
+<script type="text/javascript" src="/i/themes/theme_42/1.0/js/modernizr-custom.min.js?v=5.1.4.00.08"></script>
+<script type="text/javascript" src="/i/plugins/com.oracle.apex.carousel/1.0/com.oracle.apex.carousel.min.js?v=5.1.4.00.08"></script>
+<script type="text/javascript" src="/i/themes/theme_42/1.0/js/theme42.min.js?v=5.1.4.00.08"></script>
+
+
+
+  
+
+
+
+
+<script type="text/javascript" src="/i/libraries/apex/minified/widget.report.min.js?v=5.1.4.00.08"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+apex.jQuery( document ).ready( function() {
+(function(){apex.widget.report.init("R61853957464366602",{"styleChecked":"#dddddd","internalRegionId":"61853957464366602"});})();
+(function(){apex.widget.report.init("R59524923416241903",{"styleChecked":"#dddddd","internalRegionId":"59524923416241903"});})();
+(function(){apex.da.initDaEventList();})();
+(function(){apex.da.init();})();
+apex.theme42.initializePage.noSideCol();
+
+});</script>
+
+</body>
+</html>

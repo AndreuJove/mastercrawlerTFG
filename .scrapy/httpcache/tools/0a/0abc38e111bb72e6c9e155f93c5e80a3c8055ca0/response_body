@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>
+    DBASS
+</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico" />
+	<meta name="author" content="University of Southampton" />
+	<meta name="copyright" content="University of Southampton, 1994 - 2011" />
+	<meta name="description" content="homepage" />
+
+	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="/css/navigation.css" />
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" type="text/css" href="/css/cb3/ie.css" />
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="/css/schools.css" />
+	<link rel="stylesheet" type="text/css" href="/css/nav_maroon.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+	
+	<script type="text/javascript" src="/js/prototype.js"></script>
+	<script type="text/javascript" src="/js/javascript.js"></script>
+	
+	<style>
+		h1{
+			background: url(/images/maroon_shaded_university.gif) no-repeat !important;
+			height: 46px !important;
+			margin: 21px 35px 0 0 !important;
+		}
+	</style>
+</head>
+    <body>
+	<ul id="accessibility">
+		<li class="last">
+		    <a href="http://www.southampton.ac.uk/tools/index.html">Accessibility</a>
+		</li>
+	</ul>
+    <div id="container" class="xlarge">
+	    <div id="header" class="color">
+		    <h1 id="logo" class="ccc">University of Southampton - Faculty of Medicine - dbass</h1>
+	    </div>
+	    <div id="nav">
+		    <ul>
+			    <li class="home">
+			        <a href="/">DBASS</a>
+			        <ul>
+				        <li id="liDbass3">
+				            <a href="/DBASS3/">DBASS3</a>
+                            
+				        </li>
+				        <li id="liDbass5">
+				            <a href="/DBASS5/">DBASS5</a>
+                            
+				        </li>
+				        <li id="liCredit">
+				            <a href="/credit.aspx">Credit</a>
+				        </li>
+				        <li id="liDisclaimer">
+				            <a href="/disclaimer.aspx">Disclaimer</a>
+				        </li>
+				        <li id="liContact" class="last">
+				            <a href="/contact.aspx">Contact</a>
+				        </li>
+			        </ul>
+			    </li>
+			    <li class="back">
+			        <a href="http://www.southampton.ac.uk/">University Home</a>
+			    </li>
+		    </ul>
+	    </div>		
+        <h2 id="landingHeading">DBASS</h2>
+	    <div id="content">	
+            <h4><!-- BeginEditable "pagetitle" -->
+                
+    Welcome to DBASS
+
+            <!-- EndEditable -->
+            </h4>        
+		    <!-- BeginEditable "body" -->		
+            <form method="post" action="./" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDMyNDU0NjAzD2QWAmYPZBYCAgMPFgIeBWNsYXNzBQZ4bGFyZ2UWBgIBD2QWAgIBDxYCHgdWaXNpYmxlaGQCAw9kFgICAQ8WAh8BaGQCDw8WAh8BZ2RkNRdWWEI1RqOWkL0VSVle9qoZ3uFf0ILe8KHwoHNcqko=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+                
+    <p class="intro">DBASS3 and DBASS5 is a database of new exon boundaries induced by pathogenic mutations in human disease genes.</p>
+
+            </form>
+		    <!-- EndEditable -->
+	    </div>
+	    <div id="subcontent">	   
+            <div id="divHomePage">
+                <h3>University links:</h3>
+                <ul class="noindent">
+                    <li>
+                        <a href="http://www.southampton.ac.uk/medicine" target="_self" rel="external">Faculty of Medicine</a>
+                    </li>
+                    <li>
+                        <a href="http://www.southampton.ac.uk/medicine/academic_units/academic_units/human_development_health.page" target="_self" rel="external">Academic Unit: Human Development and Health</a>
+                    </li>
+                </ul>
+            </div>
+            
+	    </div>
+    </div>
+	<div id="footer">
+		<ul class="social">
+			<li class="delicious">
+			    <a href="http://del.icio.us/post?url=http%3A//www.dbass.soton.ac.uk/" title="Add this to your del.icio.us bookmarks">Del.icio.us</a>
+			</li>
+			<li class="digg">
+			    <a href="http://digg.com/submit?url=http%3A//www.dbass.soton.ac.uk/" title="digg this!">Digg</a>
+			</li>
+			<li class="stumbleupon">
+			    <a href="http://www.stumbleupon.com/submit?url=http%3A//www.dbass.soton.ac.uk/" title="Post this to StumbleUpon">Stumble Upon</a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+			    <a href="/inf/foi.html">Freedom of information</a>
+			</li>
+			<li>
+			    <a href="/inf/termsandconditions.html">Terms and conditions</a>
+			</li>
+			<li>
+			    <a href="/inf/phone.php">Phone book</a>
+			</li>
+			<li>
+			    <a href="/about/contacts.html">Contact details</a>
+			</li>
+			<li class="last">
+			    <a href="https://sussed.soton.ac.uk/" title="portal login">SUSSED</a>
+			</li>
+			
+		</ul>
+	</div>
+</body>
+</html>

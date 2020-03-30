@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <title>BoxShade Server</title>
+  <link rel="stylesheet" href="/sib_css/sib-20130605.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="/sib_css/sib_print-20130605.css" type="text/css" media="print" charset="utf-8" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+</head>
+
+<body>
+
+<div id='sib_top'><a name='TOP'></a></div>
+  <div id='sib_container'>
+  <div id='sib_header_small'>
+  <div id="sib_expasy_logo">
+<a href="http://www.sib.swiss" id="sib_link" title="SIB Swiss Institute of Bioinformatics"></a>
+<a href="http://www.expasy.org" id="expasy_link" title="ExPASy - SIB Bioinformatics Resource Portal"></a>
+  </div>
+  <div class='sib_title_no_logo'>
+  <h1>BoxShade</h1>
+</div>
+
+<div id='sib_header_nav'>
+<a href="/" title="Home page">Home</a>&nbsp;|&nbsp;<a href="/contact.html" title="Contact">Contact</a>&nbsp;
+</div>
+</div>
+<!-- END OF HEADER -->
+
+<div id='sib_body'>
+  <center>
+<table border="0" cellpadding="0" cellspacing="2" width="580" summary="form">
+   <tr>
+    <td align="left">
+     <center>
+      <h2>Pretty Printing and Shading of Multiple-Alignment files<br/></h2>
+     </center>
+     <h3>This server uses version 3.21 of BOXSHADE, written by K. Hofmann and M. Baron. <a href="/software/BOX_doc.html">BOXSHADE</a> is in the public domain and available from Source Forge  <a href="http://sourceforge.net/projects/boxshade/">http://sourceforge.net/projects/boxshade/</a></h3>
+     <h3>This <strong>server</strong> takes a multiple-alignment file in either GCG's MSF-format or Clustal ALN-format.<br/>
+     Output can be created in the following formats:</h3>
+     <ul>
+      <li>
+        <h3>Postscript/EPS (using shaded background)</h3>
+      </li>
+      <li>
+        <h3>RTF old (using colors)</h3>
+      </li>
+      <li>
+        <h3>RTF new (using shaded background)</h3>
+      </li>
+      <li>
+        <h3>XFIG-files (using shaded background)</h3>
+      </li>
+      <li>
+        <h3>ASCII (showing similarities)</h3>
+      </li>
+      <li>
+        <h3>ASCII (showing differences)</h3>
+      </li>
+      <li>
+        <h3>HPGL (using colors)</h3>
+      </li>
+      <li>
+        <h3>PICT (for later editing on MACs and PCs)</h3>
+      </li>
+      </ul>
+       <h3>
+       If you have problems using this server (like getting no result), <a href="/software/BOX_error.html">read this</a> and see the <a href="/software/BOX_faq.html">FAQ list</a>.
+     </h3>
+     <form method="post" action="/cgi-bin/BOX_form_parser">
+     <table border="0" cellpadding="0" cellspacing="2" width="580" summary="BOXshade submit form">
+      <tr>
+       <td bgcolor="#d3d3d3">
+        <div align="right">
+         <h3>Output format</h3>
+         <h3>Font Size</h3>
+         <h3>Consensus Line</h3>
+        </div>
+       </td>
+       <td bgcolor="#d3d3d3">
+        <h3><select name="outp" size="1">
+         <option selected="selected" value="Postscript_portrait">Postscript_portrait</option>
+         <option value="Postscript_landscape">Postscript_landscape</option>
+         <option value="EPS_portrait">EPS_portrait</option>
+         <option value="EPS_landscape">EPS_landscape</option>
+         <option value="xfig">xfig</option>
+         <option value="hpgl">hpgl</option>
+         <option value="RTF_old">RTF_old</option>
+         <option value="RTF_new">RTF_new</option>
+         <option value="ASCII_similarities">ASCII_similarities</option>
+         <option value="ASCII_differences">ASCII_differences</option>
+         <option value="PICT_portrait">PICT_portrait</option>
+         <option value="PICT_landscape">PICT_landscape</option>
+        </select></h3>
+        <h3><select name="font" size="1">
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>
+         <option selected="selected" value="10">10</option>
+         <option value="11">11</option>
+         <option value="12">12</option>
+        </select></h3>
+        <h3><select name="consline" size="1">
+         <option selected="selected" value="no consensus line">no consensus line</option>
+         <option value="consensus line with letters">consensus line with letters</option>
+         <option value="consensus line with symbols">consensus line with symbols</option>
+        </select></h3>
+       </td>
+      </tr>
+      <tr>
+       <td bgcolor="#d3d3d3">
+        <div align="right">
+         <h3>Fraction of sequences:</h3>
+         <h3>Enter sequence number:</h3>
+        </div>
+       </td>
+       <td bgcolor="#d3d3d3">
+        <h3><select name="thr" size="1">
+         <option value="0.1">0.1</option>
+         <option value="0.2">0.2</option>
+         <option value="0.3">0.3</option>
+         <option value="0.4">0.4</option>
+         <option value="0.45">0.45</option>
+         <option selected="selected" value="0.5">0.5</option>
+         <option value="0.55">0.55</option>
+         <option value="0.6">0.6</option>
+         <option value="0.7">0.7</option>
+         <option value="0.8">0.8</option>
+         <option value="0.9">0.9</option>
+         <option value="1.0">1.0</option>
+        </select> (that must agree for shading)</h3>
+        <h3><input type="text" name="tocons" size="5" maxlength="3" /> only if 'consensus to a single sequence' is required</h3>
+       </td>
+      </tr>
+      <tr>
+       <td bgcolor="#d3d3d3">
+        <div align="right">
+         <h3>Query title (optional)</h3>
+        </div>
+       </td>
+       <td bgcolor="#d3d3d3"><input name="comm" size="40" type="text" /></td>
+      </tr>
+      <tr style="height:40px;">
+       <td height="40" colspan="2" bgcolor="#d3d3d3">
+        <ul>
+         <li><h3><strong>When pasting MSF or ClustalW files, please make sure<br/>
+         that the pasted text starts with the header line of the alignment and<br/>
+         contains no extra blank lines at the bottom.</strong></h3></li>
+        </ul>
+       </td>
+      </tr>
+      <tr>
+       <td bgcolor="#d3d3d3">
+        <div align="right">
+         <h3>Input sequence format</h3>
+        </div>
+       </td>
+       <td bgcolor="#d3d3d3">
+        <h3><select name="inform" size="1">
+         <option value="MSF">MSF</option>
+         <option value="ALN">ALN</option>
+         <option value="other">other</option>
+        </select></h3>
+       </td>
+      </tr>
+      <tr>
+       <td bgcolor="#d3d3d3">
+        <div align="right">
+         <h3>Paste your multiple-alignment file<br/>
+         (see above for valid formats)</h3>
+        </div>
+       </td>
+       <td bgcolor="#d3d3d3">
+        <h3><textarea name="seq" rows="5" cols="60"></textarea></h3>
+       </td>
+      </tr>
+      <tr>
+       <td colspan="2" bgcolor="#d3d3d3">
+        <center>
+         <h3><input type="submit" value="Run BOXSHADE..." /><input type="reset" value="Clear Input" /></h3>
+        </center>
+       </td>
+      </tr>
+     </table>
+	 </form>
+    </td>
+   </tr>
+  </table>
+ </center>
+</div>
+<!-- ********************************************************************************************** -->
+<div id='sib_footer'>
+  <div id='sib_footer_content'>
+    <a href="http://www.sib.swiss">SIB Swiss Institute of Bioinformatics</a>&nbsp;|&nbsp;<a href="/contact.html">Contact</a>
+    <div id="sib_footer_right">
+      <a href="#TOP" id="sib_footer_gototop"><span style="padding-left: 10px">Back to the Top</span></a>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16617489-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

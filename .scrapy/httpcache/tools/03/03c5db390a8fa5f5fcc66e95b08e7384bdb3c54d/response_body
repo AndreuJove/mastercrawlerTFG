@@ -1,0 +1,644 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                  "http://www.w3.org/TR/html4/loose.dtd">
+                 <html><head><title>Aspergillus Genome Database</title><script src='http://www.aspergillusgenome.org/javascript/www.js'></script>
+<script src='http://www.aspergillusgenome.org/javascript/obfuscate.js'></script>
+<script src='http://www.aspergillusgenome.org/javascript/jquery.min.js'></script>
+<script src='http://www.aspergillusgenome.org/javascript/jquery-ui.min.js'></script>
+<script type='text/javascript'>var domain = "www.aspergillusgenome.org";</script>
+<script src='http://www.aspergillusgenome.org/javascript/search.js'></script>
+<link href='http://www.aspergillusgenome.org/css/header_footer.css' rel='stylesheet' type='text/css'>
+<link href='http://www.aspergillusgenome.org/css/FormatPage.css' rel='stylesheet' type='text/css'>
+<link href='http://www.aspergillusgenome.org/css/Site.css' rel='stylesheet' type='text/css'>
+<link href='http://www.aspergillusgenome.org/css/jquery-ui.css' rel='stylesheet' type='text/css'>
+<link rel='icon' href='http://www.aspergillusgenome.org/favicon.ico' type='image/x-icon'>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6928745-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowHash', 'false']);
+  _gaq.push(['_setAllowLinker', true]); 
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+        'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script></head><body  bgcolor=#FFFFFF>
+
+
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+  <TR>
+    <TD colspan="3">
+
+<p>
+<div id="header">
+  <div id="logo">
+      <a id="homelink" href="/">&nbsp;</a>
+  </div>
+  <div id="autoTestButton" style='display:none;'>
+  <button onclick='genTest( )'>test this</button>
+  </div>
+  <script src="/javascript/autoTest.js"></script>
+  <div id="headerright">
+    <div id="headerlinks">  
+      <a id="email" target="_blank" href="http://www.aspergillusgenome.org/cgi-bin/suggestion">&nbsp;</a><a id="facebook" target="_blank" 
+       	  href="https://www.facebook.com/pages/Aspergillus-Genome-Database/134274056652293">&nbsp;</a>
+      <div id="headermenu">
+        <div class="menu-top-menu-container">
+          <ul id="menu-top-menu" class="menu">
+            <li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82">
+              <a href="/AboutContents.shtml">About</a>
+            </li>
+            <li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89">
+              <a href="/sitemap.shtml">Site Map</a>
+            </li>
+            <li id="menu-item-200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200">
+              <a href="/HowToCite.shtml">How to Cite</a>
+            </li>
+            <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90">
+              <a href="/HelpContents.shtml">Help</a>
+            </li>
+          </ul>
+        </div> <!-- menu-top-menu-container -->
+      </div>   <!-- headermenu -->
+      <div class="clearfloats"><!-- this comment is the non-floated element --> </div> 
+    </div> <!-- headerlinks -->
+    <div id="headersearch">
+      <form id="searchform" method="get" action="http://www.aspergillusgenome.org//cgi-bin/search/quickSearch">
+        <input style="width:175px;" type="text" onclick="clickclear(this, 'search our site')" alt="search our site" 
+	       id="txt_search" name="query" value="search our site"/>
+        <input type="submit" value=" " id="go" />
+      </form>
+   </div> <!-- headersearch -->
+  </div> <!-- headerright -->
+  <div class="clearfloats"><!-- this comment is the non-floated element --> </div>  
+<div id="nav">
+<div class="menu-main-menu-container">
+<ul id="menu-main-menu" class="menu">
+<li id="menu-item-1" class="menu-item menu-item-type-post_type menu-item-object-page
+              page_item page-item-4 current_page_item menu-item-1">
+<a href="http://www.aspergillusgenome.org/">Home</a>
+</li>
+<li id="menu-item-2" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2">
+<a href="http://www.aspergillusgenome.org/SearchContents.shtml">Search</a>
+<ul class="sub-menu">
+<li id="menu-item-3" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3">
+<a href="http://www.aspergillusgenome.org/cgi-bin/compute/blast_clade.pl">BLAST</a>
+</li>
+<li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4">
+<a href="http://aspgd.broadinstitute.org/">Sybil</a>
+</li>
+<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5">
+<a href="http://www.aspergillusgenome.org/cgi-bin/GO/goTermFinder">GO Term Finder</a>
+</li>
+<li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6">
+<a href="http://www.aspergillusgenome.org/cgi-bin/GO/goTermMapper">GO Slim Mapper</a>
+</li>
+<li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
+<a href="http://www.aspergillusgenome.org/SearchContents.shtml">Text Search</a>
+</li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8">
+<a href="http://www.aspergillusgenome.org/cgi-bin/compute/web-primer">Primers </a>
+</li>
+<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9">
+<a href="http://www.aspergillusgenome.org/cgi-bin/PATMATCH/nph-patmatch">PatMatch</a>
+</li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
+<a href="http://www.aspergillusgenome.org/cgi-bin/search/featureSearch">Advanced Search</a>
+</li>
+<li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
+<a href="http://www.aspergillusgenome.org/SearchContents.shtml#JBrowse">JBrowse or GenomeView</a>
+</li>
+<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12">
+<a href="http://www.aspergillusgenome.org/cgi-bin/extractReadsForRegion.pl">Retrieve Reads</a>
+</li>
+</ul>
+<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13">
+<a href=" http://www.aspergillusgenome.org/GBrowseContents.shtml">GBrowse</a>
+<ul class="sub-menu">
+<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14">
+<a href="http://www.aspergillusgenome.org/cgi-bin/gbrowse2/gbrowse/nidulans_4/?name=ChrVIII_A_nidulans_FGSC_A4:1657399..1679067"><i>A. nidulans</i></a>
+</li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15">
+<a href="http://www.aspergillusgenome.org/cgi-bin/gbrowse2/gbrowse/afum_af293/?name=Chr6_A_fumigatus_Af293:1103100..1124434"><i>A. fumigatus</i></a>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16">
+<a href="http://www.aspergillusgenome.org/cgi-bin/gbrowse2/gbrowse/anig_cbs513_88/?name=An16_A_niger_CBS_513_88:507726..561786"><i>A. niger</i></a>
+</li>
+<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17">
+<a href="http://www.aspergillusgenome.org/cgi-bin/gbrowse2/gbrowse/aory_rib40/?name=Chr2_A_oryzae_RIB40:2089055..2109548"><i>A. oryzae</i></a>
+</li>
+</ul>
+<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18">
+<a href="http://www.aspergillusgenome.org/SequenceContents.shtml">Sequence</a>
+<ul class="sub-menu">
+<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19">
+<a href="http://www.aspergillusgenome.org/cgi-bin/seqTools">Gene/Seq Resources</a>
+</li>
+<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20">
+<a href="http://www.aspergillusgenome.org/cgi-bin/PATMATCH/nph-patmatch">PatMatch</a>
+</li>
+<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21">
+<a href="http://www.aspergillusgenome.org/cgi-bin/compute/web-primer">Primers</a>
+</li>
+<li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22">
+<a href="http://www.aspergillusgenome.org/cgi-bin/genomeVersionHistory.pl">Genome Versions</a>
+</li>
+<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23">
+<a href="http://www.aspergillusgenome.org/cgi-bin/chromosomeHistory.pl">Chromosome History</a>
+</li>
+<li id="menu-item-24" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24">
+<a href="http://www.aspergillusgenome.org/download/sequence/">Download Sequence</a>
+</li>
+</ul>
+<li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25">
+<a href="http://www.aspergillusgenome.org/GOContents.shtml">GO</a>
+<ul class="sub-menu">
+<li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26">
+<a href="http://www.geneontology.org/page/ontology-documentation">What is GO?</a>
+</li>
+<li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27">
+<a href="http://www.aspergillusgenome.org/cgi-bin/GO/goTermMapper">GO Slim Mapper</a>
+</li>
+<li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28">
+<a href="http://www.aspergillusgenome.org/cgi-bin/GO/goTermFinder">GO Term Finder</a>
+</li>
+<li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29">
+<a href="http://www.geneontology.org/">GO Consortium</a>
+</li>
+<li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30">
+<a href="http://www.aspergillusgenome.org/download/go/">GO File Downloads</a>
+</li>
+</ul>
+<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31">
+<a href="http://www.aspergillusgenome.org/ToolContents.shtml">Tools</a>
+<ul class="sub-menu">
+<li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32">
+<a href="http://www.aspergillusgenome.org/cgi-bin/batchDownload">Batch Download</a>
+</li>
+<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33">
+<a href="http://www.aspergillusgenome.org/cache/PhenotypeTree.html">Phenotypes</a>
+</li>
+<li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34">
+<a href="http://aspgd.broadinstitute.org/">Sybil</a>
+</li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35">
+<a href="http://www.aspergillusgenome.org/cgi-bin/extractReadsForRegion.pl">Retrieve Reads</a>
+</li>
+<li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36">
+<a href="http://www.aspergillusgenome.org/cache/A_nidulans_FGSC_A4_genomeSnapshot.html"><i>A. nidulans</i> Genome Snapshot</a>
+</li>
+<li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37">
+<a href="http://www.aspergillusgenome.org/cache/A_fumigatus_Af293_genomeSnapshot.html"><i>A. fumigatus</i> Genome Snapshot</a>
+</li>
+<li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38">
+<a href="http://www.aspergillusgenome.org/cache/A_niger_CBS_513_88_genomeSnapshot.html"><i>A. niger</i> Genome Snapshot</a>
+</li>
+<li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39">
+<a href="http://www.aspergillusgenome.org/cache/A_oryzae_RIB40_genomeSnapshot.html"><i>A. oryzae</i> Genome Snapshot</a>
+</li>
+</ul>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40">
+<a href="http://www.aspergillusgenome.org/LiteratureContents.shtml">Literature</a>
+<ul class="sub-menu">
+<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41">
+<a href="http://www.aspergillusgenome.org/TopicBiblios.shtml">Highlighted Topics</a>
+</li>
+<li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42">
+<a href="http://www.aspergillusgenome.org/Strains.shtml">Laboratory Strains and Lineage</a>
+</li>
+</ul>
+<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43">
+<a href="http://www.aspergillusgenome.org/DownloadContents.shtml">Download</a>
+<ul class="sub-menu">
+<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44">
+<a href="http://www.aspergillusgenome.org/cgi-bin/batchDownload">Batch Download</a>
+</li>
+<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45">
+<a href="http://www.aspergillusgenome.org/download/go/">GO Annotations</a>
+</li>
+<li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46">
+<a href="http://www.aspergillusgenome.org/download/chromosomal_feature_files/">Chromosomal Features</a>
+</li>
+<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47">
+<a href="http://www.aspergillusgenome.org/download/sequence/">Sequence</a>
+</li>
+<li id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48">
+<a href="http://www.aspergillusgenome.org/Download_Datasets.shtml">Datasets</a>
+</li>
+<li id="menu-item-49" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49">
+<a href="http://www.aspergillusgenome.org/download/">Browse Downloads</a>
+</li>
+</ul>
+<li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50">
+<a href="http://www.aspergillusgenome.org/ComContents.shtml">Community</a>
+<ul class="sub-menu">
+<li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51">
+<a href="http://www.aspergillusgenome.org/cgi-bin/colleague/colleagueInfoSearch">Search AspGD colleagues</a>
+</li>
+<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52">
+<a href="http://www.aspergillusgenome.org/cache/Labs.html">Find <i>Aspergillus</i> labs</a>
+</li>
+<li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-53">
+<a href="http://www.aspergillusgenome.org/cgi-bin/colleague/colleagueSearch">Colleague Update</a>
+</li>
+<li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54">
+<a href="http://www.aspergillusgenome.org/CommunityNews.shtml">Community News</a>
+</li>
+<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55">
+<a href="http://www.aspergillusgenome.org/JobPostings.shtml">Job Opportunities</a>
+</li>
+<li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56">
+<a href="http://www.aspergillusgenome.org/Meetings.shtml">Meetings & Courses</a>
+</li>
+<li id="menu-item-57" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57">
+<a href="http://www.aspergillusgenome.org/Nomenclature.shtml">Nomenclature Guide</a>
+</li>
+<li id="menu-item-58" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58">
+<a href="http://www.aspergillusgenome.org/ExternalResources.shtml">External Resources</a>
+</li>
+<li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59">
+<a href="http://www.aspergillusgenome.org/Images.shtml">Images and Movies</a>
+</li>
+<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60">
+<a href="http://www.aspergillusgenome.org/Methods.shtml">Methods and Protocols</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div><br>
+
+    </TD>
+  </TR>
+  <TR valign="bottom">
+    <TD   bgcolor="#cccccc">
+      <table>
+	<tr>
+	  <td>
+	    <img id=imgseq src="http://www.aspergillusgenome.org//images/Afumigatus3.jpg" border=0, align=left,
+		 valign="middle">
+	    <script language="JavaScript">
+var ndx = 0;
+
+function displayImg( )
+{
+    var images = new Array( );
+
+    images[ 1 ] = "/images/A_niger_hyphae.jpg";
+    images[ 2 ] = "/images/Afumigatus1.jpg";
+    images[ 3 ] = "/images/Afumigatus2.jpg";
+    images[ 4 ] = "/images/Afumigatus3.jpg";
+    images[ 5 ] = "/images/Anidulans_cleist.jpg ";
+    images[ 6 ] = "/images/Aterreus.jpg";
+
+    ndx = ndx + 1;
+    if ( ndx < 1 || ndx >= images.length ) {
+        ndx = 1;
+    }
+    document.getElementById( "imgseq" ).src = images[ ndx ];
+    setTimeout( displayImg, 5000 );
+}
+setTimeout( displayImg, 5000 );
+	    </script>
+	  </td>
+	</tr>
+	<tr>
+	  <TD width="400" valign="top" bgcolor="#cccccc">
+<!--Nested table for left hand content page information-->
+
+<table border="0" cellpadding="0" cellspacing="2" width="100%">
+  <tr>
+    <td >
+      <h2>About AspGD</h2>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="font-size: 14px;">
+<p>
+AspGD is an organized collection of genetic and molecular biological
+information about the filamentous fungi of the genus
+<i>Aspergillus</i>. Among its many species, the genus contains an excellent
+model organism (<i>A. nidulans</i>, or its teleomorph <i>Emericella nidulans</i>),
+an important pathogen of the immunocompromised (<i>A. fumigatus</i>), an
+agriculturally important toxin producer (<i>A. flavus</i>), and two species
+used in industrial processes (<i>A. niger</i> and <i>A. oryzae</i>). AspGD contains
+information about genes and proteins of multiple <i>Aspergillus</i> species;
+descriptions and classifications of their biological roles, molecular
+functions, and subcellular localizations; gene, protein, and
+chromosome sequence information; tools for analysis and comparison of
+sequences; and links to literature information; as well as a
+multispecies comparative genomics browser tool (Sybil) for exploration
+of orthology and synteny across multiple sequenced <i>Aspergillus</i>
+species. 
+</p>
+
+    </TD>
+  </TR>
+<tr><td>
+<h2>Upcoming Meetings & Courses</h2>
+        </td></tr>
+<tr>
+  <td style="font-size: 14px;">
+    <table>
+      <tr>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="font-size: 14px;">
+    <ul>
+
+<li>
+	<a href="http://www.genetics-gsa.org/fungal/2015/pages/workshops.shtml">12th International Aspergillus Meeting (Asperfest 12)</a><br>
+	<font size=-1>Asilomar Conference Grounds, Pacific Grove, California, USA<br>
+	March 16-17, 2015; Registration Deadline: December 10, 2014</font><br><br>
+</li>
+
+
+ <li>
+<a href="http://www.genetics-gsa.org/fungal/2015/index.shtml">28th Fungal Genetics Conference</a><br>
+        <font size=-1>Asilomar Conference Grounds, Pacific Grove, California, USA<br>
+        March 17-22, 2015; Registration Deadline: December 10, 2014</font><br><br>
+	</li>
+
+ <li>
+<a href="http://www.mbl.edu/education/special-topics-courses/molecular-mycology-current-approaches-to-fungal-pathogenesis/">Molecular Mycology: Current Approaches to Fungal Pathogenesis</a><br>
+        <font size=-1>Woods Hole, Massachusetts, USA<br>
+        June 14-30, 2015; Application Deadline: February 9, 2015</font><br><br>
+	</li> 
+
+<li>
+<a href="http://groups.tecnico.ulisboa.pt/bsrg/pyff6/index.php">PYFF6 - 6th Conference on Physiology of Yeast and Filamentous Fungi</a><br>
+	<font size=-1>Lisbon, Portugal<br>
+	July 11-14, 2016 </font><br><br>
+	</li>
+
+</ul>
+</td>
+</tr>
+</table>
+</td></tr>
+
+</table>
+
+
+	  </TD>
+	</tr>
+      </table>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <TD >
+
+<!--Nested table for news information-->
+
+<table border="0" cellpadding="4" cellspacing="0" width="100%"> <TR> <Td> <h1>New and Noteworthy</h1> </Td> </TR> <TR> <TD> <HR
+height="1px" width="100%"> </TD> </TR>
+
+
+<!-- downtime message, commented out.  Modify and un-comment as necessary-->
+
+
+<!--
+
+<tr> <th align="left"> <h2 style="color:red;">Server maintenance tomorrow night</h2> </th> </tr> <tr> <td>
+<blockquote>
+
+The server hosting CGD and AspGD will need to go offline for maintenance around 7 PM (Pacific time) tomorrow, October 21. The downtime should last about an hour. We apologize for the inconvenience.
+
+(Posted October 20, 2015) </blockquote> </td> </tr>
+
+-->
+
+
+
+<!-- first item here @@ here's an example-->
+
+<!--
+
+
+<tr> <th align="left"> <hr> <h2> Title of item</font> </th> </th> </tr>
+
+
+<tr> <td> <blockquote>
+
+text of item here
+
+(Posted DATE, 2012) </blockquote> </td> </tr>
+
+-->
+
+
+
+<tr> <th align="left"> <hr> <h2> <i>Aspergillus</i> annotation updates</font> </th> </th> </tr>
+
+
+<tr> <td> <blockquote>
+The reference gene sets in AspGD have been updated, based on <a href="http://www.aspgd.org/cgi-bin/reference/reference.pl?dbid=ASPL0000367584"> PASA analysis</a> conducted by AspGD in 2015. The following changes were made:
+<ul>
+<li>
+<i>A. nidulans</i> - 5 new features were added, and 4 former pseudogenes were reannotated as uncharachterized ORFs;
+<li>
+<i>A. fumigatus</i> -  2,473 features were affected: 59 new features were added; the sequences for 242 features were extended and 154 shortened; 4 features were merged to create 2 new features; 1,757 5-prime UTRs and 1,333 3-prime UTRs were added or modified; terminal exons were added to 313 features; the intron/exon structure was modified for 389 features;
+<li>
+<i>A. niger</i> - two new features were added (An11g02363 and An17g02286);
+<li>
+<i>A. oryzae</i> - 7,279 features were affected: 287 new features were added; the sequences for 706 features were extended and 192 shortened; 192 features were merged to create 93 new feature; 5,141 5-prime UTRs and 5,213 3-prime UTRs were added or modified; terminal exons were added to 897 features; the intron/exon structure was modified for 500 features.
+</ul>
+
+Please, visit the <a href="http://www.aspergillusgenome.org/cgi-bin/chromosomeHistory.pl">Chromosome History</a> page to review the changes.
+(Posted September 15, 2015) </blockquote> </td> </tr>
+
+
+
+<!-- This is the beginning of the Curation News section.  This item should always be the second news item from the top of the
+page, and it needs to be repositioned in the list each time a new item is added. -->
+
+<tr> <th align="left"> <hr> <h2>AspGD Curation News</h2> </th> </tr> <tr> <td> <blockquote>
+
+<ul> <li><a href="/cache/A_nidulans_FGSC_A4_genomeSnapshot.html" target="Genome snapshot"><i>A.&nbsp;nidulans</i> Genome
+Snapshot</A></li> <li><a href="/cache/A_fumigatus_Af293_genomeSnapshot.html" target="Genome snapshot"><i>A.&nbsp;fumigatus</i>
+Genome Snapshot</A></li> <li><a href="/cache/A_niger_CBS_513_88_genomeSnapshot.html" target="Genome
+snapshot"><i>A.&nbsp;niger</i> Genome Snapshot</A></li> <li><a href="/cache/A_oryzae_RIB40_genomeSnapshot.html" target="Genome
+snapshot"><i>A.&nbsp;oryzae</i> Genome Snapshot</A></li>
+
+<li><a href="/cache/NewPapersThisWeek.html" target="New papers">New papers</a> added to AspGD this week.</li>
+
+<li>View <a href="/cache/genome-wide-analysis.html" target="Genome-wide Analysis Papers">Genome-wide Analysis papers</a> in
+AspGD.</li> </ul>
+
+</blockquote> </td> </tr>
+
+<!-- END of curation news section-->
+
+<tr> <th align="left"> <hr> <h2> AspGD and FungiDB integration</font> </th> </th> </tr>
+
+
+<tr> <td> 
+
+AspGD data are being integrated into FungiDB.  Please click <a href="http://fungidb.org/">here</a> for additional details.  
+Discussion of how to maximize the value of FungiDB for the <i>Aspergillus</i> research community will be a major topic at the upcoming
+AsperFest12 meeting at Asilomar (March 16-17, 2015). <br><br><br>
+
+<b>An open letter to the Aspergillus research community on genome database resources:</b> <p>
+
+As many of you may already be aware, the NIH R01 research grant that has supported development of the AspGD database will not be
+renewed … not because the NIH doesn't appreciate the value and importance of this resource to the <i>Aspergillus</i> research community,
+but because the current funding climate makes it difficult to support curation-intensive databases serving individual pathogens
+and relatively small research communities.  However,  NIH has provided one year of funding to ensure that information from AspGD
+is integrated into <a href="http://fungidb.org/">FungiDB</a>, a component of the <a href="http://eupathdb.org/">EuPathDB</a> Bioinformatics Resource Center.  We do not anticipate that AspGD will
+disappear: you should still be able to access the existing web site, at least for the foreseeable future, but curatorial
+engagement will have to be significantly reduced over the coming months.
+<p>
+The <a href="http://eupathdb.org/">EuPathDB</a> family of databases supports a wide range of microbial eukaryotes, including protozoan parasites and many fungal and
+oomycete species, including non-pathogens.  This resource has been specifically designed to provide sustainable, cost-effective
+automated analysis of multiple genomes, integrating curated information where available, along with comments and supporting
+evidence from the user community (PubMedIDs, phenotypic information, images, datasets, etc).  In addition to gene records,
+browser views, and data downloads, <a href="http://fungidb.org/">FungiDB</a> also provides a variety of sophisticated tools for integrating and mining diverse
+Omics datasets, which we expect that <i>Aspergillus</i> researchers and other fungal biologists will find quite useful.  See sidebar on
+the <a href="http://fungidb.org/">FungiDB</a> web site for access to tutorials, videos, and exercises; more fungi-specific materials should become available over
+the coming months.
+<p>
+AspGD and FungiDB/EuPathDB will be working together to maximize value to the <i>Aspergillus</i> community, given the limited resources
+available.  The upcoming AsperFest12 and 28th Fungal Genetics meetings in Asilomar (March 16-22, 2015) will be attended by staff
+from both groups, with presentations and a ‘help-desk’ to introduce the <i>Aspergillus</i> community to <a href="http://fungidb.org/">FungiDB</a>.  We look forward to
+productive discussions on how to ensure that <i>Aspergillus</i> researchers retain access to information from AspGD, learn to use
+<a href="http://fungidb.org/">FungiDB</a> effectively and have a voice in its further development, and craft a strategy for meeting future informatics needs.
+<p>
+
+Jessica Kissinger (Univ Georgia) - Joint-PI, EuPathDB <br>
+Michelle Momany (Univ Georgia) - Community Liaison, AspGD & FungiDB <br>
+David Roos (Univ Pennsylvania) - Joint-PI, EuPathDB; Co-PI, FungiDB <br>
+Gavin Sherlock (Stanford Univ) - Principal Investigator, AspGD<br>
+Jason Stajich (UC Riverside) - Principal Investigator, FungiDB <br>
+Jennifer Wortman (Broad Inst) - Co-PI, AspGD
+
+<p>
+(Posted February, 2015) </td> </tr>
+
+
+
+
+
+<tr> <th align="left"> <hr> <h2> Sequence trace files available</font> </th> </th> </tr>
+
+
+<tr> <td> <blockquote>
+
+We have added archival <i>Aspergillus</i> sequence data from the <a
+href="http://www.ncbi.nlm.nih.gov/Traces/trace.cgi?view=list_arrivals">NCBI TraceDB</a> site, and these data are now available
+from our <a href="/download/sequence/NCBI/TraceDB/">AspGD download site</a>.
+
+(Posted November 8, 2013) </blockquote> </td> </tr>
+
+
+<tr> <th align="left"> <hr> <h2> New "Big 4" ortholog alignment </font> </th> </th> </tr>
+
+
+<tr> <td> <blockquote>
+
+We have added a new, streamlined, four-species protein alignment to the ortholog cluster pages in our Sybil Comparative Genomics
+Viewer.  This "Big 4" alignment displays a Clustal protein alignment of the orthologs from  <i>A. nidulans</i> FGSC A4, <i>A.
+oryzae</i> RIB40, <i>A. fumigatus</i> Af293 and <i>A. niger</i> CBS513.88 (see <a
+href="http://aspgd.broadinstitute.org/jaccard_ortholog_clusters/AN1052#__utma=1.923052602.1332185009.1375727747.
+1376066521.399&__utmb=1.3.10.1376066521&__utmc=1&__utmx=-&__utmz=1.1376066521.399.231.utmcsr=aspgd.org|utmccn=(
+referral)|utmcmd=referral|utmcct=/&__utmv=-&__utmk=1915569">example</a>).  As we continue to add new species into our Sybil
+Comparative Genomics Viewer, the number of proteins represented in each multispecies ortholog cluster has grown significantly. We
+continue to provide an alignment of all of the orthologs from the full set of species, and now include the "Big 4" alignment in
+addition.  We hope this feature is helpful, and we welcome <a href="/cgi-bin/suggestion">your feedback</a> any time.
+
+(Posted August 13, 2013) </blockquote> </td> </tr>
+
+<tr> <th align="left"> <hr> <h2> <i>A. niger</i> annotation updates</font> </th> </th> </tr>
+
+
+<tr> <td> <blockquote>
+
+The <i>A. niger</i> reference gene set has been updated, based on <a
+href="/cgi-bin/reference/reference.pl?dbid=ASPL0000367584">PASA analysis</a>. 4,123 features were affected: 543 CDSs were
+extended and 195 shortened; 30 features were merged into 15 features; 2,907 5-prime UTRs and 2,601 3-prime UTRs were added or
+modified; New exons were added to the ends of 270 features, and the internal intron/exon structure was modified for 491 features.
+The GBrowse Genome Browser displays the old annotation as a "Historic Track" to facilitate visual comparison, for example, of <a
+href="http://www.aspergillusgenome.org/cgi-bin/gbrowse2/gbrowse/anig_cbs513_88/?start=759704;stop=764203;ref=
+An16_A_niger_CBS_513_88;width=800;version=100;flip=0;grid=1;id=161d0f8da5578cdc878e2f489577fc2c;l=All%1EJuly13%
+1ETranslation%1EDNA">new UTRs</a> or gene model structure updates, for example, <a
+href="http://www.aspergillusgenome.org/cgi-bin/gbrowse2/gbrowse/anig_cbs513_88/?start=1538479;stop=1548478;ref=
+An16_A_niger_CBS_513_88;width=800;version=100;flip=0;grid=1;id=161d0f8da5578cdc878e2f489577fc2c;l=All%1EJuly13%
+1ETranslation%1EDNA">a gene merge</a>.  The current and historic reference annotation can be viewed alongside RNA-Seq transcript
+data in AspGD <a
+href="http://aspgd.broadinstitute.org/jbrowse/?data=data%2Fa.niger_cbs51388&loc=An16_A_niger_CBS_513_88%3A1532401..
+1556480&tracks=DNA%2Ccurrent%2Chistorical%2Catcc1015_strandless_SRA039822.bam%2Cn402_strand_specific_Delmas_2012.bam&
+highlight=">JBrowse</a> (zoom in to see spliced reads across intronic regions, including the intron within what was previously
+annotated as an intergenic region).
+
+(Posted August 13, 2013) </blockquote> </td> </tr>
+
+
+<tr> <th align="left"> <hr> <h2> Introducing JBrowse for AspGD</font> </th> </th> </tr>
+
+
+<tr> <td> <blockquote>
+
+JBrowse is now available for exploring large-scale data in AspGD, including RNA-Seq data for <A
+HREF="http://aspgd.broadinstitute.org/jbrowse/?loc=ChrVIII_A_nidulans_FGSC_A4%3A1666900..1669568&tracks=DNA%
+2CTranscript12%2Ccomplete_medium.bam.coverage%2Ccomplete_medium.bam&highlight="><I>A. nidulans</I> FGSC A4</A>, RNA-Seq and
+genomic variation data for <A
+HREF="http://aspgd.broadinstitute.org/jbrowse/?data=data%2Fa.fumigatus_af293&loc=I%3A3289044..3291826&tracks=DNA%
+2Ccurrent%2Cgenomic_reads_strain_AF1163_PE.bam.SNP&highlight="><I>A. fumigatus</I> Af293</A>, and RNA-Seq data for <A
+HREF="http://aspgd.broadinstitute.org/jbrowse/?data=data%2Fa.niger_cbs51388&loc=An08_A_niger_CBS_513_88%3A1225456..
+1228194&tracks=DNA%2Ccurrent%2Cn402_strand_specific_Delmas_2012.bam.coverage%2Cn402_strand_specific_Delmas_2012.bam&
+highlight="><i>A. niger</i> CBS 513.88</A> and <A
+HREF="http://aspgd.broadinstitute.org/jbrowse/?data=data%2Fa.oryzae_rib40&loc=Chr2_A_oryzae_RIB40%3A577684..580472&
+tracks=DNA%2Ccurrent%2Ciwashita.bam.no_dup.bam.coverage%2Ciwashita.bam.no_dup.bam&highlight="><i>A. oryzae</i> RIB40</A>.  To see
+the large-scale data in the region of any gene, select the JBrowse link on the Locus Summary page, for example, in the "RNA-Seq
+Data" section of the <a href="/cgi-bin/locus.pl?locus=vea&organism=A_nidulans_FGSC_A4"><I>A. nidulans</I> veA</a> page.  The <a
+href="http://jbrowse.org/">JBrowse</a> software has been developed as part of the <a
+href="http://www.gmod.org/wiki/Main_Page">GMOD</a> project.<BR><BR> The links to the GenomeView browser are no longer displayed
+on the Locus Summary pages due to incompatibilities of the browser software software with some web browsers and versions of Java.
+Genome View may still be accessed from the <a href="/SearchContents.shtml#GenomeView">Search Options</a> page. (Posted June 19,
+2013) </blockquote> </td> </tr>
+
+
+
+
+<tr> <th align="left"> <hr> <h2> RNA-Seq data used to improve reference annotation for <i>A. fumigatus</i> </font> </th> </th>
+</tr>
+
+
+<tr> <td> <blockquote>
+
+We have made significant updates to the structural annotation of the <i>Aspergillus fumigatus</i> Af293 reference genome based on
+<a href="/cgi-bin/reference/reference.pl?dbid=ASPL0000367584">PASA analysis</a> using RNA-Seq data (from <a
+href="/cgi-bin/reference/reference.pl?pubmed=23031507">M&#252;ller et al. [2012]</a>) to provide experimental support for gene
+model modifications.  The coordinates of 5,174 features were updated: 1,044 CDSs were extended and 641 shortened; 28 features
+were merged into 14 features; 4,524 5-prime UTRs and 3,545 3-prime UTRs were added or modified; New exons were added to the ends
+of 1,255 features, and the internal intron/exon structure was modified for 1,133 features.<br><br>
+
+In addition, we have updated the structural annotation of the <i>Aspergillus fumigatus</i> A1163 (CEA10) strain, which is not the
+reference strain, but for which we provide sequence files, protein domain files, and mulispecies BLAST capabilities.  The <a
+href="/cgi-bin/reference/reference.pl?dbid=ASPL0000367584">PASA analysis</a> of  <i>A. fumigatus</i> A1163 utilized RNA-Seq data
+provided by JCVI (SRA project SRP003796).
+
+(Posted April 2, 2013) </blockquote> </td> </tr>
+
+
+
+<!-- Do Not Remove --> <tr> <th align="left"> <hr> <h2>Archived News</h2> </th> </tr> <tr> <td> <blockquote> Click <a
+href="http://www.aspergillusgenome.org//news_archive.shtml">here</a> to view archived news items. </blockquote> <br> </td> </tr>
+
+</table>
+
+
+
+    </td>
+  </tr>
+
+  <table class="main"><tr><td><div id="copyright"><b>AspGD Copyright &copy; 2008-2020 The Board of Trustees, Leland Stanford Junior University.</b><br>Permission to use the information contained in this database was given by the researchers/institutes who contributed or published the information. Users of the database are solely responsible for compliance with any copyright restrictions, including those applying to the author abstracts. Documents from this server are provided "AS-IS" without any warranty, expressed or implied.<br><font color = "red" style="font-size:11px;">  To cite AspGD</font>, please use the  following <a href="http://nar.oxfordjournals.org/cgi/pmidlookup?view=long&pmid=24194595"><b><font style="font-size:11px">reference</font></b></a>: Cerqueira GC, Arnaud MB, Inglis DO, Skrzypek MS, Binkley G, Simison M, Miyasato SR, Binkley J, Orvis J, Shah P, Wymore F, Sherlock G, Wortman JR (2014). The Aspergillus Genome Database: multispecies curation and incorporation of RNA-Seq data to improve structural gene annotations. <i><font style="font-size:11px;">Nucleic Acids Res</font></i> <b>42</b> (1); D705-10; see <a href="/HowToCite.shtml" style="font-size:11px;">How to cite AspGD.</a></div></td></tr></table>
+
+</TABLE>
+</P>
+
+</BODY>
+</HTML>
+

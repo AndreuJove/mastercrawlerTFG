@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Experimental Brain Computer Interface Software for the ModularEEG</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<h1>Experimental Brain Computer Interface Software for the ModularEEG</h1>
+<h2>The ABI software</h2>
+<h3>&copy;2005 Pedro Ortega &lt;peortega@dcc.uchile.cl&gt;, Jim Peters &lt;http://uazu.net&gt;</h3>
+<p align="center">[<a href="/%7Epeortega">Up to my Homepage</a>]</p>
+<ul><li><a href="#a1">What does the software do?</a></li>
+  <li><a href="#a2">How good is the classification achieved by this software?</a></li>
+  <li><a href="#a3">How to use it: instructions</a>.</li>
+  <li><a href="#a8">Electrode positions</a>.</li>
+  <li><a href="#a7">Fast testing.</a></li>
+  <li><a href="#a4">Considerations</a></li>
+  <li><a href="#a5">Help!</a></li>
+  <li><a href="#a6">How does it work?</a></li>
+</ul>
+<p>ABI is a simple software for the ModularEEG (<a href="http://openeeg.sourceforge.net">http://openeeg.sourceforge.net</a>)
+  that implements an experimental Brain Computer Interface (BCI). Nowadays, BCI
+  research is an highly active field, but the existing technology is still inmature
+  for its use outside of a lab's settings. The ABI software tries to provide
+  a simple tool for hobbyists to do experiments on its own with BCI technology.</p>
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr align="center" valign="middle">
+    <td><strong>Screenshot</strong></td>
+    <td><strong>Download</strong></td>
+  </tr>
+  <tr align="center" valign="middle">
+    <td width="300"><a href="images/sc01.png"><img src="images/thumb-sc01.png" width="300" height="225" border="0"></a></td>
+    <td width="200"><p>[<a 
+href="download/abi-0.91.zip">abi-0.91.zip</a>]</p>
+    </td>
+  </tr>
+</table>
+<h2><a name="a1"></a>What does the software do?</h2>
+<p>The ABI is a BCI based on trials. A trial is a time interval where the user
+  generates brainwaves to perform an action. The BCI tries to process this signal
+and to associate it to a given class. The association is done by feeding a neural
+  net with the preprocessed EEG data. The neural net's output is then further
+  processed and this final output corresponds to the given class. The neural
+  net should
+  be trained in order to learn the association.</p>
+<p>The classifier's idea is heavily based on Christin Sch&auml;fer's design (winner
+  of the BCI Competition II, Motor Imaginery Trials).</p>
+<p>The ABI software allows you to</p>
+<ul>
+  <li>Do simple Biofeedback. You can display raw EEG channels, narrow band frequency
+    amplitudes and classes.</li>
+  <li>Simulate trials.</li>
+  <li>Record trials for a number of choice of different classes.</li>
+  <li>Train the interface.</li>
+</ul>
+<h2><a name="a2"></a>How good is the classification achieved by this software?</h2>
+<p>The method has been previously applied to the data provided by the <a href="http://ida.first.fhg.de/projects/bci/competition/">BCI
+  Competition II</a> data (dataset III, Graz University, Motor Imaginery) and
+  compared against the results obtained by the contributors. The method has <strong>outperformed </strong>the
+  results achieved by them, obtaining a higher Mutual Information (which was
+  the criterion used in the competition) of 0.67 bits (the winner of the competition
+  obtained 0.61 bits).</p>
+<p>Of course, it is very important that more people test the software and report
+  its results to improve the  method. Statistical stability can only be guaranteed
+  if more people try it out.</p>
+<h2><a name="a3"></a>How to use it: instructions</h2>
+<p>By executing ABI, it reads a configuration file called &quot;abi.txt&quot; (which you
+  can edit with a simple text editor), where the way the BCI should act is specified.
+  ABI tries to load the trial file defined
+  in the configuration file. The trial file is a text database containing trials
+  for different classes. Then, the main screen is displayed:</p>
+<p align="center"><img src="images/sc02.png" width="354" height="245"></p>
+<ul>
+  <li>a) The EEG channels. The ModularEEG should be turned on. You can choose
+    the amount of channels by setting the variable <strong>NChannels</strong> to desired value.</li>
+  <li>b) The extracted features. Each color strip indicates the intensity of
+    a given frequency band. The variable <strong>NFeatures</strong>    indicates
+    the number of features you want to use. 
+    <strong>Channels</strong> indicates the source channels for the feature extraction.
+    <strong>Frequencies</strong> tells ABI what frequencies should be used (in
+    Hertz). Example:
+    <strong>NFeatures = 4</strong>, <strong>Channels = 0 0 1 </strong>1, <strong>Frequencies
+    = 10 20 10 20</strong>, tells ABI to
+    use 2 EEG channels, and to extract frequencies 10 Hz and 20 Hz from channel
+    0 and channel 1.</li>
+  <li>c) Class bar. The variable<strong> NClasses</strong> tells ABI how many
+    classes it should be able to discriminate. Each class has an associated bar,
+    and its size (and color) shows how good the given class has been recognized
+    by the system.</li>
+</ul>
+<p>ABI has three operating modes:<strong> SIMULATION</strong>,<strong> RECORDING</strong> and <strong>TRAINING</strong>.
+  You can switch between operating modes by pressing <strong>F1</strong>, <strong>F2</strong> or <strong>F3</strong> respectively
+  (the software doesn't change its mode instantly, because a trial shouldn't
+  be interrupted in the middle).</p>
+<p>The operation is quite simple. The user records
+    several trials for the different classes (<strong>RECORDING</strong> mode).
+    Each class is associated to a different mental task. After recording a reasonable
+    amount
+  of trials (more than 50 trials for each class),
+  the
+  user
+  can
+  train the system to learn a way to discriminate between the different classes
+    (<strong>TRAINING</strong> mode). This
+    process can be repeated in order to improve the quality of the recognition.
+    The system can be tested under the <strong>SIMULATION</strong> mode.</p>
+<p>An explanation of the different modes follows.</p>
+<h3>SIMULATION and RECORDING</h3>
+<p>These two modes perform single trials. The<strong> SIMULATION</strong> mode
+  is used to test the BCI.<strong> RECORDING </strong>is the same as SIMULATION,
+  with the difference that the EEG
+  data is recorded and used as training examples. A trial has the following structure:</p>
+<table border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr bgcolor="#CCCCCC">
+    <td><strong>Substate</strong></td>
+    <td><strong>Duration</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>Screenshot</strong></td>
+  </tr>
+  <tr>
+    <td>Preparation</td>
+    <td><strong>TPreparation</strong> seconds</td>
+    <td>The BCI doesn't display anything but the EEG data and the features. The
+      user can relax during this time (eye blinking, etc.).</td>
+    <td><a href="images/sc04.png"><img src="images/thumb-sc04.png" width="200" height="150" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>Prerecording</td>
+    <td><strong>TPrerecording</strong> seconds</td>
+    <td>The BCI displays the target class by indicating a white target line.
+      The user should start to perform the mental task associated to the target
+      class, but the data isn't recorded yet.</td>
+    <td><a href="images/sc05.png"><img src="images/thumb-sc05.png" width="200" height="150" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>Recording</td>
+    <td><strong>TrialLength</strong> seconds</td>
+    <td>The BCI displays the bars indicating which classes are recognized in
+      each time instant. The EEG data is recorded (except in <strong>SIMULATION</strong> mode).</td>
+    <td><a href="images/sc06.png"><img src="images/thumb-sc06.png" width="200" height="150" border="0"></a></td>
+  </tr>
+</table>
+<p>As you can see, a trial is composed of three subintervals, whose duration
+  is defined by the variables <strong>TPreparation</strong>, <strong>TPrerecording</strong> and <strong>TrialLength</strong>, in
+  the configuration file.</p>
+<h3>TRAINING</h3>
+<table border="0" cellspacing="0" cellpadding="5">
+  <tr valign="top">
+    <td><a href="images/sc03.png"><img src="images/thumb-sc03.png" width="200" height="150" border="0"></a></td>
+    <td><p>Pressing the <strong>F3</strong> key, the system starts to train the
+        neural net with the available data. The training set used for this purpose
+        is the set of the last <strong>TrialBuffer</strong> recorded trials'
+        features. Example: Suppose you have recorded 300 trials, and <strong>TrialBuffer
+        = 100</strong>. Then the system extracts the features of the 100 last
+        recorded trials to form the training set.</p>
+      <p>Training time depends upon the complexity of the training data and the
+        amount of recorded data. The training data is not always separable. If
+        the mental task for class 1 is too similar to the mental task for class
+        2, then the neural net won't be able to do the separation: this isn't
+    magic :-) .</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h3>The Trial Archive</h3>
+<p>When exiting ABI, the EEG data recorded so far is saved into the file given
+  by the parameter <strong>TrialArchive</strong>. You can open a trial archive
+  with a simple text editor and see how the trial data has been recorded. Only
+  raw EEG data and the class label is recorded: the features, which correspond
+  to the real training data, are computed on-the-fly.</p>
+<p>If you start ABI, it will load the trial archive specified in the configuration
+  file if it exists, or create a new one if not. If the trial archive doesn't
+  match the configuration file's specifications, then ABI aborts its execution.
+  So
+  you
+  have to be careful
+  to
+  use correct trial archives and configuration files.</p>
+<p>EEG recording between different executions of the ABI system is appended to
+  the trial archive. This allows you to build your training set in different
+  sessions. Be careful to use the same electrode settings. Some have reported
+  that the
+  recognition rate drops between different sessions.</p>
+<h3>The Configuration File</h3>
+<p>The configuration file tells ABI where to load the trial data from, how many
+  channels the system should use, which features it should use, etc. You can
+  open it with your favourite text editor and edit it. To start ABI with a different
+  configuration file other than the default &quot;abi.txt&quot;, invoce ABI with the following
+  syntax at the command prompt:</p>
+<p><strong>&gt; abi &lt;my_configuration_file&gt;</strong></p>
+<p>The configuration file basically contains a list of variables. The list of
+  variables is:</p>
+<table border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr bgcolor="#CCCCCC">
+    <td><strong>Variable Name</strong></td>
+    <td><strong>Description</strong></td>
+  </tr>
+  <tr>
+    <td><strong>Device</strong></td>
+    <td> This is the string that tells ABI how to initialize the ModularEEG.
+    You shouldn't change it</td>
+  </tr>
+  <tr>
+    <td><strong>NChannels</strong></td>
+    <td>The amount of channels to use.</td>
+  </tr>
+  <tr>
+    <td><strong>NFeatures</strong></td>
+    <td>The number of features the ABI should extract from the raw EEG data in
+    order to feed the neural net.</td>
+  </tr>
+  <tr>
+    <td><strong>NClasses</strong></td>
+    <td>The number of classes that the system should be able to discriminate.</td>
+  </tr>
+  <tr>
+    <td><strong>TrialArchive</strong></td>
+    <td>The name of the associated trial archive.</td>
+  </tr>
+  <tr>
+    <td><strong>Channels</strong></td>
+    <td>The index list of source channels for the feature extraction.</td>
+  </tr>
+  <tr>
+    <td><strong>Frequencies</strong></td>
+    <td>The list of frequencies to extract from the EEG data to use as features.</td>
+  </tr>
+  <tr>
+    <td><strong>HiddenUnits</strong></td>
+    <td>The number of hidden units of the neural net.</td>
+  </tr>
+  <tr>
+    <td><strong>TrialBuffer</strong></td>
+    <td>The size of the training set used to train the neural net.</td>
+  </tr>
+  <tr>
+    <td><strong>TrialLength</strong></td>
+    <td>The length in seconds for each trial.</td>
+  </tr>
+  <tr>
+    <td><strong>TPreparation</strong></td>
+    <td>The length in seconds for the preparation time.</td>
+  </tr>
+  <tr>
+    <td><strong>TPreRec</strong></td>
+    <td>The length in seconds for the prerecording time.</td>
+  </tr>
+</table>
+<p>A variable and its value should be in the same line.</p>
+<h2><a name="a8"></a>Electrode Positions</h2>
+<p>As a reference, this is the international 10-20 system:</p>
+<p align="center"><img src="images/thumb-sc08.png" width="508" height="247"></p>
+<h2><a name="a7" id="a7"></a>Fast Testing</h2>
+<p>If you want to check if the software is actually doing something, try the
+  following simple test. This isn't a real BCI test, it's just for testing purposes.</p>
+<p>Try to control the bars by simple teeth grinding. This is quite simple. Using
+  just one channel over the frontal area (Fp1 and Fp2 per example), you can train
+  ABI to discriminate between 2 different classes. Copy the following ABI configuration
+  and start the system.</p>
+<table border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td bgcolor="#CCCCCC"><strong>test.txt</strong></td>
+  </tr>
+  <tr>
+    <td><pre>Device = port COM1 57600; fmt P2; rate 256; chan 2;
+NChannels = 1
+NFeatures = 4
+NClasses  = 2
+TrialArchive = test.txt
+Channels    = 0 0 0 0 
+Frequencies = 8 14 20 30 
+HiddenUnits = 4
+TrialBuffer = 30
+TrialLength = 5
+TPreparation = 4
+TPreRec = 0.5</pre></td>
+  </tr>
+</table>
+<p>Now, enter the <strong>RECORDING</strong> mode by pressing <strong>[F2]</strong>.
+  Grind your teeth when the system asks you to perform the mental task associated
+  to class 1 (the left bar). Relax for class 2. After recording 10 trials for
+  each class, train the network by pressing <strong>[F3]</strong>. Wait until
+  the classification error drops to a reasonable amount (per example, 1.2 bits).
+  Then, enter the SIMULATION node by pressing <strong>[F1]</strong>. Repeat the
+  same as when you've been recording. The system should classify the trials correctly:
+  when you grind your teeth, the left bar should be higher than the right one,
+  and viceversa.</p>
+<p>&nbsp;</p>
+<h2><a name="a4"></a>Considerations</h2>
+<p>First of all, be patient! The system tries, by using a trainable classification
+  method, to adapt the BCI to the user, and in this way, to simplify the learning
+  process
+  required by the user. Nevertheless, as any other instrument, it requires a
+   considerable amount of time to use the BCI in order to get nice results.</p>
+<p>BCI technology is still in its infancy, so little is known about which mental
+  tasks are better than others for BCIs. Also, the electrode placing is important.
+  If your electrode setting isn't appropiate, then it can happen that they even
+  aren't recording the cortical areas related to the mental task!</p>
+<p>Research has discovered the following changes in electrical activity during
+  mental tasks (this list isn't complete, I hope that the OpenEEG community will
+  discover some more):</p>
+<ul>
+  <li><strong>Motor Imaginery:</strong> Imagination of physical movement produces
+    changes in the sensorymotor cortex. In example, imagination of left and right
+    middle finger
+    imagination produces changes, namely (de-)synchronization on electrode positions
+    around C3 and C4. Good features are around 10 and 20 Hz.</li>
+  <li><strong>Rotation of 3D objects:</strong> Literature stated that during
+    imagination of rotation of 3d objects involves frontal and temporal lobe
+    activity. They seem to sinchronize. Good features are around 10 Hz.</li>
+  <li><strong>Mental Letter Composition</strong>.</li>
+  <li>Others (please report!)</li>
+</ul>
+<p>Do not use too many features at the same time, 4-10 features are reasonable.
+  If you want to change the used features, restart the BCI with the appropiate
+  change in the configuration file.</p>
+<p>&nbsp;</p>
+<h2><a name="a5"></a>Help!</h2>
+<p>Please report your experiences with this system. If you handle to find good
+  mental tasks and its electrode positions, please report! Since this field is
+  new, every little discovery could help to improve the technology. <strong>You really
+  can make an important contribution to this field of research!</strong></p>
+<p>Good trial files are welcome. If you've recorded EEG data that could be successfully
+  classified, then it would help to further analize the contained patterns. Remember
+  to specify the mental tasks, features and electrode positions.</p>
+<p>&nbsp;</p>
+<h2><a name="a6"></a>How does it work?</h2>
+<p>The design of the classifier is heavily based on Christin Sch&auml;fer's design
+  used for the Dataset III of the <a href="http://ida.first.fhg.de/projects/bci/competition/">BCI
+  Competition II</a>. Instead of using a Gaussian multivariate Bayesian classifier,
+  here we use a neural net to obtain the  classification for each time instant
+  <em>t</em>. Those outputs are then integrated in time using a weighted sum.
+  The idea is
+  simple:  outputs with low confusion should have higher weights. </p>
+<p align="center"><img src="images/sc07.png" width="466" height="363"></p>
+<p>These are the different steps:</p>
+<ul>
+  <li>Aquire <strong>raw EEG</strong> data. Filter the EEG channel using a bandpass
+    filter between 4 and 25 Hz.</li>
+  <li>Use <strong>Morlet
+  Wavelets</strong> to extract local frequency information. Compute their absolute
+  value. These are the feature channels.</li>
+  <li> Feed a <strong>two layer feedforward
+          neural net</strong> with the frequency information and an additional
+          time channel (restarts at zero at the begin of every trial). The neural
+          net has two layers: the first weight layer uses the<strong> tanh</strong> activation
+          function, the second a normal <strong>logistic
+          activation. </strong> The net is trained using the <strong>cross-entropy
+    error</strong> as the optimization criterion. The output of the neural net
+    is the estimated <strong>instant classification</strong>.</li>
+  <li>The final classification is obtained after performing a <strong>weighted
+      time integration</strong> of
+    the instant outputs, where individual weights are higher
+    for
+    low entropy
+    outputs.</li>
+</ul>
+<p>&nbsp;</p>
+<p><em>Pedro Ortega &lt;peortega@dcc.uchile.cl&gt;</em></p>
+<p><em> Santiago de Chile, January 16,
+      2005.</em></p>
+<p>&nbsp;</p>
+</body>
+</html>

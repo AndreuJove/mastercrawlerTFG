@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="profile" href="//gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.aquaduct.pl/xmlrpc.php" />
+
+<title>AQUA-DUCT by Tunneling Group. &#8211; MD simulations aqua-duct solvent flow analysis</title>
+<link rel='dns-prefetch' href='//netdna.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="AQUA-DUCT by Tunneling Group. &raquo; Feed" href="http://www.aquaduct.pl/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AQUA-DUCT by Tunneling Group. &raquo; Comments Feed" href="http://www.aquaduct.pl/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.aquaduct.pl\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://www.aquaduct.pl/wp-includes/css/dist/block-library/style.min.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='cpsh-shortcodes-css'  href='http://www.aquaduct.pl/wp-content/plugins/column-shortcodes//assets/css/shortcodes.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='cssnews-css'  href='http://www.aquaduct.pl/wp-content/plugins/sp-news-and-widget/assets/css/stylenews.css?ver=4.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css?ver=4.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-css'  href='http://www.aquaduct.pl/wp-content/plugins/templatesnext-toolkit/css/owl.carousel.css?ver=2.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-transitions-css'  href='http://www.aquaduct.pl/wp-content/plugins/templatesnext-toolkit/css/owl.transitions.css?ver=1.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='colorbox-css'  href='http://www.aquaduct.pl/wp-content/plugins/templatesnext-toolkit/css/colorbox.css?ver=1.5.14' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css'  href='http://www.aquaduct.pl/wp-content/plugins/templatesnext-toolkit/css/animate.css?ver=3.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tx-style-css'  href='http://www.aquaduct.pl/wp-content/plugins/templatesnext-toolkit/css/tx-style.css?ver=1.01' type='text/css' media='all' />
+<link rel='stylesheet' id='shuttle-google-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='prettyPhoto-css'  href='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/extentions/prettyPhoto/css/prettyPhoto.css?ver=3.1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='shuttle-bootstrap-css'  href='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/extentions/bootstrap/css/bootstrap.min.css?ver=2.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://www.aquaduct.pl/wp-includes/css/dashicons.min.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='shuttle-shortcodes-css'  href='http://www.aquaduct.pl/wp-content/themes/shuttle/styles/style-shortcodes.css?ver=1.2.8' type='text/css' media='all' />
+<link rel='stylesheet' id='shuttle-style-css'  href='http://www.aquaduct.pl/wp-content/themes/shuttle/style.css?ver=1.2.8' type='text/css' media='all' />
+<link rel='stylesheet' id='shuttle-responsive-css'  href='http://www.aquaduct.pl/wp-content/themes/shuttle/styles/style-responsive.css?ver=1.2.8' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/plugins/sp-news-and-widget/assets/js/jquery.newstape.js?ver=4.2.1'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/plugins/sp-news-and-widget/assets/js/sp-news-public.js?ver=4.2.1'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/scripts/plugins/sticky/jquery.sticky.js?ver=true'></script>
+<link rel='https://api.w.org/' href='http://www.aquaduct.pl/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.aquaduct.pl/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.aquaduct.pl/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.1.4" />
+<style type="text/css" media="screen">.menu-item.hide_this_item{ display:none !important; }</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	
+<style type="text/css">
+#slider .rslides, #slider .rslides li { height: 350px; max-height: 350px; }
+#slider .rslides img { height: 100%; max-height: 350px; }
+</style>
+<link rel="icon" href="http://www.aquaduct.pl/wp-content/uploads/2018/11/cropped-F5-32x32.png" sizes="32x32" />
+<link rel="icon" href="http://www.aquaduct.pl/wp-content/uploads/2018/11/cropped-F5-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://www.aquaduct.pl/wp-content/uploads/2018/11/cropped-F5-180x180.png" />
+<meta name="msapplication-TileImage" content="http://www.aquaduct.pl/wp-content/uploads/2018/11/cropped-F5-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			
+#intro {
+	text-align: center;
+	text-transform: uppercase;
+	border: none;
+	background: #ffff;
+	
+	padding: 39px 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #1d1d1f;
+}
+
+#intro .page-title {
+	
+	display: block;
+	color: #0F0F0F;
+	font-size: 50px;
+	width: auto;
+	margin: 0px;
+}
+
+#intro {
+	background-image: url("http://www.aquaduct.pl/wp-content/uploads/2019/07/topacio-1-e1562878010249.jpg");
+opacity: 1;
+}
+#intro  div #intro-core span{
+	background-color: rgba(255, 255, 255,.05) ;
+opacity: 1;
+color: #fff
+}
+
+
+#intro .page-title > span {
+	display: inline-block;
+	background: #ffff;
+	padding: 8px 28px;
+}
+/* Breadcrumbs */
+#intro #breadcrumbs {
+	color: #1d1d1f;
+	font-size: 12px;
+	display: block;
+	vertical-align: middle;
+	width: auto;
+	margin-top: 2px;
+}
+#intro #breadcrumbs .delimiter {
+	padding: 0px 2px;
+}
+#intro #breadcrumbs a {
+	color: #13aff0;
+}
+
+#intro #blockquote{
+	background: #FFFFFF;
+	color: #0F0F0F;
+}
+
+
+#blockquote, q {
+	position: relative;
+	display: block;
+	color: #FFF;
+	background: #032230;
+	padding: 25px 25px 25px 70px;
+	margin-bottom: 20px !important;
+}
+#header-search a {
+	background: #032230;}
+
+#slider .rslides-content.style3 .featured-link a,
+.shuttleslider-sc .rslides-content.style3 .featured-link a {
+	font-size: 14px;
+	font-weight: 600;
+	padding: 10px 40px;
+	background: #032230 !important;
+	border: none;
+}
+#section-home a {
+    color: #ffffff;
+    background-color: #004466;
+}
+
+#container p a {
+    color: #ffffff;
+    background-color: #004466;
+	
+	
+}
+#sub-footer a{
+	color: #004466;}
+
+#main-core nav div span{
+	color: #fff;
+	border: #004466;
+	background-color: #004466;
+	 }
+
+#main-core nav div a:hover{
+	color: #fff;
+	border: #004466;
+	background-color: #004466;
+	 }
+#main-core nav div a{
+	color: #004466;
+	border: #004466;
+	background-color: #ffff;
+	 }
+#container div h2{
+	font-size: 25px;
+	 }
+#container header {
+	text-align: center;
+}
+
+
+#main h5 div h3{
+  font-size: 20px;
+text-align: center;
+font-weight: bold;
+}
+#main h5 div.tx-category {
+  font-size: 0px;
+text-align: center;
+color:#fff;
+}
+
+#main h5 div.tx-blog {
+  font-size: 13px;
+	text-align: justify;
+}
+
+#main p.more-link, #main p.more-link a{
+  font-size: 15px;
+	text-align: center;
+	color: #004466;
+	border: #004466;
+	text-align: center;
+	font-weight: bold;
+}
+
+#main-core blockquote, #main-core a {
+	color: #004466;
+    background-image:
+    linear-gradient(
+       white,white
+    );
+	font-weight: bold;
+}
+
+div #content #content-core #main #main-core #post-132 a {
+	color: #fff !important;
+	background: #004466 !important;
+}
+div #content #content-core #main #main-core #post-132 a:hover {
+	color: #004466 !important;
+	background: #fff !important;
+}
+
+.blog-article .blog-icon {
+	position: absolute;
+	top: 0;
+	left: 10px !important;
+}
+
+tx-border-box {
+width: 120px; !important;}
+
+tx-blog tx-post-row tx-masonry masonry{
+width: 1120px;}
+		</style>
+		</head>
+
+<body class="home blog custom-background wp-custom-logo layout-sidebar-none layout-fixed slider-full header-style1 header-sticky scrollup-on blog-style2">
+<div id="body-core" class="hfeed site">
+
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<!-- .skip-link -->
+
+	<header>
+	<div id="site-header">
+
+			
+		<div id="pre-header">
+		<div class="wrap-safari">
+		<div id="pre-header-core" class="main-navigation">
+  
+			
+			
+		</div>
+		</div>
+		</div>
+		<!-- #pre-header -->
+
+				<div id="header">
+		<div id="header-core">
+
+			<div id="logo">
+			<a href="http://www.aquaduct.pl/" class="custom-logo-link" rel="home" itemprop="url"><img width="300" height="93" src="http://www.aquaduct.pl/wp-content/uploads/2016/06/cropped-cropped-AQUADUCTrgb-300.png" class="custom-logo" alt="AQUA-DUCT by Tunneling Group." itemprop="logo" /></a>			</div>
+
+			<div id="header-links" class="main-navigation">
+			<div id="header-links-inner" class="header-links">
+
+				<ul id="menu-m1" class="menu"><li id="menu-item-994" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="http://www.aquaduct.pl"><span>Home</span></a></li>
+<li id="menu-item-1031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.aquaduct.pl/how-it-works/"><span>About</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-996" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/how-it-works/">How it works</a></li>
+	<li id="menu-item-1258" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/new-features/">New features</a></li>
+	<li id="menu-item-986" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/how-to-cite/">How to cite</a></li>
+	<li id="menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/about/citations/">Citations</a></li>
+</ul>
+</li>
+<li id="menu-item-1107" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/news2/"><span>News</span></a></li>
+<li id="menu-item-1195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.aquaduct.pl/tutorials/"><span>Tutorials</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-983" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/user-guide/">User Guide</a></li>
+	<li id="menu-item-993" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/clustering/">Clustering</a></li>
+	<li id="menu-item-995" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/trimming-paths/">Trimming paths</a></li>
+</ul>
+</li>
+<li id="menu-item-988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.aquaduct.pl/installation/"><span>Installation</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/installation/">Install</a></li>
+	<li id="menu-item-987" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/documentation/">Documentation</a></li>
+</ul>
+</li>
+<li id="menu-item-1338" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/summer-school/"><span>SUMMER SCHOOL</span></a></li>
+<li id="menu-item-985" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/contact/"><span>Contact</span></a></li>
+</ul>				
+							</div>
+			</div>
+			<!-- #header-links .main-navigation -->
+
+			<div id="header-nav"><a class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+		</div>
+		</div>
+		<!-- #header -->
+
+		<div id="header-responsive"><div id="header-responsive-inner" class="responsive-links nav-collapse collapse"><ul id="menu-m1-1" class=""><li id="res-menu-item-994" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="http://www.aquaduct.pl"><span>Home</span></a></li>
+<li id="res-menu-item-1031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.aquaduct.pl/how-it-works/"><span>About</span></a>
+<ul class="sub-menu">
+	<li id="res-menu-item-996" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/how-it-works/">&#45; How it works</a></li>
+	<li id="res-menu-item-1258" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/new-features/">&#45; New features</a></li>
+	<li id="res-menu-item-986" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/how-to-cite/">&#45; How to cite</a></li>
+	<li id="res-menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/about/citations/">&#45; Citations</a></li>
+</ul>
+</li>
+<li id="res-menu-item-1107" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/news2/"><span>News</span></a></li>
+<li id="res-menu-item-1195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.aquaduct.pl/tutorials/"><span>Tutorials</span></a>
+<ul class="sub-menu">
+	<li id="res-menu-item-983" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/user-guide/">&#45; User Guide</a></li>
+	<li id="res-menu-item-993" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/clustering/">&#45; Clustering</a></li>
+	<li id="res-menu-item-995" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/trimming-paths/">&#45; Trimming paths</a></li>
+</ul>
+</li>
+<li id="res-menu-item-988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.aquaduct.pl/installation/"><span>Installation</span></a>
+<ul class="sub-menu">
+	<li id="res-menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/installation/">&#45; Install</a></li>
+	<li id="res-menu-item-987" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/documentation/">&#45; Documentation</a></li>
+</ul>
+</li>
+<li id="res-menu-item-1338" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/summer-school/"><span>SUMMER SCHOOL</span></a></li>
+<li id="res-menu-item-985" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/contact/"><span>Contact</span></a></li>
+</ul></div></div>
+				<div id="header-sticky">
+		<div id="header-sticky-core">
+
+			<div id="logo-sticky">
+			<a href="http://www.aquaduct.pl/" class="custom-logo-link" rel="home" itemprop="url"><img width="300" height="93" src="http://www.aquaduct.pl/wp-content/uploads/2016/06/cropped-cropped-AQUADUCTrgb-300.png" class="custom-logo" alt="AQUA-DUCT by Tunneling Group." itemprop="logo" /></a>			</div>
+
+			<div id="header-sticky-links" class="main-navigation">
+			<div id="header-sticky-links-inner" class="header-links">
+
+				<ul id="menu-m1-2" class="menu"><li id="menu-item-994" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="http://www.aquaduct.pl"><span>Home</span></a></li>
+<li id="menu-item-1031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.aquaduct.pl/how-it-works/"><span>About</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-996" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/how-it-works/">How it works</a></li>
+	<li id="menu-item-1258" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/new-features/">New features</a></li>
+	<li id="menu-item-986" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/how-to-cite/">How to cite</a></li>
+	<li id="menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/about/citations/">Citations</a></li>
+</ul>
+</li>
+<li id="menu-item-1107" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/news2/"><span>News</span></a></li>
+<li id="menu-item-1195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.aquaduct.pl/tutorials/"><span>Tutorials</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-983" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/user-guide/">User Guide</a></li>
+	<li id="menu-item-993" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/clustering/">Clustering</a></li>
+	<li id="menu-item-995" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/trimming-paths/">Trimming paths</a></li>
+</ul>
+</li>
+<li id="menu-item-988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="http://www.aquaduct.pl/installation/"><span>Installation</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1033" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/installation/">Install</a></li>
+	<li id="menu-item-987" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/documentation/">Documentation</a></li>
+</ul>
+</li>
+<li id="menu-item-1338" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/summer-school/"><span>SUMMER SCHOOL</span></a></li>
+<li id="menu-item-985" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.aquaduct.pl/contact/"><span>Contact</span></a></li>
+</ul>				
+							</div>
+			</div><div class="clearboth"></div>
+			<!-- #header-sticky-links .main-navigation -->
+
+		</div>
+		</div>
+		<!-- #header-sticky -->
+	
+		<div id="slider"><div id="slider-core"><div class="rslides-container"><div class="rslides-inner"><ul class="slides"><li><img src="http://www.aquaduct.pl/wp-content/themes/shuttle/images/transparent.png" style="background: url(http://www.aquaduct.pl/wp-content/uploads/2019/07/topacio.jpg) no-repeat center; background-size: cover;" alt="SUMMER SCHOOL" /><div class="rslides-content"><div class="wrap-safari"><div class="rslides-content-inner"><div class="featured"><div class="featured-title"><span>SUMMER SCHOOL</span></div><div class="featured-excerpt"><p><span>SUMMER SCHOOL OF MOLECULAR DYNAMIC SIMULATIONS ANALYSIS WITH MOLECULAR PROBES</span></p></div><div class="featured-link"><a href="http://www.aquaduct.pl/summer-school/"><span>Read More</span></a></div></div></div></div></div></li><li><img src="http://www.aquaduct.pl/wp-content/themes/shuttle/images/transparent.png" style="background: url(http://www.aquaduct.pl/wp-content/uploads/2019/07/topacio.jpg) no-repeat center; background-size: cover;" alt="AQUA DUCT" /><div class="rslides-content"><div class="wrap-safari"><div class="rslides-content-inner"><div class="featured"><div class="featured-title"><span>AQUA DUCT</span></div><div class="featured-excerpt"><p><span>Versatile tool for analysis of MD simulations from intramolecular voids perspective.</span></p></div><div class="featured-link"><a href="http://www.aquaduct.pl/about/"><span>Read More</span></a></div></div></div></div></div></li><li><img src="http://www.aquaduct.pl/wp-content/themes/shuttle/images/transparent.png" style="background: url(http://www.aquaduct.pl/wp-content/uploads/2019/07/topacio-1-e1562878010249.jpg) no-repeat center; background-size: cover;" alt="NEW FEATURES" /><div class="rslides-content"><div class="wrap-safari"><div class="rslides-content-inner"><div class="featured"><div class="featured-title"><span>NEW FEATURES</span></div><div class="featured-excerpt"><p><span>New version released with improved functionality.</span></p></div><div class="featured-link"><a href="http://www.aquaduct.pl/new-features/"><span>Read More</span></a></div></div></div></div></div></li></ul></div></div></div></div>
+		
+		
+		
+	</div>
+
+
+	</header>
+	<!-- header -->
+
+		<div id="section-home"><div id="section-home-inner"><article class="section1 one_third"><div class="services-builder style1"><div class="iconimage"><a href="http://www.aquaduct.pl/how-it-works/"><img src="http://www.aquaduct.pl/wp-content/uploads/2019/07/new_AQ.png" alt="AQUA-DUCT" /></a></div><div class="iconmain"><h3>AQUA-DUCT</h3><p>.</p>
+<p class="iconurl"><a class="" href="http://www.aquaduct.pl/how-it-works/">Read More</a></p></div></div></article><article class="section2 one_third"><div class="services-builder style1"><div class="iconimage"><a href="http://www.aquaduct.pl/installation/"><img src="http://www.aquaduct.pl/wp-content/uploads/2019/07/newI.png" alt="TO INSTALL" /></a></div><div class="iconmain"><h3>TO INSTALL</h3><p>.</p>
+<p class="iconurl"><a class="" href="http://www.aquaduct.pl/installation/">Read More</a></p></div></div></article><article class="section3 one_third last"><div class="services-builder style1"><div class="iconimage"><a href="http://www.aquaduct.pl/tutorials/"><img src="http://www.aquaduct.pl/wp-content/uploads/2019/07/newT.png" alt="QUICK START" /></a></div><div class="iconmain"><h3>QUICK START</h3><p>.</p>
+<p class="iconurl"><a class="" href="http://www.aquaduct.pl/tutorials/">Read More</a></p></div></div></article><div class="clearboth"></div></div></div>
+	<div id="content">
+	<div id="content-core">
+
+		<div id="main">
+		<div id="main-core">
+			
+				<div id="container">
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1467" class="blog-article post-1467 post type-post status-publish format-standard hentry category-event format-nomedia">
+
+						<header class="entry-header">
+
+							
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/summer-school-postponed/" title="Permalink to SUMMER SCHOOL POSTPONE">SUMMER SCHOOL POSTPONE</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/summer-school-postponed/" title="SUMMER SCHOOL POSTPONE"><time datetime="2020-03-19T11:23:37+00:00">Mar 19, 2020</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/event/" rel="category tag">Event</a></span></div>							<p>The SUMMER SCHOOL OF MOLECULAR DYNAMIC SIMULATIONS ANALYSIS WITH MOLECULAR PROBES is postpone due to COVID-19 pandemic. We will keep you updated. We are planning to set new deadlines and schedules for the event. Preliminary, the REGISTRATION deadline is set on 1.07.2020 and the SUMMER SCHOOL will take place in October.</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1459" class="blog-article post-1459 post type-post status-publish format-standard has-post-thumbnail hentry category-news format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-against-covid-19/"><img width="570" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2020/03/1q2w_1_all-570x285.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-against-covid-19/" title="Permalink to AQUA-DUCT against COVID-19">AQUA-DUCT against COVID-19</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-against-covid-19/" title="AQUA-DUCT against COVID-19"><time datetime="2020-03-05T14:17:05+00:00">Mar 5, 2020</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/news/" rel="category tag">News</a></span></div>							<p>We have applied AQUA-DUCT to investigate and compare SARS and COVID-19 Mpro. Check on BioRxiv</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1452" class="blog-article post-1452 post type-post status-publish format-standard has-post-thumbnail hentry category-citation format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-applied-for-water-intake-study/"><img width="570" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2020/02/JPCB-570x285.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-applied-for-water-intake-study/" title="Permalink to AQUA-DUCT applied for water intake study">AQUA-DUCT applied for water intake study</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-applied-for-water-intake-study/" title="AQUA-DUCT applied for water intake study"><time datetime="2020-02-29T15:40:44+00:00">Feb 29, 2020</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/citation/" rel="category tag">Citation</a></span></div>							<p>Nice work has been just published in Journal of Physical Chemistry B. Thank you for using our software.</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1449" class="blog-article post-1449 post type-post status-publish format-standard has-post-thumbnail hentry category-citation format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-in-csbj-review/"><img width="570" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2020/02/water_application-570x285.jpg" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-in-csbj-review/" title="Permalink to AQUA-DUCT in CSBJ Review">AQUA-DUCT in CSBJ Review</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-in-csbj-review/" title="AQUA-DUCT in CSBJ Review"><time datetime="2020-02-12T15:27:16+00:00">Feb 12, 2020</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/citation/" rel="category tag">Citation</a></span></div>							<p>&#8220;Applications of water molecules for analysis of macromolecule properties&#8221; provides more examples how the water molecule can/should be considered in your study.</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1275" class="blog-article post-1275 post type-post status-publish format-standard has-post-thumbnail hentry category-news format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-publication-accepted-in-bioinformatics/"><img width="570" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2020/01/Bioinf2019-570x285.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-publication-accepted-in-bioinformatics/" title="Permalink to AQUA-DUCT 1.0 PUBLISHED IN &#8220;BIOINFORMATICS&#8221;">AQUA-DUCT 1.0 PUBLISHED IN &#8220;BIOINFORMATICS&#8221;</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-publication-accepted-in-bioinformatics/" title="AQUA-DUCT 1.0 PUBLISHED IN &#8220;BIOINFORMATICS&#8221;"><time datetime="2019-12-20T21:46:54+00:00">Dec 20, 2019</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/news/" rel="category tag">News</a></span></div>							<p>Publication describing new version of the AQUA-DUCT tool is available in “Bioinformatics”. AQUA-DUCT 1.0: structural and functional analysis of macromolecules from an intramolecular voids perspective Open access.</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1240" class="blog-article post-1240 post type-post status-publish format-standard has-post-thumbnail hentry category-new-version format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/new-version-released/"><img width="285" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2017/11/AQ_NEW_RELEASE_TXT.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" srcset="http://www.aquaduct.pl/wp-content/uploads/2017/11/AQ_NEW_RELEASE_TXT.png 600w, http://www.aquaduct.pl/wp-content/uploads/2017/11/AQ_NEW_RELEASE_TXT-150x150.png 150w, http://www.aquaduct.pl/wp-content/uploads/2017/11/AQ_NEW_RELEASE_TXT-300x300.png 300w, http://www.aquaduct.pl/wp-content/uploads/2017/11/AQ_NEW_RELEASE_TXT-220x220.png 220w" sizes="(max-width: 285px) 100vw, 285px" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/new-version-released/" title="Permalink to AQUA-DUCT – Release 1.0.0 is available">AQUA-DUCT – Release 1.0.0 is available</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/new-version-released/" title="AQUA-DUCT – Release 1.0.0 is available"><time datetime="2019-07-22T09:54:43+00:00">Jul 22, 2019</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/new-version/" rel="category tag">New version</a></span></div>							<p>New version of AQUA-DUCT is available (Release 1.0.0) The new version of AQUA-DUCT is combining information from small  ligands tracking and from small ligands local distribution. New modes of AQUA-DUCT MD data processing: normal, sandwich, time-window and consolidator mode. Pond module for hot-spots identification facilitating protein engineering and drug design, Energy barrier approximation. Graphical User<span class="post-excerpt-end">&hellip;</span></p>
+<p class="more-link"><a href="http://www.aquaduct.pl/new-version-released/" class="themebutton">Read More</a></p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1216" class="blog-article post-1216 post type-post status-publish format-standard has-post-thumbnail hentry category-event format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/lecture/"><img width="570" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2019/07/GERMANY2019-570x285.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/lecture/" title="Permalink to Lecture">Lecture</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/lecture/" title="Lecture"><time datetime="2019-07-20T19:56:12+00:00">Jul 20, 2019</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/event/" rel="category tag">Event</a></span></div>							<p>25th of July, AQUA-DUCT will be presented during lecture in Heidelberg Institute for Theoretical Studies. It will be first presentation of new version of AQUA-DUCT.</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1208" class="blog-article post-1208 post type-post status-publish format-standard has-post-thumbnail hentry category-citation format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/new-citation-7/"><img width="500" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2019/07/CGFORUM_SQ-500x285.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/new-citation-7/" title="Permalink to New Citation">New Citation</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/new-citation-7/" title="New Citation"><time datetime="2019-07-10T19:32:12+00:00">Jul 10, 2019</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/citation/" rel="category tag">Citation</a></span></div>							<p>AQUA-DUCT was cited in article on &#8220;Analysis of Long Molecular Dynamics Simulations Using Interactive Focus+Context Visualization&#8221; See more here. &nbsp;</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1213" class="blog-article post-1213 post type-post status-publish format-standard has-post-thumbnail hentry category-event format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-on-febs2019/"><img width="570" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2019/07/FEBS2019-570x285.jpg" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-on-febs2019/" title="Permalink to AQUA-DUCT on FEBS2019.">AQUA-DUCT on FEBS2019.</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-on-febs2019/" title="AQUA-DUCT on FEBS2019."><time datetime="2019-07-08T19:40:36+00:00">Jul 8, 2019</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/event/" rel="category tag">Event</a></span></div>							<p>The AQUA-DUCT software was used for loop functionality analysis.</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1204" class="blog-article post-1204 post type-post status-publish format-standard has-post-thumbnail hentry category-news format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-is-on-the-cover/"><img width="570" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2019/07/cover_biomolecules-570x285.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-is-on-the-cover/" title="Permalink to AQUA-DUCT is on the COVER">AQUA-DUCT is on the COVER</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-is-on-the-cover/" title="AQUA-DUCT is on the COVER"><time datetime="2019-06-01T17:34:50+00:00">Jun 1, 2019</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/news/" rel="category tag">News</a></span></div>							<p>The picture of the results of AQUA-DUCT analysis were selected for recent cover of Bioinformatic issues! SEE MORE COVER story: Cupin-type phosphoglucose isomerase (PfPGI) from the hyperthermophilic archaeon Pyrococcus furiosus catalyzes the reversible isomerization of glucose-6-phosphate to fructose-6-phosphate. Using a 3DM-based bioinformatics approach, a pair of amino acids in the periphery of the PfPGI structure was found to<span class="post-excerpt-end">&hellip;</span></p>
+<p class="more-link"><a href="http://www.aquaduct.pl/aqua-duct-is-on-the-cover/" class="themebutton">Read More</a></p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1199" class="blog-article post-1199 post type-post status-publish format-standard has-post-thumbnail hentry category-citation format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/new-citation-6/"><img width="570" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2019/05/F8_c_up-570x285.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/new-citation-6/" title="Permalink to New citation">New citation</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/new-citation-6/" title="New citation"><time datetime="2019-05-31T17:26:30+00:00">May 31, 2019</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/citation/" rel="category tag">Citation</a></span></div>							<p>The AQUA-DUCT was used to study Hyperthermophilic Pyrococcus furiosus Phosphoglucose Isomerase. Recent paper was published in  Biomolecules 2019, 9(6), 212. The cupin-type phosphoglucose isomerase (PfPGI) from the hyperthermophilic archaeon Pyrococcus furiosuscatalyzes the reversible isomerization of glucose-6-phosphate to fructose-6-phosphate. We investigated PfPGI using protein-engineering bioinformatics tools to select functionally-important residues based on correlated mutation analyses. A pair of amino acids in the periphery of<span class="post-excerpt-end">&hellip;</span></p>
+<p class="more-link"><a href="http://www.aquaduct.pl/new-citation-6/" class="themebutton">Read More</a></p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-1196" class="blog-article post-1196 post type-post status-publish format-standard has-post-thumbnail hentry category-citation format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/new-citation-5/"><img width="358" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2019/04/biotechnology_advances-358x285.jpg" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/new-citation-5/" title="Permalink to New citation">New citation</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/new-citation-5/" title="New citation"><time datetime="2019-04-23T17:18:49+00:00">Apr 23, 2019</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/citation/" rel="category tag">Citation</a></span></div>							<p>AQUA-DUCT was cited in recent review published in Biotechnology Advances: &#8220;Engineering enzyme access tunnels&#8221; Piia Kokkonen, David Bednar, Gaspar Pinto, Zbynek Prokop, and Jiri Damborsky. ARTICLE  &nbsp; &nbsp;</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-931" class="blog-article post-931 post type-post status-publish format-standard has-post-thumbnail hentry category-event format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-event-6/"><img width="518" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2018/07/Krakow_2019.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" srcset="http://www.aquaduct.pl/wp-content/uploads/2018/07/Krakow_2019.png 600w, http://www.aquaduct.pl/wp-content/uploads/2018/07/Krakow_2019-300x165.png 300w" sizes="(max-width: 518px) 100vw, 518px" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-event-6/" title="Permalink to AQUA-DUCT event">AQUA-DUCT event</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-event-6/" title="AQUA-DUCT event"><time datetime="2019-03-10T19:53:47+00:00">Mar 10, 2019</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/event/" rel="category tag">Event</a></span></div>							<p>AQUA-DUCT will be presented during School on molecular computational biochemistry  that will take on 11-14 March place in the Jerzy Haber Institute of Catalysis and Surface Chemistry in Kraków. </p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-927" class="blog-article post-927 post type-post status-publish format-standard has-post-thumbnail hentry category-citation category-news format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/new-citation-4/"><img width="285" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2018/11/F5.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" srcset="http://www.aquaduct.pl/wp-content/uploads/2018/11/F5.png 1500w, http://www.aquaduct.pl/wp-content/uploads/2018/11/F5-150x150.png 150w, http://www.aquaduct.pl/wp-content/uploads/2018/11/F5-300x300.png 300w, http://www.aquaduct.pl/wp-content/uploads/2018/11/F5-768x768.png 768w, http://www.aquaduct.pl/wp-content/uploads/2018/11/F5-1024x1024.png 1024w, http://www.aquaduct.pl/wp-content/uploads/2018/11/F5-220x220.png 220w" sizes="(max-width: 285px) 100vw, 285px" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/new-citation-4/" title="Permalink to New citation">New citation</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/new-citation-4/" title="New citation"><time datetime="2018-11-15T09:56:15+00:00">Nov 15, 2018</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/citation/" rel="category tag">Citation</a>, <a href="http://www.aquaduct.pl/category/news/" rel="category tag">News</a></span></div>							<p>The AQUA-DUCT was used to investigate internal architecture of Soluanum Tuberosum Epoxide Hydrolase. See more in Biomolecules 2018, 8(4) 143.</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-923" class="blog-article post-923 post type-post status-publish format-standard has-post-thumbnail hentry category-event format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-event-5/"><img width="510" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2018/07/FEBS_talk.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" srcset="http://www.aquaduct.pl/wp-content/uploads/2018/07/FEBS_talk.png 600w, http://www.aquaduct.pl/wp-content/uploads/2018/07/FEBS_talk-300x168.png 300w" sizes="(max-width: 510px) 100vw, 510px" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-event-5/" title="Permalink to AQUA-DUCT event">AQUA-DUCT event</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-event-5/" title="AQUA-DUCT event"><time datetime="2018-07-29T19:07:45+00:00">Jul 29, 2018</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/event/" rel="category tag">Event</a></span></div>							<p>AQUA-DUCT was presented on FEBS congress during speed-talk session Biochemistry and Signaling held on Monday, July 9, 2018. To facilitate analysis of the behaviour of water (and if necessary other solvent molecules or ligands) we have developed AQUA-DUCT. Here we would like to provide an example of its usage for analysis of water transportation in selected enzymes (epoxide hydrolases<span class="post-excerpt-end">&hellip;</span></p>
+<p class="more-link"><a href="http://www.aquaduct.pl/aqua-duct-event-5/" class="themebutton">Read More</a></p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-916" class="blog-article post-916 post type-post status-publish format-standard has-post-thumbnail hentry category-citation category-news format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/new-citation-3/"><img width="466" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2018/06/AQ_CIT_003.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" srcset="http://www.aquaduct.pl/wp-content/uploads/2018/06/AQ_CIT_003.png 709w, http://www.aquaduct.pl/wp-content/uploads/2018/06/AQ_CIT_003-300x184.png 300w" sizes="(max-width: 466px) 100vw, 466px" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/new-citation-3/" title="Permalink to New citation">New citation</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/new-citation-3/" title="New citation"><time datetime="2018-06-26T11:54:31+00:00">Jun 26, 2018</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/citation/" rel="category tag">Citation</a>, <a href="http://www.aquaduct.pl/category/news/" rel="category tag">News</a></span></div>							<p>The AQUA-DUCT was used to study ion permeability through claudin-2 dimer interface, the work of Flaviyan Jerome Irudayanathan and co-workers was published in J. Phys. Chem. B &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-857" class="blog-article post-857 post type-post status-publish format-standard has-post-thumbnail hentry category-event category-news format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-event/"><img width="352" height="209" src="http://www.aquaduct.pl/wp-content/uploads/2018/06/ECCB2018.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" srcset="http://www.aquaduct.pl/wp-content/uploads/2018/06/ECCB2018.png 352w, http://www.aquaduct.pl/wp-content/uploads/2018/06/ECCB2018-300x178.png 300w" sizes="(max-width: 352px) 100vw, 352px" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-event/" title="Permalink to AQUA-DUCT event">AQUA-DUCT event</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-event/" title="AQUA-DUCT event"><time datetime="2018-06-15T20:38:18+00:00">Jun 15, 2018</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/event/" rel="category tag">Event</a>, <a href="http://www.aquaduct.pl/category/news/" rel="category tag">News</a></span></div>							<p>AQUA-DUCT software will be presented in September during seventeenth edition of the European Conference on Computational Biology in Athens in Greece. It will be presented during ECCB 2018 Application Track part of he conference. The aim of the track is to give a voice to those who apply computational biology in industry, clinics, governmental organizations, and other fields beyond<span class="post-excerpt-end">&hellip;</span></p>
+<p class="more-link"><a href="http://www.aquaduct.pl/aqua-duct-event/" class="themebutton">Read More</a></p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-848" class="blog-article post-848 post type-post status-publish format-standard has-post-thumbnail hentry category-citation category-news format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/new-citation/"><img width="564" height="285" src="http://www.aquaduct.pl/wp-content/uploads/2018/06/AQ_CIT_002m.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" srcset="http://www.aquaduct.pl/wp-content/uploads/2018/06/AQ_CIT_002m.png 600w, http://www.aquaduct.pl/wp-content/uploads/2018/06/AQ_CIT_002m-300x152.png 300w" sizes="(max-width: 564px) 100vw, 564px" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/new-citation/" title="Permalink to New citation">New citation</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/new-citation/" title="New citation"><time datetime="2018-06-15T19:55:18+00:00">Jun 15, 2018</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/citation/" rel="category tag">Citation</a>, <a href="http://www.aquaduct.pl/category/news/" rel="category tag">News</a></span></div>							<p>The AQUA-DUCT software was used to analyse water access into D-amino acid oxidase (DAAO). The results were published recently in PLOS ONE journal. K. Subramanian, A. Góra, R. Spruijt, K. Mitusińska, M. Suarez-Diez, V. M. dos Santos, P. J. Schaap: Modulating D-amino acid oxidase (DAAO) substrate specificity through facilitated solvent access. PLoS ONE 13(6): e0198990. DOI:<span class="post-excerpt-end">&hellip;</span></p>
+<p class="more-link"><a href="http://www.aquaduct.pl/new-citation/" class="themebutton">Read More</a></p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-904" class="blog-article post-904 post type-post status-publish format-standard has-post-thumbnail hentry category-event category-news format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-event-4/"><img width="506" height="281" src="http://www.aquaduct.pl/wp-content/uploads/2018/05/FEBS2018.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" srcset="http://www.aquaduct.pl/wp-content/uploads/2018/05/FEBS2018.png 506w, http://www.aquaduct.pl/wp-content/uploads/2018/05/FEBS2018-300x167.png 300w" sizes="(max-width: 506px) 100vw, 506px" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-event-4/" title="Permalink to AQUA-DUCT event">AQUA-DUCT event</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-event-4/" title="AQUA-DUCT event"><time datetime="2018-05-15T08:01:54+00:00">May 15, 2018</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/event/" rel="category tag">Event</a>, <a href="http://www.aquaduct.pl/category/news/" rel="category tag">News</a></span></div>							<p>The AQUA-DUCT presentation was selected for speed talk and will be presented during 43rd FEBS congress held in Praha, Czech Republick, 2-7 July 2018.</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+					<div class="blog-grid element column-2">
+
+					<article id="post-863" class="blog-article post-863 post type-post status-publish format-standard has-post-thumbnail hentry category-event category-news format-media">
+
+						<header class="entry-header">
+
+							<div class="blog-thumb"><a href="http://www.aquaduct.pl/aqua-duct-event-2/"><img width="570" height="226" src="http://www.aquaduct.pl/wp-content/uploads/2018/05/RSCh2018.png" class="attachment-shuttle-column2-1/2 size-shuttle-column2-1/2 wp-post-image" alt="" srcset="http://www.aquaduct.pl/wp-content/uploads/2018/05/RSCh2018.png 939w, http://www.aquaduct.pl/wp-content/uploads/2018/05/RSCh2018-300x119.png 300w, http://www.aquaduct.pl/wp-content/uploads/2018/05/RSCh2018-768x304.png 768w" sizes="(max-width: 570px) 100vw, 570px" /></a></div>
+						</header>
+
+						<div class="entry-content">
+
+							<h2 class="blog-title"><a href="http://www.aquaduct.pl/aqua-duct-event-2/" title="Permalink to AQUA-DUCT event">AQUA-DUCT event</a></h2>							<div class="entry-meta"><span class="date"><a href="http://www.aquaduct.pl/aqua-duct-event-2/" title="AQUA-DUCT event"><time datetime="2018-05-05T20:50:34+00:00">May 5, 2018</time></a></span><span class="author"><a href="http://www.aquaduct.pl/author/admin/" title="View all posts by admin" rel="author">admin</a></span><span class="category"><i class="fa fa-list"></i><a href="http://www.aquaduct.pl/category/event/" rel="category tag">Event</a>, <a href="http://www.aquaduct.pl/category/news/" rel="category tag">News</a></span></div>							<p>AQUA-DUCT software and its results will be presented during Artificial Water Channels Faraday Discussion organised by Royal Society of Chemistry. Event is organised in Glasgow UK 25-27.062018.</p>
+
+						</div><div class="clearboth"></div>
+
+					</article><!-- #post- -->
+
+					</div>
+
+				
+				</div><div class="clearboth"></div>
+
+				
+	<nav class="navigation pagination" role="navigation">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><span aria-current='page' class='page-numbers current'>1</span>
+<a class='page-numbers' href='http://www.aquaduct.pl/page/2/'>2</a>
+<a class="next page-numbers" href="http://www.aquaduct.pl/page/2/">Next</a></div>
+	</nav>
+			
+
+		</div><!-- #main-core -->
+		</div><!-- #main -->
+			</div>
+	</div><!-- #content -->
+
+	<footer>
+		<!-- #footer -->		
+		<div id="sub-footer">
+
+		
+		<div id="sub-footer-core">
+		
+			<div class="copyright">
+			Developed by <a href="https://shuttlethemes.com/" target="_blank">Shuttle Themes</a>. Powered by <a href="//www.wordpress.org/" target="_blank">WordPress</a>.			</div>
+			<!-- .copyright -->
+
+						<!-- #footer-menu -->
+
+									
+		</div>
+		</div>
+	</footer><!-- footer -->
+
+</div><!-- #body-core -->
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-47721474-8', 'auto');
+ga('send', 'pageview');
+
+</script><script type='text/javascript' src='http://www.aquaduct.pl/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/plugins/templatesnext-toolkit/js/owl.carousel.min.js?ver=1.3.2'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/plugins/templatesnext-toolkit/js/jquery.colorbox-min.js?ver=1.5.14'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/plugins/templatesnext-toolkit/js/jquery.inview.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/plugins/templatesnext-toolkit/js/tx-script.js?ver=2013-07-18'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/extentions/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.1.6'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/scripts/modernizr.js?ver=2.6.2'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/scripts/plugins/waypoints/waypoints.min.js?ver=2.0.3'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/scripts/plugins/waypoints/waypoints-sticky.min.js?ver=2.0.3'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/scripts/plugins/scrollup/jquery.scrollUp.min.js?ver=2.4.1'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/extentions/bootstrap/js/bootstrap.js?ver=2.3.2'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/scripts/main-frontend.js?ver=1.2.8'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/scripts/plugins/ResponsiveSlides/responsiveslides.min.js?ver=1.54'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-content/themes/shuttle/lib/scripts/plugins/ResponsiveSlides/responsiveslides-call.js?ver=1.2.8'></script>
+<script type='text/javascript' src='http://www.aquaduct.pl/wp-includes/js/wp-embed.min.js?ver=5.1.4'></script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+Date: Mon, 30 Mar 2020 18:45:15 GMT
+Server: Apache/2.4.41 (centos) OpenSSL/1.0.2k-fips PHP/7.3.10 mod_auth_tkt/2.3.99b1 mod_perl/2.0.10 Perl/v5.16.3
+Location: https://www.bcgsc.ca/resources/software/abyss
+Content-Type: text/html; charset=iso-8859-1
+X-Cache: MISS from proxy07.dmz.bcgsc.ca
+X-Cache-Lookup: MISS from proxy07.dmz.bcgsc.ca:80
+Via: 1.1 proxy07.dmz.bcgsc.ca (squid/3.5.20)

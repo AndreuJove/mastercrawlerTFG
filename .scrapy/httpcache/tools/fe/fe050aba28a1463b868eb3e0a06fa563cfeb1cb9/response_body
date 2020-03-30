@@ -1,0 +1,361 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>
+
+
+
+
+
+
+
+
+
+CISA
+ - CISA</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="DC.Title" content="
+
+
+
+
+
+
+
+
+
+CISA
+ - CISA" />
+
+
+	<link rel="start" title="CISA" href="/CISA/en/CISA" />
+	<link rel="home" title="CISA" href="/CISA/en/CISA" />
+
+
+
+	
+	<link rel="alternate" type="application/x-wiki" title="Click to edit CISA" href="/CISA/en/Special:Edit?topic=CISA"/>
+
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Wiki Recent Changes (en): Recent Changes" href="/CISA/en/Special:RecentChangesFeed" />
+	<link rel="alternate" type="application/rss+xml" title="Wiki Recent Changes (en): Recent Changes including minor changes" href="/CISA/en/Special:RecentChangesFeed?minorEdits=true" />
+	<link rel="alternate" type="application/rss+xml" title="Wiki Recent Changes (en): Recent Changes linking to changed version" href="/CISA/en/Special:RecentChangesFeed?linkToVersion=true" />
+	<link rel="alternate" type="application/rss+xml" title="Wiki Recent Changes (en): Recent Changes including minor changes and linking to changed version" href="/CISA/en/Special:RecentChangesFeed?minorEdits=true&amp;linkToVersion=true" />
+
+	<link href="/CISA/en/jamwiki.css?4" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="/CISA/js/jamwiki.js;jsessionid=5C24473572144AD150ECB11946059534?1461117348000"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25096735-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<link rel="shortcut icon" href="http://sb.nhri.org.tw/CISA/logo.ico" />
+</head>
+<body>
+
+
+<div id="wiki-page">
+<div id="wiki-navigation">
+	<div id="logo">
+	
+	<a class="logo" href="/CISA/en/CISA"><img border="0" src="/CISA/images/CISA_logo.gif;jsessionid=5C24473572144AD150ECB11946059534" alt="" /></a>
+	</div>
+	<br />
+	
+	<div id="nav-menu" class="portlet">
+	<ul>
+<li><a href="/CISA/en/CISA" title="CISA">HOME</a></li>
+</ul>
+<hr />
+<p><b>Guide</b></p>
+<ul>
+<li><a href="/CISA/en/Description" title="Description">Description</a></li>
+<li><a href="/CISA/en/Instruction" title="Instruction">Instruction</a></li>
+</ul>
+<hr />
+<p><b>Examples</b></p>
+<ul>
+<li><a href="/CISA/en/E._coli_36_bp" title="E. coli 36 bp">E. coli 36 bp</a></li>
+<li><a href="/CISA/en/E._coli_100_bp" title="E. coli 100 bp">E. coli 100 bp</a></li>
+<li><a href="/CISA/en/H._volc" title="H. volc">H. volcanii</a></li>
+<li><a href="/CISA/en/S._aureu_35_bp" title="S. aureu 35 bp">S. aureus 35 bp</a></li>
+<li><a href="/CISA/en/S._aureu_101_bp" title="S. aureu 101 bp">S. aureus 101 bp</a></li>
+<li><a href="/CISA/en/B._cereus" title="B. cereus">B. cereus</a></li>
+<li><a href="/CISA/en/R._sphaeroides" title="R. sphaeroides">R. sphaeroides</a></li>
+</ul>
+	</div>
+	
+	<div id="nav-search" class="portlet">
+	<form method="get" action="/CISA/en/Special:Search">
+	<input type="text" name="text" value="" />
+	<br />
+	<input type="submit" name="search" value='Search'/>
+	<input type="submit" name="jumpto" value='Go to'/>
+	</form>
+	</div>
+	
+	
+</div>
+<div id="wiki-content">
+	
+
+<div id="user-menu"><ul>
+
+	<li><a href="/CISA/en/Special:Login?returnto=CISA" title="Special:Login">
+
+
+
+
+
+
+
+
+
+Login
+</a></li>
+
+	<li><a href="/CISA/en/Special:Account" title="Special:Account">
+
+
+
+
+
+
+
+
+
+Register
+</a></li>
+
+</ul></div>
+<div class="clear"></div>
+
+	
+<ul id="tab_menu" class="tab-menu">
+
+	
+	
+	
+	<li class="active"><a href="/CISA/en/CISA" title="CISA">
+
+
+
+
+
+
+
+
+
+Article
+</a></li>
+
+	
+	
+	
+	<li><a href="/CISA/en/Special:Edit?topic=Comments:CISA" class="edit" title="Comments:CISA">
+
+
+
+
+
+
+
+
+
+Comments
+</a></li>
+
+	
+	
+	
+	<li><a href="/CISA/en/Special:Source?topic=CISA" title="Special:Source">
+
+
+
+
+
+
+
+
+
+View Source
+</a></li>
+
+	
+	
+	
+	<li><a href="/CISA/en/Special:History?topic=CISA" title="Special:History">
+
+
+
+
+
+
+
+
+
+History
+</a></li>
+
+	
+	
+	
+	<li><a href="/CISA/en/Special:LinkTo?topic=CISA" title="Special:LinkTo">
+
+
+
+
+
+
+
+
+
+Links
+</a></li>
+
+	
+	
+	<li><a href="/CISA/en/Special:Print?topic=CISA" title="Special:Print" target="_blank">
+
+
+
+
+
+
+
+
+
+Print
+</a></li>
+	
+
+</ul>
+
+	<div id="contents" >
+	<h1 id="contents-header">
+
+
+
+
+
+
+
+
+
+CISA
+</h1>
+	
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<div id="content-article">
+			
+			
+			
+			<h1><span id="Contig_Integrator_for_Sequence_Assembly">Contig Integrator for Sequence Assembly</span></h1>
+<p>Recently, technological advances have dramatically improved throughput and quality of next-generation sequencing (NGS), and, in parallel with these improvements, numerous algorithms have been proposed for <i>de novo</i> sequence assembly. Compared to the traditional Sanger sequencing technology, NGS technologies offer several distinct features, such as large volumes of reads and concise length. In order to tackle the sequence assembly problem from a collection of short-sequencing reads of randomly sampled fragments, two types of algorithm, the overlap-layout-consensus approach and the de Bruijn graph, are commonly utilized (Paszkiewicz and Studholme 2010; Aerts, Narzisi et al. 2011). Although assemblers are generally based on a small number of algorithms, they differ from each other in terms of dealing with errors, inconsistencies, and ambiguities. Moreover, no individual assembler guarantees the best assembly for diverse species. Therefore, the use of various parameter settings and assemblers in an iterative manner to produce an improved draft assembly is inevitable. Nevertheless, few efforts have been made to integrate various assemblies into a draft that is marked by superior contiguity and accuracy. To the best of our knowledge, five tools, including GAA (Yao, Ye et al. 2012), GAM (Casagrande, Del Fabbro et al. 2009), MAIA (Nijkamp, Winterbach et al. 2010), minimus2 (Sommer, Delcher et al. 2007) and Reconciliator (Zimin, Smith et al. 2008), have been published for merging assemblies. However, GAM and Reconciliator require the original reads and complicated prerequisites; we therefore compared our proposed method with GAA, MAIA and minimus2.</p>
+<p>The quality of genome assemblies is usually evaluated by means of their contiguity and the accuracy of contigs or scaffolds. Contiguity is a straightforward measurement achieved by calculating the N50 length or the number of contigs/scaffolds, without mandating reference genome information to be implemented in the algorithm. On the other hand, the accuracy of an assembly can be assessed based on alignment with a complete reference genome (Darling, Tritt et al. 2011). However, there is an inevitable trade-off between contiguity and accuracy in such scenarios. Specifically, an assembler attempting to maximize contiguity might do so at the expense of a less accurate assembly, and vice versa. Since an individual assembler has its own features in addressing the reconstruction of a DNA sequence, can we take advantage of all assemblies to generate an integrated set of contigs?</p>
+<p>In this study, state-of-the-art assemblers were used to generate different sets of contigs for bacterial genomes. We have developed and built a Contig Integrator for Sequence Assembly (CISA) to integrate the sets of contigs from different assemblers, and have evaluated the quality of our integrated assembly. Compared with the assemblies generated by each individual assembler and assembly integrator, the hybrid assembly integrated by CISA exhibits superior contiguity and accuracy.</p>
+<p><b>This work has been published in <a class="externallink" rel="nofollow" href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0060843" target="_blank">PLoS ONE</a> (March 28, 2013).</b></p>
+<p><font color="red"><b>News !!!</b></font></p>
+<p><font color="red"><b>[Apr 28, 2015]</b> Mypro (Virtual Machine) has been published in <a class="externallink" rel="nofollow" href="http://www.sciencedirect.com/science/article/pii/S0167701215001207" target="_blank">Journal of Microbiological Methods</a>.</font></p>
+<p><b>[Nov 25, 2014]</b> We have built a Virtual Box (MyPro) tailored for prokaryotic genome assembly and annotation. Please visit <a class="externallink" rel="nofollow" href="http://sourceforge.net/projects/sb2nhri/files/MyPro/" target="_blank">http://sourceforge.net/projects/sb2nhri/files/MyPro/</a> for details.</p>
+<p><b>[Aug 28, 2013]</b>  We have added frequently asked questions in <a href="/CISA/en/Instruction#Troubleshooting" title="Instruction">Instruction#Troubleshooting</a>.</p>
+<p><b>[Aug 01, 2013]</b>  We have used CISA to integrate two additional examples (<a href="/CISA/en/B._cereus" title="B. cereus">B. cereus</a> and <a href="/CISA/en/R._sphaeroides" title="R. sphaeroides">R. sphaeroides</a>) and evaluated by <a class="externallink" rel="nofollow" href="http://bioinf.spbau.ru/en/quast" target="_blank">QUAST</a>.</p>
+<h1><span id="A_schematic_overview_of_CISA">A schematic overview of CISA</span></h1>
+<div class="floatleft"><a class="wikiimg" href="/CISA/en/Image:Overview.jpg"><img class="wikiimg" src="/CISA/upload/en/2012/5/Overview-03190131.jpg" width="497" height="872" alt="Overview.jpg" /></a></div>
+<p><br />
+CISA basically consists of four major phases:</p>
+<ol>
+<li>(1) identification of the representative contigs and possible extensions</li>
+<li>(2) removal and splitting of the contigs that may be misassembled, and clipping of uncertain regions that are located at the extremities of the contigs</li>
+<li>(3) iterative merging of the contigs with a minimum 30% overlap and estimating the maximal size of repetitive regions</li>
+<li>(4) merging of the contigs based on the size of repetitive regions</li>
+</ol>
+<hr />
+<p>CISA performs these four phases and generates four folders accordingly. The detailed description about CISA output can be seen in <a href="/CISA/en/Description" title="Description">Description</a>.</p>
+<p>In addition, the detailed information about how to use CISA can be seen in <a href="/CISA/en/Instruction" title="Instruction">Instruction</a>.</p>
+<p>We have used three bacterial genome assemblies to test CISA, and compared the results with the assemblies generated by various assemblers or merged tools.</p>
+			</div>
+			<div class="clear"></div>
+			
+		
+	
+	
+
+
+
+
+
+	
+
+
+	
+
+
+
+	<br />
+	</div>
+</div>
+<div id="wiki-footer">
+	<div id="footer-custom"><p>All contents copyright of the author. &copy;2011.</p></div>
+	<div id="footer-logo"><a href="http://jamwiki.org/">JAMWiki</a> Version 1.1.1</div>
+</div>
+</div>
+
+
+
+</body>
+</html>
+

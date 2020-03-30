@@ -1,0 +1,520 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="The Atlas of Genetics and Cytogenetics in Oncology and Haematology gives reviews on genes involved in cancer, leukemias, solid tumors, and cancer-prone diseases. It also provides lectures in Genetics for students in medicine/sciences.">
+  <meta name="keywords" content="Atlas, Chromcancer, Database, Encyclopedia, International Journal, Review Articles, Update, Portal, ISCN 2009, Genes, Proteins, Genetics, Genomics, Oncogenes, Chromosomes, Cytogenetics, Translocations, Cell Biology, Cancer, Malignancies, Oncology, Haematology, Leukemia, Leukaemia, Tumor, Tumour, Pathology, Cancer-Prone Diseases, Cell Biology, Apoptosis, Medical Teaching, Genetics Course, Education Resources in Genetics, Educational items in Human Genetics, Enseignement de Genetique Humaine, Temas en Genetica Humana ">
+  <title>Atlas of Genetics and Cytogenetics in Oncology and Haematology</title>
+<!---  link rel="stylesheet" href="styles.css" type="text/css" /> <!-- 
+<!--- La feuille de style pour la boite e recherche (entre autres) -->
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12463892-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<!---  script  Universal Analytics  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-12463892-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<style type="text/css"> 
+<!-----comment body table tbody tr td center font b { color: #F00; } -->
+</style>
+</head>
+<body alink="#f00000" bgcolor="#eeeeff" link="#0000f0" text="#00004f" vlink="#6000b0">
+
+<table width="100%"><tbody>
+<tr><td align="center"><img src="./Images/AtlasTop.gif"><br>
+<h4>Atlas of Genetics and Cytogenetics in Oncology and Haematology<BR>
+<font size="-1"><font color="#D31818"> <B>Over 20 yrs old web site</B></font>, 
+brewed and matured in original brains since 1997</font></h4>
+<h4><a href="./BackpageAbout.html">Aim</a>  &nbsp;&nbsp;
+	<a href="./BackpageAbout.html#EDITORIAL">Editorial Board</a>&nbsp;&nbsp;
+	<a href="./BackpageAbout.html#AUTHORS">Authors</a>&nbsp;&nbsp;
+	<a href="./BackpageAbout.html#GRANTS">Grants</a> &nbsp;&nbsp;
+	<a href="./BackpageAbout.html#CITATION">Citation</a> &nbsp;&nbsp;
+	<a href="./BackpageAbout.html#COPYRIGHT">Copyright</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="./BackpageAuthors.html#CONTRIBUTION">How to contribute:&nbsp; 
+<b>Instructions to Authors</b></a></h4>
+<h3>Database also available as an <b>Open Access Journal at CNRS-INIST (since 1997 and indexed in Scopus since 2018) </b><BR></h3>
+
+</td></tr>
+</table>
+<hr>
+<p>
+</center>
+ <!-- search-box -->
+        <div id="searchbox" class="simplesearchbox">
+          <form action="/searchbox/results.php" method="post">
+            <label for="terms" class="h1title"><b>SEARCH FOR</b></label>
+            <input type="text" value="" name="terms" />
+            <dfn class="help" title="search for any of the separated terms"></dfn>
+            <input type="hidden" name="wanted_match_type[]" value="normal" />
+            <!--input type="hidden" name="wanted_match_type[]" value="extended" /-->
+            <input type="hidden" name="wanted_term_type[]" value="hugo" />
+            <input type="hidden" name="wanted_term_type[]" value="alias" />
+            <input type="hidden" name="wanted_term_type[]" value="dispname" />
+            <input type="hidden" name="wanted_categories[]" value="anomalies" />
+            <input type="hidden" name="wanted_categories[]" value="deeps" />
+            <!--input type="hidden" name="wanted_categories[]" value="educs" /-->
+            <input type="hidden" name="wanted_categories[]" value="genes" />
+            <input type="hidden" name="wanted_categories[]" value="kprones" />
+            <input type="hidden" name="wanted_categories[]" value="reports" />
+            <input type="hidden" name="wanted_categories[]" value="tumors" />
+            <input type="submit" value="Go" />
+            <input type="reset" value="Clear" />&nbsp;&nbsp;
+            <a href="/searchbox/search.php" title="Too many results! Let me precise what I want">Advanced search</a>
+	  </form>
+	</div>
+<!-- FIN search-box -->
+<!--/center>
+<p>
+<!-SiteSearch Qwant -->
+
+<form method="GET" action="https://www.qwant.com" id="form" onsubmit="addSiteSearch()">
+<div align="left">
+<table bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td>
+ <input type="text" name="q" id="query" size="31" maxlength="255" value="">
+ <input type="hidden" name="l" value="fr">
+ <input type="submit" name="btnG" value="Qwant Search in Atlas">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</form>
+ <script type="text/javascript">
+function encodeHTML(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
+function addSiteSearch() { document.getElementById('query').value = encodeHTML(document.getElementById('query'
+).value) + " site:atlasgeneticsoncology.org"; }
+</script>
+<!-- Fin de Qwant search -->
+
+
+<HR>
+<!# table pour les parties gauche et droite>
+<table width="100%">
+<tbody><tr><td>
+<!  Parie gauche>
+  <table><tbody><tr><td><font size="+1">
+   <li><b>ENTITIES: by THEME</b></li><b></b></font></td></tr>
+    <tr>
+      <td>
+        <ul>
+          <table>
+            <tbody>
+              <tr>
+                <td><a href="./Genes/Geneliste.html">CANCER GENES</a>&nbsp;&nbsp;</td>
+                <td><a href="./Indexbyalpha/idxa_A.html">A</a></td>
+                <td><a href="./Indexbyalpha/idxa_B.html">B</a></td>
+                <td><a href="./Indexbyalpha/idxa_C.html">C</a></td>
+                <td><a href="./Indexbyalpha/idxa_D.html">D</a></td>
+                <td><a href="./Indexbyalpha/idxa_E.html">E</a></td>
+                <td><a href="./Indexbyalpha/idxa_F.html">F</a></td>
+                <td><a href="./Indexbyalpha/idxa_G.html">G</a></td>
+                <td><a href="./Indexbyalpha/idxa_H.html">H</a></td>
+                <td><a href="./Indexbyalpha/idxa_I.html">I</a></td>
+                <td><a href="./Indexbyalpha/idxa_J.html">J</a></td>
+                <td><a href="./Indexbyalpha/idxa_K.html">K</a></td>
+                <td><a href="./Indexbyalpha/idxa_L.html">L</a></td>
+                <td><a href="./Indexbyalpha/idxa_M.html">M</a></td>
+                <td><a href="./Indexbyalpha/idxa_N.html">N</a></td>
+                <td><a href="./Indexbyalpha/idxa_O.html">O</a></td>
+                <td><a href="./Indexbyalpha/idxa_P.html">P</a></td>
+                <td><a href="./Indexbyalpha/idxa_Q.html">Q</a></td>
+                <td><a href="./Indexbyalpha/idxa_R.html">R</a></td>
+                <td><a href="./Indexbyalpha/idxa_S.html">S</a></td>
+                <td><a href="./Indexbyalpha/idxa_T.html">T</a></td>
+                <td><a href="./Indexbyalpha/idxa_U.html">U</a></td>
+                <td><a href="./Indexbyalpha/idxa_V.html">V</a></td>
+                <td><a href="./Indexbyalpha/idxa_W.html">W</a></td>
+                <td><a href="./Indexbyalpha/idxa_X.html">X</a></td>
+                <td><a href="./Indexbyalpha/idxa_Y.html">Y</a></td>
+                <td><a href="./Indexbyalpha/idxa_Z.html">Z</a></td>
+              </tr>
+              <tr></tr>
+            </tbody>
+          </table>
+          <a href="./Anomalies/Anomliste.html">LEUKAEMIAS (all) </a> 
+        &nbsp;&nbsp; <a href="./Anomalies/Myeloidliste.html">MYELOID</a>
+        &nbsp;&nbsp; <a href="./Anomalies/Lymphomaliste.html">LYMPHOMAS</a><br>
+          <a href="./Tumors/Tumorliste.html">SOLID TUMORS</a>
+	&nbsp;&nbsp; <a href=./Tumors/Pediatric_Tumorliste.html>PEDIATRIC TUMORS</a><br>
+          <a href="./Kprones/Kproneliste.html">CANCER PRONE DISEASES</a><br>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <tbody>
+    <tr>
+      <td><font size="+1"><li><b>ENTITIES: by CHROMOSOME</b></li></font></td></tr></tbody>
+      </table>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="./Indexbychrom/idxa_X.html">X</a></td>
+      <td><a href="./Indexbychrom/idxa_Y.html">Y</a></td>
+      <td><a href="./Indexbychrom/idxa_1.html">1</a></td>
+      <td><a href="./Indexbychrom/idxa_2.html">2</a></td>
+      <td><a href="./Indexbychrom/idxa_3.html">3</a></td>
+      <td><a href="./Indexbychrom/idxa_4.html">4</a></td>
+      <td><a href="./Indexbychrom/idxa_5.html">5</a></td>
+      <td><a href="./Indexbychrom/idxa_6.html">6</a></td>
+      <td><a href="./Indexbychrom/idxa_7.html">7</a></td>
+      <td><a href="./Indexbychrom/idxa_8.html">8</a></td>
+      <td><a href="./Indexbychrom/idxa_9.html">9</a></td>
+      <td><a href="./Indexbychrom/idxa_10.html">10</a></td>
+      <td><a href="./Indexbychrom/idxa_11.html">11</a></td>
+      <td><a href="./Indexbychrom/idxa_12.html">12</a></td>
+      <td><a href="./Indexbychrom/idxa_13.html">13</a></td>
+      <td><a href="./Indexbychrom/idxa_14.html">14</a></td>
+      <td><a href="./Indexbychrom/idxa_15.html">15</a></td>
+      <td><a href="./Indexbychrom/idxa_16.html">16</a></td>
+      <td><a href="./Indexbychrom/idxa_17.html">17</a></td>
+      <td><a href="./Indexbychrom/idxa_18.html">18</a></td>
+      <td><a href="./Indexbychrom/idxa_19.html">19</a></td>
+      <td><a href="./Indexbychrom/idxa_20.html">20</a></td>
+      <td><a href="./Indexbychrom/idxa_21.html">21</a></td>
+      <td><a href="./Indexbychrom/idxa_22.html">22</a></td>
+      <td><a href="./Indexbychrom/idxa_99.html">Not Assigned</a></td>
+    </tr>
+ 
+  </tbody>
+</table>
+<BR> 
+<!-----------------t  table bandes chromosomiques ---------------->
+<table>
+  <tbody>
+    <tr>
+      <td><font size="+1"><li><b>ENTITIES: by CHROMOSOMAL BANDS</b></li></font></td>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="./Bands/Xp22.html">X</a></td>
+      <td><a href="./Bands/Yp11.html">Y</a></td>
+      <td><a href="./Bands/1p36.html">1</a></td>
+      <td><a href="./Bands/2p25.html">2</a></td>
+      <td><a href="./Bands/3p26.html">3</a></td>
+      <td><a href="./Bands/4p16.html">4</a></td>
+      <td><a href="./Bands/5p15.html">5</a></td>
+      <td><a href="./Bands/6p25.html">6</a></td>
+      <td><a href="./Bands/7p22.html">7</a></td>
+      <td><a href="./Bands/8p23.html">8</a></td>
+      <td><a href="./Bands/9p24.html">9</a></td>
+      <td><a href="./Bands/10p15.html">10</a></td>
+      <td><a href="./Bands/11p15.html">11</a></td>
+      <td><a href="./Bands/12p13.html">12</a></td>
+      <td><a href="./Bands/13p13.html">13</a></td>
+      <td><a href="./Bands/14p13.html">14</a></td>
+      <td><a href="./Bands/15p13.html">15</a></td>
+      <td><a href="./Bands/16p13.html">16</a></td>
+      <td><a href="./Bands/17p13.html">17</a></td>
+      <td><a href="./Bands/18p11.html">18</a></td>
+      <td><a href="./Bands/19p13.html">19</a></td>
+      <td><a href="./Bands/20p13.html">20</a></td>
+      <td><a href="./Bands/21p13.html">21</a></td>
+      <td><a href="./Bands/22p13.html">22</a></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<!------------------ table des reviews --------------------------->
+<table>
+  <tbody>
+    <tr>
+      <td><font size="+1"><li><b>REVIEWS and CASE REPORTS</b></li></font></td>
+    </tr>
+    <tr><td><ul>
+          <a href="./Deep/deeplist.html#DEEP">DEEP INSIGHTS</a><br>
+          <a href="./Reports/Reportliste.html">CASE REPORTS</a> (see  <a href="./Forms/Case_Report_Form_for_submission.doc">Authors Instructions</a>)<br>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<BR>
+<table> <TR><TD><font size="+1"><li><b>CELL/MOLECULAR BIOLOGY and PATHOGENESIS</b></li></font></td></tr></table>
+<table> <TR><TD>
+<a href="./Categories/Angiogenesis.html">Angiogenesis</a><br>
+<a href="./Categories/Apoptosis.html">Apoptosis</a><br>
+<a href="./Categories/B-cell_activation.html">B-cell activation</a><br>
+<a href="./Categories/Cell_cycle.html">Cell cycle</a><br>
+<a href="./Categories/Cell_junction.html">Cell junction</a><br>
+<a href="./Categories/Cell_membrane.html">Cell membrane</a><br>
+<a href="./Categories/Channel.html">Channel</a><br>
+<a href="./Categories/Chromatin.html">Chromatin</a><br>
+<a href="./Categories/Cytoskeleton.html">Cytoskeleton</a><br>
+<a href="./Categories/DNA_repair.html">DNA repair</a><br>
+<a href="./Categories/DNA_replication-recombination.html">DNA replication-recombination</a><br>
+<a href="./Categories/Endocytosis.html">Endocytosis</a><br>
+<a href="./Categories/Epigenetics.html">Epigenetics</a><br>
+<a href="./Categories/Epithelial-mesenchymal.html">Epithelial-mesenchymal</a><br>
+<a href="./Categories/Extracellular.html">Extracellular</a><br>
+<a href="./Categories/Hedgehog.html">Hedgehog</a><br>
+<a href="./Categories/Hormone_system.html">Hormones - Growth factors signal</a><br>
+<a href="./Categories/Hippo.html">Hippo signaling</a><br>
+<a href="./Categories/Immunity.html">Immunity</a><br>
+<a href="./Categories/Inflammation.html">Inflammation</a><br>
+<a href="./Categories/JAK-STAT.html">JAK-STAT</a><br>
+</TD> <TD>
+<a href="./Categories/Kinase.html">Kinase</a><br>
+<a href="./Categories/Metabolic_pathways.html"> Metabolic pathways</a><br> 
+<a href="./Categories/Micro_RNA.html">Micro RNA</a><br>
+<a href="./Categories/Mitosis.html">Mitosis</a><br>
+<a href="./Categories/NF-kB.html">NF-kB</a><br>
+<a href="./Categories/Nuclear_membrane.html">Nuclear membrane</a><br>
+<a href="./Categories/Nucleole.html">Nucleole</a><br>
+<a href="./Categories/PI3K-AKT-mTOR.html">PI3K-AKT-mTOR</a><br>
+<a href="./Categories/Proteasome.html">Proteasome</a><br>
+<a href="./Categories/RAS-RAF-MAPK.html">RAS-RAF-MAPK</a><br>
+<a href="./Categories/Signal_membrane_receptor.html">Signal membrane receptor</a><br>
+<a href="./Categories/Signal_nuclear_receptor.html">Signal nuclear receptor</a><br>
+<a href="./Categories/Signal_secreted_factor.html">Signal secreted factor</a><br>
+<a href="./Categories/Signal_transduction_mediator.html">Signal transduction mediator</a><br>
+<a href="./Categories/Spliceosome.html">Spliceosome</a><br>
+<a href="./Categories/TGFb.html">TGFbeta</a><br>
+<a href="./Categories/Transcription.html">Transcription machinery</a><br>
+<a href="./Categories/Transcription_factor.html">Transcription factor</a><br>
+<a href="./Categories/Translation.html">Translation</a><br>
+<a href="./Categories/WNT.html">WNT</a><br>
+</TD></TR> </TABLE>
+<BR>
+
+<table><tbody><tr><td><font size="+1"><li><b>TABULATED FILES of ATLAS ITEMS</b></li></font></td></tr>
+<tr><td><ul><a href="./Collab/anom_bandall.txt">Translocations and other gene rearrangements</a><br>
+<a href="./Collab/genes_gc.txt">All Genes</a><br>
+<a href="./Collab/gene_bandall.txt">Genes by band</a><br>
+<a href="./Collab/catalog_full.txt">All Items</a><br>
+</ul></td></tr></tbody></table><BR>
+
+
+<table><tbody><tr><td><font size="+1"><li><b>MAIN LINKS</b></li></font></td></tr>
+<tr><td><ul><a href="./extdef.html">Atlas External Links</a><br>
+<a href="./journalslinks.html">Journals</a><br>
+<a href="http://cgap.nci.nih.gov/Chromosomes/Mitelman">Mitelman Database of Chromosome Aberrations and Gene Fusions in Cancer</a><br><a href="http://www.ncbi.nlm.nih.gov/pubmed/advanced">PubMed (advanced)</a>
+<a href="http://documents.irevues.inist.fr/handle/2042/15655">i</a>
+<a href="./Recent.html">r</a></ul></td></tr></tbody></table><BR>
+<table><tbody>
+<tr><td><font size="+1"><li><b>EDUCATIONAL ITEMS IN GENETICS</b></li></font></td></tr>
+<tr><td><ul><a href="./GeneticEng.html">English</a>&nbsp;&nbsp;<a href="./GeneticFr.html">French</a>&nbsp;&nbsp;<a href="./GeneticSp.html">Spanish</a>&nbsp;&nbsp;<a href="./GeneticGerm.html">&nbsp;</a>&nbsp;&nbsp;<a href="./GeneticIt.html">&nbsp;</a><br></ul></td></tr>
+</tbody></table>
+<HR>
+<font size="+1"><b>Donators</b></li></font>
+<center>
+<table><tbody>
+<tr>
+<td><a href="http://www.eaclf.org/"><img src="./Images/LogoACLF.png"></a><BR>
+Association des Cytog&eacute;n&eacute;ticiens de Langue Fran&ccedil;aise&nbsp;&nbsp;</td>
+<td><a href="http://www.beshg.be/"><img src="./Images/LogoBSHG.jpg"></a><BR>
+Belgian Society of Human Genetics&nbsp;&nbsp;</td> 
+<td><a href="http://www.vkgl.nl"> Dutch Association of Clinical Laboratory Geneticists</a> &nbsp;&nbsp;</td>
+</tr>
+<tr><td><a href="http://www.bvdh.de/"><img src="./Images/logoBVDH.gif"></a><BR>
+Berufsverband Deutscher Humangenetiker e.V.&nbsp;&nbsp;</td>
+<td><a href="http://gfhev.de/en/index.htm"><img src="./Images/logoGFH.gif"></a><BR>
+Deutsche Gesellschaft f&uuml;r Humangenetik e.V.&nbsp;&nbsp;</td>
+<td><a href="http://www.sigu.net"><img src="./Images/logoSIGU.jpg"></a><BR>
+Societ&agrave; Italiana di Genetica Umana &nbsp;&nbsp;</td></tr>
+<tr><td><a href="http://cytogenetique.qc.ca/wp"><img src="./Images/LogoACQ.jpg"></a><BR>
+Association de Cytog&eacute;n&eacute;tique du Qu&eacute;bec &nbsp;&nbsp;</td>
+<td><a href="http://www.sehh.es/"><img src="./Images/logoSEHH.jpg"></a><BR>
+Sociedad Espa&ntilde;ola de Hematolog&iacute;a y Hemoterapia &nbsp;&nbsp;
+</td>
+<td><a href="https://www.hgsa.org.au/asoc#"><img src="./Images/logoASDG.png"></a><BR>
+Australasian Society of Diagnostic Genomics &nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr><td><a href="https://www.ccmg-ccgm.org/"><img src="./Images/LogoCCMG.jpg"></a><BR>
+Canadian College of Medical Geneticists &nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</tr>
+</tbody></table>
+</center>
+<p></p>
+ 
+<BR>
+<center>
+<table><tbody>
+<tr>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</tbody></table>
+<p></p><p></p><p></p>
+</td>
+<! partie droite   --------->
+ 
+<td width=40%>
+<br><body alink="#f00000" bgcolor="#eeeeff" link="#0000f0" text="#00004f" vlink="#6000b0">
+<center>
+<center>
+<font color="#D31818"><font size="+1"> <B>New Atlas Sooooon!!!</B></font></font> <BR>
+<img src="./Images/NewAtlas.png">
+&nbsp;&nbsp;<BR>
+&nbsp;&nbsp;<BR>
+<font color="#D31818"><font size="+1"> <B>DONATE NOW !</B></font></font><br>
+</center> 
+
+<body alink="#f00000" bgcolor="#eeeeff" link="#0000f0" text="#00004f" vlink="#6000b0">
+<table border="1" cellspacing="0" cellpadding="0">
+<tr><td><strong><center>Objectives of the project</center></strong>
+<table>
+<tr><td>&nbsp;&nbsp;</td><td><LI>Medical treatment assistance in rare forms of cancer,<br></td></tr>
+<tr><td>&nbsp;&nbsp;</td><td><LI>Efficiency savings in the fight against cancer,<br></td></tr>
+<tr><td>&nbsp;&nbsp;</td><td><LI>Decrease in fundamental and applied research as well as medical costs,<br></td></tr>
+<tr><td>&nbsp;&nbsp;</td><td><LI>Personalised medicine for cancer, one of the axes of the cancer plans. </td></tr>
+</table>
+<tr><td><strong><center>Organization of the Atlas</center></strong>
+<table>
+<tr><td>&nbsp;&nbsp;</td><td><LI>The Atlas is a peer reviewed on-line journal / encyclopedia / database established in 1997.<br></td></tr>
+<tr><td>&nbsp;&nbsp;</td><td><LI>The Atlas is in open free access for readers, and there are no fees for the authors.<br></td></tr>
+<tr><td>&nbsp;&nbsp;</td><td><LI>The Atlas is a not-for-profit organization and each member is benevolent/volunteer.<br></td></tr>
+<tr><td>&nbsp;&nbsp;</td><td><LI>The Atlas relies on individual donations, grants (scientific societies, charities), working hours for staff of research, higher education and health care public institutions (see <a HREF=http://chromosomesincancer.org/en/activity.html> Activity reports </a>). </td></tr>
+</table>
+</td></tr></table>
+<BR><A HREF="http://chromosomesincancer.org/joomla25/en/">
+<font size="+1"><b>More about the not-for-profit association in charge of the Atlas </b></font></a><br>
+<table border="0"><tbody>
+<tr>
+<td> <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<p style="text-align: center;"><b>Donate (in Euros)</b><br>
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="9HPHMYX5H34D6" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1" />
+</p>
+</form>
+</td>
+<td> <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<p style="text-align: center;"><b>Donate (in US Dollars)</b><br>
+<input name="cmd" type="hidden" value="_s-xclick" />
+<input name="hosted_button_id" type="hidden" value="6CZ4NVSGXBG5J" />
+<input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image" />
+<img alt="" border="0" height="1" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" /></p>
+</form>
+</td>
+<td> <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<p style="text-align: center;"><b>Donate (in GB Pounds)</b><br>
+<input name="cmd" type="hidden" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="7DFU6SW2UUTC2">
+<input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" type="image" />
+<img alt="" border="0" height="1" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" /> </p>
+</form>
+</td>
+</tr></tbody></table>
+
+<HR>
+<b>SPONSORS</b><BR>
+<center>
+<table><tbody><tr>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td></tr>
+</tbody></table>
+</center>
+<HR>
+
+<P align="center"><a href="./ISCN09/ISCN09.html">
+<img src="./ISCN09/Images/KaryoISCN09NicoleChiamini.jpg"> <b>&nbsp; ISCN 2009</b></a></P>
+<HR> 
+<p>
+<hr>
+<table><tbody>
+<tr><td><font size="+1"><li><a href="./Status/Status.html">Count/Census of Atlas Items</a></li></font></td></tr>
+<tr><td>&nbsp;<td></tr>
+<tr><td><font size="+1"><li><b>International Classification of Diseases</b></li></font></td></tr>
+<tr><td><ul><a href=./ICD/icd_2016_topo.html>Topographical Classification</a> <br>
+<a href=./ICD/icd_2016_morph.html>Morphological Classification</a><p>
+<a href=http://www.rarecare.eu/rarecancers/Rare_Cancers_list_March2011.xls>ESMO: Incidence of rare cancers</a>
+
+<a href=
+</ul>
+</td></tr>
+   </tbody>
+</table><HR>
+<a href="./Partners.html">Genes partners</a>
+    
+<!-- a href="http://dgidb.genome.wustl.edu/druggable_gene_categories"  Druggable Gene Categories (DGIdb - WUSTL) -->
+<table>
+<p>
+  <tbody>
+<tr><td><font size="+1"><li><b>Drugs</b></li></font></td></tr>
+<tr><td><ul><a href=./drugs.html>Drugs and Therapies</a>
+</ul></td></tr>
+<tr><td><font size="+1"><li><b>Societies</b></li></font></td></tr>
+<tr><td><ul><a href="./Associations/Assosliste.html">Scientific Societies</a><br> 
+<a href="./Events/eventlist.html">Meetings and Events</a>
+<p>
+</ul></td></tr>
+
+
+<tr><td><font size="+1"><li><b>International Cancer Programs</b></li></font></td></tr>
+
+<tr><td><ul>
+<a href=https://www.nature.com/collections/afdejfafdb>
+<b>Pan-Cancer Analysis of Whole Genomes (Nature 5 Feb 2020)</a></b><p>
+<a href=http://www.cell.com/pb-assets/consortium/pancanceratlas/pancan/index.html>
+<b>Pan Cancer Atlas : Last publications (Cell Press)</b></a><p>
+<a href="./gdc_projects.html">Genomic  Data Commons</a><br>
+<a href="./icgc_projects.html">ICGC Program</a><br>
+<a href="./tcga_projects.html">TCGA program</a><br>
+<a href="./intogen_projects.html">IntoGen Portal</a><br>
+<a href="./oasis_projects.html">OASIS Portal</a><br>
+<a href="./cosmic_studies.html">COSMIC studies</a><br>
+<a href="./cell_lines.html">Tumour cell lines</a>
+</ul>
+</td></tr>
+   </tbody>
+</table>
+<a href="http://www.e-cancer.fr/Professionnels-de-sante/Veille-bibliographique/Nota-Bene-Cancer/">NotaBene (INCa)</a>
+        <a href="http://onco-seq.e-cancer.fr/">OncoSeq (INCa)</a>
+<HR> 
+<p><a href=./Obituaries.html>Obituaries</a>
+<HR>
+free advertising:<BR><A HREF="http://eu.wiley.com/WileyCDA/Section/id-302479.html?query=Felix+Mitelman"> Cancer Cytogenetics 4th Edition, </A> <BR>
+by Sverre Heim and Felix Mitelman is available and excellent ! <BR>
+<a href="./News.html"><img src="./Images/iconNew.png"></a><b>New! </b><A HREF="http://www.springer.com/us/book/9781493967018">Cancer Cytogenetics - Methods and Protocols </A><BR>Thomas S.K. Wan  (Ed.)<hr>
+<a href="./News.html"><img src="./Images/iconNew.png">News</a><BR>
+<a href="./stat_atlas.html">Atlas statistics</a>
+<a href="./OrphanSubmit.html"></a><BR><a href="./OrphanData.html"></a></td>
+</tr></tbody>
+</table>
+ 
+<HR>
+<center>
+<center><table width="100%"><tbody><tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+<td><center>Editor in Chief: Jean-Loup Huret,<br> <a href="mailto:jlhuret@AtlasGeneticsOncology.org">jlhuret@AtlasGeneticsOncology.org</a>&nbsp;&nbsp;&nbsp;<a href="mailto:AtlasGeneticsOncology@gmail.com">AtlasGeneticsOncology@gmail.com</a><br>
+&copy; ATLAS - ISSN 1768-3262 - Hosted by <a href="http://www.inist.fr/">INIST</a></font><br>
+Last update : Thu Mar 12 17:29:12 CET 2020
+<center></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.inist.fr/"><img src="./Images/logo-inist.gif" border="0"></a></td></tr></tbody>
+</table></center>
+</body>
+</html>

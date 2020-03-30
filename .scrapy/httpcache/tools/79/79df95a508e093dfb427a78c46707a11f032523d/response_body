@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v4.4.0, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.4.0, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+<section class="mbr-section mbr-section-hero mbr-section-full" id="header5-0" data-rv-view="0" style="background-color: rgb(239, 239, 239);">
+
+    
+
+    <div class="mbr-table-cell">
+
+        <div class="container">
+            <div class="row">
+                <div class="mbr-section col-md-10">
+
+                    <h1 class="mbr-section-title display-1">Supporting website for paper Continuous State HMMs for Modeling Time Series Single Cell RNA-SeqData<div>
+</div><div><br></div>Authors: Chieh Lin , Ziv Bar-Joseph&nbsp;<br><div><br></div></h1>
+                    <p class="mbr-section-lead lead">code release:&nbsp;<a href="https://github.com/jessica1338/CSHMM-for-time-series-scRNA-Seq">https://github.com/jessica1338/CSHMM-for-time-series-scRNA-Seq</a></p>
+                    <div class="mbr-section-btn"><a class="btn btn-lg btn-primary" href="http://www.andrew.cmu.edu/user/chiehl1/CSHMM/supplementary_materials.zip" target="_blank">Download supporting GO analysis tables</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</section>
+
+<section class="engine"><a href="https://mobirise.co/f">free bootstrap builder</a></section><section class="mbr-section mbr-section-hero mbr-section-full" id="header1-6" data-rv-view="3" style="background-color: rgb(239, 239, 239);">
+
+    
+
+    <div class="mbr-table-cell">
+
+        <div class="container">
+            <div class="row">
+                <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
+
+                    <h1 class="mbr-section-title display-1">Continuous State HMMs for Modeling Time Series Single Cell RNA-Seq Data</h1>
+                    <p class="mbr-section-lead lead">Methods for reconstructing developmental trajectories from time series single cell RNA-Seq (scRNA-Seq) data can be largely divided into two categories. The first, often referred to as psuedotime ordering methods, are deterministic relying on dimensionality reduction followed by an ordering step. The second learns a probabilistic branching model to represent the underlying developmental process being studied. While both types of methods have been successfully applied, each suffers from shortcomings that limit their general applicability. To address these issues we developed a new method based on continuous state HMMs (CSHMMs) for representing and modeling time series scRNA-Seq data. We define the CSHMM model and provide efficient learning and inference algorithms which allow the method to determine both the structure of the branching process and the assignment of cells to these branches. Analyzing two developmental single cell datasets we show that the CSHMM method accurately infers the branching topology and that it is able to correctly and continuously assign cells to paths, in both cases improving upon prior methods proposed for this task. Analysis of genes based on the continuous cell assignment identifies known and novel markers for several different cell types.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</section>
+
+<section class="mbr-section mbr-section-hero mbr-section-full header2" id="header2-7" data-rv-view="6" style="background-color: rgb(239, 239, 239);">
+
+    
+
+    <div class="mbr-table mbr-table-full">
+        <div class="mbr-table-cell">
+
+            <div class="container">
+                <div class="mbr-section row">
+                    <div class="mbr-table-md-up">
+                        
+                        
+                        
+
+                        <div class="mbr-table-cell col-md-5 content-size text-xs-center text-md-right">
+
+                            <h3 class="mbr-section-title display-2">Application on lung developmental dataset</h3>
+
+                            <div class="mbr-section-text">
+                                <p>original paper of lung dataset:<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4145853/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4145853/</a><br>GEO database:&nbsp;<br><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52583">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52583</a><br><br></p>
+                            </div>
+
+                            
+
+                        </div>
+                        <div class="mbr-table-cell mbr-valign-top mbr-left-padding-md-up col-md-7 image-size" style="width: 63%;">
+                            <div class="mbr-figure"><img src="assets/images/treutlein2014-ns100-cell-tree-1400x653.png"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+</section>
+
+<section class="mbr-section article" id="msg-box3-a" data-rv-view="9" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-xs-center">
+                <h3 class="mbr-section-title display-2">CONTACT US</h3>
+                <div class="lead"><p>For contacting, please email the email id "zivbj" at the address "cs.cmu.edu"</p></div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/viewport-checker/jquery.viewportchecker.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  <input name="animation" type="hidden">
+  </body>
+</html>

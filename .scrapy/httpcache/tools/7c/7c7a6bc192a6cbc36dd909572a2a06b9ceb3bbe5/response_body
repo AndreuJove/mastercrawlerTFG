@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title> Franz Inc: BioDB-Loader Software </title>
+
+<!--start of post_head.inc-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--META TAGS-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="keywords" content="Franz Inc, Lisp, Enterprise
+Development Tools, Common Lisp, Allegro CL, ACL, Allegro Common Lisp
+AllegroCache, RDF, OWL, SPARQL, Semantic Web Technology, AllegroGraph
+Web 3.0 Database, Triple Store, RacerPro, TopBraid Composer"/>
+
+<meta name="description" content="Franz is a leading vendor of Graph
+Search Technology (AllegroGraph and Gruff) and Common Lisp Software
+Development Tools (Allegro CL and AllegroCache)"/>
+
+<!--The following are for Firefox's Live Bookmarks-->
+<link rel="alternate" type="application/rss+xml"
+      title="General Allegro Common Lisp News"
+      href="/rss20_main.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Technical Support Feed for Allegro Common Lisp"
+      href="/rss20_support.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Patch Feed for Allegro Common Lisp 7.0"
+      href="/support/patches/log/7.0/rss20_patch.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Patch Feed for Allegro Common Lisp 8.0"
+      href="/support/patches/log/8.0/rss20_patch.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Patch Feed for Allegro Common Lisp 8.1"
+      href="/support/patches/log/8.1/rss20_patch.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Patch Feed for Allegro Common Lisp 8.2"
+      href="/support/patches/log/8.2/rss20_patch.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Patch Feed for Allegro Common Lisp 9.0"
+      href="/support/patches/log/9.0/rss20_patch.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="AllegroCache release notification Feed"
+      href="/products/allegrocache/download/dist/rss20_acache.xml"/>
+
+<link rel="stylesheet" type="text/css" href="/css/franz.css"/>
+
+<script type="text/javascript" language="JavaScript" src="/site.js">
+</script>
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<!-- New Google Analytics Asynchronous Tracking Code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8392475-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<!--end of post_head.inc-->
+<!--start of top_nav.inc-->
+<center>
+  <div class="doc">
+    <!-- Franz header begins -->
+    <div id="hd3">
+      <ul>
+ <li class="logo">
+
+    <a href="/"><img src="/images/franz-in-front_white2-ai.png" alt="Franz.com" /></a></li>
+<!--
+    <a href="/"><img src="/images/lg_franz.gif" alt="Franz.com" /></a></li>
+-->
+	<li class="srchcntr"> 
+	  <div class="intls"> 
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cja&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_japan_flag.png" alt="Japan"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cko&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_southkorea_flag.png" alt="South Korea"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cfr&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_france_flag.png" alt="France"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cpt&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_brazil_flag.png" alt="Brazil"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Czh-TW&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_china_flag.png" alt="China"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cde&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_germany_flag.png" alt="Germany"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cru&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_russia_flag.png" alt="Russia"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Ces&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_spain_flag.png" alt="Spain"/></a>
+	  </div><!-- class=intls -->
+	  <div class="search">
+	    <form method="GET" action="https://www.google.com/search"
+		  _lpchecked="1">      
+	      <input type="hidden" name="as_sitesearch"
+		     value="franz.com">       
+	      <input type="text" size="40" name="as_q" value="">
+	      &nbsp;
+	      <input type="submit" value="Search">     
+	    </form>  
+	  </div>
+	  <div class="sublinks">
+	    <a href="/support.lhtml">Support/Doc</a> |
+	    <a href="/about/">About</a> |
+	    <a href="/purchase.lhtml">Purchase</a>  |
+	    <a href="/search/">Advanced Search</a>
+	  </div>
+	</li>
+      </ul>
+    </div> <!-- class=hdX -->
+    <!-- Franz header ends -->
+    
+    <!-- Nav bar begins -->
+    <div id="nav" class="nav">
+      <ul>
+<li class="tb"><a href="/">Home</a></li>
+	<li class="tb"><a href="https://allegrograph.com">Semantic Graph Technologies</a></li>
+	<li class="tb_wwlink selected2"><a href="/enterprise_development_tools.lhtml">Common Lisp Tools</a></li>
+        <li class="tb"><a href="/ps/index.lhtml">Professional Services</a></li>
+
+      </ul> 
+    </div> <!-- class=nav -->
+    <!-- Nav bar ends -->
+    <div style="clear:both"></div>
+    <!--div class=doc is open -->
+<!--end of top_nav.inc-->
+<!-- start pre_menu.inc -->
+   <!-- Content begins -->
+   <div id="content2" class="wrapper">
+     <!-- Left Nav begins -->
+   <div class="leftnav">
+   <ul class="sub2">
+<!-- end pre_menu.inc -->
+<li><a href="/products/">Products</a></li>
+<li class="selected"><a href="/services/">Services</a></li>
+<div class="ssmenu">
+<ul>
+<li><a href="/services/classes/">Training</a></li>
+<li class="selected2">Conferences/Seminars</li>
+<li><a href="/services/consulting/">Consulting</a></li>
+</ul></div>
+<li><a href="/support/">Support</a></li>
+<li><a href="/success/">Success</a></li>
+<li><a href="/resources/">Resources</a></li>
+<li><a href="/agraph/allegrograph/">Learn More About Semantic Graph Databases</a></li>
+<!-- start post_menu.inc -->
+   </ul>
+   
+   </div>
+   <!-- Left Nav ends -->
+
+<!-- Main content begins -->
+<!-- end post_menu.inc -->
+<div class="edtbody">
+<h2>Lisp Tools for Bioinformatics</h2><p>BioDB-Loader is a toolkit created by Peter Karp of SRI for loading and querying databases.  Built to work with the Allegro CL development environment, BioDB-Loader contains utilities for loading flatfiles from the Swiss-Prot, Prosite, Enzyme, EcoCyc, and MetaCyc databases.</p><p>The BioDB-Loader was developed to work with Allegro Common Lisp (ACL).  It should run on any platform, but has been tested under ACL 5.0 and 5.0.1 on Solaris, and ACL 5.0.1 for Linux Trial Edition.  </p><p><a href="/services/conferences_seminars/ismb2000/biodb1.tar.Z">Click here to download BioDB-Loader</a> (Make sure to savethe file with a.tar.Z extension)</p>Using a Windows operating system? You may prefer to download a <a href="/services/conferences_seminars/ismb2000/biodb1.zip"> zip version of the toolkit</a>.</p><p> <a href="/downloads.lhtml">Click here to download Allegro CL Trial Edition for Linux.<!--END PAGE--><!-- start footer.inc -->
+</div> <!-- closes class=*body -->
+<!-- Main Content ends -->  
+</div><!-- close class=wrapper -->
+<!-- Content ends -->  
+</div><!-- closes class=wrapper -->
+</div><!-- closes class=doc -->
+
+<div id="ft">
+
+<table align="center">
+<tr>
+
+<td width="500">
+  <font size="1">
+  Copyright &copy; 2020 Franz Inc., All Rights Reserved
+  | <a href="/about/privacystatement.lhtml">Privacy Statement</a>
+  </font>
+</td>
+
+<td>
+<script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/Share" data-url="http://franz.com"></script>
+</td>
+
+<td><a href="https://www.facebook.com/FranzAllegroGraph"><img src=/images/fb.png></a>
+</td>
+
+<td width="30"><a href="http://twitter.com/Franzinc"><img src="/images/twitter-m.png" alt="Twitter"/></a>
+</td>
+
+<td>
+<!-- Place this code where you want the badge to render. -->
+<a href="//plus.google.com/117478799237137039578?prsrc=3"
+   rel="publisher" target="_top" style="text-decoration:none;">
+<img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;"/>
+</a>
+</td>
+
+<td><a href="https://www.youtube.com/user/AllegroGraph?ob=0&feature=results_main"><img src="/images/yt.png"></a>
+</td>
+
+<td><a href="https://github.com/franzinc"><img src="/images/gh.png"></a>
+</td>
+
+<td><a href="/rss.lhtml"><img src="/images/feed-icon-14x14.png"</a>
+</td>
+
+</tr>
+</table>
+</div><!-- #ft -->
+
+</center>
+
+</body>
+</html>

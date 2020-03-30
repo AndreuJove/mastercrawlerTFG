@@ -1,0 +1,21 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:50:21 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Cache-Control: max-age=0, private, must-revalidate
+Etag: W/"413938d786dd6da9e184f2db8418201f"
+Referrer-Policy: strict-origin-when-cross-origin
+Referrer-Policy: strict-origin-when-cross-origin
+Set-Cookie: experimentation_subject_id=IjRiYTQ4ZTgwLThjYTYtNGFkNS04ZDI2LTJmNTg5ZTdjNmVkYSI%3D--ea2fef60fcf37cd1b70237ac411dc76b950f68d7; domain=.univ-nantes.fr; path=/; expires=Fri, 30 Mar 2040 18:50:21 -0000; secure; HttpOnly
+Set-Cookie: event_filter=all; path=/
+Set-Cookie: _gitlab_session=5ede0af7ec86fdf6ca6884375cc80961; path=/; expires=Mon, 30 Mar 2020 20:50:21 -0000; secure; HttpOnly
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: DENY
+X-Permitted-Cross-Domain-Policies: none
+X-Request-Id: sq3q6xSn3ca
+X-Runtime: 0.162862
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000
+Content-Encoding: gzip

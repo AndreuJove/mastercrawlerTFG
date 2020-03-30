@@ -1,0 +1,125 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>BitPAl</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="http://lobstah.bu.edu/BitPAl/favicon.ico">
+	
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Overlock+SC|Inder|Anton|Share' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oleo+Script|Wire+One|Rationale|Tulpen+One|Six+Caps|Geo|Medula+One|Londrina+Shadow' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Duru Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css"
+    href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/base/jquery-ui.css"/>
+<link rel="stylesheet" type="text/css" href="http://lobstah.bu.edu/BitPAl/BitPAl.css" />
+<script>
+$(document).ready(function() {
+    
+$( "#showadv" ).click(function() {
+  $( "#advanced" ).toggle();
+ });
+ });
+</script>
+
+</head>
+<body id='body' name='body'>
+	
+
+
+	<div class="logo">BitPAl  <font color='black' size=7> bit-parallel alignment </font> </div>
+
+<div id="wrap">
+
+<div id="navbar">
+	<ul id="primary-nav">
+		<li id="home"><a href="http://lobstah.bu.edu/cgi-bin/BitPAl/index.cgi" >HOME</a>
+			<ul>
+				<li><a href="index.cgi" id="main">Main Page</a></li>
+				<li><a href="about.py" id="about">About</a></li>
+			</ul>
+		</li>
+		<li id="bitpal"><a href="BitPAl.py" id="current">BITPAL</a>
+			<ul>
+				<li><a href="BitPAlSingle.py" id="single">BitPAl Single Word</a></li>
+				<li><a href="BitPAlMulti.py" id="multi">BitPAl Multi Word</a></li>
+			</ul>
+		</li>
+		
+		<li id="help"><a href="help.py" id="helper">HELP</a>
+			<ul>
+				<li><a href="help.py" id="manual">Manual</a></li>
+				<li><a href="faq.py" id="FAQ">FAQ</a></li>
+			</ul>
+		</li>
+		<li id="editdist"><a href="getedit.py" id="getedit">Edit Distance</a></li>
+	</ul>
+
+</div>
+</div>
+<div class="middle" id="middle" name="middle">
+
+<div class="content" id="content" name="content">
+
+	
+<h1> Welcome to BitPAl's Online Interface</h1>
+
+<div id="div-1"><a href="BitPAl.py"><span class="myspan"><img src="http://lobstah.bu.edu/BitPAl/Images/BitPAl.png" width="300px"/></span></a></div>
+
+<div id="div-2"><b>BitPAl's Online Generator</b> generates C code for the bit-parallel alignment of sequence data</div><br>
+
+<div id="intro"> <h1> Introduction </h1>
+
+<p>
+BitPAl was
+developed by the Laboratory for Biocomputing and Informatics, 2014</p>
+
+<p>
+Our laboratory research focuses on development of algorithms and software tools for the detection and analysis of novel patterns and repeats in DNA and RNA sequences.
+</p>
+
+<p>
+Our goal is to deliver tools that are effective, efficient and easy to use. We have a number of ongoing collaborations. Please visit our <a href="http://tandem.bu.edu/research.html">research page<a> for details on our most recent projects.
+</p>
+
+<dl>
+<dt><strong>PI: Dr. Gary Benson</strong>
+<dt><strong>Yevgeniy Gelfand</strong>
+<dt><strong>Joshua Loving</strong>
+<dt><strong>Y&ouml;zen Hern&aacute;ndez</strong>
+</dl>
+</p>
+<p>
+For information on how to use this database, please see our <a href="http://lobstah.bu.edu/cgi-bin/BitPAl/help.py">help</a> page.
+</p>
+</div>
+
+
+	
+	
+	</div>
+
+		<div id="footer">
+<br/>
+
+Contact: Joshua Loving <a href="http://www.linkedin.com/in/joshualoving" style="text-decoration:none;vertical-align:left;"><img src="http://www.linkedin.com/img/webpromo/btn_in_20x15.png" width="20" height="15" title="View Joshua Loving's LinkedIn profile" style="vertical-align:left" border="0"></a><br/><a href="mailto:jloving@bu.edu" style="text-decoration:none; display:block;"><img class="header" src="http://lobstah.bu.edu/BitPAl/Images/email.png" width=100px style="float:center; margin-left:2px;"></a>
+
+Copyright &copy; 2014 Laboratory for Biocomputing and Informatics. All rights reserved.
+
+<p id="bulogo"><a>Boston University</a></p>				
+			
+		</div>
+</div>
+
+
+		</body>
+		</html>

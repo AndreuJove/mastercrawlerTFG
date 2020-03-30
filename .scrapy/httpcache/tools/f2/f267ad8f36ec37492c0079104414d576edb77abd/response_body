@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="js bootstrap-anchors-processed" lang="en">
+<head>
+    <title>CORUM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="Welcome to CORUM - The comprehensive resource of mammalian protein complexes.
+    For more information contact Andreas Ruepp (IBIS - Helmholtz Zentrum München).
+    Protein complexes are key molecular entities that integrate multiple gene products to perform cellular functions.
+    The CORUM database is a collection of experimentally verified mammalian protein complexes.
+    ">
+    <meta name="keywords" content="CORUM,GO,FunCat,protein complex,mammalian">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+
+    <!--<script type="text/javascript" src="script/lib/jquery.min.js"></script>-->
+    <!--<script type="text/javascript" src="script/lib/jquery-1.10.2.js"></script>-->
+    <!--<script type="text/javascript" src="script/lib/jquery-1.12.4.min.js"></script>-->
+    <script type="text/javascript" src="script/lib/jquery-2.1.1.min.js"></script>
+
+    <script type="text/javascript" src="script/lib/jquery-ui.js"></script>
+    <!--<script type="text/javascript" src="bootstrap-3.3.6/js/bootstrap.js"></script>-->
+    <script type="text/javascript" src="bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script/lib/loadCSS.js"></script>
+    <script type="text/javascript" src="script/lib/jquery.actual.js"></script>
+    <!--<script src="/script/lib/googleApi.js"></script>-->
+    <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
+    <script type="text/javascript" src="script/navigateScript.js"></script>
+    <script type="text/javascript" src="script/lib/cytoscape.js"></script>
+    <!--<script src="./script/registrationScript.js"></script>-->
+
+    <link rel="stylesheet" href="bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/corumStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/browseStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/frameworkStyle.css">
+    
+
+</head>
+<body>
+
+<div id="background" class="corumStyle rowColor">
+    <div id="page-header-wrapper" class="container">
+        <nav class="navbar navbar-fixed-top navbar-light" style="background-color: white;" role="navigation">
+            <div class="container-fluid noMargin navbar-header" id="parent">
+                <div class="navbar-header">
+                </div>
+                <ul class="nav navbar-nav menubar">
+                    <li>
+                        <a id="leftLogo" href="https://www.helmholtz-muenchen.de/en/ibis" target="_blank">
+                            <img id="ibis" src="img/ibis.jpg">
+                        </a>
+                    <li>
+                    <li><a href="#" data-parent="#parent">Home</a></li>
+                    <li><a href="#about" data-parent="#parent">About</a></li>
+                    <li><a href="#download" data-parent="#parent">Download</a></li>
+                    <li>
+                        <a id="browseButton" href="#browse" data-parent="#parent">Browse FunCat</a>
+                    </li>
+                    <li><a href="#contact" data-parent="#parent">Contact</a></li>
+                    <li>
+                        <a href="https://ibis.helmholtz-muenchen.de/legal/imprint/corum/" target="_blank">Imprint</a>
+                    </li>
+                    <li>
+                        <a href="https://ibis.helmholtz-muenchen.de/legal/privacy/corum/" target="_blank">Privacy Policy</a>
+                    </li>
+                    <li class="hidden ls-child"><a id="loginButton" href="#" class="btn">Login</a></li><li><a id="logoutButton" href="#" class="btn"></a></li>
+                    <li id="rightLogoLI">
+                        <a id="rightLogo" href="https://www.helmholtz-muenchen.de/" target="_blank">
+                            <img id="hmgu" src="img/HMGU_english_transparent_2.png">
+                        </a>
+                    <li>
+
+                </ul>
+            </div>
+        </nav>
+        
+        <div id="banner" class="jumbotron">
+            <div class="col-xs-8 col-sm-12 col-md-12 col-lg-12 jumbotronwidth">
+                <button id="addUsers" type="click" class="btn btn-danger btn-lg pull-right hidden">
+                    Register user
+                </button>
+                <div class="header">
+                    <img id="proteinimg" src="">
+
+                    <h1>CORUM</h1>
+
+                    <p>The comprehensive resource of mammalian protein complexes</p>
+
+                    <img id="imgLoader" src="#" class="pull-right" style="display:none">
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal login-->
+        <div class="modal fade" id="loginContainer" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <div id="loginError" class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            Invalid user or password
+                        </div>
+                        <form role="form" method="POST">
+                            <div class="form-group">
+                                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                                <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                                <input type="password" class="form-control" id="psw" placeholder="Enter password">
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" checked>Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block"><span
+                                    class="glyphicon glyphicon-off"></span> Login
+                            </button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger pull-left" data-dismiss="modal"><span
+                                class="glyphicon glyphicon-remove"></span> Cancel
+                        </button>
+                        <!--<p>Not a member? <a href="#">Sign Up</a></p>-->
+                        <p>Forgot <a href="#forgotPass">Password?</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="page-content-wrapper" class="container"></div>
+    <div id="customModal"></div>
+    <div class="modal fade" id="registerContainer" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Registration</h4>
+                </div>
+                <div class="modal-body" style="padding:40px 50px;">
+                    <form role="form" method="POST">
+                        <div class="form-group">
+                            <label for="firstname"><span class="glyphicon glyphicon-user"></span> Firstname</label>
+                            <input type="text" class="form-control" id="firstname">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName"><span class="glyphicon glyphicon-user"></span> Lastname</label>
+                            <input type="text" class="form-control" id="lastName">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailUser"><span class="glyphicon glyphicon-user"></span> Email</label>
+                            <input type="email" class="form-control" id="emailUser" placeholder="Enter email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userUser"><span class="glyphicon glyphicon-user"></span> Username</label>
+                            <input type="text" class="form-control" id="userUser">
+                        </div>
+                        <div class="form-group">
+                            <label for="passUser"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                            <input type="password" class="form-control" id="passUser" placeholder="Enter password">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block"><span
+                                class="glyphicon glyphicon-off"></span> Register
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger pull-left" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="spacer" align="center">
+            <h6 class="setLightFont">&copy; 2018 Helmholtz Zentrum München - Deutsches Forschungszentrum für Gesundheit und Umwelt (GmbH),
+            Ingolstädter Landstraße 1, 85764 Neuherberg</h6>
+            <p style="color: white;">The Helmholtz Zentrum M&uuml;nchen
+                <a href="https://ibis.helmholtz-muenchen.de/legal/imprint/corum/" target="_blank">Imprint</a>
+                and <a href="https://ibis.helmholtz-muenchen.de/legal/privacy/corum/" target="_blank">Privacy Policy</a> apply.</p>
+            <b>License</b>: We have chosen to apply the Creative Commons Attribution (CC BY-NC 4.0) License to all copyrightable parts of our databases.<br/>
+            <b>Disclaimer</b>: We make no warranties regarding the correctness of the data, and disclaim liability for damages resulting from its use.<br/>
+            We cannot provide unrestricted permission regarding the use of the data, as some data may be covered by patents or other rights.<br/>
+            Any medical or genetic information is provided for research, educational and informational purposes only. <br/>
+            It is not in any way intended to be used as a substitute for professional medical advice, diagnosis, treatment or care.
+	        <br>
+            &copy; Image credit - http://www.topsan.org/Proteins/JCSG/3fcr
+            <br><br>
+    </div>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<html><head><title>Augustus: gene prediction</title><link rel="stylesheet" type="text/css" href="/augustus/augustus.css"><link rel="shortcut icon" type="image/x-icon" href="/augustus/images/A.ico"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><meta name="DC.Creator" content="Mario Stanke"><meta name="DC.Publisher" content="Institute for Mathematics and Computer Science, University of Greifswald"><meta name="DC.Publisher" content="Rasmus Steinkamp"><meta name="DC.Format" content="text/html"><meta name="DC.Language" scheme="ISO639-1" content="en"><meta name="DC.Rights" content="http://bioinf.uni-greifswald.de/augustus/copyright"><meta name="DC.Title" content="The AUGUSTUS gene prediction tool"><meta name="DC.Description" content="AUGUSTUS is a program that predicts genes in eukaryotic genomic sequences."><meta name="DC.Subject" content="gene prediction"><meta name="DC.Subject" content="eukaryotic genomic sequence"><meta name="DC.Subject" scheme="RVKO" content="WC 7700 "><meta name="DC.Date" scheme="ISO8601" content="2003-06-01"><meta name="DC.Type" content="Text.Homepage.Organizational"><meta name="DC.Format" scheme="IMT" content="text/html"><meta name="DC.Identifier" content="/augustus/"><meta name="DC.Date.X-MetadataLastModified" scheme="ISO8601" content="2003-06-18"><meta name="robots" content="index,follow"></head><body>
+<div class="headline" id="headline">
+<h1 class="title" id="title"><a href="http://bioinf.uni-greifswald.de/augustus/" id="applink">Augustus</a> <span class="subtitle" id="subtitle">[gene prediction]</span></h1>
+</div>
+<p align="center">
+<font size="-1"> <a href="/">Bioinformatics Group of the Institute
+for Mathematics and Computer Science of the University of Greifswald</a></font></p>
+
+<div class="main">
+<table width="1000" border="0" align="center">
+<tr>
+<td><a href="/augustus/submission.php">web interface</a></td>
+<td><a href="/webaugustus/">WebAUGUSTUS</a></td>
+<td><a href="/augustus/accuracy">accuracy results</a></td>
+<td><a href="/augustus/downloads">download AUGUSTUS</a></td>
+<td><a href="/augustus/datasets">data sets</a></td>
+<td><a href="/augustus/predictions">predictions</a></td>
+<td><a href="/augustus/references">references</a></td>
+</tr>
+</table>
+
+<p align="center"><a href="/augustus/submission.php"><img src="/augustus/images/augustus.head.transparent.gif" alt="" width="93" height="100"></a></p>
+
+
+
+AUGUSTUS is a program that predicts genes in eukaryotic genomic sequences. 
+It can be <a href="/augustus/submission.php">run on this web server</a>, on a <a href="/webaugustus/">new web server</a> for larger input files or be downloaded and <a href="/augustus/downloads">run
+locally</a>. It is open source so you can compile it for your computing platform. You can now run AUGUSTUS on the German <a href="http://www.medigrid.de/anw_bio.html">MediGRID</a>. This enables you to submit larger sequence files and allows to use protein homology information in the prediction. The MediGRID requires an instant easy registration by email for first-time users.
+
+<h4>Features/News:</h4>
+<ul>
+<li> The source code is now hosted at GitHub: <a href="https://github.com/Gaius-Augustus/Augustus">Augustus at GitHub</a>. Please create an issue there for source code related problems (compilation, crash).
+</li>
+<li> The download version of AUGUSTUS can incorporate data from RNA-Seq (short cDNA reads, single or paired-end, e.g. from Illumina or SOLiD) as documented on this <a href="/bioinf/wiki/pmwiki.php?n=Augustus.Augustus">wiki page on RNA-Seq integration</a> (May 15, 2012).
+</li>
+<li>Please look into this <a href="/bioinf/wiki/pmwiki.php?n=Forum.Forum">forum</a> for questions and answers (<b>Q&amp;A</b>) to see if your questions have already been asked.</li>
+<li> We now offer another web service that allows to <b>upload whole genome data</b> for <a href="/webaugustus/"><b>training AUGUSTUS and annotating a genome</b></a>.
+</li>
+<li> AUGUSTUS now has a protein profile extension (PPX) which allows to use protein family specific conservation in order to identify members and their exon-intron structure of a protein family given by a block profile. The block profile can be constructed with accompanying scripts from a multiple protein sequence alignment. For more details please refer to the <a href="/augustus/downloads/README.TXT">README.TXT</a>.
+</li>
+<li> We now have a fully automatic annotation pipeline for download with the distribution. For a new genome you can feed the pipeline only with 
+your sequences, a genome and EST or 454 reads, and then you get your genome-wide predictions out. Training is done automatically. (June 26th, 2009)
+</li>
+<li> The results can be displayed automatically in the genome browser Gbrowse. You can browse the gene predictions together with 
+the input sequence, the constraints and the cDNA alignments. Gbrowse also enables you to simultaneously display your own annotation 
+and to export the image in scalable vector graphics format.
+</li>
+<li> You can upload cDNA sequences together with the genomic DNA. Your ESTs or mRNA will be used to improve the gene prediction.
+<p align="center"><a href="/augustus/images/AUG.cDNA.gif"><img src="/augustus/images/AUG.cDNA.thumb.gif" alt="with cDNA"></a></p>
+</li>
+<li> AUGUSTUS ususally belongs to the most accurate programs for the species it is trained
+for. Often it is the most accurate <i>ab initio</i> program. For example, at the independent gene finder
+assessment (EGASP) on the human ENCODE regions AUGUSTUS was the most accurate gene finder among the
+tested <i>ab initio</i> programs. At the more recent nGASP (worm), it was among the best in the <i>ab initio</i>
+and transcript-based categories. See <a href="/augustus/accuracy">accuracy statistics</a> for further statics.
+</li>
+<li> AUGUSTUS is retrainable. It comes with a training program that estimates the parameters given a
+training set of known genes. It also comes with an optimization script that tries to find values for
+the meta parameters, like splice window sizes, that optimize the prediction accuracy.
+</li><li> AUGUSTUS can be used <i>ab initio</i> and has a flexible mechanism for incorporating extrinsic
+information, e.g. from EST alignments and protein alignments. Here is an example from the UCSC
+Genome Browser where the AUGUSTUS prediction incorporates mRNA alignments, EST alignments,
+conservation and other sources of information:<br>
+<p align="center"><a href="/augustus/images/hints.gif"><img src="/augustus/images/hints.thumb.jpg" alt="hints"></a></p>
+</li>
+<li> AUGUSTUS can predict alternative splicing and alternative transcripts. It can do this for example
+when the EST alignments suggest alternative splicing like in this example:<br>
+<p align="center"><a href="/augustus/images/alternative.gif"><img src="/augustus/images/alternative.thumb.gif" alt="alternative"></a></p>
+</li> 
+<li> AUGUSTUS can predict the 5'UTR and 3'UTR including introns. This is in particular helpful when
+using EST alignments as the majority of ESTs aligns in the untranslated regions (<a href="/augustus/images/alternative.gif">example</a>).
+This feature is currently only trained for human, the red algae <i>Galdieria sulphuraria</i>, <i>Caenorhabditis elegans</i>,
+<i>Toxoplasma gondii</i>, <i>Chlamydomonas reinhardtii</i>, pea aphid, <i>Culex pipens</i> (3'UTR only), butterfly, <i>Bombus terrestris/impatiens</i>, chlorella,
+elephant shark, honeybee, <i>Leishmania tarentolae</i>, maize, rhodius, tomato, trichinella.
+</li>
+<li> AUGUSTUS can report a large number of alternative genes, including probabilities for the
+transcripts and each exon and intron. You can make AUGUSTUS predict suboptimal gene structures (<a href="/augustus/images/alternative-sampling.png">example</a>) and you can adjust command line paramters to regulate
+the number of reported alternatives.
+</li>
+</ul>
+
+<h4>Species:</h4>
+AUGUSTUS has currently been trained on species specific training sets to predict genes in the
+following species. Note that for closely related species usually only one version is necessary. For
+example, the human version is good for all mammals. <a href="references.php#contrib">Contributions</a>.
+
+<table border="0" cellspacing="10" align="center">
+<tr>
+<th>animals:                </th>
+<th>alveolata:                </th>
+<th>plants and algae:           </th>
+<th>fungi:</th>
+<th>bacteria:</th>
+<th>archaea:</th>
+</tr>
+
+<tr>
+<td valign="top"><font size="-2">
+<i>Acyrthosiphon pisum</i><br>
+<i>Aedes aegypti</i><br>
+<i>Amphimedon queenslandica</i><br>
+<i>Ancylostoma ceylanicum</i><br>
+<i>Apis mellifera</i><br>
+<i>Bombus terrestris</i><br>
+<i>Brugia malayi</i><br>
+<i>Caenorhabditis elegans</i><br>
+<i>Callorhinchus milii</i><br>
+<i>Culex pipiens</i><br>
+<i>Danio rerio</i><br>
+<i>Drosophila melagonaster</i><br>
+<i>Gallus gallus</i><br>
+<i>Heliconius melpomene</i><br>
+<i>Homo sapiens</i><br>
+<i>Nasonia vitripennis</i><br>
+<i>Petromyzon marinus</i><br>
+<i>Rhodnius prolixus</i><br>
+<i>Schistosoma mansoni</i><br>
+<i>Tribolium castaneum</i><br>
+<i>Trichinella spiralis</i><br>
+<i>Xipophorus maculatus</i><br>
+</font></td>
+<td valign="top"><font size="-2">
+<i>Tetrahymena thermophila</i><br>
+<i>Toxoplasma gondii</i><br>
+</font></td>
+<td valign="top"><font size="-2">
+<i>Arabidopsis thaliana</i><br>
+<i>Chlamydomonas reinhardtii</i><br>
+<i>Galdieria sulphuraria</i><br>
+<i>Nicotiana attenuata</i><br>
+<i>Oryza brachyantha</i><br>
+<i>Solanum lycopersicum</i><br>
+<i>Theobroma cacao</i><br>
+<i>Triticum aestivum</i><br>
+<i>Zea mays</i><br>
+</font></td>
+<td valign="top"><font size="-2">
+<i>Aspergillus fumigatus</i><br>
+<i>Aspergillus nidulans</i><br>
+<i>Aspergillus oryzae</i><br>
+<i>Aspergillus terreus</i><br>
+<i>Botrytis cinerea</i><br>
+<i>Candida albicans</i><br>
+<i>Candida guilliermondii</i><br>
+<i>Candida tropicalis</i><br>
+<i>Chaetomium globosum</i><br>
+<i>Coccidioides immitis</i><br>
+<i>Conidiobolus coronatus</i><br>
+<i>Coprinus cinereus</i><br>
+<i>Cryptococcus neoformans</i><br>
+<i>Debaryomyces hansenii</i><br>
+<i>Encephalitozoon cuniculi</i><br>
+<i>Eremothecium gossypii</i><br>
+<i>Fusarium graminearum</i><br>
+<i>Histoplasma capsulatum</i><br>
+<i>Kluyveromyces lactis</i><br>
+<i>Laccaria bicolor</i><br>
+<i>Lodderomyces elongisporus</i><br>
+<i>Magnaporthe grisea</i><br>
+<i>Neurospora crassa</i><br>
+<i>Phanerochaete chrysosporium</i><br>
+<i>Pichia stipitis</i><br>
+<i>Rhizopus oryzae</i><br>
+<i>Pneumocystis jirovecii</i><br>
+<i>Saccharomyces cerevisiae</i><br>
+<i>Schizosaccharomyces pombe</i><br>
+<i>Ustilago maydis</i><br>
+<i>Verticillium longisporum</i><br>
+<i>Yarrowia lipolytica</i><br>
+</font></td>
+<td valign="top"><font size="-2">
+<i>Escherichia coli</i><br>
+<i>Staphylococcus aureus</i><br>
+<i>Thermoanaerobacter tengcongensis</i><br>
+</font></td>
+<td valign="top"><font size="-2">
+<i>Sulfolobus solfataricus</i><br>
+</font></td>
+</tr>
+</table>
+<br>
+
+<p>Contact:
+ <a href="http://www.math-inf.uni-greifswald.de/mathe/index.php/mitarbeiter/382-prof-dr-mario-stanke">Mario Stanke</a> <a href="mailto:mario.stanke@uni-greifswald.de">&lt;mario.stanke@uni-greifswald.de&gt;</a>
+</p>
+</div>
+	
+<div style="text-align: center;">
+  <a style="margin: 5px;" href="/bioinf/group/index.html">Contact</a>
+  <a style="margin: 5px;" href="/bioinf/impressum.html">Impressum</a>
+  <a style="margin: 5px;" href="/bioinf/datenschutz.html">Data Privacy Protection</a>
+</div>
+</body></html>

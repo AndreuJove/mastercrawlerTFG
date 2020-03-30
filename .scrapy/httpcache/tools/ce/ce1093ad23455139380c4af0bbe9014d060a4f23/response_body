@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43468306-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-43468306-3');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="AI TI-RADS Calculator">
+    <meta name="keywords" content="thyroid,nodules,ai,tirads,features,ultrasound,radiology">
+    <meta name="author" content="Mateusz Buda">
+
+    <title>AI TI-RADS Calculator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0736A4;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./links.html">Links</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+    	<!-- Lead -->
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+                <h2 class="mt-5">AI TI-RADS Calculator</h2>
+            </div>
+            <p class="text-center" style="width: 96%; padding-top: 1em;">
+                Interactive calculator for Artificial Intelligence (AI) Thyroid Imaging Reporting and Data System (TI-RADS)<br>
+            </p>
+        </div>
+
+        <!-- Features -->
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+                <h4 class="mt-4">Features</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col category-box">
+                <h5 class="category-header">
+                    Composition
+                </h5>
+                <div class="category-options" >
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="composition" id="composition-cystic" value="0">
+                        <label class="form-check-label" for="composition-cystic">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Cystic or almost completely cystic<sup> *</sup>
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="composition" id="composition-spongiform" value="0">
+                        <label class="form-check-label" for="composition-spongiform">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Spongiform<sup> *</sup>
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="composition" id="composition-mixed" value="0">
+                        <label class="form-check-label" for="composition-mixed">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Mixed cystic/solid
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="composition" id="composition-solid" value="3">
+                        <label class="form-check-label" for="composition-solid">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Solid or almost completely solid
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    3
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="composition" id="composition-cannot" value="0">
+                        <label class="form-check-label" for="composition-cannot">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Cannot classify
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col category-box">
+                <h5 class="category-header">
+                    Echogenicity
+                </h5>
+                <div class="category-options">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="echogenicity" id="echogenicity-anechoic" value="0">
+                        <label class="form-check-label" for="echogenicity-anechoic">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Anechoic
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="echogenicity" id="echogenicity-hyperechoic" value="0">
+                        <label class="form-check-label" for="echogenicity-hyperechoic">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Hyperechoic
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="echogenicity" id="echogenicity-isoechoic" value="0">
+                        <label class="form-check-label" for="echogenicity-isoechoic">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Isoechoic
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="echogenicity" id="echogenicity-hypoechoic" value="2">
+                        <label class="form-check-label" for="echogenicity-hypoechoic">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Hypoechoic
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    2
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="echogenicity" id="echogenicity-vhypoechoic" value="3">
+                        <label class="form-check-label" for="echogenicity-vhypoechoic">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Very hypoechoic
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    3
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="echogenicity" id="echogenicity-cannot" value="0">
+                        <label class="form-check-label" for="echogenicity-cannot">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Cannot classify
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col category-box">
+                <h5 class="category-header">
+                    Shape
+                </h5>
+                <div class="category-options">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shape" id="shape-wider" value="0">
+                        <label class="form-check-label" for="shape-wider">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Wider-than-tall
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shape" id="shape-taller" value="1">
+                        <label class="form-check-label" for="shape-taller">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Taller-than-wide
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    1
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col category-box">
+                <h5 class="category-header">
+                    Margin
+                </h5>
+                <div class="category-options">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="margin" id="margin-smooth" value="0">
+                        <label class="form-check-label" for="margin-smooth">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Smooth
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="margin" id="margin-ill" value="0">
+                        <label class="form-check-label" for="margin-ill">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Ill-defined
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="margin" id="margin-irregular" value="2">
+                        <label class="form-check-label" for="margin-irregular">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Irregular/lobulated
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    2
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="margin" id="margin-extra" value="3">
+                        <label class="form-check-label" for="margin-extra">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Extra-thyroidal extensions
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    3
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="margin" id="margin-cannot" value="0">
+                        <label class="form-check-label" for="margin-cannot">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Cannot classify
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col category-box">
+                <h5 class="category-header">
+                    Echogenic&nbsp;Foci
+                </h5>
+                <div class="category-options">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="calcs" id="calcs-large" value="0">
+                        <label class="form-check-label" for="calcs-large">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Large comet tail
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="calcs" id="calcs-macro" value="0">
+                        <label class="form-check-label" for="calcs-macro">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Macrocalcifications
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    0
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="calcs" id="calcs-peripheral" value="2">
+                        <label class="form-check-label" for="calcs-peripheral">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Peripheral
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    2
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="calcs" id="calcs-punctate" value="3">
+                        <label class="form-check-label" for="calcs-punctate">
+                            <div style="display: flex;">
+                                <div style="float: left; flex: 11;">
+                                    Punctate
+                                </div>
+                                <div style="float: right; flex: 1; text-align: center; margin: auto;">
+                                    3
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Superscript -->
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center" style="padding-top: 1em">
+                <sup>* </sup>Cystic and spongiform nodules receive 0 points in total without adding further points for other categories.
+            </div>
+        </div>
+
+        <!-- Points -->
+        <div class="row justify-content-center" style="margin: auto;">
+            <div class="col-xs-6 text-right" style="padding-right: 0.1em">
+                <h4 class="mt-5">Total Points: </h4>
+            </div>
+            <div class="col-xs-6 text-left">
+                <h4 class="mt-5"><span class="points-text" id="totalPoints">0</span></h4>
+            </div>
+        </div>
+
+        <!-- Risk group -->
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+                <h4 class="mt-5">Risk Group</h4>
+            </div>
+        </div>
+
+        <div class="row" id="riskGroupElements">
+            <div class="col" id="elementBenign" style="padding: 0em; min-width: 128px; max-width: 50%; margin: auto;">
+                <div class="d-flex align-items-center result-box" style="background: #d6f5d6; border-color: #85e085;">
+                        <div class="container justify-content-center text-center" style="padding: 0em;">
+                            <strong>Benign</strong>
+                        </div>
+                </div>
+            </div>
+            <div class='w-100 d-md-none'></div>
+        	<div class="col" id="elementNotSuspicious" style="padding: 0em; min-width: 128px; max-width: 50%; margin: auto; opacity: 0.3;">
+        		<div class="d-flex align-items-center result-box" style="background: #fffd89; border-color: #ffe252;">
+        				<div class="container justify-content-center text-center" style="padding: 0em;">
+        					<strong>Not<br>Suspicious</strong>
+					    </div>
+        		</div>
+            </div>
+            <div class='w-100 d-md-none'></div>
+            <div class="col" id="elementMildlySuspicious" style="padding: 0em; min-width: 128px; max-width: 50%; margin: auto; opacity: 0.3;">
+        		<div class="d-flex align-items-center result-box" style="background: #ffd452; border-color: #ffb752;">
+        				<div class="container justify-content-center text-center" style="padding: 0em;">
+        					<strong>Mildly<br>Suspicious</strong>
+					    </div>
+        		</div>
+            </div>
+            <div class='w-100 d-md-none'></div>
+            <div class="col" id="elementModeratelySuspicious" style="padding: 0em; min-width: 128px; max-width: 50%; margin: auto; opacity: 0.3;">
+        		<div class="d-flex align-items-center result-box" style="background: #ffa852; border-color: #ff8b52;">
+        				<div class="container justify-content-center text-center" style="padding: 0em;">
+        					<strong>Moderately<br>Suspicious</strong>
+					    </div>
+        		</div>
+            </div>
+            <div class='w-100 d-md-none'></div>
+            <div class="col" id="elementHighlySuspicious" style="padding: 0em; min-width: 128px; max-width: 50%; margin: auto; opacity: 0.3;">
+        		<div class="d-flex align-items-center result-box" style="background: #ff7d52; border-color: #ff6052;">
+        				<div class="container justify-content-center text-center" style="padding: 0em;">
+        					<strong>Highly<br>Suspicious</strong>
+					    </div>
+        		</div>
+            </div>
+            <div class='w-100 d-md-none'></div>
+        </div>
+
+        <!-- Recommendation -->
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+                <h4 class="mt-5">Recommendation</h4>
+            </div>
+        </div>
+
+        <div class="row" id="recommendationElements">
+                <div class="d-flex align-items-center result-box" style="max-width: 25%; min-width: 224px;">
+                        <div class="container justify-content-center text-center" style="padding: 0em;">
+                            <font size="+1"><strong><span id="recommendation">No FNA</span></strong></font>
+                        </div>
+                </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="row justify-content-center" style="padding-top: 2.5em;">
+            <div id="disclaimer" class="d-flex align-items-center text-center disclaimer-box">
+                THIS WEBSITE IS PROVIDED SOLELY FOR GENERAL, NONCOMMERCIAL INFORMATIONAL PURPOSES ONLY. 
+                IT DOES NOT CONSTITUTE THE PRACTICE OF MEDICAL OR ANY OTHER PROFESSIONAL JUDGMENT, ADVICE, DIAGNOSIS OR TREATMENT, AND SHOULD NOT BE CONSIDERED OR USED AS A SUBSTITUTE FOR THE INDEPENDENT PROFESSIONAL JUDGMENT, ADVICE, DIAGNOSIS OR TREATMENT OF A DULY-LICENSED AND QUALIFIED HEALTHCARE PROVIDER.
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <span class="text-muted">&copy; <script>document.write(new Date().getFullYear());</script> <a href="https://mateuszbuda.github.io" target="_blank" style="color: inherit;">Mateusz Buda</a></span>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

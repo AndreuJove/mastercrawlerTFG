@@ -1,0 +1,129 @@
+<html>
+<head><base href="http://webs.iiitd.edu.in/raghava/bteval/">
+<meta HTTP-EQUIV="content-type" name="description" content="BTEVAL: EVALUATION OF BETA TURN PREDICTION METHODS">
+<meta name="keywords" content="Evaluation of Beta Turn Prediction Methods">
+<meta name="author" content="Harpreet Kaur, Research Fellow, BIC, IMTECH">
+<meta name="generator" content="Written by Harpreet Kaur in html">
+
+<TITLE>BTEVAL: EVALUATION OF BETA TURN PREDICTION METHODS</TITLE>
+<style><!--
+body,td,a,p,.h{font-family:arial,sans-serif;} .h{font-size: 20px;} .h{color:} .q{text-decoration:none; color:#0000cc;}
+//--></style>
+<script>
+<!--
+function sf(){document.f.q.focus();}
+function c(p){var f=document.f;if (f.action) {f.action = 'http://'+p;f.submit();return false;}return true;}
+// -->
+</script>
+
+</HEAD>
+
+<BODY bgcolor="white" link="red" vlink="red" alink="navy">
+
+
+<TABLE WIDTH="100%" bgcolor="red" ALIGN="CENTER" border="2">
+<TABLE ALIGN="CENTER" border="3" CELLSPACING="2" CELLPADDING="5" BGCOLOR="white">
+
+<TR><TD bgcolor="FFCC88"><FONT SIZE="5" COLOR="red">
+BTEVAL: EVALUATION OF BETA TURN PREDICTION METHODS</FONT></TH></TR>
+</TABLE>
+</TABLE>
+<TABLE ALIGN="CENTER" border="0" cellpadding="0" cellspacing="0"BGCOLOR=">
+
+<TR><TD bgcolor="FFCC88"><FONT SIZE="3" COLOR="red">
+<b><i><a href="http://webs.iiitd.edu.in/bic/">Bioinformatics Centre</a>, <a href="http://webs.iiitd.edu.in">Institute of Microbial Technology</a></i></b></FONT></TD></TR>
+</TABLE>
+<table align="right">
+<TR align="right"><TD>
+<b><a href="http://bioinformatics.uams.edu/mirror/bteval/"><FONT SIZE="4" COLOR="blue">Mirror Site at UAMS</FONT></a></b></TD></TR></table>
+<p>
+<BR><BR>
+<table border="0" cellspacing="0" cellpadding="0"><tr><td width="15">&nbsp;</td><td id=0 bgcolor="FFCC88" align="center" width="120" nowrap onClick="return c('index.html');" style=cursor:hand;><a id=1a class=q href="http://imtech.res.in/raghava/bteval/" onClick="return c('index.html');"><font color=blue size=-1><b>HOME</b></font></td><td width=15>&nbsp;</td><td id=1 bgcolor="FFCC88" align=center width=120 nowrap onClick="return c('http://imtech.res.in/raghava/betatpred/intro.html#bturn');" style=cursor:hand;><a id=1a class=q href="http://imtech.res.in/raghava/betatpred/intro.html#bturn" onClick="return c('http://imtech.res.in/raghava/betatpred/intro.html#bturn');"><font color="RED" size=-1><b>BETA TURNS</b></font></a></td><td width=15>&nbsp;</td><td id=2 bgcolor="FFCC88" align=center width=120 nowrap onClick="return c('dataset.html');" style=cursor:hand;><a id=2a class=q href="http://imtech.res.in/raghava/bteval/dataset.html" onClick="return c('dataset.html');"><font color="RED" size=-1><b>DATASETS</b></font></a></td><td width=15>&nbsp;</td><td id=3 bgcolor="FFCC88" align=center width=120 nowrap onClick="return c('measure.html');" style=cursor:hand;><a id=3a class=q href="http://imtech.res.in/raghava/bteval/measure.html" onClick="return c('measure.html');"><font color="RED" size=-1><b>PERFORMANCE MEASURES</b></font></a></td><td width=15>&nbsp;</td><td id=3b bgcolor="FFCC88" align=center width=120 nowrap onClick="return c('evaluate.html');" style=cursor:hand;><a id=3b class=q href="http://imtech.res.in/raghava/bteval/evaluate.html" onClick="return c('evaluate.html');"><font color="RED" size=-1><b>EVALUATION OF ALGORITHM</b></font></a></td><td width=15>&nbsp;</td><td id=4 bgcolor="FFCC88" align=center width=120 nowrap onClick="return c('help.html');" style=cursor:hand;><a id=4 class=q href="http://imtech.res.in/raghava/bteval/help.html" onClick="return c('help.html');"><font color="RED" size=-1><b>HELP</b></font></a></td><td width=15>&nbsp;</td><td width=15>&nbsp;</td><td id=4a bgcolor="FFCC88" align=center width=120 nowrap onClick="return c('http://imtech.res.in/raghava/bteval/ref.html');" style=cursor:hand;><a id=4a class=q href="http://imtech.res.in/raghava/bteval/refer.html" onClick="return c('http://imtech.res.in/raghava/bteval/refer.html');"><font color="RED" size=-1><b>REFERENCES</b></font></a></td><td width=15>&nbsp;</td><td id=4b bgcolor="FFCC88" align=center width=120 nowrap onClick="return c('http://imtech.res.in/raghava/betatpred/betapredteam.html');" style=cursor:hand;><a id=4b class=q href="mailto:raghava@iiitd.ac.in" onClick="return c('mailto:raghava@iiitd.ac.in');"><font color="RED" size=-1><b>CONTACT</b></font></a></td><td width=15>&nbsp;</td><td width=15>&nbsp;</td></tr><tr><td colspan=20 bgcolor=black><img width=3 height=1 alt=""></td></tr></table><br>
+
+<BR>
+
+<TABLE CELLSPACING=0 CELLPADDING=2>
+<TR>
+<td BGCOLOR="FFCC88">
+<FONT SIZE="4" COLOR="RED"><B>About BTEVAL</B></FONT><BR>
+</td>
+</tr>
+</table>
+<br>
+<table width=80% align="center" border="3" CELLSPACING="2" CELLPADDING="5" >
+<tr>
+<td bgcolor="FFCC88">
+<font size="4" color="black"><b>Beta turn is an important element of protein structure which plays an important role in protein folding and stability and molecular recognition. In the past three decades, numerous beta turn prediction methods have been developed based on various strategies. At present, it is difficult to say which method is better than the other. It is because of the fact that these methods have been developed on different data sets. Thus, it is important to evaluate the performance of new beta turn prediction algorithms and compare the performance with the already existing methods. The assessment of performance of a method will be important, both for users as well as developers, since it allows one to find the best method for their work and the developer to improve the method.<p>The aim of <font color=red>BTEVAL</font> server is to evaluate beta turn prediction algorithms on a uniform data set of 426 proteins or subsets of these proteins. It is the new data set in which no two protein chains have more that 25% sequence identity and each chain contains minimum one beta turn. The <a href="refer.html#ref9">PROMOTIF</a> program has been used to assign beta turns in these proteins. The performance of a method can be evaluated in terms of 4 different measures: <font color=red>Q<i>total</i></font>(or prediction accuracy), is the percentage of correctly classified residues; <font color=red>Q<i>pred</i></font>(or probability of correct prediction) is the percentage of correct prediction of beta turns; <font color=red>Q<i>obs</i></font> (or percentage coverage) is the percentage of observed beta turns that are correctly predicted and <font color=red>MCC</font> which accounts for both over and under-predictions. The performance of a method can be compared with the existing statistical algorithms such as <font color=red><a href="refer.html#ref2">Chou-Fasman algorithm</a></font>, <font color=red><a href="refer.html#ref11">Thornton's algorithm</a></font>, <font color=red><a href="refer.html#ref13">1-4 & 2-3 correlation model</a></font>, <font color=red><a href="refer.html#ref3">Sequence coupled model</a></font> and <font color=red><a href="refer.html#ref12">Gorbturn</a></font> and neural network based method <font color=red><a href="refer.html#ref10">BTPRED</a></font>. Thus, the server provides a benchmarking of different beta turn prediction methods.</b></font></td></tr>
+
+</table>
+<br><br>
+<P>
+<center>
+<font size="4" color="red"><b>Please cite the following paper if you are using BTEVAL for your research:</font><br><br>
+<font size="4" color="blue"><b>Kaur, H. and Raghava, G.P.S. (2002) An evaluation of beta-turn prediction methods.<a href="http://bioinformatics.oupjournals.org/cgi/content/abstract/18/11/1508"> Bioinformatics 18, 1508-14</a></b></font>
+<br><br>
+<font size="4" color="blue"><b>Kaur, H. and Raghava, G.P.S. (2003) BTEVAL: A server for evaluation of beta-turn prediction methods.<a href="http://www.worldscinet.com/jbcb/01/0103/S0219720003000253.html"> Journal of Bioinformatics and Computational Biology 3(1), 495-504.</a></b></font>
+
+</P>
+
+<HR NOSHADE WIDTH="100%">
+
+<p>
+<center>
+<font color=red face="geneva,arial" size="3"><b>
+[<a href="http://imtech.res.in/raghava/bteval/"><font color="blue">Home</font></a>] 
+[<a href="http://imtech.res.in/raghava/betatpred/intro.html#bturn">Beta Turns</a>] 
+[<a href="dataset.html">Datasets</a>] 
+[<a href="measure.html">Performance measures</a>] 
+[<a href="evaluate.html">Evaluation of algorithm</a>] 
+[<a href="help.html">Help</a>] 
+[<a href="refer.html">References</a>] 
+[<a href="mailto:raghava@iiitd.ac.in">Contact</a>] 
+</font>
+</center>
+</p>
+</BODY>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

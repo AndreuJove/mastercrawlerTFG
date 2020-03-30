@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+
+</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=800" />
+<meta name="description" content="" />
+<meta name="generator" content="EverWeb 1.7.3 (1342)" />
+<meta name="buildDate" content="mardi 10 février 2015" />
+<link rel="stylesheet" type="text/css" href="ew_css/textstyles.css" />
+<!--[if lt IE 9]>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<![endif]-->
+<!--[if (gte IE 9) | (!IE)]><!-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--<![endif]-->
+<script type="text/javascript" src="ew_js/imageCode.js"></script>
+
+<style type="text/css">
+.shape_2 {
+background: url('images/home/nav.png') repeat;
+}
+
+#navmenu_menu0 {
+clear:both;
+float:left;
+margin:0;
+padding:0;
+width:100%;
+font-family:'Arial',sans-serif;
+font-size:14px;
+z-index:1000;
+position:relative;
+}
+#navmenu_menu0 ul {
+margin:0;
+padding:0;
+list-style:none;
+position:relative;
+right:50%;
+float:right;
+}
+#navmenu_menu0 ul li {
+margin:0 30px 0 0;
+padding:0;
+float:left;
+position:relative;
+left:50%;
+}
+#navmenu_menu0 ul li a {
+display:block;
+margin:0;
+padding:0px;
+height: 16px;
+line-height: 16px;
+text-decoration:none;
+color:#FEFFFF;
+text-align: left;
+}
+#navmenu_menu0 ul li.active a {
+text-decoration:none;
+color:#FEFFFF;
+}
+#navmenu_menu0 ul li a:hover {
+text-decoration:underline;
+color:#FEFFFF;
+}
+#navmenu_menu0 ul li:hover a,
+#navmenu_menu0 ul li.hover a {
+text-decoration:underline;
+color:#FEFFFF;
+}
+#navmenu_menu0 ul ul {
+display:none;
+position:absolute;
+left:0;
+float:left;
+right:auto;
+padding-top:2px;
+}
+#navmenu_menu0 ul ul li {
+left:auto;
+margin:0;
+clear:left;
+float:left;
+width:100%;
+}
+#navmenu_menu0 ul ul li a,
+#navmenu_menu0 ul li.active li a,
+#navmenu_menu0 ul li:hover ul li a,
+#navmenu_menu0 ul li.hover ul li a {
+background:#FFFFFF;
+text-decoration:none;
+color:#FEFFFF;
+padding-top:0px;
+padding-bottom:0px;
+border-bottom:1px solid #000000;
+float:left;
+width:100%;
+text-align: left;
+white-space:nowrap;
+}
+#navmenu_menu0 ul ul li a:hover,
+#navmenu_menu0 ul li.active ul li a:hover,
+#navmenu_menu0 ul li:hover ul li a:hover,
+#navmenu_menu0 ul li.hover ul li a:hover {
+background:#FFFFFF;
+text-decoration:underline;
+color:#FEFFFF;
+float:left;
+}
+#navmenu_menu0 ul li.last ul {
+left:auto; 
+right:0;
+}
+#navmenu_menu0 ul li.last ul li {
+float:right;
+position:relative;
+right:0px;
+}
+#navmenu_menu0 ul li:hover ul,
+#navmenu_menu0 ul li.hover ul {
+display:block;
+}
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+
+.shape_2 {
+background: url('images/home/nav@2x.png') repeat;
+background-size: 66px 39px;
+}
+
+}
+a img {
+border:0px;
+}
+body {
+background-color: #EFEFEF;
+margin: 50px auto;
+}
+
+
+div.container {
+margin: 50px auto;
+width: 800px;
+height: 950px;
+background-color: #FEFFFF;
+}
+</style>
+</head>
+<body>
+
+<div class="shadow">
+<div class="container">
+<header>
+<div style="position:relative"><div class="shape_0" style="left:4px;top:15px;width:309px;height:60px;z-index: 0;position: absolute;"><div style="margin: 4.32px 2.16px 4.32px 2.16px; "><p style="line-height:42px;margin-top:0px;margin-bottom:11.25px;" class="Style1">CURVES+</p></div></div></div>
+
+<div style="position:relative"><div class="shape_2" style="left:9px;top:85px;width:779px;height:54px;z-index: 2;position: absolute;"></div></div>
+
+<div style="position:relative"><div class="ewnavmenu" id="navmenu_menu0" style="left:27px;top:90px;height:38px;width:744px;z-index:10003;position: absolute;"><ul><li><a class="main item0" href="index.html">HOME</a></li><li><a class="main item1" href="curves-user-guide.html">CURVES USER GUIDE</a></li><li><a class="main item2" href="canal-user-guide.html">CANAL USER GUIDE</a></li><li><a class="main item3" href="canion-user-guide.html">CANION USER GUIDE</a></li><li  style='margin-right:0px;' class="last"><a class="main item4" href="downloads.html">DOWNLOADS</a></li></ul></div></div>
+
+<div style="position:relative"><div class="shape_8" style="left:613px;top:44px;width:168px;height:29px;z-index: 8;position: absolute;"><div style="margin: 4.32px 4.32px 4.32px 4.32px; "><p style="line-height:16px;margin-top:0px;margin-bottom:6px;" class="Style10">Contact:<a href="mailto:r.lavery@ibcp.fr?subject=" class="linkStyle_11"> r.</a><a href="mailto:richard.lavery@ibcp.fr?subject=Curves+" class="linkStyle_11">lavery</a><a href="mailto:r.lavery@ibcp.fr?subject=" class="linkStyle_11">@ibcp.fr</a></p></div></div></div>
+</header>
+<div class="content">
+<div style="position:relative"><div class="shape_1" style="left:22px;top:151px;width:228px;height:466px;z-index: 1;position: absolute;"><div style="margin: 4.32px 2.16px 4.32px 2.16px; "><p style="line-height:17px;margin-top:0px;margin-bottom:0px;" class="Style2">Curves+ is a revised version of the Curves approaech for analysing the structure of nucleic acids. It respects the international conventions for nucleic acid analysis, runs much faster and provides new data.</p><p style="line-height:14px;" class="Style3"><br /></p><p style="line-height:17px;margin-bottom:0px;margin-top:0px;" class="Style2">As well as treating single nucleic acid structures, Curves+, with the help of Canal, can analyse molecular dynamics trajectories and generate time series, time averaged properties and search for correlations between variables.</p><p style="line-height:14px;" class="Style3"><br /></p><p style="line-height:17px;margin-bottom:0px;margin-top:0px;" class="Style2">In conjunction with Canion, Curves+ can now be used to analyze the distribution of ions or molecules around nucleic acids in curvilinear helicoidal coordinates.</p><p style="line-height:14px;" class="Style3"><br /></p><p style="line-height:17px;margin-bottom:0px;margin-top:0px;" class="Style2">Updates: 2/15</p><p style="line-height:17px;margin-bottom:0px;margin-top:0px;" class="Style2">Canal + user guide</p><p style="line-height:17px;margin-bottom:0px;margin-top:0px;" class="Style2">Canion + user guide</p></div></div></div>
+
+<div style="position:relative"><div style="left:594px;top:169px;height:316px;background: url('images/home/shape_shadow_4.png') no-repeat;width:202px;position: absolute;z-index:4"></div><div class="shape_4" style="left:594px;top:175px;width:190px;height:304px;z-index: 4;position: absolute;"><img src="images/home/TBP1.tiff" height="304" width="190" /></div></div>
+
+<div style="position:relative"><div style="left:283px;top:158px;height:190px;background: url('images/home/shape_shadow_5.png') no-repeat;width:257px;position: absolute;z-index:5"></div><div class="shape_5" style="left:282px;top:164px;width:245px;height:178px;z-index: 5;position: absolute;"><img src="images/home/shape_pic1.png" height="178" width="245" /></div></div>
+
+<div style="position:relative"><div style="left:314px;top:358px;height:240px;background: url('images/home/shape_shadow_6.png') no-repeat;width:256px;position: absolute;z-index:6"></div><div class="shape_6" style="left:314px;top:364px;width:244px;height:228px;z-index: 6;position: absolute;"><img src="images/home/AAAA.png" height="228" width="244" /></div></div>
+
+<div style="position:relative"><div class="shape_7" style="left:613px;top:519px;width:158px;height:39px;z-index: 7;position: absolute;"><div style="margin: 4.32px 2.16px 4.32px 2.16px; "><p align="center" style="line-height:21px;margin-top:0px;margin-bottom:11.25px;" class="linkStyle_4"><a href="references.html" class="linkStyle_7">Citing CURVES+</a></p></div></div></div>
+
+<div style="position:relative"><div class="shape_9" style="left:270px;top:638px;width:153px;height:23px;z-index: 9;position: absolute;"><p style="line-height:16px;margin-top:0px;margin-bottom:5.989583px;" class="Style10">© Richard Lavery 2015</p></div></div>
+</div>
+<footer>
+
+</footer>
+</div>
+</div>
+</body>
+</html>

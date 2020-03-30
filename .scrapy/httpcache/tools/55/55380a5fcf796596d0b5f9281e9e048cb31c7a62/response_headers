@@ -1,0 +1,14 @@
+Server: GitHub.com
+Content-Type: text/html
+Location: http://oss-lab.github.io/biojazz/
+X-Github-Request-Id: F9C4:090E:60CE78:7950DB:5E8239FA
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 18:47:50 GMT
+Via: 1.1 varnish
+Age: 1243
+X-Served-By: cache-mad22031-MAD
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1585594071.977649,VS0,VE0
+Vary: Accept-Encoding
+X-Fastly-Request-Id: ff66a4badd5549323e55b1f70d846b8229df20ac

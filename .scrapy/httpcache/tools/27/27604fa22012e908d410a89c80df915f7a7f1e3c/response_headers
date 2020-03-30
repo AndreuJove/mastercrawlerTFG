@@ -1,0 +1,13 @@
+Server: Varnish
+Retry-After: 0
+Location: https://pypi.python.org/pypi/bioservices
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 18:47:02 GMT
+X-Served-By: cache-mad22040-MAD
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1585594023.741049,VS0,VE0
+X-Frame-Options: deny
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none

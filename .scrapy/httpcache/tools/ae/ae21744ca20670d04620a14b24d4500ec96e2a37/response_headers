@@ -1,0 +1,9 @@
+Date: Mon, 30 Mar 2020 18:47:41 GMT
+Server: PasteWSGIServer/0.5 Python/2.7.11
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html; charset=UTF-8
+Location: /root?tool_id=toolshed.pasteur.fr%2Frepos%2Fafelten%2Fmicrobiome_analyses%2FCD-HIT%2F4.6.1
+Set-Cookie: galaxysession=3ce3e2281e4506fbdcda0f0cbef7474aeabc7e53d5f8e8eaa2fd0e2f16bd399273094a0f86929422; expires=Sun, 28-Jun-2020 20:47:41 GMT; httponly; Max-Age=7776000; Path=/; secure; Version=1
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=15768000; includeSubDomains

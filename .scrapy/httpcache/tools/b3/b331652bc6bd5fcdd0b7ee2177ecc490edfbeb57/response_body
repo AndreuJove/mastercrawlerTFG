@@ -1,0 +1,58 @@
+<html><head>
+<link rel="stylesheet" type="text/css" href="/help/Style/General.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Source+Sans+Pro" rel="stylesheet">
+<script src="/js/jquery-1.11.3.min.js"></script>
+<style>
+tr { vertical-align: top;}
+</style>
+<script>
+$( window ).load(function() {
+  $("#NEXT").removeAttr('disabled'); // enable
+  $("#ALLOKy").removeAttr('disabled'); // enable
+  $("#ALLOKn").removeAttr('disabled'); // enable
+});
+function popwin (url,w,h,name) {
+  if (w =='') w = 60;
+  if (h =='') h = 2;
+  name = 'popwin';
+  var settings= "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=" + w + ",height=" + h ;
+  external = window.open(url,name,settings);
+  external.focus();
+}
+</script>
+</head><body><form name='frm' method='post' enctype='multipart/form-data' accept-charset='UTF-8'>
+
+<table cellspacing='0' cellpadding='2' border='0'> 
+<tr valign='top' bgcolor=#a7c942><td colspan=4><nobr><b>AbLIFT</b> [required data 0% complete]
+<a href="/help/Help/Examples.html" target='examples'>Examples</a> and
+<a href="/help/Help/FAQ.html" target='examples'>Frequently Asked Questions</a>
+</nobr>
+<span class='fltright'><a href='searchwords' target='_searchwords'>Search words in help</a></span>
+</td></tr>
+<tr><td colspan='2'>
+  <div class='briefHelp' >If you are using AbLIFT for the first time, please read our <a href="/help/Help/About.html" target='about'>About</a> page.</td></tr><tr><td colspan='5'><br><div class='briefHelp' style='width:95%;'><table cellspacing='0' cellpadding='2' border='0'>
+  <tr><th></th><th></th><th></th><th></th></tr>
+  <tr bgcolor=#ffffff><td><nobr>Email address</nobr></td><td><input type='text' name='email' value='  ' size='30'></td><td><i>Valid email address to send the reports to. Enter multiple email addresses separated by commas, semicolons  or spaces.</i></td><td><center><center></td><td><img src="/transparent.gif" valign='top' width='16'></td></tr>
+<tr bgcolor=#eaf2d3><td><nobr>Term Of Use</nobr></td>
+<td><input type='checkbox' name='termsofuse' value='I accept the Terms and Conditions' size='30'><i>I accept the Terms and Conditions</i></td>
+<td><input type="image" src="/question.png" alt="" valign="top" width="16" onclick="javascript:popwin(&quot;/AbLIFT_TermsOfUse.pdf&quot;,600,400);return false;">
+</td><td><center><center></td><td><img src="/transparent.gif" valign='top' width='16'></td></tr></table></div></td></tr>
+<tr><td colspan=4><br><input type='submit' name='act' value='Next step' id='NEXT' disabled='disabled'>
+</td></tr>
+<tr><td colspan='4'><div class='briefHelp' style='width:95%;padding:10px;'>Questions and support<br>
+<nobr>Algorithm and processing: Rosalie Lipsh rosalipsh@gmail.com</nobr><br>
+<nobr>Server: Jaime Prilusky jaime.prilusky@weizmann.ac.il</nobr><br>
+<nobr>Overview: Sarel Fleishman sarel.fleishman@weizmann.ac.il</nobr><br>
+</div></td></tr>
+
+<tr><td colspan='4'><div class='notice' style='width:95%;padding:10px;font-weight: bold;'>
+AbLIFT is free to academic users. <br>
+Commercial users, please email
+<a href="mailto:info.yeda@weizmann.ac.il">info.yeda@weizmann.ac.il</a> and cc
+<a href="mailto:sarel.fleishman@weizmann.ac.il">sarel.fleishman@weizmann.ac.il</a></div></td></tr>
+
+<tr><td colspan='4'><div class='briefHelp' style='width:95%;padding:10px;'>
+<b>Please cite:</b><br><br>
+</div></td></tr>
+
+</table><input type='hidden' name='OK' value='2d2d2d207b7d0a'><input type='hidden' name='lastStep' value=''></form></body></html>

@@ -20,7 +20,7 @@ class ToolsSpider(CrawlSpider):
 
     def start_requests(self):
         for url in self.start_urls:
-            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : True,  'download_timeout' : 15, 'id' : url['id'], 'name' : url['name'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
+            req = scrapy.Request(url = url['url'], callback = self.parse_httpbin, meta = {'handle_httpstatus_all' : False, 'dont_retry' : False,  'download_timeout' : 20, 'id' : url['id'], 'name' : url['name'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
             yield req
 
     def parseHtmlTags(self, tagsList):
@@ -80,10 +80,10 @@ class ToolsSpider(CrawlSpider):
         toolItem ['idTool'] = idTool
         toolItem ['bodyContent'] = len(response.text) - lenScriptsTagsText
         toolItem ['httpCode'] = response.status
-        toolItem ['scriptsTagsText'] = scriptsTagsText
+        #toolItem ['scriptsTagsText'] = scriptsTagsText
         toolItem ['lenScriptsTagsText'] = lenScriptsTagsText
         
-        #toolItem ['JavaScript'] = "No"
+        toolItem ['JavaScript'] = "No"
 
         
 
@@ -93,20 +93,20 @@ class ToolsSpider(CrawlSpider):
         toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
         
 
-        # toolItem ['h1'] = h1ListOut
-        # toolItem ['h2'] = h2ListOut
-        # toolItem ['h3'] = h3ListOut
-        # toolItem ['h4'] = h4ListOut
+        toolItem ['h1'] = h1ListOut
+        toolItem ['h2'] = h2ListOut
+        toolItem ['h3'] = h3ListOut
+        toolItem ['h4'] = h4ListOut
 
         #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers:
         toolItem ['latency'] = latency
         
-        toolItem ['redirect_reasons'] = redirect_reasons
-        toolItem ['redirectUrls'] = redirectUrls
+        #toolItem ['redirect_reasons'] = redirect_reasons
+        #toolItem ['redirectUrls'] = redirectUrls
        
         toolItem ['numberRelativeLinks'] = len(relativeLinks)
         toolItem ['numberExternalLinks'] = len(externalLinks)
-        toolItem ['externalLinks'] = externalLinks
+        #toolItem ['externalLinks'] = externalLinks
         #toolItem ['relativeLinks'] = relativeLinks
         yield toolItem
         
@@ -122,16 +122,18 @@ class ToolsSpider(CrawlSpider):
         if failure.check(HttpError):
             toolItem ['idTool'] = idUrl
             toolItem ['httpCode'] = HttpError
-            toolItem ['nameTool'] = nameTool
+            #toolItem ['nameTool'] = nameTool
             toolItem ['urlTool'] = request.url
+            toolItem ['JavaScript'] = "No"
             yield (toolItem)
                   
         elif failure.check(DNSLookupError):
             toolItem ['idTool'] = idUrl
             toolItem ['bodyContent'] = 0
             toolItem ['httpCode'] = str(failure.type())
-            toolItem ['nameTool'] = nameTool
+            #toolItem ['nameTool'] = nameTool
             toolItem ['urlTool'] = request.url
+            toolItem ['JavaScript'] = "No"
             
             yield (toolItem)
             #self.logger.error('DNSLookupError on %s', request.url)
@@ -139,39 +141,48 @@ class ToolsSpider(CrawlSpider):
         elif failure.check(TimeoutError, TCPTimedOutError):
             toolItem ['idTool'] = idUrl
             toolItem ['bodyContent'] = 0
-            toolItem ['nameTool'] = nameTool
+            #toolItem ['nameTool'] = nameTool
             toolItem ['httpCode'] = str(failure.type())
             toolItem ['urlTool'] = request.url
+            toolItem ['JavaScript'] = "No"
             yield (toolItem)
 
         elif failure.check(ConnectError):
             toolItem ['idTool'] = idUrl
-            toolItem ['nameTool'] = nameTool
+            #toolItem ['nameTool'] = nameTool
+            toolItem ['bodyContent'] = 0
             toolItem ['httpCode'] = ConnectError
             toolItem ['urlTool'] = request.url
+            toolItem ['JavaScript'] = "No"
             yield (toolItem)
         
         elif failure.check(ConnectionRefusedError):
             toolItem ['idTool'] = idUrl
-            toolItem ['nameTool'] = nameTool
+            #toolItem ['nameTool'] = nameTool
+            toolItem ['bodyContent'] = 0
             toolItem ['httpCode'] = ConnectionRefusedError
             toolItem ['urlTool'] = request.url
+            toolItem ['JavaScript'] = "No" 
             yield (toolItem)
         
         elif failure.check(ResponseFailed):
             toolItem ['idTool'] = idUrl
-            toolItem ['nameTool'] = nameTool
+            toolItem ['bodyContent'] = 0
+            #toolItem ['nameTool'] = nameTool
             #toolItem ['httpCode'] = str(failure.type())
             #TypeError: __init__() missing 1 required positional argument: 'reasons'
             toolItem ['httpCode'] = ResponseFailed
             toolItem ['urlTool'] = request.url
+            toolItem ['JavaScript'] = "No" 
             yield (toolItem)
 
         elif failure.check(ResponseNeverReceived):
             toolItem ['idTool'] = idUrl
-            toolItem ['nameTool'] = nameTool
+            toolItem ['bodyContent'] = 0
+            #toolItem ['nameTool'] = nameTool
             toolItem ['httpCode'] = ResponseNeverReceived
             toolItem ['urlTool'] = request.url
+            toolItem ['JavaScript'] = "No" 
             yield (toolItem)
 
         

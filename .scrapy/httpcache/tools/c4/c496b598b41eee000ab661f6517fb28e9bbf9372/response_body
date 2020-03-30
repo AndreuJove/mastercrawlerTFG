@@ -1,0 +1,77 @@
+<html>
+
+<head><base href="http://webs.iiitd.edu.in/raghava/antibp/">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Antimicrobial Peptides</title>
+<style type="text/css">
+#navigate a{font-family: Verdana;font-style : normal ;font-size : 10pt; font-weight :bold;text-decoration : none; color :#FFFFFF;margin-left:20% }
+#navigate a:hover{font-family: Verdana;font-style : normal ;font-size : 10pt; font-weight :bold;text-decoration : none; color :#000000 ;margin-left:20%}
+h1{ font-family: Verdana;font-style : normal ;font-size : 16pt; font-weight :bold;text-align : left;margin-left:30px;color:#B955CE}
+p{ font-family: Verdana;font-style : normal ;font-size : 10pt; font-weight :normal;text-align : left; text-indent : 1em;margin-left:30px; color :#800080}
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginheight="0" marginwidth="0" bgcolor="#FFFFFF">
+<a name="begin"></a>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" background="topbkg.gif">
+  <tr valign="top">
+    <td width="100%" height="104px" STYLE="background-image : URL(topleftblank.gif); background-repeat : no-repeat"><h1 STYLE="font-family: Arial;font-style : italic ;font-size : 27pt; font-weight :bold;text-align : left; color :#FFFFFF;margin:0;margin-left:2px;padding:0">AntiBP Server</h1>
+<p STYLE="font-family: Arial;font-style : normal ;font-size : 14pt; font-weight :bold;text-align : left; color :#FFFFFF;margin:0;margin-left:5px;padding:0">A server for the prediction of the antibacterial peptides <!--img border="0" src="new1.jpg" width="1050" height="200"---> </p></td>
+  </tr> 
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  
+ 
+   <td width="175px" valign="top" background="side.gif"><img border="0" src="spacer.gif" width="175" height="30">
+<table ID="navigate" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top"><td STYLE=";background-image : URL(but1.gif);
+background-repeat : no-repeat; width :175px;height:30px"><a
+href="index.html">HOMEPAGE</a></td></tr>
+<tr valign="top"><td STYLE=";background-image : URL(but1.gif); background-repeat : no-repeat; width :175px;height:30px"><a href=" map.html">PEPTIDE MAPPING</a></td></tr>
+<tr valign="top"><td STYLE=";background-image : URL(but2.gif); background-repeat : no-repeat; width :175px;height:30px"><a href="submit.html">SUBMIT</a></td></tr>
+<tr valign="top"><td STYLE=";background-image : URL(but3.gif); background-repeat : no-repeat; width :175px;height:30px"><a href="help.html">HELP</a></td></tr>
+<tr valign="top"><td STYLE=";background-image : URL(but4.gif);
+background-repeat : no-repeat; width :175px;height:30px"><a
+href="algo.html">ALGORITHM</a></td></tr>
+<tr valign="top"><td STYLE=";background-image : URL(but5.gif); background-repeat : no-repeat; width :175px;height:30px"><a href="team.html">TEAM</a></td></tr>
+<tr valign="top"><td STYLE=";background-image : URL(but6.gif); background-repeat : no-repeat; width :175px;height:30px"><a href="contact.html">CONTACT</a></td></tr>
+<!--tr><td STYLE=";background-image : URL(but6.gif); background-repeat : no-repeat; width :175px;height:19px"><a href="contact.html">CONTACT</a></td></tr-->
+
+
+</table>
+         
+      
+      &nbsp;<br>
+      &nbsp;
+     <p>&nbsp;</td>
+ <!--TD width=50%></TD> -->
+    <td  align="right"><font size="4" color="black"><br> <img border="0" src="new1.jpg" width="600" height="200">
+<p><div align="justify"> Antibp server predicts the antibacterial peptides in a protein sequence.Prediction can be done by using QM,ANN and SVM based methods using binary patterns of peptide sequences and overall accuracy of this server is ~92.11%.This server can help in finding and designing of peptides based antibiotics.</div></p> <br>
+
+<p><div align="justify"><font face="Times new roman" color="brown" size=3>If You are using this server, please site:<br><a href="http://www.biomedcentral.com/content/pdf/1471-2105-8-263.pdf"><u>Sneh Lata, B K Sharma, G P S Raghava. <b>Analysis and prediction of antibacterial peptides.</b><i> BMC Bioinformatics</i> 2007, 8:263</u></a></font>
+
+<br><br>Download dataset used in this server from <a href="antibp.tar.gz">Here</a><br>
+</div></p><br>
+<td width="15%">  
+ 
+</td>
+
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" background="botbkg.gif"> 
+
+ <tr>
+
+      <td width="100%" height="12"><p STYLE="font-family: Arial;font-style : normal ;font-size : 12pt; 
+font-weight :bold;text-align : center; color :#FFFFFF"+>Bioinformatics Center,Institute Of Microbial Technology,Chandigarh,India</td>
+  </tr>
+</table>
+
+<br><br><br>
+
+</body>
+
+</html>
+
+
+
+

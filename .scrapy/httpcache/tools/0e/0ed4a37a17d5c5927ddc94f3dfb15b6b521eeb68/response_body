@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <link rel="stylesheet" href="/static_files/styles/gtt_lab_styles.css" type="text/css" media="all" charset="utf-8">
+        <link rel="stylesheet" href="/static_files/algorithms/ccsol/additional.css" type="text/css" media="all" charset="utf-8">
+
+		<title>CCSOL</title>
+	</head>
+
+	<body>
+
+		<div id="topbar">
+			<div id="home_panel">
+			<p><a href="/">Portal Home</a></p>
+			</div>
+			<div id="title_server">
+				<h1>CCSOL</h1>
+			</div>
+			<div id="navbar_server">
+				<h3>[
+                            <a target="" href="/static_files/shared/Agostini_JMB_2012.pdf">Documentation
+</a>
+                             -
+                            <a target="" href="/page/contact">Relevant publications
+</a>
+                             -
+                            <a target="" href="/static_files/shared/licensing_notice.html">Licensing Notice
+</a>
+                             -
+                            <a target="" href="http://pasteur.crg.es/portal/page/portal/827A462EAB6802B3E04012AC0E01291B">Group page @ CRG
+</a>
+                 ]</h3>
+			</div>
+		</div>
+
+		<div id="welcome_server">
+			<img src="/static_files/algorithms/ccsol/logo.png" />
+			<h2>CCSOL</h2>
+            <p id="task_description"><p id="task_description">We developed a predictor of protein solubility based on the physicochemical properties of amino acid sequences. We found that disorder, coil and hydrophilicity propensities best discriminate between soluble and insoluble proteins. Polar residues are associated with high coil and disorder propensities P, E, S, K and Q are the most disorder-prone residues and N, D, G, H and P are the most coil-prone ones.</p>
+</p>
+			<br>
+			<br>
+
+			<div id="left_column">
+			    &nbsp;
+			</div>
+
+			<div id="right_column">
+
+                <!-- Do not modify below this line please -->
+
+                <script src="/static_files/js/jquery-1.7.2.min.js"></script>
+                <script src="/static_files/js/shared.js"></script>
+                <script type="text/javascript">
+                    // alert("test")
+                </script>
+
+                <h2>Submission reference: 256811</h2>
+
+                <br />
+                <!-- {u&#039;submission_id&#039;: u&#039;256811&#039;, u&#039;submitted&#039;: u&#039;False&#039;, u&#039;task_name&#039;: u&#039;ccsol&#039;, u&#039;directory&#039;: u&#039;submissions/2020-03/256811/&#039;, u&#039;submission_id_padded&#039;: u&#039;00000000000000256811&#039;, u&#039;submitter_ip&#039;: u&#039;79.152.50.41&#039;} -->
+
+
+
+                <form id="formfields">
+                <div class="form_row " id="title_row">
+                    <span id="title_description" class="description">
+                        <p>Submission label (optional)</p>
+                    </span>
+                        <input id="title" name="title" class="text  " type="text" value="">
+                        </input><br />
+
+			        <br />
+                </div>
+                <div class="form_row " id="protein_seq_row">
+                    <span id="protein_seq_description" class="description">
+                        <p>Protein sequence (FASTA format)</p>
+                    </span>
+
+
+
+                    <!-- TODO enable restore of this one after refresh -->
+                        <textarea  data-min_length="50" data-max_length="10000" id="protein_seq" name="protein_seq" class="textarea required "></textarea><br />
+			        <br />
+                </div>
+                <div class="form_row " id="email_row">
+                    <span id="email_description" class="description">
+                        <p>Email address (optional, used for notification)</p>
+                    </span>
+                        <input id="email" name="email" class="email  " type="text" value="">
+                        </input><br />
+
+			        <br />
+                </div>
+
+
+                </form>
+                <!-- {} -->
+
+                <br /><br />
+
+                <div>
+                    <p>
+                        Submission status:
+                        <span id="cur_status"></span>
+                        <input type="submit" disabled="disabled" class='' id="submitButton"  />
+                    </p>
+
+                </div>
+                <br /><br />
+                <div>
+                    <h2>Sample data</h2>
+                    <p>Just trying it out? Pre-populate the form with: (<b>Please, check that you do not have active proxies!</b>)</p>
+                    <dl>
+                            <dt style="padding-bottom:0.5em;">
+
+                                <a href="/implement_example/256811/766">GPR3</a>
+                                 - The solubility of the transmembrane G-protein coupled receptor 3
+                            </dt>
+                            <dt style="padding-bottom:0.5em;">
+
+                                <a href="/implement_example/256811/767">Serum Albumin</a>
+                                 - The solubility of the serum albumin plasma protein
+                            </dt>
+                    </dl>
+                </div>
+
+
+                <script type="text/javascript">
+
+                $('#submitButton').click(function() {
+                    $('#submitButton').val("Verifying...")
+                    var return_val = test_form(true) //force synchronous ajax
+                    // alert(return_val)
+                    // enforce form post
+                    if (return_val) {
+                        try {
+                        clearInterval(form_send_timer)
+                        } catch (err) {
+                            console.log(err)
+                        }
+                        var url_submit = "/submit/256811";
+                        $('#submitButton').val("Sending...")
+                        $(this).attr("readonly", "readonly");
+
+                        outer_handle = function() {
+
+                            inner_handle = function(req) {
+                                // wait for a few seconds and reload, hacky way to fix submissions
+                                setTimeout(function() {
+                                    document.getElementById('cur_status').innerHTML = "Reloading...";
+                                    // alert(req.responseText)
+                                    location.reload(true)
+                                }, 5000);
+                            };
+                            xml_http_post(url_submit, data, inner_handle)
+                        }
+
+                        // wait for 4s for everything to settle down a bit
+                        // very bad practise but has to suffice atm
+                        setTimeout(outer_handle, 4000)
+                        // TODO change this to jquery
+                    } else {
+                        // form was not ok!
+                        alert("The form is not valid. Please check!")
+                        $('#submitButton').val("Submit")
+                        $("#submitButton").attr("disabled", "disabled");
+                    }
+
+
+                    return false;
+                });
+
+                function status_updater() {
+                    var test = {"fun":"temps", "data":""};
+                    data = JSON.stringify(test)
+                    inner_handle = function(req) {
+                        document.getElementById('cur_status').innerHTML = req.responseText;
+                        // alert(req.responseText)
+                        var pattern = /^.*Complete/
+                        str = String(req.responseText)
+                        if (str.match(pattern)) {
+                            $("#submitButton").removeAttr("disabled");
+                        } else {
+                            $("#submitButton").attr("disabled", "disabled");
+                            // alert("no"+str)
+                        }
+                    };
+                    xml_http_post("/submission_status/256811", data, inner_handle)
+
+                    // submit data
+                    $.ajax({
+                        type: "POST",
+                        url: "/form_submit/256811",
+                        data: $("#formfields").serialize(),
+                        success: function(data) {
+                            // submit here?
+                        },
+                        async:   true,
+                    });
+
+                }
+                status_updater()
+                status_timer = window.setInterval(status_updater, 5000);
+
+
+
+                function isValidEmailAddress(emailAddress) {
+                    var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+                    return pattern.test(emailAddress);
+                };
+
+
+
+                // form_send_data()
+                // form_send_timer = window.setInterval(form_send_data, 1000);
+
+                var submission_id = 256811
+
+
+                function test_form(blocking_post) {
+                    var is_async
+                    if (blocking_post) {
+                        is_async = false
+                    } else {
+                        is_async = true
+                    }
+
+                    var emails = $("input.email")
+                    var required_fields = $("form#formfields .required")
+
+                    // test for email fields validity
+                    var complete = true
+
+                    var references = $("form#formfields input.reference")
+
+
+                    required_fields.each(function(index,item) {
+                        if (item.value == "") {
+                            complete = false
+                            $(this).addClass("wrong_field")
+                        } else {
+                            $(this).removeClass("wrong_field")
+                        }
+                    })
+
+                    // length-limited text areas
+                    var textareas = $("form#formfields textarea")
+
+                    textareas.each(function (index, item) {
+                        var char_count = $(this).val().length
+
+                        var is_correct = true
+
+                        if ($(this).data("min_length")) {
+                            // add check for the length
+                            var min_length = $(this).data("min_length")
+                            if (char_count < min_length) {
+                                is_correct = false
+                            }
+                        }
+
+                        if (is_correct && $(this).data("max_length")) {
+                            // add check for the length
+                            var max_length = $(this).data("max_length")
+                            if (char_count > max_length) {
+                                is_correct = false
+                            }
+                        }
+
+                        if (is_correct) {
+                            $(this).removeClass("wrong_field")
+                        } else {
+                            $(this).addClass("wrong_field")
+                            complete = false
+                        }
+                    })
+
+                    emails.each(function(index, item) {
+                        if (!isValidEmailAddress(item.value) && item.value != "") {
+                            complete = false
+                            $(this).addClass("wrong_field")
+                        } else {
+                            $(this).removeClass("wrong_field")
+                        }
+                        // alert(item.value)
+                    })
+
+
+                    references.each(function(index,item) {
+                        // check the reference
+                        // alert(submission_id);
+
+                        // get parent
+                        var parent_row = $(item).parent(".form_row")
+
+                        // based on visibility the check is performed/skipped
+                        var is_visible = parent_row.is(":visible")
+                        var me = $(this)
+                        if (is_visible) {
+                            console.log("visible")
+
+                            var field_name = item.name
+                            var field_value = item.value
+
+                            var callback_url  = "/reference_info/"+ submission_id+"/"+encodeURIComponent(field_name)+
+                                                "/"+encodeURIComponent(field_value)+"/"
+
+                            // TODO add password check
+
+                            // alert(callback_url)
+
+                            complete = false
+                            // $(this).addClass("wrong_field")
+
+                            me.removeClass("wrong_field")
+                            jQuery.ajax({
+                                 url:    callback_url,
+                                 success: function(result) {
+                                                if(result == "reference_is_ok") {
+                                                     complete = true
+                                                     me.removeClass("wrong_field")
+                                                     // alert("all ok")
+                                                     // TODO - this will not work
+                                                     // when we have more fields,
+                                                     // FIX later
+                                                     $.ajax({
+                                                         type: "POST",
+                                                         url: "/form_submit/256811",
+                                                         data: $("#formfields").serialize(),
+                                                         success: function(data) {
+                                                             // submit here?
+                                                         },
+                                                         async:   true,
+                                                     });
+                                                } else {
+                                                    me.addClass("wrong_field")
+                                                }
+                                          },
+                                  error: function(res) {
+                                        me.addClass("wrong_field")
+                                  },
+                                  async:   is_async
+                              });
+                                    //
+                        } else {
+                            console.log("Invisible reference, not checking..")
+                            me.removeClass("wrong_field")
+                            me.addClass("wrong_field")
+                        }
+                    })
+
+                    // TODO - for submission, this request
+                    // must not be async
+                    if (complete) {
+                        // alert("form complete!")
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/form_submit/256811",
+                            data: $("#formfields").serialize(),
+                            success: function(data) {
+                                // submit here?
+                            },
+                            async:   is_async,
+                        });
+                    } else {
+                        // alert("form incomplete!")
+                        // disable the form
+                        // console.log("form incomplete")
+                        $('.frozen').attr("readonly", "readonly");
+                        $('.frozen').attr("disabled", "disabled");
+                        $("#submitButton.frozen").hide();
+                    }
+
+                    // console.log("runnin?")
+                    // console.log(complete)
+
+                    // return false
+                    return complete
+                }
+
+                // TODO - timer disabled for now, the execution happen on the submit
+                // form_send_timer = window.setInterval(test_form, 5000);
+                test_form()
+
+
+
+                // $("#formfields input").blur(function() {
+                //     test();
+                // })
+
+                </script>
+                <style type="text/css">
+                    .wrong_field {
+                        border: 2px solid red;
+                    }
+                    .frozen {
+
+                    }
+
+                    input.reference {
+                        width:200px;
+                    }
+                </style>
+
+                <script type="text/javascript" charset="utf-8">
+                    $().ready(function(){
+
+                        $(".init_hidden").each(function(index, item) {
+                            $(item).hide()
+                        })
+                    })
+                </script>
+                <!--{&#039;title_styled&#039;: &#039;&lt;i&gt;cc&lt;/i&gt;Sol\n&#039;, &#039;description&#039;: &#039;&lt;p id=&quot;task_description&quot;&gt;We developed a predictor of protein solubility based on the physicochemical properties of amino acid sequences. We found that disorder, coil and hydrophilicity propensities best discriminate between soluble and insoluble proteins. Polar residues are associated with high coil and disorder propensities P, E, S, K and Q are the most disorder-prone residues and N, D, G, H and P are the most coil-prone ones.&lt;/p&gt;\n&#039;, &#039;algorithm&#039;: {&#039;command&#039;: &#039;ccsol.py -output_dir=&lt;output_dir&gt;&#039;, &#039;processing_timeout&#039;: 600}, &#039;title&#039;: &#039;CCSOL&#039;, &#039;description_short&#039;: &#039;a tool to predict the solubility of individual proteins based on physicochemical properties\n&#039;, &#039;form_fields&#039;: [{&#039;required&#039;: False, &#039;type&#039;: &#039;text&#039;, &#039;name&#039;: &#039;title&#039;, &#039;description&#039;: &#039;Submission label (optional)&#039;}, {&#039;min_length&#039;: 50, &#039;max_length&#039;: 10000, &#039;name&#039;: &#039;protein_seq&#039;, &#039;required&#039;: True, &#039;type&#039;: &#039;textarea&#039;, &#039;description&#039;: &#039;Protein sequence (FASTA format)&#039;}, {&#039;required&#039;: False, &#039;type&#039;: &#039;email&#039;, &#039;name&#039;: &#039;email&#039;, &#039;description&#039;: &#039;Email address (optional, used for notification)&#039;}], &#039;version&#039;: 1.0, &#039;examples&#039;: [{&#039;title&#039;: &#039;GPR3&#039;, &#039;description&#039;: &#039;The solubility of the transmembrane G-protein coupled receptor 3&#039;, &#039;reference_id&#039;: 766}, {&#039;title&#039;: &#039;Serum Albumin&#039;, &#039;description&#039;: &#039;The solubility of the serum albumin plasma protein&#039;, &#039;reference_id&#039;: 767}], &#039;output&#039;: [None], &#039;nav_links&#039;: [{&#039;href&#039;: &#039;/static_files/shared/Agostini_JMB_2012.pdf        \n&#039;, &#039;title&#039;: &#039;Documentation\n&#039;}, {&#039;href&#039;: &#039;/page/contact                        \n&#039;, &#039;title&#039;: &#039;Relevant publications\n&#039;}, {&#039;href&#039;: &#039;/static_files/shared/licensing_notice.html  \n&#039;, &#039;title&#039;: &#039;Licensing Notice\n&#039;}, {&#039;href&#039;: &#039;http://pasteur.crg.es/portal/page/portal/827A462EAB6802B3E04012AC0E01291B\n&#039;, &#039;title&#039;: &#039;Group page @ CRG\n&#039;}], &#039;name&#039;: &#039;ccsol&#039;}-->
+
+    			<br />
+			</div>
+			<br />
+         </div>
+		<div id="footer_main">
+            <br />
+			<hr>
+			<p>&copy; 2012 - <a href="http://big.crg.cat/gene_function_and_evolution" target="_blank">Gene Function and Evolution</a> - <a href="http://www.crg.eu" target="_blank">Center for Genomic Regulation (CRG)</a></p>
+		</div>
+
+	</body>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38065167-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</html>

@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script type="application/shiny-singletons">398577c9a63b333cdec14af5a6de55e6a7ba805c,89d95af60b690df7296adbe1450c52c8efba4b2a</script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.12.4];shiny[1.0.5];selectize[0.11.2];ionrangeslider[2.1.6];strftime[0.9.2];shinyBS[0.61];font-awesome[4.7.0];datatables[1.10.5];datatables-bootstrap[1.10.5];bootstrap[3.3.7]</script>
+<script src="shared/json2-min.js"></script>
+<script src="shared/jquery.min.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.min.js"></script>
+<link href="shared/selectize/css/selectize.bootstrap3.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+<script src="shared/selectize/js/es5-shim.min.js"></script>
+<![endif]-->
+<script src="shared/selectize/js/selectize.min.js"></script>
+<link href="shared/ionrangeslider/css/ion.rangeSlider.css" rel="stylesheet" />
+<link href="shared/ionrangeslider/css/ion.rangeSlider.skinShiny.css" rel="stylesheet" />
+<script src="shared/ionrangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="shared/strftime/strftime-min.js"></script>
+<link href="sbs/shinyBS.css" rel="stylesheet" />
+<script src="sbs/shinyBS.js"></script>
+<link href="shared/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<script src="shared/datatables/js/jquery.dataTables.min.js"></script>
+<link href="shared/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+<link href="shared/datatables/css/dataTables.extra.css" rel="stylesheet" />
+<script src="shared/datatables/js/dataTables.bootstrap.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="shared/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="shared/bootstrap/js/bootstrap.min.js"></script>
+<script src="shared/bootstrap/shim/html5shiv.min.js"></script>
+<script src="shared/bootstrap/shim/respond.min.js"></script>  <title>ClustVis: a web tool for visualizing clustering of multivariate data (BETA)</title>
+  <style>.shinyjs-hide { display: none !important; }</style>
+  <script>Shiny.addCustomMessageHandler('show', function(params) { shinyjs.debugMessage('shinyjs: calling function "show" with parameters:'); shinyjs.debugMessage(params); shinyjs.show(params);});
+Shiny.addCustomMessageHandler('hide', function(params) { shinyjs.debugMessage('shinyjs: calling function "hide" with parameters:'); shinyjs.debugMessage(params); shinyjs.hide(params);});
+Shiny.addCustomMessageHandler('toggle', function(params) { shinyjs.debugMessage('shinyjs: calling function "toggle" with parameters:'); shinyjs.debugMessage(params); shinyjs.toggle(params);});
+Shiny.addCustomMessageHandler('enable', function(params) { shinyjs.debugMessage('shinyjs: calling function "enable" with parameters:'); shinyjs.debugMessage(params); shinyjs.enable(params);});
+Shiny.addCustomMessageHandler('disable', function(params) { shinyjs.debugMessage('shinyjs: calling function "disable" with parameters:'); shinyjs.debugMessage(params); shinyjs.disable(params);});
+Shiny.addCustomMessageHandler('toggleState', function(params) { shinyjs.debugMessage('shinyjs: calling function "toggleState" with parameters:'); shinyjs.debugMessage(params); shinyjs.toggleState(params);});
+Shiny.addCustomMessageHandler('addClass', function(params) { shinyjs.debugMessage('shinyjs: calling function "addClass" with parameters:'); shinyjs.debugMessage(params); shinyjs.addClass(params);});
+Shiny.addCustomMessageHandler('removeClass', function(params) { shinyjs.debugMessage('shinyjs: calling function "removeClass" with parameters:'); shinyjs.debugMessage(params); shinyjs.removeClass(params);});
+Shiny.addCustomMessageHandler('toggleClass', function(params) { shinyjs.debugMessage('shinyjs: calling function "toggleClass" with parameters:'); shinyjs.debugMessage(params); shinyjs.toggleClass(params);});
+Shiny.addCustomMessageHandler('text', function(params) { shinyjs.debugMessage('shinyjs: calling function "text" with parameters:'); shinyjs.debugMessage(params); shinyjs.text(params);});
+Shiny.addCustomMessageHandler('onevent', function(params) { shinyjs.debugMessage('shinyjs: calling function "onevent" with parameters:'); shinyjs.debugMessage(params); shinyjs.onevent(params);});
+Shiny.addCustomMessageHandler('info', function(params) { shinyjs.debugMessage('shinyjs: calling function "info" with parameters:'); shinyjs.debugMessage(params); shinyjs.info(params);});
+Shiny.addCustomMessageHandler('logjs', function(params) { shinyjs.debugMessage('shinyjs: calling function "logjs" with parameters:'); shinyjs.debugMessage(params); shinyjs.logjs(params);});
+Shiny.addCustomMessageHandler('runjs', function(params) { shinyjs.debugMessage('shinyjs: calling function "runjs" with parameters:'); shinyjs.debugMessage(params); shinyjs.runjs(params);});
+Shiny.addCustomMessageHandler('reset', function(params) { shinyjs.debugMessage('shinyjs: calling function "reset" with parameters:'); shinyjs.debugMessage(params); shinyjs.reset(params);});
+Shiny.addCustomMessageHandler('delay', function(params) { shinyjs.debugMessage('shinyjs: calling function "delay" with parameters:'); shinyjs.debugMessage(params); shinyjs.delay(params);});</script>
+  <script src="shinyjs/shinyjs-default-funcs.js"></script>
+  <script>shinyjs.debug = false;</script>
+  <script>Shiny.addCustomMessageHandler('activateTooltips', function(params) { shinyjs.debugMessage('shinyjs: calling function "activateTooltips" with parameters:'); shinyjs.debugMessage(params); shinyjs.activateTooltips(params);});
+Shiny.addCustomMessageHandler('hideTooltips', function(params) { shinyjs.debugMessage('shinyjs: calling function "hideTooltips" with parameters:'); shinyjs.debugMessage(params); shinyjs.hideTooltips(params);});
+Shiny.addCustomMessageHandler('addHandlers', function(params) { shinyjs.debugMessage('shinyjs: calling function "addHandlers" with parameters:'); shinyjs.debugMessage(params); shinyjs.addHandlers(params);});
+Shiny.addCustomMessageHandler('changeClicked', function(params) { shinyjs.debugMessage('shinyjs: calling function "changeClicked" with parameters:'); shinyjs.debugMessage(params); shinyjs.changeClicked(params);});</script>
+  <script>
+shinyjs.activateTooltips = function(){
+  $('[data-toggle="tooltip"]').tooltip({container: 'body', html: true, placement: right});
+};
+shinyjs.hideTooltips = function(){
+  $('[data-toggle="tooltip"]').tooltip('hide');
+};
+shinyjs.addHandlers = function(){
+  $('[data-toggle="tooltip"][class="hmRow"],[data-toggle="tooltip"][class="hmCol"],[data-toggle="tooltip"][class="hmCell"]').click(function() {
+    Shiny.onInputChange('hmClickedObject', this.id);
+    Shiny.onInputChange('hmClickedType', $(this).attr('class'));
+  });
+  $('[data-toggle="tooltip"][class="pcaRow"],[data-toggle="tooltip"][class="pcaCol"],[data-toggle="tooltip"][class="pcaCell"]').click(function() {
+    Shiny.onInputChange('pcaClickedObject', this.id);
+    Shiny.onInputChange('pcaClickedType', $(this).attr('class'));
+  });
+}
+shinyjs.changeClicked = function(message){
+  Shiny.onInputChange(message.prefix + 'ClickedObject', message.newObject);
+  Shiny.onInputChange(message.prefix + 'ClickedType', message.newType);
+}
+</script>
+  <title>
+    <div class="row" style="margin-left:0px;">
+      <img src="frontPage/logo_small.png" width="125" style="margin-top:-10px; margin-right:-10px"/>
+      : a web tool for visualizing clustering of multivariate data (BETA)
+    </div>
+  </title>
+  <script type='text/javascript'>//<![CDATA[
+  			  $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip({container: 'body'});
+          });//]]> 
+				  </script>
+  <style type="text/css">.jslider { max-width: 220px; }</style>
+  <style type="text/css">.span4 { max-width: 265px; }</style>
+  <style type="text/css">.shiny-image-output { position:absolute;}</style>
+  <style type="text/css">.shiny-plot-output { position:absolute;}</style>
+  <style type="text/css">.rChart { height: 800px; }</style>
+  <style type="text/css">.col-sm-4 { max-width: 295px; }</style>
+  <style type="text/css">.nav { margin-bottom: 20px; }</style>
+  <style type="text/css">h1, h2, h3, h4, h5, h6 { font-weight: bold; padding: 0px 0px; }</style>
+  <style type="text/css">h2 { font-size: 31.5px; }</style>
+  <style type="text/css">.form-group { margin-bottom: 10px; }</style>
+  <style type="text/css">div[id$='track'] { color: blue; }</style>
+  <style type="text/css">div[id$='tracksub'] { color: green; }</style>
+  <style type="text/css">div[id$='trackChangeAll'] { color: red; }</style>
+  <style type="text/css">textarea { width: 220px; }</style>
+  <style type="text/css">.pcaCol:hover, .pcaCol:focus, .pcaCol:active { cursor: pointer; }</style>
+  <style type="text/css">.hmCell:hover, .hmCell:focus, .hmCell:active, .pcaCell:hover, .pcaCell:focus, .pcaCell:active { cursor: pointer; stroke: red; stroke-width: 2px;}</style>
+  <style type="text/css">.hmRow:hover, .hmRow:focus, .hmRow:active, .hmCol:hover, .hmCol:focus, .hmCol:active { cursor: pointer; font-weight: bold;}</style>
+
+<script src="__assets__/sockjs-0.3.4.min.js"></script>
+<script src="__assets__/shiny-server-client.min.js"></script>
+<script>preShinyInit({reconnect:true,disableProtocols:[]});</script>
+<link rel="stylesheet" type="text/css" href="__assets__/shiny-server.css"/>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-63396304-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h2>
+      <div class="row" style="margin-left:0px;">
+        <img src="frontPage/logo_small.png" width="125" style="margin-top:-10px; margin-right:-10px"/>
+        : a web tool for visualizing clustering of multivariate data (BETA)
+      </div>
+    </h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <form class="well">
+          <div data-display-if="input.tabs1 == &#39;Introduction&#39;" data-ns-prefix="">
+            <h4>Introduction</h4>
+            <div><button type="button" class="btn btn-default" data-toggle="tooltip" data-original-title="button" title="" data-placement="right" id="right" style="display: none;">button</button></div>
+          </div>
+          <div data-display-if="input.tabs1 == &#39;Data import&#39;" data-ns-prefix="">
+            <h4>Enter data</h4>
+            <h5>Choose data input type:</h5>
+            <div id="uploadDataInput" class="form-group shiny-input-radiogroup shiny-input-container">
+              <div class="shiny-options-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="uploadDataInput" value="1" checked="checked"/>
+                    <span>Load sample data</span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="uploadDataInput" value="2"/>
+                    <span>Upload file</span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="uploadDataInput" value="3"/>
+                    <span>Paste data</span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="uploadDataInput" value="5"/>
+                    <span>Import public dataset from ArrayExpress</span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="uploadDataInput" value="4"/>
+                    <span>Load saved settings</span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="uploadDataInput" value="6"/>
+                    <span>Import prepared gene expression matrix</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div data-display-if="input.uploadDataInput == &#39;1&#39;" data-ns-prefix="">
+              <h5>Choose dataset:</h5>
+              <div id="uploadSampleData" class="form-group shiny-input-radiogroup shiny-input-container">
+                <div class="shiny-options-group">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="uploadSampleData" value="nki.csv" checked="checked"/>
+                      <span>NKI breast cancer dataset (PAM50 genes)</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="uploadSampleData" value="wdbc.csv"/>
+                      <span>Wisconsin Diagnostic Breast Cancer</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="uploadSampleData" value="iris.csv"/>
+                      <span>Iris flowers</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-display-if="input.uploadDataInput == &#39;2&#39;" data-ns-prefix="">
+              <h5>Upload delimited text file: </h5>
+              <div class="form-group shiny-input-container">
+                <div class="input-group">
+                  <label class="input-group-btn">
+                    <span class="btn btn-default btn-file">
+                      Browse...
+                      <input id="uploadFile" name="uploadFile" type="file" style="display: none;"/>
+                    </span>
+                  </label>
+                  <input type="text" class="form-control" placeholder="No file selected" readonly="readonly"/>
+                </div>
+                <div id="uploadFile_progress" class="progress progress-striped active shiny-file-input-progress">
+                  <div class="progress-bar"></div>
+                </div>
+              </div>
+              <p>Maximum file size is 2 MB.</p>
+            </div>
+            <div data-display-if="input.uploadDataInput == &#39;3&#39;" data-ns-prefix="">
+              <h5>Paste data below:</h5>
+              <textarea id="uploadCopyPaste" rows="10" cols="5"></textarea>
+              <button id="uploadClearTextButton" type="button" class="btn btn-default action-button">Clear data</button>
+            </div>
+            <div data-display-if="input.uploadDataInput == &#39;4&#39; || input.uploadDataInput == &#39;6&#39;" data-ns-prefix="">
+              <h5>Settings ID:</h5>
+              <div class="form-group shiny-input-container">
+                <input id="uploadSettingsId" type="text" class="form-control" value=""/>
+              </div>
+            </div>
+            <div data-display-if="input.uploadDataInput == &#39;5&#39;" data-ns-prefix="">
+              <h5>Choose dataset:</h5>
+              <div class="form-group shiny-input-container">
+                <label class="control-label" for="uploadOrganism">Array organism:</label>
+                <div>
+                  <select id="uploadOrganism" class="form-control"><option value="Anopheles gambiae">Anopheles gambiae</option>
+<option value="Arabidopsis thaliana">Arabidopsis thaliana</option>
+<option value="Bos taurus">Bos taurus</option>
+<option value="Caenorhabditis elegans">Caenorhabditis elegans</option>
+<option value="Canis familiaris">Canis familiaris</option>
+<option value="Danio rerio">Danio rerio</option>
+<option value="Drosophila melanogaster">Drosophila melanogaster</option>
+<option value="Gallus gallus">Gallus gallus</option>
+<option value="Homo sapiens" selected>Homo sapiens</option>
+<option value="Macaca mulatta">Macaca mulatta</option>
+<option value="Mus musculus">Mus musculus</option>
+<option value="Populus trichocarpa">Populus trichocarpa</option>
+<option value="Rattus norvegicus">Rattus norvegicus</option>
+<option value="Saccharomyces cerevisiae">Saccharomyces cerevisiae</option>
+<option value="Sus scrofa">Sus scrofa</option>
+<option value="Vitis vinifera">Vitis vinifera</option>
+<option value="Xenopus tropicalis">Xenopus tropicalis</option></select>
+                </div>
+              </div>
+              <div class="form-group shiny-input-container">
+                <label for="uploadMinAnnoTracks">Minimum number of annotations:</label>
+                <input id="uploadMinAnnoTracks" type="number" class="form-control" value="1" min="0"/>
+              </div>
+              <div class="form-group shiny-input-container">
+                <label class="control-label" for="uploadPbDataset">Dataset:</label>
+                <div>
+                  <select id="uploadPbDataset" class="form-control"></select>
+                  <script type="application/json" data-for="uploadPbDataset">{"placeholder":"search for a dataset"}</script>
+                </div>
+              </div>
+              <p>You can type some keywords separated by space (e.g. affy breast) and then select a dataset; use backspace to delete.</p>
+            </div>
+            <div data-display-if="input.uploadDataInput == &#39;5&#39;" data-ns-prefix="">
+              <h5>Filter annotations:</h5>
+              <div class="form-group shiny-input-container">
+                <label for="uploadMinAnnoLevels">Minimum number of levels for annotations:</label>
+                <input id="uploadMinAnnoLevels" type="number" class="form-control" value="2" min="1"/>
+              </div>
+              <div class="form-group shiny-input-container">
+                <label for="uploadMaxAnnoLevels">Maximum number of levels for annotations:</label>
+                <input id="uploadMaxAnnoLevels" type="number" class="form-control" value="8" min="1"/>
+              </div>
+            </div>
+            <div data-display-if="input.uploadDataInput == &#39;2&#39; || input.uploadDataInput == &#39;3&#39;" data-ns-prefix="">
+              <div id="uploadGuessSep" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                <div class="shiny-options-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="uploadGuessSep" value="TRUE" checked="checked"/>
+                      <span>detect delimiter</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.uploadGuessSep == &#39;&#39;" data-ns-prefix="">
+                <div id="uploadFileSep" class="form-group shiny-input-radiogroup shiny-input-container">
+                  <label class="control-label" for="uploadFileSep">Delimiter:</label>
+                  <div class="shiny-options-group">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="uploadFileSep" value="1" checked="checked"/>
+                        <span>Comma</span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="uploadFileSep" value="2"/>
+                        <span>Tab</span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="uploadFileSep" value="3"/>
+                        <span>Semicolon</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <p>Data in <a href = "http://en.wikipedia.org/wiki/Delimiter-separated_values">delimited text files </a> can be separated by comma, tab or semicolon. For example, Excel data can be exported in .csv (comma separated) or .tab (tab separated) format. </p>
+              </div>
+              <div id="uploadGuessAnno" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                <div class="shiny-options-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="uploadGuessAnno" value="TRUE" checked="checked"/>
+                      <span>detect column and row annotations</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.uploadGuessAnno == &#39;&#39;" data-ns-prefix="">
+                <div class="form-group shiny-input-container">
+                  <label for="uploadNbrColAnnos">Number of column annotations:</label>
+                  <input id="uploadNbrColAnnos" type="number" class="form-control" value="-1" min="-1" step="1"/>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label for="uploadNbrRowAnnos">Number of row annotations:</label>
+                  <input id="uploadNbrRowAnnos" type="number" class="form-control" value="-1" min="-1" step="1"/>
+                </div>
+              </div>
+              <div class="form-group shiny-input-container">
+                <label class="control-label" for="uploadQuotes">Quotes:</label>
+                <div>
+                  <select id="uploadQuotes" class="form-control"><option value="&quot;&#39;" selected>single or double</option>
+<option value="&#39;">single</option>
+<option value="&quot;">double</option>
+<option value="">no quotes</option></select>
+                </div>
+              </div>
+              <div class="form-group shiny-input-container">
+                <label for="uploadNaString">Missing values:</label>
+                <input id="uploadNaString" type="text" class="form-control" value="NA"/>
+              </div>
+            </div>
+            <div data-display-if="input.uploadDataInput == &#39;5&#39; || input.uploadDataInput == &#39;6&#39;" data-ns-prefix="">
+              <h5>Gene subsetting or clustering:</h5>
+              <div id="uploadRowFiltering" class="form-group shiny-input-radiogroup shiny-input-container">
+                <div class="shiny-options-group">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="uploadRowFiltering" value="1" checked="checked"/>
+                      <span>Subset a pathway</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="uploadRowFiltering" value="4"/>
+                      <span>Subset a custom gene list</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="uploadRowFiltering" value="2"/>
+                      <span>Cluster genes</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="uploadRowFiltering" value="3"/>
+                      <span>Choose one cluster</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.uploadRowFiltering == &#39;1&#39;" data-ns-prefix="">
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="uploadPbPathway">Pathway:</label>
+                  <div>
+                    <select id="uploadPbPathway" class="form-control"></select>
+                    <script type="application/json" data-for="uploadPbPathway">{"placeholder":"search for a pathway"}</script>
+                  </div>
+                </div>
+                <p>You can type some keywords separated by space (e.g. kegg estrogen) and then select a pathway; use backspace to delete.</p>
+              </div>
+              <div data-display-if="input.uploadRowFiltering == &#39;4&#39;" data-ns-prefix="">
+                <h5>Paste your gene list below:</h5>
+                <textarea id="uploadGeneList" rows="10" cols="5"></textarea>
+                <button id="uploadClearGeneListButton" type="button" class="btn btn-default action-button">Clear data</button>
+                <p>Genes should be separated by white space (spaces, tabs or newlines).</p>
+              </div>
+              <div data-display-if="input.uploadRowFiltering == &#39;2&#39; || input.uploadRowFiltering == &#39;3&#39;" data-ns-prefix="">
+                <div class="form-group shiny-input-container">
+                  <label for="uploadNbrClusters">Number of k-means clusters:</label>
+                  <input id="uploadNbrClusters" type="number" class="form-control" value="100" min="2" max="600"/>
+                </div>
+                <div data-display-if="input.uploadRowFiltering == &#39;3&#39;" data-ns-prefix="">
+                  <div class="form-group shiny-input-container">
+                    <label for="uploadClusterId">Cluster ID to choose:</label>
+                    <input id="uploadClusterId" type="number" class="form-control" value="1" min="1" max="600"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h5>Data matrix reshape:</h5>
+            <div id="uploadColumnFilteringAnno" class="form-group shiny-input-checkboxgroup shiny-input-container">
+              <div class="shiny-options-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="uploadColumnFilteringAnno" value="TRUE"/>
+                    <span>filter columns</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div data-display-if="input.uploadColumnFilteringAnno != &#39;&#39;" data-ns-prefix="">
+              <div id="uploadColumnFiltersAnno" class="shiny-html-output"></div>
+            </div>
+            <div id="uploadRowFilteringAnno" class="form-group shiny-input-checkboxgroup shiny-input-container">
+              <div class="shiny-options-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="uploadRowFilteringAnno" value="TRUE"/>
+                    <span>filter rows</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div data-display-if="input.uploadRowFilteringAnno != &#39;&#39;" data-ns-prefix="">
+              <div id="uploadRowFiltersAnno" class="shiny-html-output"></div>
+            </div>
+            <div id="uploadMatrixTranspose" class="form-group shiny-input-checkboxgroup shiny-input-container">
+              <div class="shiny-options-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="uploadMatrixTranspose" value="TRUE"/>
+                    <span>transpose matrix</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-display-if="input.tabs1 == &#39;Data pre-processing&#39;" data-ns-prefix="">
+            <h4>Pre-processing options</h4>
+            <div class="form-group shiny-input-container">
+              <label class="control-label" for="procTransformation">Transformation:</label>
+              <div>
+                <select id="procTransformation" class="form-control"><option value="no transformation" selected>no transformation</option>
+<option value="ln(x)">ln(x)</option>
+<option value="ln(x + 1)">ln(x + 1)</option></select>
+              </div>
+            </div>
+            <div data-display-if="input.procAnno != &#39; &#39;" data-ns-prefix="">
+              <div id="procAnnoGroups" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                <label class="control-label" for="procAnnoGroups">Column annotation groups to keep:</label>
+                <div class="shiny-options-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="procAnnoGroups" value=" " checked="checked"/>
+                      <span> </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div id="procAnno" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                <label class="control-label" for="procAnno">Column annotations to keep:</label>
+                <div class="shiny-options-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="procAnno" value=" " checked="checked"/>
+                      <span> </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group shiny-input-container">
+                <label class="control-label" for="procMethodAgg">Collapse columns with similar annotations:</label>
+                <div>
+                  <select id="procMethodAgg" class="form-control"><option value="no collapse" selected>no collapse</option>
+<option value="median">median</option>
+<option value="mean">mean</option></select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group shiny-input-container">
+              <label for="procMaxNaPercRows">Maximum percentage of NAs allowed in rows:</label>
+              <input id="procMaxNaPercRows" type="number" class="form-control" value="99.99" min="0" max="100"/>
+            </div>
+            <div class="form-group shiny-input-container">
+              <label for="procMaxNaPercCols">Maximum percentage of NAs allowed in columns:</label>
+              <input id="procMaxNaPercCols" type="number" class="form-control" value="99.99" min="0" max="100"/>
+            </div>
+            <div id="procRemConstCols" class="form-group shiny-input-checkboxgroup shiny-input-container">
+              <div class="shiny-options-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="procRemConstCols" value="TRUE"/>
+                    <span>remove constant columns</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div id="procCentering" class="form-group shiny-input-checkboxgroup shiny-input-container">
+              <div class="shiny-options-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="procCentering" value="TRUE" checked="checked"/>
+                    <span>row centering</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group shiny-input-container">
+              <label class="control-label" for="procScaling">Row scaling:</label>
+              <div>
+                <select id="procScaling" class="form-control"><option value="none">no scaling</option>
+<option value="uv" selected>unit variance scaling</option>
+<option value="pareto">Pareto scaling</option>
+<option value="vector">vector scaling</option></select>
+              </div>
+            </div>
+            <div class="form-group shiny-input-container">
+              <label class="control-label" for="procMethod">PCA method:</label>
+              <div>
+                <select id="procMethod" class="form-control"><option value="svdImpute" selected>SVD with imputation</option>
+<option value="nipals">Nipals PCA</option>
+<option value="ppca">Probabilistic PCA</option></select>
+              </div>
+            </div>
+          </div>
+          <div data-display-if="input.tabs1 == &#39;PCA&#39;" data-ns-prefix="">
+            <div data-display-if="!(input.pcaClickedType == &#39;pcaCol&#39; || input.pcaClickedType == &#39;pcaCell&#39;)" data-ns-prefix="">
+              <h4>PCA options</h4>
+              <div id="pcaChangeDataOptions" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                <div class="shiny-options-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="pcaChangeDataOptions" value="TRUE"/>
+                      <span>change data options</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.pcaChangeDataOptions != &#39;&#39;" data-ns-prefix="">
+                <h5>Data options</h5>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="pcaPcx">Principal component on x-axis:</label>
+                  <div>
+                    <select id="pcaPcx" class="form-control"><option value="1" selected>1</option></select>
+                  </div>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="pcaPcy">Principal component on y-axis:</label>
+                  <div>
+                    <select id="pcaPcy" class="form-control"><option value="1" selected>1</option></select>
+                  </div>
+                </div>
+                <div id="pcaSwitchDir" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                  <div class="shiny-options-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="pcaSwitchDir" value="1"/>
+                        <span>switch direction of x-axis</span>
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="pcaSwitchDir" value="2"/>
+                        <span>switch direction of y-axis</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+              </div>
+              <div id="pcaChangeDisplayOptions" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                <div class="shiny-options-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="pcaChangeDisplayOptions" value="TRUE"/>
+                      <span>change display options</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.pcaChangeDisplayOptions != &#39;&#39;" data-ns-prefix="">
+                <h5>Display options</h5>
+                <div data-display-if="input.procAnno != &#39; &#39; &amp;&amp; input.procAnno != &#39;&#39;" data-ns-prefix="">
+                  <div id="pcaChangeColorOptions" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                    <div class="shiny-options-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="pcaChangeColorOptions" value="TRUE"/>
+                          <span>change coloring options</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-display-if="input.pcaChangeColorOptions != &#39;&#39;" data-ns-prefix="">
+                    <div id="pcaAnnoColor" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                      <label class="control-label" for="pcaAnnoColor">Color grouping:</label>
+                      <div class="shiny-options-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="pcaAnnoColor" value=" " checked="checked"/>
+                            <span> </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group shiny-input-container">
+                      <label class="control-label" for="pcaColor">Color scheme:</label>
+                      <div>
+                        <select id="pcaColor" class="form-control"><option value="Accent">Accent</option>
+<option value="Dark2">Dark2</option>
+<option value="Paired">Paired</option>
+<option value="Pastel1">Pastel1</option>
+<option value="Pastel2">Pastel2</option>
+<option value="Set1" selected>Set1</option>
+<option value="Set2">Set2</option>
+<option value="Set3">Set3</option>
+<option value="Grayscale">Grayscale</option></select>
+                      </div>
+                    </div>
+                    <div id="pcaShowEllipses" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                      <div class="shiny-options-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="pcaShowEllipses" value="TRUE" checked="checked"/>
+                            <span>show ellipses around groups</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-display-if="input.pcaShowEllipses != &#39;&#39;" data-ns-prefix="">
+                      <div class="form-group shiny-input-container">
+                        <label for="pcaEllipseConf">Confidence level for ellipses:</label>
+                        <input id="pcaEllipseConf" type="number" class="form-control" value="0.95" min="0.5" max="0.9999" step="0.001"/>
+                      </div>
+                      <div class="form-group shiny-input-container">
+                        <label class="control-label" for="pcaEllipseLineWidth">Line width for ellipses:</label>
+                        <input class="js-range-slider" id="pcaEllipseLineWidth" data-min="0.1" data-max="3" data-from="1" data-step="0.1" data-grid="true" data-grid-num="9.66666666666667" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="3.44827586206897" data-data-type="number"/>
+                      </div>
+                      <div class="form-group shiny-input-container">
+                        <label class="control-label" for="pcaEllipseLineType">Line type for ellipses:</label>
+                        <div>
+                          <select id="pcaEllipseLineType" class="form-control"><option value="solid" selected>solid</option>
+<option value="dashed">dashed</option>
+<option value="dotted">dotted</option>
+<option value="dotdash">dotdash</option>
+<option value="longdash">longdash</option>
+<option value="twodash">twodash</option></select>
+                        </div>
+                      </div>
+                    </div>
+                    <br/>
+                  </div>
+                  <div id="pcaChangeShapeOptions" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                    <div class="shiny-options-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="pcaChangeShapeOptions" value="TRUE"/>
+                          <span>change shape options</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-display-if="input.pcaChangeShapeOptions != &#39;&#39;" data-ns-prefix="">
+                    <div id="pcaAnnoShape" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                      <label class="control-label" for="pcaAnnoShape">Shape grouping:</label>
+                      <div class="shiny-options-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="pcaAnnoShape" value=" " checked="checked"/>
+                            <span> </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group shiny-input-container">
+                      <label class="control-label" for="pcaShape">Shape scheme:</label>
+                      <div>
+                        <select id="pcaShape" class="form-control"><option value="letters">letters</option>
+<option value="various" selected>various</option></select>
+                      </div>
+                    </div>
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="pcaPlotWidth">Plot width:</label>
+                  <input class="js-range-slider" id="pcaPlotWidth" data-min="5" data-max="50" data-from="20" data-step="0.1" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="0.222222222222222" data-data-type="number"/>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label for="pcaPlotRatio">Plot ratio (height / width):</label>
+                  <input id="pcaPlotRatio" type="number" class="form-control" value="0.8" min="0.01" max="100" step="0.01"/>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label for="pcaMarginRatio">Margin ratio:</label>
+                  <input id="pcaMarginRatio" type="number" class="form-control" value="0.05" min="-0.1" max="2" step="0.001"/>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="pcaPointSize">Point size:</label>
+                  <input class="js-range-slider" id="pcaPointSize" data-min="1" data-max="9" data-from="5" data-step="0.1" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="1.25" data-data-type="number"/>
+                </div>
+                <div data-display-if="input.procAnno != &#39; &#39; &amp;&amp; input.procAnno != &#39;&#39;" data-ns-prefix="">
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="pcaLegendPosition">Legend position:</label>
+                    <div>
+                      <select id="pcaLegendPosition" class="form-control"><option value="none">none</option>
+<option value="right" selected>right</option>
+<option value="bottom">bottom</option>
+<option value="left">left</option>
+<option value="top">top</option></select>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <br/>
+              </div>
+              <div id="pcaChangeLabelOptions" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                <div class="shiny-options-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="pcaChangeLabelOptions" value="TRUE"/>
+                      <span>change plot labels</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.pcaChangeLabelOptions != &#39;&#39;" data-ns-prefix="">
+                <h5>Plot labels</h5>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="pcaFontSize">Font size:</label>
+                  <input class="js-range-slider" id="pcaFontSize" data-min="10" data-max="30" data-from="20" data-step="1" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="5" data-data-type="number"/>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label for="pcaAxisLabelPrefix">Prefix for axes' labels:</label>
+                  <input id="pcaAxisLabelPrefix" type="text" class="form-control" value="PC"/>
+                </div>
+                <div id="pcaShowVariance" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                  <div class="shiny-options-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="pcaShowVariance" value="TRUE" checked="checked"/>
+                        <span>show variance explained</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div data-display-if="input.pcaInteractivity == &#39;&#39;" data-ns-prefix="">
+                  <div id="pcaShowSampleIds" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                    <div class="shiny-options-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="pcaShowSampleIds" value="TRUE"/>
+                          <span>show sample IDs</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="pcaInteractivity" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                  <div class="shiny-options-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="pcaInteractivity" value="TRUE"/>
+                        <span>add interactivity</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-display-if="input.pcaClickedType == &#39;pcaCol&#39; || input.pcaClickedType == &#39;pcaCell&#39;" data-ns-prefix="">
+              <h4>Plot options</h4>
+              <div id="pcaJitterPlotType" class="form-group shiny-input-radiogroup shiny-input-container">
+                <label class="control-label" for="pcaJitterPlotType">Plot type:</label>
+                <div class="shiny-options-group">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="pcaJitterPlotType" value="dots" checked="checked"/>
+                      <span>Points only</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="pcaJitterPlotType" value="violin dots"/>
+                      <span>Violin plot with points</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="pcaJitterPlotType" value="box dots"/>
+                      <span>Box plot with points</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="pcaJitterPlotType" value="violin"/>
+                      <span>Violin plot only</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="pcaJitterPlotType" value="box"/>
+                      <span>Box plot only</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.pcaJitterPlotType == &#39;dots&#39; || input.pcaJitterPlotType == &#39;violin dots&#39; || input.pcaJitterPlotType == &#39;box dots&#39;" data-ns-prefix="">
+                <div id="pcaJitterSeparateOverlapping" class="form-group shiny-input-radiogroup shiny-input-container">
+                  <label class="control-label" for="pcaJitterSeparateOverlapping">Separate overlapping points:</label>
+                  <div class="shiny-options-group">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="pcaJitterSeparateOverlapping" value="no" checked="checked"/>
+                        <span>no</span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="pcaJitterSeparateOverlapping" value="jittering"/>
+                        <span>jittering</span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="pcaJitterSeparateOverlapping" value="transparency"/>
+                        <span>transparency</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div data-display-if="input.pcaJitterSeparateOverlapping == &#39;jittering&#39;" data-ns-prefix="">
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="pcaJitterJitteringWidth">Jittering width:</label>
+                    <input class="js-range-slider" id="pcaJitterJitteringWidth" data-min="0" data-max="0.5" data-from="0.25" data-step="0.01" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="2" data-data-type="number"/>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.pcaJitterSeparateOverlapping == &#39;transparency&#39;" data-ns-prefix="">
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="pcaJitterTransparency">Transparency:</label>
+                  <input class="js-range-slider" id="pcaJitterTransparency" data-min="0" data-max="1" data-from="0.5" data-step="0.05" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="5" data-data-type="number"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-display-if="input.tabs1 == &#39;Heatmap&#39;" data-ns-prefix="">
+            <div data-display-if="!(input.hmClickedType == &#39;hmRow&#39; || input.hmClickedType == &#39;hmCol&#39; || input.hmClickedType == &#39;hmCell&#39;)" data-ns-prefix="">
+              <h4>Heatmap options</h4>
+              <div id="hmChangeDataOptions" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                <div class="shiny-options-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="hmChangeDataOptions" value="TRUE"/>
+                      <span>change data options</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.hmChangeDataOptions != &#39;&#39;" data-ns-prefix="">
+                <h5>Data options</h5>
+                <div id="hmShowImputed" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                  <div class="shiny-options-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="hmShowImputed" value="TRUE" checked="checked"/>
+                        <span>show imputed values</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div id="hmTransposeHeatmap" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                  <div class="shiny-options-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="hmTransposeHeatmap" value="TRUE"/>
+                        <span>transpose heatmap</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="hmClustDistRows">Clustering distance for rows:</label>
+                  <div>
+                    <select id="hmClustDistRows" class="form-control"><option value="no clustering">no clustering</option>
+<option value="correlation" selected>correlation</option>
+<option value="euclidean">Euclidean</option>
+<option value="maximum">maximum</option>
+<option value="manhattan">Manhattan</option>
+<option value="canberra">Canberra</option>
+<option value="binary">binary</option></select>
+                  </div>
+                </div>
+                <div data-display-if="input.hmClustDistRows != &#39;no clustering&#39;" data-ns-prefix="">
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="hmClustMethodRows">Clustering method for rows:</label>
+                    <div>
+                      <select id="hmClustMethodRows" class="form-control"><option value="single">single</option>
+<option value="complete">complete</option>
+<option value="average" selected>average</option>
+<option value="mcquitty">McQuitty</option>
+<option value="median">median</option>
+<option value="centroid">centroid</option>
+<option value="ward.D2">Ward</option>
+<option value="ward.D">Ward (unsquared distances)</option></select>
+                    </div>
+                  </div>
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="hmTreeOrderingRows">Tree ordering for rows:</label>
+                    <div>
+                      <select id="hmTreeOrderingRows" class="form-control"><option value="tightest cluster first" selected>tightest cluster first</option>
+<option value="higher median value first">higher median value first</option>
+<option value="higher mean value first">higher mean value first</option>
+<option value="lower median value first">lower median value first</option>
+<option value="lower mean value first">lower mean value first</option>
+<option value="original">original</option>
+<option value="reverse original">reverse original</option></select>
+                    </div>
+                  </div>
+                  <div class="form-group shiny-input-container">
+                    <label for="hmCutreeClustersRows">Number of clusters in rows:</label>
+                    <input id="hmCutreeClustersRows" type="number" class="form-control" value="1" min="1" max="5"/>
+                  </div>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="hmClustDistCols">Clustering distance for columns:</label>
+                  <div>
+                    <select id="hmClustDistCols" class="form-control"><option value="no clustering">no clustering</option>
+<option value="correlation" selected>correlation</option>
+<option value="euclidean">Euclidean</option>
+<option value="maximum">maximum</option>
+<option value="manhattan">Manhattan</option>
+<option value="canberra">Canberra</option>
+<option value="binary">binary</option></select>
+                  </div>
+                </div>
+                <div data-display-if="input.hmClustDistCols != &#39;no clustering&#39;" data-ns-prefix="">
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="hmClustMethodCols">Clustering method for columns:</label>
+                    <div>
+                      <select id="hmClustMethodCols" class="form-control"><option value="single">single</option>
+<option value="complete">complete</option>
+<option value="average" selected>average</option>
+<option value="mcquitty">McQuitty</option>
+<option value="median">median</option>
+<option value="centroid">centroid</option>
+<option value="ward.D2">Ward</option>
+<option value="ward.D">Ward (unsquared distances)</option></select>
+                    </div>
+                  </div>
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="hmTreeOrderingCols">Tree ordering for columns:</label>
+                    <div>
+                      <select id="hmTreeOrderingCols" class="form-control"><option value="tightest cluster first" selected>tightest cluster first</option>
+<option value="higher median value first">higher median value first</option>
+<option value="higher mean value first">higher mean value first</option>
+<option value="lower median value first">lower median value first</option>
+<option value="lower mean value first">lower mean value first</option>
+<option value="original">original</option>
+<option value="reverse original">reverse original</option></select>
+                    </div>
+                  </div>
+                  <div class="form-group shiny-input-container">
+                    <label for="hmCutreeClustersCols">Number of clusters in columns:</label>
+                    <input id="hmCutreeClustersCols" type="number" class="form-control" value="1" min="1" max="5"/>
+                  </div>
+                </div>
+                <div data-display-if="input.hmClustDistCols == &#39;no clustering&#39;" data-ns-prefix="">
+                  <div></div>
+                </div>
+                <br/>
+              </div>
+              <div id="hmChangeDisplayOptions" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                <div class="shiny-options-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="hmChangeDisplayOptions" value="TRUE"/>
+                      <span>change display options</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.hmChangeDisplayOptions != &#39;&#39;" data-ns-prefix="">
+                <h5>Display options</h5>
+                <div data-display-if="input.procAnno != &#39; &#39; &amp;&amp; input.procAnno != &#39;&#39;" data-ns-prefix="">
+                  <div id="hmAnnoCol" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                    <label class="control-label" for="hmAnnoCol">Column annotations:</label>
+                    <div class="shiny-options-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="hmAnnoCol" value=" " checked="checked"/>
+                          <span> </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-display-if="input.hmAnnoRow != &#39; &#39;" data-ns-prefix="">
+                  <div id="hmAnnoRow" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                    <label class="control-label" for="hmAnnoRow">Row annotations:</label>
+                    <div class="shiny-options-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="hmAnnoRow" value=" " checked="checked"/>
+                          <span> </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-display-if="input.hmAnnoCol != &#39;&#39; || input.hmAnnoRow != &#39;&#39;" data-ns-prefix="">
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="hmLegendScheme">Annotation color scheme:</label>
+                    <div>
+                      <select id="hmLegendScheme" class="form-control"><option value="Accent">Accent</option>
+<option value="Dark2">Dark2</option>
+<option value="Paired">Paired</option>
+<option value="Pastel1">Pastel1</option>
+<option value="Pastel2">Pastel2</option>
+<option value="Set1" selected>Set1</option>
+<option value="Set2">Set2</option>
+<option value="Set3">Set3</option></select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="hmPlotWidth">Plot width:</label>
+                  <input class="js-range-slider" id="hmPlotWidth" data-min="5" data-max="50" data-from="25" data-step="0.1" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="0.222222222222222" data-data-type="number"/>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label for="hmPlotRatio">Plot ratio (height / width):</label>
+                  <input id="hmPlotRatio" type="number" class="form-control" value="0.8" min="0.01" max="100" step="0.01"/>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label for="hmColorRangeMax">Heatmap color range maximum:</label>
+                  <input id="hmColorRangeMax" type="number" class="form-control" value="5" step="0.001"/>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label for="hmColorRangeMin">Heatmap color range minimum:</label>
+                  <input id="hmColorRangeMin" type="number" class="form-control" value="-5" step="0.001"/>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="hmColorScheme">Heatmap color scheme:</label>
+                  <div>
+                    <select id="hmColorScheme" class="form-control"><option value="Blues">Sequential: Blues</option>
+<option value="BuGn">Sequential: BuGn</option>
+<option value="BuPu">Sequential: BuPu</option>
+<option value="GnBu">Sequential: GnBu</option>
+<option value="Greens">Sequential: Greens</option>
+<option value="Greys">Sequential: Greys</option>
+<option value="Oranges">Sequential: Oranges</option>
+<option value="OrRd">Sequential: OrRd</option>
+<option value="PuBu">Sequential: PuBu</option>
+<option value="PuBuGn">Sequential: PuBuGn</option>
+<option value="PuRd">Sequential: PuRd</option>
+<option value="Purples">Sequential: Purples</option>
+<option value="RdPu">Sequential: RdPu</option>
+<option value="Reds">Sequential: Reds</option>
+<option value="YlGn">Sequential: YlGn</option>
+<option value="YlGnBu">Sequential: YlGnBu</option>
+<option value="YlOrBr">Sequential: YlOrBr</option>
+<option value="YlOrRd">Sequential: YlOrRd</option>
+<option value="BrBG">Diverging: BrBG</option>
+<option value="PiYG">Diverging: PiYG</option>
+<option value="PRGn">Diverging: PRGn</option>
+<option value="PuOr">Diverging: PuOr</option>
+<option value="RdBu" selected>Diverging: RdBu</option>
+<option value="RdGy">Diverging: RdGy</option>
+<option value="RdYlBu">Diverging: RdYlBu</option>
+<option value="RdYlGn">Diverging: RdYlGn</option>
+<option value="Spectral">Diverging: Spectral</option></select>
+                  </div>
+                </div>
+                <div id="hmRevScheme" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                  <div class="shiny-options-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="hmRevScheme" value="TRUE" checked="checked"/>
+                        <span>reverse color scheme</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="hmCellBorder">Cell border:</label>
+                  <div>
+                    <select id="hmCellBorder" class="form-control"><option value="no border">no border</option>
+<option value="grey60" selected>grey60</option>
+<option value="grey">grey</option>
+<option value="black">black</option></select>
+                  </div>
+                </div>
+                <br/>
+                <br/>
+              </div>
+              <div id="hmChangeLabelOptions" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                <div class="shiny-options-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="hmChangeLabelOptions" value="TRUE"/>
+                      <span>change plot labels</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.hmChangeLabelOptions != &#39;&#39;" data-ns-prefix="">
+                <h5>Plot labels</h5>
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="hmFontSizeGeneral">General font size:</label>
+                  <input class="js-range-slider" id="hmFontSizeGeneral" data-min="1" data-max="25" data-from="10" data-step="1" data-grid="true" data-grid-num="8" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="4.16666666666667" data-data-type="number"/>
+                </div>
+                <div id="hmShowNumbers" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                  <div class="shiny-options-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="hmShowNumbers" value="TRUE"/>
+                        <span>show numbers</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div data-display-if="input.hmShowNumbers != &#39;&#39;" data-ns-prefix="">
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="hmFontSizeNumbers">Font size of numbers:</label>
+                    <input class="js-range-slider" id="hmFontSizeNumbers" data-min="0.8" data-max="20" data-from="12" data-step="1" data-grid="true" data-grid-num="9.6" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="5.20833333333333" data-data-type="number"/>
+                  </div>
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="hmPrecisionNumbers">Precision of numbers:</label>
+                    <input class="js-range-slider" id="hmPrecisionNumbers" data-min="0" data-max="4" data-from="2" data-step="1" data-grid="true" data-grid-num="4" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="25" data-data-type="number"/>
+                  </div>
+                </div>
+                <div id="hmShowRownames" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                  <div class="shiny-options-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="hmShowRownames" value="TRUE" checked="checked"/>
+                        <span>show row names</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div data-display-if="input.hmShowRownames != &#39;&#39;" data-ns-prefix="">
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="hmFontSizeRownames">Font size of row names:</label>
+                    <input class="js-range-slider" id="hmFontSizeRownames" data-min="1" data-max="25" data-from="15" data-step="1" data-grid="true" data-grid-num="8" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="4.16666666666667" data-data-type="number"/>
+                  </div>
+                </div>
+                <div id="hmShowColnames" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                  <div class="shiny-options-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="hmShowColnames" value="TRUE" checked="checked"/>
+                        <span>show column names</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div data-display-if="input.hmShowColnames != &#39;&#39;" data-ns-prefix="">
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="hmFontSizeColnames">Font size of column names:</label>
+                    <input class="js-range-slider" id="hmFontSizeColnames" data-min="1" data-max="25" data-from="15" data-step="1" data-grid="true" data-grid-num="8" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="4.16666666666667" data-data-type="number"/>
+                  </div>
+                </div>
+                <div data-display-if="input.procAnno != &#39; &#39; &amp;&amp; input.procAnno != &#39;&#39;" data-ns-prefix="">
+                  <div id="hmShowAnnoTitlesCol" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                    <div class="shiny-options-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="hmShowAnnoTitlesCol" value="TRUE" checked="checked"/>
+                          <span>show column annotation titles</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-display-if="input.hmAnnoRow != &#39; &#39;" data-ns-prefix="">
+                  <div id="hmShowAnnoTitlesRow" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                    <div class="shiny-options-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="hmShowAnnoTitlesRow" value="TRUE" checked="checked"/>
+                          <span>show row annotation titles</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="hmInteractivity" class="form-group shiny-input-checkboxgroup shiny-input-container">
+                  <div class="shiny-options-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="hmInteractivity" value="TRUE"/>
+                        <span>add interactivity</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-display-if="input.hmClickedType == &#39;hmRow&#39; || input.hmClickedType == &#39;hmCol&#39; || input.hmClickedType == &#39;hmCell&#39;" data-ns-prefix="">
+              <h4>Plot options</h4>
+              <div id="hmJitterPlotType" class="form-group shiny-input-radiogroup shiny-input-container">
+                <label class="control-label" for="hmJitterPlotType">Plot type:</label>
+                <div class="shiny-options-group">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="hmJitterPlotType" value="dots" checked="checked"/>
+                      <span>Points only</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="hmJitterPlotType" value="violin dots"/>
+                      <span>Violin plot with points</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="hmJitterPlotType" value="box dots"/>
+                      <span>Box plot with points</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="hmJitterPlotType" value="violin"/>
+                      <span>Violin plot only</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="hmJitterPlotType" value="box"/>
+                      <span>Box plot only</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.hmJitterPlotType == &#39;dots&#39; || input.hmJitterPlotType == &#39;violin dots&#39; || input.hmJitterPlotType == &#39;box dots&#39;" data-ns-prefix="">
+                <div id="hmJitterSeparateOverlapping" class="form-group shiny-input-radiogroup shiny-input-container">
+                  <label class="control-label" for="hmJitterSeparateOverlapping">Separate overlapping points:</label>
+                  <div class="shiny-options-group">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="hmJitterSeparateOverlapping" value="no" checked="checked"/>
+                        <span>no</span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="hmJitterSeparateOverlapping" value="jittering"/>
+                        <span>jittering</span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="hmJitterSeparateOverlapping" value="transparency"/>
+                        <span>transparency</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div data-display-if="input.hmJitterSeparateOverlapping == &#39;jittering&#39;" data-ns-prefix="">
+                  <div class="form-group shiny-input-container">
+                    <label class="control-label" for="hmJitterJitteringWidth">Jittering width:</label>
+                    <input class="js-range-slider" id="hmJitterJitteringWidth" data-min="0" data-max="0.5" data-from="0.25" data-step="0.01" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="2" data-data-type="number"/>
+                  </div>
+                </div>
+              </div>
+              <div data-display-if="input.hmJitterSeparateOverlapping == &#39;transparency&#39;" data-ns-prefix="">
+                <div class="form-group shiny-input-container">
+                  <label class="control-label" for="hmJitterTransparency">Transparency:</label>
+                  <input class="js-range-slider" id="hmJitterTransparency" data-min="0" data-max="1" data-from="0.5" data-step="0.05" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="5" data-data-type="number"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-display-if="input.tabs1 == &#39;Export&#39;" data-ns-prefix="">
+            <h4>Export options</h4>
+            <div class="form-group shiny-input-container">
+              <label for="exportSaveDeleteSettingsId">ID for settings:</label>
+              <input id="exportSaveDeleteSettingsId" type="text" class="form-control" value=""/>
+            </div>
+          </div>
+          <div data-display-if="input.tabs1 == &#39;Help&#39;" data-ns-prefix="">
+            <h4>Help</h4>
+            <a href="#general">General</a>
+            <br/>
+            <a href="#upload">Data import</a>
+            <br/>
+            <a href="#mem">Public dataset from MEM</a>
+            <br/>
+            <a href="#datasets">List of datasets available</a>
+            <br/>
+            <a href="#pathways">List of pathways available</a>
+            <br/>
+            <a href="#filtering">Annotations based filtering</a>
+            <br/>
+            <a href="#processing">Data pre-processing</a>
+            <br/>
+            <a href="#pca_heatmap">PCA and heatmap</a>
+            <br/>
+            <a href="#interactivity">Interactivity of the plots</a>
+            <br/>
+            <a href="#interpretation">Interpreting the output</a>
+            <br/>
+            <a href="#mathematics">Mathematical basis</a>
+            <br/>
+            <a href="#editions">ClustVis editions</a>
+          </div>
+          <div data-display-if="input.tabs1 == &#39;News&#39;" data-ns-prefix="">
+            <h4>News</h4>
+          </div>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadDataInput', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which input to use: example dataset, upload a file, copy-paste from file, import from MEM (collection of public datasets from ArrayExpress), use saved settings or use a custom pre-saved dataset.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadGuessSep', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether delimiter (separator between the columns) is detected automatically or provided by the user.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadGuessAnno', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether number of column and row annotations is detected automatically or provided by the user. Annotations should be placed as the first rows and columns in the file. See help tab for more information.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadQuotes', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which quotes are used around character values in the input data. You may need to change this setting if your data values naturally contain any quotes.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadNaString', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which string is representing a missing value in the input data.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadOrganism', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Organism of the microarray platform.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadMinAnnoTracks', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'You can filter out less informative datasets, e.g. those that have no annotations.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadMinAnnoLevels', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'You can filter out less informative annotations, e.g. those that are constant.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadMaxAnnoLevels', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'You can filter out less informative annotations, e.g. those that have different value for each sample.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadColumnFilteringAnno', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'You can select a subset of columns using annotation levels.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadRowFilteringAnno', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'You can select a subset of rows using annotation levels.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadMatrixTranspose', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'You can transpose the data matrix. Row annotations will become column annotations and vice versa in this case.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadRowFiltering', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'How to limit the number of rows shown - take one pathway or custom gene list, cluster the genes using k-means and show cluster centers or choose one specific cluster from k-means clustering.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadNbrClusters', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Number of clusters after appying k-means clustering.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('uploadClusterId', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which cluster to visualize more closely. The previous option should be run first to identify a cluster of interest.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('procTransformation', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to apply logarithmic transformation; recommended if data range covers multiple magnitudes. You may consider using ln(x) if smallest value in your data is 1, and ln(x + 1) if smallest value is 0.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('procAnnoGroups', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'You can select or deselect column annotations in batch by using groups.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('procAnno', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which column annotations to keep for further analysis, especially important if collapsing similar annotations.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('procMethodAgg', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to collapse columns with similar annotations before further analysis and if so, which function to use.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('procMaxNaPercRows', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Rows that have higher percentage of missing values than this in the original dataset are removed.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('procMaxNaPercCols', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Columns that have higher percentage of missing values than this in the original dataset are removed.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('procRemConstCols', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to remove constant columns. Constant rows are always removed.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('procCentering', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to subtract mean from each row or use original data. This only applies to the values on heatmap, rows are always centered before calculating principal components.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('procScaling', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which scaling to use for each row. See pcaMethods R package for more details.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('procMethod', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which method to use for calculating principal components. Principal components are also used to impute missing values. See pcaMethods R package for more details.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaChangeDataOptions', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Choose which principal components to show and whether to change the direction.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaChangeDisplayOptions', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Change the way how results are visualized, except textual labels.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaChangeColorOptions', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Change options related with color grouping.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaChangeShapeOptions', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Change options related with shape grouping.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaChangeLabelOptions', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Change the textual labels of the plot.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaSwitchDir', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Axes can be mirrored, e.g. to make the plot easier to visually compare with PCA plot made with another tool. This does not change the meaning of the plot.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaShowVariance', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to show percentage of variance explained added to the labels of the axes.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaAnnoColor', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Color grouping shown in the legend. Multiple annotations can be chosen; in this case, they are combined.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaAnnoShape', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Shape grouping shown in the legend. Multiple annotations can be chosen; in this case, they are combined.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaPlotWidth', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'In arbitrary units.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaPlotRatio', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'This applies to the plotting area, i.e. to the rectangle where points are situated (it does not take axis labels and legend into account).'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaMarginRatio', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'How much white space is shown between data and plot borders, relative to y-axis data range. Margin is added after forcing the specified plot ratio.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaColor', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Coloring used for the groups. It is automatically turned off if there are more than 8 groups. See http://colorbrewer2.org/ for more details.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaShape', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Shapes used for the groups.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaShowSampleIds', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to show sample IDs on the plot. This is mainly for finding points of interest from the plot, not necessarily publication quality.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaShowEllipses', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to show prediction ellipses around groups. These are only shown for groups with at least 3 points. See FactoMineR R package for more details.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaEllipseConf', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Confidence level used for calculating prediction ellipses. This determines their size - a new observation will fall inside the ellipse with this probability. See FactoMineR R package for more details.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaLegendPosition', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Where legend is placed, relative to the plot.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaInteractivity', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to make the plot interactive by adding tooltips and links to single points on the plot. This will make the plot more informative, but the plot generation time will increase (the response to changes in the input widgets will become slower).'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmChangeDataOptions', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Change data presentation, clustering distance, linkage and tree ordering.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmChangeDisplayOptions', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Change the way how results are visualized, except textual labels.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmChangeLabelOptions', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Change the textual labels of the plot.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmShowImputed', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to show imputed values on the heatmap or missing values with white color. Clustering is always applied to imputed matrix.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmTransposeHeatmap', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Transpose the heatmap so that rows become columns and vice versa.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmClustDistRows', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which distance measure to use for calculating how far two rows (or clusters of rows) are from each other.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmClustDistCols', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which distance measure to use for calculating how far two columns (or clusters of columns) are from each other.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmClustMethodRows', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which linkage criterion to use for clustering rows.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmClustMethodCols', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which linkage criterion to use for clustering columns.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmTreeOrderingRows', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'How to order branches of the clustering tree of rows to make it visually more attractive.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmTreeOrderingCols', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'How to order branches of the clustering tree of columns to make it visually more attractive.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmCutreeClustersRows', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Allows to add gaps for dividing rows into specified number of clusters.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmCutreeClustersCols', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Allows to add gaps for dividing columns into specified number of clusters.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmAnnoCol', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which column annotations are shown above the heatmap.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmAnnoRow', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Which row annotations are shown left from the heatmap.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmLegendScheme', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Coloring scheme used for annotation colors.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmColorRangeMax', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Maximum of the color range. Values above that will appear the same as the maximum. If you have a range containing zero, you may consider changing minimum and maximum into opposite numbers to make sure that zero is exactly in the middle.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmColorRangeMin', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Minimum of the color range. Values below that will appear the same as the minimum. If you have a range containing zero, you may consider changing minimum and maximum into opposite numbers to make sure that zero is exactly in the middle.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmColorScheme', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Coloring used for the heatmap. Sequential palettes are better suitable for ordered data that progress from low to high (e.g. percentage between 0 and 100). Diverging palettes put equal emphasis on mid-range critical values and extremes at both ends of the data range, they are better suitable for data with both negative and positive values (e.g. difference from some reference). See http://colorbrewer2.org/ for more details.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmRevScheme', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to switch the ends of the color scheme.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmCellBorder', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Color of the border around each cell.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmFontSizeGeneral', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Font size for texts other than row names, column names and numbers in the cells (if shown).'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmShowNumbers', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to show numeric value in each cell.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmPrecisionNumbers', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'How many decimal places to show for numbers in the cells.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmPlotWidth', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'In arbitrary units.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmPlotRatio', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'This applies to dimensions of the whole image file.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmShowAnnoTitlesRow', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to show row annotation titles for the tracks left from the heatmap.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmShowAnnoTitlesCol', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to show column annotation titles for the tracks above the heatmap.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmInteractivity', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to make the plot interactive by adding tooltips and links to row and column names and to single cells on the plot. This will make the plot more informative, but the plot generation time will increase (the response to changes in the input widgets will become slower).'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmJitterPlotType', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to show violin plot or box plot together with points. This is informative if columns with similar annotations are collapsed (see data pre-processing tab).'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaJitterPlotType', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to show violin plot or box plot together with points. This is informative if columns with similar annotations are collapsed (see data pre-processing tab).'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('hmJitterSeparateOverlapping', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to shift points horizontally (jittering) or make points transparent to distinguish overlapping points. This may be needed if columns with similar annotations are collapsed (see data pre-processing tab).'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('pcaJitterSeparateOverlapping', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'Whether to shift points horizontally (jittering) or make points transparent to distinguish overlapping points. This may be needed if columns with similar annotations are collapsed (see data pre-processing tab).'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('exportSaveSettingsButton', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'You can save settings to create a link with data and options pre-loaded.'})}, 500)});</script>
+          <script>$(document).ready(function() {setTimeout(function() {shinyBS.addTooltip('exportDeleteSettingsButton', 'tooltip', {'container': 'body', 'placement': 'right', 'trigger': 'hover', 'title': 'You can delete settings that you have saved before (for data privacy).'})}, 500)});</script>
+        </form>
+      </div>
+      <div class="col-sm-8">
+        <div class="tabbable">
+          <ul class="nav nav-tabs shiny-tab-input" id="tabs1" data-tabsetid="4503">
+            <li class="active">
+              <a href="#tab-4503-1" data-toggle="tab" data-value="Introduction">Introduction</a>
+            </li>
+            <li>
+              <a href="#tab-4503-2" data-toggle="tab" data-value="Data import">Data import</a>
+            </li>
+            <li>
+              <a href="#tab-4503-3" data-toggle="tab" data-value="Data pre-processing">Data pre-processing</a>
+            </li>
+            <li>
+              <a href="#tab-4503-4" data-toggle="tab" data-value="PCA">PCA</a>
+            </li>
+            <li>
+              <a href="#tab-4503-5" data-toggle="tab" data-value="Heatmap">Heatmap</a>
+            </li>
+            <li>
+              <a href="#tab-4503-6" data-toggle="tab" data-value="Export">Export</a>
+            </li>
+            <li>
+              <a href="#tab-4503-7" data-toggle="tab" data-value="Help">Help</a>
+            </li>
+            <li>
+              <a href="#tab-4503-8" data-toggle="tab" data-value="News">News</a>
+            </li>
+          </ul>
+          <div class="tab-content" data-tabsetid="4503">
+            <div class="tab-pane active" data-value="Introduction" style="overflow:hidden;" id="tab-4503-1">
+              <p>This web tool allows users to upload their own data and easily create Principal Component Analysis (PCA) plots and heatmaps. Data can be uploaded as a file or by copy-pasteing it to the text box. Data format is shown under "Help" tab.</p>
+              <p>
+                The tool is inspired by discussions in 
+                <a href="http://predect.eu/" target="_blank">PREDECT</a>
+                 project and borrows some code from 
+                <a href='http://boxplot.tyerslab.com/' target='_blank'>BoxPlotR</a>.
+                Several 
+                <a href="http://www.r-project.org/" target="_blank">R</a>
+                 packages are used internally, including 
+                shiny, ggplot2, pheatmap, gridSVG, RColorBrewer, FactoMineR, pcaMethods, gProfileR, shinyBS, shinyjs and others. It is developed in 
+                <a href="http://biit.cs.ut.ee/" target="_blank">BIIT</a>
+                Research Group. The source code of ClustVis is available in 
+                <a href='https://github.com/taunometsalu/ClustVis' target='_blank'>GitHub</a>.
+                Please submit bug reports and feature requests to GitHub issues page or send to biit.support [at] ut.ee.
+              </p>
+              <br/>
+              <img src="frontPage/frontPage.png" width="100%"/>
+              <h6>
+                Metsalu, Tauno and Vilo, Jaak. 
+                <a href="http://nar.oxfordjournals.org/content/43/W1/W566.full" target="_blank">Clustvis: a web tool for visualizing clustering of multivariate data using Principal Component Analysis and heatmap.</a>
+                Nucleic Acids Research, 43(W1):W566–W570, 2015. doi: 10.1093/nar/gkv468.
+              </h6>
+            </div>
+            <div class="tab-pane" data-value="Data import" id="tab-4503-2">
+              <p>
+                <div id="uploadWarnings" class="shiny-text-output"></div>
+              </p>
+              <div data-display-if="input.uploadDataInput == &#39;5&#39;" data-ns-prefix="">
+                <p>Number of annotation levels in the original data before filtering:</p>
+                <div id="uploadAnnoLevelsTable" class="shiny-html-output"></div>
+              </div>
+              <div id="uploadAnnoColInfo" class="shiny-html-output"></div>
+              <div id="uploadAnnoColTable" class="shiny-html-output"></div>
+              <div id="uploadDataInfo" class="shiny-html-output"></div>
+              <div id="uploadDataTable" class="shiny-html-output"></div>
+              <div id="uploadAnnoRowInfo" class="shiny-html-output"></div>
+              <div id="uploadAnnoRowTable" class="shiny-html-output"></div>
+              <h6>
+                Metsalu, Tauno and Vilo, Jaak. 
+                <a href="http://nar.oxfordjournals.org/content/43/W1/W566.full" target="_blank">Clustvis: a web tool for visualizing clustering of multivariate data using Principal Component Analysis and heatmap.</a>
+                Nucleic Acids Research, 43(W1):W566–W570, 2015. doi: 10.1093/nar/gkv468.
+              </h6>
+            </div>
+            <div class="tab-pane" data-value="Data pre-processing" id="tab-4503-3">
+              <p>
+                <div id="procWarnings" class="shiny-text-output"></div>
+              </p>
+              <p>Data matrix size:</p>
+              <p>
+                <div id="procSizeTable" class="shiny-html-output"></div>
+              </p>
+              <p>Missing values (NAs) in rows:</p>
+              <p>
+                <div id="procNAsRows" class="shiny-html-output"></div>
+              </p>
+              <p>Missing values (NAs) in columns:</p>
+              <p>
+                <div id="procNAsCols" class="shiny-html-output"></div>
+              </p>
+              <div id="procPcaVarInfo" class="shiny-html-output"></div>
+              <div id="procPcaVarTable" class="shiny-html-output"></div>
+              <div id="procMatPcaInfo" class="shiny-html-output"></div>
+              <div id="procMatPca" class="shiny-html-output"></div>
+              <div id="procPcaLoadingsInfo" class="shiny-html-output"></div>
+              <div id="procPcaLoadings" class="shiny-html-output"></div>
+              <h6>
+                Metsalu, Tauno and Vilo, Jaak. 
+                <a href="http://nar.oxfordjournals.org/content/43/W1/W566.full" target="_blank">Clustvis: a web tool for visualizing clustering of multivariate data using Principal Component Analysis and heatmap.</a>
+                Nucleic Acids Research, 43(W1):W566–W570, 2015. doi: 10.1093/nar/gkv468.
+              </h6>
+            </div>
+            <div class="tab-pane" data-value="PCA" id="tab-4503-4">
+              <div data-display-if="!(input.pcaClickedType == &#39;pcaCol&#39; || input.pcaClickedType == &#39;pcaCell&#39;)" data-ns-prefix="">
+                <p>
+                  <div id="pcaWarnings" class="shiny-text-output"></div>
+                </p>
+                <a id="exportDownloadPdfPCA" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                  <i class="fa fa-download"></i>
+                  Download PDF-file
+                </a>
+                <a id="exportDownloadEpsPCA" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                  <i class="fa fa-download"></i>
+                  Download EPS-file
+                </a>
+                <a id="exportDownloadSvgPCA" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                  <i class="fa fa-download"></i>
+                  Download SVG-file
+                </a>
+                <br/>
+                <br/>
+                <div id="captionPCA" class="shiny-html-output"></div>
+                <div id="pca" class="shiny-html-output" height="100%" width="100%"></div>
+              </div>
+              <div data-display-if="input.pcaClickedType == &#39;pcaCol&#39; || input.pcaClickedType == &#39;pcaCell&#39;" data-ns-prefix="">
+                <p>
+                  <div id="pcaJitterWarnings" class="shiny-text-output"></div>
+                </p>
+                <button id="pcaBackButton" type="button" class="btn btn-default action-button">Back to PCA plot</button>
+                <button id="pcaBackPreviousButton" type="button" class="btn btn-default action-button">Back to previous plot</button>
+                <br/>
+                <div id="pcaJitterPlot" class="shiny-html-output" height="100%" width="100%"></div>
+                <br/>
+                <div id="pcaJitterTable" class="shiny-datatable-output"></div>
+              </div>
+            </div>
+            <div class="tab-pane" data-value="Heatmap" id="tab-4503-5">
+              <div data-display-if="!(input.hmClickedType == &#39;hmRow&#39; || input.hmClickedType == &#39;hmCol&#39; || input.hmClickedType == &#39;hmCell&#39;)" data-ns-prefix="">
+                <p>
+                  <div id="hmWarnings" class="shiny-text-output"></div>
+                </p>
+                <a id="exportDownloadPdfHeatmap" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                  <i class="fa fa-download"></i>
+                  Download PDF-file
+                </a>
+                <a id="exportDownloadEpsHeatmap" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                  <i class="fa fa-download"></i>
+                  Download EPS-file
+                </a>
+                <a id="exportDownloadSvgHeatmap" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                  <i class="fa fa-download"></i>
+                  Download SVG-file
+                </a>
+                <br/>
+                <br/>
+                <div id="captionHeatmap" class="shiny-html-output"></div>
+                <div id="heatmap" class="shiny-html-output" height="100%" width="100%"></div>
+              </div>
+              <div data-display-if="input.hmClickedType == &#39;hmRow&#39; || input.hmClickedType == &#39;hmCol&#39; || input.hmClickedType == &#39;hmCell&#39;" data-ns-prefix="">
+                <p>
+                  <div id="hmJitterWarnings" class="shiny-text-output"></div>
+                </p>
+                <button id="hmBackButton" type="button" class="btn btn-default action-button">Back to heatmap</button>
+                <button id="hmBackPreviousButton" type="button" class="btn btn-default action-button">Back to previous plot</button>
+                <br/>
+                <div id="hmJitterPlot" class="shiny-html-output" height="100%" width="100%"></div>
+                <br/>
+                <div id="hmJitterTable" class="shiny-datatable-output"></div>
+              </div>
+            </div>
+            <div class="tab-pane" data-value="Export" id="tab-4503-6">
+              <button id="exportSaveSettingsButton" type="button" class="btn btn-default action-button">Save settings</button>
+              <br/>
+              <div data-display-if="input.exportSaveSettingsButton" data-ns-prefix="">
+                <div id="exportSaveSettingsText" class="shiny-html-output"></div>
+              </div>
+              <button id="exportDeleteSettingsButton" type="button" class="btn btn-default action-button">Delete settings</button>
+              <p></p>
+              <div data-display-if="input.exportDeleteSettingsButton" data-ns-prefix="">
+                <div id="exportDeleteSettingsText" class="shiny-html-output"></div>
+              </div>
+              <a id="exportDownloadInitialData" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                <i class="fa fa-download"></i>
+                Download initial data as CSV-file
+              </a>
+              <br/>
+              <a id="exportDownloadProcessedData" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                <i class="fa fa-download"></i>
+                Download processed data as CSV-file
+              </a>
+              <br/>
+              <a id="exportDownloadPCAscores" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                <i class="fa fa-download"></i>
+                Download PCA scores as CSV-file
+              </a>
+              <br/>
+              <a id="exportDownloadPCAloadings" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                <i class="fa fa-download"></i>
+                Download PCA loadings as CSV-file
+              </a>
+              <br/>
+              <a id="exportDownloadPCAvartable" class="btn btn-default shiny-download-link " href="" target="_blank" download>
+                <i class="fa fa-download"></i>
+                Download PCA explained variance as CSV-file
+              </a>
+              <h6>
+                Metsalu, Tauno and Vilo, Jaak. 
+                <a href="http://nar.oxfordjournals.org/content/43/W1/W566.full" target="_blank">Clustvis: a web tool for visualizing clustering of multivariate data using Principal Component Analysis and heatmap.</a>
+                Nucleic Acids Research, 43(W1):W566–W570, 2015. doi: 10.1093/nar/gkv468.
+              </h6>
+            </div>
+            <div class="tab-pane" data-value="Help" id="tab-4503-7">
+              <h5 id="general">General</h5>
+              <p>You can move through the analysis steps by going to each of the tabs from left to right. All tabs work in a similar way: you can choose settings from the left panel, image or table on the right will automatically renew after that. Sometimes, it can take seconds to load. When moving from one tab to another, settings are saved automatically.</p>
+              In general, different tabs provide the following options:<ul>
+               <li>Data import - choose input dataset, option to filter rows/colums based on annotations and transpose matrix</li>
+               <li>Data pre-processing - option to aggregate columns with similar annotations, remove rows/columns with missing values, row centering and scaling, method for calculating principal components and imputing missing values</li>
+               <li>PCA - options related to PCA plot</li>
+               <li>Heatmap - options related to heatmap</li>
+               <li>Export - create link with current settings, download intermediate results</li>
+          </ul>
+              <p>The idle timeout (the time when browser session ends if user is inactive) is set to 30 minutes from server side but this can be overridden by browser configuration. To save uploaded data and selected settings, you can use a button on the 'Export' tab, a link is given to recover the settings later. This can also be used to send a link to a collaborator to show the same view. There is no planned expiration time for the links, users can delete the settings if they are concerned about the privacy. Though, when version of ClustVis changes, old saved settings may not be fully compatible with the new version if e.g. there are some new features. </p>
+              <h5 id="upload">Data import</h5>
+              <p>We aimed for a simple input data format. The numeric data matrix is situated in the bottom right corner, dimensions presented in rows and points in columns. Row labels and annotations are left from the matrix, column labels and annotations are above the matrix. Annotation labels are in the first row and column, respectively. Format of the input file is shown on the image below. Annotations are optional, data sets without annotations can be uploaded as well (on the example image, omitting rows 2-4 and/or columns B and C). When taking data from spreadsheet program (e.g. MS Excel), you can copy-paste the data to 'Paste data' box or export the data as delimited text file (ending with .csv or .tab) and then upload this file to ClustVis. Uploading Excel native files directly (.xls or .xlsx) doesn't work.</p>
+              <img src="helpTab/uploadTableArrows.png" width="100%"/>
+              <p></p>
+              <p>
+                In addition, it is possible to load settings that you have saved earlier (including data, drop-down settings etc.) or import data from
+                <a href="http://biit.cs.ut.ee/mem/" target="_blank">MEM</a>
+                 which has a collection of public datasets from 
+                <a href='http://www.ebi.ac.uk/arrayexpress/' target='_blank'>ArrayExpress</a>.
+                 The latter case is described more closely in the next section. It is also possible to use one of the testing datasets to get an overview of the web tool.
+              </p>
+              <p>If your dataset is not uploaded correctly (no rows are shown), please check the following:</p>
+              <ul><li>Make sure file is chosen for upload or pasted to the text box.</li>
+              <li>Make sure all rows have equal number of columns. In case of doubt, it is safer to open the data in a spreadsheet program and copy-paste from there rather than choosing a file for upload.</li>
+              <li>Make sure there are no duplicate row or column names.</li>
+              <li>Make sure all missing values are marked with NA or empty cell.</li>
+              <li>If automatic detection of the delimiter is not working correctly, try to set it manually (uncheck the 'detect delimiter' checkbox).</li>
+              <li>If automatic detection of the column and row annotations is not working correctly, try to set it manually (uncheck the 'detect column and row annotations' checkbox).</li></ul>
+              <p>For user-uploaded datasets, ClustVis automatically detects both delimiter and number of annotation rows from the data by default. To find delimiter, it counts for each possible delimiter (comma, tabulator, semicolon) how many times it appears on each row. We use the heuristic where minimum is taken over all rows and the delimiter with the greatest score is chosen as the right one.</p>
+              <p>When finding number of annotation rows and columns, the largest possible numeric matrix from bottom right corner is found. If the matrix contains non-integers (i.e. fractional numbers) and there are some left columns or top rows that contain integers only, these first rows and/or columns are considered integer-valued annotations (e.g. some grade coded with integers: 1, 2, 3).</p>
+              <p>The situation is depicted on the following images where there are three annotation lines and the green and red line show automatic detection. On the left, the numeric matrix contains non-integer values and the last annotation row is detected correctly. On the right, the numeric matrix contains only integers and the last annotation row cannot be detected automatically.</p>
+              <img src="helpTab/helpMatrix.png" width="100%"/>
+              <h5 id="mem">Public dataset from MEM</h5>
+              <p>If you select this option, you can choose one dataset at a time. There are four options to filter the number of rows shown:</p>
+              <ul><li>Select one KEGG or Reactome pathway or GO biological process. In case of some rare platforms, it can happen that gene IDs don't convert correctly and no data is shown.</li>
+              <li>Select a custom gene list. IDs are automatically converted using <a href='http://biit.cs.ut.ee/gprofiler/gconvert.cgi'>g:Convert</a> tool.</li>
+              <li>Cluster the genes using k-means. The number of clusters is provided by the user. Cluster ID and number of genes in each cluster is shown on the heatmap labels.</li>
+              <li>Choose one of the k-means clusters. This options should be preceded by clustering with k-means and choosing a cluster of interest from the heatmap.</li></ul>
+              <p>If it happens that some names are very long and make the plot small, you can manually increase the width of the plot. We decided not to truncate the names automatically because sometimes the start of the name is important, sometimes the end and it is hard to decide it automatically. </p>
+              <p>You can search for dataset and pathway by typing one or more keywords to the search box and then select from drop-down list that appears. The keywords can be about body part, dataset ID or any other word that appears in the experiment title. All available datasets and pathways are summarized in the tables below.</p>
+              <h5 id="datasets">List of datasets available</h5>
+              <div id="helpDatasetTable" class="shiny-datatable-output"></div>
+              <h5 id="pathways">List of pathways available</h5>
+              <div id="helpPathwayTable" class="shiny-datatable-output"></div>
+              <h5 id="filtering">Annotations based filtering</h5>
+              <p>After choosing a dataset, it is possible to filter out rows or columns based on annotation levels. By default, all levels are included, you can uncheck them one by one or click 'change all levels' and then check some of the levels to be included. Each level has a number in brackets that shows the number of rows or columns in the full dataset having this level. If multiple annotations are used for filtering, a subset is retained that meets all filtering criteria.</p>
+              <h5 id="processing">Data pre-processing</h5>
+              <p>On this tab, you can choose the method that is used for PCA. This method is also used for imputing missing values to the heatmap and it also determines, for example, whether values on the heatmap are centered or not. Number of components returned depends on the dimensions of the input data matrix. If there are more observations (n) than dimensions (d) then d principal components are calculated. Otherwise, the number of principal components is n.</p>
+              <p>In general, SVD (Singular Value Decomposition) is the standard PCA method that is most often used. Imputation means that if there are any missing values in the dataset, they are predicted and filled iteratively using other values in the dataset during SVD calculation. Other PCA methods are further strategies to cope with the missing value problem.</p>
+              <p>Unit variance is the most common scaling method. This means that all variables are scaled so that they will be equally important (variance = 1) when finding the components. As a result, a difference of 1 means that the values are one standard deviation away from each other, or from the average of the row if rows are centered.</p>
+              <p>If the variables already have a common scale and you want to keep their original variability (i.e. variables where the variability is larger should contribute more to the components), you can apply 'no scaling'.</p>
+              <p>When exactly to use some other PCA method (Nipals, probabilistic) or scaling (Pareto, vector scaling) is a matter of testing with each specific dataset. Interpreting the results of PCA and heatmap plots is quite subjective and needs further validation using other methods.</p>
+              <h5 id="pca_heatmap">PCA and heatmap</h5>
+              <p>These are the main tabs, allowing you to generate and customize PCA plot and heatmap. Each individual setting is described more precisely with a tooltip that appears if you hover over with the mouse. To download an image, you can use one of the buttons above the plot. The following color palettes from ColorBrewer are available:</p>
+              <img src="helpTab/colorBrewer.png"/>
+              <p>Only up to eight color groups are allowed on the PCA plot because human eye cannot distinguish more colors easily. In this case, shapes should be enough for separating the groups. The following shapes are used:</p>
+              <img src="helpTab/shapes.png"/>
+              <p>If there are more groups than available shapes, some groups are not shown on the plot.</p>
+              <h5 id="interactivity">Interactivity of the plots</h5>
+              <p>With the recent updates of the tool, interactive mode was added to both PCA plot and heatmap which allows to click and hover over specific areas of the plot. This mode is available when going to PCA or heatmap tab and choosing 'change plot labels', 'add interactivity'. Interactivity is still experimental, we are hoping to get feedback from users. It is not made the default option because plots are slower to render. It is recommended to first set other options in non-interactive mode and then switch to interactive mode as the last step. For larger datasets where an interactive plot would take too long to render, it is automatically switched to non-interactive mode and a warning message is shown.</p>
+              Interactive mode includes the following additional options:<ul>
+               <li>Hover over a point on the PCA plot to see additional information.</li>
+               <li>Click on a point on the PCA plot to see values from one column on a separate jitter plot. If 'plot_link' appears among column annotations, the points are linked to an external resource instead.</li>
+               <li>Hover over a row name, column name or cell on the heatmap to see additional information.</li>
+               <li>Click on a row name, column name or cell on the heatmap to see values from one row, column or cell on a separate jitter plot.</li>
+               <li>Hover over a point on the jitter plot to see additional information.</li>
+               <li>Click on a point on the jitter plot to go to an external resource. It is only available if there is a row or column annotation called 'plot_link'.</li>
+               <li>Click on a column name on the jitter plot to see a reduced jitter plot with values from only this column.</li>
+          </ul>
+              <p>The default tooltips can be overridden by having a row or column annotation called 'plot_tooltip'. Below the jitter plot, a table is shown that includes all data on the plot and, in addition, information about missing values. Row and column IDs in the table are changed into links if 'plot_link' appears among annotations.</p>
+              <h5 id="interpretation">Interpreting the output</h5>
+              <p>Principal Component Analysis performs a linear transformation to turn multivariate data into a form where variables are uncorrelated (see Jolliffe, Ian. Principal component analysis. John Wiley &amp; Sons, Ltd, 2002). These new uncorrelated variables are called Principal Components and they are ordered descending based on the variance explained. Thus, first two components show the data from the angle of most variability, i.e. they create the most "widespread" 2D projection. They also approximate the distances between points. Thus, if ellipses on the PCA plot are not overlapping, these groups form separate clusters.</p>
+              <p>However, one should be careful when first components describe just a small proportion of the total variation. In this case, approximating original data with 2D projection can be misleading. </p>
+              <p>The opposite happens when there are only two dimensions in the original data, resulting in 100% of the variation to be explained by the two components. In this case, PCA doesn't make much sense and making a simple scatterplot would be better to interpret in most cases. </p>
+              <p>Sometimes, first components are related with technical variation such as batch effect, in this case, it makes sense to look at further components that can be attributed to more informative sources of variability.</p>
+              <p>Heatmap is another popular way to visualize a data matrix. Values in the matrix are color coded and optionally, rows and/or columns are clustered. When looking at the annotations on top of the heatmap, one can get an overview which annotated groups are separated better than others. </p>
+              <p>When reading the clustering on heatmap, attention should be paid which objects are merged into clustering tree first, not the exact order of rows and/or columns. Any two branches can be swapped without changing the meaning of the tree.</p>
+              <p>An example output and its interpretation is shown below:</p>
+              <img src="helpTab/interpretation.png" width="100%"/>
+              <h5 id="mathematics">Mathematical basis</h5>
+              <p>Calculation of principal components is thoroughly explained in the book by Ian Jolliffe (see Jolliffe, Ian. Principal component analysis. John Wiley &amp; Sons, Ltd, 2002). </p>
+              <p>Hierarchical clustering of the heatmap starts with calculating all pairwise distances. Objects with the smallest distance are merged in each step. Clustering method defines how to go from object level to cluster level when calculating distance between two clusters.</p>
+              Available clustering distances:<ul>
+               <li>correlation - Pearson correlation subtracted from 1</li><li>Euclidean - square root of sum of square distances</li>
+               <li>maximum - greatest absolute difference between coordinates</li><li>Manhattan - sum of the absolute differences</li>
+               <li>Canberra - weighted Manhattan distance</li>
+               <li>binary - matrix is binarized (non-zero to 1, zero to 0), number of bits which are 1/0 or 0/1 divided by number of bits which are 0/1, 1/0 or 1/1</li>
+          </ul>
+              Available linkage methods:<ul><li>single linkage - using two closest objects from two clusters to be merged</li><li>complete linkage - using two farthest objects</li><li>average - average distance of all possible pairs</li><li>McQuitty - average distance of the two clusters (to be merged) to the cluster of interest</li><li>median - median distance of all possible pairs</li><li>centroid - distance between cluster means</li><li>Ward linkage - using sum of squared differences from points to centroids as the distance</li></ul>
+              <h5 id="editions">Separate editions</h5>
+              <p>
+                There is a
+                <a href="http://biit.cs.ut.ee/clustvis_large/" target="_blank">separate ClustVis edition</a>
+                available which has higher limits for size of the uploaded data.
+              </p>
+              <p>
+                Also, a
+                <a href="https://hub.docker.com/r/taunometsalu/clustvis/" target="_blank">Docker image</a>
+                is available in Docker Hub which makes it easier to run ClustVis locally. See
+                <a href="https://github.com/taunometsalu/ClustVis" target="_blank">GitHub page</a>
+                for more information about the local installation.
+              </p>
+              <p>
+                If you want to automate ClustVis plot generation, the best way is to use ClustVis R package. See
+                <a href="https://github.com/taunometsalu/ClustVis" target="_blank">GitHub page</a>
+                for more information.
+              </p>
+              <h6>
+                Metsalu, Tauno and Vilo, Jaak. 
+                <a href="http://nar.oxfordjournals.org/content/43/W1/W566.full" target="_blank">Clustvis: a web tool for visualizing clustering of multivariate data using Principal Component Analysis and heatmap.</a>
+                Nucleic Acids Research, 43(W1):W566–W570, 2015. doi: 10.1093/nar/gkv468.
+              </h6>
+            </div>
+            <div class="tab-pane" data-value="News" id="tab-4503-8">
+              <h5>Version history:</h5>
+              <p>20th December 2018 - fixed a bug when clustering is not applied on heatmap (thank you, Niladri Bhusan Pati, for letting us know about it!).</p>
+              <p>17th December 2018 - added some text to help page.</p>
+              <p>10th December 2018 - added option to export data using ClustVis R package.</p>
+              <p>29th October 2018 - fixed a bug with transposing input matrix.</p>
+              <p>15th October 2018 - added option to change margin ratio for PCA plot.</p>
+              <p>8th October 2018 - added option to change quote and missing value type in the input data.</p>
+              <p>1st October 2018 - added option to apply logarithmic transformation to the original data.</p>
+              <p>
+                21st May 2018 - ClustVis plots can now we generated using an R package, see 
+                <a href="https://github.com/taunometsalu/ClustVis" target="_blank">GitHub page</a>
+                 for instructions.
+              </p>
+              <p>19th February 2018 - major code refactoring to separate main functions; fix a bug about setting PCA plot axis limits (thank you, Abby Benninghoff, for letting us know about it!); values outside color range on the heatmap are now appearing with the same color as the color range min or max (thank you, Abby Benninghoff, for the idea!); option to change heatmap legend colors added.</p>
+              <p>11th December 2017 - some bug fixes and optimizations.</p>
+              <p>23rd October 2017 - updated Shiny server version and several packages. Decreased minimum heatmap plot width.</p>
+              <p>4th April 2017 - added option to use grayscale colors for PCA plot groups (thank you, Julian R. Marchesi, for the idea!).</p>
+              <p>13th February 2017 - fixed a bug when reading in a dataset with both integers and non-integers in the numeric matrix.</p>
+              <p>30th January 2017 - added ClustVis logo.</p>
+              <p>16th June 2016 - increased the maximum number of heatmap annotation levels for large data edition; a small bug fix.</p>
+              <p>
+                3rd May 2016 - there is now a
+                <a href="http://biit.cs.ut.ee/clustvis_large/" target="_blank">separate edition</a>
+                of ClustVis with higher limits. Also, a
+                <a href="https://hub.docker.com/r/taunometsalu/clustvis/" target="_blank">Docker image</a>
+                is now available in Docker Hub which makes it easier to run ClustVis locally. See
+                <a href="https://github.com/taunometsalu/ClustVis" target="_blank">GitHub page</a>
+                for more information about the local installation.
+              </p>
+              <p>17th February 2016 - option 'change all levels' for annotations based filtering, jitter plot x-axis names link to reduced jitter plot, table is shown now below jitter plot, now always adding links to heatmap cells if row and column names have them, automatic calculation of jitter plot height improved, font of the interactive plots changed to Arial, fixed jitter plot tooltips with NA values and jitter plot with aggregated values, option to show violin plot or box plot without points, 'Data upload' tab renamed to 'Data import' to better reflect the meaning, slightly modified heatmap caption text, loading message added if calculation is in process, general logic of the tabs added to the help page, fixed showing filtering options after transposing, external links open on a new tab without necessarily holding down 'Ctrl' key, annotations with many levels removed automatically from the heatmap.</p>
+              <p>18th January 2016 - fix 'show imputed values' to show scaled heatmap when unchecked, option to use a custom gene list when subsetting ArrayExpress dataset, message about gene names that were not present in the dataset, limit for maximum number of components to be calculated (for performance reasons), warning message about maximum uploaded file size added, pathway genes sorted alphabetically, shiny package updated to 0.13.</p>
+              <p>8th January 2016 - major restructuring: interactive mode introduced (see help page), row annotations introduced (thank you, Sven-Eric Schelhorn, for the idea!), extended input file format and related changes to allow row annotations for the heatmap (including row filtering, different detection of annotation lines, modified help page), colored labels for annotation based filtering, annotation groups introduced, option to remove rows and/or columns with many missing values, option to remove constant columns, option to transpose heatmap, option to show missing values on heatmap, option to set general font size on heatmap, font of annotation legend automatically scaled down if it doesn't fit to the plot, option to add space between clusters on heatmap, corrected Ward linkage method added, some data format checks and warning messages, limit for maximum number of annotation levels shown on PCA plot and heatmap, footer changed into a link, Shiny Server updated to 1.4.1.759 and Shiny package updated to 0.12.2, some custom changes in the pheatmap R code merged to the main branch of pheatmap R package.</p>
+              <p>
+                27th May 2015 - ClustVis is now running on 
+                <a href='https://www.docker.com/' target='_blank'>Docker</a>;
+                 reference to published article added to the footer.
+              </p>
+              <p>21st April 2015 - option to transpose the data matrix added under 'Data upload'; maximal heatmap dimension increased to 1200; a small bug fixed related with uploading a dataset without annotations.</p>
+              <p>17th April 2015 - second revision based on comments from reviewers: number of species increased to 17; more informative error messages for data upload; number of NAs in rows and columns is shown during upload; help page improved (including list of all datasets and pathways).</p>
+              <p>6th April 2015 - small improvements related with option 'import prepared gene expression matrix'.</p>
+              <p>1st April 2015 - major revision based on comments from reviewers: some example datasets removed; it is possible to cluster whole gene expression dataset first using k-means or select one k-means cluster; some warning messages added; Bayesian PCA removed; PCA and heatmap options grouped; percentages shown together with axis labels; color and shape can be changed independently on PCA plot; help page improved a lot; example captions added for PCA plot and heatmap; new export options added; heatmap default color changed.</p>
+              <p>9th February 2015 - some optimization and help text added when importing dataset from ArrayExpress.</p>
+              <p>6th February 2015 - heatmap tree ordering options added; it is possible to choose different linkage method for rows and columns of heatmap; you can choose color range of the heatmap manually; heatmap annotation titles can be switched off; organism filtering added when importing public datasets; some bug fixes.</p>
+              <p>19th December 2014 - output interpretation added to the help page; better default size for row and column names on the heatmap.</p>
+              <p>18th December 2014 - you can aggregate similar annotations on 'pre-processing' tab; you can hide row and/or column names on heatmap; you can set minimum number of annotations when choosing from the list of public datasets.</p>
+              <p>15th December 2014 - column filtering for all import options added; number of annotations added to dataset name; more flexible plot width.</p>
+              <p>4th December 2014 - improved search for MEM datasets (you don't have to choose platform or pathway database first). Filtering option of less informative annotations and sample filtering added.</p>
+              <p>21st November 2014 - import from MEM added; some new example datasets; improved help page; number of rows and columns is now shown on upload tab.</p>
+              <p>14th November 2014 - option to download plot in different formats added; line type and width for ellipses added.</p>
+              <p>12th November 2014 - option to save settings added; and some other new features.</p>
+              <p>31st October 2014 - first version online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

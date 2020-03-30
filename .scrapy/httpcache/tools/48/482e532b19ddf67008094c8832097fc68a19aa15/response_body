@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>
+<meta http-equiv='Content-Style-Type' content='text/css'>
+<meta name='author' content='Takamasa Suzuki'>
+<meta name='description' content='Anno-J genome browser'>
+<script type='text/javascript' src='jslib/prototype.js'></script>
+<script type='text/javascript' src='js/dart.js'></script>
+<title>Anno-J genome browser</title>
+<link rel='stylesheet' href='css/dart.css' type='text/css'><link rel='stylesheet' href='css/annoj.css' type='text/css'>	<link rel='stylesheet' href='css/base_analysis.css' type='text/css'>
+</head>
+<body>
+	<div id="topmenu">
+	<div id="topmenu_logo"><img src="image/dart_logo.gif"></div>
+	<div id="topmenu_info">Script Ver. 4.1b<br>Data 2008/5/23</div>
+	<div id="topmenu_items">
+		<a href="index.php" target="_top">Top page</a>
+		| <a href="help.php#annoj">Help</a>
+					| <a href="login.php">Login</a>
+				|<select id='language_select' onchange='changeLanguage(this)'><option value='en_US'  selected>English</option><option value='ja_JP' >Japanese</option></select>
+		|<select id='organism_select' onchange='changeOrganism(this)'><option value='0'  selected>All organism</option><option value='Arabidopsis thaliana' >Arabidopsis</option><option value='Oryza sativa' >Rice</option><option value='tomato' >Tomato</option></select>
+	</div>
+	<h1>Anno-J genome browser</h1>
+</div>
+	<form  action="/dart/annoj.php" method="get" name="annoj" id="annoj" class='input_section'>
+	<p>Please select organism for analysis.</p>
+	<p><select name="organism">
+	<option value="Oryza sativa">Oryza sativa (rice)</option>
+	<option value="Arabidopsis thaliana">Arabidopsis thaliana</option>
+</select> <input name="submit" value="Select" type="submit" /></p>
+</form></body>
+</html>

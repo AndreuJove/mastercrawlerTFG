@@ -1,0 +1,2168 @@
+<!doctype html>
+<html lang="en">
+<!--
+  #%L
+  dbfetch-servlet
+  %%
+  Copyright (C) 2006 - 2019 EMBL - European Bioinformatics Institute
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+<head>
+  <meta charset="utf-8" />
+  <title>Dbfetch &lt; EMBL-EBI</title>
+  <meta name="description" content="EMBL-EBI - Dbfetch" /><!-- Describe what this page is about -->
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
+  <meta name="author" content="EMBL-EBI Web Prouction Team" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <meta http-equiv="Content-Language" content="en-GB" />
+  <meta http-equiv="Window-target" content="_top" />
+  <meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/" />
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="dbfetch - WEB PRODUCTION - EMBL-EBI" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2018-06-14" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2020-01-01" /> <!-- When this content is no longer relevant -->
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
+
+
+  <!-- Use this CSS file for any custom styling -->
+  <!--
+    <link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
+  -->
+
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+
+  <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/theme-embl-petrol.css" type="text/css" media="all" />
+  <!-- end CSS-->
+
+
+  <style type="text/css">
+  	pre{border:0}
+  </style>
+  
+  <!-- end CSS-->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  
+  <!-- Full build -->
+  <!-- <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"></script> -->
+  
+  <!-- custom build (lacks most of the "advanced" HTML5 support -->
+  <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.custom.49274.js"></script>
+
+<title>Dbfetch &lt; EMBL-EBI</title>
+
+
+
+<meta name="description" content="dbfetch - retrieve entries from databases available at the European Bioinformatics Institute (EBI) by their identifiers (e.g. ID, name or accession)." />
+<meta name="keywords" content="database entry retrieval, biological database, dbfetch" />
+<base href="/Tools/dbfetch/dbfetch" />
+
+<script language="javascript" type="text/javascript">
+
+function callLoadMethods() {
+	if(document.prompt) {
+		loadForm();
+	}
+	dbSelected();
+}
+
+function loadForm() {
+	var formName="";
+	var dbName="";
+	var formatName="";
+	var styleName="";
+	var urlArray = new Array();
+	urlArray= document.location.href.split("?");
+	if(urlArray[1]) {
+		var urlArray2 = new Array();
+		tmp = urlArray[1];
+		urlArray2= tmp.split("&");
+		for(var i=0; i<urlArray2.length; i++) {
+			var tmpArray = new Array();
+			tmpArray = urlArray2[i].split("=");
+			if(i == 0) {
+				if(tmpArray[0] == "db") {
+					formName = "prompt";
+					dbName = tmpArray[1];
+				}
+				else {
+					formName = "prompt2";
+				}
+			}
+			if(tmpArray[0] == "format") {
+				formatName = tmpArray[1];
+			}
+			if(tmpArray[0] == "style") {
+				styleName = tmpArray[1];
+			}
+		}
+		if(formName == "prompt" && dbName != ""  && formatName !="" && styleName !="") {
+			setDSBFetchSelect(document.prompt.db, dbName);
+			setDSBFetchSelect(document.prompt.format, formatName);
+			setDSBFetchSelect(document.prompt.style, styleName);
+		}
+		else if(formName == "prompt2" && formatName !="" && styleName !="") {
+			setDSBFetchSelect(document.prompt2.format, formatName);
+			setDSBFetchSelect(document.prompt2.style, styleName);
+			//document.prompt2.
+		}
+		else{}
+	}
+}
+
+function setDSBFetchSelect(selDropDown, selValue) {
+	if(selValue) {
+		selValue = selValue.replace(/%20/g, " ");
+		for(var i=0; i< selDropDown.options.length; i++) {
+			if(selDropDown.options[i].value == selValue) {
+				for(var x=0; x< selDropDown.options.length; x++) {
+						selDropDown.options[x].selected=false;
+				}
+				selDropDown.options[i].selected=true;
+				break;
+			}
+			else{}
+		}
+	}
+	else{}
+}
+
+function dbSelected() {
+	var selectedIndex = document.prompt.db.selectedIndex;
+	var dbSel = document.getElementById("dbs");
+	var formatSel = document.getElementById("formats");
+	var styleSel = document.getElementById("styles");
+
+	// Empty Options array for format.
+	for(var i=0; i<formatSel.options.length; i++) {
+		formatSel.options[i] = null;
+	}
+	// Assign the supported formats.
+	var selDbName = dbSel.options[dbSel.selectedIndex].value;
+	for(var i=0; i < formatHash[selDbName].length; i++) {
+		if(formatHash[selDbName][i] == 'default') {
+			formatSel.options[i] = new Option(formatHash[selDbName][i], formatHash[selDbName][i], true, true);
+		}
+		else {
+			formatSel.options[i] = new Option(formatHash[selDbName][i], formatHash[selDbName][i], false, false);
+		}
+	}
+	// Update the styles select drop-down
+	formatSelected();
+}
+
+// Update the content of the styles select drop-down
+function formatSelected(){
+    var formatElem = document.getElementById("formats");
+    var styleElem = document.getElementById("styles");
+    var dbElem = document.getElementById("dbs");
+    var selectedFormat = formatElem.options[formatElem.selectedIndex].value;
+    var selectedDb = dbElem.options[dbElem.selectedIndex].value;
+
+    // Empty Styles array.
+	for(var i=0; i<styleElem.options.length; i++) {
+		styleElem.options[i] = null;
+	}
+
+	// Assign the supported styles.
+	for(var i=0; i < styleHash[selectedDb][selectedFormat].length; i++) {
+		if(styleHash[selectedDb][selectedFormat][i] == 'default') {
+			styleElem.options[i] = new Option(styleHash[selectedDb][selectedFormat][i], styleHash[selectedDb][selectedFormat][i], true, true);
+		}
+		else {
+			styleElem.options[i] = new Option(styleHash[selectedDb][selectedFormat][i], styleHash[selectedDb][selectedFormat][i], false, false);
+		}
+	}
+}
+<!-- Code which dynamically generates styleHash and formatHash JavaScript variables -->
+var formatHash = new Array();
+var styleHash = new Array();
+
+formatHash["chembl"] = new Array(
+	"default", "fasta"
+);
+styleHash["chembl"] = new Array(2);
+styleHash["chembl"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["chembl"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["edam"] = new Array(
+	"default", "obo"
+);
+styleHash["edam"] = new Array(2);
+styleHash["edam"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["edam"]["obo"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["ena_coding"] = new Array(
+	"default", "annot", "embl", "emblxml-1.1", "emblxml-1.2", "entrysize", "fasta", "seqxml"
+);
+styleHash["ena_coding"] = new Array(8);
+styleHash["ena_coding"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_coding"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_coding"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_coding"]["emblxml-1.1"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_coding"]["emblxml-1.2"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_coding"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_coding"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_coding"]["seqxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["ena_geospatial"] = new Array(
+	"default", "annot", "embl", "emblxml-1.2", "entrysize", "fasta", "seqxml"
+);
+styleHash["ena_geospatial"] = new Array(7);
+styleHash["ena_geospatial"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_geospatial"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_geospatial"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_geospatial"]["emblxml-1.2"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_geospatial"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_geospatial"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_geospatial"]["seqxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["ena_noncoding"] = new Array(
+	"default", "annot", "embl", "emblxml-1.2", "entrysize", "fasta", "seqxml"
+);
+styleHash["ena_noncoding"] = new Array(7);
+styleHash["ena_noncoding"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_noncoding"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_noncoding"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_noncoding"]["emblxml-1.2"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_noncoding"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_noncoding"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_noncoding"]["seqxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["ena_sequence"] = new Array(
+	"default", "annot", "embl", "emblxml-1.1", "emblxml-1.2", "entrysize", "fasta", "insdxml", "seqxml"
+);
+styleHash["ena_sequence"] = new Array(9);
+styleHash["ena_sequence"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence"]["emblxml-1.1"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_sequence"]["emblxml-1.2"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_sequence"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence"]["insdxml"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_sequence"]["seqxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["ena_sequence_con"] = new Array(
+	"default", "annot", "embl", "emblxml-1.1", "emblxml-1.2", "entrysize", "fasta", "insdxml", "seqxml"
+);
+styleHash["ena_sequence_con"] = new Array(9);
+styleHash["ena_sequence_con"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence_con"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence_con"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence_con"]["emblxml-1.1"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_sequence_con"]["emblxml-1.2"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_sequence_con"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence_con"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence_con"]["insdxml"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_sequence_con"]["seqxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["ena_sequence_conexp"] = new Array(
+	"default", "annot", "embl", "emblxml-1.1", "emblxml-1.2", "entrysize", "fasta", "insdxml", "seqxml"
+);
+styleHash["ena_sequence_conexp"] = new Array(9);
+styleHash["ena_sequence_conexp"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence_conexp"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence_conexp"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence_conexp"]["emblxml-1.1"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_sequence_conexp"]["emblxml-1.2"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_sequence_conexp"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence_conexp"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ena_sequence_conexp"]["insdxml"] = new Array(
+	"default", "raw"
+);
+styleHash["ena_sequence_conexp"]["seqxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["ensemblgene"] = new Array(
+	"default", "csv", "embl", "fasta", "genbank", "gff2", "gff3", "tab"
+);
+styleHash["ensemblgene"] = new Array(8);
+styleHash["ensemblgene"]["default"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgene"]["csv"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgene"]["embl"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgene"]["fasta"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgene"]["genbank"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgene"]["gff2"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgene"]["gff3"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgene"]["tab"] = new Array(
+	"default", "raw"
+);
+
+formatHash["ensemblgenomesgene"] = new Array(
+	"default", "csv", "embl", "fasta", "genbank", "gff2", "gff3", "tab"
+);
+styleHash["ensemblgenomesgene"] = new Array(8);
+styleHash["ensemblgenomesgene"]["default"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgenomesgene"]["csv"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgenomesgene"]["embl"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgenomesgene"]["fasta"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgenomesgene"]["genbank"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgenomesgene"]["gff2"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgenomesgene"]["gff3"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgenomesgene"]["tab"] = new Array(
+	"default", "raw"
+);
+
+formatHash["ensemblgenomestranscript"] = new Array(
+	"default", "fasta"
+);
+styleHash["ensemblgenomestranscript"] = new Array(2);
+styleHash["ensemblgenomestranscript"]["default"] = new Array(
+	"default", "raw"
+);
+styleHash["ensemblgenomestranscript"]["fasta"] = new Array(
+	"default", "raw"
+);
+
+formatHash["ensembltranscript"] = new Array(
+	"default", "fasta"
+);
+styleHash["ensembltranscript"] = new Array(2);
+styleHash["ensembltranscript"]["default"] = new Array(
+	"default", "raw"
+);
+styleHash["ensembltranscript"]["fasta"] = new Array(
+	"default", "raw"
+);
+
+formatHash["epo_prt"] = new Array(
+	"default", "annot", "embl", "entrysize", "fasta", "seqxml"
+);
+styleHash["epo_prt"] = new Array(6);
+styleHash["epo_prt"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["epo_prt"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["epo_prt"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["epo_prt"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["epo_prt"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["epo_prt"]["seqxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["hgnc"] = new Array(
+	"default", "tab"
+);
+styleHash["hgnc"] = new Array(2);
+styleHash["hgnc"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["hgnc"]["tab"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["imgthlacds"] = new Array(
+	"default", "annot", "embl", "entrysize", "seqxml", "fasta"
+);
+styleHash["imgthlacds"] = new Array(6);
+styleHash["imgthlacds"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgthlacds"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgthlacds"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgthlacds"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgthlacds"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["imgthlacds"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["imgthlagen"] = new Array(
+	"default", "annot", "embl", "entrysize", "seqxml", "fasta"
+);
+styleHash["imgthlagen"] = new Array(6);
+styleHash["imgthlagen"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgthlagen"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgthlagen"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgthlagen"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgthlagen"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["imgthlagen"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["imgthlapro"] = new Array(
+	"default", "fasta"
+);
+styleHash["imgthlapro"] = new Array(2);
+styleHash["imgthlapro"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgthlapro"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["imgtligm"] = new Array(
+	"default", "annot", "embl", "entrysize", "seqxml", "fasta"
+);
+styleHash["imgtligm"] = new Array(6);
+styleHash["imgtligm"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgtligm"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgtligm"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgtligm"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["imgtligm"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["imgtligm"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["interpro"] = new Array(
+	"default", "interpro", "interproxml", "tab"
+);
+styleHash["interpro"] = new Array(4);
+styleHash["interpro"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["interpro"]["interpro"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["interpro"]["interproxml"] = new Array(
+	"default", "raw"
+);
+styleHash["interpro"]["tab"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["ipdkircds"] = new Array(
+	"default", "annot", "embl", "entrysize", "seqxml", "fasta"
+);
+styleHash["ipdkircds"] = new Array(6);
+styleHash["ipdkircds"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdkircds"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdkircds"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdkircds"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdkircds"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["ipdkircds"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["ipdkirgen"] = new Array(
+	"default", "annot", "embl", "entrysize", "seqxml", "fasta"
+);
+styleHash["ipdkirgen"] = new Array(6);
+styleHash["ipdkirgen"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdkirgen"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdkirgen"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdkirgen"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdkirgen"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["ipdkirgen"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["ipdkirpro"] = new Array(
+	"default", "fasta"
+);
+styleHash["ipdkirpro"] = new Array(2);
+styleHash["ipdkirpro"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdkirpro"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["ipdmhccds"] = new Array(
+	"default", "annot", "embl", "entrysize", "seqxml", "fasta"
+);
+styleHash["ipdmhccds"] = new Array(6);
+styleHash["ipdmhccds"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdmhccds"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdmhccds"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdmhccds"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdmhccds"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["ipdmhccds"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["ipdmhcgen"] = new Array(
+	"default", "annot", "embl", "entrysize", "seqxml", "fasta"
+);
+styleHash["ipdmhcgen"] = new Array(6);
+styleHash["ipdmhcgen"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdmhcgen"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdmhcgen"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdmhcgen"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdmhcgen"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["ipdmhcgen"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["ipdmhcpro"] = new Array(
+	"default", "fasta"
+);
+styleHash["ipdmhcpro"] = new Array(2);
+styleHash["ipdmhcpro"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["ipdmhcpro"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["iprmc"] = new Array(
+	"default", "gff2", "iprmc", "iprmctab", "iprmcxml"
+);
+styleHash["iprmc"] = new Array(5);
+styleHash["iprmc"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["iprmc"]["gff2"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["iprmc"]["iprmc"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["iprmc"]["iprmctab"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["iprmc"]["iprmcxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["iprmcuniparc"] = new Array(
+	"default", "gff2", "iprmc", "iprmctab", "iprmcxml"
+);
+styleHash["iprmcuniparc"] = new Array(5);
+styleHash["iprmcuniparc"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["iprmcuniparc"]["gff2"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["iprmcuniparc"]["iprmc"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["iprmcuniparc"]["iprmctab"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["iprmcuniparc"]["iprmcxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["jpo_prt"] = new Array(
+	"default", "annot", "embl", "entrysize", "fasta", "seqxml"
+);
+styleHash["jpo_prt"] = new Array(6);
+styleHash["jpo_prt"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["jpo_prt"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["jpo_prt"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["jpo_prt"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["jpo_prt"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["jpo_prt"]["seqxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["kipo_prt"] = new Array(
+	"default", "annot", "embl", "entrysize", "fasta", "seqxml"
+);
+styleHash["kipo_prt"] = new Array(6);
+styleHash["kipo_prt"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["kipo_prt"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["kipo_prt"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["kipo_prt"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["kipo_prt"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["kipo_prt"]["seqxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["medline"] = new Array(
+	"default", "medlinefull", "medlineref", "bibtex", "endnote", "isi", "modsxml", "pubmedxml", "ris", "wordbibxml"
+);
+styleHash["medline"] = new Array(10);
+styleHash["medline"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["medline"]["medlinefull"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["medline"]["medlineref"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["medline"]["bibtex"] = new Array(
+	"default", "raw"
+);
+styleHash["medline"]["endnote"] = new Array(
+	"default", "raw"
+);
+styleHash["medline"]["isi"] = new Array(
+	"default", "raw"
+);
+styleHash["medline"]["modsxml"] = new Array(
+	"default", "raw"
+);
+styleHash["medline"]["pubmedxml"] = new Array(
+	"default", "raw"
+);
+styleHash["medline"]["ris"] = new Array(
+	"default", "raw"
+);
+styleHash["medline"]["wordbibxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["mp"] = new Array(
+	"default", "fasta"
+);
+styleHash["mp"] = new Array(2);
+styleHash["mp"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["mp"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["mpep"] = new Array(
+	"default", "fasta"
+);
+styleHash["mpep"] = new Array(2);
+styleHash["mpep"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["mpep"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["mpro"] = new Array(
+	"default", "fasta"
+);
+styleHash["mpro"] = new Array(2);
+styleHash["mpro"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["mpro"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["nrnl1"] = new Array(
+	"default", "annot", "entrysize", "nrl1", "seqxml", "fasta"
+);
+styleHash["nrnl1"] = new Array(6);
+styleHash["nrnl1"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrnl1"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrnl1"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrnl1"]["nrl1"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrnl1"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["nrnl1"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["nrnl2"] = new Array(
+	"default", "annot", "entrysize", "nrl2", "seqxml", "fasta"
+);
+styleHash["nrnl2"] = new Array(6);
+styleHash["nrnl2"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrnl2"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrnl2"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrnl2"]["nrl2"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrnl2"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["nrnl2"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["nrpl1"] = new Array(
+	"default", "annot", "entrysize", "nrl1", "seqxml", "fasta"
+);
+styleHash["nrpl1"] = new Array(6);
+styleHash["nrpl1"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrpl1"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrpl1"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrpl1"]["nrl1"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrpl1"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["nrpl1"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["nrpl2"] = new Array(
+	"default", "annot", "entrysize", "nrl2", "seqxml", "fasta"
+);
+styleHash["nrpl2"] = new Array(6);
+styleHash["nrpl2"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrpl2"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrpl2"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrpl2"]["nrl2"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["nrpl2"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["nrpl2"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["patent_equivalents"] = new Array(
+	"default", "patent_equivalents"
+);
+styleHash["patent_equivalents"] = new Array(2);
+styleHash["patent_equivalents"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["patent_equivalents"]["patent_equivalents"] = new Array(
+	"default", "html", "raw"
+);
+
+formatHash["pdb"] = new Array(
+	"default", "fasta", "annot", "mmcif", "pdb", "pdbml"
+);
+styleHash["pdb"] = new Array(6);
+styleHash["pdb"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["pdb"]["fasta"] = new Array(
+	"default", "raw"
+);
+styleHash["pdb"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["pdb"]["mmcif"] = new Array(
+	"default", "raw"
+);
+styleHash["pdb"]["pdb"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["pdb"]["pdbml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["refseqn"] = new Array(
+	"default", "annot", "entrysize", "fasta", "insdxml", "refseq", "seqxml", "tinyseq"
+);
+styleHash["refseqn"] = new Array(8);
+styleHash["refseqn"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["refseqn"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["refseqn"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["refseqn"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["refseqn"]["insdxml"] = new Array(
+	"default", "raw"
+);
+styleHash["refseqn"]["refseq"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["refseqn"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["refseqn"]["tinyseq"] = new Array(
+	"default", "raw"
+);
+
+formatHash["refseqp"] = new Array(
+	"default", "annot", "entrysize", "fasta", "insdxml", "refseqp", "seqxml", "tinyseq"
+);
+styleHash["refseqp"] = new Array(8);
+styleHash["refseqp"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["refseqp"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["refseqp"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["refseqp"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["refseqp"]["insdxml"] = new Array(
+	"default", "raw"
+);
+styleHash["refseqp"]["refseqp"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["refseqp"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["refseqp"]["tinyseq"] = new Array(
+	"default", "raw"
+);
+
+formatHash["taxonomy"] = new Array(
+	"default", "taxonomy", "enataxonomyxml", "uniprottaxonomyrdfxml"
+);
+styleHash["taxonomy"] = new Array(4);
+styleHash["taxonomy"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["taxonomy"]["taxonomy"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["taxonomy"]["enataxonomyxml"] = new Array(
+	"default", "raw"
+);
+styleHash["taxonomy"]["uniprottaxonomyrdfxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["uniparc"] = new Array(
+	"default", "fasta", "seqxml", "uniparc", "uniprotrdfxml"
+);
+styleHash["uniparc"] = new Array(5);
+styleHash["uniparc"]["default"] = new Array(
+	"default", "raw"
+);
+styleHash["uniparc"]["fasta"] = new Array(
+	"default", "raw"
+);
+styleHash["uniparc"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["uniparc"]["uniparc"] = new Array(
+	"default", "raw"
+);
+styleHash["uniparc"]["uniprotrdfxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["uniprotkb"] = new Array(
+	"default", "fasta", "annot", "entrysize", "gff3", "seqxml", "uniprot", "uniprotrdfxml", "uniprotxml"
+);
+styleHash["uniprotkb"] = new Array(9);
+styleHash["uniprotkb"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uniprotkb"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uniprotkb"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uniprotkb"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uniprotkb"]["gff3"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uniprotkb"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["uniprotkb"]["uniprot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uniprotkb"]["uniprotrdfxml"] = new Array(
+	"default", "raw"
+);
+styleHash["uniprotkb"]["uniprotxml"] = new Array(
+	"default", "raw"
+);
+
+formatHash["uniref100"] = new Array(
+	"default", "fasta", "seqxml", "uniprotrdfxml", "uniref100"
+);
+styleHash["uniref100"] = new Array(5);
+styleHash["uniref100"]["default"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref100"]["fasta"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref100"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref100"]["uniprotrdfxml"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref100"]["uniref100"] = new Array(
+	"default", "raw"
+);
+
+formatHash["uniref50"] = new Array(
+	"default", "fasta", "seqxml", "uniprotrdfxml", "uniref50"
+);
+styleHash["uniref50"] = new Array(5);
+styleHash["uniref50"]["default"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref50"]["fasta"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref50"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref50"]["uniprotrdfxml"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref50"]["uniref50"] = new Array(
+	"default", "raw"
+);
+
+formatHash["uniref90"] = new Array(
+	"default", "fasta", "seqxml", "uniprotrdfxml", "uniref90"
+);
+styleHash["uniref90"] = new Array(5);
+styleHash["uniref90"]["default"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref90"]["fasta"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref90"]["seqxml"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref90"]["uniprotrdfxml"] = new Array(
+	"default", "raw"
+);
+styleHash["uniref90"]["uniref90"] = new Array(
+	"default", "raw"
+);
+
+formatHash["unisave"] = new Array(
+	"default", "annot", "entrysize", "fasta", "uniprot"
+);
+styleHash["unisave"] = new Array(5);
+styleHash["unisave"]["default"] = new Array(
+	"default", "raw"
+);
+styleHash["unisave"]["annot"] = new Array(
+	"default", "raw"
+);
+styleHash["unisave"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["unisave"]["fasta"] = new Array(
+	"default", "raw"
+);
+styleHash["unisave"]["uniprot"] = new Array(
+	"default", "raw"
+);
+
+formatHash["uspto_prt"] = new Array(
+	"default", "annot", "embl", "entrysize", "fasta", "seqxml"
+);
+styleHash["uspto_prt"] = new Array(6);
+styleHash["uspto_prt"]["default"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uspto_prt"]["annot"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uspto_prt"]["embl"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uspto_prt"]["entrysize"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uspto_prt"]["fasta"] = new Array(
+	"default", "html", "raw"
+);
+styleHash["uspto_prt"]["seqxml"] = new Array(
+	"default", "raw"
+);
+
+
+    window.onload = function(){
+      dbSelected();
+    };
+
+
+</script>
+
+
+</head>
+
+
+</head>
+
+<body class="level2"><!-- add any of your classes or IDs -->
+<div id="skip-to">
+  <a href="#content">Skip to main content</a>
+</div>
+
+<header id="masthead-black-bar" class="clearfix masthead-black-bar">
+</header>
+<div id="content">
+  <div data-sticky-container>
+    <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
+      <div class="masthead-inner row">
+        <!-- local-title -->
+        <div class="columns medium-12" id="local-title">
+          <h1><a href="/Tools/dbfetch" title="Dbfetch homepage">Dbfetch</a></h1>
+        </div>
+        <!-- /local-title -->
+        <!-- local-nav -->
+        <nav id="main-menu" class="navigation " role="navigation">
+          <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+            <li><a href="/Tools/dbfetch">Dbfetch</a></li>
+            
+            <li><a href="/Tools/dbfetch/dbfetch/dbfetch.databases">Databases</a></li>
+            <li><a href="https://www.ebi.ac.uk/seqdb/confluence/display/JDSAT/Dbfetch+Help+and+Documentation#DbfetchHelpandDocumentation-WebServices">Web services</a></li>
+            <li><a href="/Tools/dbfetch/syntax.jsp">Syntax</a></li>
+            <li><a href="/Tools/dbfetch/help.jsp">Help & Documentation</a></li>
+            <li><a href="/Tools/dbfetch/faq.jsp">FAQ</a></li>
+          </ul>
+          <ul class="dropdown menu float-right" data-description="navigational">
+            <li><a id="feedback" title="Request help/support or give feedback"
+                   href="https://www.ebi.ac.uk/support/webservices" class="icon icon-generic" data-icon="\">Feedback</a>
+            </li>
+            <li>
+              <div>
+                <a class="icon icon-functional addthis_button" data-icon="r" href="#">Share</a>
+              </div> <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-511a3b0c6ed95194" type="text/javascript"></script>
+            </li>
+          </ul>
+        </nav>
+        <!-- /local-nav -->
+      </div>
+    </header>
+  </div>
+  <!-- Suggested layout containers -->
+  <section id="main-content-area" class="row" role="main">
+
+
+<!-- jsp:include page= 'ebi2018/end_menu.jsp' / -->
+
+
+
+<!-- Start: form_prompt.jsp -->
+
+
+<nav aria-label="You are here:" role="navigation">
+	<ul class="breadcrumbs columns">
+		<li><a href="/Tools">Tools</a></li>
+		<li><span class="show-for-sr">Current: </span><a href="/Tools/dbfetch">Dbfetch</a></li>
+	</ul>
+</nav>
+<div id="maincontent" class="omega grid_24">
+<br/><br/>
+<form name="prompt" method="get" action='/Tools/dbfetch/dbfetch'
+	  enctype="application/x-www-form-urlencoded" style="margin-bottom:1em; margin-top:0px"
+	  onsubmit="if (document.prompt.id.value=='') {alert('Please enter your search items.');
+	  document.prompt.id.focus(); document.prompt.id.select(); return; }">
+	<div class="xround"><b class="xtop"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b>
+		<b class="xb4"></b></b><div class="xboxcontent">
+		<table style="width:90%; margin: 0px auto;" class="inputform" summary="options">
+			<tr style="text-align:center;">
+				
+				<td style="width:30%;"><a href="dbfetch/dbfetch.databases">Database</a></td>
+				<td style="width:30%;"><a href="#SearchItems">Search Items</a></td>
+				<td style="width:15%"><a href="#Format">Format</a></td>
+				<td style="width:15%;"><a href="#OutputStyle">Style</a></td>
+				<td style="width:10%;"></td>
+			</tr>
+			<tr style="text-align:center;">
+				<td style="width:30%">
+					<select name="db" id="dbs" style="width: 98%;" OnChange="dbSelected();">
+					<!-- Generate the database drop-down select form. Important that selectedDB is set in the request (in the Servlet). -->
+					
+						
+							
+							<option value='chembl'>ChEMBL Targets</option>
+							
+						
+					
+						
+							
+							<option value='edam'>EDAM</option>
+							
+						
+					
+						
+							
+							<option value='ena_coding'>ENA Coding</option>
+							
+						
+					
+						
+							
+							<option value='ena_geospatial'>ENA Geospatial</option>
+							
+						
+					
+						
+							
+							<option value='ena_noncoding'>ENA Non-coding</option>
+							
+						
+					
+						
+							
+								<option value='ena_sequence' selected="selected">ENA Sequence</option>
+							
+							
+						
+					
+						
+							
+							<option value='ena_sequence_con'>ENA Sequence Constructed</option>
+							
+						
+					
+						
+							
+							<option value='ena_sequence_conexp'>ENA Sequence Constructed Expanded</option>
+							
+						
+					
+						
+							
+							<option value='ensemblgene'>Ensembl Gene</option>
+							
+						
+					
+						
+							
+							<option value='ensemblgenomesgene'>Ensembl Genomes Gene</option>
+							
+						
+					
+						
+							
+							<option value='ensemblgenomestranscript'>Ensembl Genomes Transcript</option>
+							
+						
+					
+						
+							
+							<option value='ensembltranscript'>Ensembl Transcript</option>
+							
+						
+					
+						
+							
+							<option value='epo_prt'>EPO Proteins</option>
+							
+						
+					
+						
+							
+							<option value='hgnc'>HGNC</option>
+							
+						
+					
+						
+							
+							<option value='imgthlacds'>IMGT/HLA (nucleotide cds)</option>
+							
+						
+					
+						
+							
+							<option value='imgthlagen'>IMGT/HLA (nucleotide genomic)</option>
+							
+						
+					
+						
+							
+							<option value='imgthlapro'>IMGT/HLA (protein)</option>
+							
+						
+					
+						
+							
+							<option value='imgtligm'>IMGT/LIGM-DB</option>
+							
+						
+					
+						
+							
+							<option value='interpro'>InterPro</option>
+							
+						
+					
+						
+							
+							<option value='ipdkircds'>IPD-KIR (nucleotide cds)</option>
+							
+						
+					
+						
+							
+							<option value='ipdkirgen'>IPD-KIR (nucleotide genomic)</option>
+							
+						
+					
+						
+							
+							<option value='ipdkirpro'>IPD-KIR (protein)</option>
+							
+						
+					
+						
+							
+							<option value='ipdmhccds'>IPD-MHC (nucleotide cds)</option>
+							
+						
+					
+						
+							
+							<option value='ipdmhcgen'>IPD-MHC (nucleotide genomic)</option>
+							
+						
+					
+						
+							
+							<option value='ipdmhcpro'>IPD-MHC (protein)</option>
+							
+						
+					
+						
+							
+							<option value='iprmc'>IPRMC</option>
+							
+						
+					
+						
+							
+							<option value='iprmcuniparc'>IPRMC UniParc</option>
+							
+						
+					
+						
+							
+							<option value='jpo_prt'>JPO Proteins</option>
+							
+						
+					
+						
+							
+							<option value='kipo_prt'>KIPO Proteins</option>
+							
+						
+					
+						
+							
+							<option value='medline'>MEDLINE</option>
+							
+						
+					
+						
+							
+							<option value='mp'>MEROPS-MP</option>
+							
+						
+					
+						
+							
+							<option value='mpep'>MEROPS-MPEP</option>
+							
+						
+					
+						
+							
+							<option value='mpro'>MEROPS-MPRO</option>
+							
+						
+					
+						
+							
+							<option value='nrnl1'>Patent DNA NRL1</option>
+							
+						
+					
+						
+							
+							<option value='nrnl2'>Patent DNA NRL2</option>
+							
+						
+					
+						
+							
+							<option value='nrpl1'>Patent Protein NRL1</option>
+							
+						
+					
+						
+							
+							<option value='nrpl2'>Patent Protein NRL2</option>
+							
+						
+					
+						
+							
+							<option value='patent_equivalents'>Patent Equivalents</option>
+							
+						
+					
+						
+							
+							<option value='pdb'>PDB</option>
+							
+						
+					
+						
+							
+							<option value='refseqn'>RefSeq (nucleotide)</option>
+							
+						
+					
+						
+							
+							<option value='refseqp'>RefSeq (protein)</option>
+							
+						
+					
+						
+							
+							<option value='taxonomy'>Taxonomy</option>
+							
+						
+					
+						
+							
+							<option value='uniparc'>UniParc</option>
+							
+						
+					
+						
+							
+							<option value='uniprotkb'>UniProtKB</option>
+							
+						
+					
+						
+							
+							<option value='uniref100'>UniRef100</option>
+							
+						
+					
+						
+							
+							<option value='uniref50'>UniRef50</option>
+							
+						
+					
+						
+							
+							<option value='uniref90'>UniRef90</option>
+							
+						
+					
+						
+							
+							<option value='unisave'>UniSave</option>
+							
+						
+					
+						
+							
+							<option value='uspto_prt'>USPTO Proteins</option>
+							
+						
+					</select>
+				</td>
+				<td style="width:30%;"><input name="id" type="text" maxlength="1000" style="width: 98%;" /></td>
+					<td style="width:15%;"><select name="format" id="formats" style="width: 98%;" OnChange="formatSelected();">
+					<!-- Generate the format drop-down select form. Important that selectedDB is set in the request (in the Servlet). -->
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+							
+							
+								
+									<option value='default' selected="selected">default</option>
+								
+								
+							
+							
+							
+								
+								
+									<option value='annot'>annot</option>
+								
+							
+							
+							
+								
+								
+									<option value='embl'>embl</option>
+								
+							
+							
+							
+								
+								
+									<option value='emblxml-1.1'>emblxml-1.1</option>
+								
+							
+							
+							
+								
+								
+									<option value='emblxml-1.2'>emblxml-1.2</option>
+								
+							
+							
+							
+								
+								
+									<option value='entrysize'>entrysize</option>
+								
+							
+							
+							
+								
+								
+									<option value='fasta'>fasta</option>
+								
+							
+							
+							
+								
+								
+									<option value='insdxml'>insdxml</option>
+								
+							
+							
+							
+								
+								
+									<option value='seqxml'>seqxml</option>
+								
+							
+							
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					</select>
+				</td>
+				<td style="width:15%;"><select name="style" id="styles" style="width: 98%;">
+					<option value="default" selected>default</option>
+					<option value="html">html</option>
+					<option value="raw">raw</option>
+					</select>
+				</td>
+				<td style="width:10%;"><input name="Retrieve" type="submit" value="Retrieve" class="submit" /></td>
+			</tr>
+		</table>
+	</div>
+	<b class="xbottom"><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></b></div>
+</form>
+
+<form name="prompt2" enctype="multipart/form-data" method="post" action='/Tools/dbfetch/dbfetch'
+	  style="margin-bottom:2em; margin-top:1em" onsubmit ="if(document.prompt2.list.value=='') {alert('Please upload a file.');
+	  document.prompt2.list.focus(); document.prompt2.list.select(); return false;}">
+	<div class="xround"><b class="xtop"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b>
+		<b class="xb4"></b></b><div class="xboxcontent">
+		<table style="width:90%; margin: 0px auto;" class = "inputform" summary="options">
+			<tr style="text-align:center">
+				<td style="width:15%;"></td>
+				<td style="width:30%;"><a href="#UploadFile">Upload File</a></td>
+				<td style="width:15%;"></td>
+				<td style="width:15%;"><a href="#Format">Format</a></td>
+				<td style="width:15%;"><a href="#OutputStyle">Style</a></td>
+				<td style="width:10%;"></td>
+			</tr>
+			<tr style="text-align:center;">
+				<td style="width:20%;"></td>
+				<td style="width:25%"><input name="listfile" type="file" accept="text/*"/></td>
+				<td style="width:15%;"></td>
+				<td style="width:15%;">
+					<select name="format" style="width:98%;">
+					<option value="default" selected="selected">default</option>
+					<option value="fasta">fasta</option>
+					<option value="embl">embl</option>
+					<option value="emblxml">emblxml</option>
+					<option value="insdxml">insdxml</option>
+					<option value="uniprot">uniprot</option>
+					<option value="swissprot">swissprot</option>
+					</select>
+				</td>
+				<td style="width:15%;">
+					<select name="style" style="width: 98%;">
+					<option value="default" selected="selected">default</option>
+					<option value="html">html</option>
+					<option value="raw">raw</option>
+					</select>
+				</td>
+				<td style="width:10%;"><input name="Retrieve" type="submit" value="Retrieve" class="submit" /></td>
+			</tr>
+		</table>
+	</div><b class="xbottom"><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></b></div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){	
+		
+	var paramFormat = $("#formats").val();
+	dbSelected();
+
+	$("#formats").val(paramFormat);
+
+});
+</script>
+<!-- End: form_prompt.jsp -->
+<br />
+
+
+<!-- Start: form_help.jsp -->
+<div id="maincontent" class="small-12 medium-9 columns">
+     <h2>Dbfetch Help</h2>
+
+     <h3 id="what">What is Dbfetch?</h3>
+     <p>
+     Dbfetch is an abbreviation for "database fetch". Dbfetch provides an easy way to retrieve entries
+     from various databases at the EMBL-EBI in a consistent manner. It can be used from any browser as well as well
+     as within a web-aware scripting tool that uses wget, lynx or similar.
+     </p>
+
+     <h3 id="how">How to use Dbfetch?</h3>
+     <ol>
+          <li class="text"><i>Select a database:</i><br/>
+               -If you are using the first form to paste your search items: choose a
+               <a href="dbfetch/dbfetch.databases" class="normaltext">database name</a>  from this form.<br/>
+               -If you are using the second form to upload your search items: the
+               <a href="dbfetch/dbfetch.databases" class="normaltext">database name</a> is included at the beginning
+               of each line line of the <a href="#UploadFile" class="normaltext">upload file</a> followed by a
+               colon...<a href="#UploadFile" class="normaltext">more</a><br/>
+          <br/>
+          </li>
+          <li class="text"><i>Enter search terms:</i><br/>
+               These <b>MUST BE</b> in the appropriate <a href="dbfetch/dbfetch.databases" class="normaltext">database format</a>,
+               up to 200 search items can be queried in one run.<br/>
+               -If you are using the first form: separate search items with a comma or
+               space...<a href="#SearchItems" class="normaltext">more</a><br/>
+               -If you are using the second form: separate search items with a new
+               line...<a href="#UploadFile" class="normaltext">more</a><br/>
+          <br/>
+          </li>
+          <li class="text"><i>Choose an output format:</i><br/>
+               Here you can choose the simpler fasta format, or the databases' default format for the
+               chosen database...<a href="#Format" class="normaltext">more</a><br/>
+          <br/>
+          </li>
+          <li class="text"><i>Style:</i><br/>
+               You can get your results as text or html...<a href="#OutputStyle" class="normaltext">more</a><br/>
+          <br/>
+          </li>
+          <li><span class="text"><i>Retrieve!</i><br/>
+               You are now ready to fetch your results, by pressing the Retrieve button.<br/>
+          <br/>
+          </span>
+          </li>
+     </ol>
+     <br/><h4 id="SearchItems">Search Items</h4>
+     <p>You may enter up to 200 search items for your chosen database.
+          Multiple search terms should be separated by EITHER a space OR a comma.
+     <p/>
+
+     <span class="text">e.g. ENA Sequence: &quot;</span>
+     <span class="preformatted">AE014292,AE017197,AE017354</span>
+     <span class="text">&quot; or &quot;</span>
+     <span class="preformatted">AE014292 AE017197 AE017354</span>
+     <span class="text">&quot;<br/></span>
+     <span class="text">e.g. UniProtKB: &quot;</span>
+     <span class="preformatted">1433X_MAIZE,1433T_RAT,ACR2_YEAST</span>
+     <span class="text">&quot; or &quot;</span>
+     <span class="preformatted">1433X_MAIZE 1433T_RAT ACR2_YEAST</span>
+     <span class="text">&quot;</span>
+     <br/>
+
+     <br/><h4 id="UploadFile">Upload File</h4>
+     <p>
+          Here you may upload a file in the specified format. You may retrieve up to 200 entries and
+          Entries in the uploaded file all need to belong to the same database.
+     <p/>
+     <p>
+          Each entry you wish to retrieve MUST be on a new line and in the format: &quot;database name&quot;:&quot;id&quot;
+     <p/>
+     <p><a name="eg_upload"></a>e.g. ENA Sequence</p>
+     <pre class="preformatted">
+     ena_sequence:AE014292
+     ena_sequence:AE017197
+     ena_sequence:AE017354
+     </pre>
+     <p><a name="eg_upload"></a>e.g. UniProt</p>
+     <pre class="preformatted">
+     uniprot:A1AG1_HUMAN
+     uniprot:A1AT_PIG
+     uniprot:ACR2_YEAST
+     </pre><br/>
+
+     <h4 id="Format">Output Format</h4>
+     <p>The sequence/database format of the results. Sequence formats are simply the way in which the
+          amino acid or DNA sequence is recorded in a computer file. Different programs expect
+          different formats, so if you are to submit a job successfully, it is important to
+          understand what the various formats look like. To learn more about sequence formats,
+          please see the EMBOSS documentation at
+          <a href="http://emboss.open-bio.org/html/use/apa.html" class="normaltext">http://emboss.open-bio.org/html/use/apa.html</a>
+     <p/>
+
+     <p>
+          The default is often the default format for the specified database, which can also can be selected in the
+          drop down list. (e.g. the default for the UniProtKB Database is "uniprot" format.)
+          See an example of this format at <a href="http://web.expasy.org/docs/userman.html" class="normaltext">
+          http://web.expasy.org/docs/userman.html</a>
+     <p/>
+     <p><span class="pbold">Fasta format</span>
+          contains a one line header followed by lines of sequence data. Sequences in fasta formatted files are preceded by
+          a line starting with a &quot; &gt;&quot; symbol. The first word on this line is the name of the sequence.
+          The rest of the line is a description of the sequence. Example:
+     </p>
+
+     <pre class="preformatted">&gt;uniprot|P13346|FOSB_MOUSE Protein fosB.
+MFQAFPGDYDSGSRCSSSPSAESQYLSSVDSFGSPPTAAASQECAGLGEMPGSFVPTVTA
+ITTSQDLQWLVQPTLISSMAQSQGQPLASQPPAVDPYDMPGTSYSTPGLSAYSTGGASGS
+GGPSTSTTTSGPVSARPARARPRRPREETLTPEEEEKRRVRRERNKLAAAKCRNRRRELT
+DRLQAETDQLEEEKAELESEIAELQKEKERLEFVLVAHKPGCKIPYEEGPGPGPLAEVRD
+LPGSTSAKEDGFGWLLPPPPPPPLPFQSSRDAPPNLTASLFTHSEVQVLGDPFPVVSPSY
+TSSFVLTCPEVSAFAGAQRTSGSEQPSDPLNSPSLLAL
+     </pre><br/>
+
+     <p>
+     <span class="text">Learn more about this format at
+          <a href="http://www.wikipedia.org/wiki/FASTA_format" class="normaltext">http://www.wikipedia.org/wiki/FASTA_format</a>.
+          <i>If no format is specified, as in an http request, the default format will be used.</i><br/>
+     </span>
+     <p/>
+     <span class="text">
+     <span class="pbold">ENA XML formats</span>, there are two XML formats available from the ENA Sequence database.<br/>
+     EMBLXML :  XML format for the ENA Sequence nucleotide sequence database, developed internally.<br/>
+     INSDXML : XML format for the ENA Sequence nucleotide sequence database, developed in collaboration with NCBI (GenBank) and DDBJ.<br/>
+     DTD for INSDXML and the DTD/XML Schema for EBMLXML can be found <a href="https://www.ebi.ac.uk/embl/Documentation/index.html" class="normaltext">here</a>.
+     </span><br/>
+
+     <br/><h4 id="OutputStyle">Style</h4>
+     <p>
+          The results can either be delivered as raw text or as html, specify here which style you prefer. <i>The default style is html.</i>
+          For people interested in programmatic access to the Dbfetch functionality, we recommend using our new Web
+          Services version of Dbfetch: <a href="https://www.ebi.ac.uk/Tools/webservices/services/dbfetch" class="normaltext">WSDbfetch</a>
+     <p/>
+     <p>
+          Alternatively, you can use Dbfetch for direct access. Making scripted http requests to
+          Dbfetch is very simple, the parameters which can be used are <b>db</b>, <b>id</b>, <b>format</b> and <b>style</b>.
+          Of these parameters only <b>db</b> and <b>id</b> are required fields. When omitting to use format and/or style,
+          the defaults for the chosen database will be used (the default style is always html).
+     </p>
+     <p>
+          The URL to Dbfetch is always of this format:
+          dbfetch?db=<i><b>DB_NAME</b></i>&amp;id=<i><b>IDS</b></i>&amp;format=<i><b>FORMAT_NAME</b></i>&amp;style=<i><b>STYLE_NAME</b></i><br/>
+     </p>
+
+     <ul type="disc">
+          <li><b>DB_NAME</b> - Must be chosen from the table below</li>
+          <li><b>IDS</b> - Single id/acc or comma/white-space separated list (id1 or id1 id2 id3 or id1,id2,id3)</li>
+          <li><b>FORMAT_NAME</b> - Name of the output format, varies between databases</li>
+          <li><b>STYLE_NAME</b> - Name of the output style, available styles are raw and html </li>
+     </ul>
+
+     <p>For details of the available databases, formats and styles see the
+          <a href="dbfetch/dbfetch.databases">list of databases</a>.
+          Additional examples are provided in the <a href="syntax.jsp">syntax guide</a>.
+     </p>
+     <i>Examples:</i><br/>
+     <code><a href="dbfetch?db=ena_sequence&id=J00231,K00650,D87894,AJ242600" class="normaltext">https://www.ebi.ac.uk/Tools/dbfetch/dbfetch?db=ena_sequence&id=J00231,K00650,D87894,AJ242600</a></code> <br/>
+     <br/>
+     Instead of the default raw (plain ASCII) style, entries can also be retrieved in plain text (raw): <br/>
+     <code><a href="dbfetch?db=ena_sequence&id=J00231,K00650,D87894,AJ242600&style=raw" class="normaltext">https://www.ebi.ac.uk/Tools/dbfetch/dbfetch?db=ena_sequence&id=J00231,K00650,D87894,AJ242600&style=raw</a></code> <br/>
+     <br/>
+     It is also possible to retrieve Fasta formatted sequences: <br/>
+     <code><a href="dbfetch?db=ena_sequence&id=J00231,K00650,D87894,AJ242600&format=fasta" class="normaltext">https://www.ebi.ac.uk/Tools/dbfetch/dbfetch?db=ena_sequence&id=J00231,K00650,D87894,AJ242600&format=fasta</a></code> <br/>
+     <br/>
+     Because of backward compatibility issues the program can be simply called by giving one or more INSDC accession numbers or entry names:<br/>
+     <code><a href="dbfetch?J00231" class="normaltext">https://www.ebi.ac.uk/Tools/dbfetch/dbfetch?J00231</a></code></span> <br/>
+     </blockquote>
+     </li>
+     </ul>
+
+     <br/><h3 id="cite">How do I cite Dbfetch?</h3>
+     <p>
+          Lopez R, Cowley A, Li W, McWilliam H. (2014)
+          Using EMBL-EBI Services via Web Interface and Programmatically via Web Services.
+          <em>Curr Protoc Bioinformatics</em> Volume 48 p.3.12.1-3.12.50.
+          DOI: <a class="pubdoi" href="http://dx.doi.org/10.1002/0471250953.bi0312s48" target="_blank">10.1002/0471250953.bi0312s48</a>
+     <p/>
+     <p>
+          McWilliam H., Li W., Uludag M., Squizzato S., Park Y.M., Buso N., Cowley A.P., Lopez R. (2013)
+          Analysis Tool Web Services from the EMBL-EBI
+          <em>Nucleic Acids Research</em> 41: W597-W600.
+          PubMed Id:
+          <a href="https://www.ebi.ac.uk/ebisearch/search.ebi?db=literature&query=23671338">23671338</a>
+          <a class="pubabstract" href="http://europepmc.org/abstract/MED/23671338">Abstract</a>
+          DOI:
+          <a class="pubdoi" href="http://dx.doi.org/10.1093/nar/gkt376" target="_blank">10.1093/nar/gkt376</a>
+     </p>
+     <h3 id="support">How to get support?</h3>
+     <p>
+          First please see if your issue is covered by the
+          <a href="faq.jsp">Frequently Asked Questions for Dbfetch</a>. If your issue is
+          not addressed in the FAQ then please
+          <a href="https://www.ebi.ac.uk/support/webservices">contact us</a> for
+          assistance.
+     </p>
+     <br/>
+</div>
+
+
+<div class="small-12 medium-3 columns sidebar" data-sticky-container>
+
+     
+     <div class="sticky" data-sticky data-anchor="maincontent"  data-options="marginTop:4;">
+          <h4>Contents</h4>
+          
+          
+          <div>
+               <ul class="menu vertical">
+                    <li><a href="#what">What is Dbfetch?</a></li>
+                    <li><a href="#how">How to use Dbfetch?</a>
+                         <ul class="menu vertical">
+                              
+                              <li><a href="#SearchItems">&nbsp;&nbsp;Search Items</a></li>
+                              <li><a href="#UploadFile">&nbsp;&nbsp;Upload File</a></li>
+                              <li><a href="#Format">&nbsp;&nbsp;Output Format</a></li>
+                              <li><a href="#OutputStyle">&nbsp;&nbsp;Style</a></li>
+                         </ul>
+                    </li>
+                    <li><a href="#cite">How do I cite Dbfetch?</a></li>
+                    <li><a href="#support">How to get support?</a></li>
+               </ul>
+          </div>
+     </div>
+
+</div> <!-- /medium-3 -->
+
+<!-- End: form_help.jsp -->
+
+<br />
+
+<!-- InstanceEndEditable -->
+
+  </section>
+  <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+  <!--
+  <footer id="local-footer" class="local-footer" role="local-footer">
+  <div class="row">
+  <span class="reference">How to reference this page: ...</span>
+  </div>
+  </footer>
+  -->
+  <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
+
+  <!-- InstanceEnd -->
+
+  <footer>
+    <div id="global-footer" class="global-footer">
+      <nav id="global-nav-expanded" class="global-nav-expanded row">
+        <!-- Footer will be automatically inserted by footer.js -->
+      </nav>
+      <section id="ebi-footer-meta" class="ebi-footer-meta row">
+        <!-- Footer meta will be automatically inserted by footer.js -->
+      </section>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+
+  <script defer="defer" src="//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  
+</body>
+</html>

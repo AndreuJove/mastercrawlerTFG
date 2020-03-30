@@ -1,0 +1,33 @@
+Content-Type: text/html; charset=utf-8
+Accept-Ranges: bytes
+Cache-Control: public, max-age=900
+Content-Encoding: gzip
+Content-Language: en
+Date: Mon, 30 Mar 2020 18:47:44 GMT
+Etag: W/"1585592817-0"
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Last-Modified: Mon, 30 Mar 2020 18:26:57 GMT
+Prerender: true
+Server: nginx/1.13.12
+Status: 200
+Surrogate-Key: RsPoZyoHtFL+J0YhKRaA 913A0Z2ui3kgW2awbvsu
+Surrogate-Key-Raw: 
+Vary: Accept-Encoding, Cookie, Cookie
+Via: 1.1 varnish-v4, 1.1 82ea95080f526df99896343fb7269b07.cloudfront.net (CloudFront), 1.1 a79264f1781916a9abe8d5b96e40a058.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: SEA19-C2
+X-Amz-Cf-Pop: MAD50-C1
+X-Drupal-Cache: HIT
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+X-Pantheon-Az: us-central1-c
+X-Pantheon-Environment: live
+X-Pantheon-Phpreq: yes
+X-Pantheon-Site: 9e767cd7-1033-43a4-bbde-2b76f6c9014b
+X-Pantheon-Styx-Hostname: styx37bdde9b
+X-Styx-Req-Id: ec6d8773-72b6-11ea-8e78-bc764e11d39b
+X-Ua-Compatible: IE=Edge,chrome=1
+X-Varnish: 524893610
+Xkey: RsPoZyoHtFL+J0YhKRaA 913A0Z2ui3kgW2awbvsu
+X-Cache: Miss from cloudfront
+X-Amz-Cf-Id: Nr8OJUirVSyZaeXSyKh0x-KU_9_PETy8Q2nNsKuOU2bQZSjfzuhs0A==
+Age: 0

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>
+Wanglab -   CrusView</title>
+
+<!-- Style sheets -->
+<link rel="stylesheet" type="text/css" href="http://www.cmbb.arizona.edu/wp-content/themes/delicate/style.css" media="screen" />
+<style type="text/css">
+	body {
+		font-size: 12px;
+	}
+	.post {
+		color: #4D4D4F;
+	}
+	.post a {
+		color: #0E73B8;
+	}
+	.post a:hover {
+		color: #ff0505;
+	}
+</style>
+
+<link rel="alternate" type="application/rss+xml" title="Wanglab &raquo; Feed" href="http://www.cmbb.arizona.edu/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="Wanglab &raquo; Comments Feed" href="http://www.cmbb.arizona.edu/?feed=comments-rss2" />
+<link rel="alternate" type="application/rss+xml" title="Wanglab &raquo; CrusView Comments Feed" href="http://www.cmbb.arizona.edu/?feed=rss2&#038;page_id=250" />
+<link rel='stylesheet' id='NextGEN-css'  href='http://www.cmbb.arizona.edu/wp-content/plugins/nextgen-gallery/css/Black_Minimalism.css?ver=1.0.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='shutter-css'  href='http://www.cmbb.arizona.edu/wp-content/plugins/nextgen-gallery/shutter/shutter-reloaded.css?ver=1.3.4' type='text/css' media='screen' />
+<link rel='stylesheet' id='easy_table_style-css'  href='http://www.cmbb.arizona.edu/wp-content/plugins/easy-table/themes/default/style.css?ver=1.1.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var shutterSettings = {"msgLoading":"L O A D I N G","msgClose":"Click to Close","imageCount":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.cmbb.arizona.edu/wp-content/plugins/nextgen-gallery/shutter/shutter-reloaded.js?ver=1.3.3'></script>
+<script type='text/javascript' src='http://www.cmbb.arizona.edu/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<script type='text/javascript' src='http://www.cmbb.arizona.edu/wp-content/plugins/nextgen-gallery/js/jquery.cycle.all.min.js?ver=2.9995'></script>
+<script type='text/javascript' src='http://www.cmbb.arizona.edu/wp-content/plugins/nextgen-gallery/js/ngg.slideshow.min.js?ver=1.06'></script>
+<script type='text/javascript' src='http://www.cmbb.arizona.edu/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<script type='text/javascript' src='http://www.cmbb.arizona.edu/wp-content/themes/delicate/js/superfish.js?ver=2.9.2'></script>
+<script type='text/javascript' src='http://www.cmbb.arizona.edu/wp-content/themes/delicate/js/jquery.cycle.all.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='http://www.cmbb.arizona.edu/wp-content/themes/delicate/js/cufon.js?ver=3.3.2'></script>
+<script type='text/javascript' src='http://www.cmbb.arizona.edu/wp-content/themes/delicate/js/font.js?ver=3.3.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.cmbb.arizona.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.cmbb.arizona.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Software' href='http://www.cmbb.arizona.edu/?page_id=36' />
+<link rel='next' title='KGBassembler' href='http://www.cmbb.arizona.edu/?page_id=312' />
+<meta name="generator" content="WordPress 3.3.2" />
+<link rel='canonical' href='http://www.cmbb.arizona.edu/?page_id=250' />
+<!-- Magazine Columns CSS -->
+<style type='text/css'>
+#magazine-columns{margin:0 -5px;margin-bottom:1em;overflow:hidden}
+.column {min-width:180px;float:left;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;padding:0 10px}
+.column.c2{width:45%;border-left:3px #AAA;}
+.column.c3{width:33.33%}
+.column.c4{width:25%}
+.column.c5{width:20%}
+.column p:first-child{margin-top:0}
+.column p:last-child{margin-bottom:0}
+.column img{max-width:100%;height:auto}
+</style>
+<!-- /Magazine Columns CSS -->
+			<!-- <meta name="NextGEN" version="1.9.3" /> -->
+<meta name="template" content="delicate 3.5.3" />
+<meta name="generator" content="NattyWP Framework Version 2.1.5" />
+<meta name="description" content="Just another WordPress site " />
+<link href="http://www.cmbb.arizona.edu/wp-content/themes/delicate/images/icons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="http://www.cmbb.arizona.edu/wp-content/themes/delicate/functions/css/shortcodes.css" media="screen" /><script type="text/javascript" src="http://www.cmbb.arizona.edu/wp-content/themes/delicate/functions/js/shortcode.js"></script>	<style type="text/css">
+           .head-img .tagline {color: #333333 !important;}
+    	</style>
+	
+<!-- Feed link -->
+<link rel="alternate" type="application/rss+xml" title="Wanglab RSS Feed" href="http://www.cmbb.arizona.edu/?feed=rss2" />
+<link rel="pingback" href="http://www.cmbb.arizona.edu/xmlrpc.php" />
+
+<!-- jQuery utilities -->
+<!--[if gte IE 9]>
+	<script type="text/javascript">
+      /*<![CDATA[*/
+	     Cufon.set('engine', 'canvas');
+	    /*]]>*/
+	</script>
+<![endif]-->
+<script type="text/javascript">/*<![CDATA[*/Cufon.replace('.post .title h2 a', {hover:true});/*]]>*/</script>
+
+<!--[if IE 6]>
+      <script type='text/javascript' src='http://www.cmbb.arizona.edu/wp-content/themes/delicate/js/menu.js'></script>
+    	<link rel="stylesheet" type="text/css" href="http://www.cmbb.arizona.edu/wp-content/themes/delicate/ie6.css" />
+        <style type="text/css">
+            img.png {
+            filter: expression(
+            (runtimeStyle.filter == '') ? runtimeStyle.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src='+src+', sizingMethod=scale)' : '',
+            width = width,
+            src = 'http://www.cmbb.arizona.edu/wp-content/themes/delicate/images/px.gif');
+    }
+        </style>
+	<![endif]-->
+    
+  <!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" media="all" href="http://www.cmbb.arizona.edu/wp-content/themes/delicate/ie7.css" />
+	<![endif]-->
+<style type="text/css">
+</style>
+</head>
+
+<body class="page page-id-250 page-template-default">
+<div class="content-pad">
+
+        
+  
+
+
+<div class="top">
+<div class="head-img">
+
+        <img src="http://www.cmbb.arizona.edu/wp-content/themes/delicate/images/header/header.jpg" width="730" height="77" alt="Header" />
+    </div>
+<div style="margin: 0px 0px 1px 0px; text-align: center;"><h2><span style="color: #444444;font-family:Trebuchet MS;background-color:#eeeeee;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laboratory of Computational Biology and Bioinformatics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span></h2></div>
+</div><!-- END top -->
+    <div id="menu">
+       <ul id="nav-ie" class="topnav fl fr sf-js-enabled sf-shadow"><li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="http://www.cmbb.arizona.edu/"><span>Home</span></a></li>
+<li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a href="http://www.cmbb.arizona.edu/?page_id=15"><span>Research</span></a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="http://www.cmbb.arizona.edu/?page_id=11"><span>Accomplishment</span></a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://www.cmbb.arizona.edu/?page_id=20"><span>Members</span></a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://www.cmbb.arizona.edu/?page_id=24"><span>Publications</span></a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://www.cmbb.arizona.edu/?page_id=13"><span>Contacts</span></a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="http://www.cmbb.arizona.edu/?page_id=36"><span>Software</span></a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://www.cmbb.arizona.edu/?page_id=26"><span>Position</span></a></li>
+</ul></div>
+<!-- END Header -->
+ 
+<div id="main">		
+	<div class="columns">      
+    <div class="singlepage">
+          							
+			<div class="post">
+            	
+				<div class="entry">
+                                          <h1>CrusView</h1>
+<p><span style="color: #000000;">CrusView is a java based tool for karyotype/genome visualization and comparison of crucifer Species. It also integrates an binary version of KGBassembler and a post-modification step for its assembling result.</span>
+</p>
+<div id="magazine-columns"><div class="column c2"></p>
+<h3><span style="color: #000000;">User-friendly</span></h3>
+<p><span style="color: #000000;">CrusView is for people with different level of computational ability. It has an intuitive interface.</span></p>
+<h3><span style="color: #000000;">Easy to run and to update</span></h3>
+<p><span style="color: #000000;">Download CrusView from this website and use it directly. It will check for updates automatically.</span></p>
+<h3><span style="color: #000000;">Highly configurable plot generator</span></h3>
+<p><span style="color: #000000;">CrusView is useful for generating high quality plots, such as dotplot and exon-to-exon alignment plot.</span></p>
+<h3><span style="color: #000000;">Comparative genomic study</span></h3>
+<p><span style="color: #000000;">CrusView provides several different scales for visualizing and comparing genomes in Brassicaceae family, ranging from chromosome to a single gene.</span></p>
+<h3><span style="color: #000000;">Assembling genome with the help of KGBassembler</span></h3>
+<p><span style="color: #000000;">CruisView provides function to run KGBassembler and to curate its output afterwards.</span><br />
+</div><div class="column c2"></p>
+<h3><span style="color: #000000;">Launch CrusView</span></h3>
+<p><span style="color: #000000;">Currently CrusView supports Linux and Windows.</span><br />
+<span style="color: #000000;"><a href="http://www.cmbb.arizona.edu/CrusView/lib/crusView_jnlp/512/crusView.jnlp" target="_blank">512  MB</a> ( Only for basic functions )</span><br />
+<span style="color: #000000;"><a href="http://www.cmbb.arizona.edu/CrusView/lib/crusView_jnlp/1200/crusView.jnlp" target="_blank">1200 MB</a> ( Max for some windows machines )</span><br />
+<span style="color: #000000;"><a href="http://www.cmbb.arizona.edu/CrusView/lib/crusView_jnlp/2048/crusView.jnlp" target="_blank">2048 MB</a> ( Recommended )</span><br />
+<span style="color: #000000;"><a href="http://www.cmbb.arizona.edu/CrusView/lib/crusView_jnlp/4096/crusView.jnlp" target="_blank">4096 MB</a> ( For large exon-to-exon alignment plots )</span><br />
+<span style="color: #000000;"><a href="http://www.cmbb.arizona.edu/CrusView/lib/crusView.jnlp" target="_blank">8192 MB</a> ( For large exon-to-exon alignment plots )</span></p>
+<h3><span style="color: #000000;">User Manual</span></h3>
+<p><a href="http://www.cmbb.arizona.edu/CrusView/manual.pdf" target="_blank">manual.pdf</a><span style="color: #000000;"> is provided here.</span></p>
+<h3>ScreenShot</h3>
+<div id="ngg-slideshow-4-250-1" class="ngg-slideshow" style="height:240px;width:320px;">
+<div id="ngg-slideshow-4-250-1-loader" class="ngg-slideshow-loader" style="height:240px;width:320px;">
+<img src="http://www.cmbb.arizona.edu/wp-content/plugins/nextgen-gallery/images/loader.gif" alt="" />
+</div></div>
+
+<script type="text/javascript" defer="defer">
+jQuery(document).ready(function(){ 
+jQuery("#ngg-slideshow-4-250-1").nggSlideshow( {id: 4,fx:"fade",width:320,height:240,domain: "http://www.cmbb.arizona.edu/",timeout:3000});
+});
+</script>
+</div></div>    
+                    <div class="clear"></div>
+                </div>   
+				
+			
+    				
+	</div> <!-- END Narrowcolumn -->
+   
+<div class="clear"></div>
+
+<div id="footer">
+<div class="lt">Laboratory of Computational Biology and Bioinformatics, all right reserved.</div>
+<div class="clear"></div>			
+</div>
+    </div> <!-- END Columns --> 
+    
+   
+</div><!-- END main -->
+</div>  
+<div class="clear"></div>
+
+
+  
+<script type="text/javascript" charset="utf-8">
+/*<![CDATA[*/
+	Cufon.now(); 	
+	jQuery(document).ready(function() {
+			jQuery('.slideshow').cycle({
+				fx: 'fade',
+				timeout: 6000,
+				pager: '#slideshow-nav',
+				speed: 1000,
+				//prev: '#left-arrow',
+        //next: '#right-arrow',
+				pagerEvent: 'click',
+    		pauseOnPagerHover: true,
+				cleartypeNoBg: true });						
+	  });		
+/*]]>*/
+</script>     
+</body>
+</html>
+ 

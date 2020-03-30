@@ -1,0 +1,549 @@
+<!--
+==================================================================================
+bz-rates: a web-tool to accurately estimate mutation rates from fluctuation assays
+==================================================================================
+Copyright (C) 2015 Alexandre Gillet-Markowska
+
+This file is part of bz-rates.
+
+bz-rates is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+bz-rates is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with bz-rates.  If not, see <http://www.gnu.org/licenses/>.
+==================================================================================
+Contact: Alexandre Gillet-Markowska - alexandre(dot)gillet(at)yahoo(dot)fr
+==================================================================================
+-->
+
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="description" content="bz-rates: mutation rates calcultator for fluctuation assays">
+    <meta name="keywords", content="fluctuation,assay,luria,delbruck,MSS,generating function,differential,growth,rate,mutation,mutant,plating,efficiency">
+    <meta name="author", content="Alexandre Gillet-Markowska">
+    <link rel="shortcut icon" href="/static/images/favicoW.ico">
+    <title>
+bz-rates - mutation rates calculator for fluctuation assays
+</title>
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/static/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML&imageFont:null"></script>
+    <script src="http://gh-canon.github.io/stack-snippet-console/console.min.js"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+    </script>
+    <script type="text/javascript" src="/static/js/jquery-1.11.2.min.js"></script>
+    <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static//ckeditor/static/ckeditor/ckeditor/ckeditor.js" ></script>
+    <script type="text/javascript" src="/static//ckeditor/static/ckeditor/ckeditor-init.js" ></script> -->
+    
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo"></div>
+        <br />
+        <div class="clr"></div>
+    </div>
+
+
+    <div class="abstract">
+        
+    <h3>Calculate mutation rates from fluctuation assays</h3>
+    <p> \(bz\)-\(rates\) is a web-tool that allows to compute mutation rates from fluctuation assays.
+        \(bz\)-\(rates\) estimator is the Generating Function from Hamon & Ycart 2012. This estimator
+        calculates the parameters m (mean number of mutations) and b (mutant relative fitness), for
+        a given fluctuation assay dataset and therfore allows to calculate a mutation rate taking
+        into account differential growth rate.
+    </p>
+    <!--<p>If you find \(bz\)-\(rates\) useful please site our paper: "\(bz\)-\(rates\): a web-tool to accurately estimate
+        mutation rates from fluctuation analysis".
+    </p>-->
+
+    </div>
+
+    <div class="news">
+       
+    <h3>News</h3>
+    <p>2015/05/06: several updates in the input form. Generating Function kept as the only estimator</p>
+    <p>2015/03/10: usage of scientific notation in the 'N0' field is now possible</p>
+    <p>2015/02/28: increased the authorized maximum number of plated cells</p>
+
+
+    </div>
+
+
+    <div class="wrap">
+        <div class="content">
+            
+
+    <table class="tabCalculator">
+        <tr>
+            <td><div class="calculator"><div class="calculatorTxt"><b>Mutation rate calculator</b></div></div></td>
+        </tr>
+    </table>
+
+    <form action="" method="post"><input type='hidden' name='csrfmiddlewaretoken' value='O3pfB0vuUGpt7d2nNZZf8EH5jE1MMQA5' />
+        <table class="inputTab">
+            <tbody>
+                <tr>
+                    <td>
+                        <table class="tabButtons">
+                            <tr >
+                                <td><div class="tabButtonsCell"><i><b>b </b></i>: the relative fitness of mutant versus WT cells is known</div></td>
+                            </tr>
+                            <tr id="div5">
+                                <td><div class="tabButtonsCell">Algorithms</div></td>
+                            </tr>
+                            <tr id="div1">
+                                <td><div class="tabButtonsCell"><i><b>N<sub>0</sub></b></i> : initial number of cells per culture</div></td>
+                            </tr>
+                            <tr id="div3">
+                                <td><div class="tabButtonsCell">
+                                        <i><b>b</b></i> (0 < b < ∞)
+                                </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><div class="tabButtonsCell"><i><b>z</b></i> : plating efficiency or fraction of a culture plated (0 < z ≤ 1)</div>
+                                </td>
+                            </tr>
+                            <tr >
+                                <td><div class="tabButtonsCell2">
+                                        <div class = "NmuNplatedMain">
+                                            Copy / paste your fluctuation data here<br>
+                                            <b><i>N<sub>mutants</sub></i> [tab/space] <i>N<sub>cells</sub></i></b>
+                                        </div>
+                                        <div class = "NmuNplatedSub">
+                                            <i>N<sub>mutants</sub></i> : number of mutants on the plate
+                                            <br><i>N<sub>cells</sub></i> : number of plated cells
+                                        </div>
+                                    </div></td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <td>
+                        <table class="formTab">
+                            <tr>
+                                <td><form>
+                                    <select id="bknown" class="narrow-select" onchange="showDiv(this)">
+                                        <option value="1">No</option>
+                                        <option value="2">Yes</option>
+                                    </select>
+                                        <!-- <input type="checkbox" name="c1" id="checkbox1" class="bInputForm" onchange="showMe()"> -->
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr id="div6">
+                                <td><div><select class="narrow-select" id="id_choix" name="choix">
+<option value="1">Generating Function (Hamon &amp; Ycart 2012)</option>
+<option value="2">Maximum Likelihood (Hamon &amp; Ycart 2012)</option>
+</select></div></td> <!-- class="bInputForm" -->
+                            </tr>
+                            <tr  id="div2">
+                                <td><input class="narrow-select" id="id_N0" min="1.0" name="N0" required="" type="number" value="1" /></td>
+                            </tr>
+                            <tr id="div4">
+                                <td><div><input class="narrow-select" id="id_b" min="1e-99" name="b" step="any" type="number" /></div></td>
+                            </tr>
+                            <tr>
+                                <td><div><input class="narrow-select" id="id_z" max="1" min="1e-99" name="z" required="" step="any" type="number" value="1" /></div></td>
+                            </tr>
+                            <tr>
+                                <td><textarea class="dataFluc" cols="40" id="id_fluctuation" name="fluctuation" required="" rows="10">
+</textarea></td>
+                            </tr>
+                            <!--
+                                <tr>
+                                    <td><select class="narrow-select" id="id_choix" name="choix">
+<option value="1">Generating Function (Hamon &amp; Ycart 2012)</option>
+<option value="2">Maximum Likelihood (Hamon &amp; Ycart 2012)</option>
+</select></td>
+                                </tr>
+                            
+                                <tr>
+                                    <td><input class="narrow-select" id="id_N0" min="1.0" name="N0" required="" type="number" value="1" /></td>
+                                </tr>
+                            
+                                <tr>
+                                    <td><input class="narrow-select" id="id_b" min="1e-99" name="b" step="any" type="number" /></td>
+                                </tr>
+                            
+                                <tr>
+                                    <td><input class="narrow-select" id="id_z" max="1" min="1e-99" name="z" required="" step="any" type="number" value="1" /></td>
+                                </tr>
+                            
+                                <tr>
+                                    <td><textarea class="dataFluc" cols="40" id="id_fluctuation" name="fluctuation" required="" rows="10">
+</textarea></td>
+                                </tr>
+                            -->
+                            <script type="text/javascript">
+                            //<![CDATA[
+
+                            function isIntBKP(value) {
+                                var n = ~~Number(value);
+                                return !isNaN(value) && n >= 0 && (function(x) { return (x | 0) === x; })(parseFloat(value))
+                            }
+                            
+			    function isInt(value) {
+                                return !isNaN(value) &&
+                                        parseInt(Number(value)) == value &&
+                                        !isNaN(parseInt(value, 10));
+                            }
+
+                                var id_fluctuation = document.getElementById('id_fluctuation');
+
+                                var checkTextAreaValidity = function () {
+                                    var id_fluctuation = document.getElementById('id_fluctuation');
+                                    var data = id_fluctuation.value;
+                                    var str = data.trim();
+                                    var res = str.split(/[\r\n?|\n]/);
+                                    for (var i = 0; i < res.length; i++) {
+                                        var elt = res[i].split(/[ |\t]/);
+                                        var eltLen =  elt.length;
+                                        if(eltLen != 2){
+                                            id_fluctuation.setCustomValidity('Error: 2 columns (Nmut | Ncells)');
+                                            return;
+                                        } else if (isInt(elt[0]) == false || isInt(elt[1]) == false) {
+                                            id_fluctuation.setCustomValidity('Error: integer required');
+                                            return;
+                                        } else if (parseInt(elt[0]) > parseInt(elt[1])) {
+                                            id_fluctuation.setCustomValidity('Error: Nmut > Ncells');
+                                            return;
+                                        }
+                                    }
+                                    id_fluctuation.setCustomValidity('');
+                                    return true;
+                                };
+                                <!-- id_fluctuation.onclick = checkTextAreaValidity; -->
+                                document.getElementsByName("monBoutton").onchange = checkTextAreaValidity;
+                            //]]>
+                            </script>
+                        </table>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <script>
+
+        function updateSelect() {
+            var checkbox = document.getElementById("bknown");
+            var bUser = checkbox.options[checkbox.selectedIndex].value;
+            if (bUser=='2') {
+                if ( $("#id_choix option[value='1']").length > 0 ) {
+                    $("#id_choix option[value='1']").remove();
+                }
+                if ( $("#id_choix option[value='2']").length > 0 ) {
+                    $("#id_choix option[value='2']").remove();
+                }
+                if ( $("#id_choix option[value='3']").length == 0 ){
+                    $("#id_choix").append('<option value="3">Maximum Likelihood (Jaeger & Sarkar 1995)</option>');
+                }
+            } else {
+                if ( $("#id_choix option[value='3']").length > 0 ) {
+                    $("#id_choix option[value='3']").remove();
+                }
+                if ( $("#id_choix option[value='1']").length == 0 ){
+                    $("#id_choix").append('<option value="1">Generating Function (Hamon & Ycart 2012)</option>');
+                }
+                if ( $("#id_choix option[value='2']").length == 0 ){
+                    $("#id_choix").append('<option value="2">Maximum Likelihood (Hamon & Ycart 2012)</option>');
+                }
+            }
+        };
+
+
+        window.onload = function() {
+            showDivIni();
+            showAlert();
+        };
+
+
+
+        function showDiv(elem){
+            if(elem.value == 1) {
+                var vis = "none"
+                document.getElementById("id_b").value = '';
+            } else {
+                var vis = "block"
+            }
+        document.getElementById("div3").style.display = vis;
+        document.getElementById("div4").style.display = vis;
+        }
+
+
+        function showDivIni(){
+            console.log('showDivIni')
+            var bmenu = document.getElementById("bknown");
+            var bmenuValue = bmenu.options[bmenu.selectedIndex].value;
+            var b = document.getElementById("id_b").value
+            console.log('b:'+b)
+            console.log('bmenuValue:'+bmenuValue)
+            if(b ==''){
+                console.log('b empty')
+                if(bmenuValue == 1) {
+                    console.log('bmenuValue = 1')
+                    var vis = "none"
+                } else {
+                    console.log('bmenuValue != 1')
+                    var vis = "block"
+                }
+            } else {
+                console.log('b not empty')
+                var vis = "block"
+                document.getElementById("bknown").value = '2';
+            }
+            document.getElementById("div3").style.display = vis;
+            document.getElementById("div4").style.display = vis;
+        }
+
+
+        function eraseText() {
+            document.getElementById("id_fluctuation").value = "";
+            document.getElementById("id_N0").value = 1;
+            document.getElementById("id_b").value = '';
+            document.getElementById("id_z").value = 1;
+        }
+
+        function showProgress() {
+            var Nzero = document.getElementById('id_N0').value;
+            document.getElementById('id_N0').value=Number(Nzero)
+            if(checkTextAreaValidity() &&
+                    document.getElementById('id_N0').checkValidity() &&
+                    document.getElementById('id_z').checkValidity() &&
+                    document.getElementById('id_b').checkValidity()) {
+                var pb = document.getElementById("overlay");
+                pb.innerHTML = '<div id="overlay"> <div class="progress"> <img class="GIFResize" src="../../static/GIF/flower-loader-transparent.gif"/> </div> </div>';
+                pb.style.display = '';
+            }
+        }
+
+
+        function showAlert() {
+            var validity = 'v'
+            var myText = "WARNING:\n\n" +
+            "Chi2 goodness of fit test is invalid \n" +
+            "More than 80% of expected frequencies are below 5";
+            if(validity == "chiUnvalid"){
+                alert (myText);
+            } else if(validity == "yarnold") {
+                var myText = "WARNING:\n\n" +
+                        "Yarnold criteria not fulfilled\n" +
+                        "N^2/k < 10 (N: total counts, k number of categories";
+                alert (myText);
+            }
+        }
+    </script>
+        <input type="button" value="Clear" class="resetButton" onclick="javascript:eraseText();">
+        <input type="submit" name="monBoutton" value="Run" class="runButton" onclick="showProgress()"/>
+        <div id="overlay"  style="display: none;">
+            <div class="progress">
+                <img src="../../static/GIF/flower-loader-transparent.gif"/>
+            </div>
+        </div>
+    </form>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="results">
+            
+
+<table class="tabResults">
+    <tr>
+        <td><div class="resTabCell3"><div class="resultsTxt"><b>Results</b></div></div></td>
+        
+    </tr>
+</table>
+
+<p> <div class="tabulation"> The 'Results' box outputs the following information: </div>
+    \begin{array}{ll}
+    \hline
+    \small{m} & \small{\text{mean number of mutations per culture not corrected by the plating efficiency (z)}} \\
+    \small{\mu} & \small{\text{mutation rate per cell per division not corrected by the plating efficiency (z)}} \\
+    \small{m_{corr}} & \small{\text{number of mutations per culture corrected by the plating efficiency (z)}} \\
+    \small{\boldsymbol{\mu_{corr}}} & \small{\textbf{mutation rate per cell per division corrected by the plating efficiency (z)}} \\
+    \small{CL_{lower}} & \small{\text{lower 95% confidence limit for } m_{corr}} \\
+    \small{CL_{upper}} & \small{\text{upper 95% confidence limit for } m_{corr}} \\
+    \small{b} & \small{\text{mutant cells relative fitness predicted by the Generating Function (only output if b is left empty in the input field)}} \\
+    \small{b_{lower}} & \small{\text{lower 95% confidence limit for b (only output if b is left empty in the input field)}} \\
+    \small{b_{upper}} & \small{\text{upper 95% confidence limit for b (only output if b is left empty in the input field)}} \\
+    \small{meanNc} & \small{\text{average number of plated cells per culture } (\overline{Nc})} \\
+    \small{sdNc} & \small{\text{standard deviation of the number of plated cells } (\sigma_{Nc})} \\
+    \small{\chi^{2}} & \small{\text{Pearson's chi-square value} } \\
+    \small{\chi^{2}-p} & \small{\text{Pearson's chi-square p-value} } \\
+    \hline
+    \end{array}
+</p>
+
+<td>
+    <table class="resTab">
+        <tr>
+            <td><div class="resTabCell2" >
+                
+                <textarea readonly class="txtArea"></textarea>
+                 </div>
+            </td>
+            <td>
+                <!-- <img src="plot.png" onerror="this.style.display='none'"> -->
+                <img src=/bzrates/resplot2 onerror="this.style.display='none'">
+                <div id="loading-image">
+                    <img src="../../static/GIF/flower-loader-transparent.gif" alt="Loading..." />
+                </div>
+                <script>
+                    jQuery(window).load(function() {
+                    jQuery('#loading-image').hide();
+                    });
+                </script>
+            </td>
+
+    </table>
+</td>
+
+        </div>
+    </div>
+
+
+
+    <div class="implementation">
+        <div class="implementationTxt">
+            
+
+
+        <!--<h3>Input form</h3>
+        <p> Nmutant|Nplated is the only required information:
+        <ul class="ulParams">
+            <li> \(N_{0}\): initial number of cells in the culture (the seeds)</li>
+            <li> \(z\): dilution factor or fraction of a culture plated (0 < z ≤ 1)</li>
+            <li> \(b\): mutant cells relative fitness (0 < b < ∞)</li><input type="reset" value="Reset!"><br>
+            <li> \(N_{mutants}\): number of mutants on the plate</li>
+            <li> \(N_{plated}\): number of cells plated</li>
+        </ul>
+        </p>
+
+        <br>
+        -->
+        <h3>Result description</h3>
+
+
+
+    <h3>Motivation</h3>
+    <p>
+        <span class="marge">A classical approach to calculate mutation rates (\(\mu\)) in microorganisms consists in performing fluctuation
+        analyses through multiple cultures grown in parallel under identical conditions (Luria & Delbrück 1943). Each individual
+        culture is started with a small inoculum (\(N_{0}\)) and mutational events occur independently in each culture. At the end
+        of the experiment, a \(\mu\) can be estimated from the proportions of mutant cells in the different cultures.
+        Since the seminal work of Lea & Coulson in 1949, numerous methods were proposed to calculate \(\mu\)
+        (for review see Foster 2006). They all rely on the estimation of \(m\), the mean number of mutations per culture.
+        </span>
+    </p>
+    <p>
+        <span class="marge">The estimation of \(m\) can be affected by the fraction of cells
+        that is plated on selective media for each culture. This criteria is defined as the plating efficiency (\(z\)) which accounts for
+        the fact that if the entire culture is not plated, then not all the mutants will be experimentally detected.
+        A correction proposed by Stewart and colleagues to account for this potential bias (Stewart & al. 1990) is
+        also implemented in \(bz\)-\(rates\).</span>
+    </p>
+
+    <p>
+    <h3>Estimating \(m\) </h3>
+    <span class="marge"> When the mutant relative fitness is not provided by the user, \(bz\)-\(rates\) uses the GF from
+        Hamon & Ycart 2012 to estimate \(m\) and \(b\). The GF uses the probability generating function to estimate the
+        compound Poisson distribution. See Hamon & Ycart 2012 for further details. When \(b\) is known, only \(m\) is
+        estimated by the generating function. </span>
+    </p>
+
+
+
+    <p>
+        <h3>Correcting for the plating efficiency \(z\)</h3>
+        \(m_{corr}\) is calculated using the equation 41 from Stewart et al. 1990:
+        \begin{equation}
+        m_{corr} = m \frac{z-1}{z\cdot ln(z)} \nonumber
+        \end{equation}
+
+    </p>
+
+    <p>
+        <h3>Calculating the mutation rates \(\mu\) and \(\mu_{corr}\)</h3>
+        \(\mu\) and \(\mu_{corr}\) are calculated with the following formulas:
+        \begin{align}
+        \mu &= \frac{m} {  \overline{Nc} } \nonumber \\ \nonumber \\
+        \mu_{corr} &= \frac{m_{corr}} { \overline{Nt} } \nonumber
+        \end{align}
+
+    </p>
+
+    <br>
+        <h3>References</h3>
+        <p class="refTxt">
+            <small><b>Foster (2006).</b> Methods for determining spontaneous mutation rates. Methods in Enzymology, 409(05), 195–213. doi:10.1016/S0076-6879(05)09012-9
+            <br>
+            <b>Hamon & Ycart (2012).</b> Statistics for the Luria-Delbrück distribution. Electronic Journal of Statistics, 6, 1251–1272. doi:10.1214/12-EJS711
+            <br>
+            <b>Jaeger & Sarkar (1995).</b> On the distribution of bacterial mutants: the effects of differential fitness of mutants and non-mutants. Genetica, 217–223.
+            <br>
+            <b>Luria & Delbrück (1943).</b> Mutations of bacteria from virus sensitivity to virus resistance. Genetics, 28(6), 491.
+            <br>
+            <b>Sarkar & Sandri (1992).</b> On fluctuation analysis: a new, simple and efficient method for computing the expected number of mutants. Genetica, 173–179.
+            <br>
+            <b>Stewart & al. (1990).</b> Fluctuation Analysis: The Probability Distribution of the Number Mutants Under Different Conditions. Genetics, 124(1), 175–185.</small>
+        </p>
+
+
+        </div>
+    </div>
+
+    <div class="FAQ">
+        <div class="FAQTxt">
+            
+    <h3>FAQ</h3>
+    <p class="marge">
+        Although bz-rates is built as a simplified tool to compute mutation rates, users should have
+        in mind the goods practices for fluctuation tests analysis: <i>Determining mutation rates in bacterial populations,
+        Rosche & Foster, 2000, DOI:10.1006/meth.1999.0901</i>
+        <ul><b>Is it possible to measure mutation rates when the number of cells per culture differs: No.</b> In practice,
+            bz-rate averages the number of plated cells per culture. Therefore, bz-rates will always output a result for
+            a given dataset. However, they will only be valid if the total number of cells per culture and the number of
+            plated cells per culture is identical (or at least quite close).</ul>
+    </p>
+
+        </div>
+    </div>
+
+    <table class='bottomtab' width='100%'><tr><td>
+        © 2015 UPMC - CNRS </br>
+        Need help? Please contact alexandre(dot)gillet(dash)markowska(at)upmc(dot)fr if you have any questions, comments or concerns.</br>
+        Developed at the <a href="http://www.lcqb.upmc.fr" target="_blank"  class="footer">LCQB-UPMC</a> in the <a href="http://www.lcqb.upmc.fr/BiG" target="_blank" class="footer">Fischer Lab</a>.</br>
+    </td></tr></table>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58741888-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

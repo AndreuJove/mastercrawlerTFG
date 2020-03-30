@@ -1,0 +1,10 @@
+Date: Mon, 30 Mar 2020 18:48:12 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Strict-Transport-Security: max-age=63072000; includeSubdomains
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+Link: <https://ccmp.usc.edu/wp-json/>; rel="https://api.w.org/"
+Link: <https://ccmp.usc.edu/>; rel=shortlink
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/html; charset=UTF-8

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="no-js ie6 ie7 ie8" lang="en-us"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7 ie8" lang="en-us"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en-us"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie9" lang="en-us"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en-us"> <!--<![endif]-->
+  <head>
+    <!--
+      Page generated: 22/03/2020
+      Powered by GX
+      GX Software
+      Boston - San Francisco - Nijmegen
+      http://www.gxsoftware.com/
+    -->
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta charset="utf-8">
+        <title>BreeDB - WUR</title>
+    <meta name="websiteid" content="26098" />
+<meta name="content_last_modified_date" content="2020-03-22T03:30:42Z" />
+    <meta name="pagetitle" content="BreeDB" />
+    <meta name="mediacontenttype" content="productservice" />
+    <meta name="contentid" content="29826" />
+	<meta name="wurtitle" content="breedb" />
+      <meta name="category" content="software_software" />
+        <meta name="expertise" content="" />
+      <meta name="organization" content="13876" />
+        <meta name="organization" content="33682" />
+          <meta name="organizationname" content="Wageningen Plant Breeding" />
+      <meta name="publicationdate" content="2018-12-19T15:02:00Z" />
+      <meta name="creationdate" content="2012-10-16T14:53:34Z" />
+            <meta name="person" content="4718" />
+                  <meta name="personname" content="dr. HJ (Richard) Finkers" />
+      <meta name="articleUrl" content="/en/show/BreeDB.htm" />
+      <meta name="keywords" content="Wageningen University &amp; Research" />
+      <meta name="description" content="Research within Plant breeding are dealing with a lot of data, obtained from field-trials but also from high-throughput analysis of molecular markers, RNA transcripts (microarrays), proteins and secondary metabolites. An efficient database will help in elucidating the genetics of economically important traits, in identifying molecular markers associated with agronomic traits, in allele mining and choosing interesting accessions fur further breeding with improved traits important for consumers, processors and producers." />
+    <meta name="Googlebot" content="index,archive,follow" />
+    <meta name="generator" content="GX WebManager" />
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta property="og:type" content="article"/>
+      <meta property="og:title" content="BreeDB"/>
+      <meta property="og:url" content="https://www.wur.nl/en/show/BreeDB.htm"/>
+      <meta property="og:image" content="http://www.wur.nl/upload/190c5620-8fb9-4449-bc5c-6b8fe6a6e683_BreeDB-490x330.jpg"/>
+      <meta property="og:site_name" content="WUR"/>
+      <meta property="og:description" content="Research within Plant breeding are dealing with a lot of data, obtained from field-trials but also from high-throughput analysis of molecular markers, RNA transcripts (microarrays), proteins and secondary metabolites. An efficient database will help in elucidating the genetics of economically important traits, in identifying molecular markers associated with agronomic traits, in allele mining and choosing interesting accessions fur further breeding with improved traits important for consumers, processors and producers."/>
+      <meta name="article:published_time" content="2012-10-16T14:53:00CEST"/>
+        <meta name="article:modified_time" content="2018-12-19T15:02:00CET"/>
+      <!-- Start FreeStyle -->
+      <!--  FreeStyle -->
+			<script >
+        window.Promise || document.write('<script src="/static/design/0F93A6B8-6D8B-42C0-9D7C-D9B69FD7EC78-10D5-fsm/js/es6-promise.js"><\/script>');
+</script>
+<script >
+        </script>
+        <script>
+          // Set date format for jquery ui
+           Date.format = 'dd-mm-yyyy';
+        </script>
+        <!--[if lt IE 9]>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+          <script>window.html5 || document.write('<script src="/static/design/0F93A6B8-6D8B-42C0-9D7C-D9B69FD7EC78-10D5-fsm/rel/javascripts/vendor/html5.js"><\/script>')</script>
+        <![endif]-->
+        <script>
+          if (document.getElementsByTagName) { document.getElementsByTagName('html')[0].className = document.getElementsByTagName('html')[0].className.replace('no-js', 'js') }
+        </script>
+        <script>
+        !function(){
+          var hasBCPermissionLevel = function(level) {
+            function getCookie(key) {
+              var cookies = document.cookie.split('; ');
+              for (var i = 0, l = cookies.length; i < l; i++) {
+                var parts = cookies[i].split('=');
+                if (parts.shift() === key) { return parts.join('='); }
+              }
+            }
+            try {
+              var cookie = getCookie('BCPermissionLevel');
+              if (cookie !== null && typeof(cookie) != 'undefined' && (cookie == level)) { return true; }
+            } catch(err) { }
+            return false;
+          };
+          // ====================
+          // = Register globals =
+          // ====================
+          window.hasBCPermissionLevel = hasBCPermissionLevel;
+        }();
+        </script>
+        <script>
+</script>
+<script >
+        !function(l){function e(e){for(var t,n,a=e[0],o=e[1],r=0,i=[];r<a.length;r++)n=a[r],s[n]&&i.push(s[n][0]),s[n]=0;for(t in o)Object.prototype.hasOwnProperty.call(o,t)&&(l[t]=o[t]);for(c&&c(e);i.length;)i.shift()()}var n={},s={3:0};function u(e){if(n[e])return n[e].exports;var t=n[e]={i:e,l:!1,exports:{}};return l[e].call(t.exports,t,t.exports,u),t.l=!0,t.exports}u.e=function(r){var e,t=[],n=s[r];if(0!==n)if(n)t.push(n[2]);else{var a=new Promise(function(e,t){n=s[r]=[e,t]});t.push(n[2]=a);var o,i=document.getElementsByTagName("head")[0],l=document.createElement("script");l.charset="utf-8",l.timeout=120,u.nc&&l.setAttribute("nonce",u.nc),l.src=u.p+""+({}[e=r]||e)+"-"+{0:"32a23748c243f78db4b8",1:"65f225b0932d73c0fa67",8:"0af3d68f1c8e07892b12",11:"0b7cb9332f2ffaf4d971",12:"3f93379933f8ec1d7264",13:"834038e943c3f4a783df",14:"1b3173455e93e4e4799c"}[e]+".js",o=function(e){l.onerror=l.onload=null,clearTimeout(c);var t=s[r];if(0!==t){if(t){var n=e&&("load"===e.type?"missing":e.type),a=e&&e.target&&e.target.src,o=new Error("Loading chunk "+r+" failed.\n("+n+": "+a+")");o.type=n,o.request=a,t[1](o)}s[r]=void 0}};var c=setTimeout(function(){o({type:"timeout",target:l})},12e4);l.onerror=l.onload=o,i.appendChild(l)}return Promise.all(t)},u.m=l,u.c=n,u.d=function(e,t,n){u.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},u.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},u.t=function(t,e){if(1&e&&(t=u(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(u.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var a in t)u.d(n,a,function(e){return t[e]}.bind(null,a));return n},u.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return u.d(t,"a",t),t},u.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},u.p="/static/design/0F93A6B8-6D8B-42C0-9D7C-D9B69FD7EC78-10D5-fsm/js/dist/",u.oe=function(e){throw console.error(e),e};var t=window.webpackJsonp=window.webpackJsonp||[],a=t.push.bind(t);t.push=e,t=t.slice();for(var o=0;o<t.length;o++)e(t[o]);var c=a;u(u.s=38)}({3:function(v,w,x){"use strict";var S,_;x(4),Promise.all([x.e(0),x.e(1),x.e(13),x.e(8)]).then(function(){window.Raven=x(10).installRaven(),x(11),window.Raven.wrap(function(){S=[x(0),x(12),x(13),x(14),x(15),x(8),x(16),x(5),x(1),x(17),x(18),x(19),x(20),x(21),x(22),x(23),x(24),x(25),x(26),x(27),x(28),x(29),x(7),x(30),x(31),x(32),x(33),x(9)],void 0===(_=function(l,c,s,u,h,e,d,p,f,m,t,g,y,b){l(document).ready(function(){h.init("#site-wide-search-form"),l("html").hasClass("ie8")?(l("html").hasClass("ie7")||l("body").stickyHeader(),l("#breadcrumb > ul").Breadcrumb()):(matchMedia("only screen and (min-width: 601px)").matches&&l("#breadcrumb > ul").Breadcrumb(),matchMedia("(min-width: 980px)").matches&&matchMedia("(min-height: 625px)").matches&&l("body").stickyHeader()),matchMedia("(min-width: 980px)").matches&&l("aside .banner--with-superpower").length&&l("aside .banner--with-superpower").stickyBanner();var n=function(e){var t=l(e.find(".with-tabs"));t&&t.each(function(){new u(this)})};if(n(l("body")),document.querySelector(".opening-hours")&&y(".opening-hours"),0<l(".header-collection--library").length&&(b(),l(".header-collection--library").height(l(".header-collection__tabs .tabs").outerHeight()+200)),0<l(".header-nav--library").length){var e=l(".header-nav--library").parents(".primary-navigation"),t=l(".page > header");matchMedia("(max-width: 600px)").matches?(t.height(125),e.addClass("primary-navigation--fixed")):t.height()}l("body").on("overlay-content",function(e,t){n(l(t))}),l("[data-wur-overlay=true]").Overlay(),l("[data-toggle-parent-class]").Toggler(),l(".carrousel").Carrousel(),l("a[data-wur-append-to-parent]").on("click",function(e){var t=l(this);e.preventDefault();var n=t.parents(t.data("wur-append-to-parent")),a=t.data("wur-append-to-parent-toggle-class");0<n.length&&l.ajax({url:t.attr("href")}).done(function(e){n.append(e),a&&n.toggleClass(a)})}),document.querySelector(".follow-wrapper")&&document.querySelector(".follow")&&g(),l(".timeline .stage").Timeline(),l(".gallery").Gallery(),l(".layout-full").find(".header-collection").parents("#main").find("header h1").remove();var a=l(".interactive-map .map:not(.map-embed)");0<a.length&&Promise.all([x.e(14),x.e(11)]).then(function(){var e=[x(35)];(function(e){e(function(e){a.map(function(){return new e(this)})})}).apply(null,e)}).catch(x.oe);var o=l(".map--kml");0<o.length&&0===l("body.inContextMode").length&&x.e(12).then(function(){var e=[x(36)];(function(e){e(function(e){o.map(function(){return new e(this)})})}).apply(null,e)}).catch(x.oe);var r=l(".datepicker");0<r.length&&(S=[x(2)],void 0===(_=function(){r.each(function(e,t){var n=l(t);n.datepicker({dateFormat:n.data("date-format")||"dd/mm/yy",changeYear:!1,showOtherMonths:!0,prevText:"&#61447;",nextText:"&#61446;",showOn:"both",buttonText:'<span class="icon">&#57600;</span>'})})}.apply(w,S))||(v.exports=_));var i=l("input.autocomplete");0<i.length&&(S=[x(2)],void 0===(_=function(){i.autocomplete({source:function(e,t){var n={};n[this.element.attr("name")]=e.term,l.ajax({url:this.element.data("wur-autocomplete-url"),dataType:"json",data:n,success:function(e){t(l.map(e.results,function(e){return{label:e.title,value:e.title}}))}})},minLength:2,open:function(){return l(this).autocomplete("widget").css("z-index",150),!1}})}.apply(w,S))||(v.exports=_)),0<l("a.lightbox").length&&(S=[x(34)],void 0===(_=function(){l("a.lightbox").fancybox({beforeLoad:function(){this.title=l(this.element).find("img").attr("alt"),1<this.group.length&&(this.title+=" <span>"+(this.index+1).toString()+"/"+this.group.length.toString()+"</span>")},tpl:{closeBtn:'<a title="Close" class="fancybox-item fancybox-close" href="javascript:;">&#61699;</a>'},padding:20,loop:!1,helpers:{title:{type:"inside"}},autoCenter:!1})}.apply(w,S))||(v.exports=_)),f(),m(),l(".countdown-clock").each(function(e,t){new s(t)}),d.updateTwitterSharingUrl(".social-sharing__button--twitter"),d.updateLinkedinSharingUrl(".social-sharing__button--linkedin"),d.updateWhatsappSharingUrl(".social-sharing__button--whatsapp"),l(".social-sharing__button").not(l(".social-sharing__button--email")).on("click",function(e){e.preventDefault(),d.socialSharingOpeninPopup(l(this).attr("href"),500,500)}),0<l(".twitter-timeline").length&&d.loadTwitter(),p.navigateSmoothlyToAnchorElement(".lead-content__scroll .anchorelement"),p.navigateSmoothlyToAnchorElement(".filters-results-wrapper"),p.navigateSmoothlyToAnchorElement(".collection--anchors .anchorelement",".collection"),p.navigateSmoothlyToAnchorElement(".anchor-link"),p.navigateSmoothlyToAnchorElement(".anchor-link-scroll"),l("#ongoingtoggle").change(function(){var e=c(window.location.search.slice(1));l(this).is(":checked")?e.ongoing="show":e.ongoing="hide",window.location=window.location.pathname+"?"+l.param(e)}),l("#orderbySelect").change(function(){var e=c(window.location.search.slice(1));e.order=l(this).val(),window.location=window.location.pathname+"?"+l.param(e)})})}.apply(w,S))||(v.exports=_)})()}.bind(null,x)).catch(x.oe)},38:function(e,t,n){"use strict";n(3)},4:function(e,t,n){"use strict";var a,o;window.dependencyResolver=(a=[],o=null,{getCallbacks:function(){return a.slice()},setDeferred:function(e){o=e},addCallback:function(e){o?o.then(e):a.push(e)}})}});
+</script>
+    <link rel="stylesheet" type="text/css" href="/static/design/0F93A6B8-6D8B-42C0-9D7C-D9B69FD7EC78-10D5-fsm/rel/stylesheet/general-5d00a32f6bf1e513510d61ccbd5b5980179052f34ba6e8ca7e60c91014c31124.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/design/0F93A6B8-6D8B-42C0-9D7C-D9B69FD7EC78-10D5-fsm/rel/shortcut_icon/favicon.ico" />
+    <!-- End FreeStyle -->
+          <link rel="canonical" href="https://www.wur.nl/en/show/BreeDB.htm" />
+          
+      <script src="//cdn.blueconic.net/wageningenur.js"></script>
+        <!-- Start Visual Website Optimizer Asynchronous Code -->
+        <script type='text/javascript'>
+          var _vwo_code=(function(){
+          var account_id=342889,
+          settings_tolerance=2000,
+          library_tolerance=2500,
+          use_existing_jquery=false,
+          /* DO NOT EDIT BELOW THIS LINE */
+          f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+        </script>
+        <!-- End Visual Website Optimizer Asynchronous Code -->
+      <script>
+        dataLayer = [{
+        }];
+      </script>
+       <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+        {'gtm.start': new Date().getTime(),event:'gtm.js'}
+        );var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M2SRG8');
+      </script>
+      <!-- End Google Tag Manager -->
+					<script>
+		// <![CDATA[
+			window.googleApiKey = "AIzaSyB-X8zHYXvUCzNDrvEQdhbGCqNSermFmc8";
+		// ]]>
+	</script>
+  </head>
+    <body class="layout-article without-intro with-visual">
+    <!-- indexer: off -->
+        <!-- Accessibility -->
+    <div id="skiplinks">
+      Go directly to:
+      <ul>
+        <li><a title="Content" href="#main">Content</a></li>
+        <li><a title="Search box" href="#site-wide-search-form">Search box</a></li>
+        <li><a title="Breadcrumb" href="#breadcrumb">Breadcrumb</a></li>
+      </ul>
+    </div>
+      <!-- Google Tag Manager -->
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M2SRG8"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager -->
+        <div class="page">
+      <header>
+        <div class="WUREditableContentSection">
+					  <a href="/en.htm" class="logo" title="Wageningen University &amp; Research"><img class="logo__img" src="/upload/58340fb4-e33a-4d0b-af17-8d596fa93663_WUR_RGB_standard.png" alt="WUR logo" /></a>  <a href="/en.htm" class="logo" title="Wageningen University &amp; Research"><img class="logo__img--mobile" src="/upload/9be37239-53b1-42f5-a1fd-0c8cb5b052ae_WUR_RGB_secundary_mobile.png"  /></a>
+				</div>
+      </header>
+      <article id="main" role="main">
+        <div class="content main">
+            <div class="visual"><img src="/upload_mm/0/d/6/190c5620-8fb9-4449-bc5c-6b8fe6a6e683_BreeDB-490x330_f4709949_490x330.jpg"  alt=""  width="490"  height="330"   /></div>
+          <!-- indexer: on -->
+                      <header>
+                <p class="type">
+                      Product or service
+                </p>
+            <h1 id="content">BreeDB</h1>
+          </header>
+          <dl class="meta">
+          </dl>
+          <!-- indexer: on -->
+          <p class="intro">Research within Plant breeding are dealing with a lot of data, obtained from field-trials but also from high-throughput analysis of molecular markers, RNA transcripts (microarrays), proteins and secondary metabolites. An efficient database will help in elucidating the genetics of economically important traits, in identifying molecular markers associated with agronomic traits, in allele mining and choosing interesting accessions fur further breeding with improved traits important for consumers, processors and producers.</p>
+          <!-- indexer: off -->
+        <section>
+          <!-- indexer: on -->
+          <div class="WUREditableContent">BreeDB support breeding for quantitative agronomical traits. The database can be explored through a web-based interface, which offers tools to present basic statistical overviews such as box plots , histograms, but also multivariate tools. Graphical genotyping tools are available to show molecular marker data and QTL data in relation to genetic linkage maps. In addition, photos of each accession can be shown together with a detailed report of observations made on this accession.</div>
+          <!-- indexer: off -->
+        </section>
+<img src="/web/contentViewCounter?contentid=29826" width="0" height="0" style="display: none" alt="" />
+          <!-- indexer: off -->
+          
+        </div>
+        <aside>
+              <!-- SHOWCONTACTBUTTON:  -->
+  <!-- SHOWCONTACTBUTTON:  -->
+  			<div class="contactinfo">
+  				<ul>
+  					<li> <address class="vcard">
+      <a  href="/en/Persons/Richarddr.-HJ-Richard-Finkers.htm" class="navigation" title="dr. HJ (Richard) Finkers">
+    <div class="photo-frame">
+          <img src="https://www.vcard.wur.nl/WebServices/GetMedia.ashx?id=1700"  alt="dr. HJ (Richard) Finkers"   class="photo"  />
+    </div>
+    </a>
+    <div class="contact">
+          <span>Contact</span>
+          <a class="url fn"  href="/en/Persons/Richarddr.-HJ-Richard-Finkers.htm"  title="dr. HJ (Richard) Finkers">dr. HJ (Richard) Finkers</a>
+    </div>
+        <div class="actions">
+            <a class="button" rel="nofollow" data-wur-overlay="true" href="/en/show/BreeDB.htm?contactpersonid=4718&contactpersonname=dr.%20HJ%20%28Richard%29%20Finkers&isorganisation=false&organisationname=Wageningen%20Plant%20Research&organisationpart=Plant%20Breeding&presentationid=399132" title="Contact form">Contact form</a>
+        </div>
+    </address></li>	
+  				</ul>
+  			</div>
+              <div class="BcRightColumn1"></div>
+            
+              <div class="content">
+                <!-- indexer: on -->
+                    <div class="WUREditableContent">                  <article class="banner color-blue with-photo">
+          <a  href="/en/Research-Results/Research-Institutes/plant-research/Plant-Breeding/Software.htm" class="banner__link banner__link--primary" title=""><div class="body">
+	        <h2>
+	          Software Plant Breeding
+	        </h2>
+	        <p>The experts of Plant Breeding developed several software and tools. Go to an overview of these software and tools</p>
+	    </div>
+	      <span class="button">Read more</span>
+                <img src="/upload_mm/2/d/0/00fa87eb-6b2b-415e-9bb1-c5b01639ae97_shutterstock_414416551_6ef16593_100x319.jpg"  alt=""  width="100"  height="319"   /></a>
+    </article><p></p></div>
+                <!-- indexer: off -->
+              </div>
+            
+          </aside>
+	        <div class="content bottom">
+	          <!-- indexer: on -->
+	                  <div class="WUREditableContent"></div>
+	          <!-- indexer: off -->
+	          
+	        </div>
+              <!-- indexer: off -->
+        <div class="social-sharing">
+          <a class="social-sharing__button social-sharing__button--twitter"
+            data-share-via="WUR"
+            data-share-href="https://www.wur.nl/en/show/BreeDB.htm"
+            data-share-text="BreeDB"
+            href="https://twitter.com/share"
+            target="_blank">
+            <span>Twitter</span>
+          </a>
+          <a class="social-sharing__button social-sharing__button--whatsapp"
+            data-share-href="https://www.wur.nl/en/show/BreeDB.htm"
+            href="whatsapp://send"
+            data-action="share/whatsapp/share"
+            target="_blank">
+            <span>Whatsapp</span>
+          </a>
+          <a class="social-sharing__button social-sharing__button--linkedin"
+            data-share-href="https://www.wur.nl/en/show/BreeDB.htm"
+            href="https://www.linkedin.com/shareArticle"
+            target="_blank">
+            <span>Linkedin</span>
+          </a>
+          <a class="social-sharing__button social-sharing__button--email"
+            data-share-href="https://www.wur.nl/en/show/BreeDB.htm"
+            href="/en/show/BreeDB.htm?presentationid=2815164"
+            data-wur-overlay="true">
+            <span>Email</span>
+          </a>
+        </div>
+              
+      </article>
+      <a href="#" class="mobile-menu">
+  <span class="mobile-menu__icon">
+    <span class="mobile-menu__icon-bar"></span>
+    <span class="mobile-menu__icon-bar"></span>
+    <span class="mobile-menu__icon-bar"></span>
+  </span>
+  <span class="mobile-menu__label">Menu</span>
+</a>
+        <nav class="site-wide">
+          <ul>
+            <li class="item-1"><a href="/en/About-Wageningen.htm" class="navigation" title="About Wageningen">About Wageningen</a></li>
+              <li class="item-2"><a href="/en/Jobs.htm" class="navigation" title="Career">Career</a></li>
+              <li class="item-3"><a href="/en/Contact-Wageningen-University-Research.htm" class="navigation" title="Contact">Contact </a></li>
+              <li class="item-4"><a href="/en/Login.htm" class="navigation" title="Login">Login</a></li>
+          </ul>
+          <menu class="language" type="list">
+      <a data-toggle-parent-class="display" href="#">
+        <div class="navigation-largescreen">en|English</div>
+        <div class="navigation-mobile">EN</div>
+      </a>
+      <ul>
+                    <li class="navigation-largescreen"><a  href="/nl.htm" class="navigation" title="nl|Startpagina" lang="nl" hreflang="nl-NL">nl|Startpagina</a></li>
+                    <li class="navigation-largescreen"><a  href="/de.htm" class="navigation" title="de|Startseite" lang="de" hreflang="de-DE">de|Startseite</a></li>
+                    <li class="navigation-largescreen"><a  href="/fr.htm" class="navigation" title="fr|Page d&rsquo;accueil" lang="fr" hreflang="fr-FR">fr|Page d&rsquo;accueil</a></li>
+      </ul>
+    </menu>
+        </nav>
+        <div class="primary-navigation">
+          <div class="wrapper">
+            <nav class="audience">
+  <ul>
+      <li><a  href="/en/Education-Programmes.htm" class="navigation" title="Education &amp; Programmes">Education &amp;<br/> Programmes</a></li>
+      <li><a  href="/en/Research-Results.htm" class="navigation" title="Research &amp; Results">Research &amp;<br/> Results</a></li>
+      <li><a  href="/en/Value-Creation-Cooperation.htm" class="navigation" title="Value Creation &amp; Cooperation">Value Creation &amp;<br/> Cooperation</a></li>
+  </ul>
+</nav>
+              <div class="WUREditableContentSection">
+					<form class="site-search" id="site-wide-search-form" data-wur-autocomplete-json="/en.htm?cachetimeout=600&amp;excludeContentTypes=banner%2Cdetailbeheerder%2Cdetailgenus%2Cdetailras%2Cdetailspecies%2Cdigitalassetmanager_download%2Cdocument%2Cdamdownload%2Cexpertiseareashomepage%2Cactivity%2Corganisation%2Cadditionalinfo%2Cblogpost%2Cproductservice%2Ccase%2Cdownload&amp;maxSearchResults=5&amp;maxTotalResults=50&amp;presentationid=399120&amp;showSuggest=true&amp;usepostfixmatching=false&amp;weightFields=sort_pagetitle%2F50%2Ckeyword%2F30%2Csort_mediacontenttype%2F10" method="get" action="/web/show/search"><fieldset class="displayNone">
+<input type="hidden" name="id" value="88776" />
+<input type="hidden" name="langid" value="42" />
+<input type="hidden" name="from" value="" />
+<input type="hidden" name="to" value="" />
+<input type="hidden" name="webid" value="26098" />
+<input type="hidden" name="searchid" value="94196" /></fieldset>
+  <fieldset>
+    <div class="input">
+      <label for="site-search-field" class="acc">Search</label>
+      <input id="site-search-field" type="text" autocomplete="off" name="keyword" placeholder="" class="site-search-field" />
+    </div>
+    <button class="button button-search" type="submit">
+        <span class="acc">
+        Search
+        </span>
+      <span class="icon">&#57601;</span>
+    </button>
+    <button class="button button-close" type="button">
+        <span class="acc">
+        search_label_remove
+        </span>
+      <span class="icon">&#xf103;</span>
+    </button>
+  </fieldset>
+    <div class="results"></div>
+</form>
+				</div>
+          </div>
+        </div>
+          <nav id="breadcrumb">
+      <div class="js-menu-copy"></div>
+      <span class="breadcrumb__title">You are here</span>
+      <ul>
+                <li>
+                  <span>
+                    <a href="/en.htm" class="label" title="Home">Home</a>
+                    <a class="expander" href="#">Click to expand</a>
+                  </span>
+                  <div class="submenu two-columns">
+                      <ul>
+                              <li><a href="/en/Education-Programmes.htm" class="navigation" title="Education &amp; Programmes">Education &amp; Programmes</a></li>
+                              <li><a href="/en/Research-Results.htm" class="navigation" title="Research &amp; Results">Research &amp; Results</a></li>
+                              <li><a href="/en/Value-Creation-Cooperation.htm" class="navigation" title="Value Creation &amp; Cooperation">Value Creation &amp; Cooperation</a></li>
+                              <li><a href="/en/Jobs.htm" class="navigation" title="Career">Career</a></li>
+                              <li><a href="/en/news-wur.htm" class="navigation" title="News">News</a></li>
+                              <li><a href="/en/Benefactors.htm" class="navigation" title="University Fund Wageningen">University Fund Wageningen</a></li>
+                              <li><a href="/en/Calendar-1.htm" class="navigation" title="Calendar">Calendar</a></li>
+                              <li><a href="/en/Dossiers.htm" class="navigation" title="Dossiers">Dossiers</a></li>
+                              <li><a href="/en/About-Wageningen.htm" class="navigation" title="About Wageningen">About Wageningen</a></li>
+                              <li><a href="/en/wageningen-university.htm" class="navigation" title="University">University</a></li>
+                      </ul>
+                      <ul>
+                              <li><a href="/en/Alumni.htm" class="navigation" title="Alumni">Alumni</a></li>
+                              <li><a href="/en/Social-media-1.htm" class="navigation" title="Social media">Social media</a></li>
+                              <li><a href="https://weblog.wur.eu/spotlight/" class="navigation" title="https://weblog.wur.eu/spotlight/">In the spotlight</a></li>
+                              <li><a href="/en/International-staff.htm" class="navigation" title="International staff">International staff</a></li>
+                              <li><a href="/en/Login.htm" class="navigation" title="Login">Login</a></li>
+                              <li><a href="/en/Contact-Wageningen-University-Research.htm" class="navigation" title="Contact">Contact </a></li>
+                              <li><a href="/en/Disclaimer.htm" class="navigation" title="Disclaimer">Disclaimer</a></li>
+                              <li><a href="/en/Privacy-Cookie-statement.htm" class="navigation" title="Privacy &amp; Cookie statement">Privacy &amp; Cookie statement</a></li>
+                              <li><a href="/en/Accessibility-Statement.htm" class="navigation" title="Accessibility Statement">Accessibility Statement</a></li>
+                      </ul>
+                  </div>
+                </li>
+              <li class="no-expand">
+                <span>
+                  <a href="/en/show/BreeDB.htm" class="label" title="BreeDB">BreeDB</a>
+                </span>
+              </li>
+      </ul>
+      <div class="BcRightColumn1"></div>
+    </nav>
+        </div>
+        <footer>
+        <div class="columns">
+        <div class="col current-pillar WUREditableContent">
+					    <a href="/en.htm" class="normal" title="Wageningen University &amp; Research">
+        <img src="/upload/0bfab1bb-9d94-4983-861e-b7bac16ec483_logo_WUR_W_internet.png"  alt="Wageningen University and Research - To explore the potential of nature to improve the quality of life"   class="left logo" title="Wageningen University and Research - To explore the potential of nature to improve the quality of life" />
+    </a>  <p>
+    To explore the potential of nature to improve the quality of life. 
+  </p>  <p>
+    <a href="/en/Social-media-1.htm" class="more" title="Wageningen University &amp; Research on social media">Wageningen University &amp; Research on Social Media</a>
+  </p>
+				</div>					 
+		<div class="col WUREditableContent">
+					    <h2 >Education &amp; Programmes</h2>
+      <ul class="links">
+  <li><a href="/en/wageningen-university.htm" class="normal" title="University">University</a>
+    </li>
+  <li><a href="/en/Education-Programmes/Bachelor.htm" class="normal" title="Bachelor's">Bachelor</a>
+    </li>
+  <li><a href="/en/Education-Programmes/master.htm" class="normal" title="Master's">Master</a>
+    </li>
+  <li><a href="/en/Education-Programmes/online-education.htm" class="normal" title="Online education">Online education</a>
+    </li>
+  <li><a href="/en/Education-Programmes/PhD-Programme.htm" class="normal" title="PhD Programme">PhD</a>
+    </li>
+  <li><a href="/en/Education-Programmes/courses-for-professionals.htm" class="normal" title="Education for professionals">Courses for professionals</a>
+    </li>
+  <li><a href="/en/Education-Programmes/contact-study-information-office.htm" class="normal" title="Contact the Study Information Office">Contact the Study Information Office</a>
+    </li>
+    </ul>
+				</div>					 
+		<div class="col WUREditableContent">
+					    <h2 >Research &amp; Results</h2>
+      <ul class="links">
+  <li><a href="/en/Research-Results/Research-Institutes.htm" class="normal" title="Research Institutes">Research Institutes</a>
+    </li>
+  <li><a href="/en/Research-Results/Chair-groups.htm" class="normal" title="Chair groups of Wageningen University &amp; Research">Chair groups</a>
+    </li>
+  <li><a href="/en/Research-Results/Statutory-research-tasks.htm" class="normal" title="Statutory research tasks">Statutory research tasks</a>
+    </li>
+  <li><a href="/en/Research-Results.htm" class="normal" title="Research &amp; Results">Our research themes</a>
+    </li>
+  <li><a href="/en/Library/research-at-wur-1.htm" rel="noopener noreferrer" onclick="this.target='_blank';" class="normal" title="Research results and expertise of Wageningen University &amp; Research">Research@WUR</a>
+    </li>
+  <li><a href="/en/Library.htm" class="normal" title="Library">Library</a>
+    </li>
+    </ul>
+				</div>					 
+		<div class="col WUREditableContent">
+					    <h2 >Value Creation &amp; Cooperation</h2>
+      <ul class="links">
+  <li><a href="/en/Value-Creation-Cooperation/Investing-in-Innovation.htm" class="normal" title="Investing in Innovation">Investing in Innovation</a>
+    </li>
+  <li><a href="/en/Value-Creation-Cooperation/Knowledge-for-society.htm" class="normal" title="Knowledge for society">Knowledge for society</a>
+    </li>
+  <li><a href="/en/Value-Creation-Cooperation/Entrepreneurship.htm" class="normal" title="Entrepreneurship">Entrepreneurship</a>
+    </li>
+  <li><a href="/en/Value-Creation-Cooperation/Facilities-Tools.htm" class="normal" title="Facilities &amp; Tools">Facilities &amp; Tools</a>
+    </li>
+  <li><a href="/en/Dossiers.htm" class="normal" title="Dossiers Wageningen University &amp; Research">Dossiers</a>
+    </li>
+  <li><a href="/en/article/Longreads-Wageningen-University-Research-1.htm" class="normal" title="Longreads Wageningen University &amp; Research">Longreads</a>
+    </li>
+    </ul>
+				</div>					 
+        </div>
+      <nav>
+    <ul>
+              <li class="item-1"><a href="/en/Contact-Wageningen-University-Research.htm" class="navigation" title="Contact">Contact </a></li>
+              <li class="item-2"><a href="/en/About-Wageningen.htm" class="navigation" title="About Wageningen">About Wageningen</a></li>
+              <li class="item-3"><a href="/en/Jobs.htm" class="navigation" title="Career">Career</a></li>
+              <li class="item-4"><a href="/en/Privacy-Cookie-statement.htm" class="navigation" title="Privacy &amp; Cookie statement">Privacy &amp; Cookie statement</a></li>
+              <li class="item-5"><a href="/en/General-Terms-and-Conditions-2.htm" class="navigation" title="General Terms and Conditions">General Terms and Conditions</a></li>
+              <li class="item-6"><a id="bcpm-footer-link"  href="/en/Resources-1/Your-profile-data.htm" class="navigation" title="Your profile data">Your profile data</a></li>
+              <li class="item-7"><a href="/en/Disclaimer.htm" class="navigation" title="Disclaimer">Disclaimer</a></li>
+              <li class="item-8"><a href="/en/Accessibility-Statement.htm" class="navigation" title="Accessibility Statement">Accessibility Statement</a></li>
+              <li class="item-9"><a href="/en/Login.htm" class="navigation" title="Login">Login</a></li>
+        <li id="permisssion-settings"></li>
+    </ul>
+    </nav>
+      </footer>
+  <!-- Start FreeStyle scripts-->
+    
+  <!-- End FreeStyle -->
+  <script type="text/javascript" src="/static/wurpresentation/javascript/iaf-functions.js?1=1" async></script>
+    </body>
+</html>

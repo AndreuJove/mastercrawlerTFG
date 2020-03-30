@@ -1,0 +1,21 @@
+Content-Type: text/html
+Content-Encoding: gzip
+Content-Md5: symyf9B9QJxYtK94098J2w==
+Last-Modified: Tue, 15 Oct 2019 11:47:02 GMT
+Vary: Accept-Encoding
+Server: nginx
+X-Ms-Request-Id: de9ca45c-f01e-0089-63c3-06e41f000000
+X-Ms-Version: 2009-09-19
+X-Ms-Meta-Mtime: 2019-07-09T10:24:18.967204367Z
+X-Ms-Lease-Status: unlocked
+X-Ms-Blob-Type: BlockBlob
+Access-Control-Allow-Origin: *
+X-Served: Nginx-Proxito-Sendfile
+X-Deity: web03
+Strict-Transport-Security: max-age=31536000;
+X-Rtd-Project: capc-map
+X-Rtd-Version: latest
+X-Rtd-Path: /proxito/media/html/capc-map/latest/index.html
+X-Rtd-Domain: capc-map.readthedocs.io
+X-Rtd-Version-Method: subdomain
+Date: Mon, 30 Mar 2020 18:48:05 GMT

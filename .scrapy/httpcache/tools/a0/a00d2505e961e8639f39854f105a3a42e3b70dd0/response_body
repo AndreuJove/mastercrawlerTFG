@@ -1,0 +1,290 @@
+<html>
+<head>
+<title>AmylPred 2</title>
+</head>
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://genomics-lab.fleming.gr/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '16']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://genomics-lab.fleming.gr/piwik/piwik.php?idsite=16&rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+<body>
+<link rel="stylesheet" href="style/pred.css" type="text/css"><title>biol.uoa.gr - AmylPred2</title></head><body>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112787393-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112787393-3');
+</script>
+
+<table style="height: 82px; width: 100%;" valign="bottom" align="left" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+
+      <td width="82"><img src="style/amylpred.png"></td>
+      <td bgcolor="#0066FF" valign="center" align="center">
+      <font class="big">A Consensus Method for Amyloid Propensity Prediction</td>
+
+    </tr>
+  </tbody>
+</table>
+
+<br><br><br>
+
+<br><br><hr size="1"> <br>
+
+<a href="/AMYLPRED2/input.php"><b><u>Click here to proceed to the submission form.</u></b></a>
+
+<br><br><hr size="1"><br>
+
+<table valign="top" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td class="normal" align="left">
+<h2>General description of the Method</h2>
+</td></tr></tbody></table>
+
+<table valign="top" border="0" cellpadding="0" cellspacing="0"  width="85%">
+<tbody><tr><td>
+<p class="normalg">
+<br>AMYLPRED2 is an improved version of a web tool (<a href="http://biophysics.biol.uoa.gr/AMYLPRED/" target="_blank">http://biophysics.biol.uoa.gr/AMYLPRED/</a>)
+ that was developed in our lab in the past (2009).  It employs a consensus of different methods that have been found or 
+ specifically developed to predict features related to the formation of amyloid fibrils.  The consensus of these methods
+ is defined as the hit overlap of at least n/2 (rounded down) out of n selected methods (i.e. 5 out of 11 methods, if the
+ user chooses to use <b>all</b> available methods). This is the primary output of the program.  However, the individual predictions
+ of these methods are also made available by pressing the button "Show/hide methods".  Furthermore, a consensus histogram is
+ shown by pressing the button "Show/hide consensus". All results are also made available in the form of a text file, maintained
+ on the server for 1 (one) day. Consequently, AMYLPRED is a useful tool for identifying amyloid-forming regions in proteins that are associated with several conformational diseases, called amyloidoses, such as Altzheimer's, Parkinson's, prion diseases, type II diabetes etc. It may also be useful for understanding the properties of protein folding and misfolding and for helping to the control of protein aggregation/solubility in biotechnology (recombinant proteins forming bacterial inclusion bodies) and biotherapeutics (monoclonal antibodies and biopharmaceutical proteins). 
+</p></td></tr></tbody></table>
+<br><br>
+<table valign="top" border="0" cellpadding="0" cellspacing="0"  width="85%">
+<tbody><tr><td>
+<p class="normalg"><b>If you are using this tool, please cite the following reference: 
+Tsolis, A.C., Papandreou, N.C., Iconomidou, V.A., Hamodrakas, S.J. (2013) A Consensus Method for the Prediction of "Aggregation-Prone" Peptides in Globular Proteins. PLoS ONE, 8(1): e54175. 
+</b></p></td></tr></tbody></table>
+<br>
+<p class="medium" align="center">
+<span style="color:red; background-color:yellow">
+This service is freely available to academic users only!!! Non-academic users should contact:<br>
+Assist. Prof. V.A. Iconomidou (<a href="mailto:veconom@biol.uoa.gr">veconom@biol.uoa.gr</a>)<br>
+Em. Prof. S.J. Hamodrakas (<a href="mailto:shamodr@biol.uoa.gr">shamodr@biol.uoa.gr</a>)
+</span>
+</p>
+<table valign="top" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td class="normal" align="left">
+<h2>Methods used and Modifications</h2>
+</td></tr></tbody></table>
+
+<table valign="top" border="0" cellpadding="0" cellspacing="0" width="80%">
+<tbody><tr><td>
+<p class="normalg">
+<br><ul>
+     <li><b>AGGRESCAN</b>
+	 <br>
+     <p class="normalg">AGGRESCAN is a web tool (<a href="http://bioinf.uab.es/aggrescan/" target="_blank">http://bioinf.uab.es/aggrescan/</a>) 
+	 for the prediction of 'aggregation-prone' segments in protein sequences. It is based on an aggregation propensity scale for
+	 natural amino acids derived from <i>in vivo</i> experiments and on the assumption that short and specific sequence stretches
+	 modulate protein aggregation.
+     <br>
+	 <br>
+	 <i>O. Conchillo-Sole, N.S. de Groot, F.X. Aviles, J. Vendrell, X. Daura, A. Ventura, (2007) BMC Bioinformatics, 8:65-81.</i>
+     </p>
+	 <br>
+     </li>
+
+	 <li><b>AmyloidMutants</b>
+	 <br>
+     <p class="normalg">AmyloidMutants is a web-based tool (<a href="http://amyloid.csail.mit.edu/" target="_blank">http://amyloid.csail.mit.edu/</a>)
+	 for predicting the structural and mutational landscapes of amyloid fibrils using an ensemble algorithm.
+	 Each peptide sequence is considered to fold into a complete set of millions (or billions) of unique structural states,
+	 with a single energetic value calculated for each state according to its entire conformation <i>(McCaskill, 1990)</i>. From this
+	 quantified set of all possible structures, clusters of low-energy states with similar conformations can be extracted as
+	 predictions of likely real-world structures, with relative probabilities of occurrence. Because calculating the energy
+	 of all mathematically possible interactions would introduce an exponential number of states as a function of sequence
+	 length, this method uses «schemas» as an algorithmic construct to solve this by partitioning fibrillar from non-fibrillar
+	 conformations, enforcing steric consistency and restricting energetic calculations over amyloid fibril sequence/structure
+	 states. AmyloidMutants requires a set of parameters for each submission. The default values and the cross-beta pleat
+	 (serpentine) structural scheme are used here. 
+	 <br>
+	 <br>
+	 <i>C.W. O'Donnell, J. Waldispuhl, M. Lis, R. Halfmann, S. Devadas, S. Lindquist, and B. Berger, (2011) Bioinformatics, 27: i34-i42.</i>
+     </p>
+	 <br>
+     </li>
+	 	 	 
+     <li><b>Amyloidogenic Pattern</b>
+	 <br>
+     <p class="normalg">A sequence pattern has been identified as highly related to the formation of amyloid fibrils.
+	 Submissions are scanned for the existence of this pattern {P}-{PKRHW}-[VLSCWFNQE]-[ILTYWFNE]-[FIY]-{PKRH} at
+	 identity level, with the use of a simple custom script.
+	 <br>
+	 <br>
+	 <i>M. Lopez de la Paz, L. Serrano, (2004) Proc. Natl. Acad. Sci. U.S.A. vol.101 no.1 87-92.</i>
+	 </p>
+	 <br>
+     </li>
+	 
+	 <li><b>Average Packing Density</b>
+	 <br>
+     <p class="normalg">This method relates the Average Packing Density of stretches of residues to the formation of amyloid
+	 fibrils. A script implementing the method has been written in our lab <i>(Hamodrakas et al., Int.Journ. of Biol.Macromolecules 41(2007) 295-300.)</i>.
+	 Values above 21.4 obtained from a five-residue long sliding window are considered as hits.
+	 <br>
+	 <br>
+	 <i>O.V. Galzitskaya, S.O. Garbuzynskiy, M.Y. Lobanov, (2006) PLoS Comput Biol 2(12) 1639-1648.</i>
+	 </p>
+	 <br>
+     </li>
+	 
+	 <li><b>Beta-strand contiguity</b>
+	 <br>
+     <p class="normalg">This is a simple algorithm that locates &beta;-strands in the amyloid fibril core using the amino acid
+	 sequence alone. The algorithm calculates an average &beta;-strand propensity score for peptide windows of different sizes
+	 (from 4 to 20 residues) within a polypeptide's sequence. The algorithm samples the full length of the protein’s sequence
+	 by sliding each window along, one residue at a time. A mean &beta;-strand propensity (M&beta;P) score is calculated for each 
+	 peptide window, according to this equation: M&beta;P = &Sigma;P<sub>&beta;</sub> / [0.5 x (&Sigma;P<sub>&alpha;</sub>+ 
+	 &Sigma;P<sub>t</sub>)], where &Sigma;P<sub>&beta;</sub>, &Sigma;P<sub>&alpha;</sub> and &Sigma;P<sub>t</sub> 
+	 are the sums of Chou and Fasman &beta;-strand, &alpha;-helix, and reverse
+	 turn preference parameters, respectively <i>(Chou and Fasman, 1978)</i>
+	 for every residue in a peptide window. Then x-y plots are produced from compilation of these M&beta;P scores, which are 
+	 plotted as a y-coordinate against the amino acid sequence, which is along the x-axis. For each residue along the 
+	 sequence, the value for the y-coordinate is produced by adding together the M&beta;P scores above a minimum threshold
+	 value (M&beta;P >= 1.2) from every window that contains that particular residue. Total y values above 20 are considered
+	 as hits. A script implementing the algorithm has been written in our lab.
+	 <br>
+	 <br>
+	 <i>S. Zibaee, O. S. Makin, M. Goedert, L. C. Serpell, Protein Sci. 2007 May; 16(5): 906–918.</i>
+     </p>
+	 <br>
+     </li>
+	 
+	 <li><b>Hexapeptide Conformational Energy</b>
+	 <br>
+     <p class="normalg">This program threads all hexapeptides of a submitted protein onto the microcrystallic structure 
+	 of NNQQNY. Alternatively the program can use a set of over 2500 templates produced by small shifts in the structure
+	 of NNQQNY. In our consensus method, the version using only the original structure is used, in favour of speed. Energy 
+	 values below -27.00 are considered as hits.
+	 <br>
+	 <br>
+	 <i>Z. Zhang, H. Chen, L. Lai, (2007) Bioinformatics vol.23 no.17 2218-2225.</i>
+	 <br><br>
+     NOTE: The original program executes interactively. For use in an automated method it was necessary to modify it in
+	 a way that it would allow options to be passed as arguments. Also, a small modification to the memory demands of the
+	 program was made. The use of only one structure as template made the use of a large multidimensional array (used to 
+	 store energy results when all 2500+ templates are used) unnecessary. This large array prevented the program from
+	 executing on many computers.
+	 </p>
+     <br>
+     </li>
+	 
+	 <li><b>NetCSSP</b>
+	 <br>
+     <p class="normalg">This is a computational method (<a href="http://cssp2.sookmyung.ac.kr/" target="_blank">http://cssp2.sookmyung.ac.kr/</a>)
+     that quantifies the influence of tertiary interaction on secondary structural preference. Artificial neural network 
+	 (ANN)-based algorithms that use preparameterized tertiary interactions with sequence inputs from users are designed
+	 to predict contact-dependent secondary structure propensities (CSSPs). NetCSSP calculates these propensities for the
+	 center residue in a seven-residue sliding window. There is a choice between single or dual network. Here, we use the dual 
+	 network as it has greater accuracy. The dual network architecture consists of two single networks that use distinct 
+	 output nodes. One network has output nodes for &alpha;-helix and non-helix, thus predicting helical propensity P(helix). 
+	 The other network has output nodes for &beta;-strand and non-beta strand, thus predicting beta propensity P(beta). 
+	 NetCSSP can be used to predict the core sequences of amyloid fibril formation where the switch in local secondary
+	 structure occurs. The amyloidogenic hidden beta propensity (H&beta;P) is calculated using the form H&beta;P = P(beta)/P(helix).
+	 Residues with values of H&beta;P above 1 and of P(beta) above 6 are considered as hits.
+	 <br>
+	 <br>
+	 <i>C. Kim, J. Choi, S. J. Lee, W. J. Welsh, and S. Yoon, (2009) Nucl. Acids Res. 37 (Web Server Issue): W469-473</i>
+     </p>
+	 <br>
+     </li>
+	 
+	 <li><b>Pafig</b>
+	 <br>
+     <p class="normalg">Pafig (Prediction of amyloid fibril-forming segments, <a href="http://www.mobioinfor.cn/pafig/" target="_blank">http://www.mobioinfor.cn/pafig/</a>)
+	 is a method based on Support Vector Machines (SVM), for the identification of hexpeptides associated with
+	 amyloid fibrillar aggregates. The predictive model of Pafig is a phenomenological model, which was based
+	 on 41 physicochemical properties selected by a two-round selection from 531 physicochemical properties in
+	 the Amino acid index database (AAindex). Pafig was trained by hexpeptides, which were decomposed by scanning
+	 for segments that could form fibrils with a six-residue sliding window. Predictions with Reliability Index
+	 (RI) greater than or equal to 7 are considered as hits.
+	 <br>
+	 <br>
+	 <i>J. Tian, N. Wu, J. Guo and Y. Fan, (2009) BMC Bioinformatics, Jan 30;10 Suppl 1:S45.</i>
+     </p>
+	 <br>
+     </li>
+	 
+     <li><b>SecStr (Possible Conformational Switches)</b>
+	 <br>
+     <p class="normalg">Using our own lab's consensus secondary structure prediction program SecStr 
+	 <i>(S.J. Hamodrakas, CABIOS 4 (4) (1988) 473)</i>, potential 'conformational switches' are identified as areas strongly
+	 predicted, simultaneously, both as alpha-helices and beta-sheet strands. The criterion is that, simultaneously, at least
+	 3 secondary structure prediction methods predict both alpha-helix and beta-sheet.
+	 <br>
+	 <br>
+	 <i>S.J. Hamodrakas, C. Liappa, V.A. Iconomidou, Int. Journ. of Biol. Macromolecules 41(2007) 295-300.</i>
+	 </p>
+	 <br>
+	 </li>
+	 
+     <li><b>TANGO</b>
+	 <br>
+     <p class="normalg">TANGO (<a href="http://tango.crg.es/" target="_blank">http://tango.crg.es/</a>) is a program that 
+	 calculates the tendency of peptides for beta aggregation, which is different from amyloid fibril formation tendency but
+	 is highly correlated. Tango 2.1 is used and scores above 5.00% for beta aggregation are considered as hits. TANGO
+	 requires a set of environmental parameters for each submission. The default values from the TANGO online submission 
+	 form are used.
+	 <br>
+	 <br>
+	 <i>A-M. Fernandez-Escamilla, F. Rousseau, J. Schymkowitz, L. Serrano, (2004) Nature Biotechnology vol.22 no.10 1302-1306.</i>
+	 </p>
+	 <br>
+     </li>
+
+	 <li><b>Waltz</b>
+	 <br>
+     <p class="normalg">This method (<a href="http://waltz.switchlab.org/" target="_blank">http://waltz.switchlab.org/</a>) 
+	 uses a position-specific scoring matrix to determine amyloid-forming sequences. A sequence score S<sub>profile</sub> is
+	 calculated from the log-odd based position-specific scoring matrix (PSSM). Nineteen selected physical properties, which best
+	 describe amyloid propensity enter the scoring function as a physical property term S<sub>physprop</sub> consisting of the sum of 
+	 the products of the amino acid frequency with the normalized property value of the respective amino acid for each
+	 position. The final component of the scoring function S<sub>struct</sub> is the position-specific pseudoenergy matrix from 
+	 structural  modeling  using  amyloid backbone structures. Relative weightings a of individual terms was introduced for
+	 a balanced scoring function (S<sub>total</sub> = a<sub>profile</sub> S<sub>profile</sub> + a<sub>physprop</sub>
+	 S<sub>physprop</sub> + a<sub>struct</sub> S<sub>struct</sub>). There are two options to be set, threshold and pH. Here, a threshold value of 79.0 
+	 (High Sensitivity) and pH = 7.0 are used.
+     <br>
+	 <br>
+	 <i>S. Maurer-Stroh, M. Debulpaep, N. Kuemmerer, M. Lopez de la Paz, I.C. Martins, J. Reumers, K.L. Morris, A. Copland, L. Serpell, L. Serrano, J.W.H. Schymkowitz & F. Rousseau, (2010) Nature Methods 7, 237-242.</i>
+     </p>
+	 <br>
+     </li>
+	 
+    </ul>
+    <p class="normalg">Also note that several of these methods have a limit to the sequence length they can process. In an attempt to overcome this problem, long submissions are broken into shorter overlapping segments that are processed/submitted individually. This may cause an extra delay to the acquisition of results.
+    </p>
+</p></td></tr></tbody></table>
+<br><br>
+
+<br><hr size="1"><br>
+<a href="/AMYLPRED2/input.php"><b><u>Click here to proceed to the submission form.</u></b></a>
+<br><br><hr size="1">
+<a href="http://bioinformatics.biol.uoa.gr">Back to the lab's home page</a>
+
+<hr>
+<font class="normal">
+    <p>Biophysics and Bioinformatics Lab<br>Section of Cell Biology and Biophysics<br>Department of Biology<br>National and Kapodistrian University of Athens</p>
+
+</body></html>

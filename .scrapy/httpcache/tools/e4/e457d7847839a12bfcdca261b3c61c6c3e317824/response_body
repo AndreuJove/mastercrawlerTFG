@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>USC MLEG Group: Research</title>
+    <link rel="stylesheet" type="text/css" href="/style/group.css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico"  type="image/x-icon" />
+      <script src="/javascript/group.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="perm-header">
+<a href="http://mleg.cse.sc.edu"> <img id="obj-left" src="/images/site_logo.gif"/></a>	  
+<img id="obj-right" src="/images/usc_logo.gif"/>
+      </div>
+    <table class="inner-nav" border=0 cellpadding=0 cellspacing=0>
+	<tr>
+	  <td class="left">&nbsp;</td>
+	  <td><a class="main-menu" href="http://mleg.cse.sc.edu/index.html"/><img src="/images/home_bt.gif" onmouseover="src='/images/home_bt_roll.gif'" onmouseout="src='/images/home_bt.gif'"/></a></td>
+	  <td><a class="main-menu" href="http://mleg.cse.sc.edu/research.html"/><img src="/images/research_bt.gif"/></a></td>
+	  <td><a class="main-menu" href="http://mleg.cse.sc.edu/people.html"/><img src="/images/people_bt.gif" onmouseover="src='/images/people_bt_roll.gif'" onmouseout="src='/images/people_bt.gif'"/></a></td>
+	                                                                                                          <td><img id="publications-bt" src="/images/publications_bt.gif"  onmouseover="showSubMenu('publications-submenu')" onmouseout="hideSubMenu('publications-submenu')"/></td> 
+	  <td><a class="main-menu" href="http://mleg.cse.sc.edu/education.html"/><img src="/images/genomica_bt.gif" onmouseover="src='/images/genomica_bt_roll.gif'" onmouseout="src='/images/genomica_bt.gif'"/></a></td>
+	  <td><img id="software-bt" src="/images/software_bt_on.gif" onmouseover="showSubMenu('software-submenu')" onmouseout="hideSubMenu('software-submenu')"/></td>
+	  <td><a class="main-menu" href="http://mleg.cse.sc.edu/wiki"/><img src="/images/internal_bt.gif" onmouseover="src='/images/internal_bt_roll.gif'" onmouseout="src='/images/internal_bt.gif'"/></a></td>
+	  <td class="filler">&nbsp;</td>
+	  <td class="right">&nbsp;</td>
+	</tr>
+      </table>
+      <table class="main" width="100%" cellpadding="0px" cellspacing="0px" border="0"><tr>
+	  <td class="inner-left">
+
+<MAP_HTML_INCLUDE file="research.left">
+
+	    <!--table width="100%" cellspacing=0 cellpadding=0 border=0>
+              <tr><td class="left-submenu"><a href="http://mleg.cse.sc.edu/metaP">metaP</a></td></tr>
+              <tr><td class="left-submenu-on"><a href="http://mleg.cse.sc.edu/sortmotif">BayesMotif</a></td></tr>
+	      <tr><td class="left-submenu"><a href="http://mleg.cse.sc.edu/sortmotifDB">SortMotifDB</a></td></tr>
+              <tr><td class="left-submenu"><a href="http://mleg.cse.sc.edu/degprune">degprune</a></td></tr>
+              <tr><td class="left-submenu"><a href="http://mleg.cse.sc.edu/aag">aag encoding</a></td></tr>
+              <tr><td class="left-submenu"><a href="http://mleg.cse.sc.edu/degpareto">degPareto</a></td></tr>
+
+
+	    </table--> 
+</MAP_HTML_INCLUDE>
+
+
+</td>
+	  <td class="inner-center">
+<MAP_HTML_INCLUDE file="research.center">
+	    <div class="inner-text">
+	      <h1>BayesMotif: Sorting motif discovery using Bayes Classifiers (version 1.0)</h1>
+	      
+<a href="manual.html">see Manual</a>
+<br>
+<br>
+<!-- Contents -->
+<table border="0" cellspacing="0" cellpadding="0" >
+	<tr valign="TOP">
+		<td class="TEXT"> 
+			<form name="metaPinput" method="POST" action="run.cgi" ENCTYPE="multipart/form-data">
+				<table border="0" cellspacing="0" cellpadding="1">
+
+<tr><TD>
+<TABLE    align="center" WIDTH="700"  BORDER="0" CELLSPACING="4" CELLPADDING="0">
+	<TR>
+
+		<TD bgcolor="#EEEEEE" align="center">
+			<div align="left"> 
+				Citation note:If you use BayesMotif in your publications, please cite the following publication: <br>
+				(1) Jianjun Hu and Fan Zhang. BayesMotif: de novo protein sorting motif discovery from impure datasets. BMC Bioinformatics 2010.11(Suppl 1):S66<BR>
+			</div>
+	  </td>
+  </tr>
+</table>
+
+</TD></tr>
+			    	<tr>
+			    		<td valign="top"> 
+							<table width=700 align="center">
+<tr><TD align="left"><strong>Introduction</strong>: BayesMotif is a de novo identification algorithm for finding a common type of protein sorting motifs in which a highly conserved anchor is present along with a less conserved motif regions. It first screens out over-represented anchors from the positive protein seqequence dataset and then build Bayesian classifers around each highly conserved anchor. It then ranks the anchors by the classification accuracy of that anchor along with surrounding context to differentiate positive sequences from negative sequences. BayesMotif can also be used to find other type of protein motifs if they can be assumed to contain a highly conserved cores in the motif</a>
+<p>
+<strong>Experiment Preparation:</strong>: Users need to prepare two sets of protein sequence fasta files and to specify the following parameters based on the prior knowledge of the problem:  <br>
+<ul>
+<li>Positive protein sequence set (fasta format protein sequence file): these sequences are assumed to contain the likely motifs of interests. While some of the sequences may not actually contain the motifs, a majority of them </li>
+<li>Negative protein sequence set: these sequences are assumed to not contain the potential motifs.</li>
+<li>Key parameters: anchor (regular expression) model, left and right scanning regions around anchors</li>
+</ul> 
+<p>
+
+</TD></tr>
+
+<tr><td>		
+<br>
+
+ Please enter your <b>email address</b>, where the prediction will be sent to:
+                                <br>
+                                <input name="emailAddr" type="text" size="50">
+                                
+
+<br>
+
+							<div align="left" class="GUTTER1"><strong>PositiveSet: </strong>Paste the positive sequences in FASTA format below or upload a fasta file: <input type="file" name="seqFile" size="40" accept="multipart/form-data"> <br>(<a href="rr_sample.fa">download a positive sample file </a>)</div>
+							<div align="left">
+
+					  			<textarea  class="small3" name="fasta" cols="80" rows="12">
+>1
+MTKISDVQEKNFLKRKEKSSSLRNRKFFQPLIATTLAFSLASSFVNA
+>2
+TKISDVRKFFQPLIATTLAFSLASSFVNA
+</textarea>
+							</div>
+<br>
+<div align="left" class="GUTTER1"><strong>NegativeSet: </strong>Paste the background/negative sequences in FASTA format below or upload a fasta file: <input type="file" name="bgFile" size="40" accept="multipart/form-data"> 
+(<a href="rr_background.fa">download a negative sample file </a>)
+
+</div>
+                                                        <div align="left">
+
+                                                                <textarea  class="small3" name="bgSeq" cols="80" rows="12">
+>1
+MTKISDVQEKNFLKRKEKSSSLRNRKFFQPLIATTLAFSLASSFVNA
+>2
+TKISDVRKFFQPLIATTLAFSLASSFVNA
+</textarea>
+                                                        </div>
+
+							<br>
+							<table width=500 align="left">
+
+								<tr>
+									<td width="400" align="right">
+<br>
+
+
+Discover motifs at <input type="radio" name="seqTerminal" value="1" checked>N-Terminal
+<input type="radio" name="seqTerminal" value="-1">C-Terminal<br>
+
+Apply <input type="radio" name="fpr" value="1">False Positive Removal
+<input type="radio" name="fpr" value="0" checked>No False Positive Removal<br>
+
+<!-- <strong>Enter your email to receive results (Optional):</strong> <input type = "text" name="email" size="20">  -->
+
+</center>
+									</td>
+								</tr>
+							</table>
+							<table width=500 align="left">
+
+								<tr>
+									<td width="500">
+										<div class="TEXT" align="right"> 
+										<input type="reset" name="Reset" value="Reset">
+										&nbsp;&nbsp;
+
+										<input type="submit" name="Submit" value="Submit">
+										</div>
+									</td>
+								</tr>
+
+					  	</table>
+						</td></tr></table>
+					  </td>
+					</tr>
+				</table>
+
+			</form>
+		</td>
+	</tr>
+
+	<tr><td>
+	<p></p>
+	</td></tr>
+</table>
+
+<br>
+<br>
+<br>
+
+Todo tasks:<ul>
+<li>set all parameters for the algorithm from webform.
+<li>output weblogo for the discovered motifs.
+</ul>
+<p>
+
+Last Modified: Feb 28, 2010
+
+
+
+
+
+	    </div>
+
+</MAP_HTML_INCLUDE>
+</td>
+	  <td class="inner-right">
+<MAP_HTML_INCLUDE file="research.right">
+<img src="/images/research_title.jpg"/>
+</MAP_HTML_INCLUDE>
+</td>
+	</tr>
+      </table> 
+
+    </div>
+    <div id="publications-submenu" class="inner-publications-submenu">
+      <table class="submenu" width="100%" cellpadding=0 cellspacing=0 onmouseover="showSubMenu('publications-submenu')" onmouseout="hideSubMenu('publications-submenu')"> 
+	<tr><td class="submenu"><a href="http://mleg.cse.sc.edu/pub/puball.html">All</a></td></tr>
+	<tr><td class="submenu" ><a href="http://mleg.cse.sc.edu/pub/pubec.html">EvoComp</a></td></tr>
+      </table>
+    </div>
+    <div id="software-submenu" class="inner-software-submenu">
+      <table class="submenu" width="170px" cellpadding=0 cellspacing=0 onmouseover="showSubMenu('software-submenu')" onmouseout="hideSubMenu('software-submenu')"> 
+<script language="javascript" type="text/javascript" src="../softMenu.txt"></script>
+
+</table>
+    </div>
+
+<MAP_HTML_INCLUDE file="research.outside">
+</MAP_HTML_INCLUDE>
+    <div class="footer">
+      <table id="txt-right" width="100%" height="20px">
+	<tr>
+	          <td id="link"></td><td width="150px"><a class="general" href="http://www.sc.edu">University of South Carolina</a></td>
+</tr>
+      </table>
+    </div>
+
+  </body>
+</html>

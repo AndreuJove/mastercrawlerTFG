@@ -1,0 +1,9 @@
+Date: Mon, 30 Mar 2020 18:46:56 GMT
+Server: Apache/2.4.29
+Vary: X-Forwarded-User,Accept-Encoding
+Access-Control-Allow-Origin: http://sourcesup.renater.fr
+Content-Type: text/html; charset=UTF-8
+Set-Cookie: forge_session_mail=MTU4NTU5NDAxNjw8MTk0LjU3LjQuMTYxPGM4MjEyNjNmZDU5MjllODE0NTIwZGMyOWFjZDg1MmMwPE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzgwLjAuMzk4Ny4xNDkgU2FmYXJpLzUzNy4zNg%3D%3D%21WP3FA016Bi%2BlRfwerQYeocyp4XBK8byWYDDutw5Jngg%3D; expires=Mon, 30-Mar-2020 19:46:56 GMT; Max-Age=3600; path=/; secure; HttpOnly
+Set-Cookie: BIGipServer~services~proxy-sourcesup_https_pool=rd2o00000000000000000000ffffc23904a1o443; path=/; Httponly; Secure
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Encoding: gzip

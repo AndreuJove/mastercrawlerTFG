@@ -1,0 +1,18 @@
+Server: GitHub.com
+Content-Type: text/html
+Location: https://opencobra.github.io/COBRA.jl/stable/
+Access-Control-Allow-Origin: *
+Expires: Mon, 30 Mar 2020 18:59:03 GMT
+Cache-Control: max-age=600
+X-Proxy-Cache: MISS
+X-Github-Request-Id: 778C:39DB:4F6983:67F587:5E823F1F
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 18:49:03 GMT
+Via: 1.1 varnish
+Age: 0
+X-Served-By: cache-mad22049-MAD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1585594144.662809,VS0,VE115
+Vary: Accept-Encoding
+X-Fastly-Request-Id: f40bf9154de2c4e1ed211cb973e5908828df6316

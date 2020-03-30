@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+  <title>Matti Pirinen's Software</title>
+  <link rev=made href="matti.pirinen@helsinki.fi">
+  <meta name="description" 
+        content="Matti Pirinen's software">
+  <meta name="keywords" 
+        content="">
+  <meta name="generator" content="luokotisivu">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000"
+      link="#0000FF" alink="#FF0000" vlink="#400040">
+
+<h1 align="center">Matti Pirinen's Software</h1>
+
+<p>Back to the <a href="http://www.mv.helsinki.fi/home/mjxpirin">main page</a>. </p>
+<p>The use of the attached source codes on this page is allowed under the
+terms of the <a href="http://www.gnu.org/licenses/gpl.html"> GNU 
+general public license</a> (version 3).<br>
+FINEMAP and metaCCA have their own licenses.</p>
+
+<h3>biMM: Efficient estimation of genetic variances and
+covariances for cohorts with high-dimensional
+phenotype measurements.</h3>
+<a
+href="https://academic.oup.com/bioinformatics/article/33/15/2405/3091808">Publication</a>
+in Bioinformatics (2017) and 
+the R-package <a href="software/biMM_1.0.0.tar.gz">biMM_1.0.0.tar.gz</a> (updated 3 Mar 2017) with a <a href="software/biMM_1.0.0-vignette.pdf">vignette</a>.
+
+<h3>FINEMAP: Efficient variable selection using summary data from genome-wide association studies.</h3>
+<a href="http://bioinformatics.oxfordjournals.org/content/32/10/1493">Publication</a> in Bioinformatics (2016) 
+and the <a href="http://www.christianbenner.com">software</a>.
+
+<h3>metaCCA: Multivariate meta-analysis of genome-wide association studies using canonical correlation analysis</h3>
+<a href="http://bioinformatics.oxfordjournals.org/content/32/13/1981">Publication</a> in Bioinformatics (2016) 
+and the <a href="https://github.com/aalto-ics-kepaco/metaCCA">software</a>.
+
+<h2> 2015 </h2>
+
+<h3>Allele specific expression from RNA-seq read count data for multiple tissues </h3>
+These source codes implement the models described in paper 
+<a href="http://bioinformatics.oxfordjournals.org/content/early/2015/03/27/bioinformatics.btv074.abstract">Assessing allele specific expression across multiple tissues from RNA-seq read count data</a> <STRONG>Bioinformatics</STRONG> 2015.<br>
+R-codes plus data sets <a href="ASE_codes_data.tar.gz">(61 MB)</a>; or just the R-codes for <a href="ASE_29Dec2014.R"> functions </a> and <a href="ASE_examples_29Dec2014.R"> examples</a>.<br>
+For a user-friendly interface for the same models see <a href="http://birch.well.ox.ac.uk/~rivas/mamba/">MAMBA</a> by Manuel Rivas.<br>
+
+
+<h3>Linear mixed model software MMM</h3>
+MMM is a software package for analysing a linear mixed model with one random effect
+whose covariance structure can be freely specified by the user.
+It is written with large data sets in mind: applied to real data sets where
+hundreds of thousands of predictors on over 20,000 individuals
+are tested one-by-one. Motivation for MMM came from genome-wide association studies,
+but it can be used with other data as well. Written in C (GNU-C) and uses GSL and, preferably, LAPACK libraries.<br>
+Current version 1.01 (updated 10-Feb-2014): <a href="MMM_1.01.tar.gz">Software.</a> <a href="MMM_manual_1.0.pdf">Manual.</a><br>
+<p>Pirinen M, Donnelly P and Spencer CCA <STRONG>(2012)</STRONG>:<br>
+<EM>Efficient Computation with a Linear Mixed Model on Large-scale Data Sets with Applications to Genetic Studies.</EM><br>
+<STRONG>Ann Appl Stat</STRONG> 7(1): 369-390.<br>
+ <a href="AOAS586.pdf"> Text </a> and <a href="AOAS586_supp.pdf"> Supplementary text </a> available.<br>
+
+
+
+<h3>Non-confounding covariates in logistic regression</h3>
+R-functions to assess the effect of a single binary or continuous covariate
+on power for detecting genetic variants (of small effects) in GWAS.
+Includes as examples the codes for plotting Supplementary Figures of the publication.
+<a href="log_regression_covariate_functions.R">R-functions.</a> <a href="log_regression_covariate_examples.R">Examples.</a><br>
+<p>Pirinen M, Donnelly P and Spencer CCA <STRONG>(2012)</STRONG>:<br>
+<EM>Including known covariates can reduce power to detect genetic effects in case-control studies.</EM><br>
+<STRONG>Nat Genet</STRONG> 44: 848-851.<br>
+
+<h2>2010</h2>
+
+<h3>Hippo and AEML</h3>
+Haplotype estimation using incomplete prior information from pooled observations (Hippo), and<br>
+Approximate EM-algorithm with list of known haplotypes (AEML) are in a<br>
+<a href="hippo_aeml.tar">Tar-package.</a><br>
+
+These algorithms estimate population haplotype frequencies from pooled SNP data and
+can make use of a list of the haplotypes that are known to exist in the population. Written in
+ANSI-C using Gnu Scientific Library (GSL v.1.0.0).
+For description see:<br>
+<p>Pirinen M <STRONG>(2009)</STRONG>:<br>
+<EM>Estimating population haplotype frequencies from pooled SNP data using incomplete prior information.</EM><br>
+<STRONG>Bioinformatics</STRONG> 25(24):3296-3302.<br>
+
+<h3>APE</h3>
+Allelic Path Explorer (APE)<br>
+As a <a href="APE.tar">Tar-package.</a><br>
+APE is a program for extending partially known genotype data on a given
+pedigree consistently (i.e. in accordance with the Mendelian rules)
+to the whole pedigree. Written in ANSI-C. For details, see:<br>
+<p>Pirinen M and Gasbarra D <STRONG>(2006)</STRONG>: <br>
+   <EM>Finding Consistent Gene Transmission Patterns on Large and Complex Pedigrees. </EM><br>
+   <STRONG>IEEE/ACM Trans. on Computational Biology and
+   Bioinformatics </STRONG>3(3):252-262.<br>
+</p>
+
+<hr>
+
+</body>
+</html>

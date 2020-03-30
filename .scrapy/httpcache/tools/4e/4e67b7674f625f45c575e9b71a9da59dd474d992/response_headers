@@ -1,0 +1,8 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:44:15 GMT
+Content-Type: text/html; charset=UTF-8
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Content-Encoding: gzip

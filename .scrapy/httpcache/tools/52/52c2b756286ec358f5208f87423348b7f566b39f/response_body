@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="global xlarge"><head><meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=1"><style type="text/css">html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}body{-webkit-text-size-adjust:none}</style><style type="text/css">*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}</style><meta name="viewport" content="initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>CRISPR-GE (Genome Editing) - Liu YG Lab</title>
+	<link href="/static/css/DSD_M.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<br />
+
+
+<div>
+
+<!---
+<div id="rightCont" style="float:right; margin:0 auto; position:absolute;right:0px;bottom:40px;">
+<div><a href="http://www.biorun.cn/?menu=crispr" target="_blank"><img src="/static/img/biorun.png" /></a></div>
+<br />
+<br />
+<div><a href="http://web.scau.edu.cn/sys/index.asp" target="_blank"><img src="/static/img/skl.png" /></a></div>
+<br />
+<br />
+---!>
+
+
+</div>
+
+<div id="indexbox" class="main">
+<img height="120px" src="/static/img/PGE.png" />
+
+<br />
+<br />
+<table>
+<tr><td width="90px;"></td>
+	<td><p align="left" style="font-size:18px; color:red;">(Please use <a href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads">IE9 or a higher version of Internet Explorer (IE10, IE11)</a>, or "<a href="http://www.firefox.com.cn/">Firefox</a>", "<a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html">Chrome</a>" to perform the software)</p>
+	</td>
+</table>
+
+<br />
+<br />
+<br />
+<br />
+
+<div align="center">
+<table style="width:1100px;">
+	<tr>
+		<td align="center" style="height:80px;"><a href="/help/"><img src="/static/img/instruction.png" /></a></td>
+		<td></td>
+		<td align="center" style="height:80px;"><a href="/seqdownload/"><img src="/static/img/seqdownload_gray.png" onmouseover="this.src='/static/img/seqdownload_color.png'" onmouseout="this.src='/static/img/seqdownload_gray.png'" height="55px;" title="A convenient tool to download genomic sequence using a seed sequence or gene."/></a></td>
+	</tr>
+	<tr>
+		<td background="/static/img/circle_left2.png"></td>
+		<td align="center" width="140px;" height="120px"><a href="/targetdesign/"><img src="/static/img/tarDesign_gray.png" onmouseover="this.src='/static/img/tarDesign_color.png'" onmouseout="this.src='/static/img/tarDesign_gray.png'"/></a></td>
+		<td background="/static/img/circle_right2.png" style="background-repeat:no-repeat"></td>
+	</tr>
+	<tr>
+		<td align="center" style="height:80px;"><a href="/primerdesign/"><img src="/static/img/primerDesign_gray.png" onmouseover="this.src='/static/img/primerDesign_color.png'" onmouseout="this.src='/static/img/primerDesign_gray.png'"></a>
+		<td rowspan=2 background="/static/img/rice.png" style="background-repeat:no-repeat"><br/><br/><br/><br/><br/><br/><br/><span style="font-family:Arial; font-size:22px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Edited organisms</strong></span></td>
+		<td align="center" style="height:80px;"><a href="/offtarget/"><img src="/static/img/offTarget_gray.png" onmouseover="this.src='/static/img/offTarget_color.png'" onmouseout="this.src='/static/img/offTarget_gray.png'"></a></td>
+	</tr>
+	<tr>
+		<td height="80px;" background="/static/img/arr2.png" style="background-repeat:no-repeat"></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<table style="width:1100px;">
+	<tr>
+		<td align="right" width="340px;" height="35px"><span style="font-family:Arial; font-size:26px;">CRISPR/Cas9 vectors</span></td>
+		<td align="center" width="420px;" rowspan='2' background="/static/img/arr4.png" style="background-repeat:no-repeat"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right" width="340px;" height="125px"><a href="http://www.currentprotocols.com/WileyCDA/CPUnit/refId-mb3106.html" target="_blank"><img height='125px' src="/static/img/vector_gray.png" onmouseover="this.src='/static/img/vector_color.png'" onmouseout="this.src='/static/img/vector_gray.png'" title="Click here to know more about the vector system."/></a></td>
+		
+		<td align="center" height='90px'><a href="/dsdecode/"><img src="/static/img/dsdecode_gray.png" onmouseover="this.src='/static/img/dsdecode_color.png'" onmouseout="this.src='/static/img/dsdecode_gray.png'"></a></td>
+	</tr>
+</table>
+</div>
+<br />
+<br />
+
+<hr style="border:1px dotted #d9d9d9" />
+<br />
+<div>
+<p style="font-size:15px; line-height:25px; margin-left:20px;">Reference:</p>
+<p align="left" style="font-size:15px; line-height:18px; margin-left:20px;">Xie X, Ma X, Zhu Q, Zeng D, Li G, Liu Y.-G. 2017. CRISPR-GE: A Convenient Software Toolkit for CRISPR-Based Genome Editing. <em>Mol. Plant</em> (DOI: <a href=" http://dx.doi.org/10.1016/j.molp.2017.06.004">http://dx.doi.org/10.1016/j.molp.2017.06.004</a>)</p>
+</div>
+<br />
+<hr style="border:1px dotted #d9d9d9" />
+<br />
+<div align="center"><span align="left" style="font-size:18px;">If you have any questions or suggestions, please feel free to contact us: <a href="mailto:skl-cusa@scau.edu.cn?subject=Suggestion to SKL-CUSA" >skl-cusa@scau.edu.cn</a></span></div>
+<br />
+<br />
+<div align="center"><span style="font-family:Arial; font-size:20px; color:#8F8F8F; font-weight:bold;">Liu YG <span style="color:#7EC0EE">Lab</span></span></div>
+<br />
+<br />
+<div align="center"><a href=http://xy.scau.edu.cn/swjsxy/lygsys/index.asp><img src="/static/img/LOGO-LAB.png" width="122" height="118" /></a></div>
+<div align="center"><span style="font-size:12px; color:#6E6E6E;"> Copyright &copy; The Genetic Engineering Laboratory of South China Agricultural University </span></div>
+</div>
+
+</div>
+<br />
+</body>
+</html>

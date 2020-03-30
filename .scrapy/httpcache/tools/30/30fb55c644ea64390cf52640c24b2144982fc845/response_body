@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /downloads/assp</title>
+ </head>
+ <body>
+<h1>Index of /downloads/assp</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/downloads/">Parent Directory</a>       </td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="LICENSE">LICENSE</a>                </td><td align="right">2000-03-23 14:44  </td><td align="right">5.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="assp_1.2.tar.gz">assp_1.2.tar.gz</a>        </td><td align="right">2002-06-07 18:55  </td><td align="right"> 74K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="old/">old/</a>                   </td><td align="right">2002-06-11 19:23  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<pre>
+
+
+assp_1_2.tar.gz	Compressed tar file of the program
+		described in:
+
+		Russell, R. B. and Barton, G. J. (1993),
+		J. Mol. Biol., 234, 951-957,
+		"The Limits of Protein Structure Prediction Accuracy 
+		From Multiple Sequence Alignment"
+
+		The program takes a multiple protein sequence alignment
+		and estimates the range in accuracy that one can expect
+		for a "perfect" secondary structure prediction made
+		using the alignment.
+
+If you have problems or queries about this program please 
+send email to Geoff Barton - geoff@compbio.dundee.ac.uk.
+
+</pre>
+</body></html>

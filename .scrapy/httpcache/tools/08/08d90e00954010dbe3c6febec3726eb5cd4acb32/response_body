@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Bj&ouml;rn Canb&auml;ck;" />
+    <meta name="description" content="A tRNA and tmRNA predictor." />
+    <meta name="keywords" content="tRNA, tmRNA, online, download, HTML5" />
+    <meta name="application-name" content="aragorn" />
+    <meta name="description" content="Revied: 13-03-01" />
+
+    <title>ARAGORN, tRNA (and tmRNA) detection</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../JavaScriptLibraries/nathansmith-960-Grid-System-231ee0c/code/css/min/960.css" />
+    <link  rel="stylesheet" href="../JavaScriptLibraries/jquery-ui-1.10.1.custom/css/sunny/jquery-ui-1.10.1.custom.min.css" />
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="aragorn.js"></script>
+  </head>
+
+  <body>
+    <div id="gridContainer" class="container_12">
+      <div class="grid_2 suffix_1">
+	<div class="paddingPanel">
+	  
+	  <div class="buttonContainer">
+	    <div class="bread">ARAGORN</div>
+	    <div class="buttonPadding">
+	      <button id="download" title="Download source code (in C) and a man page. Compiling example: See download page.">Download</button>
+	    </div>
+	    <div class="buttonPadding">
+	      <button id="publication">Publication</button>
+	    </div>
+	  </div>
+
+	  <div class="buttonContainer">
+	    <div class="bread">Other software</div>
+	    <div class="buttonPadding">
+	      <button id="arwen" title="ARWEN detects tRNAs in metazoan mitochondrial sequences">ARWEN</button>
+	    </div>
+	    <div class="buttonPadding">
+	      <button id="bruce" title="BRUCE detects tmRNAs in bacterial sequences">BRUCE</button>
+	    </div>
+	    <div class="buttonPadding">
+	      <button id="tRNAscan" title="Another tRNA detector">tRNAscan-SE</button>
+	    </div>
+	  </div>
+
+	  <div class="buttonContainer">
+	    <div class="bread">Other links</div>
+	    <div class="buttonPadding">
+	      <button id="sprinzl" title="A tRNA database">tRNAdb</button>
+	    </div>
+	  </div>
+	</div>
+      </div>
+
+      <div class="grid_9">
+
+	<div id="heightHeader">
+	  <div class="bread">
+	    <span id="title">ARAGORN, tRNA (and tmRNA) detection </span>
+	  </div>
+
+	  <div class="bread">
+	    Dean Laslett, an Australian specialist in stable RNAs, is the developer of ARAGORN.
+	  </div>
+	</div>
+
+	<div id="online">
+
+	  <div class="heading2">Search online</div>
+
+	  <form method="post" enctype="multipart/form-data" action=
+		"/bcgi/aragorn.cgi" target="_blank">
+
+	    <div class="bread bold">Upload (multi) fasta file:</div>
+	    <div class="bread"><input id="upload" type="file" name="upload" />
+	      <span class="bread">or choose a genome:</span> 
+	      <span id="genomeContainer" class="tinyFont">
+		<input id="genome1" type="radio" name="genome" value="NC_002695.fna" checked="checked" />
+		<label id="label1" for="genome1" title="Escherichia coli O157:H7 (NC_002695)">E. coli</label>
+		<input id="genome2" type="radio" name="genome" value="NC_000909.fna" />
+		<label for="genome2" title="Methanococcus jannaschii (NC_000909)">M. jannaschii</label>
+		<input id="genome3" type="radio" name="genome" value="yeast.fas" />
+		<label for="genome3" title="Yeast nuclear genome (NC_001133-NC_001148)">Yeast</label>
+	      </span>
+	    </div>
+	    
+
+	    <div class="bread bold">
+	      <span id="toggleOptions">Select options</span><span id="options">Full list of options</span>
+	    </div>
+	    <div id="hideOptions">
+	      <div id="dialog" title="ARAGORN options in stand alone version">
+		<pre>
+		  Usage:
+		  aragorn -v -s -d -c -l -a -w -j -ifro&lt;min&gt;,&lt;max&gt; -t -mt -m -tv -gc -seq -br -fasta -fo -o &lt;outfile&gt; &lt;filename&gt;
+
+		  &lt;filename&gt; is assumed to contain one or more sequences
+		  in FASTA format. Results of the search are printed to
+		  STDOUT. All switches are optional and case-insensitive.
+		  Unless -i is specified, tRNA genes containing introns
+		  are not detected. 
+
+		  -m            Search for tmRNA genes.
+		  -t            Search for tRNA genes.
+                  By default, both are detected. If one of
+                  -m or -t is specified, then the other
+                  is not detected unless specified as well.
+		  -mt           Search for Metazoan mitochondrial tRNA
+                  genes. -i switch ignored. Composite
+                  Metazoan mitochondrial genetic code used.
+		  -mtmam        Search for Mammalian mitochondrial tRNA
+                  genes. -i switch ignored. -tv switch set.
+                  Mammalian mitochondrial genetic code used.
+		  -mtx          Same as -mt but low scoring tRNA genes are
+                  not reported.
+		  -gc&lt;num&gt;      Use the GenBank transl_table = &lt;num&gt; genetic code.
+		  -gcstd        Use standard genetic code.
+		  -gcmet        Use composite Metazoan mitochondrial genetic code.
+		  -gcvert       Use Vertebrate mitochondrial genetic code.
+		  -gcinvert     Use Invertebrate mitochondrial genetic code.
+		  -gcyeast      Use Yeast mitochondrial genetic code.
+		  -gcprot       Use Mold/Protozoan/Coelenterate mitochondrial genetic code.
+		  -gcciliate    Use Ciliate genetic code.
+		  -gcflatworm   Use Echinoderm/Flatworm mitochondrial genetic code.
+		  -gceuplot     Use Euplotid genetic code.
+		  -gcbact       Use Bacterial/Plant Chloroplast genetic code.
+		  -gcaltyeast   Use alternative Yeast genetic code.
+		  -gcascid      Use Ascidian Mitochondrial genetic code.
+		  -gcaltflat    Use alternative Flatworm Mitochondrial genetic code.
+		  -gcblep       Use Blepharisma genetic code.
+		  -gcchloroph   Use Chlorophycean Mitochondrial genetic code.
+		  -gctrem       Use Trematode Mitochondrial genetic code.
+		  -gcscen       Use Scenedesmus obliquus Mitochondrial genetic code.
+		  -gcthraust    Use Thraustochytrium Mitochondrial genetic code.
+                  Individual modifications can be appended using
+		  ,BBB=&lt;aa&gt;     B = A,C,G, or T. &lt;aa&gt; is the three letter
+                  code for an amino-acid. More than one modification
+                  can be specified. eg -gcvert,aga=Trp,agg=Trp uses
+                  the Vertebrate Mitochondrial code and the codons
+                  AGA and AGG changed to Tryptophan.
+		  -tv           Do not search for mitochondrial TV replacement
+                  loop tRNA genes. Only relevant if -mt used. 
+		  -i            Search for tRNA genes with introns in
+                  anticodon loop with maximum length 3000
+                  bases. Minimum intron length is 0 bases.
+                  Ignored if -m is specified.
+		  -i&lt;max&gt;       Search for tRNA genes with introns in
+                  anticodon loop with maximum length &lt;max&gt;
+                  bases. Minimum intron length is 0 bases.
+                  Ignored if -m is specified.
+		  -i&lt;min&gt;,&lt;max&gt; Search for tRNA genes with introns in
+                  anticodon loop with maximum length &lt;max&gt;
+                  bases, and minimum length &lt;min&gt; bases.
+                  Ignored if -m is specified.
+		  -io           Same as -i, but allow tRNA genes with long
+                  introns to overlap shorter tRNA genes.
+		  -if           Same as -i, but fix intron between positions
+                  37 and 38 on C-loop (one base after anticodon).
+		  -ifo          Same as -if and -io combined.
+		  -ir           Same as -i, but search for tRNA genes with minimum intron
+                  length 0 bases, and only report tRNA genes with minimum
+                  intron length &lt;min&gt; bases.
+		  -c            Assume that each sequence has a circular
+                  topology. Search wraps around each end.
+                  Default setting.
+		  -l            Assume that each sequence has a linear
+                  topology. Search does not wrap.
+		  -d            Double. Search both strands of each
+                  sequence. Default setting.
+		  -s or -s+     Single. Do not search the complementary
+                  (antisense) strand of each sequence.
+		  -sc or -s-    Single complementary. Do not search the sense
+                  strand of each sequence.
+		  -ss           Use the stricter canonical 1-2 bp spacer1 and
+                  1 bp spacer2. Ignored if -mt set. Default is to
+                  allow 3 bp spacer1 and 0-2 bp spacer2, which may
+                  degrade selectivity.
+		  -ps           Lower scoring thresholds to 95% of default levels.
+		  -ps&lt;num&gt;      Change scoring thresholds to &lt;num&gt; percent of default levels.
+		  -rp           Flag possible pseudogenes (score &lt; 100 or tRNA anticodon
+                  loop &lt;&gt; 7 bases long). Note that genes with score &lt; 100
+                  will not be detected or flagged if scoring thresholds are not
+                  also changed to below 100% (see -ps switch).
+		  -seq          Print out primary sequence.
+		  -br           Show secondary structure of tRNA gene primary
+                  sequence with round brackets.
+		  -fasta        Print out primary sequence in fasta format.
+		  -fo           Print out primary sequence in fasta format only
+                  (no secondary structure).
+		  -fon          Same as -fo, with sequence and gene numbering in header.
+		  -fos          Same as -fo, with no spaces in header.
+		  -fons         Same as -fo, with sequence and gene numbering, but no spaces.
+		  -j            Display 4-base sequence on 3&apos; end of astem
+                  regardless of predicted amino-acyl acceptor
+                  length.
+		  -jr           Allow some divergence of 3&apos; amino-acyl acceptor
+                  sequence from NCCA.
+		  -jr4          Allow some divergence of 3&apos; amino-acyl acceptor
+                  sequence from NCCA, and display 4 bases.
+		  -v            Verbose. Prints out search progress
+                  to STDERR.
+		  -a            Print out tRNA domain for tmRNA genes
+		  -o &lt;outfile&gt;  print output into &lt;outfile&gt;. If &lt;outfile&gt;
+                  exists, it is overwritten.
+                  By default, output goes to STDOUT.
+		  -w            Print out genes in batch mode.
+                  For tRNA genes, output is in the form:
+
+                  Sequence name
+                  N genes found
+                  1 tRNA-&lt;species&gt; [locus 1] &lt;Apos&gt; (nnn)
+                  i(&lt;intron position&gt;,&lt;intron length&gt;)
+                  .          
+                  .          
+                  N tRNA-&lt;species&gt; [Locus N] &lt;Apos&gt; (nnn)
+                  i(&lt;intron position&gt;,&lt;intron length&gt;)
+
+                  N is the number of genes found
+                  &lt;species&gt; is the tRNA iso-acceptor species
+                  &lt;Apos&gt; is the tRNA anticodon relative position
+                  (nnn) is the tRNA anticodon base triplet
+                  i means the tRNA gene has a C-loop intron
+
+                  For tmRNA genes, output is in the form:
+
+                  n tmRNA(p) [Locus n] &lt;tag offset&gt;,&lt;tag end offset&gt;
+                  &lt;tag peptide&gt;
+
+                  p means the tmRNA gene is permuted
+		  
+		</pre>
+	      </div>
+
+	      <!-- tRNA/tmRNA -->
+	      <div class="optionContainer">
+		<div>
+		  <div class="columnLeft">Type</div>
+		  <div id="searchContainer" class="floatRight smallFont">
+		    <input id="search1" type="radio" name="search" value="tRNA" checked="checked" />
+		    <label for="search1">tRNA</label>
+		    <input id="search2" type="radio" name="search" value="tmRNA" />
+		    <label for="search2" title="Only for bacterial sequences">tmRNA</label>
+		    <input id="search3" type="radio" name="search" value="both" />
+		    <label for="search3" title="Only for bacterial sequences">both</label>
+		  </div>
+		</div>
+	      </div>
+
+	      <!-- Introns -->
+	      <div class="optionContainer">
+		<div>
+		  <div class="columnLeft">Allow introns, 0-3000 bases</div>
+		  <div id="intronContainer" class="floatRight smallFont">
+		    <input id="intron1" type="radio" name="intron" value="no" checked="checked" />
+		    <label for="intron1">no</label>
+		    <input id="intron2" type="radio" name="intron" value="yes" />
+		    <label for="intron2">yes</label>
+		  </div>
+		</div>
+	      </div>
+
+	      <!-- Topology -->
+	      <div class="optionContainer">
+		<div>
+		  <div class="columnLeft">Sequence topology</div>
+		  <div id="optionContainer" class="floatRight smallFont">
+		    <input id="option1" type="radio" name="topology" value="linear" checked="checked" />
+		    <label for="option1">linear</label>
+		    <input id="option2" type="radio" name="topology" value="circular" />
+		    <label for="option2">circular</label>
+		  </div>
+		</div>
+	      </div>
+	      
+	      <!-- Stand -->
+	      <div class="optionContainer">
+		<div>
+		  <div class="columnLeft">Strand</div>
+		  <div id="strandContainer" class="floatRight smallFont">
+		    <input id="strand2" type="radio" name="strand" value="both" checked="checked" />
+		    <label for="strand2">both</label>
+		    <input id="strand1" type="radio" name="strand" value="single" />
+		    <label for="strand1">single</label>
+		  </div>
+		</div>
+	      </div>
+
+	      <!-- Output -->
+	      <div class="optionContainer">
+		<div>
+		  <div class="columnLeft">Output format</div>
+		  <div id="outputContainer" class="floatRight smallFont">
+		    <input id="output1" type="radio" name="output" value="standard" checked="checked" />
+		    <label for="output1">standard</label>
+		    <input id="output2" type="radio" name="output" value="tab-delimited" />
+		    <label for="output2">tab-delimited</label>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	    <div class="paddingTop">
+	      <div class="optionContainer">
+		<div></div>
+		<div class="floatRight">
+		  <input class="inputButton" name="submit" type="submit" value="Submit" />
+		  <input id="resetButton" class="inputButton" name="reset" type="reset" />
+		</div>
+
+	      </div>
+	    </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

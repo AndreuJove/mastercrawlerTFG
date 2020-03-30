@@ -1,0 +1,9 @@
+Date: Mon, 30 Mar 2020 18:50:04 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Cache-Control: no-cache, private
+Content-Security-Policy: connect-src 'self';default-src 'self' www.google.com;form-action 'self';img-src 'self';media-src 'self' *.gstatic.com;font-src 'self' *.gstatic.com;object-src 'none';script-src 'self' www.gstatic.com 'unsafe-inline' 'unsafe-eval' www.google.com;style-src 'self' www.google.com fonts.googleapis.com 'unsafe-inline'
+Set-Cookie: XSRF-TOKEN=eyJpdiI6ImxwUFVGa2hNa3Qzc3M0UWkzUHJnK1E9PSIsInZhbHVlIjoialZMUGVBOE1oeDY3cW1vNVJyZ1haUVl6eGJOeDA5OThTSktLNGxBZFNkcTBmaXBWVmo2bzVyRWRCYVNLNkwyeSIsIm1hYyI6IjIwZDllMGM5ZWY1MzExYjAzODg1MjRjOGNkMThkOWMwNmU4MjA3NzcyNzg1MDVlYWM3YTVmMGQ0ZTNiMDljNzgifQ%3D%3D; expires=Mon, 30-Mar-2020 20:50:04 GMT; Max-Age=7200; path=/
+Set-Cookie: classifyme_session=eyJpdiI6IkZyZENQdXhES3lITmMyOWt6elZEUmc9PSIsInZhbHVlIjoiS2RVbjJpQ1wvYUVIUnNLdHRFa1wvN0h5R3Fha1BYbTRHSXVqM2pLOE9cL3pGd1Nibmh6MEJDbGRveUJhSmVTVU9JeiIsIm1hYyI6IjU1ZWRiOWNmZGQzNGVhY2U3YzRhNGQ5MTZiNzFmYWI2M2YzOTUzZGU0ZTk1YTFhMDMxM2NmODJiZmQxNjRjNmUifQ%3D%3D; expires=Mon, 30-Mar-2020 20:50:04 GMT; Max-Age=7200; path=/; httponly
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/html; charset=UTF-8

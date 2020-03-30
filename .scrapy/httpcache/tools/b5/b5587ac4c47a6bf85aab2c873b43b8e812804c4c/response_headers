@@ -1,0 +1,18 @@
+Date: Mon, 30 Mar 2020 17:12:27 GMT
+Server: Apache
+X-Cache-Operation: plone.app.caching.moderateCaching
+Content-Language: en-us
+Expires: Fri, 02 Apr 2010 17:12:27 GMT
+Vary: Accept-Encoding
+Cache-Control: max-age=0, s-maxage=86400, must-revalidate
+X-Cache-Rule: plone.content.itemView
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html;charset=utf-8
+X-Storage: default
+X-Varnish: 672594 1763259
+Age: 5838
+Via: 1.1 varnish-v4
+Etag: W/"||Anonymous|1|713381|1572542040.15|agCommon|1584380448.0-gzip"
+X-Cache: HIT
+Accept-Ranges: bytes
+Content-Encoding: gzip

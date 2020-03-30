@@ -1,0 +1,16 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta name="description" content="Vrije Universiteit Brussel - Bioinformatics">
+		<meta name="keywords" content="bioinformatics belgium multiple sequence structure alignment folding pathway prediction">
+		<meta name="language" content="English">
+		<title>Vrije Universiteit Brussel - Bioinformatics</title>
+		<frameset rows="210,*" framespacing="0px" frameborder="0px" border="0px">
+			<frame name="banner" src="./banner.html" scrolling="yes" noresize>
+			<frame name="content" src="./content.html" scrolling="yes" noresize>
+		</frameset>
+	</head>
+	<body>
+	</body>
+</html>

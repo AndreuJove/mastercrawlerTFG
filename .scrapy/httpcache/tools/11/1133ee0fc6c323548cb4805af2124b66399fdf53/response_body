@@ -1,0 +1,94 @@
+<html><head>
+
+
+<link rel="stylesheet" href="style/pred.css" type="text/css"><title>biol.uoa.gr - AmylPred</title></head><body>
+
+
+<table style="height: 82px; width: 100%;" valign="bottom" align="left" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+
+      <td width="82"><img src="style/amylpred.png"></td>
+      <td bgcolor="#cc9966" valign="center" align="center">
+      <font class="big">A Consensus Method for Amyloid Propensity Prediction</td>
+
+    </tr>
+  </tbody>
+</table>
+
+<br><br><br><br><br>
+
+<br><br><hr size="1"> <br>
+
+<a href="/AMYLPRED/input.php"><b><u>Click here to proceed to the submission form.</u></b></a>
+
+<br><br><hr size="1"><br>
+
+<table valign="top" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td class="normal" align="left" bgcolor="#ffcc99">
+General description of the Method<br>
+</td></tr></tbody></table>
+
+<table valign="top" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td>
+<p class="normalg">
+<br>This tool uses an assortment of different methods that have been found or specifically developed 
+    to predict features related to the formation of amyloid fibrils. The consensus of these methods is defined as the the hit overlap of at least two out of five methods and it is the primary output of the program.  However, the individual predictions of these methods are also made available 
+    in the form of a text file, maintained on the server for 1 (one) day.   Consequently, AMYLPRED is a useful tool for identifying amyloid-forming regions in proteins that are associated with several conformational diseases, called amyloidoses, such as Altzheimer's, Parkinson's, prion diseases, type II diabetes etc. It may also be useful for understanding the properties of protein folding and misfolding and for helping to the control of protein aggregation/solubility in biotechnology (recombinant proteins forming bacterial inclusion bodies) and biotherapeutics (monoclonal antibodies and biopharmaceutical proteins).
+</p></td></tr></tbody></table>
+<br>
+<table valign="top" border="0" cellpadding="0" cellspacing="0"  width="85%">
+<tbody><tr><td>
+<p class="normalg"><b>If you are using this tool, please cite the following reference: 
+Frousios, K.K.*, Iconomidou, V.A.*, Karletidi, C.M., Hamodrakas, S.J. (2009) Amyloidogenic determinants are usually not buried. BMC Struct Biol., 9(1), 44. (*Contributed equally) 
+</b></p></td></tr></tbody></table>
+<br>
+<p class="medium" align="center">
+<span style="color:red; background-color:yellow">
+This service is freely available to academic users only!!! Non-academic users should contact:<br> 
+Assist. Prof. Vassiliki Iconomidou (<a href="mailto:veconom@biol.uoa.gr">veconom@biol.uoa.gr</a>)<br>
+Em. Prof. S.J. Hamodrakas (<a href="mailto:shamodr@biol.uoa.gr">shamodr@biol.uoa.gr</a>)
+</span>
+</p>
+<table valign="top" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td class="normal" align="left" bgcolor="#ffcc99">
+Methods used and Modifications<br>
+</td></tr></tbody></table>
+
+<table valign="top" border="0" cellpadding="0" cellspacing="0" width="80%">
+<tbody><tr><td>
+<p class="normalg">
+<br><ul>
+     <li>Average Packing Density:<br>
+
+     <p class="normalg">This method relates the Average Packing Density of stretches of residues to the formation of amyloid fibrils. A script implementing the method has been written in our lab <i>(Hamodrakas et al., Int.Journ. of Biol.Macromolecules 41(2007) 295-300.)</i>. Values above 21.4 obtained from a five-residue long sliding window are considered as hits.<br><i>O.V. Galzitskaya, S.O. Garbuzynskiy, M.Y. Lobanov, (2006) PLoS Comput Biol 2(12) 1639-1648.</i></p>
+     </li>
+     <li>Possible Conformational Switches: <br>
+     <p class="normalg">Using our own lab's consensus secondary structure prediction program SecStr <i>(S.J. Hamodrakas, CABIOS 4 (4) (1988) 473)</i>, potential 'conformational switches' are identified as areas strongly predicted as both alpha-helices and beta-sheet strands. The criterion is that, simultaneously, at least 3 secondary structure prediction methods predict both alpha-helix and beta-sheet.<br><i>S.J. Hamodrakas, C. Liappa, V.A. Iconomidou, Int. Journ. of Biol. Macromolecules 41(2007) 295-300.</i></p>
+
+     </li>
+     <li>Amyloidogenic Pattern:<br>
+     <p class="normalg">A sequence pattern has been identified as highly related to the formation of amyloid fibrils. Submissions are scanned for the existence of this pattern {P}-{PKRHW}-[VLSCWFNQE]-[ILTYWFNE]-[FIY]-{PKRH}  at identity level, with the use of a simple custom script.<br><i>M. Lopez de la Paz, L. Serrano, (2004) Proc. Natl. Acad. Sci. U.S.A. vol.101 no.1 87-92.</i></p>
+     </li>
+     <li>TANGO:<br>
+     <p class="normalg">TANGO is a program that calculates the tendency of peptides for beta aggregation, which is different from amyloid fibril formation tendency but is highly correlated. Tango 2.1 is used and scores above 5.00% for beta aggregation are considered as hits.<br><i>A-M. Fernandez-Escamilla, F. Rousseau, J. Schymkowitz, L. Serrano, (2004) Nature Biotechnology vol.22 no.10 1302-1306.</i><br><br>
+
+     NOTE: Tango requires a set of environmental parameters for each submission. The default values from the TANGO online submission form are used.</p>
+     </li>
+     <li>Hexapeptide Conformational Energy<br>
+     <p class="normalg">This program threads all hexapeptides of a submitted protein onto the microcrystallic structure of NNQQNY. Alternatively the program can use a set of over 2500 templates produced by small shifts in the structure of NNQQNY. In our consensus method, the version using only the original structure is used, in favour of speed. Energy values below -27.00 are considered as hits.<br><i>Z. Zhang, H. Chen, L. Lai, (2007) Bioinformatics vol.23 no.17 2218-2225.</i><br><br>
+     NOTE: The original program executes interactively. For use in an automated method it was necessary to modify it in a way that it would allow options to be passed as arguments.<br>
+     Also, a small modification to the memory demands of the program was made. The use of only one structure as template made the use of a large multidimensional array (used to store energy results when all 2500+ templates are used)  unnecessary. This large array prevented the program from executing on many computers.</p>
+
+     </li>
+    </ul>
+    <p class="normalg">Also note that several of these methods have a limit to the sequence length they can process. In an attempt to overcome this problem, long submissions are broken into shorter overlapping segments that are processed/submitted individually. This may cause an extra delay to the acquisition of results.
+    </p>
+</p></td></tr></tbody></table>
+<br><br>
+
+<hr>
+<font class="normal">
+    <p>Biophysics and Bioinformatics Lab<br>Section of Cell Biology and Biophysics<br>Department of Biology<br>National and Kapodistrian University of Athens</p>
+
+</body></html>

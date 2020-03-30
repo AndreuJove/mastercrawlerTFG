@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/static/favicon_sund.ico">
+
+    <title>a GO tool</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.css">
+    <!-- jQuery -->
+    <script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="/static/js/bootstrap-filestyle.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/agotool.css">
+
+    <script src="/static/js/utilities.js"></script>
+
+    
+      <script type="text/javascript">
+          $(document).ready( function() {
+              enrichment_page();
+          });
+      </script>
+
+</head>
+
+<body role="document">
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index">a GO tool</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">enrichment</a></li>
+                    <li><a href="/parameters">parameters</a></li>
+                    <li><a href="/example">example</a></li>
+                    <li><a href="/FAQ">FAQ</a></li>
+                    <li><a href="/about">about</a></li>
+                </ul>
+                <span class="cpr_logo"><a href="http://www.cpr.ku.dk/"> <img height="40" width="92" src="./static/cpr_logo.png"></a></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-content container">
+    
+<div class="container-fluid">
+    <form id="main_form" method="Post" action="results" enctype="multipart/form-data">
+    <h2 class="row">ENRICHMENT</h2>
+
+        <div class="row">
+            <h3>Upload a file or copy & paste below</h3>
+            <div class="col-md-10">
+                <span title="Expects a tab-delimited text-file (&#39;.txt&#39; or &#39;.tsv&#39;) with the following 3 column-headers:
+
+&#39;background&#39;: UniProt accession numbers (such as &#39;P00359&#39;) for all proteins
+
+&#39;intensity&#39;: Protein abundance (intensity) for all proteins (copy number, iBAQ, or any other measure of abundance)
+
+&#39;foreground&#39;: UniProt accession numbers for all proteins in the test group (the group you want to examine for GO term enrichment,
+these identifiers should also be present in the &#39;population_an&#39; as the test group is a subset of the population)
+
+If &#34;Abundance correction&#34; is deselected &#34;population_int&#34; can be omitted."><label for="userinput_file">Choose File</label>: <input class="filestyle btn-info" data-buttonText="Upload file" id="userinput_file" name="userinput_file" type="file"></span>
+                    
+                <span>Expects a tab-delimited text-file (".txt" or ".tsv") with the following <b>3 column-headers:</b></span>
+                    <li class="bulletpoints_li"><b>foreground</b>: UniProt Accession Numbers for all proteins in the test group (the group you want to examine for GO term enrichment, these identifiers should also be present in the “background” as the test group is a subset of the background)</li>
+                    <li class="bulletpoints_li"><b>background</b>: UniProt Accession Numbers (such as "P00359") for all proteins</li>
+                    <li class="bulletpoints_li"><b>intensity</b>: Protein abundance (intensity) for all proteins (copy number, iBAQ, or any other measure of abundance)</li>
+                Isoforms and comma separated <b>protein-groups</b> e.g. ("O60462-5;A0A024R412;O60462-4") are accepted as well.<br>
+            <br>
+            <div class="row" id="copy_paste_field">
+                 From - e.g. MS-Excel - select 1 column for the "Foreground" and either 1 or 2 columns for "Background & Intensity", copy, and paste into the field below. For "abundance_correction" you need a "Background" and "Intensity" values (therfore 2 columns); alternatively you can use only a "Background" without the "Intensity" values, but then please select "compare_samples" from the methods below the copy and paste field.
+
+                <div class="col-md-5">
+                    <label for="foreground_textarea">Foreground</label>:
+                    <textarea class="form-control" id="foreground_textarea" name="foreground_textarea" rows="5"></textarea>
+                </div>
+                <div class="col-md-5">
+                    <label for="background_textarea">Background & Intensity</label>:
+                    <textarea class="form-control" id="background_textarea" name="background_textarea" rows="5"></textarea>
+                </div>
+            </div>
+            <br>
+            </div>
+                <div class="col-md-10">
+                <span title="abundance_correction: Foreground vs Background abundance corrected
+compare_samples: Foreground vs Background (no abundance correction)
+compare_groups: Foreground(replicates) vs Background(replicates), --&gt; foreground_n and background_n need to be set
+characterize_foreground: Foreground only"> <label for="enrichment_method">Select one of the following methods</label>: <select id="enrichment_method" name="enrichment_method"><option value="abundance_correction">abundance_correction</option><option value="compare_samples">compare_samples</option><option value="compare_groups">compare_groups</option><option value="characterize_foreground">characterize_foreground</option></select> <br> </span>
+                <div class="row">
+                    <div class="foreground_n_background_n">
+                        <div class="col-md-5">
+                        <span class="foreground_n" title="Foreground_n is an integer, defines the number of sample of the foreground."> <label for="foreground_n">Foreground_n</label>: <input id="foreground_n" name="foreground_n" type="text" value="10"> <br> </span>
+                            
+                        </div>
+                        <div class="col-md-5">
+                        <span class="background_n" title="Background_n is an integer, defines the number of sample of the background."> <label for="background_n">Background_n</label>: <input id="background_n" name="background_n" type="text" value="10"> <br> </span>
+                            
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+
+        <div class="row">
+            <h3>Keyword association</h3>
+            <div class="col-md-10">
+                <span title="Select either one or all three GO categories (molecular function, biological process, cellular component), UniProt keywords, or KEGG pathways."> <label for="gocat_upk">GO terms, UniProt keywords, or KEGG pathways</label>: <select id="gocat_upk" name="gocat_upk"><option value="all_GO">all GO categories</option><option value="BP">GO Biological Process</option><option value="CP">GO Celluar Compartment</option><option value="MF">GO Molecular Function</option><option value="UPK">UniProt keywords</option><option value="KEGG">KEGG pathways</option></select> <br> </span>
+                <div class="GO_basic_slim_backtracking">
+                    <span class="ONTOLOGY" title="Choose between the full Gene Ontology or GO slim subset a subset of GO terms that are less fine grained."> <label for="go_slim_or_basic">GO basic or slim</label>: <select id="go_slim_or_basic" name="go_slim_or_basic"><option value="basic">basic</option><option value="slim">slim</option></select><br></span>
+                    <span class="ONTOLOGY" title="Include all parent GO-terms."> <label for="backtracking">Backtracking parent GO-terms</label>: <input checked id="backtracking" name="backtracking" type="checkbox" value="y"> <br> </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h3>Report options</h3>
+            <div class="col-md-5">
+                <span title="Choose to only test and report overrepresented or underrepresented GO-terms, or to report both of them."> <label for="o_or_u_or_both">over- or under-represented or both</label>: <select id="o_or_u_or_both" name="o_or_u_or_both"><option value="overrepresented">overrepresented</option><option value="underrepresented">underrepresented</option><option value="both">both</option></select></span><br>
+                <span class="ONTOLOGY" title="Add dots to GO-terms to indicate the level in the parental hierarchy (e.g. &#39;...GO:0051204&#39; vs &#39;GO:0051204&#39;"> <label for="indent">prepend level of hierarchy by dots</label>: <input checked id="indent" name="indent" type="checkbox" value="y"></span><br>
+
+                <h4>Multiple testing</h4>
+                <span title="Select a method for multiple testing correction."> <label for="multitest_method">Method for correction of multiple testing</label>: <select id="multitest_method" name="multitest_method"><option value="benjamini_hochberg">Benjamini Hochberg</option><option value="sidak">Sidak</option><option value="holm">Holm</option><option value="bonferroni">Bonferroni</option></select> <br> </span>
+                <span class="alpha" title="Variable used for &#34;Holm&#34; or &#34;Sidak&#34; method for multiple testing correction of p-values."> <label for="alpha">Alpha</label>: <input id="alpha" name="alpha" type="text" value="0.05"> <br> </span>
+                    
+            </div>
+            <div class="col-md-5">
+                <h4>Filter results</h4>
+                <table>
+                <tr title="Minimum threshold value of &#34;fold_enrichment_foreground_2_background&#34;."><td class="somename"><label for="fold_enrichment_study2pop">fold enrichment study/population</label>: </td><td><input id="fold_enrichment_study2pop" name="fold_enrichment_study2pop" type="text" value="0"></td>
+                    
+                </tr>
+                <tr  title="Maximum threshold value of &#34;p_uncorrected&#34;."><td class="somename"><label for="p_value_uncorrected">p-value uncorrected</label>: </td><td><input id="p_value_uncorrected" name="p_value_uncorrected" type="text" value="0"></td>
+                    
+                </tr>
+                <tr title="Maximum FDR (for Benjamini-Hochberg) or p-values-corrected threshold value."><td class="somename"><label for="p_value_multipletesting">FDR-cutoff / p-value multiple testing</label>: </td><td><input id="p_value_multipletesting" name="p_value_multipletesting" type="text" value="0"></td>
+                    
+                </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+        <button id="submit_button" type="submit" class="btn btn-primary">Submit</button>
+        <button id="clear_button" type="button" class="btn btn-primary">Clear</button>
+		<br><br><br><br>
+	</form>
+</div>
+
+    </div>
+    
+    
+    <div class="tab-content container">
+    
+    
+    </div>
+</body>
+</html>

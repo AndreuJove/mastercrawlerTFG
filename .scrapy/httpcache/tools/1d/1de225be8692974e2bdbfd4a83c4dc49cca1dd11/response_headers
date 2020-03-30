@@ -1,0 +1,19 @@
+Content-Type: text/html
+Content-Encoding: gzip
+Last-Modified: Wed, 08 Jan 2020 03:56:01 GMT
+Vary: Accept-Encoding
+Server: nginx
+X-Ms-Request-Id: 5eff5eea-c01e-004d-43c3-069bd9000000
+X-Ms-Version: 2009-09-19
+X-Ms-Lease-Status: unlocked
+X-Ms-Blob-Type: BlockBlob
+Access-Control-Allow-Origin: *
+X-Served: Nginx-Proxito-Sendfile
+X-Deity: web04
+Strict-Transport-Security: max-age=31536000;
+X-Rtd-Project: salmon
+X-Rtd-Version: latest
+X-Rtd-Path: /proxito/media/html/salmon/latest/alevin.html
+X-Rtd-Domain: salmon.readthedocs.io
+X-Rtd-Version-Method: subdomain
+Date: Mon, 30 Mar 2020 18:46:11 GMT

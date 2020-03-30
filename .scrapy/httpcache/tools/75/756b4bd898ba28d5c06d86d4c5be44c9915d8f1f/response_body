@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- start: Meta -->
+  <meta charset="utf-8">
+  <title>AuReMe</title>  
+  <meta name="description" content="AuReMe workspace : for metabolic network reconstruction"/>
+  <meta name="keywords" content="workflow, package, metabolic networks, workspace" />
+  <!-- end: Meta -->
+  
+  <!-- start: Mobile Specific -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- end: Mobile Specific -->
+  
+  <!-- start: Facebook Open Graph -->
+  <meta property="og:title" content=""/>
+  <meta property="og:description" content=""/>
+  <meta property="og:type" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:image" content=""/>
+  <!-- end: Facebook Open Graph -->
+  
+  <!-- start: CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+  <!-- end: CSS -->
+  
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+  
+  <link rel="icon" type="image/png" href="img/logos/AuReMe_favicon.jpg" />
+  
+</head>
+<body>
+	
+  <!--start: Wrapper -->
+  <div id="wrapper">
+    
+    <!--start: Container -->
+    <div class="container">
+      <!--start: Header -->
+      <header>
+	
+	<!--start: Row -->
+	<div class="row">
+	  
+	  <!--start: Logo -->
+	  <div class="logo span8">
+	    <!-- <div class="title"><h1>AuReMe workspace and PADMet package</h1></div> -->
+	    <a class="brand" href="index.html"><img src="img/logos/AuReMe_logo_header.png" alt="logo AuReMe" /></a>
+	  </div>
+	</div>
+	<!--end: Row -->
+	
+      </header>
+      <!--end: Header-->
+      
+      <!--start: Navigation-->	
+      <div class="navbar navbar-inverse">
+    	<div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+              	<li class="active"><a href="index.html">Home</a></li>
+		
+              	<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+		    <li class="nav-header">Solutions</li>
+		    <li><a href="general.html">Globally</a></li>
+                    <li><a href="aureme.html">AuReMe</a></li>
+                    <li><a href="padmet.html">PADMet</a></li>
+		    <li class="divider"></li>
+		    <li class="nav-header">Applications</li>
+                    <li><a href="application.html">On non-model organisms</a></li>
+		    <li class="divider"></li>
+		    <li class="nav-header">Publications</li>
+                    <li><a href="article.html">Articles and talks</a></li>                  						
+                  </ul>
+              	</li>
+		<li><a href="suppdata.html">Supplementary data</a></li>
+		<li><a href="wiki.html">Wiki</a></li>
+		<li><a href="sparql.html">Sparql endpoint</a></li>
+		<li><a href="documentation.html">Documentation</a></li>
+		<li><a href="download.html">Download</a></li>
+		<li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+      	</div>
+      </div>
+      <!--end: Navigation-->
+      
+    </div>
+    <!--end: Container-->
+    
+    <!--start: Container -->
+    <div class="container">
+      
+      <!-- start: Flexslider -->
+      <div class="slider">
+	
+	<div class="flexslider">
+	  <ul class="slides">
+	    
+	    <li>
+	      <img src="img/slider/AuReMe_general_system_slider.png" alt=""  />
+	      <div class="slide-caption n hidden-phone">
+		<h3>The AuReMe general system</h3>
+		<p>An original solution for a all-in-one workspace.</p>
+	      </div>
+	    </li>
+	    
+	    <li>
+	      <img src="img/slider/AuReMe_wkf_cutipay_slider.png" alt="" />
+	      <div class="slide-caption hidden-phone">
+		<h3>Customized workflow</h3>
+		<p>Use either a pre-set pipeline or customize your own
+		  metabolic network reconstruction workflow with integrated or
+		  other tools.</p>
+	      </div>
+	    </li>
+	    
+	    <li>
+	      <img src="img/slider/PADMet_structure_slider.png" alt="" />
+	      <div class="slide-caption hidden-phone">
+		<h3>Implemented methods</h3>
+		<p>Five main modules: the PADMet core, the input manager, the
+		  user workspace based on Docker technology, the format for
+		  storing data and metadata and the included tools.</p>
+	      </div>
+	    </li>
+	    
+	    <li>
+	      <img src="img/slider/AuReMe_metadata_slider.png" alt="" />
+	      <div class="slide-caption hidden-phone">
+		<h3>Transparency with metadata</h3>
+		<p>A whole pool of metadata is associated to the model or its
+		  reconstruction and managed by the AuReMe workspace for
+		  storage and wiki-visualization.</p>
+	      </div>
+	    </li>
+	    
+	    <li>
+	      <img src="img/slider/Tetrahydropholates_slider.png" alt="" />
+	      <div class="slide-caption hidden-phone">
+		<h3>Applied to non-model organisms</h3>
+		<p>Interest of heterogeneous methods in pathway completion and
+		  filling, thanks to tracking of process metadata.</p>
+	      </div>
+	    </li>
+	    
+	    <li>
+	      <img src="img/slider/log.png" alt="" />
+	      <div class="slide-caption hidden-phone">
+		<h3>Reproducibility</h3>
+		<p>A tracking system enables to reproduce the exact and
+		  complete analysis process automatically, by a simple command
+		  sequence.</p>
+	      </div>
+	    </li>
+	    
+	  </ul>
+	</div>
+	
+      </div>
+      <!-- end: Flexslider -->
+      
+      <!-- start: Hero Unit - Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <p>The DYLISS team has developped an imaginative solution to make
+	  genome-scale metabolic network reconstructions to enhance Research...
+	</p>
+        <p><a class="btn btn-success btn-large" href="general.html">Learn more &raquo;</a></p>
+      </div>
+      <!-- end: Hero Unit -->
+      
+      <!-- start: Row -->
+      <div class="row">
+	
+	<!-- start: Icon Boxes -->
+	<div class="icons-box-vert-container">
+	  
+	  <!-- start: Icon Box Start -->
+	  <div class="span3">
+	    <div class="icons-box-vert">
+	      <i class="ico-repeat ico-color circle-color big"></i>
+	      <div class="icons-box-vert-info">
+		<h3>Reproducible</h3>
+	      </div>
+	      <div class="clear"></div>
+	    </div>
+	  </div>
+	  <!-- end: Icon Box-->
+	  
+	  <!-- start: Icon Box Start -->
+	  <div class="span3">
+	    <div class="icons-box-vert">
+	      <i class="ico-heart  ico-white circle-color-full big-color"></i>
+	      <div class="icons-box-vert-info">
+		<h3>User Friendly</h3>
+	      </div>
+	      <div class="clear"></div>
+	    </div>
+	  </div>
+	  <!-- end: Icon Box -->
+	  
+	  <!-- start: Icon Box Start -->
+	  <div class="span3">
+	    <div class="icons-box-vert">
+	      <i class="ico-check ico-color circle-color big"></i>
+	      <div class="icons-box-vert-info">
+		<h3>Traceable</h3>
+	      </div>
+	      <div class="clear"></div>
+	    </div>
+	  </div>
+	  <!-- end: Icon Box -->
+	  
+	  <!-- start: Icon Box Start -->
+	  <div class="span3">
+	    <div class="icons-box-vert">
+	      <i class="ico-thumbs-up  ico-white circle-color-full big-color"></i>
+	      <div class="icons-box-vert-info">
+		<h3>Customizable</h3>
+	      </div>
+	      <div class="clear"></div>
+	    </div>
+	  </div>
+	  <!-- end: Icon Box -->
+	  
+	</div>
+	<!-- end: Icon Boxes -->
+	
+      </div>
+      <!-- end: Row -->
+      
+      <hr>
+      
+      <!-- start Clients List -->	
+      <div class="clients-carousel">
+	
+	<ul class="slides clients">
+	  <li><a href="http://www.irisa.fr/"><img src="img/logos/large_logoirisa2010_00.png" alt=""/></a></li>
+	  <li><a href="https://www.univ-rennes1.fr/"><img src="img/logos/large_unirennes1ueb_00.png" alt=""/></a></li>	
+	  <li><a href="http://www.cmm.uchile.cl/"><img src="img/logos/logo_CMM.jpg" alt=""/></a></li>
+	  <li><a href="http://www.irisa.fr/dyliss/"><img src="img/logos/logo_DYLISS.jpg" alt=""/></a></li>
+	  <li><a href="https://www.inria.fr/"><img src="img/logos/logo_INRIA.jpg" alt=""/></a></li>
+	  <li><a href="http://www.irisa.fr/"><img src="img/logos/large_logoirisa2010_00.png" alt=""/></a></li>
+	  <li><a href="https://www.univ-rennes1.fr/"><img src="img/logos/large_unirennes1ueb_00.png" alt=""/></a></li>	
+	  <li><a href="http://www.cmm.uchile.cl/"><img src="img/logos/logo_CMM.jpg" alt=""/></a></li>
+	  <li><a href="http://www.irisa.fr/dyliss/"><img src="img/logos/logo_DYLISS.jpg" alt=""/></a></li>
+	  <li><a href="https://www.inria.fr/"><img src="img/logos/logo_INRIA.jpg" alt=""/></a></li>
+	</ul>
+	
+      </div>
+      <!-- end Clients List -->
+      
+      <hr>
+			
+      <!-- start: Row -->
+      <div class="row">
+	
+        <div class="span4">
+	  <a href="https://docker-ui.genouest.org/app/#/container/dyliss/aureme-img" target="_blank">
+	    <div class="icons-box">
+	      <i class="ico-docker circle big"></i>
+	      <div class="title"><h3>AuReMe workspace</h3></div>
+	      <p>A all-in-one Docker image</p>
+	      <div class="clear"></div>
+	    </div>
+	  </a>
+        </div>
+	
+        <div class="span4">
+	  <a href="https://pypi.python.org/pypi/padmet" target="_blank">
+	    <div class="icons-box">
+	      <i class="ico-pypi circle big"></i>
+	      <div class="title"><h3>PADMet</h3></div>
+	      <p>Package available on Pypi</p>
+	      <div class="clear"></div>
+	    </div>
+	  </a>
+        </div>
+	
+	<div class="span4">
+          <a href="https://gitlab.inria.fr/maite/padmet-utils" target="_blank">
+	    <div class="icons-box">
+	      <i class="ico-gitlab circle big"></i>
+	      <div class="title"><h3>PADMet-utils</h3></div>
+	      <p>Tools available on Gitlab</p>
+	      <div class="clear"></div>
+	    </div>
+	  </a>
+        </div>
+	
+      </div>
+      <!-- end: Row -->
+      
+      <div class="clear"></div>
+    </div>
+    <!-- end: Row -->
+    
+    <hr>
+    
+  </div>
+  <!--end: Container-->
+  
+  <!--start: Container -->
+  <div class="container">		
+    
+    <!-- start: Footer Menu -->
+    <div id="footer-menu" class="hidden-tablet hidden-phone">
+      
+      <!-- start: Container -->
+      <div class="container">
+	
+	<!-- start: Row -->
+	<div class="row">
+	  
+	  <!-- start: Footer Menu Logo -->
+	  <div class="span1">
+	    <div id="footer-menu-logo">
+	      <a href="index.html"><img src="img/logos/AuReMe_logo_long.PNG" alt="logo" height="20" /></a>
+	    </div>
+	  </div>
+	  <!-- end: Footer Menu Logo -->
+	  
+	  <!-- start: Footer Menu Links-->
+	  <div class="span10">
+	    
+	    <div id="footer-menu-links">
+	      
+	      <ul id="footer-nav">
+		
+		<li><a href="index.html">Start</a></li>
+		
+		<li><a href="download.html">Download</a></li>
+		
+		<li><a href="contact.html">Contact</a></li>
+		
+	      </ul>
+	      
+	    </div>
+	    
+	  </div>
+	  <!-- end: Footer Menu Links-->
+	  
+	  <!-- start: Footer Menu Back To Top -->
+	  <div class="span1">
+	    
+	    <div id="footer-menu-back-to-top">
+	      <a href="#"></a>
+	    </div>
+	    
+	  </div>
+	  <!-- end: Footer Menu Back To Top -->
+	  
+	</div>
+	<!-- end: Row -->
+	
+      </div>
+      <!-- end: Container  -->	
+      
+    </div>	
+    <!-- end: Footer Menu -->
+    
+    <!-- start: Footer -->
+    <div id="footer">
+      
+      <!-- start: Container -->
+      <div class="container">
+	
+	<!-- start: Row -->
+	<div class="row">
+	  
+	  <!-- start: Copyright -->
+	  <div id="copyright">
+	    
+	    <!-- start: Container -->
+	    <div class="container">
+	      
+	      <p>&copy; 2013, creativeLabs. <a href="http://bootstrapmaster.com" alt="Bootstrap Themes">Bootstrap Themes</a> Designed by BootstrapMaster in Poland <img src="img/poland.png" alt="Poland" style="margin-top:-4px"></p>
+						
+	    </div>
+	    <!-- end: Container  -->
+	    
+	  </div>	
+	  <!-- end: Copyright -->
+	</div>
+	<!-- end: Row -->	
+	
+      </div>
+      <!-- end: Container  -->
+      
+    </div>
+    <!-- end: Footer -->
+    
+  </div>
+  <!-- end: Container  -->
+  
+</div>
+<!-- end: Wrapper  -->
+
+
+
+<!-- start: Java Script -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-1.8.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/flexslider.js"></script>
+<script src="js/carousel.js"></script>
+<script def src="js/custom.js"></script>
+<!-- end: Java Script -->
+
+</body>
+</html>

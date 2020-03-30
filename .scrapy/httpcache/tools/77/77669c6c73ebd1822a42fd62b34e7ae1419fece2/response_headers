@@ -1,0 +1,10 @@
+Vary: User-Agent
+Vary: Accept-Encoding
+X-Hosted-By: European Bioinformatics Institute
+Content-Type: text/html;charset=UTF-8
+Content-Encoding: gzip
+Date: Mon, 30 Mar 2020 18:50:11 GMT
+X-Uniprot-Release: 2020_01
+Content-Language: en
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: origin, x-requested-with, content-type, X-Total-Results, X-UniProt-Release

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>ColoWeb</title>
+    <link rel="stylesheet" type="text/css" href="colo.css">
+    <link href='http://fonts.googleapis.com/css?family=Belleza' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/ColoWeb/js/jquery-2.0.3.js"></script>
+    <script>
+    $(document).ready(function(){
+    	$.getJSON("/ColoWeb/ColoIndex?preventCache=" + new Date(), function(rawdata) {
+    		for(var i=0; i<rawdata.length; i++){
+                var formattedName = rawdata[i].replace(/_/g, " "); 
+    			$("#cellType").append("<option value=\"" + rawdata[i] + "\">" + formattedName + "</option>");
+    		}
+    		var loadFeatures = function(){
+    			$("#features").html("");
+                $.getJSON("/ColoWeb/ColoIndex?cellLine=" + $("#cellType").val() + "&featureType=" + $("#featureType").val() + "&preventCache=" + new Date(), function(rawdata) {
+                	for(var i=0; i<rawdata.length; i++){
+                		var formattedName = rawdata[i].replace(/_/g, " "); 
+                	    $("#features").append("<option value=\"" + rawdata[i] + "\">" + formattedName + "</option>");
+                	}
+                });
+    		};
+            var loadFeatureTypes = function(){
+                $("#featureType").html("");
+                $.getJSON("/ColoWeb/ColoIndex?cellLine=" + $("#cellType").val() + "&preventCache=" + new Date(), function(rawdata) {
+                    for(var i=0; i<rawdata.length; i++){
+                        var formattedName = rawdata[i].replace(/_/g, " "); 
+                        $("#featureType").append("<option value=\"" + rawdata[i] + "\">" + formattedName + "</option>");
+                    }
+                    loadFeatures();
+                });
+            };
+    		
+            loadFeatureTypes();
+    		$("#cellType").change(loadFeatureTypes);
+    		$("#featureType").change(loadFeatures);
+    	});
+    });
+    </script>
+    <script>
+    function clearFileInput() {
+    	ctrl = document.getElementById("upldfeature");  
+    	try {
+    	    ctrl.value = null;
+    	  } catch(ex) { }
+    	  if (ctrl.value) {
+    	    ctrl.parentNode.replaceChild(ctrl.cloneNode(true), ctrl);
+    	  }
+    	}</script>
+    <script>
+    function validateForm() {
+        var x = document.forms["coloText"]["file"].value;
+        if (x == null || x == "") {
+            alert("Please select your Region of Interest file");
+            return false;
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <div style="height:130px;">
+	<a href="index.jsp"><img src="Images/logo.png" align="middle" width="900px" border="0" /></a>
+	<div style="position:relative; left:250px; top:-50px; width:620px; height:20px; font-family: 'Belleza'; font-size:14px; color:#909090;">
+		COLO identifies genomic features that are often in close proximity to your submitted genomic locations.
+	</div>
+	
+	<div style='position:relative; left:660px; top:-100px;'>
+		<a href="help.jsp" target="_blank">Help</a>&nbsp;&nbsp;&nbsp;
+		<a href="about.jsp">About</a>&nbsp;&nbsp;&nbsp;
+		<a href="mailto:binf@insilico.us.com?Subject=Colo%20Inquiry" target="_top"> Contact Us </a>&nbsp;
+	</div>
+</div>
+
+<hr noshade size="10" color="#cc9900"/>
+    
+    <form name="coloText" id="coloText" action="ColoWeb" onsubmit="return validateForm()" method="post" enctype="multipart/form-data" target="_blank">
+        <table style='border:0px;' class='tighttable'>
+            <tr>
+                <td>
+                    <table style='border:1px solid #aaaa00; border-collapse:collapse;' class='tighttable'>
+                        <tr>
+                            <td style="background:#ffffbb; width:300px; height:380px; padding:10px; position: relative;" valign="top">
+                                <br />
+                                <div style='height:30px;'>
+                                    <img src="Images/genomiclocations.png" style='height:24px;'/><br /><br />
+                                </div>
+                                <br />
+                                Upload a ROI file
+                                <div>
+                                    <input type="file" name="file" id="file" size="10" /><br /><br />
+                                </div>
+                                <p style='font-size: 14px;'>
+	                                Upload the file containing your genomic regions of interest (ROIs). The ROI file must be in .bed file 
+	                                format with chromosome, start position, and stop position in GRCh37/hg19 coordinates on each line. (see <a href="sample.bed">sample ROI file</a>.) 
+	                                Only the first three columns of bed format are needed.
+	                            </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                
+                <td>
+                    <table style='border:1px solid #aaaa00; border-collapse:collapse;' class='tighttable'>
+                        <tr>
+                            <td style="background:#ffff99; width:400px; height:380px; padding:10px; position: relative;" valign="top">
+                                <br />
+                                <div style='height:30px;'>
+                                    <img src="Images/features.png" style='height:20px;'/><br /><br />
+                                </div>
+                                <br />
+                                <table class='tighttable'>
+                                	<tr>
+                                		<td>
+			                                Select a feature set
+			                                <table style='border: 1px solid; border-color: #c4b729;' class='tighttable'>
+			                                	<tr>
+			                                		<td valign='top'>
+			                                			<!-- <div style='height:30px; width:120px'>
+			                                    			<img src="Images/cellline.png"/><br /><br />
+			                                			</div> -->
+			                                			Cell line
+			                                			<div>
+			                                    			<select name="cellType" id="cellType"></select>
+			                                			</div>
+			                                		</td>
+			                                	</tr>
+			                                	<tr>
+			                                		<td>
+			                                			<!-- <div style='height:30px;'>
+			                                    			<img src="Images/featureset.png"/><br /><br />
+			                                			</div> -->
+			                                			Feature set
+			                                			<div>
+			                                    			<select name="featureType" id="featureType"></select><br/>
+			                                			</div>
+			                                		</td>
+			                                	</tr>
+			                                	<tr>
+			                                		<td>
+			                                			Features in the set
+			                                			<div>
+			                                 				<select style='width:144px' name="features" id="features" size=4 disabled=true></select>
+			                                			</div>
+			                                		</td>
+			                                	</tr>
+			                                </table>
+                                		</td>
+                                		<td><div style='width:40px; text-align: center;'>&nbsp;<b>OR</b>&nbsp;&nbsp;</div></td>
+                                		<td>
+			                                Upload a feature file
+			                                <br />
+			                                <table style='border: 1px solid; border-color: #c4b729;' class='tighttable'>
+			                                	<tr>
+			                                		<td style='width: 100px;'>
+			                                			<input type="file" name="upldfeature" id="upldfeature" style='width: 180px;' />
+			                                			<input onclick=clearFileInput() type="button" value="Clear" /> 
+			                                		</td>
+			                                	</tr>
+			                                </table>
+                                		</td>
+                                	</tr>
+                                </table>
+                                
+                                <p style='font-size: 14px;'>
+	                                To analyze our pre-loaded genomic features, select the cell line
+	                                in which your ROIs were identified, and the type of features to analyze. Alternately, you 
+	                                may provide your own feature .bed file for analysis (see <a href="feature.bed">sample feature file</a>).
+	                                Currently only supports human samples. 
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                
+                <td>
+                    <table style='border:1px solid #aaaa00; border-collapse:collapse;'>
+                        <tr>
+                            <td style="background:#ffff77; width:300px; height:380px; padding:10px;" valign="top">
+                                <br />
+                                <div style='height:30px;'>
+                                    <img src="Images/analysis.png" style='height:25px;'/><br /><br />
+                                </div>
+                                <br />
+                                Choose an analysis window size (bp)
+                                <div style='height:30px;'>
+                                    <select name="windowSize" id="windowSize">
+	                                    <option value="1000">1,000</option>
+	                                    <option value="5000">5,000</option>
+	                                    <option value="10000">10,000</option>
+	    								<option selected="selected" value="20000">20,000</option>
+	    								<option value="30000">30,000</option>
+	    								<option value="40000">40,000</option>
+	    								<option value="50000">50,000</option>
+	    								<option value="60000">60,000</option>
+	    								<option value="70000">70,000</option>
+	    								<option value="80000">80,000</option>
+	    								<option value="90000">90,000</option>
+	    								<option value="100000">100,000</option>
+                                    </select>
+                        		</div>
+                        		<br />
+                        		<table>
+                        			<tr>
+                        				<td>
+			                        		Center on
+                        				</td>
+                        				<td>
+			                        		<table>
+			                        			<tr>
+			                        				<td>
+			                                    	<input type="radio" checked name="center" value="ROI">Regions of interests<br>
+			                                   		</td>
+			                                   	</tr>
+			                                   	<tr>
+			                                   		<td>
+														<input type="radio" name="center" value="feature">Features
+													</td>
+												</tr>
+			                        		</table>
+                        				</td>
+                        		</table>
+                                <br />
+                                <div>
+                                	<input type="image" value="submit" src="Images/submit.png" onmousedown="this.src='Images/submit2.png';return false;" onmouseup="this.src='Images/submit.png';">
+                                </div>
+                                <p style='font-size: 14px;'>
+                                	Select the window size in base pairs for your analysis.
+                                	Also select whether the colocation should be evaluated centered on your
+                                	ROIs or on the genomic features.  Results will be returned to your browser
+                                    as each feature is analyzed.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <hr noshade size="10" color="#cc9900"/>
+
+<div style='text-align:left;'>
+	&copy; 2015 <a href="www.insilico.us.com">In Silico Solutions</a>
+</div>
+    
+</body>
+</html>

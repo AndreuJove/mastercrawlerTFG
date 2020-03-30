@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>DMB - Data Mining Big</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+  <div id="main">
+      <br \>
+      <img src="images/intesta.gif" style="margin-left: 12px;" />
+      <br \><br \>
+
+      <div id="menubar">
+        <ul id="menu">
+          <li>          <a href="index.php">Home</a></li>
+          <li>          <a href="software.php">Software</a></li>
+          <li>          <a href="publications.php">Publications</a></li>
+          <li>          <a href="collaborations.php">Collaborations</a></li>
+          <li>          <a href="downloads.php">Downloads</a></li> 
+          <li>          <a href="about_us.php">About Us</a></li>
+          <li>          <a href="faq.php">FAQ</a></li>
+          <li>          <a href="news.php">News</a></li>
+        </ul>
+      </div>
+    <!--</div>-->
+
+    <div id="site_content">
+      <div class="sidebar">
+
+        <!-- insert your sidebar items here -->
+<!--
+        <div class="postit"></div>
+	<div class="postittext">
+            <h2 style="text-align:center; width:80%; margin-bottom: 10px; margin-top: 5px; font-weight: bold;">Contacts</h2>
+            <b>Email:</b> <a href="mailto:dmb@iasi.cnr.it">dmb@iasi.cnr.it</a><br />
+            <b>Tel</b> +39 06 7716443<br />
+            <b>Fax</b> +39 06 7716461<br />
+            <b>Address:</b> <a href="http://maps.google.it/maps?f=q&source=s_q&hl=it&geocode=&q=Viale+Manzoni+30,+00185+Roma&sll=41.442726,12.392578&sspn=18.654424,39.506836&ie=UTF8&hq=&hnear=Viale+Manzoni,+30h,+00185+Roma,+Lazio&z=16" target="blank">Viale Manzoni 30<br />
+            I-00185 Roma (Italy)</a><br />
+        </div> -->
+
+	<h1>Latest News</h1>
+
+        <h2>MISSEL: Multiple Sub Sequences Extractor for cLassification
+</h2>
+<h3>November 2015
+</h3>
+<p>A new feature selection algorithm that is able to extract alternative and equivalent classification models has been released.
+</p>
+<p></p>
+<h2>CAMUR: Classifier with Alternative and MUltiple Rule-based models
+</h2>
+<h3>October 2015
+</h3>
+<p>A new classification technique that is able to compute multiple rule-based models has been developed. 
+</p>
+<p></p>
+<h2>LAF: Logic Alignment Free
+</h2>
+<h3>April 2015
+</h3>
+<p>A new section and software for classifying biological sequences with alignment free techniques and rule based supervised methods. 
+</p>
+<p></p>
+
+	<a href="news.php">Read more news</a>
+		
+      </div>
+
+      <div class="image"><img src="images/img3.jpg" style="width: 200px;" alt="Sketch Image" /></div>
+
+      <div id="content">
+
+        <h1>BINAT - Biological Networks Analysis Tool</h1>
+
+        <p>
+The increasing availability of large network datasets along with the progresses in experimental high-throughput 
+technologies have promoted the need for tools allowing easy integration of experimental data with data derived 
+from network computational analysis. In order to enrich experimental data with network topological parameters, 
+it has been developed the Cytoscape plugin BiNAT (Biological Networks Analysis Tool).
+The full integration with Cytoscape makes BiNAT fully compatible with all popular operating systems 
+(NT and UNIX based OS) (cross-platform architecture).
+The plugin computes several network centrality parameters and allows the user to analyze these computational 
+results in textual and graphical format. BiNAT allows identifying network nodes that are relevant from 
+experimental and topological viewpoint. 
+BiNAT is one of the few Cytoscape plugins that computes several centralities at once. 
+In BiNAT, computed centralities can be easily correlated between each other in order to identify the most 
+significant nodes according to topological properties. Functional to this capability is the scatter plot options, 
+which allows easy correlating node centralities.
+BiNAT has been developed in Java under Eclipse IDE. It needs the Java Runtime Environment 7 for a proper functioning.
+</p>
+
+		<h2>Downloads</h1>
+				<TABLE >
+<TR><TD><a href="Downloads/BINAT/BiNAT_MANUAL.pdf">BiNAT_MANUAL.pdf</a></td></td></TR>
+<TR><TD><a href="Downloads/BINAT/README.txt">README.txt</a></td></td></TR>
+<TR><TD><a href="Downloads/BINAT/binat-1.0-apk-android-client.rar">binat-1.0-apk-android-client.rar</a></td></td></TR>
+<TR><TD><a href="Downloads/BINAT/binat-1.0-desktop-client.rar">binat-1.0-desktop-client.rar</a></td></td></TR>
+<TR><TD><a href="Downloads/BINAT/binat-1.0-jar-with-dependencies.rar">binat-1.0-jar-with-dependencies.rar</a></td></td></TR>
+<TR><TD><a href="Downloads/BINAT/binat-1.0-src.rar">binat-1.0-src.rar</a></td></td></TR>
+<TR><TD><a href="Downloads/BINAT/step-by-step_exercise_files.zip">step-by-step_exercise_files.zip</a></td></td></TR>
+</TABLE>
+		</p>
+
+		<p>Below you can see a screenshot of a network created with Binat.</p>
+		<p>
+		<img src="images/binat.png" alt="binat" title="binat"/><p></p>
+
+<p>
+BiNAT client description: desktop and mobile<br/>
+
+BiNAT Client is an IRC client with a fast and clean interface. It partially implements the client portion of 
+RFC 1459 and it supports the same features of BiNAT Application described above. It is used to remotely control 
+BiNAT application sending messages. Have been developed two versions of the software: desktop and mobile.
+BiNAT Desktop Client is an IRC chat program for Windows, Linux and MacOSX. The software was written in Java 
+to ensure cross-platform compatibility.
+BiNAT Mobile Client is supported by Android devices only. The software has the same features as the desktop version. 
+(It requires an active Internet connection).
+Formally, IRC is a real-time text-based multi-user communication protocol specification and implementation, 
+which relays messages between users on the network. Each network is composed of one IRC server 
+(integrated in BiNAT Application). The developed IRC clients are programs that connect to a given IRC server 
+in order to have the server relay communications to and from the same server.
+		</p>
+		<p>
+
+		
+
+		
+      </div>
+ 
+    </div>
+	<hr \>
+    <div id="footer">
+    Institute of Systems Analysis and Computer Science "Antonio Ruberti" <br />
+		National Research Council <br />
+		Via dei Taurini 19, I-00185 Rome (Italy) Tel. +39 06 49931 - Fax +39 06 49937106
+        <!--Copyright &copy; Company Name. All Rights Reserved. | <a href="http://validator.w3.org/check?uri=referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.dcarter.co.uk">design by dcarter</a>-->
+    </div>
+
+  </div>
+</body>
+</html>
+
+ 
+

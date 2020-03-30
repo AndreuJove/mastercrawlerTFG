@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>ScleractiniaTBase</title><link href="stylesheets/viroblast.css"  rel="Stylesheet" type="text/css" />
+<script type="text/javascript" src='javascripts/viroblast.js'></script>
+
+	<!-- jQuery (required) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
+	<!-- Anything Slider optional plugins -->
+	<script src="js/jquery.easing.1.2.js"></script>
+	<!-- http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js -->
+	<script src="js/swfobject.js"></script>
+
+	<!-- Demo stuff -->
+	<link rel="stylesheet" href="demos/css/page.css" media="screen">
+	<script src="demos/js/jquery.jatt.min.js"></script>
+
+	<!-- AnythingSlider -->
+	<link rel="stylesheet" href="css/anythingslider.css">
+	<script src="js/jquery.anythingslider.min.js"></script>
+
+	<!-- AnythingSlider video extension; optional, but needed to control video pause/play -->
+	<script src="js/jquery.anythingslider.video.js"></script>
+
+	<!-- Ideally, add the stylesheet(s) you are going to use here,
+	 otherwise they are loaded and appended to the <head> automatically and will over-ride the IE stylesheet below -->
+	<link rel="stylesheet" href="css/theme-metallic.css">
+	<link rel="stylesheet" href="css/theme-minimalist-round.css">
+	<link rel="stylesheet" href="css/theme-minimalist-square.css">
+	<link rel="stylesheet" href="css/theme-construction.css">
+	<link rel="stylesheet" href="css/theme-cs-portfolio.css">
+
+	<!-- Older IE stylesheet, to reposition navigation arrows, added AFTER the theme stylesheet above -->
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" href="css/anythingslider-ie.css" type="text/css" media="screen" />
+	<![endif]-->
+
+	<script>
+		// Demo functions
+		// **************
+		$(function(){
+
+			// External Link with callback function
+			$("#slide-jump").click(function(){
+				$('#slider2').anythingSlider(4, function(slider){ /* alert('Now on page ' + slider.currentPage); */ });
+				return false;
+			});
+
+			// External Link
+			$("a.muppet").click(function(){
+				$('#slider1').anythingSlider(5);
+				$(document).scrollTop(0); // make the page scroll to the top so you can watch the video
+				return false;
+			});
+
+			// Report Events to console & features list
+			$('#slider1, #slider2').bind('before_initialize initialized swf_completed slideshow_start slideshow_stop slideshow_paused slideshow_unpaused slide_init slide_begin slide_complete', function(e, slider){
+				// show object ID + event (e.g. "slider1: slide_begin")
+				var txt = slider.$el[0].id + ': ' + e.type + ', now on panel #' + slider.currentPage;
+				$('#status').text(txt);
+				if (window.console && window.console.firebug){ console.debug(txt); } // added window.console.firebug to make this work in Opera
+			});
+
+			// Theme Selector (This is really for demo purposes only)
+			var themes = ['minimalist-round','minimalist-square','metallic','construction','cs-portfolio'];
+			$('#currentTheme').change(function(){
+				var theme = $(this).val();
+				$('#slider1').closest('div.anythingSlider')
+					.removeClass( $.map(themes, function(t){ return 'anythingSlider-' + t; }).join(' ') )
+					.addClass('anythingSlider-' + theme);
+				$('#slider1').anythingSlider(); // update slider - needed to fix navigation tabs
+			});
+
+			// Add a slide
+			var imageNumber = 1;
+			$('button.add').click(function(){
+				$('#slider1')
+					.append('<li><img src="demos/images/slide-tele-' + (++imageNumber%2 + 1)  + '.jpg" alt="" /></li>')
+					.anythingSlider(); // update the slider
+			});
+			$('button.remove').click(function(){
+				$('#slider1 > li:not(.cloned):last').remove();
+				$('#slider1').anythingSlider(); // update the slider
+			});
+
+		});
+	</script>
+
+	<script>
+		// Set up Sliders
+		// **************
+		$(function(){
+
+			$('#slider2').anythingSlider({
+				autoPlay: true,
+				resizeContents      : false, // If true, solitary images/objects in the panel will expand to fit the viewport
+				navigationSize      : 3,     // Set this to the maximum number of visible navigation tabs; false to disable
+				navigationFormatter : function(index, panel){ // Format navigation labels with text
+					return [][index - 1];
+				},
+				onSlideBegin: function(e,slider) {
+					// keep the current navigation tab in view
+					slider.navWindow( slider.targetPage );
+				}
+			});
+
+			// tooltips for first demo
+			$.jatt();
+
+		});
+
+		// Set up Sliders
+		// **************
+		$(function(){
+
+			$('#slider4').anythingSlider({
+				autoPlay: true,
+				resizeContents      : false, // If true, solitary images/objects in the panel will expand to fit the viewport
+				navigationSize      : 3,     // Set this to the maximum number of visible navigation tabs; false to disable
+				navigationFormatter : function(index, panel){ // Format navigation labels with text
+					return [][index - 1];
+				},
+				onSlideBegin: function(e,slider) {
+					// keep the current navigation tab in view
+					slider.navWindow( slider.targetPage );
+				}
+			});
+
+			// tooltips for first demo
+			$.jatt();
+
+		});
+	</script>
+</head>
+<body>
+    <div id="header">
+    <div class="spacer">&nbsp;</div>    
+	<span class="logo">CoralTBase: A Transcriptomic Database for Scleractinia Corals
+	</span>
+	<br/><br/>   
+</div>	<div id="nav">
+	<span class='nav'><a href="index.php" class="nav">Home</a></span>
+	<span class='nav'><a href="blast.php" class="nav">Scleractinia BLAST</a></span>
+	<span class='nav'><a href=general_anno.php class="nav">General Annotation Search</a></span>
+	<span class='nav'><a href=go_anno.php class="nav">GO Annotation Search</a></span>
+	<span class='nav'><a href=kegg_anno.php class="nav">KEGG and Reactome Annotation Search</a></span>
+	<span class='nav'><a href=download_files.php class="nav">Downloads</a></span>
+	&nbsp;
+</div>	<div class="spacer">&nbsp;</div>
+	<div id="indent" style=";">
+		<div class='box' style = "">
+			<div id="title">
+				<span><strong>Introduction</strong></span>
+			</div>
+			<table>
+			<tr>
+			<td width="750" rowspan="2">
+				<div style="">
+					<p>Scleractinian corals are important reef builders, but around the world they are under the threat of global environmental changes as well as local stressors. Molecular resources are critical for understanding a species’ stress responses and resilience to the changing environment, but such resources are unavailable for most scleractinian corals, especially those distributed in the South China Sea. We therefore aimed to provide transcriptome resources for 14 common species, including a few structure forming species in the South China Sea.</p>
+					<br>
+					<p>We sequenced the transcriptome of 14 species of scleractinian corals using high-throughput RNA-seq and conducted <em>de novo</em> assembly. For each species, 7.4 to 12.0 gigabases of reads were produced, which were then assembled into 271 to 762 thousand contigs with a N50 value of 629 to 1427 bp. These contigs included 66 to 114 thousand unigenes with a predicted open reading frame, and 74.3% to 80.5% of the unigenes were functionally annotated. In the azooxanthelate species <em>Tubastraea coccinea</em>, 41.5% of the unigenes had at least a best-hit sequence from corals. In the other thirteen species, 20.2% to 48.9% of the annotated unigenes had best-hit sequences from corals, and 28.3% to 51.6% from the symbiotic algae <em>Symbiodinum</em> spp. With these resources, we developed a transcriptome database (CoralTBase) which features online BLAST and keyword search for unigenes/functional terms through a user friendly Internet interface.</p>
+					<br>
+					<p>We developed comprehensive transcriptome resources for 14 species of scleractinian corals and constructed a publicly accessible database to facilitate molecular research on these corals. CoralTBase will facilitate not only functional studies using these corals to understand the molecular basis of stress responses and adaptation, but also comparative genomic studies with other species of corals and more distantly related cnidarians.</p>
+					<br>
+				</div>
+			</td>
+			<!-- AnythingSlider #2 -->
+			<td width = "200">
+				<div style = "">
+					<ul id="slider2">
+						<!--example
+						<li class="panel1">
+							<div>
+								<div class="textSlide">
+									<img src="image/database_photo/Acropora_digitifera.JPG" alt="" style=" width: 370px; height: 200px;" />
+									<p>@tbd</p>
+								</div>
+							</div>
+						</li>-->
+						
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Acropora_digitifera.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Acropora digitifera</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Dipsastraea_rotumana.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Dipsastraea rotumana</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Favites_acuticollis.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Favites acuticollis</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Galaxea_fascicularis.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Galaxea fascicularis</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Goniopora_lobata.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Goniopora lobata</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Hydnophora_exesa.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Hydnophora exesa</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Leptastrea_purpurea.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Leptastrea purpurea</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Lithophyllon_undulatum.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Lithophyllon undulatum</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Montipora_peltiformis.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Montipora peltiformis</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Pavona_decussata.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Pavona decussata</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Platygyra_carnosa.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Platygyra carnosa</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Porites_lutea.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Porites lutea</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Tubastraea_coccinea.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Tubastraea coccinea</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/database_photo/Turbinaria_peltata.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Turbinaria peltata</p>
+										</div>
+									</div>
+								</li>					</ul>
+				</div>
+			</td>
+			</tr>
+
+			<tr>
+			<!-- AnythingSlider #2 -->
+			<td width = "200">
+				<div style = "">
+					<ul id="slider4">
+						<!--example
+						<li class="panel1">
+							<div>
+								<div class="textSlide">
+									<img src="image/database_photo/Acropora_digitifera.JPG" alt="" style=" width: 370px; height: 200px;" />
+									<p>@tbd</p>
+								</div>
+							</div>
+						</li>-->
+						
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Acropora_digitifera.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Acropora digitifera skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Dipsastraea_rotumana.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Dipsastraea rotumana skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Favites_acuticollis.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Favites acuticollis skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Galaxea_fascicularis.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Galaxea fascicularis skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Goniopora_lobata.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Goniopora lobata skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Hydnophora_exesa.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Hydnophora exesa skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Leptastrea_purpurea.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Leptastrea purpurea skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Lithophyllon_undulatum.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Lithophyllon undulatum skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Montipora_peltiformis.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Montipora peltiformis skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Pavona_decussata.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Pavona decussata skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Platygyra_carnosa.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Platygyra carnosa skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Porites_lutea.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Porites lutea skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Tubastraea_coccinea.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Tubastraea coccinea skeleton</p>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div>
+										<div class="textSlide">
+										<img src="image/coral_skeleton_photo/Turbinaria_peltata.JPG" alt="" style=" width: 370px; height: 200px;" />
+										<p>Turbinaria peltata skeleton</p>
+										</div>
+									</div>
+								</li>					</ul>
+				</div>
+			</td>
+			</tr>
+			</table>
+		</div>
+		<div class='box'>
+			<div id="title">
+				<span><strong>Other websites with coral transcriptome resources</strong></span>
+			</div>
+			<ul>
+				<li><p><a href="http://ips.iis.sinica.edu.tw/coral/">Transcriptome of coral, Pocillopora damicornis, with Symbiodinium </a></p></li>
+				
+				<li><p><a href="http://www.comp.hkbu.edu.hk/~db/PcarnBase/">PcarnBase: A Transcriptomic Database for Platygyra carnosus (Hong Kong, China) </a></p></li>
+				
+				<li><p><a href="http://comparative.reefgenomics.org/datasets.html">Reefgenomics </a></p></li>
+				
+				<li><p><a href="http://people.oregonstate.edu/~meyere/data.html">OSU Integrative Biology Meyer Lab </a></p></li>
+			</ul>
+		</div>
+		<!-- <div class='box'>
+			<div id="title">
+				<span><strong>Related Coral Genomic Resources</strong></span>
+			</div>
+			<p><a href="http://www.PocilloporaBase.org">Transcriptome of Pocillopora damicornis</a></p>
+			<p><a href="http://www.bio.utexas.edu/research/matz_lab/matzlab/Data.html" >Transcriptome of a number of coral speices: <i>Acropora tenuis, Acropora millepora, Acropora hyacinthus</i>, and <i>Porites astreoides</i></a></p>
+			<p>
+			<a href="http://marinegenomics.oist.jp/acropora_digitifera">Genome of <i>Acropora digitifera</i></a>
+			</p>
+		</div> -->
+		<div class='box'>
+			<div id="title">
+					<span><strong>Contacts</strong></span>
+			</div>
+			<table class = 'myfont' cellpadding = "2px">
+				<tr><td width=250>Dr. Jian-Wen Qiu</td><td>Dr. Jianliang Xu</td></tr>
+				<tr><td>Department of Biology</td><td>Department of Computer Science</td></tr>
+				<tr><td>Hong Kong Baptist University</td><td>Hong Kong Baptist University</td></tr>
+				<tr><td>Email: qiujw<img src="image/email.jpg" width="12" height="11">hkbu.edu.hk</td><td>Email: xujl<img src="image/email.jpg" width="12" height="11">comp.hkbu.edu.hk</td></tr>
+			</table>
+		</div>
+		</div>
+		</div>
+	</div>
+	<div id="footer" align="center">
+	<p>&copy; 2018 All rights reserved. This website is compatible with most modern browsers, e.g., Chrome, Safari, IE (9 or above).
+	</p>
+</div></body>
+</html>

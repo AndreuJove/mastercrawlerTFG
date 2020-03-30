@@ -1,0 +1,8 @@
+Date: Mon, 30 Mar 2020 18:48:04 GMT
+Server: Apache/2.4.29 (Ubuntu)
+Cache-Control: no-cache, private
+Set-Cookie: XSRF-TOKEN=eyJpdiI6ImJxUUpUYmxTZHcrNXFBRlBnVWlJdWc9PSIsInZhbHVlIjoiODQydzE2V3hRdzltMEJLWmxmZ2ZtWTBwb011SDNRV3VhaFI1TWJpb2hmaHV5alEraStCaVNcL2xmMTZZdDhKQ1wvdnJmMUlDdEtJZU8yeDdcL2JuYXpaU0E9PSIsIm1hYyI6ImJhNGEzY2I0ZmQxMmYwOTZjN2Y2MGY0M2VhM2MyNmQxOTc1NDYxY2NjMWJhZDA3YzYwNmQ2OTZiMGQ1NTM1MmUifQ%3D%3D; expires=Mon, 30-Mar-2020 20:48:04 GMT; Max-Age=7200; path=/
+Set-Cookie: laravel_session=eyJpdiI6IlhPT20zY0dPMVpTQmpxc1hQN1RSREE9PSIsInZhbHVlIjoiUDlWUWxKRlNwMWNWRlEwemlQanJUXC9pVjlQTzRXcHNYWjhkYmZacWNWcjJXQkNZTUtUdktka3lqTVNld0FWV3BJZGM0bEJWUmdFOXBtVVBGa0s5SzZ3PT0iLCJtYWMiOiJmMjk5OWIzYzllMmY2ZTIzODgyNTkxOGYwNjZmMDU3ZGMwYjQyZWZhMDU4ODZkOTA5MzE3NmZiYzAwNTA1YjYyIn0%3D; expires=Mon, 30-Mar-2020 20:48:04 GMT; Max-Age=7200; path=/; HttpOnly
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/html; charset=UTF-8

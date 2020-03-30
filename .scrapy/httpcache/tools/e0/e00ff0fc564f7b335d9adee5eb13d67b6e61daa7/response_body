@@ -1,0 +1,285 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<meta name="Keywords" content="GEMDOCK, BioXGEM, 3D-Blast, structural alignment" />
+<title>3D-BLAST Protein Structure Search</title>
+<link href="tm/style.css" rel="stylesheet" type="text/css">
+<!-- GOOGLE ANALYTICS BEGIN   updated by Chihuah at 2010/11/24-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19879361-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- GOOGLE ANALYTICS END -->
+</head>
+<script language="javascript">
+function OpenWindow(url,w,h)
+{
+  window.open(url,'GEMDOCK','width='+w+',height='+h+',toolbar=0,menubar=0,location=0,directories=0,status=0');
+}
+</script>
+<body >
+
+<!--  Header  Begin   -->
+<div id="banner"><a href="http://gemdock.life.nctu.edu.tw">BioXGEM</a>.<span class="loc">3D-BLAST Protein Structure Search</span></div>
+<div id="bannerimg">
+  <a href="http://gemdock.life.nctu.edu.tw">
+    <img src="./images/BioXGEM.png" border="0">
+  </a>
+</div>
+<!--  Header  End     -->
+
+<!--  NavMenu  Begin  -->
+<div id="nav">
+  <table cellspacing="0">
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</div>
+<!--  NavMenu  End    -->
+
+
+
+<!--  LeftMenu  Begin -->
+<div id="links">
+  <table>
+    <tr><td>
+      <a href="dbsas.php">Home</a><br \><br \>
+      <a href="intro.php">What's 3D-BLAST</a><br \><br \>
+      <a href="sa.php">Structural alphabet</a><br \><br \>
+      <a href="sm.php">Substitution matrix</a><br \><br \>
+      <a href="evalue.php"><i>E</i>-value</a><br \><br \>
+      <a href="kamap.php">(<font size="4.5"><span style="font-family:Symbol">k</span></font>, <font size="4.5"><span style="font-family:Symbol">a</span></font>) map</a><br \><br \>
+      <a href="help.php">Help</a><br \><br \>
+      <a href="download.php">Download</a><br \><br \>
+      <a href="tracking.php">Visitor tracking</a><br \><br \>
+      <a href="contact.php">Contact us</a><br \><br \>
+    </td></tr>
+  </table>
+</div>
+<!--  LeftMenu  End   -->
+
+
+<!--  Body  Begin     -->
+<div id="content">
+  <table border=0>
+    <tr>
+      <td valign="top" height="500px" bgcolor="#FFFFFF">
+
+
+<!--  Main  Begin     -->
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+</head>
+<body >
+<h1>Protein Structure Search</h1>
+
+<p><h4>Input a protein structure as a query to discover its homologous proteins and evolutionary classifications.</h4></p>
+<p>Press the <img border="0" src="images/HELP.GIF" width="12" height="16">
+to obtain more information on that specific field.</p>
+<p><b><font color="#ff0000">NEWS:</font></b> The <b>standalone 3D-BLAST program</b> is avaliable now. Please see <a href="download.php">Download page</a> for more information.</p>
+<form name="sasblast" method="get" action="sasoutput.php">
+<table width="750">
+  <tr>
+    <td width="100%" colspan="3"><hr width="90%" align="left"></td>
+  </tr>
+  <tr width="100%">
+    <td width="10%" rowspan="2">
+	<p align="right"><b>Query </b></td>
+    <td width="8%">
+	<p align="right"><b>domain:</b></td>
+    <td width="100%">
+      <input type="radio" id="Query_type_SCOP" name="Query_type" value="SCOPID">
+      SCOP ID: <input type="text" name="SCOP_query" size="7" value="d1ej8a_" onfocus="document.getElementById('Query_type_SCOP').checked=true;">&nbsp&nbsp<a HREF="help.php#scop_id"><img border="0" src="images/HELP.GIF" width="12" height="16"></a></td>
+  </tr>
+  <tr>
+    <td width="8%">
+	<p align="right"><b>protein:</b></td>
+    <td width="100%">
+      <input type="radio" id="Query_type_PDB" name="Query_type" value="PDBID" checked>
+      PDB ID:<input type="text" name="PDB_query" size="4" value="1gr3" onfocus="document.getElementById('Query_type_PDB').checked=true;">
+      Chain ID:<input type="text" name="PDB_chain" size="1" value="A" onfocus="document.getElementById('Query_type_PDB').checked=true;">&nbsp&nbsp<a HREF="help.php#pdb_id"><img border="0" src="images/HELP.GIF" width="12" height="16"></a></td>
+  </tr>
+ 
+  <tr>
+    <td width="15%" colspan="2">　</td>
+    <td width="100%">
+      <div align="center">
+        <input type="submit" value="Search"> <input type="reset" VALUE="Reset">
+      </div>
+    </td></tr>
+  <tr>
+    <td colspan="3">
+      <hr width="90%" align="left"></td>
+  </tr>
+  <tr>
+    <td width="15%" colspan="2">
+      <p align="right"><b>New protein:</b></td>
+    <td width="100%">
+      &nbsp; <a href="dbsas-upload.php">Upload</a></td>
+  </tr>
+    <tr>
+    <td width="100%" colspan="3">
+      <div align="left">
+  <hr width="90%" align="left">
+      </div>
+    </td>
+    </tr>
+  <tr>
+    <td colspan="3"><b> Options:</b></td>
+    </tr>
+  <tr>
+    <td width="55">　</td>
+    <td colspan="2" width="685">Choose Database
+    &nbsp&nbsp<a HREF="help.php#database"><img border="0" src="images/HELP.GIF" width="12" height="16"></a></td>
+  </tr>
+  <tr>
+    <td width="55">
+      　</td>
+    <td colspan="2" width="685">
+<input name="database" type="radio" value="SASPDBall" >PDB (29-May-10)<input name="database" type="radio" value="SASNRPDB"  >nr-PDB-90<input name="database" type="radio" value="SASSCOPall">SCOP 1.75 (all)<input name="database" type="radio" value="SASSCOP95" >SCOP 1.75 (95%)<input name="database" type="radio" value="SASSCOP40" checked>SCOP 1.75 (40%)      </td>
+  </tr>
+
+  <tr><td width="55">　</td><td colspan="2" width="685"></td></tr>
+  <tr>
+    <td width="55">　</td>
+    <td colspan="2" width="685"><i>E</i>-value
+    &nbsp&nbsp<a HREF="help.php#evalue"><img border="0" src="images/HELP.GIF" width="12" height="16"></a></td>
+  </tr>
+  <tr>
+    <td width="55">
+      　</td>
+    <td colspan="2" width="685">
+      <input name="evalue" type="radio" value="1e-1">10<sup>-1</sup>
+      <input name="evalue" type="radio" value="1e-5">10<sup>-5</sup>
+      <input name="evalue" type="radio" value="1e-10" checked>10<sup>-10</sup>
+      <input name="evalue" type="radio" value="1e-15">10<sup>-15</sup>
+      <input name="evalue" type="radio" value="1e-20">10<sup>-20</sup>
+      <!--<input name="evalue" type="radio" value="10000">all
+      <input name="evalue" type="radio" value="x">other:
+      <input name="evalueNum" type="text" size="4">-->
+      </td>
+  </tr>
+  <tr><td width="55">　</td><td colspan="2" width="685">　</td></tr>
+  <tr>
+    <td width="55">　</td>
+    <td colspan="2" width="685">Maximum number of hit structures&nbsp&nbsp<a HREF="help.php#output"><img border="0" src="images/HELP.GIF" width="12" height="16"></a></td>
+  </tr>
+    <tr>
+    <td width="55">
+      　</td>
+    <td colspan="2" width="685">
+      <input name="Output" type="radio" value="10">10
+      <input name="Output" type="radio" value="20" checked>20
+      <input name="Output" type="radio" value="50">50
+      <input name="Output" type="radio" value="100">100
+      <input name="Output" type="radio" value="200">200
+      <input id="otherlimit" name="Output" type="radio" value="-1">other:
+      <input name="OutputNum" type="text" size="4" onfocus="document.getElementById('otherlimit').checked=true;">
+      <input name="DBPA" type="hidden" value="DB">
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="3">
+      <div align="left">
+  <hr width="90%" align="left">
+      </div>
+    </td>
+    </tr>
+  
+  <tr>
+    <td colspan="3"><b> Reference:</b></td>
+    </tr>
+  <tr>
+    <td width="55">　</td>
+    <td colspan="2" width="685"><b>1.</b> C.-H. Tung, J.-W. Huang and J.-M. Yang "<a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=AbstractPlus&list_uids=17335583&query_hl=11&itool=pubmed_docsum">Kappa-alpha plot derived structural alphabet and BLOSUM-like substitution matrix for fast protein structure database search</a>," <i>Genome Biology</i>, vol. 8, pp. R31.1~R31.16, 2007.</td>
+  </tr>
+  <tr>
+    <td width="55">　</td>
+    <td colspan="2" width="685"><b>2.</b> J.-M. Yang and C.-H. Tung "<a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=AbstractPlus&list_uids=16885238&query_hl=2&itool=pubmed_docsum">Protein structure database search and evolutionary classification</a>," <i>Nucleic Acids Research</i>, vol. 34, pp. 3646-3659, 2006.</td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="3">
+      <div align="left">
+  <hr width="90%" align="left">
+      </div>
+    </td>
+    </tr>
+
+  <tr>
+    <td colspan="3"><b> Related Work:</b></td>
+    </tr>
+  <tr>
+    <td width="55">　</td>
+    <td colspan="2" width="685"><b><a href="http://gemdock.life.nctu.edu.tw/fastSCOP/">fastSCOP</a>:</b> A web server that rapidly identifies the structural domains and determines the evolutionary superfamilies of a query protein structure by using 3D-BLAST.</td>
+  </tr>
+  
+  <tr>
+    <td width="100%" colspan="3">
+      <div align="left">
+  <hr width="90%" align="left">
+      </div>
+    </td>
+    </tr>
+       
+  <tr>
+    <td width="55">
+      　</td>
+    <td width="40">
+      　</td>
+    <td width="100%">
+      <div align="right">
+        &nbsp;
+      </div>
+    </td>
+  </tr>
+  <tr><td colspan="3">
+  <p><span class="SMALL1">Last updated 2010/05/29 by 
+                  <a href="mailto:moon@cc.nctu.edu.tw">J.-M. Yang</a>,
+                  <a href="mailto:chihuah.bi91g@nctu.edu.tw">C.-H. Tung</a> 
+                    </p>
+  </td></tr>
+</table>
+</form>
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
+
+<!--  Main  End       -->
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!--  Footer  Begin
+<div id="footer">
+	Copyright &copy; 2006 BioXGEM Lab.&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	Institute of Bioinformatics&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	National Chiao-Tung University&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	Hsinchu, Taiwan, R.O.C.&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+Footer  Begin  -->
+
+<!--  Body  End       -->
+
+</body>
+</html>

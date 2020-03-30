@@ -1,0 +1,422 @@
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<meta name="Keywords" content="GEMDOCK" />
+<meta name="Keywords" content="BioXGEM" />
+<title>3D-partner</title>
+<link href="tm/style.css" rel="stylesheet" type="text/css">
+</head>
+<script language="javascript">
+function OpenWindow(url,w,h)
+{
+  window.open(url,'GEMDOCK','width='+w+',height='+h+',toolbar=0,menubar=0,location=0,directories=0,status=0');
+}
+</script>
+<body >
+
+<!--  Header  Begin   -->
+<div id="banner"><a href="http://gemdock.life.nctu.edu.tw">BioXGEM</a>.<span class="loc">3D-partner</span></div>
+<div id="bannerimg">
+  <a href="http://gemdock.life.nctu.edu.tw">
+    <img src="./images/BioXGEM.png" border="0">
+  </a>
+</div>
+<!--  Header  End     -->
+
+<!--  NavMenu  Begin  -->
+<div id="nav">
+  <table cellspacing="0">
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</div>
+<!--  NavMenu  End    -->
+
+
+
+<!--  LeftMenu  Begin -->
+<div id="links">
+  <table width="100%">
+    <tr><td>
+      <a href="./index.php">Home</a><br /><br />
+      <a href="./intro.php">Query framework</a><br /><br />
+      <a href="./hotspot.php">Hetero-dimers in ASEdb</a><br /><br />
+      <a href="./download.php">Download</a><br /><br />
+      <a href="./e_mail.php">Contact us</a><br /><br />
+    </td></tr>
+  </table>
+</div>
+<!--  LeftMenu  End   -->
+
+
+<!--  Body  Begin     -->
+<div id="content">
+  <table>
+    <tr>
+      <td valign="top" width="*" height="600" bgcolor="#FFFFFF">
+
+
+<!--  Main  Begin     -->
+
+<P>
+<h3>Input a protein sequence in <a href='fasta_des.html'>FASTA</a> format to discover its interaction partners</h3>
+</p>
+
+<p>
+<form action='getinput.php' method='post'>
+    <textarea name='seq' style='width: 40em; height: 20em;'>
+&gt;P61244|MAX_HUMAN Protein max OS=Homo sapiens GN=MAX
+MSDNDDIEVESDEEQPRFQSAADKRAHHNALERKRRDHIKDSFHSLRDSVPSLQGEKASR
+AQILDKATEYIQYMRRKNHTHQQDIDDLKRQNALLEQQVRALEKARSSAQLQTNYPSSDN
+SLYTNAKGSTISAFDGGSDSSSESEPEEPQSRKKLRMEAS
+    </textarea>
+    <input type="SUBMIT">
+    <h3>Options </h3>
+  <label>Common species&nbsp&nbsp</label>
+  <select name="common_species">
+  	  <option value="9606" selected>Homo sapiens (Human)</option>
+  	  <option value="10090">Mus musculus (Mouse)</option>
+  	  <option value="4932">Saccharomyces cerevisiae (Baker's yeast)</option>
+  		<option value="10116">Rattus norvegicus (Rat)</option>
+  		<option value="562">Escherichia coli</option>
+  		<option value="7227">Drosophila melanogaster (Fly)</option>
+  		<option value="9913">Bos taurus (Bovine)</option>
+  		<option value="4896">Schizosaccharomyces pombe (Fission yeast)</option>
+  		<option value="6239">Caenorhabditis elegans (Worm)</option>
+  		<option value="1423">Bacillus subtilis</option>
+  		<option value="00">-----------------------</option>
+  		<option value="" >All species</option>
+			<option value="V">Vertebrate</option>
+			<option value="I">Insect</option>
+			<option value="P">Plant</option>
+			<option value="F">Fungi</option>
+			<option value="N">Nematoda</option>
+			<option value="B">Bacteria</option>
+			<option value="U">Viruses</option>
+  </select><br>  
+    
+	<label>All species&nbsp&nbsp</label>
+	
+	 
+  <select name="species">
+  					<option value="none" selected>---</option>
+   		      <option value="" >All species</option>
+			      <option value="V">Vertebrate</option>
+			      <option value="I">Insect</option>
+			      <option value="P">Plant</option>
+			      <option value="F">Fungi</option>
+			      <option value="N">Nematoda</option>
+			      <option value="B">Bacteria</option>
+			      <option value="U">Viruses</option>
+			      <option value="00">-----------------------</option>
+						<option value="62977">Acinetobacter sp.</option>
+						<option value="56636">Aeropyrum pernix</option>
+						<option value="176299">Agrobacterium tumefaciens</option>
+						<option value="103690">Anabaena sp.</option>
+						<option value="240292">Anabaena variabilis</option>
+						<option value="63363">Aquifex aeolicus</option>
+						<option value="3702">Arabidopsis thaliana</option>
+						<option value="2234">Archaeoglobus fulgidus</option>
+						<option value="33169">Ashbya gossypii</option>
+						<option value="5085">Aspergillus fumigatus</option>
+						<option value="76114">Azoarcus sp.</option>
+						<option value="1392">Bacillus anthracis</option>
+						<option value="222523">Bacillus cereus</option>
+						<option value="66692">Bacillus clausii</option>
+						<option value="86665">Bacillus halodurans</option>
+						<option value="279010">Bacillus licheniformis</option>
+						<option value="1422">Bacillus stearothermophilus</option>
+						<option value="1423">Bacillus subtilis</option>
+						<option value="180856">Bacillus thuringiensis subsp. konkukian</option>
+						<option value="10665">Bacteriophage T4</option>
+						<option value="817">Bacteroides fragilis</option>
+						<option value="818">Bacteroides thetaiotaomicron</option>
+						<option value="38323">Bartonella henselae</option>
+						<option value="803">Bartonella quintana</option>
+						<option value="959">Bdellovibrio bacteriovorus</option>
+						<option value="216816">Bifidobacterium longum</option>
+						<option value="203907">Blochmannia floridanus</option>
+						<option value="518">Bordetella bronchiseptica</option>
+						<option value="519">Bordetella parapertussis</option>
+						<option value="520">Bordetella pertussis</option>
+						<option value="139">Borrelia burgdorferi</option>
+						<option value="9913">Bos taurus</option>
+						<option value="7955">Brachydanio rerio</option>
+						<option value="375">Bradyrhizobium japonicum</option>
+						<option value="235">Brucella abortus</option>
+						<option value="29459">Brucella melitensis</option>
+						<option value="29461">Brucella suis</option>
+						<option value="118099">Buchnera aphidicola subsp. Acyrthosiphon pisum</option>
+						<option value="135842">Buchnera aphidicola subsp. Baizongia pistaciae</option>
+						<option value="98794">Buchnera aphidicola subsp. Schizaphis graminum</option>
+						<option value="13373">Burkholderia mallei</option>
+						<option value="28450">Burkholderia pseudomallei</option>
+						<option value="269483">Burkholderia sp.</option>
+						<option value="271848">Burkholderia thailandensis</option>
+						<option value="6238">Caenorhabditis briggsae</option>
+						<option value="6239">Caenorhabditis elegans</option>
+						<option value="197">Campylobacter jejuni</option>
+						<option value="5476">Candida albicans</option>
+						<option value="5478">Candida glabrata</option>
+						<option value="9615">Canis familiaris</option>
+						<option value="246194">Carboxydothermus hydrogenoformans</option>
+						<option value="155892">Caulobacter crescentus</option>
+						<option value="10141">Cavia porcellus</option>
+						<option value="83560">Chlamydia muridarum</option>
+						<option value="83558">Chlamydia pneumoniae</option>
+						<option value="813">Chlamydia trachomatis</option>
+						<option value="3055">Chlamydomonas reinhardtii</option>
+						<option value="83557">Chlamydophila caviae</option>
+						<option value="1097">Chlorobium tepidum</option>
+						<option value="536">Chromobacterium violaceum</option>
+						<option value="1488">Clostridium acetobutylicum</option>
+						<option value="1502">Clostridium perfringens</option>
+						<option value="1513">Clostridium tetani</option>
+						<option value="167879">Colwellia psychrerythraea</option>
+						<option value="1717">Corynebacterium diphtheriae</option>
+						<option value="152794">Corynebacterium efficiens</option>
+						<option value="1718">Corynebacterium glutamicum</option>
+						<option value="306537">Corynebacterium jeikeium</option>
+						<option value="777">Coxiella burnetii</option>
+						<option value="10029">Cricetulus griseus</option>
+						<option value="5207">Cryptococcus neoformans</option>
+						<option value="2771">Cyanidium caldarium</option>
+						<option value="4959">Debaryomyces hansenii</option>
+						<option value="159087">Dechloromonas aromatica</option>
+						<option value="1299">Deinococcus radiodurans</option>
+						<option value="84980">Desulfotalea psychrophila</option>
+						<option value="882">Desulfovibrio vulgaris</option>
+						<option value="44689">Dictyostelium discoideum</option>
+						<option value="7227">Drosophila melanogaster</option>
+						<option value="162425">Emericella nidulans</option>
+						<option value="6035">Encephalitozoon cuniculi</option>
+						<option value="1351">Enterococcus faecalis</option>
+						<option value="9796">Equus caballus</option>
+						<option value="29471">Erwinia carotovora subsp. atroseptica</option>
+						<option value="562">Escherichia coli</option>
+						<option value="83334">Escherichia coli O157:H7</option>
+						<option value="217992">Escherichia coli O6</option>
+						<option value="9685">Felis silvestris catus</option>
+						<option value="119856">Francisella tularensis subsp. tularensis</option>
+						<option value="76856">Fusobacterium nucleatum subsp. nucleatum</option>
+						<option value="9031">Gallus gallus</option>
+						<option value="1462">Geobacillus kaustophilus</option>
+						<option value="269799">Geobacter metallireducens</option>
+						<option value="35554">Geobacter sulfurreducens</option>
+						<option value="33072">Gloeobacter violaceus</option>
+						<option value="442">Gluconobacter oxydans</option>
+						<option value="3847">Glycine max</option>
+						<option value="9595">Gorilla gorilla gorilla</option>
+						<option value="730">Haemophilus ducreyi</option>
+						<option value="727">Haemophilus influenzae</option>
+						<option value="2238">Haloarcula marismortui</option>
+						<option value="2242">Halobacterium salinarium</option>
+						<option value="32025">Helicobacter hepaticus</option>
+						<option value="210">Helicobacter pylori</option>
+						<option value="85963">Helicobacter pylori J99</option>
+						<option value="9606">Homo sapiens</option>
+						<option value="4513">Hordeum vulgare</option>
+						<option value="10360">Human cytomegalovirus</option>
+						<option value="135577">Idiomarina loihiensis</option>
+						<option value="573">Klebsiella pneumoniae</option>
+						<option value="28985">Kluyveromyces lactis</option>
+						<option value="1579">Lactobacillus acidophilus</option>
+						<option value="33959">Lactobacillus johnsonii</option>
+						<option value="1590">Lactobacillus plantarum</option>
+						<option value="1360">Lactococcus lactis subsp. lactis</option>
+						<option value="297245">Legionella pneumophila</option>
+						<option value="272624">Legionella pneumophila subsp. pneumophila</option>
+						<option value="59736">Leifsonia xyli subsp. xyli</option>
+						<option value="173">Leptospira interrogans</option>
+						<option value="44275">Leptospira interrogans serogroup</option>
+						<option value="1642">Listeria innocua</option>
+						<option value="1639">Listeria monocytogenes</option>
+						<option value="265669">Listeria monocytogenes serotype 4b</option>
+						<option value="9541">Macaca fascicularis</option>
+						<option value="9544">Macaca mulatta</option>
+						<option value="221988">Mannheimia succiniciproducens</option>
+						<option value="10036">Mesocricetus auratus</option>
+						<option value="187420">Methanobacterium thermoautotrophicum</option>
+						<option value="2190">Methanococcus jannaschii</option>
+						<option value="39152">Methanococcus maripaludis</option>
+						<option value="2320">Methanopyrus kandleri</option>
+						<option value="2214">Methanosarcina acetivorans</option>
+						<option value="2209">Methanosarcina mazei</option>
+						<option value="414">Methylococcus capsulatus</option>
+						<option value="212035">Mimivirus</option>
+						<option value="10090">Mus musculus</option>
+						<option value="1765">Mycobacterium bovis</option>
+						<option value="1769">Mycobacterium leprae</option>
+						<option value="1770">Mycobacterium paratuberculosis</option>
+						<option value="1773">Mycobacterium tuberculosis</option>
+						<option value="2097">Mycoplasma genitalium</option>
+						<option value="2104">Mycoplasma pneumoniae</option>
+						<option value="2107">Mycoplasma pulmonis</option>
+						<option value="242231">Neisseria gonorrhoeae</option>
+						<option value="65699">Neisseria meningitidis serogroup A</option>
+						<option value="491">Neisseria meningitidis serogroup B</option>
+						<option value="5141">Neurospora crassa</option>
+						<option value="4097">Nicotiana tabacum</option>
+						<option value="323098">Nitrobacter winogradskyi</option>
+						<option value="323261">Nitrosococcus oceani</option>
+						<option value="915">Nitrosomonas europaea</option>
+						<option value="323848">Nitrosospira multiformis</option>
+						<option value="37329">Nocardia farcinica</option>
+						<option value="182710">Oceanobacillus iheyensis</option>
+						<option value="9986">Oryctolagus cuniculus</option>
+						<option value="4530">Oryza sativa</option>
+						<option value="9940">Ovis aries</option>
+						<option value="9598">Pan troglodytes</option>
+						<option value="747">Pasteurella multocida</option>
+						<option value="338963">Pelobacter carbinolicus</option>
+						<option value="74109">Photobacterium profundum</option>
+						<option value="141679">Photorhabdus luminescens subsp. laumondii</option>
+						<option value="82076">Picrophilus torridus</option>
+						<option value="3888">Pisum sativum</option>
+						<option value="9600">Pongo pygmaeus</option>
+						<option value="2787">Porphyra purpurea</option>
+						<option value="837">Porphyromonas gingivalis</option>
+						<option value="1219">Prochlorococcus marinus</option>
+						<option value="59919">Prochlorococcus marinus subsp. pastoris</option>
+						<option value="1747">Propionibacterium acnes</option>
+						<option value="264201">Protochlamydia amoebophila</option>
+						<option value="326442">Pseudoalteromonas haloplanktis</option>
+						<option value="287">Pseudomonas aeruginosa</option>
+						<option value="205922">Pseudomonas fluorescens</option>
+						<option value="303">Pseudomonas putida</option>
+						<option value="264730">Pseudomonas syringae pv. phaseolicola</option>
+						<option value="205918">Pseudomonas syringae pv. syringae</option>
+						<option value="323">Pseudomonas syringae pv. tomato</option>
+						<option value="334543">Psychrobacter arcticum</option>
+						<option value="13773">Pyrobaculum aerophilum</option>
+						<option value="29292">Pyrococcus abyssi</option>
+						<option value="2261">Pyrococcus furiosus</option>
+						<option value="53953">Pyrococcus horikoshii</option>
+						<option value="69014">Pyrococcus kodakaraensis</option>
+						<option value="264198">Ralstonia eutropha</option>
+						<option value="305">Ralstonia solanacearum</option>
+						<option value="10116">Rattus norvegicus</option>
+						<option value="381">Rhizobium loti</option>
+						<option value="382">Rhizobium meliloti</option>
+						<option value="394">Rhizobium sp.</option>
+						<option value="1061">Rhodobacter capsulatus</option>
+						<option value="272943">Rhodobacter sphaeroides</option>
+						<option value="117">Rhodopirellula baltica</option>
+						<option value="1076">Rhodopseudomonas palustris</option>
+						<option value="269796">Rhodospirillum rubrum</option>
+						<option value="781">Rickettsia conorii</option>
+						<option value="42862">Rickettsia felis</option>
+						<option value="782">Rickettsia prowazekii</option>
+						<option value="785">Rickettsia typhi</option>
+						<option value="4932">Saccharomyces cerevisiae</option>
+						<option value="591">Salmonella choleraesuis</option>
+						<option value="54388">Salmonella paratyphi-a</option>
+						<option value="601">Salmonella typhi</option>
+						<option value="602">Salmonella typhimurium</option>
+						<option value="4896">Schizosaccharomyces pombe</option>
+						<option value="70863">Shewanella oneidensis</option>
+						<option value="300268">Shigella boydii serotype 4</option>
+						<option value="300267">Shigella dysenteriae serotype 1</option>
+						<option value="623">Shigella flexneri</option>
+						<option value="300269">Shigella sonnei</option>
+						<option value="89184">Silicibacter pomeroyi</option>
+						<option value="4081">Solanum lycopersicum</option>
+						<option value="4113">Solanum tuberosum</option>
+						<option value="3562">Spinacia oleracea</option>
+						<option value="1280">Staphylococcus aureus</option>
+						<option value="176279">Staphylococcus epidermidis</option>
+						<option value="279808">Staphylococcus haemolyticus</option>
+						<option value="342451">Staphylococcus saprophyticus subsp. saprophyticus</option>
+						<option value="216495">Streptococcus agalactiae serotype III</option>
+						<option value="216466">Streptococcus agalactiae serotype V</option>
+						<option value="1309">Streptococcus mutans</option>
+						<option value="1313">Streptococcus pneumoniae</option>
+						<option value="301447">Streptococcus pyogenes serotype M1</option>
+						<option value="301451">Streptococcus pyogenes serotype M18</option>
+						<option value="301448">Streptococcus pyogenes serotype M3</option>
+						<option value="301450">Streptococcus pyogenes serotype M6</option>
+						<option value="264199">Streptococcus thermophilus</option>
+						<option value="33903">Streptomyces avermitilis</option>
+						<option value="1902">Streptomyces coelicolor</option>
+						<option value="2285">Sulfolobus acidocaldarius</option>
+						<option value="2287">Sulfolobus solfataricus</option>
+						<option value="111955">Sulfolobus tokodaii</option>
+						<option value="9823">Sus scrofa</option>
+						<option value="2734">Symbiobacterium thermophilum</option>
+						<option value="32046">Synechococcus elongatus</option>
+						<option value="1140">Synechococcus sp.</option>
+						<option value="1148">Synechocystis sp.</option>
+						<option value="119072">Thermoanaerobacter tengcongensis</option>
+						<option value="2303">Thermoplasma acidophilum</option>
+						<option value="50339">Thermoplasma volcanium</option>
+						<option value="2336">Thermotoga maritima</option>
+						<option value="262724">Thermus thermophilus</option>
+						<option value="292415">Thiobacillus denitrificans</option>
+						<option value="317025">Thiomicrospira crunogena</option>
+						<option value="158">Treponema denticola</option>
+						<option value="160">Treponema pallidum</option>
+						<option value="4565">Triticum aestivum</option>
+						<option value="203267">Tropheryma whipplei</option>
+						<option value="134821">Ureaplasma parvum</option>
+						<option value="5270">Ustilago maydis</option>
+						<option value="10249">Vaccinia virus</option>
+						<option value="666">Vibrio cholerae</option>
+						<option value="312309">Vibrio fischeri</option>
+						<option value="670">Vibrio parahaemolyticus</option>
+						<option value="672">Vibrio vulnificus</option>
+						<option value="36870">Wigglesworthia glossinidia brevipalpis</option>
+						<option value="844">Wolinella succinogenes</option>
+						<option value="92829">Xanthomonas axonopodis pv. citri</option>
+						<option value="340">Xanthomonas campestris pv. campestris</option>
+						<option value="316273">Xanthomonas campestris pv. vesicatoria</option>
+						<option value="64187">Xanthomonas oryzae pv. oryzae</option>
+						<option value="8355">Xenopus laevis</option>
+						<option value="8364">Xenopus tropicalis</option>
+						<option value="2371">Xylella fastidiosa</option>
+						<option value="4952">Yarrowia lipolytica</option>
+						<option value="632">Yersinia pestis</option>
+						<option value="633">Yersinia pseudotuberculosis</option>
+						<option value="4577">Zea mays</option>
+						<option value="542">Zymomonas mobilis</option>
+  </select>
+	<a href='Speceis.htm'>Speceis and NCBI TaxID mapping</a>
+	<br>
+	<label>Z-score threshold&nbsp&nbsp&nbsp</label>
+	<input type='text' name='z-score' value="3.0"/><br>
+	<label>Identity threshold&nbsp&nbsp&nbsp</label>
+	<input type='text' name='ide_th'  value="25"/><br>
+  <input type='hidden' name='show_what'  VALUE="all_swp">
+	<input type='hidden' name='dif_z'  VALUE="template_new_6015.txt">
+	<input type='hidden' name='Tem_db'  VALUE="all">
+</form>
+<div style="position: absolute; bottom:50px;">
+	<h3>Reference:</h3>
+	Y.-C. Chen, Y.-S. Lo, W.-C. Hsu, and J.-M. Yang, "<a href="http://www.ncbi.nlm.nih.gov/pubmed/17517763?dopt=AbstractPlus">3D-partner: a web server to infer interacting partners and binding models</a>, " Nucleic Acids Research, pp. W561-W567, 2007.
+</div>
+
+<!--  Main  End       -->
+
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<!--  Footer  Begin
+<div id="footer">
+	Copyright &copy; 2006 BioXGEM Lab.&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	Institute of Bioinformatics&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	National Chiao-Tung University&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	Hsinchu, Taiwan, R.O.C.&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+  Footer  Begin  -->
+
+<!--  Body  End       -->
+
+</body>
+</html>

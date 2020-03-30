@@ -1,0 +1,24 @@
+Date: Mon, 30 Mar 2020 19:08:07 GMT
+Content-Type: text/html; charset=utf-8
+Set-Cookie: __cfduid=dba1f6595be1afd0408779971bebcb1f21585595283; expires=Wed, 29-Apr-20 19:08:03 GMT; path=/; domain=.ucsf.edu; HttpOnly; SameSite=Lax; Secure
+Age: 0
+Cache-Control: public, max-age=300
+Content-Language: en
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Last-Modified: Mon, 30 Mar 2020 19:08:04 GMT
+Link: </crispulator>; rel="canonical",</node/1>; rel="shortlink"
+P3P: CP="CURa ADMa OUR UNI INT STA PRE COM NAV NOI COR ONL"
+Vary: Cookie,Accept-Encoding
+Via: varnish
+X-Ah-Environment: 01live
+X-Cache: MISS
+X-Content-Type-Options: nosniff
+X-Drupal-Cache: MISS
+X-Frame-Options: SAMEORIGIN
+X-Generator: Drupal 7 (http://drupal.org)
+X-Request-Id: v-c828ed5e-72b9-11ea-b90b-07e202aa4135
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 57c41df83987ff34-MAD
+Content-Encoding: gzip

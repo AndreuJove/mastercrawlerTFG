@@ -1,0 +1,23 @@
+<html><head>
+<title>AbundanceBin</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" media="all" href="my.css">
+</head><body id="single-column">
+  <div id="container">
+       <h2>AbundanceBin</h2>
+        <ul>
+	   <li>This is a project under active development; please let us know if you encounter any problems when using this program, and come back to this page for newer version!
+          <li>Introduction: AbundanceBin is an abundance-based tool for binning metagenomic sequences, such that the reads classified in a bin belong to species of identical or very similar abundances. AbundanceBin also gives estimations of species abundances and their genome sizes—-two important characteristic parameters for a microbial community. 
+          <li>Please cite this paper: Yu-Wei Wu and Yuzhen Ye. A novel abundance-based algorithm for binning metagenomic sequences using l-tuples. Lecture Notes in Computer Science, 2010, Volume 6044/2010, 535-549 (<a href="http://www.springerlink.com/content/201300170l185173/">paper link</a>)(selected paper in <a href="http://kdbio.inesc-id.pt/recomb2010/home.html">RECOMB 2010</a>)
+          <li><a href="/mg/get.php?software=abundancebin.1.0.1.tar.gz">Download the software</a> (version 1.01 released on Feb 1, 2013; <a href="instruction.txt">instruction</a>)<br>
+	       <ul>
+	       <li>What's new: solved some machine-dependency compilation problems
+               <li>Old versions<br>
+		  <a href="/mg/get.php?software=abundancebin.tar.gz">version 1.0 released on July 3, 2009</a>
+               </ul>
+          <li>Contacts: Yu-Wei Wu (yuwwu@indiana.edu) and Yuzhen Ye (yye@indiana.edu)
+	
+        </ul>
+  </div>
+</body>
+</html>

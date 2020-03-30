@@ -1,0 +1,304 @@
+
+<html>
+<head>
+<title>3v website</title>
+<link rel='stylesheet' type='text/css' href='css/viewer.css'> 
+<link rel='stylesheet' type='text/css' href='css/proc.css'> 
+
+  <style type='text/css'>
+	input { border-style: solid; border-color: #9dae9b; }
+	select { border-style: solid; border-color: #9dae9b; }
+
+		span.info {
+			width: 100px;
+		}
+  </style>
+
+  <script type='text/javascript' src='js/help.js'></script>
+  <script type='text/javascript' src='js/draglayer.js'></script>
+  <script type='text/javascript' src='js/prototype.js'></script>
+
+  <script type='text/javascript'>
+
+	overdiv='0'
+	var ie = (document.all)? true:false
+
+// create the popups 
+	function popLayer(a, id) {
+		dhelp=$('dhelp')
+		helpstr=eval('help.threev.'+a)
+		if(!helpstr){helpstr='<font color=red>Missing help info</font>'}
+
+		desc = '<div style=\'position: relative; width: 300px; padding: 1em\'>'+helpstr+'</div>'
+		dhelp.innerHTML=desc;
+
+		if (o=$(id)) {
+			wh = ie ? window.document.body.clientHeight : window.innerHeight
+			ww = ie ? window.document.body.clientWidth : window.innerWidth
+			wwo = ie ? window.document.body.scrollLeft : window.pageXOffset
+
+			oleft=getAbsLeft(o)
+			otop=getAbsTop(o)
+			if (ww+wwo-oleft<350)
+				oleft -= 300
+			dhelp.style.left = oleft+ 'px'
+			dhelp.style.bottom= wh-otop+20 + 'px'
+		}
+
+		dhelp.style.visibility='visible'
+	}
+
+	function hideLayer(){
+		dhelp=$('dhelp')
+		if (overdiv == '0') {
+			dhelp.innerHTML=''
+			dhelp.style.visibility='hidden';
+		}
+	}
+
+
+
+</script>
+
+
+<script type='text/javascript'>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21593629-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body onload='initmenu()'>
+<center>
+<!-- header -->
+<div id='apheader'>
+  <div class='aptopbar'></div>
+  <table border='0' cellpadding='5' cellspacing='5' >
+    <tr><td valign='middle' align='center'>
+       <a href='index.php'><img src='img/topbarbackgrnd.png' border='0' height='51'></a>
+    </td><td valign='middle' align='center'>
+       <b><font size='+2'>3v website</font></b>
+    </td></tr>
+  </table>
+  <div class='aptopbar'></div>
+</div>
+
+	<div id='dhelp'
+		style='position: absolute; 
+        	background-color: #fff2d7;
+        	color: black;
+        	border: 1px solid gray;
+        	visibility: hidden;
+        	text-align: left;
+        	z-index:+4'
+    		onmouseover='overdiv=1;'
+    		onmouseout='overdiv=0;'>
+	</div>
+<table border='0' width='640'>
+<tr><td>
+  <h2>Volume Calculation and Extraction Procedures</h2>
+  <h4>
+    3vee is collection of program for the assessment of volumes in protein files.
+  </h4>
+</td></tr>
+</table>
+<table border='0' cellpading='10' cellspacing='10'><tr><td><table border='1' class='tableborder' width='640'>
+<tr>
+<td colspan='2' align='center'><br/><h2>External Volumes</h2></td>
+</tr><tr>
+<td width='180' align='center'>
+  <a href='volumeCalc.php'><img border='0' src='img/volumeCalc.png' height='100'></a>
+</td><td>
+  <h3><a href='volumeCalc.php'>Volume Calculation</a></h3>
+    <p>
+      Calculate the volume of a structure for a given probe size    </p>
+</td>
+</tr><tr>
+<td width='180' align='center'>
+  <a href='volumeRange.php'><img border='0' src='img/volumeRange.png' height='100'></a>
+</td><td>
+  <h3><a href='volumeRange.php'>Volume Range</a></h3>
+    <p>
+      Calculate the volume of a structure for a range probe sizes    </p>
+</td>
+</tr><tr>
+<td colspan='2' align='center'><br/><h2>Internal Volumes</h2></td>
+</tr><tr>
+<td width='180' align='center'>
+  <a href='channelFinder.php'><img border='0' src='img/channelFinder.png' height='100'></a>
+</td><td>
+  <h3><a href='channelFinder.php'>Channel Finder</a></h3>
+    <p>
+      Find and extract all major channels from the structure based on their size    </p>
+</td>
+</tr><tr>
+<td width='180' align='center'>
+  <a href='channelExtract.php'><img border='0' src='img/channelExtract.png' height='100'></a>
+</td><td>
+  <h3><a href='channelExtract.php'>Single Channel Extraction</a></h3>
+    <p>
+      Extract a particular channel with a known x,y,z coordinate    </p>
+</td>
+</tr><tr>
+<td width='180' align='center'>
+  <a href='solventExtract.php'><img border='0' src='img/solventExtract.png' height='100'></a>
+</td><td>
+  <h3><a href='solventExtract.php'>Solvent Extraction</a></h3>
+    <p>
+      Extract all the solvent volume from a structure    </p>
+</td>
+</tr><tr>
+<td width='180' align='center'>
+  <a href='tunnelExtract.php'><img border='0' src='img/tunnelExtract.png' height='100'></a>
+</td><td>
+  <h3><a href='tunnelExtract.php'>Exit Tunnel Extraction</a></h3>
+    <p>
+      Calculate the volume of the polypeptide exit tunnel from the 50S ribosomal subunit    </p>
+</td>
+</tr>
+</table>
+</td><td>
+<br/>
+<table border='0' class='tableborder'>
+<tr><td>
+  <h3>Recent runs</h3>
+</td></tr><tr><td align='center'>
+  <hr/>
+<a href='output/2020/mar30/66a/2020.mar30.66a-0.0.mrc.3.png'>
+  <img src='output/2020/mar30/66a/2020.mar30.66a-0.0.mrc.3.png' height='80'>
+</a>
+<a href='output/2020/mar30/66a/2020.mar30.66a-18.0.mrc.1.png'>
+  <img src='output/2020/mar30/66a/2020.mar30.66a-18.0.mrc.1.png' height='80'>
+</a>
+<a href='output/2020/mar30/66a/2020.mar30.66a-15.0.mrc.3.png'>
+  <img src='output/2020/mar30/66a/2020.mar30.66a-15.0.mrc.3.png' height='80'>
+</a>
+<br/>  Job id: <a href='viewResults.php?jobid=2020.mar30.66a'>2020.mar30.66a</a>
+  &nbsp;<img border='0' src='img/external.png'><br/>
+  Program: runVolumeRange<br/>
+  <hr/>
+<a href='output/2020/mar30/50a/2020.mar30.50a-9.0.mrc.2.png'>
+  <img src='output/2020/mar30/50a/2020.mar30.50a-9.0.mrc.2.png' height='80'>
+</a>
+<a href='output/2020/mar30/50a/2020.mar30.50a-10.0.mrc.4.png'>
+  <img src='output/2020/mar30/50a/2020.mar30.50a-10.0.mrc.4.png' height='80'>
+</a>
+<a href='output/2020/mar30/50a/2020.mar30.50a-11.0.mrc.4.png'>
+  <img src='output/2020/mar30/50a/2020.mar30.50a-11.0.mrc.4.png' height='80'>
+</a>
+<br/>  Job id: <a href='viewResults.php?jobid=2020.mar30.50a'>2020.mar30.50a</a>
+  &nbsp;<img border='0' src='img/external.png'><br/>
+  Program: runVolumeRange<br/>
+  <hr/>
+<a href='output/2020/mar30/9d6/2020.mar30.9d6-3.0.mrc.2.png'>
+  <img src='output/2020/mar30/9d6/2020.mar30.9d6-3.0.mrc.2.png' height='80'>
+</a>
+<a href='output/2020/mar30/9d6/2020.mar30.9d6-4.0.mrc.2.png'>
+  <img src='output/2020/mar30/9d6/2020.mar30.9d6-4.0.mrc.2.png' height='80'>
+</a>
+<a href='output/2020/mar30/9d6/2020.mar30.9d6-5.0.mrc.2.png'>
+  <img src='output/2020/mar30/9d6/2020.mar30.9d6-5.0.mrc.2.png' height='80'>
+</a>
+<br/>  Job id: <a href='viewResults.php?jobid=2020.mar30.9d6'>2020.mar30.9d6</a>
+  &nbsp;<img border='0' src='img/external.png'><br/>
+  Program: runVolumeRange<br/>
+  <hr/>
+<a href='output/2020/mar30/f37/1LL8-2020.mar30.f37.mrc.6.png'>
+  <img src='output/2020/mar30/f37/1LL8-2020.mar30.f37.mrc.6.png' height='80'>
+</a>
+<a href='output/2020/mar30/f37/1LL8-2020.mar30.f37.mrc.2.png'>
+  <img src='output/2020/mar30/f37/1LL8-2020.mar30.f37.mrc.2.png' height='80'>
+</a>
+<a href='output/2020/mar30/f37/1LL8-2020.mar30.f37.mrc.1.png'>
+  <img src='output/2020/mar30/f37/1LL8-2020.mar30.f37.mrc.1.png' height='80'>
+</a>
+<br/>  Job id: <a href='viewResults.php?jobid=2020.mar30.f37'>2020.mar30.f37</a>
+  PDB id: <a href='http://www.rcsb.org/pdb/explore/explore.do?structureId=1LL8'>1LL8</a>
+  &nbsp;<img border='0' src='img/external.png'><br/>
+  Program: runVolume<br/>
+  <hr/>
+<a href='output/2020/mar30/7d0/2020.mar30.7d0.mrc.2.png'>
+  <img src='output/2020/mar30/7d0/2020.mar30.7d0.mrc.2.png' height='80'>
+</a>
+<a href='output/2020/mar30/7d0/2020.mar30.7d0.mrc.1.png'>
+  <img src='output/2020/mar30/7d0/2020.mar30.7d0.mrc.1.png' height='80'>
+</a>
+<a href='output/2020/mar30/7d0/2020.mar30.7d0.mrc.5.png'>
+  <img src='output/2020/mar30/7d0/2020.mar30.7d0.mrc.5.png' height='80'>
+</a>
+<br/>  Job id: <a href='viewResults.php?jobid=2020.mar30.7d0'>2020.mar30.7d0</a>
+  &nbsp;<img border='0' src='img/external.png'><br/>
+  Program: runVolume<br/>
+  <hr/>
+<a href='output/2020/mar29/22f/2020.mar29.22f.mrc.1.png'>
+  <img src='output/2020/mar29/22f/2020.mar29.22f.mrc.1.png' height='80'>
+</a>
+<a href='output/2020/mar29/22f/2020.mar29.22f.mrc.5.png'>
+  <img src='output/2020/mar29/22f/2020.mar29.22f.mrc.5.png' height='80'>
+</a>
+<a href='output/2020/mar29/22f/2020.mar29.22f.mrc.2.png'>
+  <img src='output/2020/mar29/22f/2020.mar29.22f.mrc.2.png' height='80'>
+</a>
+<br/>  Job id: <a href='viewResults.php?jobid=2020.mar29.22f'>2020.mar29.22f</a>
+  &nbsp;<img border='0' src='img/external.png'><br/>
+  Program: runVolume<br/>
+</td></tr></table>
+</td></tr>
+</table>
+<br/>
+<div id='apheader'>
+  <div class='aptopbar'></div>
+</div><br/>
+
+	<table cellspacing='15' cellpading='5'><tr><td>
+
+	<font size='+1'>Citation:</font> <br/>
+   <i><a href='http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2896178/'>
+      '3V: cavity, channel and cleft volume calculator and extractor'</a></i> (free text)<br/>
+		Nucleic Acids Res. 2010 July 1; 38(Web Server issue): W555–W562<br/>
+      by Neil R. Voss and Mark Gerstein
+	
+	</td></tr><tr><td>
+
+	<font size='+1'><a href='sourcecode.php'>Download source code</a></font>
+
+	</td></tr><tr><td>
+
+	<font size='+1'><a href='glossary.php'>Help</a></font>
+
+	</td></tr><tr><td>
+
+	<font size='+1'><a href='news.php'>Site news and updates</a></font>
+
+	</td></tr><tr><td>
+
+	<font size='-1'>
+		If you find this useful or want more functionality 
+		please contact Neil &lt;vossman77 [at] gmail [dot] com&gt;</font>
+
+	</td></tr></table>
+	<center><table border='0' cellpadding='0' cellspacing='0'>
+<tr>
+<td valign='center'>
+<a href='index.php' class='header'>
+<img border='0' src='img/leftendButton.gif'>
+</a>
+</td>
+<td align='center' valign='center' background='img/middleButton.gif'>
+<a href='index.php' class='header'><font size='-2'> back to main page </font></a>
+</td>
+<td valign='top'>
+<img border='0' src='img/rightendButton.gif'>
+</td>
+</tr>
+</table></center>
+</center>
+</body>
+</html>

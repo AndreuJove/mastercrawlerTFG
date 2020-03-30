@@ -1,0 +1,12 @@
+Cache-Control: max-age=3600, public
+Pragma: public
+Content-Type: text/html; charset=UTF-8
+Content-Encoding: gzip
+Expires: Mon, 30 Mar 2020 19:46:16 GMT
+Last-Modified: Mon, 30 Mar 2020 18:46:16 GMT
+Etag: "ffa8087c1bb96aa9faf0c4bae5818ab3"
+Vary: Accept-Encoding
+Server: Microsoft-IIS/10.0
+X-Powered-By: W3 Total Cache/0.10.1
+X-Powered-By: ASP.NET
+Date: Mon, 30 Mar 2020 18:46:15 GMT

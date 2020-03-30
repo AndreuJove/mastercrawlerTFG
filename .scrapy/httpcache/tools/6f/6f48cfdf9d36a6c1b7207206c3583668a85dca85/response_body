@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CGATPipelines 0.3.3 - NGS and Genomics pipelines &#8212; cgatflow 0.3.3 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/my-styles.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.3.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Background" href="PipelinesBackground.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span><img src="_static/cgat_logo.png"></span>
+          CGAT Pipelines</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.3.3</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Site navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="PipelinesBackground.html">Background</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PipelinesBackground.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelinesBackground.html#code-organisation">Code organisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelinesBackground.html#production-pipelines">Production pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelinesBackground.html#building-your-own-pipelines">Building your own pipelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPipelines.html">Installation instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="InstallingPipelines.html#automated-installation">Automated installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InstallingPipelines.html#manual-installation">Manual installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InstallingPipelines.html#setting-up-the-computing-environment">Setting up the computing environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InstallingPipelines.html#software-requirements">Software requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UsingPipelines.html">Using CGAT pipelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="UsingPipelines.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingPipelines.html#setting-up-a-pipeline">Setting up a pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingPipelines.html#running-a-pipeline">Running a pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingPipelines.html#building-pipeline-reports">Building pipeline reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingPipelines.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BuildingPipelines.html">Building CGAT pipelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#guidelines">Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#running-commands-within-tasks">Running commands within tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#tracks">Tracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#databases">Databases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#reports">Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#configuration-values">Configuration values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#using-other-pipelines">Using other pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#checking-requisites">Checking requisites</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PipelineReports.html">Writing pipeline reports</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PipelineReports.html#multiqc"><strong>MultiQC</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelineReports.html#rmarkdown"><strong>Rmarkdown</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelineReports.html#jupyter-notebook"><strong>Jupyter Notebook</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelineReports.html#cgat-report"><strong>CGAT Report</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Reference.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Reference.html#code-organization">Code organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reference.html#repository-layout">Repository layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reference.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Release.html">Release notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id1">0.3.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id2">0.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id3">0.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id4">0.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id5">0.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id6">0.1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="styleguide.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="styleguide.html#writing-doc-strings">Writing doc-strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide.html#doc-strings-for-pipeline-scripts">Doc-strings for pipeline scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide.html#writing-documentation-for-pipeline-tasks">Writing documentation for pipeline tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Developers.html">Developers</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_readqc.html">pipeline_readqc: Read QC and processing before mapping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_readqc.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_readqc.html#code">Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_mapping.html">pipeline_mapping: Short read mapping and QC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_mapping.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_mapping.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_mapping.html#pipeline-output">Pipeline output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_mapping.html#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_mapping.html#code">Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_rnaseqdiffexpression.html">pipeline_rnaseqdiffexpression: RNA-seq differential expression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_rnaseqdiffexpression.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_rnaseqdiffexpression.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_rnaseqdiffexpression.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_rnaseqdiffexpression.html#pipeline-output">Pipeline output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_rnaseqdiffexpression.html#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_rnaseqdiffexpression.html#changelog">ChangeLog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_rnaseqdiffexpression.html#code">Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_peakcalling.html">pipeline_peakcalling: ChIP-seq Peak calling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_peakcalling.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_peakcalling.html#idr-analysis">IDR Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_peakcalling.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_peakcalling.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_peakcalling.html#pipeline-input">Pipeline Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_peakcalling.html#pipeline-output">Pipeline output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_peakcalling.html#code">Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_windows.html">pipeline_windows: Genomic read distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_windows.html#tiling-strategies">Tiling strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_windows.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_windows.html#input">Input</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_exome.html">pipeline_exome: Exome-seq</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_exome.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_exome.html#pipeline-output">Pipeline output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_exome.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_intervals.html">pipeline_intervals: Annotating genomic intervals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_intervals.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_intervals.html#pipline-output">Pipline Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_intervals.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_intervals.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_testing.html">pipeline_testing: Regression testing of pipelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_testing.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_testing.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_testing.html#pipeline-output">Pipeline output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pipelines/pipeline_testing.html#code">Code</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page navigation <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">CGATPipelines 0.3.3 - NGS and Genomics pipelines</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#active-pipelines">Active Pipelines</a><ul>
+<li><a class="reference internal" href="#ngs-pipelines">NGS Pipelines</a></li>
+<li><a class="reference internal" href="#genomics-pipelines">Genomics Pipelines</a></li>
+<li><a class="reference internal" href="#meta-pipelines">Meta pipelines</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="PipelinesBackground.html" title="Next Chapter: Background"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Background &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/index.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="cgatpipelines-version-ngs-and-genomics-pipelines">
+<span id="contents"></span><h1>CGATPipelines 0.3.3 - NGS and Genomics pipelines<a class="headerlink" href="#cgatpipelines-version-ngs-and-genomics-pipelines" title="Permalink to this headline">¶</a></h1>
+<p>This document brings together the various pipelines and scripts
+written before and during the <a class="reference external" href="http://www.cgat.org">CGAT Training Programme</a>. This
+documentation has two parts. Below is the general documentation
+covering the complete code collection.</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This is the code collecton written by members of the <a class="reference external" href="http://www.cgat.org">CGAT Training Programme</a>
+for the execution of pipelines for next-generation sequencing analysis (NGS).</p>
+</div>
+<div class="section" id="documentation">
+<span id="cgatpipelines"></span><h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="PipelinesBackground.html">Background</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PipelinesBackground.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelinesBackground.html#code-organisation">Code organisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelinesBackground.html#production-pipelines">Production pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelinesBackground.html#building-your-own-pipelines">Building your own pipelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="InstallingPipelines.html">Installation instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="InstallingPipelines.html#automated-installation">Automated installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InstallingPipelines.html#manual-installation">Manual installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InstallingPipelines.html#setting-up-the-computing-environment">Setting up the computing environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="InstallingPipelines.html#software-requirements">Software requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UsingPipelines.html">Using CGAT pipelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="UsingPipelines.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingPipelines.html#setting-up-a-pipeline">Setting up a pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingPipelines.html#running-a-pipeline">Running a pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingPipelines.html#building-pipeline-reports">Building pipeline reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsingPipelines.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorials.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BuildingPipelines.html">Building CGAT pipelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#guidelines">Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#running-commands-within-tasks">Running commands within tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#tracks">Tracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#databases">Databases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#reports">Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#configuration-values">Configuration values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#using-other-pipelines">Using other pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BuildingPipelines.html#checking-requisites">Checking requisites</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PipelineReports.html">Writing pipeline reports</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PipelineReports.html#multiqc"><strong>MultiQC</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelineReports.html#rmarkdown"><strong>Rmarkdown</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelineReports.html#jupyter-notebook"><strong>Jupyter Notebook</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="PipelineReports.html#cgat-report"><strong>CGAT Report</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Reference.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Reference.html#code-organization">Code organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reference.html#repository-layout">Repository layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reference.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Release.html">Release notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id1">0.3.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id2">0.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id3">0.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id4">0.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id5">0.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Release.html#id6">0.1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="styleguide.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="styleguide.html#writing-doc-strings">Writing doc-strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide.html#doc-strings-for-pipeline-scripts">Doc-strings for pipeline scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide.html#writing-documentation-for-pipeline-tasks">Writing documentation for pipeline tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Developers.html">Developers</a></li>
+</ul>
+</div>
+<p>For information on how to contribute to the pipeline collection,
+please see the <a class="reference external" href="https://www.cgat.org/downloads/public/cgat/documentation/">CGAT code collection</a>.</p>
+</div>
+<div class="section" id="active-pipelines">
+<h2>Active Pipelines<a class="headerlink" href="#active-pipelines" title="Permalink to this headline">¶</a></h2>
+<p>The pipelines in this section are being used and maintained by CGAT. We have travis
+<a class="reference external" href="https://travis-ci.org">integration</a> testing of all of our scripts and we run
+full local testing of our pipelines on <a class="reference external" href="https://jenkins.io">jenkins</a> each evening.</p>
+<div class="section" id="ngs-pipelines">
+<h3>NGS Pipelines<a class="headerlink" href="#ngs-pipelines" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_readqc.html">pipeline_readqc: Read QC and processing before mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_mapping.html">pipeline_mapping: Short read mapping and QC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_rnaseqdiffexpression.html">pipeline_rnaseqdiffexpression: RNA-seq differential expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_peakcalling.html">pipeline_peakcalling: ChIP-seq Peak calling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_windows.html">pipeline_windows: Genomic read distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_exome.html">pipeline_exome: Exome-seq</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="genomics-pipelines">
+<h3>Genomics Pipelines<a class="headerlink" href="#genomics-pipelines" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_intervals.html">pipeline_intervals: Annotating genomic intervals</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="meta-pipelines">
+<h3>Meta pipelines<a class="headerlink" href="#meta-pipelines" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pipelines/pipeline_testing.html">pipeline_testing: Regression testing of pipelines</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="disclaimer">
+<h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">¶</a></h2>
+<p>This collection of pipelines is the outcome of 10 years working in various
+fields in bioinformatics. It contains both the good, the bad and the ugly.
+Use at your own risk.</p>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2011, 2012, 2013, 2014, 2015 2016 2017 CGAT.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

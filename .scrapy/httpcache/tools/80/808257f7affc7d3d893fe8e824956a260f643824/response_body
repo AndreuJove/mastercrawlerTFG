@@ -1,0 +1,163 @@
+
+
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en"><HTML><HEAD><TITLE> AutoGRAPH </TITLE>
+<LINK REL="stylesheet" HREF="./dual_view.css" TYPE="text/css">
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+function mmMenu() { this.style.borderColor = 'red'; }
+function moMenu() { this.style.borderColor = 'transparent'; }
+
+function redimImage(inImg, inMW, inMH)
+{
+  // Cette function recoit 3 parametres
+  // inImg : Chemin relatif de l'image
+  // inMW  : Largeur maximale
+  // inMH   : Hauteur maximale
+  var maxWidth = inMW;
+  var maxHeight = inMH;
+  // Declarations des variables "Nouvelle Taille"
+  var dW = 0;
+  var dH = 0;
+  // Declaration d'un objet Image
+  var oImg = new Image();
+  // Affectation du chemin de l'image a l'objet
+  oImg.src = inImg;
+  // On recupere les tailles reelles
+  var h = dH = oImg.height;
+  var w = dW = oImg.width;
+  // Si la largeur ou la hauteur depasse la taille maximale
+  if ((h >= maxHeight) || (w >= maxWidth)) {
+    // Si la largeur et la hauteur depasse la taille maximale
+    if ((h >= maxHeight) && (w >= maxWidth)) {
+      // On cherche la plus grande valeur
+      if (h > w) {
+        dH = maxHeight;
+        // On recalcule la taille proportionnellement
+        dW = parseInt((w * dH) / h, 10);
+      } else {
+        dW = maxWidth;
+        // On recalcule la taille proportionnellement
+        dH = parseInt((h * dW) / w, 10);
+      }
+    } else if ((h > maxHeight) && (w < maxWidth)) {
+      // Si la hauteur depasse la taille maximale
+      dH = maxHeight;
+        // On recalcule la taille proportionnellement
+      dW = parseInt((w * dH) / h, 10);
+    } else if ((h < maxHeight) && (w > maxWidth)) {
+      // Si la largeur depasse la taille maximale
+      dW = maxWidth;
+        // On recalcule la taille proportionnellement
+      dH = parseInt((h * dW) / w, 10);
+    }
+  }
+  // On ecrit l'image dans le document
+  document.writeln("<img src=\"" + inImg + "\" width=\"" + dW + "\" height=\"" + dH + "\" border=\"0\" alt=\"Comparative Map\" usemap=\"Source\">");
+};
+
+
+var IB=new Object;
+var posX=0;posY=0;
+var xOffset=10;yOffset=10;
+function AffBulle(texte) {
+contenu="<TABLE border=1 cellspacing=1 cellpadding="+IB.NbPixel+"><TR bgcolor='"+IB.ColContour+"'><TD><TABLE border=0 cellpadding=2 cellspacing=0 bgcolor='"+IB.ColFond+"'><TR><TD><FONT size='-1' face='arial' color='"+IB.ColTexte+"'>"+texte+"</FONT></TD></TR></TABLE></TD></TR></TABLE>";
+var finalPosX=posX-xOffset;
+if (finalPosX<0) finalPosX=0;
+if (document.layers) {
+document.layers["bulle"].document.write(contenu);
+document.layers["bulle"].document.close();
+document.layers["bulle"].top=posY+yOffset;
+document.layers["bulle"].left=finalPosX;
+document.layers["bulle"].visibility="show";}
+if (document.all) {
+//var f=window.event;
+//doc=document.body.scrollTop;
+bulle.innerHTML=contenu;
+document.all["bulle"].style.top=posY+yOffset;
+document.all["bulle"].style.left=finalPosX;//f.x-xOffset;
+document.all["bulle"].style.visibility="visible";
+}
+//modif CL 09/2001 - NS6 : celui-ci ne supporte plus document.layers mais document.getElementById
+else if (document.getElementById) {
+document.getElementById("bulle").innerHTML=contenu;
+document.getElementById("bulle").style.top=posY+yOffset;
+document.getElementById("bulle").style.left=finalPosX;
+document.getElementById("bulle").style.visibility="visible";
+}
+}
+function getMousePos(e) {
+if (document.all) {
+posX=event.x+document.body.scrollLeft; //modifs CL 09/2001 - IE : regrouper l'C)vC(nement
+posY=event.y+document.body.scrollTop;
+}
+else {
+posX=e.pageX; //modifs CL 09/2001 - NS6 : celui-ci ne supporte pas e.x et e.y
+posY=e.pageY; 
+}
+}
+function HideBulle() {
+if (document.layers) {document.layers["bulle"].visibility="hide";}
+if (document.all) {document.all["bulle"].style.visibility="hidden";}
+else if (document.getElementById){document.getElementById("bulle").style.visibility="hidden";}
+}
+function InitBulle(ColTexte,ColFond,ColContour,NbPixel) {
+IB.ColTexte=ColTexte;IB.ColFond=ColFond;IB.ColContour=ColContour;IB.NbPixel=NbPixel;
+if (document.layers) {
+window.captureEvents(Event.MOUSEMOVE);window.onMouseMove=getMousePos;
+document.write("<LAYER name='bulle' top=0 left=0 visibility='hide'></LAYER>");
+}
+if (document.all) {
+document.write("<DIV id='bulle' style='position:absolute;top:0;left:0;visibility:hidden'></DIV>");
+document.onmousemove=getMousePos;
+}
+//modif CL 09/2001 - NS6 : celui-ci ne supporte plus document.layers mais document.getElementById
+else if (document.getElementById) {
+document.onmousemove=getMousePos;
+document.write("<DIV id='bulle' style='position:absolute;top:0;left:0;visibility:hidden'></DIV>");
+}
+}
+</SCRIPT>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26895958-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</HEAD><BODY >
+<table width="100%" border=0 ><tr><td align=left><a href='./index.php'><img src="./IMG.dir/logo_autoGRAPH.jpg" border=0 width="150" height="100" alt="logo_dv"></a></td><td align=center><H1>AutoGRAPH : A Comparative Genomics Server</H1></td><td align=right><a href='http://www-recomgen.univ-rennes1.fr/doggy.html' border=0 target=_blank><img src="./IMG.dir/logo_umr.png" border=0  width="150" height="100"></a></td></tr></table><br><a name="top"></a>
+<div class="shadetabs"><ul><li class="selected"><a href="./index.php">Home</a></li><li><a href="./Tutorial.php">Tutorial</a></li><li><a href="./Faq.php">FAQ</a></li><li><a href="./Screenshots.php">Screenshots</a></li></ul></div><img src="./media/bar.png" width= "100%" height="10px" class="imgpos"><br><br><table border =0 cellpadding=5 cellspacing=5 width ="100%"><tr><td align=left valign=top width="25%"><img src="./Overview_img.dir/cfa34.png" widht="300" height="400"><H4> Example of a 3-ways comparison for dog chromosome 34 vs. Human (right) and Mouse (left) genomes.</H4></td><td valign=top align=left><H2>- Purpose :</H2><table width=100% border=0 cellpadding=12 cellspacing=2 bgcolor='#F0F8FF'><tr><td><p class="para2"> AutoGRAPH is an integrated
+						web server for multi-species comparative genomic analysis. It
+						 is designed for constructing and visualizing synteny
+						maps between two or three species, determination and display of
+						macrosynteny and microsynteny relationships among species, and
+						for highlighting evolutionary breakpoints.<br><br> The web server constructs synteny maps by pairwise comparison of marker/anchor orders between
+					 a reference chromosome and one or two tested genome(s).
+					It permits users to visualize and characterize several features:<br><A HREF='./Faq.php#CS' CLASS='DEUX' >Conserved segments (CS)</A>
+, <A HREF='./Faq.php#CSO' CLASS='DEUX' >Conserved Segments Ordered (CSO)</A>
+, <A HREF='./Faq.php#breakpoint' CLASS='DEUX' >breakpoints</A>
+, marker density in these regions, inferred locations for 1:0 orthologous relationships...<br><br>AutoGRAPH is a versatile tool and can be utilized for the integration and comparison of different maps (meiotic, RH...)
+					with sequence resources within a single species. </p></td></tr></table><H2>- Launch AutoGRAPH :</H2><table width=100% border=0 cellpadding=12 cellspacing=2 bgcolor='#F0F8FF'><tr><td><p class="para2"> User can run AutoGRAPH with :<br> &#155 <A HREF='./index_pre.php' CLASS='LAUNCH' >Pre inserted dataset</A>
+ :  
+						corresponds to data for 6 genomes of interest (Human, chimp, rat, mouse, dog and cow) downloaded from Ensembl web site (v.42)
+						<A HREF='http://www.biomart.org/biomart/martview/' CLASS='DEUX' >(BioMart v0.5)</A>
+<br>&#155 <A HREF='./index_user.php' CLASS='LAUNCH' >Personal dataset</A>
+ :  
+						Users insert their own datasets.</p></td></tr></table></td></tr><tr><td colspan=2><hr><p class="para2">- This work is referenced in: <br><b> 	Derrien T, Andre C, Galibert F, Hitte C.</b> AutoGRAPH: an interactive web server for automating and visualizing comparative genome maps</b> <i>Bioinformatics</i>. 2007 23:498-499 <A HREF='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=AbstractPlus&list_uids=17145741&query_hl=1&itool=pubmed_docsum' CLASS='DEUX' >[abstract]</A>
+<br></p></td></tr></table><br><br><center><hr noshade size=3 color='#000048'></center><table border=0 width=100% ><tr><td align=left><font color ='black' size=2><b>Mar-30-2020</b>,  20:20</font></td><b><td align=center><a href='mailto:toma.derrien@gmail.com' class="DEUX" >Questions/problems </a></td><td align=right><a href='./index.php'><img src="./IMG.dir/logo_autoGRAPH.jpg" border=0 width="130" height="90" alt="logo_dv"></a></td></tr></table></body></html>

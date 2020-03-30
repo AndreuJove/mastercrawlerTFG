@@ -1,0 +1,7 @@
+Date: Mon, 30 Mar 2020 18:48:58 GMT
+Server: nginx/1.12.2
+Content-Type: text/html; charset=UTF-8
+Location: http://genome.crg.cat/services/compmerge
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; preload
+X-Content-Type-Options: nosniff

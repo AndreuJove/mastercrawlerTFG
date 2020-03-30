@@ -1,0 +1,345 @@
+<html>
+<head>
+
+<!--Required for CSS style sheets-->
+
+<pre>
+<link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection, print"/>
+<link rel="stylesheet" href="/css/css4arrest.css" type="text/css"/>
+</pre>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.placeholder.min.js"></script>
+
+<!--[if IE]>
+    <link rel="stylesheet" href="/css/css4impromptu.css" type="text/css"/>
+    <script src="/js/jquery-impromptu.js"></script>
+    <script type="text/javascript">
+    $.prompt('please consider using<br><a href="http://www.google.com/chrome" target="_blank">Chrome</a> / <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> / Safari<br>for best viewing and full functionality',{
+            buttons:{ 'I\'m Bill Gates, it\'s OK':1 },prefix:'bat'
+    });
+    </script>
+    <link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection, print">
+<![endif]-->
+
+<!--<script type="text/javascript">-->
+<!--alert('please consider using\nChrome / Firefox / Safari\nfor best viewing and full functionality');-->
+<!--</script>-->
+
+<script type="text/javascript">
+function popup(mylink, windowname){
+    if (! window.focus) return true;
+    var href;
+    if (typeof(mylink) == 'string')
+        href=mylink;
+    else
+        href=mylink.href;
+        window.open(href, windowname, 'width=450,height=850,scrollbars=yes,resizable=yes,toolbar=no,menubar=no');
+    return false;
+}
+function clearFileInputField(tagId) {
+    document.getElementById(tagId).innerHTML = document.getElementById(tagId).innerHTML;
+}
+function readFile(path,text) {
+    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET","/"+path,false);
+    xmlhttp.send();
+    xmlDoc=xmlhttp.responseText;
+    window.document.getElementById(text).value=xmlDoc;
+}
+function setSelectionRange(input, selectionStart, selectionEnd) {
+    if (input.setSelectionRange) {
+        input.focus();
+        input.setSelectionRange(selectionStart, selectionEnd);
+    }
+    else if (input.createTextRange) {
+        var range = input.createTextRange();
+        range.collapse(true);
+        range.moveEnd('character', selectionEnd);
+        range.moveStart('character', selectionStart);
+        range.select();
+    }
+}
+function replaceSelection (input, replaceString) {
+    if (input.setSelectionRange) {
+        var selectionStart = input.selectionStart;
+        var selectionEnd = input.selectionEnd;
+        input.value = input.value.substring(0, selectionStart)+ replaceString + input.value.substring(selectionEnd);
+        if (selectionStart != selectionEnd){
+            setSelectionRange(input, selectionStart, selectionStart + 	replaceString.length);
+        }else{
+            setSelectionRange(input, selectionStart + replaceString.length, selectionStart + replaceString.length);
+        }
+    }else if (document.selection) {
+        var range = document.selection.createRange();
+        if (range.parentElement() == input) {
+            var isCollapsed = range.text == '';
+            range.text = replaceString;
+             if (!isCollapsed)  {
+                range.moveStart('character', -replaceString.length);
+                range.select();
+            }
+        }
+    }
+}
+function catchTab(item,e){
+    if(navigator.userAgent.match("Gecko")){
+        c=e.which;
+    }else{
+        c=e.keyCode;
+    }
+    if(c==9){
+        replaceSelection(item,String.fromCharCode(9));
+        setTimeout("document.getElementById('"+item.id+"').focus();",0);
+        // prevent the focus lose
+        return false;
+    }
+}
+function ShowMsg(mod,html){
+    if(mod==1 && document.getElementById(html).style.display=='none'){document.getElementById(html).style.display='';}
+    else{document.getElementById(html).style.display='none';}
+}
+</script>
+
+<title>ARResT/AssignSubsets @ the BAT cave</title>
+
+<!--
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+-->
+
+</head>
+<body>
+
+<div class="container" style="opacity:0.92;filter:alpha(opacity=92)">
+
+<!--Header of the Page-->
+<div id="header" class="span-24 last" style="background-color:white">
+<h1 style="text-align:center" id="top">ARResT/AssignSubsets</h1>
+
+<!--<fieldset style="background-color:rgb(240,220,220);text-align:center;font-size:1.4em;line-height:1em;padding:6px;">
+disruptions possible due to <a href="http://www.imgt.org/IMGT_vquest/vquest" target="_blank">IMGT/V-QUEST</a> updates @ 27-29th May, pleaes be alert/patient, and <a href="mailto:bat@infspire.org" target="_blank">report issues</a> <font style="font-size:0.6em">[posted @ 27.05.19]</font>
+</fieldset>-->
+
+<h2 style="text-align:center"><a href="#cite">cite us!</a></h2>
+<h2 style="text-align:center">assigning <b>new</b> members to <b>existing</b> subsets of stereotyped antigen receptor sequences, currently applicable to<br><a href="http://www.bloodjournal.org/content/119/19/4467" target="_blank">the 19 major subsets of stereotyped B-cell receptors in chronic lymphocytic leukemia (CLL)</a></h2>
+<br>
+<h2 style="text-align:center"><b>10.11.19</b> | powered by <a href="/arrest/seqcure" target="_blank">ARResT/SeqCure</a> ; <a href="http://bat.infspire.org/arrest/subsets" target="_blank">ARResT/Subsets</a> ; <a href="http://www.imgt.org/IMGT_vquest/vquest" target="_blank">IMGT/V-QUEST</a> ; <a href="http://www.imgt.org/CLLDBInterface/" target="_blank">IMGT/CLL-DB</a></h2>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content" class="span-24 last">
+
+<!-- The FORM -->
+<form enctype="multipart/form-data" action="/cgi-bin/arrest/assignsubsets_html.pl" method="post" name="assignsubsets" onReset="return confirm('do you really want to reset the form?')">
+
+<fieldset>
+
+<p style="text-align:center"><a href="http://bat.infspire.org/arrest" target="_blank">ARResT</a> | <a href="#cite">cite us</a> | <a href="#news">news</a> | <a href="#info">help</a> | <a href="mailto:bat@infspire.org" target="_blank">contact us</a> | <a href="http://bat.infspire.org" target="_blank">BAT cave</a> | <input type="text" size="12" name="elite" />
+<br><font class="small quiet terms">please consider using <a href="http://www.google.com/chrome" target="_blank">Chrome</a> / <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> / Safari for best viewing and full functionality</font></p>
+</p>
+
+<!--<i><font color="red">note</font> - we currently only support immunoglobulin (IG / B cell receptor / antibody) sequence curation, T cell receptors (TR) coming soon</i>-->
+<fieldset style="background-color:rgb(232,232,232);">
+<legend>your antigen receptor sequences</legend>
+<b>provide <u>up to 50</u> FASTA-formatted <u>FULL NUCLEOTIDE</u> IG sequences</b> <i>- check example below, ~100kb upload limit</i><br>
+<textarea id="ftext" name="fastatext" class="textarea" placeholder="copy-paste or type (?!) up to 50 properly formatted nucleotide sequences here"></textarea><br>
+<div id="fastatext_div">
+<input type="file" onkeydown="return false;" size="80" name="fastafile" class="browse4file"/>
+<a onclick="clearFileInputField('fastatext_div')"
+                         href="javascript:noAction();">clear browsed file</a>
+</div>
+<!--<br>
+<b>or provide an ARResT/V-QUESTion Excel table</b> <i>- ~100kb upload limit</i><br>
+<textarea id="ttext" name="tabletext" class="textarea" placeholder="copy-paste up to 50 tabulated ARResT/V-QUESTion results here"></textarea><br>
+<div id="tabletext_div">
+<input type="file" onkeydown="return false;" size="80" name="tablefile" class="browse4file"/>
+<a onclick="clearFileInputField('tabletext_div')"
+                         href="javascript:noAction();">clear browsed file</a>
+</div>
+--><br>
+<b>or click to load example</b><br>
+<input type="button" style="background-color:rgb(208,208,208);margin-top:0px;margin-right:0px;font-size:1.1em;border:1px solid #bbb;" onclick="readFile('arrest/assignsubsets/assignsubsets.example.1','ftext')" value="FASTA"/>
+<!--<input type="button" style="background-color:rgb(208,208,208);margin-top:0px;margin-right:0px;font-size:1.1em;border:1px solid #bbb;" onclick="readFile('arrest/assignsubsets/assignsubsets.example.2','ttext')" value="table"/>
+--><br>
+<!--
+<label>receptor</label>
+<select name="receptor">
+  <option value="IG" selected="yes">Ig / BcR / B-cell</option>
+  <option value="TR">TcR / T-cell</option>
+</select>
+-->
+
+  <script>
+   $(function() {
+    // Invoke the plugin
+    $('input, textarea').placeholder();
+    // That's it, really.
+   });
+  </script>
+
+</fieldset>
+
+<p class="small quiet terms" style="text-align:left"><font color="red"><b>DISCLAIMER</b></font> - there is no guarantee that ARResT/AssignSubsets will be able to properly assign all your sequences to subsets, please bear this in mind when making decisions, especially important ones on e.g. clinical care, and especially with 'borderline'- or 'low'-confidence assignments. To help us improve ARResT/AssignSubsets, please <a href="mailto:bat@infspire.org" target="_blank">contact us</a>.</p>
+<input type="submit" class="title" value="Assign to Subsets" /> or
+<input type="reset" class="title" value="reset" />
+</form>
+
+</fieldset>
+
+<h2 id="cite">citation and acknowledgements</h2>
+<p>
+We're now published in Bioinformatics:<br>
+<b>ARResT/AssignSubsets: a novel application for robust subclassification of chronic lymphocytic leukemia based on B cell receptor IG stereotypy</b><br>
+Vojtech Bystry; Andreas Agathangelidis; Vasilis Bikos; Lesley Ann Sutton; Panagiotis Baliakas; Anastasia Hadzidimitriou; Kostas Stamatopoulos; Nikos Darzentas<br>
+Bioinformatics 2015<br>
+<a href="http://bioinformatics.oxfordjournals.org/content/early/2015/08/05/bioinformatics.btv456" target="_blank">doi: 10.1093/bioinformatics/btv456</a>
+<br><br>
+<b>| acknowledgements</b><br>
+The tool is currently supported by Ministry of Health of the Czech Republic grant nr. 16-34272A.
+</p>
+
+<br>
+<h2 id="news">news and updates</h2>
+<p>
+<b>10.11.19 |</b> fix for sequence labels with tabs<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+- rerun sequences if you suspect this, saw "no (healthy) data to work with, please check the ARResT/SeqCure report", and sequence looked OK<br>
+<b>28.08.19 |</b> fix for IMGT/V-QUEST 3.5.8<br>
+<b>26.07.19 |</b> quick response from IMGT, we should be back to normal<br>
+<b>26.07.19 |</b> temporary fix for IMGT/V-QUEST 3.5.3 and its modified API; we're missing IMGT's run parameters, shouldn't affect results, but <a href="mailto:bat@infspire.org" target="_blank">report</a> any issues<br>
+<b>29.05.19 |</b> update for IMGT/V-QUEST 3.5.0 and its new API; shouldn't affect results, but please <a href="mailto:bat@infspire.org" target="_blank">report</a> any issues<br>
+<b>11.10.18 |</b> fix in ARResT/SeqCure<br>
+<b>29.06.18 |</b> improvements in ARResT/SeqCure, esp. for problematic sequences and feedback to user (thanks to Elisa Pagnin for the motivation)<br>
+<b>08.02.18 |</b> 'plain-text-formatted results table' now contains the full nucleotide sequence plus IMGT/V-QUEST metadata (e.g. versions and date);<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ plus code optimisations and cosmetic changes; please <a href="mailto:bat@infspire.org" target="_blank">report</a> any issues you might encounter<br>
+<b>04.02.18 |</b> model with latest IMGT/V-QUEST annotations, on which our update tests and stats are identical to previous ones,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ but right-on-the-border 'borderline' user cases <i>might</i> now be assigned differently - if in doubt, please rerun such cases;<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ also, underlying code has been rewritten and software (e.g. R) updated, so please <a href="mailto:bat@infspire.org" target="_blank">report</a> any issues you might encounter<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ finally, we now link subsets assignments to <a href="http://bat.infspire.org/arrest/subsets" target="_blank">ARResT/Subsets, the Encyclopedia of CLL Subsets</a><br>
+<b>17.07.17 |</b> functionality and its comments were not properly used in ARResT/SeqCure due to header changes in IMGT/V-QUEST 3.4.6 (30 March 2017)<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+- subset assignment <b><i>NOT</i></b> affected<br>
+<b>26.02.17 |</b> a bit more important textual information on assignment confidence levels (see DISCLAIMER, the 'score' section below, and the results page)<br>
+<b>05.10.16 |</b> a couple of output fixes (ordering of unassigned, and printing of unassigned when <i>all</i> scores were -Inf) - actual results <b><i>NOT</i></b> affected<br>
+<b>04.10.16 |</b> more user-friendly results ordering: first by assignment or not (naturally, and as was), then confidence (this is new),<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<i>then</i> assignment score margin (not visible by itself thus confusing because it is subset-specific and was ordering 'confidence' unnaturally)<br>
+<b>05.03.16 |</b> now reporting comparative sequence issues, e.g. identical labels across sequences - <a href="/arrest/seqcure" target="_blank">ARResT/SeqCure</a> could always do that, now here as well<br>
+<b>10.10.15 |</b> timeout issue with long runs should be resolved - apologies for any downtime or erroneous ("no (healthy) data...") runs, please repeat if unsure<br>
+<b>09.08.15 |</b> <a href="http://bioinformatics.oxfordjournals.org/content/early/2015/08/05/bioinformatics.btv456" target="_blank">ARResT/AssignSubsets now published in Bioinformatics</a> - with many thanks to the anonymous reviewers and the editorial staff<br>
+<b>21.06.15 |</b> earlier check for whether IMGT is accessible, and proper message when it's not, like (apparently) this weekend<br>
+<b>21.06.15 |</b> addition of bits of text to the output to make it easier to spot the links to the heat maps<br>
+<b>04.06.15 |</b> improvements in instructions, HTML formatting, and overall usability<br>
+<b>16.03.15 |</b> online<br>
+</p>
+
+<br>
+
+<h2 id="info">background and instructions</h2>
+<p>
+
+<font color="#b32120"><b>| intro</b></font><br>
+ARResT/AssignSubsets was built to robustly assign user-submitted sequences as <b>new</b> members to <b>existing</b> subsets of stereotyped antigen receptor sequences - that implies that ARResT/AssignSubsets does <b>not</b> discover new subsets. This is currently applicable to <a href="http://www.bloodjournal.org/content/119/19/4467" target="_blank">the 19 major subsets of stereotyped B-cell receptors in CLL</a>. Critically, major subsets account for >10% of the cohort, >40% of stereotyped cases, and >25% of patients requiring treatment, and <a href="http://www.thelancet.com/journals/lanhae/article/PIIS2352-3026(14)00005-2" target="_blank">seem to share clinicobiological features and, even, outcome</a>.
+<br>The tool is currently supported by Ministry of Health of the Czech Republic grant nr. 16-34272A.
+<br><br>
+
+<font color="#b32120"><b>| sequence features used in curation, learning and assignment</b></font><br>
+Immunogenetic annotations of sequences are obtained from <a href="http://www.imgt.org/IMGT_vquest/share/textes/" target="_blank">IMGT/V-QUEST</a>, the widely-accepted reference for antigen receptor sequence analysis. Initially, and importantly, these are used by ARResT/SeqCure to report on issues with the sequences which could potentially compromise the analysis.
+<br><br>
+The annotations are then used to extract sequence features, which are essential for both the learning and assignment phases of ARResT/AssignSubsets, and which are divided into two groups: <b>core</b> and <b>secondary</b>.
+<br><br>
+<b>Core features</b> are strictly controlled: if the value of a core feature for a given new sequence is not shared amongst the members of a given subset, then the sequence cannot be assigned to that subset. These are:<br><b>1.</b> VH CDR3 length, a critical determinant of the structure of the antigen recognition loop;<br><b>2.</b> IGHV gene phylogenetic clan, exploiting the sequence similarity of IGHV genes originating from the same clan; and<br><b>3.</b> mutational status of the rearrangement, with 'mutated' for less than 98% nucleotide identity to germline and 'unmutated' otherwise, an important prognostic indicator in patients with CLL.
+<br><br>
+<b>Secondary features</b> are not critical and therefore unobserved values are accepted, but they do affect the subset assignment based on their respective values and frequencies in each major subset. These are:<br><b>1.</b> relative frequency of IGHV and IGHJ genes, especially relevant in subsets with rearrangements that express more than one IGHV gene (prime example is subset #1) and in which not all IGHV genes are equally represented;<br><b>2.</b> frequency of each amino acid at any given position of the VH CDR3 - e.g. the presence at a VH CDR3 position of an amino acid that is highly frequent among the sequences of a subset will increase the score, and thus the possibility that the rearrangement will be assigned to this subset.
+<br><br>
+
+<font color="#b32120"><b>| learning and assignment</b></font><br>
+ARResT/AssignSubsets has two major phases to serve its purpose:<br><b>1.</b> <b>learning</b> is achieved through sets of rules captured in a probabilistic model, specifically a simple Bayesian network implemented in R [r-project.org/];<br><b>2.</b> <b>assignment</b> is based on the abundance and statistical significance of evaluated sequence features, the same ones used to build the Bayesian network in the learning phase.
+<br><br>
+
+<font color="#b32120"><b>| score</b></font><br>
+The score is the difference between the best-scoring major subset and a negative set ('pool' cohort) of sequences belonging to minor subsets as well as non-subset, heterogeneous cases. Positive numbers mean the input sequence is closer to the subset, while negative numbers mean the input sequence is closer to the 'pool' cohort. '-Inf' (minus infinity) meaning that the core features of the submitted sequence did not match the core features of the subset. Assignment is based on a per-subset threshold, in turn based on the range of scores achieved by existing members of that subset. Finally, the difference between the relative score and the respective subset threshold is 'translated' to assignment confidence, ranging from 'borderline' to 'extreme', to help the user better evaluate the results. Our current results indicate ~4% of 'borderline' and 'low' assignments (essentially outlier members), whereas 'high' and 'extreme' take up ~90% with 'average' another ~5%. Therefore, and although low levels of confidence might still represent true assignments, users are urged to use caution and their best judgement or ask for advice in those cases, especially in a clinical context.
+<br><br>
+
+<font color="#b32120"><b>| input format</b></font><br>
+Provide up to 50 nucleotide sequences of immunoglobulin (IG) gene rearrangements in <a href="http://en.wikipedia.org/wiki/FASTA_format" target="_blank">FASTA format</a>.<br>We also offer an example set, just click 'FASTA' under 'or click to load example'.
+<br><br>
+
+<font color="#b32120"><b>| output</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<i>Note that there is also quick help in the results page, under 'click to open/close quick help'.</i><br><br>
+<b><u>general output</u></b><br>
+After you launch ARResT/AssignSubsets, you'll be kept updated and presented with information and help, results and tables - please click on the screenshot below to get a larger version, and read below it for an explanation of all the different highlighted sections:<br>
+<a title="example ARResT/AssignSubsets output" href="/images/as.out.sections.png"><img src="/images/as.out.sections.png" style="max-width:50%; max-height:50%;"/></a><br>
+There are <b>A-H</b> sections on the screenshot - these are:<br>
+<b>A.</b> Real-time progress update, which includes<br>
+<b>B.</b> a detailed ARResT/SeqCure report, to assess the 'health' of your sequences - please don't ignore this information, you might compromise your analysis.<br>
+<b>C.</b> How many of your sequences were assigned to subsets, how many were 'healthy' according to ARResT/SeqCure, and how many you submitted.<br>
+<b>D.</b> Plain-text-formatted results table, amenable to (down)loading to Excel, with IMGT/V-QUEST annotation.<br>
+<b>E.</b> Interactive link to show/hide some extra summary information about the two following tables (F and H).<br>
+<b>F.</b> Assignment frequencies table for all subsets, e.g.<br>
+<b>G.</b> from top to bottom, the subset name, its relative frequency in the original published cohort, and how many of the submitted sequences were assigned to it<br>
+<b>H.</b> Assignment report table, which contains an overview of the results, including links to heat maps with core and secondary features and their contribution to and significance in the assignment process. In more detail, and regarding columns from left to right:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>'label'</b> - label of your sequence, also and when applicable linked to a heat map visualisation of the assignment result (more on heat maps below)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>'SeqCure'</b> - colour-coded 'worst' message level from ARResT/SeqCure, with 'fatal' leading to the sequence not being used for assignment<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>'subset'</b> - subset your sequence was assigned to, or 'unassigned' otherwise, or 'skipped/unhealthy' when the sequence was not used<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>'confidence'</b> - (non-)assignment confidence, as colour-coded 'borderline/low/average/high/extreme' (see 'score' above for more)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>'score'</b> - difference between scores to best-scoring subset and 'pool' cohort, &gt;0 closer to subset, &lt;0 closer to 'pool', -Inf: core features not found<br><br>
+
+<b><u>heat maps</u></b><br>
+As promised, some more information on <b>heat maps</b>. Firstly a generic example with generic insight:<br>
+<a title="example heat map" href="/images/as.hm.png"><img class="left" src="/images/as.hm.png" style="max-width:65%; max-height:65%;"/></a>
+<font size="1.2em"><i><b>yellow-to-white-to-blue</b> color scale...<br>
+<b>top row:</b> increasing feature support within the assigned subset<br><br>
+<b>bottom row:</b> increasing feature uniqueness across all subsets, essentially highlighting subset-distinctive features<br></i></font>
+<br><br><br>
+Two-row heat maps display the core and secondary sequence features that were evaluated, and their contributions and significance for assigning select IG gene rearrangements to major CLL subsets. The <b>top row</b> refers to the submitted rearrangement, and the <b>bottom row</b> to the theoretical rearrangement that would have achieved the highest score for every feature in the respective subset - its 'best member'. Regarding the <b>yellow-to-white-to-blue</b> color scale: for the submitted rearrangement on the <b>top row</b>, it reflects the support of the observed values against the support for the values of the 'best member' within the assigned subset; for the 'best member' on the <b>bottom row</b>, it reflects the increasing level of uniqueness of the value within the assigned subset against the 'pool' cohort, thus essentially highlighting subset-distinctive features. Below you'll find some more specific examples, with more detailed explanations about what you see and why, and how to possibly interpret similar results.<br>
+<a title="example heat map A" href="/images/as.hm.A.png"><img src="/images/as.hm.A.png" style="max-width:100%; max-height:100%;"/></a><br>
+^True assignment to subset #1. The QWL pattern (VH CDR3 aa positions 4-6), previously shown (and confirmed herein) to be highly popular in (deep blue in top row) and specific to (deep blue in bottom row) subset #1, is preserved in the submitted sequence. In contrast, Alanine (A) and Arginine (R) residues at VH CDR3 aa positions 1 and 2 (IMGT 105-106) are also highly popular (deep blue in top row) but not equally distinctive (white in bottom row).<br>
+<a title="example heat map B" href="/images/as.hm.B.png"><img src="/images/as.hm.B.png" style="max-width:100%; max-height:100%;"/></a><br>
+^True assignment to subset #4. Although the widely-used IGHJ6 tetrapeptide YYYY (VH CDR3 aa positions 13-16) is not subset-#4-specific as revealed by the light blue colors on the bottom row, joint coding (especially of the first two Y) with the 'junctional' dipeptide RR (VH CDR3 aa positions 11-12) makes it a deeply preserved and distinctive feature.<br>
+<a title="example heat map C" href="/images/as.hm.C.png"><img src="/images/as.hm.C.png" style="max-width:100%; max-height:100%;"/></a><br>
+^True assignment to subset #8. An example of a 'mainly-germline' type of stereotypy, implied by the lighter blue color of the majority of VH CDR3 positions on the bottom row. The assigned sequence follows most of the 'best-member' features with few exceptions in the apparently 'junctional' VH CDR3 positions.<br>
+<a title="example heat map D" href="/images/as.hm.D.png"><img src="/images/as.hm.D.png" style="max-width:100%; max-height:100%;"/></a><br>
+^False assignment to subset #3. Nearly all distinctive features of the subset, e.g. the IGHV gene and VH CDR3 aa positions 6-14 (IMGT 110-112.3), are replaced by infrequently observed, i.e. less supported, values in the submitted sequence. Nevertheless, the preservation of the core features as well as other secondary ones, falsely placed this sequence above the assignment threshold.<br><br>
+
+<b><u>ARResT/SeqCure</u></b><br>
+Finally, some orientation around the <b>ARResT/SeqCure report</b>. The few sequences partially shown are the same as for the screenshots above.<br>
+<a title="example ARResT/SeqCure report" href="/images/as.sc.sections.png"><img src="/images/as.sc.sections.png" style="max-width:50%; max-height:50%;"/></a><br>
+<b>A.</b> Basic immunogenetic annotation from IMGT/V-QUEST for the sequence (label on the left hand side), including length in nucleotides, IMGT-Junction amino acid sequence, IGHV gene assignment(s), % identity to germline, etc<br>
+<b>B.</b> Issues discovered by ARResT/SeqCure through IMGT/V-QUEST annotation and application of expert rules, including a colour-coded message level (the same you see in ARResT/AssignSubsets' 'assignment report table' (H above)). Note that this sequence had a potential indel which guided ARResT/SeqCure to rerun IMGT/V-QUEST with its indel mode activated on to confirm it, which it did.<br>
+<b>C.</b> This sequence had an 'n' character which led to its exclusion from the rest of the analysis - here you see the specific message.<br>
+<b>D.</b> Advice regarding the issue from C above.<br>
+<b>E.</b> Full advice regarding the issue from C above, expanding on D.<br>
+</p>
+
+
+<p class="small quiet terms" style="text-align:right">
+hosted at the <a href="http://bat.infspire.org/" target="_blank">Bioinformatics Analysis Team / BAT</a>
+<!--<br>
+acknowledging
+<a href="http://www.ceitec.eu/" target="_blank"><font color="green">CEITEC MU</font></a>, <font color="green">SYLICA</font> and <font color="green">SuPReMMe</font></a>
+; <a href="http://www.igcll.org/" target="_blank"><font color="grey">IgCLL</font></a>
+; <a href="http://www.euroclonality.org/" target="_blank"><font color="grey">ESLHO::EuroClonality-NGS</font></a>
+; <a href="http://inab.certh.gr/" target="_blank"><font color="blue">INAB</font></a>
+; <a href="http://www.gsrt.gr/" target="_blank"><font color="blue">GSRT</font></a> and <font color="blue">ENosAI</font>-->
+</p>
+
+<!-- Close the div for Content -->
+</div>
+
+<!-- FOOTER -->
+<div class="column span-24 border-top">
+<div id="footer" class="column span-24">
+
+</div>
+</div>
+
+<!-- Close the CSS container-->
+</div>
+
+</body>
+</html>

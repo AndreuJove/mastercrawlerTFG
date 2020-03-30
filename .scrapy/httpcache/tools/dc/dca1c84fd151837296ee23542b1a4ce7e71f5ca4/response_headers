@@ -1,0 +1,16 @@
+Date: Mon, 30 Mar 2020 18:45:30 GMT
+Content-Type: text/html; charset=utf-8
+Set-Cookie: __cfduid=d5989b230a8ae1fbf24bbe73922149ee91585593930; expires=Wed, 29-Apr-20 18:45:30 GMT; path=/; domain=.mendeley.com; HttpOnly; SameSite=Lax; Secure
+Set-Cookie: mdata.sid1=s%3A18OUx_Jkt1XAD-Id64zZe6IyJ9yhT3Oe.hJNgTkErCfMlwnXwXPNamvABJ3UbQrOjJjB6N1Aaq3s; Path=/; HttpOnly; Secure
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.adobedtm.com *.optimizely.com *.newrelic.com *.nr-data.net *.googletagmanager.com *.demdex.net *.googleadservices.com *.doubleclick.net *.polyfill.io *.hotjar.com *.mendeley.com *.mendeley.com:3001 *.google.com *.google-analytics.com *.elsevier.com *.heapanalytics.com *.googleapis.com *.bootstrapcdn.com *.cloudfront.net *.plu.mx *.pendo.io blob:; connect-src 'self' *.adobedtm.com *.optimizely.com *.newrelic.com *.nr-data.net *.googletagmanager.com *.demdex.net *.googleadservices.com *.doubleclick.net *.polyfill.io *.hotjar.com *.mendeley.com *.mendeley.com:3001 *.google.com *.google-analytics.com *.elsevier.com ws://local-weblet-data.mendeley.com:3001 ws://localhost:3001 *.heapanalytics.com *.googleapis.com *.bootstrapcdn.com *.s3.amazonaws.com *.s3.eu-west-1.amazonaws.com *.cloudfront.net *.plu.mx *.elsevierlimited.tt.omtrdc.net; style-src 'self' 'unsafe-inline' *.mendeley.com *.googleapis.com *.bootstrapcdn.com *.cloudfront.net *.pendo.io; img-src 'self' data: *; font-src 'self' *.mendeley.com *.hotjar.com *.bootstrapcdn.com *.cloudfront.net data:; object-src 'none'; media-src 'self'; frame-src 'self' *.hotjar.com *.doubleclick.net *.elsevier.com *.optimizely.com *.kitware.fr *.demdex.net
+Strict-Transport-Security: max-age=2592000
+X-Frame-Options: Deny
+Cache-Control: private, max-age=0, no-cache, no-store
+Etag: W/"16154-//JIBdUxjW6fSxgjDqlYVdpLesw"
+Content-Encoding: gzip
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 57c3fcf079ebc67f-MAD

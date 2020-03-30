@@ -1,0 +1,478 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:spry="http://ns.adobe.com/spry" xml:lang="en" lang="en">
+  <head>
+    <!-- Call Google Analytics script -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20347679-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Let symfony know to use javascripts and stylesheets -->
+    <script type="text/javascript" src="/js/banner.js"></script>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/SpryCollapsiblePanel.js"></script>
+<script type="text/javascript" src="/js/SpryMenuBar.js"></script>
+<script type="text/javascript" src="/js/SpryTabbedPanel.js"></script>
+<script type="text/javascript" src="/js/SpryTooltip.js"></script>
+<script type="text/javascript" src="/js/SpryURLUtils.js"></script>
+<script type="text/javascript" src="/js/scriptaculous.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/builder.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bclcommons.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/contact_form.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/error.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/home_index.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/jens.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/job.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/jobdata.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/layout.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/login_admin.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/publications.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/research_show.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/resource.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/rosetta_tutorial.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/server.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/sidebar_all.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/slideshow.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/SpryCollapsiblePanel.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/SpryMenuBarHorizontal.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/SpryTabbedPanels.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/SpryTooltip.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/user.css" />
+
+    <!-- Metadata -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Title, this is what appears in the title bar for the page -->
+    <title>Meiler Lab</title>
+  </head>
+  <body>
+        <div class="container"  style="width: 72em;">
+	    <div id="header">
+        <table id="header_table">
+          <tr>
+            <td id="header_table_logo" ><img src="/images/logo/vu06c.png" alt= "img"/></td>
+            <td id="header_table_heading">Meiler Lab <br /> <br /> Computational Chemical and Structural Biology</td>
+            <td id="header_table_login">
+	                            <div id="signin" class="CollapsiblePanel">
+                  <div class="CollapsiblePanelTab">Login</div>
+                  <div class="CollapsiblePanelContent">
+                    <div id= "login">
+<form action="/index.php/login" method="post" >
+  <table>
+    <tbody>
+      <tr>
+  <th><label for="signin_username">Username</label></th>
+  <td><input size="13" type="text" name="signin[username]" id="signin_username" /></td>
+</tr>
+<tr>
+  <th><label for="signin_password">Password</label></th>
+  <td><input size="13" type="password" name="signin[password]" id="signin_password" /></td>
+</tr>
+<tr>
+  <th><label for="signin_remember">Remember</label></th>
+  <td><input type="checkbox" name="signin[remember]" id="signin_remember" /></td>
+</tr>
+    
+    <!-- tfoot -->
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Signin" />
+          
+                                <a style="color: white;" href="/index.php/user/reset-request">Forgot your password?</a>
+          
+                  </td>
+      </tr>
+    </tbody>
+    <!-- /tfoot -->
+  </table>
+</form></div>
+                  </div>
+                </div>
+	                        </td>
+          </tr>
+        </table>
+	    </div>
+	    <div class="menubar" style="width: 72em;">
+      <ul id="MenuBar">
+  <li class="first">
+    <a href="/index.php/">Home</a>
+  </li>
+  <li>
+    <a href="/index.php/users">Members</a>
+    <ul class="menu_level_1">
+      <li class="first">
+        <a href="/index.php/users">Group Members</a>
+      </li>
+      <li class="last">
+        <a href="/index.php/users/alumni">Group Alumni</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/index.php/research">Research</a>
+  </li>
+  <li>
+    <a href="/index.php/servers">Servers</a>
+  </li>
+  <li>
+    <a href="/index.php/">Resources</a>
+    <ul class="menu_level_1">
+      <li class="first">
+        <a href="/index.php/rosetta-tutorials">Rosetta Tutorials</a>
+      </li>
+      <li>
+        <a href="/index.php/teaching">Teaching</a>
+      </li>
+      <li>
+        <a href="/index.php/software">Software</a>
+      </li>
+      <li>
+        <a href="/index.php/movies">Movies</a>
+      </li>
+      <li class="last">
+        <a href="/index.php/gpcrmodeldb">RosettaGPCR</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/index.php/bclcommons">BCL Commons</a>
+  </li>
+  <li>
+    <a href="/index.php/publications">Publications</a>
+  </li>
+  <li>
+    <a href="/index.php/">Links</a>
+    <ul class="menu_level_1">
+      <li class="first">
+        <a href="http://www.vanderbilt.edu/">Vanderbilt University</a>
+      </li>
+      <li>
+        <a href="http://www.accre.vanderbilt.edu">ACCRE</a>
+      </li>
+      <li>
+        <a href="http://www.rcsb.org/pdb/Welcome.do">Protein Data Bank</a>
+      </li>
+      <li>
+        <a href="http://structbio.vanderbilt.edu/nmr/">Biomolecular NMR facility</a>
+      </li>
+      <li>
+        <a href="http://www.library.vanderbilt.edu/">Jean and Alexander Heard library</a>
+      </li>
+      <li>
+        <a href="http://sfx.library.vanderbilt.edu/vu/a-z/default">E-journal locator</a>
+      </li>
+      <li>
+        <a href="http://www.library.vanderbilt.edu/science/">Science Engineering Library</a>
+      </li>
+      <li>
+        <a href="http://www.mc.vanderbilt.edu/biolib/">Eskind Biomedical Library</a>
+      </li>
+      <li>
+        <a href="http://www.ncbi.nlm.nih.gov/pmc/journals/276/">Biomedical Dig Journals</a>
+      </li>
+      <li>
+        <a href="http://www.ncbi.nlm.nih.gov/sites/entrez">Entrez-Pubmed</a>
+      </li>
+      <li>
+        <a href="http://pubchem.ncbi.nlm.nih.gov/">Pubchem</a>
+      </li>
+      <li>
+        <a href="http://riodb01.ibase.aist.go.jp/sdbs/cgi-bin/cre_index.cgi?lang=eng">SDBS</a>
+      </li>
+      <li class="last">
+        <a href="https://my.vanderbilt.edu/nextgenvaccines/">TIPS - Next Generation Vaccines</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/index.php/">Fundings</a>
+    <ul class="menu_level_1">
+      <li class="first">
+        <a href="http://www.nigms.nih.gov/">NIH NIGMS</a>
+      </li>
+      <li>
+        <a href="http://www.nimh.nih.gov/index.shtml">NIH NIMH</a>
+      </li>
+      <li>
+        <a href="http://www.darpa.mil/">DOD DARPA</a>
+      </li>
+      <li>
+        <a href="http://nsf.gov/div/index.jsp?div=MCB">NSF MCB</a>
+      </li>
+      <li>
+        <a href="http://nihroadmap.nih.gov/">NIH Roadmap Initiave</a>
+      </li>
+      <li>
+        <a href="http://structbio.vanderbilt.edu/">Vanderbilt CSB</a>
+      </li>
+      <li>
+        <a href="http://www.vanderbilt.edu/vicb/">Vanderbilt ICB</a>
+      </li>
+      <li>
+        <a href="http://www.vanderbilt.edu/chemistry/">Vanderbilt Chemistry</a>
+      </li>
+      <li>
+        <a href="http://www.mc.vanderbilt.edu/root/vumc.php?site=pharmacology">Vanderbilt Pharmacology</a>
+      </li>
+      <li class="last">
+        <a href="http://dbmi.mc.vanderbilt.edu/">Vanderbilt Biomedical Informatics</a>
+      </li>
+    </ul>
+  </li>
+  <li class="last">
+    <a href="/index.php/">Join Us</a>
+    <ul class="menu_level_1">
+      <li class="first">
+        <a href="/index.php/photos">Fun @ Meiler lab</a>
+      </li>
+      <li>
+        <a href="/index.php/jobs">Job Openings</a>
+      </li>
+      <li class="last">
+        <a href="/index.php/contact">Contacts</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<script type="text/javascript">
+var MenuBar = new Spry.Widget.MenuBar("MenuBar", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+      </div>
+
+      <div id="inner" style="width: 72em;">
+	      <div id="component">
+  <div id="sidebar_menu">
+  <div class="research">
+    	    <div id="CollapsiblePanel1" class="CollapsiblePanel">
+	      <div class="CollapsiblePanelTab">
+	        <a href="#" onclick="CollapsiblePanel3.close(); CollapsiblePanel5.close(); CollapsiblePanel1.close(); CollapsiblePanel6.close(); CollapsiblePanel2.close(); CollapsiblePanel4.close();  return false;">
+	          Protein de-novo Folding	        </a>
+	      </div>
+	      <div class="CollapsiblePanelContent">
+	        <ul>
+            <li>
+                              			            <p>Methods Development</p>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=21">Contact Prediction</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=27">BCL Align Sequence Alignment and Fold Recognition</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=28">Sparse EPR Data guided Protein Structure Elucidation</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=30">Jufo9D Secondary Structure and TM Span Prediction</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=47">Protein Structure Prediction using Fold Templates</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=64">BCL::Cluster: Clustering biological molecules with PyMOL visualization</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=135">Gradient Minimization for Structure Refinement</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=152">RosettaTMH</a>
+			            		            					                    			            <p>Applications</p>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=54">Modeling of Protein IIIA</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=55">Structure Determination of DsbB using Paramagnetic Restraints</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=81">Structure determination of KCNE3 using paramagnetic restraints</a>
+			            		            					          		  </li>
+          </ul>
+	      </div>
+	    </div>
+
+    	    <div id="CollapsiblePanel2" class="CollapsiblePanel">
+	      <div class="CollapsiblePanelTab">
+	        <a href="#" onclick="CollapsiblePanel3.close(); CollapsiblePanel5.close(); CollapsiblePanel1.close(); CollapsiblePanel6.close(); CollapsiblePanel2.close(); CollapsiblePanel4.close();  return false;">
+	          Protein Structure Prediction from Sparse Data	        </a>
+	      </div>
+	      <div class="CollapsiblePanelContent">
+	        <ul>
+            <li>
+                              			            <p>Methods Development</p>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=6">Protein Structure Prediction</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=19">Cryo-EM Fit</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=25">Cryo-EM Guided Protein Fold Elucidation</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=40">Membrane Protein Structure Prediction using Sparse NMR Restraints</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=42">RosettaEPR</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=65">BCL::EMFitMinimize</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=82">Protein Structure Prediction using SAXS Data </a>
+			            		            					                    			            <p>Applications</p>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=61">Modeling Rhodopsin Interaction with G-Protein and Arrestin</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=156">Mechanism of Activation of the heterotrimeric G protein alpha subunit</a>
+			            		            					          		  </li>
+          </ul>
+	      </div>
+	    </div>
+
+    	    <div id="CollapsiblePanel3" class="CollapsiblePanel">
+	      <div class="CollapsiblePanelTab">
+	        <a href="#" onclick="CollapsiblePanel3.close(); CollapsiblePanel5.close(); CollapsiblePanel1.close(); CollapsiblePanel6.close(); CollapsiblePanel2.close(); CollapsiblePanel4.close();  return false;">
+	          Cheminformatics	        </a>
+	      </div>
+	      <div class="CollapsiblePanelContent">
+	        <ul>
+            <li>
+                              			            <p>Methods Development</p>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=17">Chemical Shift Prediction</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=32">PharmMap</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=44">Method Development for QSAR Ligand-based Virtual Screening</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=45">Development of RosettaQSAR</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=60">Knowledge-Based Small Molecule Conformational Sampling</a>
+			            			              <a class="research_link" href="/index.php/qsar_pubchem_benchmark_2012">Novel HTS Datasets composed to benchmark ligand-based QSAR Modeling
+</a>
+			            		            					                    			            <p>Applications</p>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=26">mGluR5 Related Neurological Diseases</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=53">Allosteric Modulators of Neuropeptide Y Receptors</a>
+			            			              <a class="research_link" href="/index.php/qsar_malaria_inhibitors_beta_hematin_crystallization">Malaria - Inhibition of beta-Hematin Crystallization in Plasmodium falciparum</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=154">Rapid in silico target identification for anti-malarials</a>
+			            		            					          		  </li>
+          </ul>
+	      </div>
+	    </div>
+
+    	    <div id="CollapsiblePanel4" class="CollapsiblePanel">
+	      <div class="CollapsiblePanelTab">
+	        <a href="#" onclick="CollapsiblePanel3.close(); CollapsiblePanel5.close(); CollapsiblePanel1.close(); CollapsiblePanel6.close(); CollapsiblePanel2.close(); CollapsiblePanel4.close();  return false;">
+	          Protein-Protein Interactions	        </a>
+	      </div>
+	      <div class="CollapsiblePanelContent">
+	        <ul>
+            <li>
+                              					                    			            <p>Applications</p>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=24">Structural Characterization of HoxA11</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=38">HIV Antibody/Antigens Interactions</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=39">Antibiotics- Protein/Peptide Interfaces</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=50">Antibody/Antigens Interaction</a>
+			            		            					          		  </li>
+          </ul>
+	      </div>
+	    </div>
+
+    	    <div id="CollapsiblePanel5" class="CollapsiblePanel">
+	      <div class="CollapsiblePanelTab">
+	        <a href="#" onclick="CollapsiblePanel3.close(); CollapsiblePanel5.close(); CollapsiblePanel1.close(); CollapsiblePanel6.close(); CollapsiblePanel2.close(); CollapsiblePanel4.close();  return false;">
+	          Ligand Docking	        </a>
+	      </div>
+	      <div class="CollapsiblePanelContent">
+	        <ul>
+            <li>
+                              			            <p>Methods Development</p>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=31">Rosetta Drug Design</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=46">Rosetta Design</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=49">Modeling Partial Covalent Interactions
+in Protein Ligand Interfaces</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=151">RosettaLigandEnsemble</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=153">Drug Design through Foldit Video Game</a>
+			            		            					                    			            <p>Applications</p>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=29">Structural Determinants of Antidepressant Drugs</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=41">GPCR Model Building, Refinement, and Ligand Docking</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=48">HIV-1 Protease Inhibitor Docking</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=52">Protein-Ligand Interaction as Cancer Therapeutics</a>
+			            		            					          		  </li>
+          </ul>
+	      </div>
+	    </div>
+
+    	    <div id="CollapsiblePanel6" class="CollapsiblePanel">
+	      <div class="CollapsiblePanelTab">
+	        <a href="#" onclick="CollapsiblePanel3.close(); CollapsiblePanel5.close(); CollapsiblePanel1.close(); CollapsiblePanel6.close(); CollapsiblePanel2.close(); CollapsiblePanel4.close();  return false;">
+	          Protein Design	        </a>
+	      </div>
+	      <div class="CollapsiblePanelContent">
+	        <ul>
+            <li>
+                              					                    			            <p>Applications</p>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=22">Evolution of TIM Barrels</a>
+			            			              <a class="research_link" href="/index.php/research/show?w_text_id=51">Chemical Basis of Ligand-Macromolecule Recognition</a>
+			            		            					          		  </li>
+          </ul>
+	      </div>
+	    </div>
+
+      </div>
+</div>
+
+<script type="text/javascript">
+  var params = Spry.Utils.getLocationParamsAsObject();
+var CollapsiblePanel3 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel3",{contentIsOpen: params.col3 ? true : false});
+var CollapsiblePanel5 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel5",{contentIsOpen: params.col5 ? true : false});
+var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1",{contentIsOpen: params.col1 ? true : false});
+var CollapsiblePanel6 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel6",{contentIsOpen: params.col6 ? true : false});
+var CollapsiblePanel2 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel2",{contentIsOpen: params.col2 ? true : false});
+var CollapsiblePanel4 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel4",{contentIsOpen: params.col4 ? true : false});
+</script></div>
+
+<div id= "research">
+  <p><b>The Bio Chemical Library (BCL) </b></p>
+
+<p>The Bio Chemical Library (BCL) is a software package that provides unique tools for biological research, such as protein structure determination from sparse experimental data. </p>
+
+<p>The BCL contains the widely used secondary structure prediction program JUFO, a folding algorithm that assembles secondary structure elements, and loop construction tools that complete protein backbones. 
+With this series of protocols the BCL allows construction of backbone models for large and membrane proteins from the primary sequence. 
+Among its unique strengths are the incorporation of sparse and low resolution data into folding simulations. </p>
+
+<p>Additionally, the BCL contains a suite of cheminformatics tools that allow construction of quantitative structure-activity-relation (QSAR) models for virtual screening, pharmacophore mapping, and drug design. 
+</p>
+<p>The BCL is comprised of over one thousand classes organized in 38 namespaces with approximately 200,000 lines of code that form a collection of C++ algorithms developed since 2005. 
+The BCL and its applications have become popular, with more than 50,000 users of the online servers and more than 200 academic licensees.</p>
+<p><!--This comment is here so that symfony finds the right picture to put in the slideshow <a name="figure" href="/publications/showimage/w_pic_id/71"><img src = "/publications/showimage/w_pic_id/71" width="720px"  alt="Image" /></a> --><br />A movie showing the evolution of the bcl source and include tree made with <a href="http://code.google.com/p/gource/">Gource</a></p>
+
+	<object type="application/x-shockwave-flash" data="http://flashfox.googlecode.com/svn/trunk/flashfox.swf" width="640" height="480">
+		<param name="movie" value="http://flashfox.googlecode.com/svn/trunk/flashfox.swf" />
+		<param name="allowFullScreen" value="true" />
+		<param name="wmode" value="transparent" />
+		<param name="flashVars" value="controls=true&amp;poster=http%3A%2F%2Fcarbon.structbio.vanderbilt.edu%2Fresources%2Fmovies%2Fbcl_gource.jpg&amp;src=http%3A%2F%2Fcarbon.structbio.vanderbilt.edu%2Fresources%2Fmovies%2Fbcl_gource.flv" />
+		<img alt="Evolution of bcl" src="http://carbon.structbio.vanderbilt.edu/resources/movies/bcl_gource.jpg" width="640" height="480" title="No video playback capabilities, please download the video below" />
+	</object>
+<p>
+	<strong>Download video:</strong> <a href="http://carbon.structbio.vanderbilt.edu/resources/movies/bcl_gource.flv">Flash format</a> | <a href="http://carbon.structbio.vanderbilt.edu/resources/movies/bcl_gource.mpeg">MPEG format</a> 
+</p><p></p>
+A <a href="http://code.google.com/p/codeswarm/">code swarm</a> video that illustrates individual developer contributions and the expanding diversity of bcl projects and applications.  In an academic setting, it is easy for code to become abandoned as students graduate and leave the lab.  The ongoing evolution of the bcl speaks to its extensibility and adherence to modular, object-oriented, design.  
+<p></p>
+	<object type="application/x-shockwave-flash" data="http://flashfox.googlecode.com/svn/trunk/flashfox.swf" width="640" height="480">
+		<param name="movie" value="http://flashfox.googlecode.com/svn/trunk/flashfox.swf" />
+		<param name="allowFullScreen" value="true" />
+		<param name="wmode" value="transparent" />
+		<param name="flashVars" value="controls=true&amp;poster=http%3A%2F%2Fcarbon.structbio.vanderbilt.edu%2Fresources%2Fmovies%2Fbcl_codeswarm.jpg&amp;src=http%3A%2F%2Fcarbon.structbio.vanderbilt.edu%2Fresources%2Fmovies%2Fbcl_codeswarm.flv" />
+		<img alt="BCL Development" src="http://carbon.structbio.vanderbilt.edu/resources/movies/bcl_codeswarm.jpg" width="640" height="480" title="No video playback capabilities, please download the video below" />
+	</object>
+<p>
+	<strong>Download video:</strong> <a href="http://carbon.structbio.vanderbilt.edu/resources/movies/bcl_codeswarm.flv">Flash format</a> | <a href="http://carbon.structbio.vanderbilt.edu/resources/movies/bcl_codeswarm.mpeg">MPEG format</a> 
+</p><br/><br/>
+      <b>Current Project Members:</b>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/1">Jens Meiler </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/53">, Jeff Mendenhall </a>
+        <br/>
+      <b>Alumni Project Members:</b>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/5">Mert Karakas </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/7">, Ralf Mueller </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/8">, Rene Staritzbichler </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/9">, Nils Woetzel </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/10">, Mariusz Butkiewicz </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/16">, Steffen Lindert </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/20">, Sten Heinze </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/27">, Nathan Alexander </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/48">, Edward W. Lowe Jr </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/49">, Pedro Teixeira </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/50">, Brian Weiner </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/51">, Gregory Sliwoski </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/65">, Sandeep Kothiwale </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/67">, Dan Viox  </a>
+                <a style="text-decoration:none;" href="/index.php/users/show/u_id/72">, Daniel Putnam </a>
+        </div>	      <div id="footer_index">
+          <div class = "footer_border"></div>
+          <div class = "footer_left">Meiler Lab © 2019</div>
+		      <div class = "footer_center">
+		        <p>
+		          Center for Structural Biology<br />
+		          465 21st Ave South, BIOSCI/MRBIII<br />
+		          Vanderbilt University, Nashville, TN
+		        </p>
+		      </div>
+	      </div>
+		  </div>
+    </div> 
+    <!-- Signin panel -->
+    <script type="text/javascript">
+      var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+      var siginin = new Spry.Widget.CollapsiblePanel('signin');
+    </script>
+  </body>
+</html>

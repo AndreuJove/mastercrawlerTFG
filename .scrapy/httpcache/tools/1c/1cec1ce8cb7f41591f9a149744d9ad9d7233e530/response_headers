@@ -1,0 +1,19 @@
+Date: Mon, 30 Mar 2020 18:49:09 GMT
+Content-Type: text/html; charset=utf-8
+Server: GitHub.com
+Status: 200 OK
+Vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With
+Etag: W/"cd7afe5c9afaf19e04766209c436c15b"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Expect-Ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+Content-Security-Policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com wss://live.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com
+Content-Encoding: gzip
+Set-Cookie: _gh_sess=0iWo12i8diED95wpVnNoaaR7oQmFTpvSB9lDbTHwc6JJBwPeh1jvG7Rgy7k7H%2BEVf15WY8RXVV%2Farw954nmnljmli0tdW70YMjWMU8V7V%2FSusewvOY3cKFF4pFB256K1uv2z%2F0XUOGb1mFKYPWZzqxHiyTJdNZ5k3EVB8y9G6D%2BiT8WABy6cloQLBLP%2FWylU39d9nRfwFP%2BXODRYuPvOH6z5BRbl50ebTp1jc6PJo9wuulrgGRpo2JHg0H%2BhITZEpEY6C8jN7iplobS18A3TkQ%3D%3D--t%2FTnYHrGEn%2FPPmau--qrm7H2Ch%2FnBi%2Few2hpW4Zw%3D%3D; Path=/; HttpOnly; Secure
+Set-Cookie: _octo=GH1.1.287990276.1585594149; Path=/; Domain=github.com; Expires=Tue, 30 Mar 2021 18:49:09 GMT; Secure
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Tue, 30 Mar 2021 18:49:09 GMT; HttpOnly; Secure
+Accept-Ranges: bytes
+X-Github-Request-Id: CE06:EEC2:3AF3DBC:55A9199:5E823F1F

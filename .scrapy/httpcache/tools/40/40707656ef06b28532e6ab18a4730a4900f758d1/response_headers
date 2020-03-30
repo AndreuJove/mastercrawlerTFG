@@ -1,0 +1,10 @@
+Date: Mon, 30 Mar 2020 18:50:01 GMT
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+X-Permitted-Cross-Domain-Policies: none
+Strict-Transport-Security: max-age=31536000
+Location: https://omics.pnl.gov/software/DeconMSn.php
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/html; charset=iso-8859-1
+Set-Cookie: TS01c5dffe=0194455fd29d23c780a12aa5db46a1468c9950d1aeb364e46e2e6f8296c8c72e6d0d06c5e05fe72bf9c83b8d2a4aa78427e3205433; Path=/; HTTPOnly

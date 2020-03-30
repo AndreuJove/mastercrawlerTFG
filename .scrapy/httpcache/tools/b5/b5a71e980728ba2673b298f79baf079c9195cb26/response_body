@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 ie" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 ie" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 ie" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ie" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr"  prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"> <!--<![endif]-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://www.brisskit.le.ac.uk/sites/all/themes/acquia_marina/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortlink" href="/node/5" />
+<link rel="canonical" href="/home" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>BRISSKit - Biomedical Research Software as a Service | BRISSKit</title>
+  <style type="text/css" media="all">
+@import url("https://www.brisskit.le.ac.uk/modules/system/system.base.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/modules/system/system.menus.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/modules/system/system.messages.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/modules/system/system.theme.css?p7ta5i");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.brisskit.le.ac.uk/modules/comment/comment.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/modules/field/theme/field.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/modules/node/node.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/modules/search/search.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/modules/user/user.css?p7ta5i");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.brisskit.le.ac.uk/sites/all/themes/fusion/fusion_core/css/fusion-style.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/sites/all/themes/fusion/fusion_core/css/fusion-typography.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/sites/all/themes/fusion/fusion_core/skins/core/fusion-core-skins.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/sites/all/themes/acquia_marina/css/fusion-acquia-marina-style.css?p7ta5i");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.brisskit.le.ac.uk/sites/all/themes/fusion/fusion_core/css/grid16-fluid.css?p7ta5i");
+@import url("https://www.brisskit.le.ac.uk/sites/all/themes/acquia_marina/css/local.css?p7ta5i");
+</style>
+    <script type="text/javascript" src="https://www.brisskit.le.ac.uk/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="https://www.brisskit.le.ac.uk/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://www.brisskit.le.ac.uk/misc/drupal.js?p7ta5i"></script>
+<script type="text/javascript" src="https://www.brisskit.le.ac.uk/sites/all/modules/google_analytics/googleanalytics.js?p7ta5i"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-33028647-1"]);_gaq.push(["_setDomainName", ".brisskit.le.ac.uk"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.brisskit.le.ac.uk/sites/all/themes/fusion/fusion_core/js/script.js?p7ta5i"></script>
+<script type="text/javascript" src="https://www.brisskit.le.ac.uk/sites/all/themes/fusion/fusion_core/skins/core/js/script.js?p7ta5i"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"acquia_marina","theme_token":"J1uj8w_n2aIwTn1oRNBBVzx2I2vtwwjn830htLFSSqY","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/fusion\/fusion_core\/js\/script.js":1,"sites\/all\/themes\/fusion\/fusion_core\/skins\/core\/js\/script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/themes\/fusion\/fusion_core\/css\/fusion-style.css":1,"sites\/all\/themes\/fusion\/fusion_core\/css\/fusion-typography.css":1,"sites\/all\/themes\/fusion\/fusion_core\/skins\/core\/fusion-core-skins.css":1,"sites\/all\/themes\/acquia_marina\/css\/fusion-acquia-marina-style.css":1,"sites\/all\/themes\/fusion\/fusion_core\/css\/grid16-fluid.css":1,"sites\/all\/themes\/acquia_marina\/css\/local.css":1}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip","trackDomainMode":"1"},"urlIsAjaxTrusted":{"\/home?destination=node\/5":true,"\/":true}});
+//--><!]]>
+</script>
+</head>
+<body id="pid-home" class="html front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-5 node-type-page font-size-12 grid-type-fluid grid-width-16 fluid-90 sidebars-split" >
+  <div id="skip-link">
+    <a href="#main-content-area">Skip to main content area</a>
+  </div>
+  
+<!-- page-top region -->
+  <div id="page-top" class="region region-page-top page-top">
+    <div id="page-top-inner" class="page-top-inner inner">
+          </div><!-- /page-top-inner -->
+  </div><!-- /page-top -->
+  
+  <div id="page" class="page">
+    <div id="page-inner" class="page-inner">
+      
+      <!-- header-group region: width = grid_width -->
+      <div id="header-group-wrapper" class="header-group-wrapper full-width clearfix">
+        <div id="header-group" class="header-group region grid16-16">
+          <div id="header-group-inner" class="header-group-inner inner clearfix">
+
+            
+            <div id="block-block-2" class="block block-block first last odd">
+  <div class="inner clearfix gutter">
+  	<div class="inner-wrapper">
+      <div class="inner-inner">
+                        <div class="content clearfix">
+        <table><tr><td width="40%">
+<a href="/"><img src="/sites/default/files/brisskit-logo-plain-100-0.2.png" alt="BRISSkit logo" /></a><br /><span style="font-size:1.5em">Biomedical Research Infrastructure Software Service kit</span>
+  </td>
+<td width="30%">
+ <a title="Link to the National Institute for Health Research website" href="http://www.nihr.ac.uk/"><img align="middle" alt="Link to the National Institute for Health Research website" src="/sites/default/files/nihr_logo.medium.jpg" /></a>
+</td>
+<td width="30%">
+<!-- <a title="Link to the University of Leicester website" href="http://www.leicester.ac.uk/"><img alt="Link to the University of Leicester website" align="right" src="/sites/default/files/leicester-uni-050.png"/></a> --><p>      <a title="Link to the University of Leicester website" href="http://www.leicester.ac.uk/"><img alt="Link to the University of Leicester website" align="right" src="https://le.ac.uk/~/media/uol/university-of-leicester-logo.png" /></a>
+  </p></td>
+</tr></table>      </div>
+      </div><!-- /inner-inner -->
+	  </div><!-- /inner-wrapper -->
+  </div><!-- /block-inner -->
+</div><!-- /block -->          </div><!-- /header-group-inner -->
+        </div><!-- /header-group -->
+      </div><!-- /header-group-wrapper -->
+      
+<!-- main-menu region -->
+<div id="main-menu-wrapper" class="main-menu-wrapper full-width clearfix">
+  <div id="main-menu" class="region region-main-menu main-menu  grid16-16">
+    <div id="main-menu-inner" class="main-menu-inner inner">
+      <div id="block-system-main-menu" class="block block-system block-menu first last odd">
+  <div class="inner clearfix gutter">
+  	<div class="inner-wrapper">
+      <div class="inner-inner">
+                  <div class="block-icon pngfix"></div>
+      <h2 class="title block-title">Main menu</h2>
+                  <div class="content clearfix">
+        <ul class="menu"><li class="first leaf"><a href="/" title="Home page" class="active">Home</a></li>
+<li class="leaf"><a href="/about" title="About us">About us</a></li>
+<li class="leaf"><a href="/products-services" title="Products &amp; Services">Products &amp; Services</a></li>
+<li class="leaf"><a href="/case-studies" title="Case studies">Case studies</a></li>
+<li class="leaf"><a href="/blog" title="Team blog posts">Blogs</a></li>
+<li class="leaf"><a href="/civicrm/event/ical?reset=1&amp;list=1&amp;html=1" title="Upcoming events">Events</a></li>
+<li class="leaf"><a href="http://wiki.brisskit.le.ac.uk" title="Wiki pages">Wiki</a></li>
+<li class="last leaf"><a href="/contact" title="Contact us">Contact</a></li>
+</ul>      </div>
+      </div><!-- /inner-inner -->
+	  </div><!-- /inner-wrapper -->
+  </div><!-- /block-inner -->
+</div><!-- /block -->    </div><!-- /main-menu-inner -->
+  </div><!-- /main-menu -->
+</div><!-- /main-menu-wrapper -->
+      <div class="preface-top-outer"></div>
+
+      <!-- main region: width = grid_width -->
+      <div id="main-wrapper" class="main-wrapper full-width clearfix">
+        <div id="main" class="main region grid16-16">
+          <div id="main-inner" class="main-inner inner clearfix">
+            
+            <!-- main group: width = grid_width - sidebar_first_width -->
+            <div id="main-group" class="main-group region nested grid16-16">
+              <div id="main-group-inner" class="main-group-inner inner">
+                
+                <div id="main-content" class="main-content region nested">
+                  <div id="main-content-inner" class="main-content-inner inner">
+                    <!-- content group: width = grid_width - sidebar_first_width - sidebar_second_width -->
+                    <div id="content-group" class="content-group region nested " style="width:81.25%"">
+                      <div id="content-group-inner" class="content-group-inner inner">
+                                                
+                        <div id="content-region" class="content-region region nested">
+                          <div id="content-region-inner" class="content-region-inner inner">
+                            <a id="main-content-area"></a>
+                                                                                                                                            <h1 class="title gutter">BRISSKit - Biomedical Research Software as a Service</h1>
+                                                                                                                                              
+<!-- content region -->
+  <div id="content" class="region region-content content nested grid16-13" style="width:100%">
+    <div id="content-inner" class="content-inner inner">
+      <div id="block-system-main" class="block block-system first last odd">
+  <div class="inner clearfix gutter">
+  	<div class="inner-wrapper">
+      <div class="inner-inner">
+                        <div class="content clearfix">
+        <div id="node-5" class="node node-page odd full-node clearfix" about="/home" typeof="foaf:Document">
+  
+      <span property="dc:title" content="BRISSKit - Biomedical Research Software as a Service" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+  
+      <div id="node-top" class="node-top region nested">
+          </div>
+    
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><strong>What is BRISSKit?</strong></p>
+<ul>Please see our short <strong><a href="https://www.brisskit.le.ac.uk/node/61">animated explainer</a></strong> below which gives an accessible overview of the platform and why it could be of use to you or your researchers!</ul><p><video width="800" height="600" controls=""><br /><source src="https://wiki.brisskit.le.ac.uk/BRISSkit%20Animation%20V6.mp4" type="video/mp4"><br />
+ Your browser does not support the video tag.<br /></source></video></p>
+<p>BRISSKit is open source Biomedical Research Software as a Service. We have designed a transformational platform that enables biomedical and translational researchers to securely manage and combine datasets, including for patient cohorts where permitted. We use a suite of cloud enabled open source applications accessed in a browser, which make it easier for researchers to manage their studies. Sensitive data is secured and only accessible to those with permission. This includes the identification, selection, engagement and recruitment of suitable subjects for research. </p>
+<p>BRISSKit offers the ability to upload, manage, combine and collaborate with datasets in-project using such a secure infrastructure and then enables analytics and reuse. The use of open source tools for common tasks allows researchers to integrate their own more specialized software and analytics expertise using the platform. Researchers can connect the platform to their preferred data source eg pathology data and then export the results to their favourite analysis software such as R based statistical applications, or even modify the in-built applications to suit their needs. This is the beauty of an open source approach! </p>
+<p>Using the platform can prevent research groups having to go-it-alone through costly commercial procurement and ensure that there is an alternative to relying solely on ad-hoc spreadsheets. It’s been designed with flexibility and ease of use in mind.  </p>
+<p><strong>Full Software and Documentation Release: July 2016</strong><br />
+The BRISSKit code base of integrated open-source database applications for biomedicine and translational research has now been made freely available to the community via <a href="https://github.com/brisskit-uol/">github</a> along with a <a href="https://wiki.brisskit.le.ac.uk/wiki/Main_Page">set of documentation</a> and explanatory materials to support further take up and use. </p>
+<p><strong>Current Deployments</strong><br />
+Please see the Case Studies tab and the project <a href="https://wiki.brisskit.le.ac.uk/wiki/Jisc_Project_Documents">documentation</a> for descriptions of a range of past, current and developing use cases for the platform.</p>
+<p><strong>Sign up and find out more!</strong></p>
+<p>Email us at <em><a href="mailto:brisskit@le.ac.uk">brisskit@le.ac.uk</a></em> and follow the links embedded above and across this project site. You can also follow <a href="http://www.twitter.com/brisskit">@BRISSKit</a> (and #BRISSKit) on Twitter and sign up to the <a href="http://www.jiscmail.ac.uk/BRISSKIT-ANNOUNCE">BRISSKIT-ANNOUNCE mailing list</a>.</p>
+<p><strong>Acknowledgements</strong><br />
+The development of the project at the University of Leicester (<a href="https://www2.le.ac.uk/departments/health-sciences/research/gen-epi/staff-pages/jat26">PI Dr Jonathan Tedds</a>, Dept of Health Sciences) received 4 stages of funding by Jisc between 2011-15. Initial work (funded through the HEFCE University Modernisation Fund) delivered exploratory work and prototypes of new software as service applications. Jisc has worked in partnership with the BRISSKit team and partners to assess whether the project could be developed into a Jisc service including support for institutional tailoring of the software to fit with the needs of different research projects and the provision of information governance compliance via a secure data centre infrastructure. This work has involved detailed modelling of service functions, operational models and delivery costs as well as substantive market research to understand the level of demand and also the potential to deliver a sustainable service. The conclusion was that there is insufficient current usage and evidence of future uptake to make a <em>managed Jisc service</em> offering viable. The results noted the open source and commercial tools in place to support research in biomedicine and translational research, and challenges such as the lack of appetite and funding needed to change to new tools and services. However, the solutions continue to be implemented as is, adapted and developed further by and for interested parties - please contact the <a href="https://www2.le.ac.uk/departments/health-sciences/research/gen-epi/staff-pages/jat26">PI Dr Jonathan Tedds</a> directly or via the project address: <em><a href="mailto:brisskit@le.ac.uk">brisskit@le.ac.uk</a></em> and we will be happy to assist with enquiries.</p>
+</div></div></div>  </div>
+
+  
+  
+      <div id="node-bottom" class="node-bottom region nested">
+          </div>
+    
+</div>
+      </div>
+      </div><!-- /inner-inner -->
+	  </div><!-- /inner-wrapper -->
+  </div><!-- /block-inner -->
+</div><!-- /block -->    </div><!-- /content-inner -->
+  </div><!-- /content -->
+                                                      </div><!-- /content-region-inner -->
+                        </div><!-- /content-region -->
+
+                      </div><!-- /content-group-inner -->
+                    </div><!-- /content-group -->
+                    
+<!-- sidebar-second region -->
+  <div id="sidebar-second" class="region region-sidebar-second sidebar-second nested grid16-3 sidebar" style="width:18.75%">
+    <div id="sidebar-second-inner" class="sidebar-second-inner inner">
+      <div id="block-user-login" class="block block-user first  odd">
+  <div class="inner clearfix gutter">
+  	<div class="inner-wrapper">
+      <div class="inner-inner">
+                  <div class="block-icon pngfix"></div>
+      <h2 class="title block-title">User login</h2>
+                  <div class="content clearfix">
+        <form action="/home?destination=node/5" method="post" id="user-login-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required" />
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required" />
+</div>
+<div class="item-list"><ul><li class="first last"><a href="/user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul></div><input type="hidden" name="form_build_id" value="form-hDoBqOpZ5tnB44UzARAezmM2RvBAmTYqBNvZvoWAJY0" />
+<input type="hidden" name="form_id" value="user_login_block" />
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Log in" class="form-submit" /></div></div></form>      </div>
+      </div><!-- /inner-inner -->
+	  </div><!-- /inner-wrapper -->
+  </div><!-- /block-inner -->
+</div><!-- /block --><div id="block-blog-recent" class="block block-blog   even">
+  <div class="inner clearfix gutter">
+  	<div class="inner-wrapper">
+      <div class="inner-inner">
+                  <div class="block-icon pngfix"></div>
+      <h2 class="title block-title">Recent blog posts</h2>
+                  <div class="content clearfix">
+        <div class="item-list"><ul><li class="first"><a href="/node/67">BRISSKit continues!</a></li>
+<li><a href="/node/66">New DataShield Paper includes use case utilising BRISSKit integration</a></li>
+<li><a href="/node/65">Deployment of BRISSKit for managing patient recruitment and phenotyping in the 100k Genomes Programme</a></li>
+<li><a href="/node/64">BRISSKit Technical Description paper published, Aug 2016</a></li>
+<li><a href="/node/63">BRISSKit short animated explainer!</a></li>
+<li><a href="/node/62">Full Software and Documentation Release, July 2016</a></li>
+<li><a href="/node/60">Update from Leicester Cardiovascular Biomedical Research Unit on use of i2b2, civiCRM, RedCap in Cardiovascular Research</a></li>
+<li><a href="/node/59">Update on BRISSKit and University of Bristol / ALSPAC Synergies - Dr Olly Butters</a></li>
+<li><a href="/node/58">Feb 2015 Hack Event - Part 2: The Importance of Health Informatics Data and Software, Prof Paul Burton, University of Bristol</a></li>
+<li class="last"><a href="/node/57">Quick update + Part 1: What we did at the Feb 2015 Hack Event - Overview and Service Vision</a></li>
+</ul></div><div class="more-link"><a href="/blog" title="Read the latest blog entries.">More</a></div>      </div>
+      </div><!-- /inner-inner -->
+	  </div><!-- /inner-wrapper -->
+  </div><!-- /block-inner -->
+</div><!-- /block --><div id="block-search-form" class="block block-search   odd">
+  <div class="inner clearfix gutter">
+  	<div class="inner-wrapper">
+      <div class="inner-inner">
+                        <div class="content clearfix">
+        <form action="/" method="post" id="search-block-form" accept-charset="UTF-8"><div>
+<div id="search" class="container-inline">
+  <div id="search-inner">
+          <h2 class="element-invisible">Search form</h2>
+        <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2"><input type="submit" id="edit-submit--2" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-09zF4_velJZXJtyFWBeAxpNyQkbq9gCqCvFdK4jEW9k" />
+<input type="hidden" name="form_id" value="search_block_form" />
+  </div>
+</div></div></form>      </div>
+      </div><!-- /inner-inner -->
+	  </div><!-- /inner-wrapper -->
+  </div><!-- /block-inner -->
+</div><!-- /block --><div id="block-node-syndicate" class="block block-node  last even">
+  <div class="inner clearfix gutter">
+  	<div class="inner-wrapper">
+      <div class="inner-inner">
+                  <div class="block-icon pngfix"></div>
+      <h2 class="title block-title">Syndicate</h2>
+                  <div class="content clearfix">
+        <a href="/rss.xml" class="feed-icon" title="Subscribe to Syndicate"><img typeof="foaf:Image" src="https://www.brisskit.le.ac.uk/misc/feed.png" width="16" height="16" alt="Subscribe to Syndicate" /></a>      </div>
+      </div><!-- /inner-inner -->
+	  </div><!-- /inner-wrapper -->
+  </div><!-- /block-inner -->
+</div><!-- /block -->    </div><!-- /sidebar-second-inner -->
+  </div><!-- /sidebar-second -->
+                  </div><!-- /main-content-inner -->
+                </div><!-- /main-content -->
+
+                              </div><!-- /main-group-inner -->
+            </div><!-- /main-group -->
+          </div><!-- /main-inner -->
+        </div><!-- /main -->
+      </div><!-- /main-wrapper -->
+
+      
+<!-- postscript-bottom region -->
+<div id="postscript-bottom-wrapper" class="postscript-bottom-wrapper full-width clearfix">
+  <div id="postscript-bottom" class="region region-postscript-bottom postscript-bottom  grid16-16">
+    <div id="postscript-bottom-inner" class="postscript-bottom-inner inner">
+      <div id="block-block-1" class="block block-block first last odd">
+  <div class="inner clearfix gutter">
+  	<div class="inner-wrapper">
+      <div class="inner-inner">
+                        <div class="content clearfix">
+        <div style="background-color:white; border-radius:10px; height:100px">
+<table border="0" width="100%"><tr><td width="30%">
+<!--      <a title="Link to the Joint Information Systems Committee website" href="http://www.jisc.ac.uk/"><img alt="Link to the Joint Information Systems Committee website" src="/sites/default/files/jisc-logo-100.png"/></a> --></td>
+<td width="40%">
+<!--  <a title="Link to the National Institute for Health Research website" href="http://www.nihr.ac.uk/"><img align="middle" alt="Link to the National Institute for Health Research website" src="/sites/default/files/nihr_logo.medium.jpg"/></a> --></td>
+<td width="30%">
+<!--      <a title="Link to the University of Leicester website" href="http://www.leicester.ac.uk/"><img alt="Link to the University of Leicester website" align="right" src="/sites/default/files/leicester-uni-050.png"/></a> --></td>
+</tr></table></div>
+      </div>
+      </div><!-- /inner-inner -->
+	  </div><!-- /inner-wrapper -->
+  </div><!-- /block-inner -->
+</div><!-- /block -->    </div><!-- /postscript-bottom-inner -->
+  </div><!-- /postscript-bottom -->
+</div><!-- /postscript-bottom-wrapper -->
+      
+<!-- footer region -->
+<div id="footer-wrapper" class="footer-wrapper full-width clearfix">
+  <div id="footer" class="region region-footer footer  grid16-16">
+    <div id="footer-inner" class="footer-inner inner">
+      <div id="block-system-powered-by" class="block block-system first last odd">
+  <div class="inner clearfix gutter">
+  	<div class="inner-wrapper">
+      <div class="inner-inner">
+                        <div class="content clearfix">
+        <span>Powered by <a href="https://www.drupal.org">Drupal</a></span>      </div>
+      </div><!-- /inner-inner -->
+	  </div><!-- /inner-wrapper -->
+  </div><!-- /block-inner -->
+</div><!-- /block -->    </div><!-- /footer-inner -->
+  </div><!-- /footer -->
+</div><!-- /footer-wrapper -->
+    </div><!-- /page-inner -->
+  </div><!-- /page -->
+  </body>
+</html>

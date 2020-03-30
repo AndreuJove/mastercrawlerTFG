@@ -1,0 +1,10 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:46:52 GMT
+Content-Type: text/html; charset=utf-8
+Cache-Control: private, max-age=90
+Content-Security-Policy: referrer always;
+Location: https://bmcresearch.utm.utoronto.ca/biomint/
+Referrer-Policy: unsafe-url
+Set-Cookie: _bit=k2uiKQ-05acdf84d2d817e9e3-003; Domain=bit.ly; Expires=Sat, 26 Sep 2020 18:46:52 GMT
+Via: 1.1 google
+Alt-Svc: clear

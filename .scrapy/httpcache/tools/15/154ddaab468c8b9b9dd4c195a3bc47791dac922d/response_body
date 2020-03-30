@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link href="/~groupii/elem/css/main.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="/~groupii/elem/js/toggle_display.js"></script>
+<style>
+input[readonly] {
+    background-color: #DAF0FF;
+}
+</style><title>Zimmerly Lab for Mobile Group II Introns</title>
+</head>
+<body>
+
+<div style="font-size: 70%">
+<img src="elem/img/ca-flag.gif" alt="Proudly Canadian" title="Proudly Canadian" />
+Supported by: <span id="support"><a href="http://www.cihr-irsc.gc.ca/">Canadian Institute of Health Research (CIHR)</a></span></div>
+
+<div id="menu-out">
+<ul id="menu">
+
+<h4>General Information</h4>
+<li><a href="/~groupii/html/static/intro.php">Introduction</a>
+	<ul class="sub-menu">
+		<li><a href="/~groupii/html/static/location.php">Location</a></li>
+		<li><a href="/~groupii/html/static/structure.php">Structure</a></li>
+		<li><a href="/~groupii/html/static/splicing.php">Splicing</a></li>
+		<li><a href="/~groupii/html/static/mobility.php">Mobility</a></li>
+		<li><a href="/~groupii/html/static/evolution.php">Evolution</a></li>
+	</ul></li>
+<li><a href="/~groupii/html/static/structure2nd_index.php">Secondary structure</a>
+	<ul class="sub-menu">
+		<li><a href="/~groupii/html/static/stru2nd/IIAstructure.php">Group IIA consensus</a></li>
+        <li><a href="/~groupii/html/static/stru2nd/IIBstructure.php">Group IIB consensus</a></li>
+        <li><a href="/~groupii/html/static/stru2nd/Astructure.php">Bacterial A (II)</a></li>
+        <li><a href="/~groupii/html/static/stru2nd/Bstructure.php">Bacterial B (IIB)</a></li>
+        <li><a href="/~groupii/html/static/stru2nd/Cstructure.php">Bacterial C (IIC)</a></li>
+        <li><a href="/~groupii/html/static/stru2nd/Dstructure.php">Bacterial D (IIB)</a></li>
+        <li><a href="/~groupii/html/static/stru2nd/Estructure.php">Bacterial E (IIB)</a></li>
+        <li><a href="/~groupii/html/static/stru2nd/Fstructure.php">Bacterial F (IIB)</a></li>
+        <li><a href="/~groupii/html/static/stru2nd/chloro1structure.php">CL1 (IIB1)</a></li>
+        <li><a href="/~groupii/html/static/stru2nd/chloro2structure.php">CL2 (IIB2)</a></li>
+        <li><a href="/~groupii/html/static/stru2nd/mitostructure.php">ML (IIA1)</a></li>
+	</ul></li>
+<li><a href="/~groupii/html/static/orfstructure.php">Intron ORF structure</a>
+	<ul class="sub-menu">
+        <li><a href="/~groupii/html/static/orfalignment.php">Domain definition</a></li>
+        <li><a href="/~groupii/html/static/endomain.php">Differences in the En Domain</a></li>
+	</ul></li>
+
+<h4>Specific introns</h4>
+<li><a href="/~groupii/cgi-bin/main/prototype.cgi?type=1">Eubacterial introns</a></li>
+<li><a href="/~groupii/cgi-bin/main/prototype.cgi?type=2">Archaeal introns</a></li>
+<li><a href="/~groupii/cgi-bin/main/prototype.cgi?type=99">ORF-less introns</a></li>
+<li><a href="/~groupii/cgi-bin/main/twintron.cgi">Twintrons</a></li>
+<!--<li><a href="/~groupii/cgi-bin/main/tandem.cgi">Tandems</a></li>-->
+<li><a href="/~groupii/html/static/table_mito.php">Mitochondrial introns</a></li>
+<li><a href="/~groupii/html/static/table_chlor.php">Chloroplast introns</a></li>
+<li><a href="/~groupii/html/static/table_frag.php">Bacterial intron fragments</a></li>
+
+<h4>Tools and Analysis</h4>
+<li><a href="/~groupii/html/static/howtofind.php">Locating a group II intron</a></li>
+<li><a href="/~groupii/cgi-bin/main/blastusr.php">BLAST against our database</a></li>
+
+<h4>Other</h4>
+<li><a href="/~groupii/html/static/contact.php">Contact us</a></li>
+<li><a href="/~groupii/html/static/cite.php">How to cite this website</a></li>
+<li><a href="/~groupii/html/static/links.php">Links</a></li>
+<li><a href="/~groupii/cgi-bin/admin/admin.cgi">Lab member area</a></li>
+
+<li style="margin-top: 20px;"><a href="#">Top</a></li>
+<li><a href="/~groupii/">Home</a></li>
+</ul>
+</div>
+<div class="mainwrap">
+<div style="width: 80%; margin: auto; text-align:center;">
+	<h2 style="color:blue">Database</h2>
+	<h3>for</h3>
+	<h1 style="color:red">Bacterial Group II Introns</h1>
+</div>
+<h3>Updates:</h3>
+<ul>
+    <li>May 10, 2018</li>
+    <li>BLAST function restored!</li>
+    <li>Apr 25, 2017</li>
+    <li>Many intron names were changed to reduce potential confusion, you can find their previous names in each individual page, under field "Old name".</li>
+<!--
+	<dt>New searching and downloading functions</dl>
+        <dd>-BLAST your DNA sequence against our group II intron database to find matches</dd>
+        <dd>-Search for intron boundaries in a DNA sequence</dd>
+        <dd>-Download intron data</dd>
+		<p></p>
+		<dd>All introns listed are full-length and presumably functional for both splicing and mobility reactions. Some introns in previous versions of the database have been removed because of stop codons or frame shifts in the IEP, or deletions in the RNA structure.</dd>
+-->
+</ul>
+
+</div>
+
+<div style="margin-top: 50px;text-align: right;font-size: 80%">Maintained by current members of the Zimmerly lab, University of Calgary.</div>
+</body>
+</html>

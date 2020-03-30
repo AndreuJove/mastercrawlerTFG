@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta name="Description" content="Animal Toxin Classification" />
+<meta name="Keywords" content="Animal Toxin Classification" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Distribution" content="Global" />
+<meta name="Author" content="solange@cs.huji.ac.il" />
+<meta name="Robots" content="index,follow" />
+
+<link rel="stylesheet" href="/clantox.css" type="text/css" />
+<link rel="stylesheet" href="/tooltips.css" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="/js/SimpleTabs.css" />
+
+
+<title>ClanTox</title>
+<script language="JavaScript" type="text/javascript">
+function removeMessage(){
+	document.getElementById('msg').style.display = "none";
+}
+</script>
+<script type="text/javascript" src="/js/mootools-1.2.4-core-yc.js"></script>	
+<script type="text/javascript" src="/js/mootools-1.2.4.4-more.js"></script>	
+
+   <link rel="stylesheet" href="/js/sexyalertbox/sexyalertbox.css" type="text/css" media="all">
+
+<script type="text/javascript" src="/js/sortableTable/sortableTable.js"></script>
+<script type="text/javascript" src="/js/SimpleTabs.js"></script>
+
+<script type="text/javascript" >
+var Tips2 = new Tips($$('.Tips2'), {
+  initialize:function(){
+    this.fx = new Fx.Style(this.toolTip, 'opacity', {duration: 300, wait: false}).set(0);
+  },
+  onShow: function(toolTip) {
+    this.fx.start(1);
+  },
+  onHide: function(toolTip) {
+    this.fx.start(0);
+  }
+});
+</script>
+</head>
+ 
+<body>
+<!-- wrap starts here -->
+<div id="wrap">
+
+	<div id="header">			
+				
+		<h1 id="logo-text"><a href="index.php">ClanTox</a></h1>		
+		<p id="slogan">A Classifier of Animal Toxins</p>		
+			
+		<div id="header-links">
+			<p>
+			<i><a href="http://www.cbc.huji.ac.il">The Sudarsky Center for Computational Biology</a> </i> 
+			<br/><i><a href="http://www.huji.ac.il">The Hebrew University of Jerusalem</a> </i> 
+<br/>
+			</p>		
+		</div>		
+						
+	</div>
+  
+	<div  id="menu">
+		<ul><li id="current" ><a href="index.php">Home</a></li><li ><a href="about.php">About</a></li><li ><a href="faq.php">FAQ</a></li><li ><a href="tech.php">Details</a></li><li ><a href="contact.php">Contact Us</a></li>
+		</ul>
+	</div>					
+<div id='history' align='right' ></div>		
+		
+<!-- content-wrap starts here -->
+<div id="content-wrap">
+		
+    <div id="main">				
+    <div id="results">
+
+<h2>ClanTox</h2>
+<p>
+ClanTox is a classifier of animal toxins. Given a sequence, it predicts whether the sequence is a toxin or toxin-like protein. 
+<br/><br/>
+<h3>How to classify your sequence</h3>
+<p>
+The form below allows you to input your sequences: either paste the sequence in the text box or upload your file.
+<br/>
+
+<form id='myForm' method="post" action="clantox.php" enctype="multipart/form-data">
+   <p>
+   <label>Input sequences (FASTA format) </label>
+   <textarea rows="5" cols="50" name="text"></textarea>
+   <br/>OR</br>
+   <label>Upload sequences (FASTA format) </label>
+   <input type="file" size="50" name="infile" />
+   <br/>
+   <br/>
+<input type="checkbox" name="sort_flag" checked ="checked" />   Sort results by Mean score &nbsp;
+   <br/>
+
+<br/>
+<input type="radio" name="filter" value="true" checked> Show only Toxin-like predictions<br>
+<input type="radio" name="filter" value=""> Show all predictions<br>
+<!--
+   <br/>
+   <input type="checkbox" name="signalp" /> Include SignalP results (much slower results!) 
+   <br/>
+-->
+   <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+   <br/><br/>
+   <input class="button" type="submit" name="submit" />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="button" type="reset" value="Clear" />
+   </p>
+</form>
+<p>   
+<h3>How to compile a sequence list</h3>
+<p>
+The user is advised to use the list of sequence ID / accession numbers appearing in typical batch retrieval systems when creating a FASTA formatted set of sequences. Here is a <a class='Tips2' title='Drosophila' href="Drosophila-526.txt">sample file</a> containing such a sequence list. 
+Candidate systems include: <a href="http://srs.ebi.ac.uk"><strong>SRS</strong></a>, 
+<a href="http://www.ensembl.org/biomart/index.html"><strong>Ensembl - Biomart</strong></a>, 
+<a href="http://pir.georgetown.edu/pirwww/search/batch.shtml"><strong>PIR</strong></a> and 
+<a href="http://www.uniprot.org"><strong>UniprotKB</strong></a>.
+<p>
+In case your input ID and accession are not derived from one of the major UniProtKB protein resources, the user is advised to submit his/her accession numbers to <a href="http://www.ebi.ac.uk/Tools/picr/"><strong>PICR</strong></a>, the Protein Identifier Cross-Reference Service. Matches from PIR, Refseq, PDB etc. to UniProtKB will enable ClanTox to provide the benefits of the associated knowledge and annotation maintained by these resources.
+<p>
+Please note that:
+<ul>
+<li>The sequences must be in FASTA format.
+<li>The maximum number of sequences is 10000
+<li>The maximum file size is 10 MB.
+<li>We advise the submission of mature proteins sequences rather than preproteins. 
+   </ul>
+   
+   
+   <p class="post-footer align-left">
+   <a href="index.html" class="readmore"><a href="about.php">Read more</a></a> |
+   <span class="date">Last Updated Jan 21st, 2009</span>
+   </p>
+   
+   <br />
+
+
+</div>
+   
+    </div>
+    
+    <div id="sidebar">
+    
+<h2>Annotation Systems </h2>
+<ul class="sidemenu">
+<li><a href="http://www.protonet.cs.huji.ac.il/">ProtoNet</a></li>
+<li><a href="http://www.pandora.cs.huji.ac.il">PANDORA</a></li>
+</ul>
+
+<h2>Sequence Retrieval</h2>
+<ul class="sidemenu">
+<li><a target="_blank" href="http://www.uniprot.org">UniprotKB</a>
+<li><a  target="_blank"  href="http://srs.ebi.ac.uk">SRS</a>
+<li><a  target="_blank" href="http://pir.georgetown.edu/pirwww/search/batch.shtml">PIR</a>
+<li><a  target="_blank" href="http://www.ensembl.org/biomart/index.html">Ensembl - Biomart</a>
+</ul>
+
+<h2>External Predictions</h2>
+<ul class="sidemenu">
+<li><a  target="_blank" href="http://www.cbs.dtu.dk/services/SignalP/">SignalP</a>:predicts the presence and location of signal peptide cleavage sites in sequences
+<li><a  target="_blank" href="http://www.ebi.ac.uk/Tools/InterProScan/">InterProScan</a>:query your sequence against InterPro
+<li><a  target="_blank" href="http://www.sbg.bio.ic.ac.uk/phyre/index.cgi">Phyre</a>: Protein Homology/analogy Recognition Engine
+<li><a  target="_blank" href="http://proline.bic.nus.edu.sg/sdpmod/modeling.html">SPDMODE</a>:A web service for comparative modeling of small disulphide-bonded proteins
+<li><a  target="_blank" href="http://clavius.bc.edu/~clotelab/DiANNA/">DiANNA</a>: Unified software for Cysteine state and Disulfide bond partner prediction.
+<li><a  target="_blank" href="http://disulfind.dsi.unifi.it/process.php">DISULFIND:</a> Cysteines Disulfide Bonding State and Connectivity Predictor.
+</ul>
+
+<h2>Related databases  </h2>
+<ul class="sidemenu">
+<li><a  target="_blank" href="http://protchem.hunnu.edu.cn/toxin/index.jsp">ATDB</a>: Animal Toxin Database 
+<li><a  target="_blank" href="http://www.expasy.ch/sprot/tox-prot/">Tox-Prot:</a> UniProtKB/Swiss-Prot Toxin Annotation Program
+<li><a  target="_blank" href="http://knottin.cbs.cnrs.fr/">KNOTTIN</a> Database
+
+</ul>
+
+					
+
+    </div>
+
+<!-- content-wrap ends here -->	
+</div>
+					
+	<div id="footer">
+			
+		<p>
+		&copy; 2008 <strong>ClanTox</strong> | <a href="http://www.huji.ac.il">The Hebrew University of Jerusalem</a> | 
+		Webmaster: <a href="http://www.skarsenty.com">SK</a>  		
+   	</p>
+				
+	</div>	
+
+<!-- wrap ends here -->
+</div>
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-1129585-12");
+  pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+</body>
+</html>

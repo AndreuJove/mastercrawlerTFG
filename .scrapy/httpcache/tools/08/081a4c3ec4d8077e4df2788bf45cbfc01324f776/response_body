@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head>
+
+
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="AUTHOR" content="Liz Potterton"><title>CCP4 Molecular Graphics</title>
+   
+<link rel="stylesheet" type="text/css" href="./ccp4mg.css" title="CCP4mg">
+<link rev="made" href="mailto:ccp4mg@ccp4.ac.uk">
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+
+
+<script src="./utils.js"></script></head><body>
+
+<!--
+<table class="header">
+<tr>
+<td width="100"><img src="images/weblogo175.gif" alt="CCP4 web logo" /></a></td><td ><img src="title1.png" alt="CCP4 web logo" /></a></td>
+<td class="header_text">Molecular Graphics</td>
+<td width="90" ><img src="images/ccp4mg_icon.png" alt="CCP4mg logo" /></td>
+</tr>
+</table>
+-->
+
+<table class="header">
+<tbody><tr>
+<td rowspan="2" width="200"><img src="./images/weblogo175.gif" alt="CCP4 web logo"></td>
+<td><img src="./images/title1.png" alt="Molecular Graphics"></td>
+<td rowspan="2" width="90"><img src="./images/ccp4mg_icon.png" alt="CCP4mg"></td>
+</tr>
+<tr>
+<td><img src="./images/title2.png" alt="Home page"></td>
+</tr>
+</tbody></table>
+
+
+
+<table class="lnks">
+<tbody><tr>
+<td title="CCP4mg Home Page"><a href="index.php">Home</a></td>
+<td title="Download latest release of CCP4mg"><a href="download">Download</a></td>
+<td title="Overview of current and future functionality"><a href="functionality.html">Functionality</a></td>
+<td title="Gallery of images and how they were made"><a href="gallery.html">Gallery</a></td>
+<td title="Full on-line documentation"><a href="ccp4mg_help/index.html">Documentation</a></td>
+<td title="A series of short tutorials"><a href="ccp4mg_help/tutorial/index.html">Tutorials</a></td>
+<td title="Contact CCP4mg developers"><a href="contact.html">Contact</a></td>
+<td title="Please cite if you use CCP4mg!"><a href="references.html">Citing CCP4MG</a></td>
+<td title="Some related pages"><a href="links.html">Links</a></td>
+</tr>
+</tbody></table>
+
+<table width="100%">
+  <tbody><tr>
+     <td><table>
+        <tbody><tr><td><a href="index_info_1.html"><img class="border" src="./images/one_1mbo-125x125.png" title="1mbo: Myoglobin heam group. Oxygen storage."></a></td></tr>
+
+        <tr><td><a href="index_info_2.html"><img class="border" src="./images/two_1an4-125x125.png" title="1an4: DNA and promoter."></a></td></tr>
+        <tr><td><a href="index_info_3.html"><img class="border" src="./images/three_1vyq-125x125.png" title="1vyq: dUTPase enzyme"></a></td></tr>
+
+
+     </tbody></table></td>
+
+    <td colspan="4" valign="top">
+       <p><span class="mg">CCP4mg</span>
+is the quick and easy way to create beautiful publication quality
+images and movies. It is also the easy way to superpose and analyse
+structures. See the <a class="application" href="functionality.html">Functionality</a> page for details.</p>
+       
+       <p>The program runs 'out of the box' on Linux, MacOSX and Windows platforms.</p>
+       <table class="highlight">
+        <tr><td > 
+       <p><strong><a href="download"><b>Download latest release of CCP4mg
+<?
+if (is_readable("updates/ccp4mg_version")) {
+  $f=fopen("updates/ccp4mg_version","r");
+  $v=fread($f,100);
+  echo "$v";
+} else {
+  echo "2.10.4";
+}
+?>
+</b></a></p></strong></td></tr></table>
+
+     <p></p> 
+
+      <table class="highlight">
+        <tr><td ><p ><strong>Please sign up  to the <a href="http://www.jiscmail.ac.uk/lists/CCP4MG.html">CCP4mg discussion forum</a> hosted by JISCMail</strong></p>
+<p>We would like to hear your comments and suggestions for future developments.</p>
+      </td></tr></table>
+
+
+     </td>
+     <td><table>
+
+         <tbody><tr><td><a href="index_info_12.html"><img class="border" src="./images/twelve_2bx9-125x125.png" title="Trp RNA-binding attenuator"></a></td></tr>
+
+         <tr><td><a href="index_info_11.html"><img class="border" src="./images/eleven_1gtf-125x125.png" title="1gtf: Trp RNA-binding attenuation protein (TRAP)."></a></td></tr>
+
+         <tr><td><a href="index_info_10.html"><img class="border" src="./images/ten_1liz-125x125.png" title="1liz: NMR structure of C-terminal of Heme chaperone"></a></td></tr>
+  
+
+
+     </tbody></table></td>
+  </tr>
+
+  <tr>
+     <td><a href="index_info_4.html"><img class="border" src="./images/four_1a4g_2ht8-125x125.png" title="&gt;1a4g and 2ht8: Drug binding to avian influenza virus neuraminidase."></a></td>
+
+     <td><a href="index_info_5.html"><img class="border" src="./images/five_1sac-125x125.png" title="1sac: Interface between one subunit of amyloid protein and its neighbours in a pentameric ring"></a></td>
+     <td><a href="index_info_6.html"><img class="border" src="./images/six_4ins-125x125.png" title="Zinc atom and three subunits of insulin"></a></td>
+     <td><a href="index_info_7.html"><img class="border" src="./images/seven_1pgu-125x125.png"></a></td>
+     <td><a href="index_info_8.html"><img class="border" src="./images/eight_1b23-125x125.png" title="1b23: Cysteinyl-tRNA and elongation factor"></a></td>
+     <td><a href="index_info_9.html"><img class="border" src="./images/nine_1kzu-125x125.png" title="1kzu: Purple bacteria light harvesting protein LH2"></a></td></tr>
+
+
+</tbody></table>
+ 
+</body></html>

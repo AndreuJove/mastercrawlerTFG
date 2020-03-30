@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" content="" />
+<meta name="keywords" content="Gene Fusion, Fusion transcripts, fusion transcripts in plant, fusion transcripts in Arabdiopsis thaliana, AtFusionDB, fusion RNA, DNA fusion, NIPGR" />
+<title>AtFusionDB - Arabdiopsis thaliana Fusion Transcript Database</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.dropotron-1.0.js"></script>
+<script type="text/javascript" src="jquery.slidertron-1.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#menu > ul').dropotron({
+			mode: 'fade',
+			globalOffsetY: 11,
+			offsetY: -15
+		});
+		$('#slider').slidertron({
+			viewerSelector: '.viewer',
+			indicatorSelector: '.indicator span',
+			reelSelector: '.reel',
+			slidesSelector: '.slide',
+			speed: 'slow',
+			advanceDelay: 5000
+		});
+	});
+</script>
+</head>
+
+<body style="background-color:#C9AF72;">
+<div id="wrapper" >
+	<div id="header"> 
+
+
+<div id="slogan2">
+<p><a href="index.html"><img src="images/logo1.jpg" align="left" width="115px" height="120px" align="top"></a></p>
+</div>
+
+<h1 align="center"><font size=15px><a href="index.html"><b>AtFusionDB</b></font></h1>
+<h3 align="center"><font size=5px><i>Arabidopsis thaliana</i> Fusion Transcript Database</font></a></h3>
+
+<!-- 
+       <h1><a href="index.php"><b>AtFusionDB:</b><font size=6px>Arabidopsis thaliana Fusion Transcript Database</font></a></h1>
+-->  
+      </div>
+ <div id="slogan">
+<p><a href="http://www.nipgr.ac.in/home/home.php"><img src="images/logo.png" align="right" width="110px" height="110px" align="top" ></a></p>
+</div>
+
+
+<div class="navbar">
+
+<a href="index.html"><b>Home</b></a>
+
+<div class="dropdown">
+    <button class="dropbtn"><b>Search</b>&nbsp;<img src="images/white-arrow.png" width="10px" height="10px">
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+
+      <a href="simplesearch.php">Simple Search</a>
+      <a href="advancesearch.php">Advanced Search</a>
+   
+    </div>
+    </div>
+
+<a href="bro.php"><b>Browse</b></a>
+
+  <div class="dropdown">
+    <button class="dropbtn"><b>Tools</b>&nbsp;<img src="images/white-arrow.png" width="10px" height="10px">
+<i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+
+      <a href="align.php">SW Align</a>
+      <a href="map.php">Mapping</a>
+      <a href="blast.php">BLAST</a>
+    </div>
+  </div>
+
+<a href="method.php"><b>Method</b></a>
+<a href="stats.php"><b>Statistics</b></a>
+
+<div class="dropdown">
+    <button class="dropbtn"><b>Help/Guide</b>&nbsp;<img src="images/white-arrow.png" width="10px" height="10px">
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="help.php">Help</a>
+      <a href="links.php">Links</a>
+<!--      <a href="ref.php">References</a> -->
+    </div>
+  </div>
+ <div class="dropdown">
+    <button class="dropbtn"><b>Developers</b>&nbsp;<img src="images/white-arrow.png" width="10px" height="10px">
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+
+      	<a href="team.php">Team</a>
+	<a href="contact.php">Contact</a>
+  </div>
+</div>
+</div>
+
+<marquee behavior=alternate scrollamount=1> <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30624648">Singh, A. et al., AtFusionDB: a database of fusion transcripts in Arabidopsis thaliana.<br> Database (Oxford). Volume 2019 Jan 1.</a> </marquee>
+
+
+<h2 align="center">Welcome to AtFusionDB</h2> <br>
+<p style="line-height:1.3em; font-size:20px; padding: 0px 5px 0px 40px;position: relative;width: 896px;margin: 0;">
+
+Fusion transcripts are chimeric mRNAs synthesized as a result of the fusion of two distinct genes or their transcripts. Till date, this domain has been explored largely in the animal kingdom, particularly in humans. However, some reports suggest that these chimeric transcripts may play a key role in altering overall cellular physiology in plants as well.<br> <b>AtFusionDB</b> is the first database dedicated to fusion transcripts in plants. It harbors 82,969 entries of different types of fusion transcripts identified in 3,520 paired-end RNA-Seq  samples of the model plant <b><i>Arabidopsis thaliana</i></b>. This database is believed to be beneficial for exploring the complex and rarely explored domain of gene fusion and its implications in the plant kingdom.
+
+</p>
+
+
+
+ <div id="slider">
+                <div class="viewer">
+                        <div class="reel">
+				<div class="slide">
+                                        <img  src="images/home-dna3.png" alt="" />
+                                </div>
+                                <div class="slide">
+                                        <img width="725px" src="images/read1.png" alt="" />
+                                </div>
+                                <div class="slide">
+                                        <img width="725px" src="images/cis1.png" alt="" />
+                                </div>
+				<div class="slide">
+                                        <img src="images/intra1.png" alt="" />
+                                </div>
+				<div class="slide">
+                                        <img src="images/inter1.png" alt="" />
+                                </div>
+</div>
+                </div>
+                <div class="indicator">
+                        <span>1</span>
+                        <span>2</span>
+                	<span>3</span>
+			<span>4</span>
+			<span>5</span>
+		</div>
+        </div>
+
+			
+<p style="line-height:1.3em; font-size:20px; padding: 0px 5px 0px 40px;position: relative;width: 896px;margin: 0;">
+<font size="5px"><b>Major Features of AtFusionDB</b></font><br>
+
+<img src="images/leaf-stat.png" width="32px" height="25px">
+<font color="#815B00"><b>Search</b></font><br><b>Simple Search</b> allows the user to search for any field and display any field (e.g. Fusion, Chromosome No., Gene-coordinates, SRA Id, Tissue and Junction-sequence related information). <b>Advanced Search</b> is a level up of the simple search option. It allows to search for specific fusion queries if the user has prehanded information. It is very efficient and time saving when the user is looking for a specific fusion transcript in AtFusionDB.</li></font>
+<br>
+
+<img src="images/leaf-stat.png" width="32px" height="25px">
+<font color="#815B00"><b>Browse</b></font><br>It can be utilized by four modes viz. Fusion type-wise classification, Tissue type-wise classification, <i>EricScore</i>-wise categorization and Chromosome-wise classification.</font>
+<br>
+
+<img src="images/leaf-stat.png" width="32px" height="25px">
+<font color="#815B00"><b>Tools</b></font><br>
+Several web based tools have been integrated into AtFusionDB that includes Smith-Waterman Aligner (for alignment based on Smith-Waterman algorithm), Mapping (for mapping of fusion transcript junction sequences to user provided nucleotide sequences/Genomic DNA) and BLAST (for homology search).</font>
+<br>
+
+<img src="images/leaf-stat.png" width="32px" height="25px">
+<font color="#815B00"><b>Other features</b></font><br>Uniprot-ID(s), EnsemblPlants Id, fused-gene expression, strand sense, individual gene function and their expression, fusion name, breakpoint information and SRA Id which will help the user to gain further information about fusion transcripts of <i>Arabdiopsis thaliana</i>.</font>
+
+</p>
+
+<marquee behavior=alternate scrollamount=1> <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30624648">Singh, A. et al., AtFusionDB: a database of fusion transcripts in Arabidopsis thaliana. Database (Oxford). Volume 2019 Jan 1.</a> </marquee>
+
+
+<div id="page" text-align="justify">
+	
+	</div>
+<div id="page-bottom">
+<b>
+    <div class="center">
+	     <a href="https://scholar.google.co.in/citations?user=6sFjjocAAAAJ&hl=en">Dr. Shailesh Kumar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="http://www.nipgr.ac.in/research/dr_shailesh.php">SK Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="http://www.nipgr.ac.in/home/home.php">NIPGR</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="http://www.dbtindia.nic.in/">DBT</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+             <a>&copy; 2018 Shailesh Lab.</a>
+         </div>
+      </div>
+  </b> 
+</div>
+</body>
+</html>

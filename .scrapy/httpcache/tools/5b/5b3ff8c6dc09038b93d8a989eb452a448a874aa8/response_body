@@ -1,0 +1,618 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TBI Software: Barriers" />
+  <title>TBI - Barriers</title>
+
+  <!-- CSS -->
+
+  <!-- Bootstrap: http://getbootstrap.com/ -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- TBI CSS -->
+<!--
+  <link href="css/tbi_print.css" rel="stylesheet" type="text/css" media="print" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css" />
+-->
+  <link rel="stylesheet" type="text/css" href="../css/tbi_bootstrap.css" title="TBIbaseBootstrap">
+  <link rel="stylesheet" type="text/css" href="../css/tbi_mod.css">
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59455487-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+<body role="document">
+
+  <div class="container wrap">
+
+    <div class="container headwrap">
+        <header class="hidden-xs">
+          <img class="unilogo" src="../gfx/base/unilogo_small.png" alt="Univiersity of Vienna"/>
+          <hgroup class="head-title-lg">
+            <div class="title-link-lg"><a href="http://www.tbi.univie.ac.at">Theoretical Biochemistry Group</a></div>
+            <div class="title-link-sm"><a href="http://www.itc.univie.ac.at">Institute for Theoretical Chemistry</a></div>
+          </hgroup>
+        </header>
+        <nav class="navbar navbar-default navbar-tbi navbar-tbi-main center" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand visible-xs" href="/index.html"><img alt="TBI" height="24" src="../gfx/base/tbilogo.png"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse navbar-inner">
+              <ul class="nav navbar-nav navbar-tbi">
+                <li><a href="/index.html">TBI</a></li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle"
+                              data-toggle="dropdown"
+                              data-hover="dropdown"
+                              data-delay="200"
+                              data-close-others="false"
+                              role="button"
+                              aria-haspopup="true"
+                              aria-expanded="false">RNA Software <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="../">ViennaRNA Package</a></li>
+                    <li><a href="#">Barriers</a></li>
+                    <li><a href="../Treekin">Treekin</a></li>
+                    <li><a href="../bar_map">barMap</a></li>
+                    <li><a href="../BHG">Basin Hopping Graph</a></li>
+                    <li><a href="http://www.tbi.univie.ac.at/software/rnawolf/rnawolf.html">RNAwolf</a></li>
+                    <li><a href="https://www.tbi.univie.ac.at/~wash/RNAz/">RNAz</a></li>
+                    <li><a href="../Alidot">AliDot</a></li>
+                  </ul>
+                </li>
+                <li class="selected"><a href="#">Barriers</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="changelog.html">Changelog</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+    </div>
+
+    <!-- Main Content Container  -->
+    <div class="container contentwrap" role="main">
+      <div class="container-main">
+        <!-- BREADCRUMB BAR -->
+        <div class="row wai">
+            <div class="col-xs-12 col-sm-6 breadcrumbs">
+              <span class="caption">You are here:</span>
+              <ol class="breadcrumb">
+                <li><a href="/">TBI</a></li>
+                <li><a href="/software">Software</a></li>
+                <li class="active"><a href="index.html">Barriers</a></li>
+              </ol>
+            </div>
+            <div class="col-xs-12 col-sm-6 appearance">
+              <span class="caption">Font size: </span>
+              <a class="incfont" href="#"><img src="../gfx/base/font_inc.gif" alt="Increase font size"></a>
+              <a class="decfont" href="#"><img src="../gfx/base/font_dec.gif" alt="Decrease font size"></a>
+              <a class="highcontrast" href="#"><img src="../gfx/base/contrast.gif" alt="Switch style sheet from default to highcontrast and back"></a>
+            </div>
+        </div><!-- /.row -->
+        <div class="row row-offcanvas row-offcanvas-right">
+          <div class="col-xs-12 col-sm-9">
+            <article>
+              <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle sidebar</button>
+              </p>
+              <section id="intro">    
+                <h1>The Barriers program</h1>
+                <p>
+                  <a href="#" id="bartree_link"><img id="bartree_image" align="right" src="FOOtree.png" alt="barrier tree example"></a>
+                  The program <b>barriers</b> reads an energy sorted list of conformations of a landscape, and computes local minima and energy barriers of the
+                  landscape. For RNA secondary structures, suitable input is produced by <a href="/RNA/RNAsubopt.html">RNAsubopt</a> 
+                  For each local minimum found it prints to stdout, the
+                  conformation of the minimum, its energy, the number of the "parent"-minimum
+                  it merges with, and the height of the energy barrier. Additional
+                  information on each minimum, such as saddle point conformation and basin
+                  sizes can be included via options.  A PostScript drawing of the resulting
+                  tree is written to "tree.ps" in the current directory.<p>
+                  For detailed instructions see the <a href="barriers.1.html">man page</a>.
+                </p>
+                <p>
+                  <em>In case you are using our software for your publications you may want to cite:</em>
+                </p>
+                <div class="well well-sm">
+                  <small>Christoph Flamm, Ivo L. Hofacker, Peter F. Stadler und Michael T. Wolfinger</small><br/>
+                  Barrier Trees of Degenerate Landscapes<br/>
+                  <small>
+                    Zeitschrift f&uuml;r Physikalische Chemie: Vol. 216, Issue 2, pp. 155,
+                    <a href="http://dx.doi.org/10.1524/zpch.2002.216.2.155" title="Publisher's Page">doi:10.1524/zpch.2002.216.2.155</a>
+                  </small>
+                </div>
+              </section>
+
+              <section id="news">
+                <h3>News</h3>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <b class="list-group-item-header">10/21/2019</b>
+                    <p class="list-group-item-text">
+                      <strong><span class="text text-danger">Important:</span></strong>
+                      With version 1.7.0, the default move set for RNA graphs changed to <strong>noShift</strong>.
+                      Therefore, to obtain the same results as with version prior to 1.7.0, you might need to supply the <code>-M Shift</code> command line option.
+                      
+                    </p>
+                  </li>
+                </ul>
+                <p></p>
+              </section>
+
+              <section id="download">
+                <h2>Get the latest Barriers program</h2>
+                <div class="alert alert-success">
+                  The latest stable release is <em>Version 1.8.1</em> from <i>November, 21th 2019</i><br>
+                </div>
+
+                <p id="source_code_packages">
+                  <h3><img src="../gfx/archive.png" alt="Get the source code and compile it yourself" title="Get the source code and compile it yourself">
+                  Compile from Source Code</h3>
+                  <p>
+                    Installing from sourcecode is the recommended way to get most out of Barriers.
+                    For best portability Barriers uses the GNU autoconf and automake tools and can thus
+                    be compiled and installed on almost every computer platform.
+                    See the INSTALL instructions for details.
+                  </p>
+                  <p>
+                    <div class="list-group">
+<!-- BEGIN Latest Tarball -->
+<a href="/RNA/download/sourcecode/1_8_x/Barriers-1.8.1.tar.gz" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Source Code</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-danger" title="Package Type">src</span><span class="label label-warning" title="File Size">342 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers-src-tbi_1_8_1_sourcecode_1_8_x_src"></span></a>
+<!-- END Latest Tarball -->
+                    </div>
+                  </p>
+                </p>
+
+              <p id="binary_packages">
+                <h3><img src="../gfx/gears_32.png" alt="Install precompiled binary package" title="Install one of our precompiled binary packages">
+                Install precompiled Binary Package</h3>
+                <p>
+                  For those unable to compile the Treekin program, or who simply don't want to, we also provide precompiled binary packages
+                  for several Linux distributions and operating systems. Packages are mainly build using the
+                  <a href="https://build.opensuse.org/package/show/home:tbi/barriers">openSUSE Build Service</a>.
+                  install system.
+                </p>
+                <div class="alert alert-info">
+                  Simply select your Linux distribution or operating system by clicking on the corresponding icon below, and download the binary packages that best suite your needs
+                  from the corresponding list.
+                </div>
+
+                <div>
+
+                  <ul id="flavor_selector" class="nav nav-pills nav-justified" role="tablist">
+                  <!-- BEGIN Dist Nav tabs -->
+                    <li role="presentation"><a href="#pack_archlinux" aria-controls="pack_archlinux" role="tab" data-toggle="tab"><img src="../gfx/arch_linux_logo_32.png" alt="ArchLinux logo" title="ArchLinux"><span class="dist small"> Arch</span></a></li>
+                    <li role="presentation"><a href="#pack_fedora" aria-controls="pack_fedora" role="tab" data-toggle="tab"><img src="../gfx/fedora_logo_32.png" alt="Fedora logo" title="Fedora"><span class="dist small"> Fedora</span></a></li>
+                    <li role="presentation"><a href="#pack_epel" aria-controls="pack_epel" role="tab" data-toggle="tab"><img src="../gfx/epel_logo_32.png" alt="EPEL logo" title="Extra Packages for Enterprise Linux"><span class="dist small"> EPEL</span></a></li>
+                    <li role="presentation"><a href="#pack_opensuse" aria-controls="pack_opensuse" role="tab" data-toggle="tab"><img src="../gfx/opensuse_logo_32.png" alt="openSUSE logo" title="openSUSE"><span class="dist small"> openSUSE</span></a></li>
+                    <li role="presentation"><a href="#pack_debian" aria-controls="pack_debian" role="tab" data-toggle="tab"><img src="../gfx/debian_logo_32.png" alt="Debian logo" title="Debian GNU/Linux"><span class="dist small"> Debian</span></a></li>
+                    <li role="presentation"><a href="#pack_ubuntu" aria-controls="pack_ubuntu" role="tab" data-toggle="tab"><img src="../gfx/ubuntu_logo_32.png" alt="Ubuntu logo" title="Ubuntu"><span class="dist small"> Ubuntu</span></a></li>
+                  <!-- END Dist Nav tabs -->
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+
+                    <div role="tabpanel" class="tab-pane fade" id="pack_archlinux">
+                      <ul class="list-group">
+<!-- BEGIN Arch Packages -->
+
+<div id="arch_extra">
+<div class="list-group"><a href="/RNA/download/arch/arch_extra/barriers-1.8.1-1-x86_64.pkg.tar.xz" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Arch_Extra </span><span class="label label-warning" title="File Size">57 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_arch_arch_extra_x86_64"></span></a>
+<a href="/RNA/download/arch/arch_extra/perl-rna-barrier-1.8.1-1-x86_64.pkg.tar.xz" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Arch_Extra </span><span class="label label-warning" title="File Size">6 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_arch_arch_extra_x86_64"></span></a>
+</div></div>
+
+<!-- END Arch Packages -->
+                      </ul>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="pack_fedora">
+<!-- BEGIN Fedora Packages -->
+
+<ul class="nav nav-pills nav-justified" role="tablist"><li role="presentation" class="active"><a href="#fedora_31" aria-controls="fedora_31" role="tab" data-toggle="tab">Fedora 31</a></li><li role="presentation"><a href="#fedora_30" aria-controls="fedora_30" role="tab" data-toggle="tab">Fedora 30</a></li><li role="presentation"><a href="#fedora_29" aria-controls="fedora_29" role="tab" data-toggle="tab">Fedora 29</a></li><li role="presentation"><a href="#fedora_28" aria-controls="fedora_28" role="tab" data-toggle="tab">Fedora 28</a></li><li role="presentation"><a href="#fedora_27" aria-controls="fedora_27" role="tab" data-toggle="tab">Fedora 27</a></li><li role="presentation"><a href="#fedora_26" aria-controls="fedora_26" role="tab" data-toggle="tab">Fedora 26</a></li></ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="fedora_31">
+<div class="list-group"><a href="/RNA/download/fedora/fedora_31/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 31</span><span class="label label-warning" title="File Size">72 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_fedora_fedora_31_x86_64"></span></a>
+<a href="/RNA/download/fedora/fedora_31/barriers-1.8.1-1.i686.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i686</span><span class="label label-default" title="Distribution">Fedora 31</span><span class="label label-warning" title="File Size">76 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_fedora_fedora_31_i686"></span></a>
+<a href="/RNA/download/fedora/fedora_31/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 31</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_fedora_fedora_31_x86_64"></span></a>
+<a href="/RNA/download/fedora/fedora_31/perl-rna-barrier-1.8.1-1.i686.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i686</span><span class="label label-default" title="Distribution">Fedora 31</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_fedora_fedora_31_i686"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="fedora_30">
+<div class="list-group"><a href="/RNA/download/fedora/fedora_30/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 30</span><span class="label label-warning" title="File Size">71 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_fedora_fedora_30_x86_64"></span></a>
+<a href="/RNA/download/fedora/fedora_30/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 30</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_fedora_fedora_30_x86_64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="fedora_29">
+<div class="list-group"><a href="/RNA/download/fedora/fedora_29/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 29</span><span class="label label-warning" title="File Size">71 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_fedora_fedora_29_x86_64"></span></a>
+<a href="/RNA/download/fedora/fedora_29/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 29</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_fedora_fedora_29_x86_64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="fedora_28">
+<div class="list-group"><a href="/RNA/download/fedora/fedora_28/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 28</span><span class="label label-warning" title="File Size">70 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_fedora_fedora_28_x86_64"></span></a>
+<a href="/RNA/download/fedora/fedora_28/barriers-1.8.1-1.i686.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i686</span><span class="label label-default" title="Distribution">Fedora 28</span><span class="label label-warning" title="File Size">73 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_fedora_fedora_28_i686"></span></a>
+<a href="/RNA/download/fedora/fedora_28/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 28</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_fedora_fedora_28_x86_64"></span></a>
+<a href="/RNA/download/fedora/fedora_28/perl-rna-barrier-1.8.1-1.i686.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i686</span><span class="label label-default" title="Distribution">Fedora 28</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_fedora_fedora_28_i686"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="fedora_27">
+<div class="list-group"><a href="/RNA/download/fedora/fedora_27/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 27</span><span class="label label-warning" title="File Size">70 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_fedora_fedora_27_x86_64"></span></a>
+<a href="/RNA/download/fedora/fedora_27/barriers-1.8.1-1.i686.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i686</span><span class="label label-default" title="Distribution">Fedora 27</span><span class="label label-warning" title="File Size">73 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_fedora_fedora_27_i686"></span></a>
+<a href="/RNA/download/fedora/fedora_27/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 27</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_fedora_fedora_27_x86_64"></span></a>
+<a href="/RNA/download/fedora/fedora_27/perl-rna-barrier-1.8.1-1.i686.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i686</span><span class="label label-default" title="Distribution">Fedora 27</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_fedora_fedora_27_i686"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="fedora_26">
+<div class="list-group"><a href="/RNA/download/fedora/fedora_26/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 26</span><span class="label label-warning" title="File Size">69 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_fedora_fedora_26_x86_64"></span></a>
+<a href="/RNA/download/fedora/fedora_26/barriers-1.8.1-1.i686.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i686</span><span class="label label-default" title="Distribution">Fedora 26</span><span class="label label-warning" title="File Size">69 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_fedora_fedora_26_i686"></span></a>
+<a href="/RNA/download/fedora/fedora_26/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">Fedora 26</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_fedora_fedora_26_x86_64"></span></a>
+<a href="/RNA/download/fedora/fedora_26/perl-rna-barrier-1.8.1-1.i686.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i686</span><span class="label label-default" title="Distribution">Fedora 26</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_fedora_fedora_26_i686"></span></a>
+</div></div>
+</div>
+
+<!-- END Fedora Packages -->
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="pack_epel">
+                      <ul class="list-group">
+<!-- BEGIN EPEL Packages -->
+
+<ul class="nav nav-pills nav-justified" role="tablist"><li role="presentation" class="active"><a href="#epel_8" aria-controls="epel_8" role="tab" data-toggle="tab">EPEL 8</a></li><li role="presentation"><a href="#epel_7" aria-controls="epel_7" role="tab" data-toggle="tab">EPEL 7</a></li><li role="presentation"><a href="#epel_6" aria-controls="epel_6" role="tab" data-toggle="tab">EPEL 6</a></li></ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="epel_8">
+<div class="list-group"><a href="/RNA/download/epel/epel_8/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">EPEL 8</span><span class="label label-warning" title="File Size">71 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_epel_epel_8_x86_64"></span></a>
+<a href="/RNA/download/epel/epel_8/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">EPEL 8</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_epel_epel_8_x86_64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="epel_7">
+<div class="list-group"><a href="/RNA/download/epel/epel_7/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">EPEL 7</span><span class="label label-warning" title="File Size">64 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_epel_epel_7_x86_64"></span></a>
+<a href="/RNA/download/epel/epel_7/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">EPEL 7</span><span class="label label-warning" title="File Size">7 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_epel_epel_7_x86_64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="epel_6">
+<div class="list-group"><a href="/RNA/download/epel/epel_6/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">EPEL 6</span><span class="label label-warning" title="File Size">62 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_epel_epel_6_x86_64"></span></a>
+<a href="/RNA/download/epel/epel_6/barriers-1.8.1-1.i686.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i686</span><span class="label label-default" title="Distribution">EPEL 6</span><span class="label label-warning" title="File Size">59 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_epel_epel_6_i686"></span></a>
+<a href="/RNA/download/epel/epel_6/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">EPEL 6</span><span class="label label-warning" title="File Size">7 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_epel_epel_6_x86_64"></span></a>
+<a href="/RNA/download/epel/epel_6/perl-rna-barrier-1.8.1-1.i686.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i686</span><span class="label label-default" title="Distribution">EPEL 6</span><span class="label label-warning" title="File Size">7 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_epel_epel_6_i686"></span></a>
+</div></div>
+</div>
+
+<!-- END EPEL Packages -->
+                      </ul>
+                      <div class="alert alert-info">
+                        <strong>EPEL Packages</strong><br>
+                         The packages listed above are meant for installation in RedHat derived Linux distributions with
+                         enabled <a href="https://fedoraproject.org/wiki/EPEL">Extra Packages for Enterprise Linux (EPEL)</a> repository. They should
+                         work without problems in distributions such as <strong>CentOS</strong>, <strong>RedHat Enterprise Linux</strong>,
+                         and <strong>Scientific Linux</strong>.
+                      </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="pack_opensuse">
+                      <ul class="list-group">
+<!-- BEGIN openSUSE Packages -->
+
+<ul class="nav nav-pills nav-justified" role="tablist"><li role="presentation" class="active"><a href="#opensuse_tumbleweed" aria-controls="opensuse_tumbleweed" role="tab" data-toggle="tab">openSUSE_tumbleweed</a></li><li role="presentation"><a href="#opensuse_leap_15_1" aria-controls="opensuse_leap_15_1" role="tab" data-toggle="tab">openSUSE_Leap 15.1</a></li><li role="presentation"><a href="#opensuse_leap_15_0" aria-controls="opensuse_leap_15_0" role="tab" data-toggle="tab">openSUSE_Leap 15.0</a></li></ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="opensuse_tumbleweed">
+<div class="list-group"><a href="/RNA/download/opensuse/opensuse_tumbleweed/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">openSUSE_tumbleweed </span><span class="label label-warning" title="File Size">162 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_opensuse_opensuse_tumbleweed_x86_64"></span></a>
+<a href="/RNA/download/opensuse/opensuse_tumbleweed/barriers-1.8.1-1.i586.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i586</span><span class="label label-default" title="Distribution">openSUSE_tumbleweed </span><span class="label label-warning" title="File Size">161 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_opensuse_opensuse_tumbleweed_i586"></span></a>
+<a href="/RNA/download/opensuse/opensuse_tumbleweed/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">openSUSE_tumbleweed </span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_opensuse_opensuse_tumbleweed_x86_64"></span></a>
+<a href="/RNA/download/opensuse/opensuse_tumbleweed/perl-rna-barrier-1.8.1-1.i586.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i586</span><span class="label label-default" title="Distribution">openSUSE_tumbleweed </span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_opensuse_opensuse_tumbleweed_i586"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="opensuse_leap_15_1">
+<div class="list-group"><a href="/RNA/download/opensuse/opensuse_leap_15_1/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">openSUSE_Leap 15.1</span><span class="label label-warning" title="File Size">141 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_opensuse_opensuse_leap_15_1_x86_64"></span></a>
+<a href="/RNA/download/opensuse/opensuse_leap_15_1/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">openSUSE_Leap 15.1</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_opensuse_opensuse_leap_15_1_x86_64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="opensuse_leap_15_0">
+<div class="list-group"><a href="/RNA/download/opensuse/opensuse_leap_15_0/barriers-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">openSUSE_Leap 15.0</span><span class="label label-warning" title="File Size">141 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-barriers_1_8_1_opensuse_opensuse_leap_15_0_x86_64"></span></a>
+<a href="/RNA/download/opensuse/opensuse_leap_15_0/perl-rna-barrier-1.8.1-1.x86_64.rpm" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">x86_64</span><span class="label label-default" title="Distribution">openSUSE_Leap 15.0</span><span class="label label-warning" title="File Size">11 KB</span><span class="badge" title="Number of Downloads so far" id="counts_tbi-perl-rna-barrier_1_8_1_opensuse_opensuse_leap_15_0_x86_64"></span></a>
+</div></div>
+</div>
+
+<!-- END openSUSE Packages -->
+                      </ul>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="pack_debian">
+<!-- BEGIN Debian Packages -->
+
+<ul class="nav nav-pills nav-justified" role="tablist"><li role="presentation" class="active"><a href="#debian_9_0" aria-controls="debian_9_0" role="tab" data-toggle="tab">Debian 9.0</a></li><li role="presentation"><a href="#debian_8_0" aria-controls="debian_8_0" role="tab" data-toggle="tab">Debian 8.0</a></li><li role="presentation"><a href="#debian_10" aria-controls="debian_10" role="tab" data-toggle="tab">Debian 10</a></li></ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="debian_9_0">
+<div class="list-group"><a href="/RNA/download/debian/debian_9_0/barriers_1.8.1-1_i386.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i386</span><span class="label label-default" title="Distribution">Debian 9.0</span><span class="label label-warning" title="File Size">63 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_debian_debian_9_0_i386"></span></a>
+<a href="/RNA/download/debian/debian_9_0/barriers_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Debian 9.0</span><span class="label label-warning" title="File Size">60 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_debian_debian_9_0_amd64"></span></a>
+<a href="/RNA/download/debian/debian_9_0/perl-rna-barrier_1.8.1-1_i386.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i386</span><span class="label label-default" title="Distribution">Debian 9.0</span><span class="label label-warning" title="File Size">7 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_debian_debian_9_0_i386"></span></a>
+<a href="/RNA/download/debian/debian_9_0/perl-rna-barrier_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Debian 9.0</span><span class="label label-warning" title="File Size">7 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_debian_debian_9_0_amd64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="debian_8_0">
+<div class="list-group"><a href="/RNA/download/debian/debian_8_0/barriers_1.8.1-1_i386.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i386</span><span class="label label-default" title="Distribution">Debian 8.0</span><span class="label label-warning" title="File Size">60 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_debian_debian_8_0_i386"></span></a>
+<a href="/RNA/download/debian/debian_8_0/barriers_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Debian 8.0</span><span class="label label-warning" title="File Size">59 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_debian_debian_8_0_amd64"></span></a>
+<a href="/RNA/download/debian/debian_8_0/perl-rna-barrier_1.8.1-1_i386.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i386</span><span class="label label-default" title="Distribution">Debian 8.0</span><span class="label label-warning" title="File Size">7 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_debian_debian_8_0_i386"></span></a>
+<a href="/RNA/download/debian/debian_8_0/perl-rna-barrier_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Debian 8.0</span><span class="label label-warning" title="File Size">7 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_debian_debian_8_0_amd64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="debian_10">
+<div class="list-group"><a href="/RNA/download/debian/debian_10/barriers_1.8.1-1_i386.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i386</span><span class="label label-default" title="Distribution">Debian 10</span><span class="label label-warning" title="File Size">62 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_debian_debian_10_i386"></span></a>
+<a href="/RNA/download/debian/debian_10/barriers_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Debian 10</span><span class="label label-warning" title="File Size">59 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_debian_debian_10_amd64"></span></a>
+<a href="/RNA/download/debian/debian_10/perl-rna-barrier_1.8.1-1_i386.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i386</span><span class="label label-default" title="Distribution">Debian 10</span><span class="label label-warning" title="File Size">7 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_debian_debian_10_i386"></span></a>
+<a href="/RNA/download/debian/debian_10/perl-rna-barrier_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Debian 10</span><span class="label label-warning" title="File Size">7 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_debian_debian_10_amd64"></span></a>
+</div></div>
+</div>
+
+<!-- END Debian Packages -->
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="pack_ubuntu">
+                      <div class="list-group">
+<!-- BEGIN Ubuntu Packages -->
+
+<ul class="nav nav-pills nav-justified" role="tablist"><li role="presentation" class="active"><a href="#ubuntu_19_10" aria-controls="ubuntu_19_10" role="tab" data-toggle="tab">Ubuntu 19.10</a></li><li role="presentation"><a href="#ubuntu_19_04" aria-controls="ubuntu_19_04" role="tab" data-toggle="tab">Ubuntu 19.04</a></li><li role="presentation"><a href="#ubuntu_18_10" aria-controls="ubuntu_18_10" role="tab" data-toggle="tab">Ubuntu 18.10</a></li><li role="presentation"><a href="#ubuntu_18_04" aria-controls="ubuntu_18_04" role="tab" data-toggle="tab">Ubuntu 18.04</a></li><li role="presentation"><a href="#ubuntu_16_04" aria-controls="ubuntu_16_04" role="tab" data-toggle="tab">Ubuntu 16.04</a></li><li role="presentation"><a href="#ubuntu_14_04" aria-controls="ubuntu_14_04" role="tab" data-toggle="tab">Ubuntu 14.04</a></li></ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="ubuntu_19_10">
+<div class="list-group"><a href="/RNA/download/ubuntu/ubuntu_19_10/barriers_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 19.10</span><span class="label label-warning" title="File Size">59 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_ubuntu_ubuntu_19_10_amd64"></span></a>
+<a href="/RNA/download/ubuntu/ubuntu_19_10/perl-rna-barrier_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 19.10</span><span class="label label-warning" title="File Size">6 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_ubuntu_ubuntu_19_10_amd64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="ubuntu_19_04">
+<div class="list-group"><a href="/RNA/download/ubuntu/ubuntu_19_04/barriers_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 19.04</span><span class="label label-warning" title="File Size">59 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_ubuntu_ubuntu_19_04_amd64"></span></a>
+<a href="/RNA/download/ubuntu/ubuntu_19_04/perl-rna-barrier_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 19.04</span><span class="label label-warning" title="File Size">6 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_ubuntu_ubuntu_19_04_amd64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="ubuntu_18_10">
+<div class="list-group"><a href="/RNA/download/ubuntu/ubuntu_18_10/barriers_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 18.10</span><span class="label label-warning" title="File Size">59 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_ubuntu_ubuntu_18_10_amd64"></span></a>
+<a href="/RNA/download/ubuntu/ubuntu_18_10/perl-rna-barrier_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 18.10</span><span class="label label-warning" title="File Size">6 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_ubuntu_ubuntu_18_10_amd64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="ubuntu_18_04">
+<div class="list-group"><a href="/RNA/download/ubuntu/ubuntu_18_04/barriers_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 18.04</span><span class="label label-warning" title="File Size">59 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_ubuntu_ubuntu_18_04_amd64"></span></a>
+<a href="/RNA/download/ubuntu/ubuntu_18_04/perl-rna-barrier_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 18.04</span><span class="label label-warning" title="File Size">6 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_ubuntu_ubuntu_18_04_amd64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="ubuntu_16_04">
+<div class="list-group"><a href="/RNA/download/ubuntu/ubuntu_16_04/barriers_1.8.1-1_i386.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i386</span><span class="label label-default" title="Distribution">Ubuntu 16.04</span><span class="label label-warning" title="File Size">58 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_ubuntu_ubuntu_16_04_i386"></span></a>
+<a href="/RNA/download/ubuntu/ubuntu_16_04/barriers_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 16.04</span><span class="label label-warning" title="File Size">58 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_ubuntu_ubuntu_16_04_amd64"></span></a>
+<a href="/RNA/download/ubuntu/ubuntu_16_04/perl-rna-barrier_1.8.1-1_i386.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i386</span><span class="label label-default" title="Distribution">Ubuntu 16.04</span><span class="label label-warning" title="File Size">6 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_ubuntu_ubuntu_16_04_i386"></span></a>
+<a href="/RNA/download/ubuntu/ubuntu_16_04/perl-rna-barrier_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 16.04</span><span class="label label-warning" title="File Size">6 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_ubuntu_ubuntu_16_04_amd64"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="ubuntu_14_04">
+<div class="list-group"><a href="/RNA/download/ubuntu/ubuntu_14_04/barriers_1.8.1-1_i386.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i386</span><span class="label label-default" title="Distribution">Ubuntu 14.04</span><span class="label label-warning" title="File Size">54 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_ubuntu_ubuntu_14_04_i386"></span></a>
+<a href="/RNA/download/ubuntu/ubuntu_14_04/barriers_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 14.04</span><span class="label label-warning" title="File Size">57 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers_1_8_1_ubuntu_ubuntu_14_04_amd64"></span></a>
+<a href="/RNA/download/ubuntu/ubuntu_14_04/perl-rna-barrier_1.8.1-1_i386.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">i386</span><span class="label label-default" title="Distribution">Ubuntu 14.04</span><span class="label label-warning" title="File Size">6 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_ubuntu_ubuntu_14_04_i386"></span></a>
+<a href="/RNA/download/ubuntu/ubuntu_14_04/perl-rna-barrier_1.8.1-1_amd64.deb" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Perl 5 module</u> - <span class="label label-primary" title="Version">v1.8.1</span><span class="label label-info" title="Release">1</span><span class="label label-danger" title="Architecture">amd64</span><span class="label label-default" title="Distribution">Ubuntu 14.04</span><span class="label label-warning" title="File Size">6 KB</span><span class="badge" title="Number of Downloads so far" id="counts_perl-rna-barrier_1_8_1_ubuntu_ubuntu_14_04_amd64"></span></a>
+</div></div>
+</div>
+
+<!-- END Ubuntu Packages -->
+                      </div>
+<!--
+                      <div class="alert alert-info">
+                        <strong>Ubuntu PPA Packages</strong><br>
+                        The most convenient way to keep up-to-date with the latest ViennaRNA Packge is to use
+                        <a href="https://launchpad.net/~j-4/+archive/ubuntu/vienna-rna/+packages" target="_blank" class="alert-link">Ubuntu PPA</a>:
+<pre class="commands">
+sudo apt-add-repository ppa:j-4/vienna-rna
+sudo apt-get update
+sudo apt-get install vienna-rna
+</pre>
+                      </div>
+-->
+                    </div>
+
+                  </div><!-- / Tab panes -->
+                </div>
+
+              </section>
+
+            <section id="old">
+              <h2>Older Versions</h2>
+              <p>
+              There should rarely be a good reason to use any but the latest version of our software.
+              However if you want to look up the old bugs, here's a list with most of the older releases for download.
+              </p>
+              <p class="alert alert-info">
+                Just click on the version numbers below to display the corresponding Barriers releases.
+              </p>
+              <div>
+<!-- BEGIN SourceCode Packages -->
+
+<ul class="nav nav-pills nav-justified" role="tablist"><li role="presentation" class="active"><a href="#1_8_x" aria-controls="1_8_x" role="tab" data-toggle="tab">1.8.x</a></li><li role="presentation"><a href="#1_7_x" aria-controls="1_7_x" role="tab" data-toggle="tab">1.7.x</a></li><li role="presentation"><a href="#1_6_x" aria-controls="1_6_x" role="tab" data-toggle="tab">1.6.x</a></li><li role="presentation"><a href="#1_5_x" aria-controls="1_5_x" role="tab" data-toggle="tab">1.5.x</a></li><li role="presentation"><a href="#1_0_x" aria-controls="1_0_x" role="tab" data-toggle="tab">1.0.x</a></li></ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="1_8_x">
+<div class="list-group"><a href="/RNA/download/sourcecode/1_8_x/Barriers-1.8.0.tar.gz" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Source Code</u> - <span class="label label-primary" title="Version">v1.8.0</span><span class="label label-danger" title="Package Type">src</span><span class="label label-warning" title="File Size">285 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers-src-tbi_1_8_0_sourcecode_1_8_x_src"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="1_7_x">
+<div class="list-group"><a href="/RNA/download/sourcecode/1_7_x/Barriers-1.7.0.tar.gz" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Source Code</u> - <span class="label label-primary" title="Version">v1.7.0</span><span class="label label-danger" title="Package Type">src</span><span class="label label-warning" title="File Size">267 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers-src-tbi_1_7_0_sourcecode_1_7_x_src"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="1_6_x">
+<div class="list-group"><a href="/RNA/download/sourcecode/1_6_x/Barriers-1.6.0.tar.gz" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Source Code</u> - <span class="label label-primary" title="Version">v1.6.0</span><span class="label label-danger" title="Package Type">src</span><span class="label label-warning" title="File Size">263 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers-src-tbi_1_6_0_sourcecode_1_6_x_src"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="1_5_x">
+<div class="list-group"><a href="/RNA/download/sourcecode/1_5_x/Barriers-1.5.2.tar.gz" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Source Code</u> - <span class="label label-primary" title="Version">v1.5.2</span><span class="label label-danger" title="Package Type">src</span><span class="label label-warning" title="File Size">226 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers-src-tbi_1_5_2_sourcecode_1_5_x_src"></span></a>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="1_0_x">
+<div class="list-group"><a href="/RNA/download/sourcecode/1_0_x/barriers-1.0.0.tar.gz" class="list-group-item" title="Click to download" download>
+<span class="text-danger glyphicon glyphicon-save"></span> <u>Barriers - Source Code</u> - <span class="label label-primary" title="Version">v1.0.0</span><span class="label label-danger" title="Package Type">src</span><span class="label label-warning" title="File Size">150 KB</span><span class="badge" title="Number of Downloads so far" id="counts_barriers-src-tbi_1_0_0_sourcecode_1_0_x_src"></span></a>
+</div></div>
+</div>
+
+<!-- END SourceCode Packages -->
+              </div>
+              </section>
+
+              <section id="bugs">
+                <h2>Comments and Bug Reports</h2>
+                <p>
+                  If in doubt our program is right, nature is at fault.<br>
+                  Comments and bug reports should be sent to <a href="mailto:rna@tbi.univie.ac.at">rna@tbi.univie.ac.at</a>
+                </p>
+                
+              </section>
+
+              <!-- Creates the bootstrap modal where the image will appear -->
+              <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Image viewer</h4>
+                    </div>
+                    <div class="modal-body">
+                      <img src="" id="imageview" >
+                      <div id="figure_caption"></div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /.row -->
+
+          <!-- SIDEBAR -->
+          <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+
+        <aside>
+          <nav id="sidebarNav" role="navigation">
+            <ul id="sidebarNavList" class="nav sidenav-tbi">
+              <li role="separator" class="sidenav-header">Table of Contents</li>
+              <li role="presentation"><a href="#intro">Introduction</a></li>
+              <li role="presentation"><a href="#news">News</a></li>
+              <li role="presentation" class="has-subnav"><a href="#download">Download</a>
+                <ul class="nav sidenav-tbi subnav hide">
+                <li><a href="#source_code_packages">Source Code</a></li>
+                <li><a href="#binary_packages">Binary Packages</a></li>
+                </ul>
+              </li>
+              <li role="presentation"><a href="#old">Older Versions</a></li>
+              <li role="presentation"><a href="#bugs">Comments and Bugs</a></li>
+            </ul>
+          </nav>
+
+        </aside>
+
+          </div><!--/.sidebar-offcanvas-->
+        </div><!-- /.row-offcanvas -->
+        <div class="topwrap hidden"><a class="top hidden" href="#">Top</a></div>
+      </div>
+    </div>
+  </div> <!-- /.wrap -->
+
+  <footer>
+    <p class="legalstuff">
+        <a href="/legal.html">Legal Details</a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../js/jquery.min.js"></script>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-hover-dropdown.min.js"></script>
+  <script src="../js/offcanvas.js"></script>
+
+  <script src="../js/jquery.cookie.js" type="text/javascript"></script>
+  <script src="../js/tbi_base.js" type="text/javascript"></script>
+  <script src="../js/tbi_bootstrap.js" type="text/javascript"></script>
+  <script src="../js/viennarna.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $("#bartree_link").on("click", function() {
+      $('#imageview').attr('src', 'FOOtree_lg.png');
+      $('#imagemodal #figure_caption').text("Barrier Tree example");
+      $('#imagemodal').modal('show');
+    });
+  </script>
+</body>
+</html>

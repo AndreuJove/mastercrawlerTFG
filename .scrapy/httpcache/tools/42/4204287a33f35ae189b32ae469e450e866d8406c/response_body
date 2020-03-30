@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="/korflab_style.css" media="screen" />
+	<title>CEGMA</title>
+</head>
+
+<body id="tab6">
+	
+	<div id="container">
+	
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="korflab_style.css" media="screen" />
+	<title>About Korf Lab</title>
+</head>
+
+<body>
+		<div id="logo">
+			<span>
+				<a href="/"></a>
+			</span>
+		</div>
+
+		<div id="navigation">
+			<ul>
+				<li class="tab1"><a href="http://korflab.ucdavis.edu/index.html">Home</a></li>
+				<li class="tab2"><a href="http://korflab.ucdavis.edu/about.html">About</a></li>
+				<li class="tab3"><a href="http://korflab.ucdavis.edu/people.html">People</a></li>
+				<li class="tab4"><a href="http://korflab.ucdavis.edu/research.html">Research</a></li>
+				<li class="tab5"><a href="http://korflab.ucdavis.edu/publications.html">Publications</a></li>
+				<li class="tab6"><a href="http://korflab.ucdavis.edu/software.html">Software & Data</a></li>
+				<li class="tab7"><a href="http://korflab.ucdavis.edu/Unix_and_Perl/index.html">Unix & Perl Course</a></li>
+			</ul>
+		</div>
+
+</body>
+
+
+
+
+		<div id="centered_content">
+			</br>
+			</br>
+			</br>
+			<center>
+			<font color="black">
+			<h1>CEGMA HAS BEEN DISCONTINUED</h1>
+			<h2>We suggest you consider using alternative tools</h2>
+			</font>
+
+			</center>
+			</br>
+			</br>
+			</br>
+			<hr>
+			</br>
+
+			<h1>CEGMA</h1>
+			<h2>Contents</h2>
+			<a name="TOC"></a>
+			<ul>
+				<li> <a href="#SCT1">News</a>
+				<li> <a href="#SCT2">Abstract</a>
+				<li> <a href="#SCT3">Download CEGMA</a>
+				<li> <a href="#SCT4">Installation instructions</a>
+				<li> <a href="#SCT5">Core eukaryotic genes dataset</a>
+				<li> <a href="#SCT6">Core eukarytotic genes in new species</a>
+				<li> <a href="#SCT7">Understanding CEGMA output</a>
+				<li> <a href="#SCT8">References</a>
+				<li> <a href="#SCT9">Mailing List</a>
+			</ul> 
+
+			<br><br><a name="SCT1"></a>
+			<h2>News</h2>
+
+			<h3>May 18th 2015 - CEGMA is no longer being supported</h3>
+			<p>Due to lack of resources we can no longer offer any support or feedback regarding CEGMA. We suggest that you try a new tool called <a href="http://busco.ezlab.org">BUSCO</a>. Read this
+			<a href="http://www.acgt.me/blog/2015/5/18/goodbye-cegma-hello-busco">blog post</a> for more details.
+
+			</p>
+
+			<h3>July 30th 2014 - New CEGMA VM available</h3>
+			<p>In addition to other options (see news item below), you can now run CEGMA
+			preinstalled as part of an Ubuntu VM. Thanks to Richard Feltstykket at the 
+			UC Davis Genome Center's <a href="http://bioinformatics.ucdavis.edu">Bioinformatics Core</a>
+			for doing this. Here are the <a href="cegma_vm.html">instructions for using our CEGMA VM.</a></p>
+			
+			<h3>July 21st 2014 - Homebrew packages for CEGMA available</h3>
+			<p>Thanks to Shaun Jackman, there is a <a href="http://brew.sh">Homebrew</a>
+			package for CEGMA available. This is part of the <a href="https://github.com/Homebrew/homebrew-science">Homebrew-Science</a>
+			initiative, making command-line tools more easily installable on Macs (also on
+			Linux if you use <a href="http://brew.sh/linuxbrew/">Linuxbrew</a>).
+			If you have homebrew installed you can add CEGMA as follows:</P>
+			<p><code>brew install homebrew/science/cegma</code></p>	
+
+			<h3>May 19th 2014 - version 2.5 of CEGMA is available</h3>
+			<p>This release fixes some minor bugs, tidies up the code in several ways, and 
+			moves the code to <a href="https://github.com/KorfLab/CEGMA_v2/">GitHub</a>. 
+			See the <a href="https://github.com/KorfLab/CEGMA_v2/blob/master/release_notes.md">full 
+			release notes</a> on Github for more details and download the code there or 
+			<a href="./CEGMA_v2.5.tar.gz">download it</a> from this website. Note, this will
+			be the last 2.x release of CEGMA.</p>
+			
+			<h3>April 14th 2014 - New CEGMA FAQ</h3>
+			<p>I've started a <a href="http://korflab.ucdavis.edu/Datasets/cegma/faq.html">FAQ</a> to collect common questions about CEGMA.</P>
+			
+			<h3>November 6th 2013 - Run CEGMA via iPlant</h3>
+			<p>Users of <a href="http://www.iplantcollaborative.org">iPlant</a> can now run CEGMA thanks to Michael Crusoe 
+			who has <a href="https://pods.iplantcollaborative.org/wiki/display/DEapps/CEGMA">added CEGMA as an iPlant 
+			application</a>.
+			</p>
+
+
+			<h3>August 2013 - CEGMA v2 is being discontinued</h3>
+			<p>Unfortunately, due to insufficient resources it will not be possible to address any queries or issues regarding version 2 of CEGMA. However,
+ 			there are ongoing plans to completely redevelop CEGMA to make it more powerful and flexible, and to create a code base which will be easier to
+ 			maintain in future.</p>
+
+			<p>We are happy to continue running the latest version of CEGMA (v2.4) on your behalf if you can make the genome or genome assembly available to download.</p>
+			
+
+
+			<br><br><a name="SCT2"></a> 
+			<h2>Abstract</h2>
+			<p>In this study, we report a computational method, CEGMA (Core Eukaryotic Genes Mapping Approach), for building a highly reliable set
+			of gene annotations in the absence of experimental data. We define a set of 458 core proteins that are present in a wide range of
+			taxa. Since these proteins are highly conserved, sequence alignment methods can reliably identify their exon-intron structures in genomic
+			sequences. The resulting dataset can be used to train a gene finder or to assess the completness of the genome or annotations.</p>
+
+			<p>The CEGMA core genes dataset was built using the NCBI <a href="http://www.ncbi.nlm.nih.gov/COG/">euKaryotic clusters of Orthologous Groups</a>
+			(KOGs) database. More specifically, the starting point was using the subset of <a href="http://www.ncbi.nlm.nih.gov/COG/grace/shokog.cgi?phy=63">928 KOGs</a>
+			 that are conserved between <i>Arabidopsis thaliana</i>, <i>Caenorhabditis elegans</i>, <i>Drosophila melanogaster</i>, <i>Homo sapiens</i>,
+			<i>Saccharomyces cerevisiae</i>, and <i>Schizosaccharomyces pombe</i>. These were then filtered by various criteria to arrive at the final set of 458
+			Core Eukaryotic Genes (CEGs), see paper for details.
+			</p>
+			<p><a href="#TOP">Go to top of page</a></p>
+
+
+
+			<br><br><a name="SCT3"></a> 
+			<h2>Download CEGMA</h2>
+			<p>CEGMA distributions contain several directories and files compressed in a <tt>tar.gz</tt> file. 
+			Source code and documentation files are included in the distribution, as well as several parameter 
+			files and other information. This final 2.x release of CEGMA is also available on <a href="https://github.com/KorfLab/CEGMA_v2/">GitHub</a></p>
+			
+			<h3>CEGMA v2.5</h3>
+			<p>Download the latest version: <a href="./CEGMA_v2.5.tar.gz">CEGMA_v2.5.tar.gz</a>. 
+			Note that older versions of CEGMA are <a href="old_cegma_versions.html">still available</a>. 
+			See included <a href="https://github.com/KorfLab/CEGMA_v2/blob/master/release_notes.md">release notes</a> 
+			for full details of changes. Please note, that apart from fixing bugs, improving 
+			the display of CEGMA output, and tidying up some of the underlying code, <b>no 
+			new functionality is provided by this version</b>
+			</p>
+			<p><a href="#TOP">Go to top of page</a></p>
+			
+			
+			
+			<br><br><a name="SCT4"></a> 
+			<h2>Installing CEGMA</h2>
+			<P>Please see the full <a href="./README">CEGMA README file</a> and the CEGMA FAQ 
+			<a href="http://korflab.ucdavis.edu/Datasets/cegma/faq.html">FAQ</a> for installation
+			instructions. Note that CEGMA requires version 2.2.3-rc7 or 2.4.1 of Genewise. 
+			The former version is not available on the EBI web or ftp site, so Ewan Birney 
+			has kindly agreed that we can host a copy on our website:</p>
+			
+			<p><a href="wise2.2.3-rc7.tar.gz">wise2.2.3-rc7.tar.gz</a></p>
+			
+			<p>To install Genewise, you will also need to have glib installed (which can be installed on a Mac via 
+			<a href="http://macports.org">Macports</a>). On an Ubuntu Linux system, you should be able to install 
+			GeneWise by running:</p>
+			
+			<p><tt>$ sudo apt-get install wise</tt></P> 
+			
+			<p>Also see these two guides to installing CEGMA on Ubuntu Linux:
+			<UL>
+				<LI><a href="ubuntu_instructions_1.txt">installing CEGMA on Ubuntu 1</a> (kindly provided by Markus Grohme).</li>
+				<LI><a href="ubuntu_instructions_2.txt">installing CEGMA on Ubuntu 2</a> (kindly provided by Christoph Hahn).</li>
+			</UL> 
+			</p>
+
+			<p>To test that everything is running correctly, you can try the following command that uses the test files
+			provided by CEGMA:</P>
+
+			<p><tt>cegma -g /path/to/CEGMA/sample/sample.dna -p /path/to/CEGMA/sample/sample.prot</tt></p>
+			
+			<p>where <tt>/path/to/CEGMA</tt> should be the correct path to your local CEGMA installation. This should
+			run relatively quickly and produce the following <a href="sample_CEGMA_output.txt">screen and file output</a>.</P>
+		
+
+
+			<p><a href="#TOP">Go to top of page</a></p>
+
+
+
+
+			<br><br><a name="SCT5"></a> 
+			<h2>Core eukaryotic genes dataset</h2>
+
+			<p>All links in following tables are links to underlying datafiles. The name of each link is the file size in Kilo- or Megabytes.</p>
+			<h3>Data based on the original KOG entries:</h3>
+
+			<p>
+			<table style="font-size:15px; text-align:right">
+				<tr><th> &nbsp; </th><td rowspan="12" class="tblspc" width="2px"> &nbsp; </td><th align="center"> Proteins </th><th align="center"> Alignment </th><th align="center"> Profiles </th><td rowspan="12" class="tblspc" width="2px">&nbsp;</td></tr>
+				<tr><td> &nbsp; </td><td align="center"> (fasta) </td><td align="center"> (clustal) </td><td align="center"> (hmmer) </td></tr>
+				<tr><td colspan="9" class="tblspc">&nbsp;</td></tr>
+				<tr><td>Core eukaryotic genes (458)</td>
+	    				<td> <a href="core/core.fa">1M</a> </td>
+    					<td> <a href="core/core.aln">2M</a> </td>
+    					<td> <a href="core/core.hmm.tar.gz">19M</a> </td>
+				<tr><td colspan="9" class="tblspc">&nbsp;</td></tr>
+			</table>
+			</p>
+
+
+			<h3>Genomic data</h3>
+			<p>The following files correspond to the genomic data of the proteins selected from the KOGs database. These correspond to the
+			annotations (from 2007) of the core genes in these six genomes. A single tarball containing all of this data can also be <a href="core_genome.tar.gz">downloaded</a></p>
+			<p>			
+			<table style="font-size:15px; text-align:right">
+				<tr><th> &nbsp; </th><td rowspan="12" class="tblspc" width="2px"> &nbsp; </td><th align="center"> Genomic </th><th align="center"> Coordinates </th><th align="center"> Transcript </th><th align="center"> Proteins </th><td rowspan="12" class="tblspc" width="2px">&nbsp;</td></tr>
+				<tr><td> &nbsp; </td><td align="center"> (fasta) </td><td align="center"> (gff) </td><td align="center"> (fasta) </td><td align="center"> (fasta) </td></tr>
+				<tr><td colspan="9" class="tblspc">&nbsp;</td></tr>
+				<tr><td><i>H. sapiens</i> </td>
+				    <td> <a href="core_genome/H.sapiens.dna">13M</a> </td>
+				    <td> <a href="core_genome/H.sapiens.ann">173K</a> </td>
+				    <td> <a href="core_genome/H.sapiens.tx">559K</a> </td>
+				    <td> <a href="core_genome/H.sapiens.aa">193K</a> </td>
+				<tr><td><i>D. melanogaster</i>  </td>
+					<td> <a href="core_genome/D.melanogaster.dna">1M</a> </td>
+    					<td> <a href="core_genome/D.melanogaster.ann">62K</a> </td>
+    					<td> <a href="core_genome/D.melanogaster.tx">563K</a> </td>
+    					<td> <a href="core_genome/D.melanogaster.aa">194K</a> </td>
+				<tr><td><i>C. elegans</i>  </td>
+    					<td> <a href="core_genome/C.elegans.dna">2M</a> </td>
+    					<td> <a href="core_genome/C.elegans.ann">85K</a> </td>
+    					<td> <a href="core_genome/C.elegans.tx">557K</a> </td>
+					<td> <a href="core_genome/C.elegans.aa">192K</a> </td>
+				<tr><td><i>A. thaliana</i>  </td>
+    					<td> <a href="core_genome/A.thaliana.dna">1M</a> </td>
+    					<td> <a href="core_genome/A.thaliana.ann">196K</a> </td>
+    					<td> <a href="core_genome/A.thaliana.tx">568K</a> </td>
+    					<td> <a href="core_genome/A.thaliana.aa">196K</a> </td>
+				<tr><td><i>S. cerevisiae</i>  </td>
+    					<td> <a href="core_genome/S.cerevisiae.dna">1M</a> </td>
+    					<td> <a href="core_genome/S.cerevisiae.ann">25K</a> </td>
+    					<td> <a href="core_genome/S.cerevisiae.tx">569K</a> </td>
+    					<td> <a href="core_genome/S.cerevisiae.aa">196K</a> </td>
+				<tr><td><i>S.pombe</i>  </td>
+    					<td> <a href="core_genome/S.pombe.dna">1M</a> </td>
+    					<td> <a href="core_genome/S.pombe.ann">47K</a> </td>
+    					<td> <a href="core_genome/S.pombe.tx">557K</a> </td>
+    					<td> <a href="core_genome/S.pombe.aa">193K</a> </td>
+				<tr><td colspan="9" class="tblspc">&nbsp;</td></tr>
+			</table>
+			</p>
+
+			
+			<h3>Random sets</h3>
+			<p>Genes were selected to make sure that the encoded proteins were longer than 100 amino acids, contained no stop codons in
+			frame, and had less than 50% low complexity sequence (as determined by the seg program distributed with WU-BLAST run with default
+			parameters). The genes are required to have introns in the range of 40 bp to 10 Kbp and to use canonical splice sites. Each set contains 500
+			random genes. A single tarball containing all of this data can also be <a href="random.tar.gz">downloaded</a></p>
+			<p>
+			<table class="usp" style="font-size:15px; text-align:right">
+				<tr><th> &nbsp; </th><td rowspan="18" class="tblspc" width="2px"> &nbsp; </td><th align="center"> Genomic </th><th align="center"> Coordinates </th><th align="center"> Transcript </th><th align="center"> Proteins </th><td rowspan="18" class="tblspc" width="2px">&nbsp;</td></tr>
+				<tr><td> &nbsp; </td><td align="center"> (fasta) </td><td align="center"> (gff) </td><td align="center"> (fasta) </td><td align="center"> (fasta) </td></tr>
+				<tr><td colspan="9" class="tblspc">&nbsp;</td></tr>
+				<tr><td><i>H. sapiens</i>
+    					<td> <a href="random/H.sapiens.dna">26M</a> </td>
+    					<td> <a href="random/H.sapiens.ann">128K</a> </td>
+    					<td> <a href="random/H.sapiens.tx">781K</a> </td>
+			    		<td> <a href="random/H.sapiens.aa">265K</a> </td>
+				<tr><td><i>D. melanogaster</i>
+    					<td> <a href="random/D.melanogaster.dna">3M</a> </td>
+    					<td> <a href="random/D.melanogaster.ann">57K</a> </td>
+    					<td> <a href="random/D.melanogaster.tx">796K</a> </td>
+    					<td> <a href="random/D.melanogaster.aa">270K</a> </td>
+				<tr><td><i>C. elegans</i>  
+    					<td> <a href="random/C.elegans.dna">2M</a> </td>
+    					<td> <a href="random/C.elegans.ann">72K</a> </td>
+    					<td> <a href="random/C.elegans.tx">547K</a> </td>
+    					<td> <a href="random/C.elegans.aa">195K</a> </td>
+				<tr><td><i>A. thaliana</i> 
+    					<td> <a href="random/A.thaliana.dna">1M</a> </td>
+    					<td> <a href="random/A.thaliana.ann">78K</a> </td>
+    					<td> <a href="random/A.thaliana.tx">578K</a> </td>
+    					<td> <a href="random/A.thaliana.aa">197K</a> </td>
+				<tr><td><i>S. cerevisiae</i> 
+    					<td> <a href="random/S.cerevisiae.dna">1M</a> </td>
+    					<td> <a href="random/S.cerevisiae.ann">15K</a> </td>
+    					<td> <a href="random/S.cerevisiae.tx">750K</a> </td>
+    					<td> <a href="random/S.cerevisiae.aa">253K</a> </td>
+				<tr><td><i>S. pombe</i> 
+    					<td> <a href="random/S.pombe.dna">1M</a> </td>
+    					<td> <a href="random/S.pombe.ann">27K</a> </td>
+    					<td> <a href="random/S.pombe.tx">721K</a> </td>
+    					<td> <a href="random/S.pombe.aa">244K</a> </td>
+				<tr><td colspan="9" class="tblspc">&nbsp;</td></tr>
+				</table>
+			</p>
+			<p><a href="#TOP">Go to top of page</a></p>
+
+
+			<br><br><a name="SCT6"></a> 
+			<h2>Core genes in new species</h2>
+			<p>The following data correspond to the genes mapped by CEGMA in the recently sequenced genomes of 
+			<i>Anopheles gambiae</i>, <i>Chlamydomonas reinhardtii</i>, <i>Ciona intestinalis</i> and
+			<i>Toxoplasma gondii</i>. The last column corresponds to the genes that are not mapped in the annotations 
+			of the current pipelines. A single tarball containing all of this data can also be 
+			<a href="new_core.tar.gz">downloaded</a></p>
+
+			<p>
+			<table class="usp" style="font-size:15px; text-align:right">
+			<tr><th> &nbsp; </th><td rowspan="18" class="tblspc" width="2px"> &nbsp; </td><th align="center"> Genomic </th><th align="center"> Coordinates </th><th align="center"> Proteins </th><th align="center"> Not annot. </th><td rowspan="18" class="tblspc" width="2px">&nbsp;</td></tr>
+			<tr><td> &nbsp; </td><td align="center"> (fasta) </td><td align="center"> (gff) </td><td align="center"> (fasta) </td><td align="center"> (fasta) </td> </td></tr>
+			
+			<tr><td colspan="9" class="tblspc">&nbsp;</td></tr>
+			
+			<tr><td><i>Anopheles gambiae</i>
+				<td> <a href="new_core/A.gambiae.genome">15M</a> </td>
+				<td> <a href="new_core/A.gambiae.gff">211M</a> </td>
+				<td> <a href="new_core/A.gambiae.aa">8.5M</a> </td>
+				<td> <a href="new_core/A.gambiae.new.aa">8.5M</a> </td>
+			
+			<tr><td><i>Chlamydomonas reinhardtii</i>  
+				<td> <a href="new_core/C.reinhardtii.genome">4.0M</a> </td>
+				<td> <a href="new_core/C.reinhardtii.gff">70M</a> </td>
+				<td> <a href="new_core/C.reinhardtii.aa">2.6M</a> </td>
+				<td> <a href="new_core/C.reinhardtii.new.aa">2.6M</a> </td>
+			
+			<tr><td><i>Ciona intestinalis</i> 
+				<td> <a href="new_core/C.intestinalis.genome">1.2M</a> </td>
+				<td> <a href="new_core/C.intestinalis.gff">13M</a> </td>
+				<td> <a href="new_core/C.intestinalis.aa">772K</a> </td>
+				<td> <a href="new_core/C.intestinalis.new.aa">772K</a> </td>
+			
+			<tr><td><i>Toxoplasma gondii</i> 
+				<td> <a href="new_core/T.gondii.genome">10M</a> </td>
+				<td> <a href="new_core/T.gondii.gff">141M</a> </td>
+				<td> <a href="new_core/T.gondii.aa">6.4M</a> </td>
+				<td> <a href="new_core/T.gondii.new.aa">6.4M</a> </td>
+			
+			<tr><td colspan="9" class="tblspc">&nbsp;</td></tr>
+			</table>			
+			</p>
+			<p><a href="#TOP">Go to top of page</a></p>
+
+
+
+
+			
+			
+			
+			<br><br><a name="SCT7"></a> 
+			<h2>Understanding CEGMA output</h2>
+			<p>Also see the <a href="http://korflab.ucdavis.edu/Datasets/cegma/faq.html">CEGMA FAQ</a>.
+			CEGMA should produce 7 output files for each run. Assuming you use 'output' as the output file name prefix:</p>
+			<ul>
+				<li><b>output.cegma.dna</b> - contains DNA sequence of each CEGMA prediction along with flanking DNA 
+				(defaults to ± 2000 bp)</li>
+				<li><b>output.cegma.errors</b> - contains any error messages produced by all of the CEGMA scripts</li>
+				<li><b>output.cegma.fa</b> - contains protein sequences of the predicted CEGs. One protein for each of the 
+				458 core genes that are present in your genome</li>
+				<li><b>output.cegma.gff</b> - contains exon details of all of the CEGMA predicted genes</li>
+				<li><b>output.cegma.id</b> - contains the <a href="http://www.ncbi.nlm.nih.gov/pubmed/12969510">KOG</a> IDs 
+				for the selected proteins</li>
+				<li><b>output.cegma.local.gff</b> - contains the GFF information of the CEGs using local coordiantes 
+				(relative to the dna file)</li>
+				<li><b>output.completeness_report</b> - contains a summary of which of the subset of the 248 most 
+				highly-conserved CEGs are present (either partially or completely, see below for more details)</li>
+			</ul>
+			<br>
+			<h3>Partial vs Complete</h3>
+			<p>'Complete' refers to those predicted proteins in the set of 248 CEGs that when aligned to the HMM for the 
+			KOG for that protein-family, give an alignment length that is 70% of the protein length. I.e. if CEGMA 
+			produces a 100 amino acid protein, and the alignment length to the HMM to which that protein should belong 
+			is 110, then we would say that the protein is 'complete' (91% aligned).</p>
+
+			<p>If a protein is not complete, but if it still exceeds a pre-computed minimum alignment score, then we 
+			call the protein 'partial'. Note that these pre-computed scores were made before we changed CEGMA from 
+			HMMER v2 to instead use HMMER v3. This might have made some slight differences to what is classed partial. 
+			The pre-computed scores are all in the file CEGMA/data/completeness_cutoff.tbl. Note that a protein that is 
+			deemed to be 'Complete' will also be included in the set of Partial matches. 
+			</p>
+			<p><a href="#TOP">Go to top of page</a></p>
+
+			
+			
+			
+			<br><br><a name="SCT8"></a> 
+			<h2>References</h2>
+			<UL>    
+				<li> Genis Parra, Keith Bradnam and Ian Korf. 
+				<a href="http://bioinformatics.oxfordjournals.org/cgi/content/full/23/9/1061">CEGMA: a pipeline to 
+				accurately annotate core genes in eukaryotic genomes."</a> <br class="hh">
+				<i>Bioinformatics</i>, 23: 1061-1067 (2007) </li>
+				
+				<li> Genis Parra, Keith Bradnam, Zemin Ning, Thomas Keane, and Ian Korf.
+				<a href ="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2615622/">Assessing the gene space in draft 
+				genomes"</a> <br class="hh">
+				<i>Nucleic Acids Research</i>, 37(1): 298-297 (2009)  </li>
+			</UL>
+			<p><a href="#TOP">Go to top of page</a></p>
+
+
+
+			<br><br><a name="SCT9"></a> 
+			<h2>CEGMA Mailing List</h2>
+
+			<p>We have created a mailing list which we will use to send news about updates and for any general discussion of CEGMA. 
+			If you are interested in subscribing, please follow these instructions (subscriptions are moderated):</p>
+
+			<ul>
+				<li>Email sympa@ucdavis.edu using the address that you want to use to subscribe to the list
+				<li>In the subject line of your message, type: subscribe cegma First_name Last_name
+				<li>Leave the message body blank.
+			</ul>
+			
+			<p>To unsubscribe:</p>
+			<ul>
+				<li>Email sympa@ucdavis.edu using the address that you want to use to subscribe to the list
+				<li>In the subject line of your message, type: unsubscribe cegma
+				<li>Leave the message body blank
+			</ul>
+
+			<p>Please <a href="mailto:korflab@ucdavis.edu">email us</a> with any other bugs or suggestions that you have.</P>
+			<p><a href="#TOP">Go to top of page</a></p>
+
+
+
+		</div>
+		
+		
+		<div id="footer">
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="style4.css" media="screen" />
+	<title>About Korf Lab</title>
+</head>
+
+<body>
+	<p>Content &copy; Korf Lab 2014</p>
+</bod>
+</html>
+
+		</div>
+		
+	</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-311124-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

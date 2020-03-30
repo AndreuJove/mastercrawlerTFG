@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+    <head>
+        <title>CScape</title>
+        <!-- HTML5 "Upscaling" -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link href="./css/bootstrap.css" rel="stylesheet">
+        <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="./css/fathmm.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/JavaScript" src="js/analytics.js"></script>
+    </head>
+
+    <body>
+        <a id="top"></a>
+        <div class="container">
+            <div class="page-header">
+                <h1>
+                    <div style="float: left;"><a href="/"><img src="images/CScapeLogo.png" width=180></a></div><br>
+                    &nbsp;&nbsp;&nbsp;
+                </h1>
+                    <font color="#0066AA" style="font-size: medium;"><i></br></br>Cancer Variant Predictor</i></font>
+                    <div style="float: right; font-size: small; mix-blend-mode: overlay; color: #fff;"><strong><i>Image &copy; 2016 Mingkwan Greenwood</i></strong></div>
+            </div>
+<p>                <strong><i>CScape</i></strong> predicts the oncogenic status (disease-driver or neutral) of somatic point mutations
+                in the coding and non-coding regions of the cancer genome.
+                Enter a mutation or list of mutations (one per line) into the form below using the format
+                <strong>chromosome,position,reference,mutant</strong> (see Help for more details).
+                Mutations uploaded from a file should use the VCF format with a minimum of five columns
+                (chromosome, position, id, reference, mutant).
+                <b>Note:</b> if a VCF file is uploaded, any entries in the User Input field will be ignored.
+                <br><b>July 2018:</b> liftOver conversion of the database has now been performed
+                to provide predictions for GRCh38/hg38.  Check the box below to access them.
+                </p>
+            <ul class="nav nav-tabs" id="myTab">
+                <li id="new-tab" class="active">
+                    <a href="#new" onclick="javascript: put();" data-toggle="tab">New Submission</a>
+                </li>
+                <li id="eg-tab">
+                    <a href="#new" onclick="javascript: put();" data-toggle="tab">Use Example</a>
+                </li>
+                <li id="doc-tab">
+                    <a href="#documentation" data-toggle="tab">Help/Documentation</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="new">
+                    <div class="row">
+                        <div class="span12">
+                            <form class="form-horizontal" id="myForm" name="myForm" action="./cgi-bin/submit-test.cgi" method="post" enctype="multipart/form-data">
+                                <legend><h3>Enter Your Mutations:</h3></legend>
+
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <div class="well well-large">
+                                            <div class="row-fluid">
+                                                <div class="span11">
+                                                    <div class="row-fluid">
+
+
+                                                        <div class="span12">
+                                                            <div class="control-group">
+                                                                <label class="control-label" for="batch">User Input</label>
+                                                                <div class="controls">
+                                                                    <textarea id="batch" name="batch" type="text" class="span11" style="resize: none;" rows="5"></textarea>
+                                                                    <a href="#documentation" data-toggle="tab" class="icon-question-sign" onclick="javascript: $('#new-tab').removeClass('active'); $('#eg-tab').removeClass('active'); $('#doc-tab').addClass('active');"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <label for="hg38">
+                                                            <input type="checkbox" name="hg38" value="hg38" id="hg38">
+                                                            use GRCh38/hg38
+                                                        </label>
+                                                        <label><b>Alternately, upload a VCF file (see <a href="web_examples.vcf">example</a>):</b>&nbsp; <input type="file" accept=".vcf" name="filename"></br> </label>
+                                                        <label>Email address (optional): <input type="text" name="email"></br> </label>
+
+                                                        <div class="row-fluid">
+                                                            <div class="span12">
+                                                                <div class="row-fluid">
+                                                                    <div class="span12">
+                                                                        <div class="control-group pull-right">
+                                                                            <div class="controls">
+                                                                            <button type="reset" class="btn">Clear</button>
+                                                                            <button type="submit" class="btn">Submit</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="documentation">
+                    <div class="row">
+                        <div class="span3" id="navparent">
+                            <ul class="nav nav-list navex">
+                                <li><a href="#publication"><i class="icon-chevron-right"></i> Publication</a></li>
+                                <li><a href="#format"><i class="icon-chevron-right"></i> Input Format</a></li>
+                                <li><a href="#interpretation"><i class="icon-chevron-right"></i> Prediction Interpretation</a></li>
+                                <li><a href="#download"><i class="icon-chevron-right"></i> Download</a></li>
+                                <li><a href="#drivermutationfreq"><i class="icon-chevron-right"></i> Driver mutation frequency</a></li>
+                            </ul>
+                        </div>
+                        <div class="span9">
+                            <section id="publication">
+                                <h1><b>Publication:</b></h1>
+                                Publications that use these data should cite the following:
+                                <a href="http://rdcu.be/vQwj">Rogers MF, Shihab H, Gaunt TR, Campbell C (2017).  CScape: a tool for predicting oncogenic single-point mutations in the cancer genome.  Nature Scientific Reports</a>
+                            </section>
+                            <section id="format">
+                                <h1>Input Format:</h1>
+                                <br />
+                                <p>
+                                Our software accepts comma-separated mutation data in the following format:
+
+                                <br /><br />
+                                <ul>
+                                    <li>
+                                        <code>Chromosome</code>
+                                    </li>
+                                    <li>
+                                        <code>Position</code>
+                                    </li>
+                                    <li>
+                                        <code>Reference Base</code>
+                                    </li>
+                                    <li>
+                                        <code>Mutant Base</code>
+                                    </li>
+                                </ul>
+                                <br />
+                                For example:
+                                <br /><br />
+<pre>
+11,219046,A,C
+11,224139,A,T
+11,375885,G,T
+11,408898,A,T
+11,499190,G,C
+11,551832,C,A
+11,607532,C,T
+11,773638,A,T
+11,800755,C,A
+11,828599,C,G
+11,988551,G,C
+11,1025084,C,G
+11,1027680,C,A
+17,46827903,A,G
+17,79060569,A,G
+18,756761,C,A
+18,3879501,C,A
+19,407408,G,T
+19,407519,G,C
+19,407627,G,A
+19,757693,C,A
+19,757792,G,T
+19,812882,G,T
+2,45966,C,A
+20,9048655,A,G
+20,9923941,A,G
+20,18479366,A,G
+20,53170414,T,C
+3,48265219,A,G
+3,52848428,A,G
+3,66659209,A,G
+3,184195375,A,G
+7,193598,C,T
+9,916799,C,T
+9,3324019,A,T
+9,5050791,G,T
+9,5077554,C,T
+9,6013277,T,A
+9,6550908,C,A
+9,6554763,C,A
+</pre>
+                                <br />
+                                <b>Note 1: 'Chr' is not required when defining the chromosome above (e.g. Chr1) and all our predictions are derived using the forward strand.</b>
+                                <br />
+                                <br />
+                                <b>Note 2: All predictions are based on version GRCh37 (ENSEMBL release 87) of the human genome.</b>
+                                <p>
+                                <h3>VCF files</h3>
+                                The software also accepts Variant Call Format (VCF) files with up to 100,000 queries.
+                                This is a tab-delimited format that must have, at a minimum, these first five columns:
+                                <br /><br />
+                                <ol>
+                                <li> <code>Chromosome</code> </li>
+                                <li> <code>Position</code> </li>
+                                <li> <code>Identifier</code> </li>
+                                <li> <code>Reference Base</code> </li>
+                                <li> <code>Mutant Base</code> </li>
+                                </ol>
+                                <br />
+                                
+                                As an example, try the file: <a href="web_examples.vcf">test.vcf</a>
+                                <br /><br />
+
+                                </p>
+                                <br />
+                                <a href='#top'>Back to Top ...</a>
+                            </section>
+                            <br />
+
+                            <section id="interpretation">
+                                <h1>Prediction Interpretation:</h1>
+                                <br />
+                                <p>
+Predictions are given as <i>p</i>-values in the range [0, 1]: values above 0.5 are
+predicted to be deleterious, while those below 0.5 are predicted to be neutral or benign.
+<i>P</i>-values close to the extremes (0 or 1) are the highest-confidence predictions
+that yield the highest accuracy.
+<br /><br />
+
+We also apply <i>cautious classification</i> thresholds, defined as those thresholds
+that yield the highest possible accuracy (see our paper for details).
+These are reported using different thresholds for coding (0.89 or above)
+and noncoding (0.70 or above) SNVs.
+<br /><br />
+
+We use distinct predictors for positions either in coding regions (positions
+within coding-sequence exons) and non-coding regions (positions in intergenic
+regions, introns or non-coding genes).
+<br /><br />
+
+<!--
+<h3><b>Publications that use these data should cite the following:</b></h3>
+<a href="http://rdcu.be/vQwj">Rogers MF, Shihab H, Gaunt TR, Campbell C (2017).
+CScape: a tool for predicting oncogenic single-point mutations in the cancer genome.  Nature Scientific Reports, September 2017.</a>
+<br /><br />
+-->
+In our paper we consider regions of interest in the cancer genome.
+For coding regions these are listed in the file <a href=coding-regions.tab.gz>coding-regions.tab</a>
+as<br /><br />
+
+
+<center><tt>chromosome : start position : end position : probability</tt></center>
+
+<br /><br />as derived from the KS test.
+A supplementary file <a href=coding-regions-annotated.tab.gz>coding-regions-annotated.tab</a>
+also gives associated gene names and locus annotations.  The annotated file has the
+following format:<br /><br />
+
+<center><tt>chromosome : start position : end position : gene name : locus : probability</tt></center>
+
+<br /><br />Finally, the  number of regions associated with each gene may be found in the file
+<a href=coding-genelist.tab.gz>coding-genelist.tab</a> that has the following format:<br /><br />
+
+<center><tt>count : gene name</tt></center>
+
+<br /><br />Non-coding regions of interest are provided in the file
+<a href=noncoding-regions.tab.gz>noncoding-regions.tab</a> as<br /><br />
+
+<center><tt>chromosome : start position : end position : probability</tt></center>
+
+<br /><br />as derived from the KS test. These regions can also be visualised by loading the
+<i>CScape</i> track for our Genome Tolerance Browser (located at
+<a href=http://gtb.biocompute.org.uk>gtb.biocompute.org.uk</a>)
+<!--
+<script type="text/JavaScript" src="./js/hum_mutat_2013.js"></script>
+
+                                </p>
+                                <br />
+                                <a href='#top'>Back to Top ...</a>
+                            </section>
+                            <br />
+                            -->
+
+                            <section id="download">
+                                <h1>Downloads:</h1>
+                                <!--
+                                <br />
+                                <b>Please note: some files will not be available for download until the CScape
+                                    method has passed peer review.</b>
+                                <br />
+                                -->
+                                <br />
+                                To run <i>CScape</i> queries locally, download the following files
+                                and run the query script as outlined below.  Please note that you must
+                                have <a href="https://sourceforge.net/projects/samtools/files/tabix">tabix</a> installed
+                                to run the script.<br />
+                                <p>
+                                <a href="cscape_query.py">Python query script </a> (7.5KB) <br />
+                                <a href="cscape_coding.vcf.gz">cscape_coding.vcf.gz </a> (6GB) <br />
+                                <a href="cscape_coding.vcf.gz.tbi">cscape_coding.vcf.gz.tbi </a> (1.3MB) <br />
+                                <a href="cscape_noncoding.vcf.gz">cscape_noncoding.vcf.gz </a> (51GB) <br />
+                                <a href="cscape_noncoding.vcf.gz.tbi">cscape_noncoding.vcf.gz.tbi </a> (2.5MB) <br />
+
+<pre>
+Usage: cscape_query.py query-file [options]
+
+Predict the oncogenic potential of single nucleotide variants (SNVs).  The query
+file must be a list of queries that use the following format:
+
+chromosome,position,reference,mutant
+
+Example:
+
+1,69094,G,A
+11,168961,T,A
+18,119888,G,A
+
+Options:
+  -h, --help  show this help message and exit
+  -c CDB      CScape coding database [default: cscape_coding.bed.gz]
+  -n NDB      CScape noncoding database [default: cscape_noncoding.bed.gz]
+  -o OUTPUT   Output file [default: stdout]
+  -v          Verbose mode [default: False]
+</pre>
+                                <p>
+                                Training and test data used to develop <i>CScape</i> are provided below.
+                                Each file within the .zip archives has five (tab-delimited) columns:
+<pre>
+Chromosome	Position	Reference	Allele	Label
+</pre>
+                                <p>
+                                <a href="training_data.zip">training_data.zip</a>  (820KB) <br />
+                                <a href="cscape_coding_tests.zip">cscape_coding_tests.zip</a>  (840KB) <br />
+                                <a href="cscape_noncoding_tests.zip">cscape_noncoding_tests.zip</a>  (17MB) <br />
+
+
+                                <!--
+<u>capable of predicting the effects of both coding and non-coding variants using nucleotide-based HMMs</u>,
+can be found on our <a href="https://github.com/HAShihab/fathmm-MKL">fathmm-MKL GitHub repository</a>
+-->
+
+
+                                </p>
+                                <br />
+                                <a href='#top'>Back to Top ...</a>
+                            </section>
+			<section id="drivermutationfreq">
+				<h3>An Investigation of the Frequency Count of Single Point Driver Mutations across Common Solid Tumours</h3>
+				<p>
+					In our paper:
+				</p>
+				<ul>	
+					<li>Madeleine Darbyshire, Zachary du Toit, Mark F. Rogers, Tom R. Gaunt and Colin Campbell. Estimating the Frequency of Single Point Driver Mutations across Common Solid Tumours.
+Scientific Reports (2019).</li>
+				</ul>
+				<p>
+we investigate the frequency count of single nucleotide variants driving common solid tumours. We further discuss predicted driver counts stratified by stage of disease and driver counts in non-coding regions of the cancer genome, in addition to driver-genes.
+
+The following file <a href="./driver-genes.xlsx">driver-genes.xlsx</a> gives the full count of single nucleotide variant drivers (SNV-drivers) across 25 different types of cancer, as discussed in this paper.
+
+				</p>
+			</section>
+
+
+
+                            <br />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<p><img src="/images/UoBlogo.jpg" style="height: 50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="/images/epsrc.jpg" style="height: 50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="/images/mrc-ieu-logo.png" style="height: 50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="/images/cruk_logo50.png" style="height: 50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+        </div>
+
+        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            $("#new-tab").click(function() {
+                $('#myForm')[0].reset();
+            });
+            $("#eg-tab").click(function() {
+                $('#myForm')[0].reset();
+                document.forms['myForm'].elements['batch'].value = "11,219046,A,C\n11,224139,A,T\n11,375885,G,T\n11,408898,A,T\n11,499190,G,C\n11,551832,C,A\n11,607532,C,T\n11,773638,A,T\n11,800755,C,A\n11,828599,C,G\n11,988551,G,C\n11,1025084,C,G\n11,1027680,C,A\n17,46827903,A,G\n17,79060569,A,G\n18,756761,C,A\n18,3879501,C,A\n19,407408,G,T\n19,407519,G,C\n19,407627,G,A\n19,757693,C,A\n19,757792,G,T\n19,812882,G,T\n2,45966,C,A\n20,9048655,A,G\n20,9923941,A,G\n20,18479366,A,G\n20,53170414,T,C\n3,48265219,A,G\n3,52848428,A,G\n3,66659209,A,G\n3,184195375,A,G\n7,193598,C,T\n9,916799,C,T\n9,3324019,A,T\n9,5050791,G,T\n9,5077554,C,T\n9,6013277,T,A\n9,6550908,C,A\n9,6554763,C,A";
+            });
+        </script>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+                                                        
+                                                        <div class="row-fluid">
+                                                            <div class="span12">
+                                                                <div class="row-fluid">
+                                                                    <div class="span12">
+                                                                        <div class="control-group pull-right">
+                                                                            <div class="controls">
+                                                                            <button type="reset" class="btn">Clear</button>
+                                                                            <button type="submit" class="btn">Submit</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>

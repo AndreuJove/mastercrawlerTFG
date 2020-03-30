@@ -1,0 +1,79 @@
+<html><head><title>asSeq</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<style type="text/css">
+		<!--.style1 {	color: #0033CC;	font-family: Verdana, Arial, Helvetica, sans-serif;	font-size: 12pt;}
+		.style2 {	font-family: Verdana, Arial, Helvetica, sans-serif;	color: #007A28;	font-size: 12pt;}
+		.style3 {	font-family: Verdana, Arial, Helvetica, sans-serif;	color: #E14400;	font-size: 12pt;}
+		.style4 {color: #003399}
+		.style5 {color: #336633}
+		-->
+  </style><link href="Alink.css" rel="stylesheet" type="text/css">
+</head>
+<body><p>&nbsp;</p>
+	<table width="700"  border="0" align="center" cellpadding="3" cellspacing="0">  
+
+		<tr> <td><b>Downloads</b></td> </tr>
+
+    <tr> <td>
+    <ul>
+      <li class="style5">
+           <a href="asSeq_0.99.2.tar.gz" class="blue"> asSeq_0.99.2.tar.gz </a> 
+            <br>
+      </li>
+      <br>
+        <li class="style5">
+           <a href="asSeq_0.99.301.tar.gz" class="blue"> asSeq_0.99.301.tar.gz </a> 
+           &nbsp;&nbsp; 
+           (<a href="asSeq.pdf" class="blue"> vignettes </a>) <br>
+           &nbsp;&nbsp; update extractAsReads to allow soft and hard clips 
+
+      </li>
+      <br>
+
+      </ul>
+    </td>  </tr>
+		<tr> <td>&nbsp;</td> </tr>
+
+  	<tr> <td><b>Reference</b></td> </tr>
+
+    <tr><td>
+			Wei Sun, (2011),  A Statistical Framework for eQTL Mapping Using RNA-seq Data, <i>Biometrics</i>,  2012 Mar;68(1):1-11 Epub 2011 Aug 12.
+			<a href="../research/Biometrics_eQTL_RNAseq.pdf" class="blue"> Download pdf </a>
+			&nbsp; &nbsp; &nbsp; &nbsp; 
+			 <a href="asSeq_files/data2share.zip" class="blue"> Download data and results </a>
+			 <br>
+			 <br>
+  	</td></tr>
+
+		<tr><td>
+			Wei Sun and Yijuan Hu (2012),  eQTL mapping using RNA-seq data, <i>Statistics in Biosciences</i>, in press.
+			<a href="../research/eQTL_RNA-seq.pdf" class="blue"> Download pdf </a>
+		</td></tr>
+		<tr> <td>&nbsp;</td> </tr>
+  
+  	<tr> <td><b>FAQ</b></td> </tr>
+
+		<tr> <td>
+
+		<ol>
+			<li>
+				Installation <br><br>
+				This R package has been submitted to R/bioconductor. It will be available on bioconductor soon. It is recommended to install this R package from bioconductor. 
+				
+				<br><br>
+				
+				You can also install this R package from the source code by yourself. Since the R package contains C code, a C complier is required for installation. With both R and appropriate c complier installed, this R package can be installed using the following command (in Mac Terminal window or Windows command window) 
+				<br><br>
+		
+		R CMD INSTALL asSeq
+		
+				<br><br>
+		
+				Please contact me (wesun@email.unc.edu) if you need older version of this package. 
+				</li>
+		</ol>
+
+	</td> </tr>
+				
+
+</table></body></html>

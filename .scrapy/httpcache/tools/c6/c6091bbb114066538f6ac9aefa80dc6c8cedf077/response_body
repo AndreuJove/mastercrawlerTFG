@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-88278956-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("set", "page", "/404.html?page=" + document.location.pathname + document.location.search + "&amp;from=" + document.referrer);ga("send", "pageview");</script>
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/cbib/favicons/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://www.cbib.u-bordeaux.fr/en/page-not-found" />
+<link rel="alternate" hreflang="fr" href="https://www.cbib.u-bordeaux.fr/fr/page-non-trouvee" />
+<link rel="canonical" href="/en/page-not-found" />
+<link rel="shortlink" href="/en/node/55" />
+<link rel="revision" href="/en/page-not-found" />
+
+    <title>Page not found | CBIB</title>
+    <link rel="stylesheet" href="/sites/cbib/files/css/css_LTo_XGTFLEuDMtKmQxxmCU1T7zmEjaKxfMw-FmqAdkU.css?pkvc64" media="all" />
+<link rel="stylesheet" href="/sites/cbib/files/css/css_nQNmYBULEe7f95O0hqKLfhOcoguQjsTwHSOaH5jOmZM.css?pkvc64" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/cbib/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/themes/custom/cbib/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/themes/custom/cbib/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/themes/custom/cbib/favicons/manifest.json">
+    <link rel="mask-icon" href="/themes/custom/cbib/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="container">
+  <section class="section-header">
+	<header class="header">
+		<div class="row">
+			  <div>
+    <div id="block-cbib-branding">
+  
+    
+   	<div class="col-md-12 header-col">
+ 		<div class="logo-container">
+ 			 				<a href="/en">
+ 					<img src="/themes/custom/cbib/images/logos/logo_cbib.svg" class="logo style-cgfb" alt="CGFB" />
+ 				</a>
+ 			 		</div>
+ 	</div>
+ </div>
+
+  </div>
+
+		</div>
+			  <div>
+    <div class="language-switcher-language-url" id="block-languageswitcher" role="navigation">
+  
+    
+      <span class="language-links-container">
+                                                <a href="/en/page-not-found?destination=/en&amp;_exception_statuscode=404" class="language-link" hreflang="en" data-drupal-link-query="{&quot;_exception_statuscode&quot;:404,&quot;destination&quot;:&quot;\/en&quot;}" data-drupal-link-system-path="node/55">English</a>
+                                                                <a href="/fr/page-non-trouvee?destination=/en&amp;_exception_statuscode=404" class="language-link" hreflang="fr" data-drupal-link-query="{&quot;_exception_statuscode&quot;:404,&quot;destination&quot;:&quot;\/en&quot;}" data-drupal-link-system-path="node/55">Français</a>
+                                    </span>
+  </div>
+<nav role="navigation" aria-labelledby="block-cbibmainnavigation-menu" id="block-cbibmainnavigation">
+            
+  <h2 class="visually-hidden">CBIB Main navigation</h2>
+  
+
+            
+  <nav class="main-nav navbar navbar-default">
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse" id="collapse-menu">
+  <ul class="nav navbar-nav">
+                          <li class="dropdown nav-item">
+          <a href="/en/bordeaux-bioinformatics-center-cbib" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Platform">
+            Platform
+          </a>
+          <ul class="dropdown-menu">
+                          <li>
+                <a href="/en/presentation" title="Presentation">
+                  Presentation
+                </a>
+              </li>
+                          <li>
+                <a href="/en/team" title="The Team">
+                  The Team
+                </a>
+              </li>
+                          <li>
+                <a href="/en/servers-and-storage" title="Servers and Storage">
+                  Servers and Storage
+                </a>
+              </li>
+                          <li>
+                <a href="/en/node/add/create_cbib_account" title="Create an account">
+                  Create an account
+                </a>
+              </li>
+                          <li>
+                <a href="/en/open-positions-cbib" title="Open positions">
+                  Open positions
+                </a>
+              </li>
+                      </ul>
+        </li>
+                          <li class="nav-item">
+          <a href="https://hal.archives-ouvertes.fr/CBIB/search/index/?q=producedDateY_i%3A%5B2010%20TO%202020%5D&amp;sort=producedDateY_i%20desc" class="nav-link" title="Publications">
+            Publications
+          </a>
+        </li>
+                        <li class="nav-item">
+          <a href="/en/projects" class="nav-link" title="Projects">
+            Projects
+          </a>
+        </li>
+                        <li class="nav-item">
+          <a href="https://services.cbib.u-bordeaux.fr/galaxy/" class="nav-link" title="Galaxy">
+            Galaxy
+          </a>
+        </li>
+                        <li class="nav-item">
+          <a href="/en/seminars" class="nav-link" title="Seminars">
+            Seminars
+          </a>
+        </li>
+                        <li class="nav-item">
+          <a href="/en/training-and-workshops" class="nav-link" title="Training">
+            Training
+          </a>
+        </li>
+                        <li class="nav-item">
+          <a href="https://services.cbib.u-bordeaux.fr/redmine/" class="nav-link" title="Intranet">
+            Intranet
+          </a>
+        </li>
+                        <li class="nav-item">
+          <a href="/en/contact" class="nav-link" title="Contact">
+            Contact
+          </a>
+        </li>
+            
+  </ul>
+</div>
+</nav>
+  </nav>
+
+  </div>
+
+	</header>
+</section>  <main role="main">
+    <section class="section-main-content">
+      <div class="row">
+        <div class="layout-content col-md-8">
+            <div>
+    <div id="block-cbib-page-title">
+  
+    
+      
+  <div class="main-heading">
+  	<h1>Page not found</h1>
+  </div>
+
+
+  </div>
+<div id="block-cbib-content">
+  
+    
+      <article data-history-node-id="55" role="article" about="/en/page-not-found" typeof="schema:WebPage">
+
+  
+      <span property="schema:name" content="Page not found" class="hidden"></span>
+
+
+  
+  <div>
+    
+            <div property="schema:text"><img alt="404 Page not found" data-entity-type="file" data-entity-uuid="649b816a-4c75-400a-85d7-6f1ba43ca7ab" src="/sites/cbib/files/inline-images/a41a97fc-c775-11e6-8c85-e1e0ee48974c.jpg" class="align-center" /><p>The page you wanted to access was not found.</p>
+
+<p>Please note that you are on the new CGFB website. Please take the time to update your bookmarks accordingly.</p>
+
+<p>If you can't find the ressource you were looking for, please contact an administrator.</p>
+</div>
+      
+  </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+        </div>
+                   <section class="section-sidebar">
+ 	<div class="col-md-4">
+ 		 		<div>
+ 			<div class="views-element-container" id="block-views-block-news-block-1-2">
+  
+    
+      <div>  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+</div>
+
+  </div>
+<div class="views-element-container" id="block-views-block-informations-block-1">
+  
+    
+      <div>  
+  
+  
+
+  
+  
+  
+
+  <div class="main-heading">
+	<h1>Informations</h1>
+</div>
+<div class="sidebar-block-container sidebar-infos-container">
+		  			<p><a href="/en/node/32" hreflang="en">Information CBIB</a></p>
+
+<hr class="separator-big" />
+  		</div>
+  
+  
+
+  
+  
+
+  
+  
+</div>
+
+  </div>
+<div class="main-heading">
+	<h1>Tweets</h1>
+</div>
+<div class="sidebar-block-container sidebar-twitter-container">
+      
+            <div><p><a class="twitter-timeline" data-height="500" data-theme="light" data-width="400" href="https://twitter.com/agroppi/timelines/1022480684416425984?ref_src=twsrc%5Etfw">CBiB - Curated tweets by agroppi</a> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<hr /><p><a class="twitter-timeline" data-height="500" data-theme="light" data-width="400" href="https://twitter.com/MachaNikolski/timelines/1057205051339534336?ref_src=twsrc%5Etfw">CBiB - Curated tweets by MachaNikolski</a> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+</div>
+      
+  </div>
+
+ 		</div>
+ 	 </div>
+</section>
+              </div>
+    </section>
+    <section class="section-plateformes">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="main-heading platforms-main-heading">
+				<h1>Plateformes</h1>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			<a href="http://cgfb.u-bordeaux.fr" class="block-link" title="CGFB Website">
+				<div class="image-plateformes-cgfb-container">
+					<div class="titre-plateformes-cgfb-container">
+						<img src="/themes/custom/cbib/images/app/cgfb-name.png" alt="CGFB">
+						<h2>Centre génomique fonctionnelle de Bordeaux</h2>
+					</div>	
+				</div>
+			</a>
+		</div>	
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			<div class="plateformes-item bioinformatique">
+				<a href="http://www.cbib.u-bordeaux.fr">
+					<h2>Plateforme bioinformatique</h2>
+				</a>
+			</div>
+		</div>	
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			<div class="plateformes-item metabolome">
+				<a href="http://metabolome.cgfb.u-bordeaux.fr">
+					<h2>Plateforme métabolome</h2>
+				</a>
+			</div>
+		</div>	
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			<div class="plateformes-item biostruct">
+				<a href="http://www.iecb.u-bordeaux.fr/index.php/fr/biologie-structurale">
+					<h2>Plateforme biologie structurale</h2>
+				</a>
+			</div>
+		</div>	
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			<div class="plateformes-item proteome">
+				<a href="http://proteome.cgfb.u-bordeaux.fr">
+					<h2>Plateforme protéome</h2>
+				</a>
+			</div>
+		</div>	
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			<div class="plateformes-item genome">
+				<a href="http://pgtb.cgfb.u-bordeaux.fr">
+					<h2>Plateforme génome transcriptome</h2>
+				</a>
+			</div>
+		</div>	
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			<div class="plateformes-item imagerie">
+				<a href="http://www.bic.u-bordeaux.fr/thewebsite/spip.php?page=sommaire&lang=fr&var_mode=recalc">
+					<h2>Plateforme imagerie</h2>
+				</a>
+			</div>
+		</div>	
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			<div class="plateformes-item animalerie">
+				<a href="http://cgfb.u-bordeaux.fr/en/animal-housing">
+					<h2>Plateforme animalerie</h2>
+				</a>
+			</div>
+		</div>		
+	</div>	
+</section>  </main>
+  <footer role="contentinfo">
+    <div>
+    <nav role="navigation" aria-labelledby="block-cbibfooternavigation-menu" id="block-cbibfooternavigation">
+            
+  <h2 class="visually-hidden">CBIB Footer Navigation</h2>
+  
+
+              <nav class="footer-nav">
+  <ul>
+                    <li class="nav-item">
+          <a href="/en/legal-terms" class="nav-link" title="Legal Terms">
+            Legal Terms
+          </a>
+        </li>
+            <li class="nav-item">
+          <a href="/en/user/login" class="nav-link" title="Log in">
+            Log in
+          </a>
+        </li>
+      
+  </ul>
+</nav>
+  </nav>
+<div class="views-element-container" id="block-views-block-footer-logos-block-1-2">
+  
+    
+      <div>  
+  
+  
+
+  
+  
+  
+
+  <div class="row">
+	<div class="col-md-12">
+		<div class="footer-logos-container">
+							<div class="footer-logo-item">
+	<a href="http://www.inserm.fr/">  <img src="/sites/cbib/files/2016-05/inserm_0.png" width="164" height="44" alt="Inserm" typeof="foaf:Image" />
+
+</a>
+</div>
+							<div class="footer-logo-item">
+	<a href="http://www.bergonie.org/">  <img src="/sites/cbib/files/2016-05/bergonie.png" width="105" height="37" alt="Institut Bergonie" typeof="foaf:Image" />
+
+</a>
+</div>
+							<div class="footer-logo-item">
+	<a href="http://www.cnrs.fr/">  <img src="/sites/cbib/files/2016-05/cnrs.png" width="46" height="46" alt="CNRS" typeof="foaf:Image" />
+
+</a>
+</div>
+							<div class="footer-logo-item">
+	<a href="https://www.inrae.fr/">  <img src="/sites/cbib/files/2020-01/inrae.png" width="88" height="23" alt="INRAe" typeof="foaf:Image" />
+
+</a>
+</div>
+							<div class="footer-logo-item">
+	<a href="https://www.nouvelle-aquitaine.fr/">  <img src="/sites/cbib/files/2017-02/region-nouvelle-aquitaine.png" width="150" height="65" alt="Region Nouvelle-Aquitaine" typeof="foaf:Image" />
+
+</a>
+</div>
+							<div class="footer-logo-item">
+	<a href="http://europa.eu/">  <img src="/sites/cbib/files/2016-05/europe.png" width="68" height="46" alt="European Union" typeof="foaf:Image" />
+
+</a>
+</div>
+							<div class="footer-logo-item">
+	<a href="http://www.ibisa.net/">  <img src="/sites/cbib/files/2016-05/ibisa.png" width="93" height="33" alt="IBISA" typeof="foaf:Image" />
+
+</a>
+</div>
+							<div class="footer-logo-item">
+	<a href="https://www.u-bordeaux.fr/">  <img src="/sites/cbib/files/2016-05/universite-bordeaux.png" width="125" height="50" alt="Universite de Bordeaux" typeof="foaf:Image" />
+
+</a>
+</div>
+							<div class="footer-logo-item">
+	<a href="https://www.bordeaux-inp.fr/">  <img src="/sites/cbib/files/2016-05/bordeaux-inp.png" width="101" height="76" alt="Bordeaux INP" typeof="foaf:Image" />
+
+</a>
+</div>
+							<div class="footer-logo-item">
+	<a href="https://www.chu-bordeaux.fr/">  <img src="/sites/cbib/files/2016-05/chu.png" width="109" height="52" alt="CHU Bordeaux" typeof="foaf:Image" />
+
+</a>
+</div>
+					</div>
+	</div>
+</div>
+  
+  
+
+  
+  
+
+  
+  
+</div>
+
+  </div>
+
+  </div>
+
+</footer></div>
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"user":{"uid":0,"permissionsHash":"99c959fd44c7f0256e5c3f13ce7b68827214a6f35322756bae09aeba7831e204"}}</script>
+<script src="/core/assets/vendor/domready/ready.min.js?v=1.0.8"></script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.2.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.6.4"></script>
+<script src="/core/misc/drupal.js?v=8.6.4"></script>
+<script src="/core/misc/drupal.init.js?v=8.6.4"></script>
+<script src="/modules/contrib/google_analytics/js/google_analytics.js?v=8.6.4"></script>
+<script src="/themes/custom/cbib/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js?pkvc64"></script>
+<script src="/themes/custom/cbib/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js?pkvc64"></script>
+<script src="/themes/custom/cbib/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js?pkvc64"></script>
+<script src="/themes/custom/cbib/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js?pkvc64"></script>
+<script src="/themes/custom/cbib/js/vendor/jquery.mobile.touch.min.js?pkvc64"></script>
+<script src="/themes/custom/cbib/bower_components/jquery-colorbox/jquery.colorbox-min.js?pkvc64"></script>
+<script src="/themes/custom/cbib/js/main.js?pkvc64"></script>
+
+  </body>
+</html>

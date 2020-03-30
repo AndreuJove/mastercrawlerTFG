@@ -1,0 +1,15 @@
+Server: Varnish
+Retry-After: 0
+Location: https://pypi.org/pypi/cutadapt
+Content-Type: text/html; charset=UTF-8
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 18:49:50 GMT
+X-Served-By: cache-mad22041-MAD
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1585594191.711742,VS0,VE0
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Frame-Options: deny
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none

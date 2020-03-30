@@ -1,0 +1,783 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                  "http://www.w3.org/TR/html4/loose.dtd">
+                 <html><head><title>Candida Genome Database</title><script src='http://www.candidagenome.org/javascript/www.js'></script>
+<script src='http://www.candidagenome.org/javascript/obfuscate.js'></script>
+<script src='http://www.candidagenome.org/javascript/jquery.min.js'></script>
+<script src='http://www.candidagenome.org/javascript/jquery-ui.min.js'></script>
+<script type='text/javascript'>var domain = "www.candidagenome.org";</script>
+<script src='http://www.candidagenome.org/javascript/search.js'></script>
+<link href='http://www.candidagenome.org/css/header_footer.css' rel='stylesheet' type='text/css'>
+<link href='http://www.candidagenome.org/css/FormatPage.css' rel='stylesheet' type='text/css'>
+<link href='http://www.candidagenome.org/css/Site.css' rel='stylesheet' type='text/css'>
+<link href='http://www.candidagenome.org/css/jquery-ui.css' rel='stylesheet' type='text/css'>
+<link rel='icon' href='http://www.candidagenome.org/favicon.ico' type='image/x-icon'>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3123417-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+        'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script></head><body  bgcolor=#FFFFF0>
+
+
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+  <TR>
+    <TD colspan="3">
+
+<p>
+<div id="header">
+  <div id="logo">
+      <a id="homelink" href="/">&nbsp;</a>
+  </div>
+  <div id="autoTestButton" style='display:none;'>
+  <button onclick='genTest( )'>test this</button>
+  </div>
+  <script src="/javascript/autoTest.js"></script>
+  <div id="headerright">
+    <div id="headerlinks">  
+      <a id="email" target="_blank" href="/cgi-bin/suggestion">&nbsp;</a><a id="facebook" target="_blank" 
+       	  href="http://www.facebook.com/pages/Candida-Genome-Database/173482099381649">&nbsp;</a>
+      <div id="headermenu">
+        <div class="menu-top-menu-container">
+          <ul id="menu-top-menu" class="menu">
+            <li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82">
+              <a href="/AboutContents.shtml">About</a>
+            </li>
+            <li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89">
+              <a href="/sitemap.shtml">Site Map</a>
+            </li>
+          <li id="menu-item-200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200">
+              <a href="/HowToCite.shtml">How to Cite</a>
+            </li>
+            <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90">
+              <a href="/HelpContents.shtml">Help</a>
+            </li>
+          </ul>
+        </div> <!-- menu-top-menu-container -->
+      </div>   <!-- headermenu -->
+      <div class="clearfloats"><!-- this comment is the non-floated element --> </div> 
+    </div> <!-- headerlinks -->
+    <div id="headersearch">
+      <form id="searchform" method="get" action="/cgi-bin/search/quickSearch">
+        <input style="width:175px;" type="text" onclick="clickclear(this, 'search our site')" alt="search our site" 
+	       id="txt_search" name="query" value="search our site" class="ui-autocomplete-input" autocomplete="off" role="textbox"
+	       aria-autocomplete="list" aria-haspopus="true"/>
+        <input type="submit" value=" " id="go" />
+      </form>
+   </div> <!-- headersearch -->
+  </div> <!-- headerright -->
+  <div class="clearfloats"><!-- this comment is the non-floated element --> </div>  
+<div id="nav">
+<div class="menu-main-menu-container">
+<ul id="menu-main-menu" class="menu">
+<li id="menu-item-1" class="menu-item menu-item-type-post_type menu-item-object-page
+              page_item page-item-4 current_page_item menu-item-1" style="margin-right: -4px; margin-left: -4px;">
+<a href="/">Home</a>
+</li>
+<li id="menu-item-2" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2" style="margin-right: -4px; margin-left: -4px;">
+<a href="/SearchContents.shtml">Search</a>
+<ul class="sub-menu">
+<li id="menu-item-3" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3">
+<a href="/cgi-bin/compute/blast_clade.pl">BLAST</a>
+</li>
+<li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4">
+<a href="/cgi-bin/GO/goTermFinder">GO Term Finder</a>
+</li>
+<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5">
+<a href="/cgi-bin/GO/goTermMapper">GO Slim Mapper</a>
+</li>
+<li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6">
+<a href="/SearchContents.shtml">Text Search</a>
+</li>
+<li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
+<a href="/cgi-bin/compute/web-primer">Primers </a>
+</li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8">
+<a href="/cgi-bin/PATMATCH/nph-patmatch">PatMatch</a>
+</li>
+<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9">
+<a href="/cgi-bin/search/featureSearch">Advanced Search</a>
+</li>
+</ul>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10" style="margin-right: -4px; margin-left: -4px;">
+<a href=" /GBrowseContents.shtml">GBrowse</a>
+<ul class="sub-menu">
+<li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
+<a href="/cgi-bin/gbrowse2/gbrowse/candida_22/?ref=Ca22chrRA_C_albicans_SC5314;start=1729234;stop=1794843;label=All-SNP-DNA-Translation;width=800;keystyle=between;grid=on"><i>C. albicans</i></a>
+</li>
+<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12">
+<a href="/cgi-bin/gbrowse2/gbrowse/cauris_b8441/?name=PEKT02000008_C_auris_B8441:785301..787300"><i>C. auris</i></a>
+</li>
+<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13">
+<a href="/cgi-bin/gbrowse2/gbrowse/cdub_cd36/?name=Chr4_C_dubliniensis_CD36:143191..163190"><i>C. dubliniensis</i></a>
+</li>
+<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14">
+<a href="/cgi-bin/gbrowse2/gbrowse/cglab_cbs138/?name=ChrM_C_glabrata_CBS138:193616..218115"><i>C. glabrata</i></a>
+</li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15">
+<a href="/cgi-bin/gbrowse2/gbrowse/cpar_cdc317/?name=Contig005569_C_parapsilosis_CDC317:1431..21907"><i>C. parapsilosis</i></a>
+</li>
+</ul>
+<li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16" style="margin-right: -4px; margin-left: -4px;">
+<a href=" /JBrowseContents.shtml">JBrowse</a>
+<ul class="sub-menu">
+<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17">
+<a href="/jbrowse/index.html?data=cgd_data%2FC_albicans_SC5314&loc=Ca22chr1A_C_albicans_SC5314%3A120521..134790&tracks=DNA%2CTranscribed%20Features%2Csegal_hapA_transposon_hits%2Csegal_hapA_transposon_reads%2ChapA_alb_dub_phyloP_scores%2ChapA_CanLod_phyloP_scores%2ChapA_CTG_phyloP_scores%2ChapA_Sacc_phyloP_scores%2Cbruno_nOxi_hapA_coverage"><i>C. albicans</i></a>
+</li>
+<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18">
+<a href="/jbrowse/index.html?data=cgd_data%2FC_auris_B8441&loc=PEKT02000010_C_auris_B8441%3A118601..133000&tracks=DNA%2CTranscribed%20Features%2Cauris_phyloP_scores%2CAurLus_phyloP_scores%2CCTG_phyloP_scores%2CSacc_phyloP_scores"><i>C. auris</i></a>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19">
+<a href="/jbrowse/index.html?data=cgd_data%2FC_dubliniensis_CD36&loc=Chr1_C_dubliniensis_CD36%3A131101..145480&tracks=DNA%2CTranscribed%20Features%2Calb_dub_phyloP_scores%2CCanLod_phyloP_scores%2CCTG_phyloP_scores%2CSacc_phyloP_scores"><i>C. dubliniensis</i></a>
+</li>
+<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20">
+<a href="/jbrowse/index.html?data=cgd_data%2FC_glabrata_CBS138&loc=ChrL_C_glabrata_CBS138%3A1176131..1190400&tracks=DNA%2CTranscribed%20Features%2Cglab_phyloP_scores%2CCanNak_phyloP_scores%2CWGD_phyloP_scores%2CSacc_phyloP_scores%2Clinde_ypd_1_coverage"><i>C. glabrata</i></a>
+</li>
+<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21">
+<a href="/jbrowse/index.html?data=cgd_data%2FC_parapsilosis_CDC317&loc=Contig005569_C_parapsilosis_CDC317%3A2164961..2179340&tracks=DNA%2CTranscribed%20Features%2Cpara_phyloP_scores%2CCanLod_phyloP_scores%2CCTG_phyloP_scores%2CSacc_phyloP_scores%2Cholland_wt_plnk_1_coverage"><i>C. parapsilosis</i></a>
+</li>
+</ul>
+<li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22" style="margin-right: -4px; margin-left: -4px;">
+<a href="/SequenceContents.shtml">Sequence</a>
+<ul class="sub-menu">
+<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23">
+<a href="/cgi-bin/seqTools">Gene/Seq Resources</a>
+</li>
+<li id="menu-item-24" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24">
+<a href="/cgi-bin/PATMATCH/nph-patmatch">PatMatch</a>
+</li>
+<li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25">
+<a href="/cgi-bin/compute/web-primer">Primers</a>
+</li>
+<li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26">
+<a href="/cgi-bin/genomeVersionHistory.pl">Genome Versions</a>
+</li>
+<li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27">
+<a href="/cgi-bin/chromosomeHistory.pl">Chromosome History</a>
+</li>
+<li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28">
+<a href="/download/sequence/">Download Sequence</a>
+</li>
+</ul>
+<li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29" style="margin-right: -4px; margin-left: -4px;">
+<a href="/GOContents.shtml">GO</a>
+<ul class="sub-menu">
+<li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30">
+<a href="http://www.geneontology.org/page/ontology-documentation">What is GO?</a>
+</li>
+<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31">
+<a href="/cgi-bin/GO/goTermMapper">GO Slim Mapper</a>
+</li>
+<li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32">
+<a href="/cgi-bin/GO/goTermFinder">GO Term Finder</a>
+</li>
+<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33">
+<a href="http://www.geneontology.org/">GO Consortium</a>
+</li>
+<li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34">
+<a href="/download/go/">GO File Downloads</a>
+</li>
+</ul>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35" style="margin-right: -4px; margin-left: -4px;">
+<a href="/ToolContents.shtml">Tools</a>
+<ul class="sub-menu">
+<li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36">
+<a href="/cgi-bin/batchDownload">Batch Download</a>
+</li>
+<li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37">
+<a href="http://pathway.candidagenome.org/">Pathways</a>
+</li>
+<li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38">
+<a href="/cache/PhenotypeTree.html">Phenotypes</a>
+</li>
+<li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39">
+<a href="/cgi-bin/compute/blast_clade.pl">BLAST</a>
+</li>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40">
+<a href="/cache/C_albicans_SC5314_genomeSnapshot.html"><i>C. albicans</i> Genome Snapshot</a>
+</li>
+<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41">
+<a href="/cache/C_auris_B8441_genomeSnapshot.html"><i>C. auris</i> Genome Snapshot</a>
+</li>
+<li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42">
+<a href="/cache/C_dubliniensis_CD36_genomeSnapshot.html"><i>C. dubliniensis</i> Genome Snapshot</a>
+</li>
+<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43">
+<a href="/cache/C_glabrata_CBS138_genomeSnapshot.html"><i>C. glabrata</i> Genome Snapshot</a>
+</li>
+<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44">
+<a href="/cache/C_parapsilosis_CDC317_genomeSnapshot.html"><i>C. parapsilosis</i> Genome Snapshot</a>
+</li>
+</ul>
+<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45" style="margin-right: -4px; margin-left: -4px;">
+<a href="/LiteratureContents.shtml">Literature</a>
+<ul class="sub-menu">
+<li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46">
+<a href="http://textpresso.candidagenome.org/cgi-bin/textpresso/search">Full-text Search (Textpresso)</a>
+</li>
+<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47">
+<a href="/TopicBiblios.shtml">Highlighted Topics</a>
+</li>
+<li id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48">
+<a href="/Strains.shtml">Laboratory Strains and Lineage</a>
+</li>
+</ul>
+<li id="menu-item-49" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49" style="margin-right: -4px; margin-left: -4px;">
+<a href="/DownloadContents.shtml">Download</a>
+<ul class="sub-menu">
+<li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50">
+<a href="/cgi-bin/batchDownload">Batch Download</a>
+</li>
+<li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51">
+<a href="/download/go/">GO Annotations</a>
+</li>
+<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52">
+<a href="/download/chromosomal_feature_files/">Chromosomal Features</a>
+</li>
+<li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-53">
+<a href="/download/sequence/">Sequence</a>
+</li>
+<li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54">
+<a href="/cgi-bin/reference/refsWithData.pl">Datasets</a>
+</li>
+<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55">
+<a href="/download/">Browse Downloads</a>
+</li>
+</ul>
+<li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56" style="margin-right: -4px; margin-left: -4px;">
+<a href="/ComContents.shtml">Community</a>
+<ul class="sub-menu">
+<li id="menu-item-57" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57">
+<a href="/cgi-bin/colleague/colleagueInfoSearch">Search CGD colleagues</a>
+</li>
+<li id="menu-item-58" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58">
+<a href="/cache/Labs.html">Find <i>Candida</i> labs</a>
+</li>
+<li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59">
+<a href="/cgi-bin/colleague/colleagueSearch">Colleague Update</a>
+</li>
+<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60">
+<a href="/CommunityNews.shtml">Community News</a>
+</li>
+<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61">
+<a href="/JobPostings.shtml">Job Opportunities</a>
+</li>
+<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62">
+<a href="/Meetings.shtml">Meetings & Courses</a>
+</li>
+<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63">
+<a href="/Nomenclature.shtml">Nomenclature Guide</a>
+</li>
+<li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64">
+<a href="/ExternalResources.shtml">External Resources</a>
+</li>
+<li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65">
+<a href="/cgi-bin/registry/geneRegistry">Gene Registry</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div><br>
+
+    </TD>
+  </TR>
+  <TR valign="bottom">
+    <TD   bgcolor="#cccccc">
+      <table>
+	<tr>
+	  <td>
+	    <img id=imgseq src="/images/Wells.jpg" border=0, align=left,
+		 valign="middle">
+	    <script language="JavaScript">
+var ndx = 0;
+
+function displayImg( )
+{
+    var images = new Array( );
+
+    images[ 1 ] = "/images/Morschauser.jpg";
+    images[ 2 ] = "/images/Anaphase.jpg";
+    images[ 3 ] = "/images/Colony.jpg";
+    images[ 4 ] = "/images/GFPDAPI.jpg";
+    images[ 5 ] = "/images/thigmotropism.jpg";
+    images[ 6 ] = "/images/Wells.jpg";
+    images[ 7 ] = "/images/Hube5.jpg";
+
+    ndx = ndx + 1;
+    if ( ndx < 1 || ndx >= images.length ) {
+        ndx = 1;
+    }
+    document.getElementById( "imgseq" ).src = images[ ndx ];
+    setTimeout( displayImg, 5000 );
+}
+setTimeout( displayImg, 5000 );
+	    </script>
+	  </td>
+	</tr>
+	<tr>
+	  <TD width="400" valign="top" bgcolor="#cccccc">
+<!--Nested table for left hand content page information-->
+
+<table border="0" cellpadding="0" cellspacing="2" width="100%">
+  <tr>
+    <td >
+      <h2>About CGD</h2>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="font-size: 14px;">
+<p>
+This is the home of the <i>Candida</i> Genome Database, a resource for
+genomic sequence data and gene and protein information for <i>Candida
+	  albicans</i> and related species. CGD is based on
+the <a href="http://genome-www.stanford.edu/Saccharomyces/"><i>Saccharomyces</i>
+	  Genome Database</a> and is funded by
+the <a href="http://www.nidcr.nih.gov/">National Institute of Dental &
+	  Craniofacial Research</a> at
+the <a href="http://www.nih.gov/">US National Institutes of
+	  Health</a>.
+
+    </TD>
+  </TR>
+<tr><td>
+<h2>Meetings & Courses</h2>
+        </td></tr>
+<tr>
+  <td style="font-size: 14px;">
+    <table>
+      <tr>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="font-size: 14px;">
+    <ul>
+	
+
+
+<li>
+	<a href="https://microbiologysociety.org/event/society-events-and-meetings/candida-and-candidiasis-2020.html">Candida and Candidiasis 2020</a> <br>
+	<font size=-1>Montreal, Canada<br>
+	April 19 - 23, 2020<br> 
+	The meeting has been postponed until further notice.</font><br><br>
+</li>
+
+<li>
+	<a href="https://genetics-gsa.org/tagc-2020/">TAGC 2020 - The Allied Genetics Conference</a> <br>
+	<font size=-1>Metro Washington D.C., USA<br>
+	April 22 - 26, 2020<br>
+	The meeting has been cancelled.</font><br><br>
+</li>
+
+<li>
+<a href="https://coursesandconferences.wellcomegenomecampus.org/our-events/fungal-pathogen-genomics-2020/">Fungal Pathogen Genomics Course</a><br>
+	<font size=-1>Wellcome Genome Campus, Hinxton, United Kingdom<br>
+	May 11 - 16, 2020; Applications due by February 27, 2020<br>
+	The course has been postponed until further notice.</font><br><br>
+</li>
+
+<li>
+<a href="https://www.embo-embl-symposia.org/symposia/2020/EES20-06/index.html">Innate Immunity in Host-Pathogen Interactions</a> <br>
+	<font size=-1>EMBL Heidelberg, Germany<br>
+	28 June - 1 July 2020. Abstract submission deadline: April 6, 2020. 
+	See the poster <a href="https://mailchi.mp/embl.de/ees20-06_announcement?e=23b55e3ab0">here</a></font><br><br>
+</li>
+
+<li>
+<a href="https://www.mbl.edu/education/courses/molecular-mycology/">Molecular Mycology Course: Current Approaches to Fungal Pathogenesis</a> <br>
+	<font size=-1>Marine Biological Laboratory, Woods Hole, Massachusetts, USA<br>
+	July 17 - August 2, 2020. Application deadline: March 30, 2020. 
+</li>
+
+
+</ul>
+</td>
+</tr>
+</table>
+</td></tr>
+
+</table>
+
+
+	  </TD>
+	</tr>
+      </table>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <TD >
+
+<!--Nested table for news information-->
+
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+    <tr> <td> <h1>New and Noteworthy</h1> </Td> </tr> <tr> <td> <hr height="1px" width="100%"> </td> </tr>
+
+<!-- downtime message, commented out.  Modify and un-comment as necessary-->
+
+<!--
+
+<tr> <th align="left"> <h2 style="color:red;">Server maintenance tomorrow morning</h2> </th> </tr> <tr>
+<td> <blockquote>
+
+The server hosting CGD will need to go offline for maintenance around 10 AM (Pacific time, 5 PM GMT) tomorrow, April 28. The downtime should last about an hour. We apologize for the inconvenience.
+
+(Posted April 27, 2016) </blockquote> </td> </tr>
+
+
+-->
+
+
+<!-- first item here @@ here's an example-->
+
+<!--
+
+
+
+<tr> <th align="left"> <hr> <h2> Title of the item </h2> </th> </tr>
+
+
+<tr> <td> <blockquote>
+
+text of item here
+
+(Posted DATE, 2014) </blockquote> </td> </tr>
+
+-->
+<tr> <th align="left"> <hr> <h2> Candida and Candidiasis 2020 Conference postponed </h2> </th> </tr>
+
+
+<tr> <td> <blockquote>
+
+From the Microbiology Society:
+<p>"Due to the continued spread of SARS-CoV-2, the cause of COVID-19, the Council of the Microbiology Society, as Trustees of the Society, have taken the difficult decision to postpone this year’s Candida and Candidiasis Focused Meeting, due to take place from 19–23 April in Montreal, Canada. We are currently unable to say when this event will take place; however, we have spoken this morning to the Chair of the organising committee and will keep you all updated as we know more."
+<p>The entire message is available <a href="https://comms.microbiologysociety.org/5AF8-67RV-672X3MWOCD/cr.aspx">here</a>.
+
+(Posted March 9, 2020) </blockquote> </td> </tr>
+
+
+<!-- This is the beginning of the Curation News section.  This item should always be the second news item from the top of the page, and it needs to be
+repositioned in the list each time a new item is added. -->
+
+
+<tr> <th align="left"> <hr> <h2>CGD Curation News</h2> </th> </tr>
+
+<tr> <td> <blockquote>
+
+<ul> <li><a href="/cache/C_albicans_SC5314_genomeSnapshot.html" target="Genome snapshot"><i>C. albicans</i> Genome Snapshot</A>.</li>
+
+<li><a href="/cache/C_glabrata_CBS138_genomeSnapshot.html" target="Genome snapshot"><i>C. glabrata</i> Genome Snapshot</A>.</li>
+
+<li><a href="/cache/C_parapsilosis_CDC317_genomeSnapshot.html" target="Genome snapshot"><i>C. parapsilosis</i> Genome Snapshot</A>.</li>
+
+<li><a href="/cache/C_dubliniensis_CD36_genomeSnapshot.html" target="Genome snapshot"><i>C. dubliniensis</i> Genome Snapshot</A>.</li>
+
+<li><a href="/cache/C_auris_B8441_genomeSnapshot.html" target="Genome snapshot"><i>C. auris</i> Genome Snapshot</A>.</li>
+
+<li><a href="/cache/NewPapersThisWeek.html" target="New papers">New papers</a> added to CGD this week.</li>
+
+<li>View <a href="/cache/genome-wide-analysis.html" target="Genome-wide Analysis Papers">Genome-wide Analysis papers</a> in CGD.</li> </ul>
+
+</blockquote> </td> </tr>
+
+<!-- This is the end of the Curation News section -->
+
+
+<tr> <th align="left"> <hr> <h2> Candida and Candidiasis 2020 Conference - abstracts due soon</h2> </th> </tr>
+
+
+<tr> <td> <blockquote>
+
+The conference, organized by the Microbiology Society and taking place on April 19-23, 2020, in Montreal, Canada, is a successor to the highly valued ASM conference series that finished in 2018. <b>The abstract submission deadline is on this Thursday, January 9</b>. Visit the  <a href="https://microbiologysociety.org/event/society-events-and-meetings/candida-and-candidiasis-2020.html">conference website</a> to register, submit your abstract and for more information.
+
+(Posted January 6, 2020) </blockquote> </td> </tr>
+
+
+<tr>
+    <th align="left">
+        <hr>
+        <h2><i style="font-size:18px">Candida auris</i> Data in CGD</h2>
+    </th>	
+</tr>
+<tr>
+    <td>
+        <blockquote>
+
+            We are pleased to announce the addition of
+            <i>Candida auris</i> B8441 information into
+            CGD.
+
+            <i>C. auris</i> B8441 was sequenced by the Centers for Disease Control
+            and Prevention (<a href = "cgi-bin/reference/reference.pl?pubmed=27988485">Lockhart et al. 2017</a>).
+            Sequence and annotation were obtained by CGD from
+            <a target="_blank" href = "https://www.ncbi.nlm.nih.gov/assembly/GCA_002759435.2">GenBank</a>.
+
+            <i>C. auris</i> is the fifth <i>Candida</i> species
+            for which manually curated data are available in our database, joining
+            <i>C. albicans</i>, <i>C. glabrata</i>, <i>C. parapsilosis</i>, and
+            <i>C. dubliniensis</i>.
+            
+            <p>
+            The data loading is complete, and:
+
+            <ul>
+                <li><i>C. auris</i> B8441 sequence is now available in all
+                of the CGD tools, including <a href = "cgi-bin/compute/blast_clade.pl">BLAST</a></li>
+
+                <li>Each <i>C. auris</i> gene now has a <a href = "cgi-bin/locus.pl?locus=B9J08_002834">Locus Summary page</a>
+                in the database</li>
+
+                <li>Multiple sequence alignments and phylogenetic trees for 
+                <a href = "cgi-bin/homologPage.pl?locus=B9J08_002834">orthologous groups</a>
+                have been updated to include <i>C. auris</i> orthologs
+
+                <li><i>C. auris</i>  genome and annotation is available in the
+                <a href="/cgi-bin/gbrowse2/gbrowse/cauris_b8441/?name=PEKT02000008_C_auris_B8441:785301..787300">
+                    GBrowse</a> and
+                <a href="/jbrowse/index.html?data=cgd_data%2FC_auris_B8441&loc=PEKT02000010_C_auris_B8441%3A118601..133000&tracks=DNA%2CTranscribed%20Features">
+                    JBrowse</a> Genome Browsers.  In the coming months, we
+                hope to add large-scale datasets to JBrowse, as they become available</li>
+
+                <li><i>C. auris</i> genes have been assigned predicted function, process, and localization
+                annotations (Gene Ontology terms) based on orthology to other <i>Candida</i> species,
+                and also <i>S. cerevisiae</i>, <i>S. pombe</i>, and <i>A. nidulans</i>
+
+                <li>Protein-coding genes have been assigned predicted annotations based
+                on protein motifs and domains (InterPro), and solved strutures
+                of homologous proteins from PDB have been identified</li>
+
+                <li>Manual curation of the published scientific literature about <i>C. auris</i> genes is ongoing,
+                and experimental data collected from the literature will continue to be added</li>
+            </ul>
+
+            We look forward to <a href="/cgi-bin/suggestion">your feedback</a> on the new <i>C. auris</i> species data in
+            CGD.  (Posted August 27, 2019)
+        </blockquote>
+    </td>
+</tr>
+
+
+<tr> <th align="left"> <hr> <h2> CGD Grant Renewal - letters of support</h2> </th> </tr>
+
+
+<tr> <td> <blockquote>
+
+As you know, the CGD grant is up for renewal this year and we are going to submit an application to the NIH this summer. We have previously asked members of the community to complete a User Survey to help us formulate future directions for CGD and we greatly appreciate the massive response we have received, with all the invaluable suggestions. We are now asking our users for letters of support to accompany the application. It is very important to demonstrate unequivocally how crucial the continued existence of CGD is to <i>Candida</i> research and to the community. We will greatly appreciate if you can email your letter of support to <script type="text/javascript">obfuscate("lists.stanford.edu","candida-curator","")</script> by <b style="color:red;">June 25</b> and if you also encourage your colleagues and students to do the same. We are counting on your support.<br>
+
+(Posted May 22, 2019) </blockquote> </td> </tr>
+
+
+<tr> <th align="left"> <hr> <h2> Issue with contacting CGD</h2> </th> </tr>
+
+
+<tr> <td> <blockquote>
+
+It was brought to our attention that our CGD Suggestions and Questions form, the one with the reCAPTCHA box, was not working properly. There may have been messages that were inadvertently lost. If you recently tried to contact CGD and never received a response, it is most likely because we have not seen your message. We sincerely apologize for this. The problem is now fixed and we also implemented measures to alert us to this kind of issues in the future.<br>
+
+(Posted February 4, 2019) </blockquote> </td> </tr>
+
+<tr>
+    <th align="left">
+        <hr>
+        <h2>
+            <i>Candida glabrata</i> MLST database accepting submissions
+        </h2>
+    </th>	
+</tr>
+<tr>
+    <td>
+        <blockquote>
+            <i>Candida glabrata</i> Multi Locus Sequence Typing (MLST) database at <a href="http://pubmlst.org/">PubMLST.org</a> is accepting submissions again.
+As of August 2018, the <i>C. glabrata</i> MLST database hosted at <a href="http://pubmlst.org/">pubmlst.org</a> has re-opened its submission pipeline.
+They welcome submissions of new alleles and sequence types as well as isolate data from ongoing or published studies.
+Also the submission of genome data is possible to place them into the phylogenetic context of the current MLST scheme. 
+<p>Please visit <a href="http://pubmlst.org/cglabrata/">pubmlst.org/cglabrata</a> for more information.
+            <br>(Posted August 27, 2018)
+        </blockquote>
+    </td>
+</tr>
+
+<tr>
+    <th align="left">
+        <hr>
+        <h2>
+            <i>C. lusitaniae</i> strain CBS 6936 sequence and BLAST datasets now available at CGD
+        </h2>
+    </th>	
+</tr>
+<tr>
+    <td>
+        <blockquote>
+            The sequence and annotation of <i>C. lusitaniae</i> strain CBS 6936, described in
+            <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/28774979">Durrens <i>et al.</i> (2017)</a>,
+            has been made available at CGD.
+            We provide downloads for 
+            <a href="http://www.candidagenome.org/download/sequence/C_lusitaniae_CBS6936/current/">sequences</a>,
+            <a href="http://www.candidagenome.org/download/chromosomal_feature_files/C_lusitaniae_CBS6936/">chromosomal features</a>,
+            <a href="http://www.candidagenome.org/download/gff/C_lusitaniae_CBS6936/">gff files</a>
+            and
+            <a href="http://www.candidagenome.org/download/domains/C_lusitaniae_CBS6936/">protein domain predictions</a>.
+            In addition, <i>C. lusitaniae</i> CBS 6936 is included among the datasets searchable 
+            by our
+            <a href="http://www.candidagenome.org/cgi-bin/compute/blast_clade.pl">multi-species BLAST tool</a>.
+            The sequence and annotation were obtained by CGD from 
+            <a target="_blank" href="https://www.ncbi.nlm.nih.gov/bioproject?LinkName=nuccore_bioproject&from_uid=
+                1202152231">NCBI</a>.
+            <br>(Posted February 27, 2018)
+        </blockquote>
+    </td>
+</tr>
+
+<tr> <th align="left"> <hr> <h2>
+            JBrowse Conservation Tracks
+</h2> </th> </tr>
+
+<tr> <td> <blockquote>
+
+            CGD has added tracks in JBrowse showing the evolutionary conservation of genomic features for
+            <a href="/jbrowse/index.html?data=cgd_data%2FC_albicans_SC5314&loc=Ca22chr1A_C_albicans_SC5314%3A120521..134790&tracks=DNA%2CTranscribed%20Features%2ChapA_alb_dub_phyloP_scores%2ChapA_CanLod_phyloP_scores%2ChapA_CTG_phyloP_scores%2ChapA_Sacc_phyloP_scores%2Cbruno_nOxi_hapA_coverage">
+                <i>C. albicans</i> SC5314</a>, 
+            <a href="/jbrowse/index.html?data=cgd_data%2FC_glabrata_CBS138&loc=ChrL_C_glabrata_CBS138%3A1176131..1190400&tracks=DNA%2CTranscribed%20Features%2Cglab_phyloP_scores%2CCanNak_phyloP_scores%2CWGD_phyloP_scores%2CSacc_phyloP_scores%2Clinde_ypd_1_coverage">
+                <i>C. glabrata</i> CBS138</a>, 
+            <a href="/jbrowse/index.html?data=cgd_data%2FC_dubliniensis_CD36&loc=Chr1_C_dubliniensis_CD36%3A131101..145480&tracks=DNA%2CTranscribed%20Features%2Calb_dub_phyloP_scores%2CCanLod_phyloP_scores%2CCTG_phyloP_scores%2CSacc_phyloP_scores">
+                <i>C. dubliniensis</i> CD36</a>, 
+            and <a href="/jbrowse/index.html?data=cgd_data%2FC_parapsilosis_CDC317&loc=Contig005569_C_parapsilosis_CDC317%3A2164961..2179340&tracks=DNA%2CTranscribed%20Features%2Cpara_phyloP_scores%2CCanLod_phyloP_scores%2CCTG_phyloP_scores%2CSacc_phyloP_scores%2Cholland_wt_plnk_1_coverage">
+                <i>C. parapsilosis</i> CDC317</a>.
+            Conservation is shown in four optional quantitative tracks, representing increasing levels
+            of evolutionary diversity. 
+            In general, the top level (derived from an alignment of 3 closely related species)
+            will show the highest levels of conservation, and include intergenic regions, while the lowest level (derived from an
+            alignment of 12 distantly-related budding yeasts) will show the least conservation, and include only the most
+            highly-conserved genes and features. Conservation scores were produced with the
+            <a target="_blank" href="http://compgen.cshl.edu/phast/">phyloP program</a>
+            (<a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/16024819">Siepel et al, 2005</a>),
+            based on whole-genome alignments produced by the program <a target="_blank" href="http://www.bx.psu.edu/miller_lab/">TBA</a>
+            (<a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/15060014">Blanchette et al, 2004</a>).
+            <p>
+            Conservation scores and their underlying alignments and phylogenetic models are available for download
+            in the <a href="/download/genome_alignments/">CGD downloads directory</a>.
+            Please see our <a href="/help/JBrowse_help.shtml" target="help">JBrowse Help Page</a>
+            for more information about JBrowse at CGD.
+            <br>(Posted December 20, 2017)
+</blockquote></td></tr>
+
+
+<tr> <th align="left"> <hr> <h2>
+            Introducing JBrowse for CGD
+</h2> </th> </tr>
+
+<tr> <td> <blockquote>
+
+            CGD has implemented JBrowse, the fast, intuitive, and customizable
+            genome browser developed by the Generic Model Organism Database project
+            (<a target="_blank" href="http://gmod.org/wiki/Main_Page">GMOD</a>).
+            JBrowse allows users to quickly view large-scale sequence data in a
+            genomic context, at multiple zoom-levels of resolution, from base pairs
+            in individual sequence reads to read-density summaries across large
+            genomic regions. Initially, we have loaded the following datasets:
+            <ul>
+                <li>Gene expression in <i>C. albicans</i> in a variety of experimental conditions
+                from <a href="/cgi-bin/reference/reference.pl?dbid=CAL0126206" target="Bruno">Bruno et al, 2010</a>
+                <li>Gene expression in <i>C. glabrata</i> in a variety of experimental conditions
+                from <a href="/cgi-bin/reference/reference.pl?dbid=CAL0000202204" target="Linde">Linde, Duggan et al, 2015</a>
+                <li>High-throughput genomic sequence of <i>C. albicans</i> SC5314
+                from <a href="/cgi-bin/reference/reference.pl?dbid=CAL0000172913" target="Muzzey">Muzzey et al, 2013</a>,
+                that was the basis of Assembly 22
+            </ul>
+            We will be adding additional high-throughput datasets in the coming months.
+            <p>
+            JBrowse can be launched from any CGD feature's Locus Summary Page by clicking on the
+            JBrowse logo about halfway down the page:
+            <br>
+            <img src="/images/JBrowseLogo_gmod.PNG">
+            <br>
+            The JBrowse window will be centered upon that feature.
+            <p>
+            Alternately, mouse-over "JBrowse" on the top menu bar of any CGD page, then select and click your
+            organism of interest in the drop-down menu. The browser window will be centered on an arbitrary location
+            of the genome.
+            <p>Please see our <a href="/help/JBrowse_help.shtml" target="help">JBrowse Help Page</a>
+            for more details.
+
+            <br>(Posted September 29, 2016)
+</blockquote></td></tr>
+
+<tr> <th align="left"> <hr> <h2>
+            Correction of chromosome 3 haplotype information for <i>C. albicans</i> SC5314 Assembly 22
+</h2> </th> </tr>
+
+<tr> <td> <blockquote>
+            We have corrected the haplotype assignments on chromosome 3 of <i>C. albicans</i> SC5314,
+            based on comparisons of haplotype data
+            (<a href="/cgi-bin/reference/reference.pl?dbid=CAL0119040" target="Legrand">Legrand et al, 2008</a>;
+            <a href="/cgi-bin/reference/reference.pl?dbid=CAL0000213060" target="Berman">Berman and Forche, 2016</a>)
+            with sequence data
+            (<a href="/cgi-bin/reference/reference.pl?dbid=CAL0000172913" target="Muzzey">Muzzey et al, 2013</a>)
+            for both the wild-type diploid strain and the strain RBY10-10, which is homozygous for chromosome 3A. This
+            analysis supported the exchange of approximately 845 kbp between chromosome 3A and chromosome 3B of Assembly 22
+            at CGD, including the entire left arm of the chromosome, and a portion of the right arm extending from
+            <a href="/cgi-bin/locus.pl?dbid=CAL0000194177" target="CEN3"><i>CEN3</i></a>
+            to within the coding sequence of the gene
+            <a href="/cgi-bin/locus.pl?dbid=CAL0000182342" target="C3_04040W">C3_04040W</a> (orf19.2804).
+            This results in sequence and gene model boundary changes for most chromosome 3 features.
+
+(Posted June 22, 2016) </blockquote> </td> </tr>
+
+<tr> <th align="left"> <hr> <h2>
+            EnsemblFungi gene annotations for <i>Candida</i> strains not curated by CGD
+</h2> </th> </tr>
+
+<tr> <td> <blockquote>
+            We now provide links on
+            <a href="/cgi-bin/homologPage.pl?dbid=CAL0000186708&seq_source=C.%20albicans%20SC5314%20Assembly%2022" target="Homology">CGD Homology Pages</a>
+            and <a href="/cgi-bin/compute/blast_clade.pl" target="BLAST">CGD Multi-Genome BLAST</a> results pages
+            to gene annotations from <a href="http://fungi.ensembl.org/index.html" target="Ensembl">EnsemblFungi</a>
+            for the seven <i>Candida</i>-related strains for which we provide <a href="/download/sequence/" target="Sequence">sequence</a>
+            and <a href="/download/gff/" target="GFF">gene model</a> downloads,
+            but do not actively curate: <i>C. albicans</i> WO-1, <i>C. guilliermondii</i> ATCC 6260, <i>C. lusitaniae</i> ATCC 42720,
+            <i>C. orthopsilosis</i> Co 90-125, <i>C. tropicalis</i> MYA-3404, <i>D. hansenii</i> CBS767 and <i>L. elongisporus</i> NRLL YB-4239.
+            These replace the links to annotations formerly provided by the
+            <a href="https://www.broadinstitute.org/scientific-community/science/projects/fungal-genome-initiative/fungal-genomics" target="Broad">
+                Broad Institute Fungal Genome Initiative</a>, which are no longer supported. 
+
+(Posted June 6, 2016) </blockquote> </td> </tr>
+
+
+<tr> <th align="left"> <hr> <h2>
+            Major update of the <i>C. albicans</i> genome sequence at CGD
+</h2> </th> </tr>
+
+<tr> <td> <blockquote>
+            We have released a major sequence update for <i>C. albicans</i> SC5314 (Assembly 22, version s06-m01-r01).
+            Based on reanalysis by CGD of all available sequence data, the update affects more than 300 features,
+            correcting many ORF translation errors and resolving many sequence ambiguities.
+            The specific sequence changes can be viewed on our
+            <a href="http://www.candidagenome.org/cgi-bin/chromosomeHistory.pl">Chromosome History pages</a>.
+
+(Posted February 2, 2016) </blockquote> </td> </tr>
+
+
+
+
+<!-- Do Not Remove --> <tr> <th align="left"> <hr> <h2>Archived News</h2> </th> </tr> <tr> <td> <blockquote> Click <a
+href="/news_archive.shtml">here</a> to view archived news items. </blockquote> <br> </td> </tr>
+
+</table>
+
+
+
+
+    </td>
+  </tr>
+
+  <table class="main"><tr><td><div id="copyright"><b>CGD Copyright &copy; 2004-2020 The Board of Trustees, Leland Stanford Junior University.</b><br>Permission to use the information contained in this database was given by the researchers/institutes who contributed or published the information. Users of the database are solely responsible for compliance with any copyright restrictions, including those applying to the author abstracts. Documents from this server are provided "AS-IS" without any warranty, expressed or implied.<br><font color = "red" style="font-size:11px;">  To cite CGD</font>, please use the  following <a href="http://nar.oxfordjournals.org/content/early/2016/10/12/nar.gkw924.full.pdf?keytype=ref&ijkey=KvLgMMqJNzzChOv"><b><font style="font-size:11px">reference</font></b></a>: Skrzypek MS, Binkley J, Binkley G, Miyasato SR, Simison M, Sherlock G (2017). The Candida Genome Database (CGD): incorporation of Assembly 22, systematic identifiers and visualization of high throughput sequencing data. <i><font style="font-size:11px;">Nucleic Acids Res</font></i> <b>45</b> (D1); D592-D596; see <a href="/HowToCite.shtml" style="font-size:11px;">How to cite CGD.</a></div></td></tr></table>
+
+</TABLE>
+</P>
+
+</BODY>
+</HTML>
+

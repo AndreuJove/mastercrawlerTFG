@@ -1,0 +1,13 @@
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: X-Requested-With, Content-Type, X-XSRF-TOKEN
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Expires: 0
+Accept-Ranges: bytes
+Etag: "5971-1576496266000"
+Date: Mon, 30 Mar 2020 18:38:07 GMT
+Last-Modified: Mon, 16 Dec 2019 11:37:46 GMT
+Content-Type: text/html; charset=UTF-8
+Set-Cookie: connect.sid=s%3AM0G7L7IBDwqFs3IJesfkAR6A.%2FvaG1WDO7Y%2BYIuc%2BYiTeN82NP0R7%2FowH2d09oJeSPiw; Path=/; HttpOnly

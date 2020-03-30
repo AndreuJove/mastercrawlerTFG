@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+    <html>
+        <head>
+            <title>BCBtoolkit</title>
+            <meta name="description" content="Brain Connectivity and Behaviour toolkit is a free software package based on open source libraries which aims to provide the scientific community with the tools to indirectly assess brain disconnections.">
+            <meta name="keywords" content="stroke, neurosurgery, brain damage, disconnection, disconnectome, connectome, connectomics, cortical thickness, ants, normalisation, enantiomorphic, resting state, connectivity">
+            <meta name="generator" content="ORT - Ovh Redirect Technology">
+            <meta name="url" content="http://www.bcblab.com/BCB/Software.html">
+            <meta name="robots" content="all">
+        </head>
+        <frameset rows="100%,0" frameborder=no border=0>
+            <frame name="ORT" src="http://www.bcblab.com/BCB/Software.html">
+            <frame name="NONE" src="" scrolling="no" noresize>
+            <noframes>
+                <body><a href="http://www.bcblab.com/BCB/Software.html">Click here</a><hr></body>
+            </noframes>
+        </frameset>
+    </html>

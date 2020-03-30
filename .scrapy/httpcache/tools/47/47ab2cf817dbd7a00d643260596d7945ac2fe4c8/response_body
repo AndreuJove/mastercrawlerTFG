@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>Comprehensive software suite for the analysis of cDNAs</title>
+
+<link rel="stylesheet" type="text/css" href="haruhi.css">
+
+
+
+<style type="text/css">
+   td{
+     white-space:normal;
+   }  
+   a{
+     text-decoration:none;
+   }
+
+.horiznav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #223;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.horiznav li {
+  display: inline;
+}
+
+.horiznav li a {
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: #223;
+  color: #CCC;
+}
+
+.horiznav li a:hover{
+  color: white;
+  background-color: #556;
+}
+</style>
+
+
+
+
+
+
+
+</head>
+
+<body bgcolor="white" text="black" 
+marginheight="0" marginwidth="0" leftmargin="0" topmargin="0">
+
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+<tr><td bgcolor="#0e0e0e" align=left>
+<img src="cdna.png" border=0></td></tr></table>
+
+<!-- css menu -->
+<ul class="horiznav">
+<div align=left style=font-size:10pt>
+  <li><a href="/data/marray/">Top</a>
+  <li><a href="http://www.iab.keio.ac.jp/index.html.en">Institute for Advanced Biosciences</a></li>
+  <li><a href="http://www.g-language.org/">G-language Project</a></li>
+  <li><a href="http://www.g-language.org/data/cdna/cdna.tgz">Download Software</a></li>
+</div>
+</ul>
+
+
+
+
+<!-- body starts -->
+<BR><BR>
+<blockquote>
+
+<span class="info">Introduction</span>
+<BR><BR>
+<div class="deschelp">
+Here we present a comprehensive software suite for sequence-based bioinformatics 
+analysis of annotated cDNAs, including tools for the detection of translation 
+initiation and termination signals, statistical analysis of codon usage, comparative 
+study of amino acid composition, comparative structure modeling of the product 
+protein structure, identification of alternative splice forms, and comparative 
+systems biology by metabolic pathway reconstruction. Therefore, the analyses 
+implemented in the software system covers the levels of nucleotide sequence, codons, 
+mRNA variants, amino acid sequence, protein structure, and metabolic pathway. 
+Although the target unit is the cDNA, the system can be used for a variety of 
+other data sets including EST, GSS, and complete genome data.
+
+</div>
+<BR><BR><BR>
+
+
+
+         <a href="cdna.tgz" title="Click here to download." class="help">
+         Software (Click here to download)
+         <img src="pict/arrow.png" width=13 border=0>
+         </a>
+<BR><BR>
+<div class="deschelp">
+<a href="README.txt">--- Click here for README file of the software. ---</a><BR>
+The software is open source and freely available under the GNU General Public License version 2. Most software should work on the platforms where G-language Genome Analysis Environment works, and should work best on RedHat or Fedora Core Linux.
+
+</div>
+<BR><BR><BR>
+
+<span class="info">Additional data files</a></span>
+
+<div class="deschelp">
+The following additional data files are available for the manuscript. Additional data file 1 contains a complete listing of 126 parameters used for interpretation of PCA of codon usage, with correlation coefficients between the parameters and the first 4 principal components calculated with human cDNA data. Additional data file 2 is a sample output of the metabolic pathway comparison tool, for a query of glycolysis in E.coli against glycolysis pathways of all organisms in KEGG. Additional data file 3 contains the PWM, graphs of calculated indices, and sequence logo output results of the detection of translation initiation signals using mouse cDNA data. Additional data file 4 is the PDB format file of a structure modeled from the human FLJ00094 gene. Additional data file 5 is the raw output of the metabolic pathway comparison tool, from a query of reconstructed E. coli K12 pathways against the E. coli K12 database of KEGG.
+
+<li><a href="Additional_data_1.xls">Additional data file  1</a><BR>
+<li><a href="Additional_data_2.txt">Additional data file  2</a><BR>
+<li><a href="Additional_data_3.doc">Additional data file  3</a><BR>
+<li><a href="Additional_data_4.pdb">Additional data file  4</a><BR>
+<li><a href="Additional_data_5.txt">Additional data file  5</a><BR>
+</div>
+<BR><BR><BR>
+
+
+
+
+
+</blockquote>
+
+
+
+
+             <hr size=1>
+             <CENTER><i><font color="#707070">
+             (C) 2005 Institute for Advanced Biosciences, Keio University
+             </font></i></CENTER>
+
+             </BODY></HTML>

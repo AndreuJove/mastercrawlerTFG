@@ -1,0 +1,27 @@
+Date: Mon, 30 Mar 2020 18:45:49 GMT
+Content-Type: text/html; charset=utf-8
+Set-Cookie: __cfduid=dc88064829fecdfa2090ef5891a7b72091585593948; expires=Wed, 29-Apr-20 18:45:48 GMT; path=/; domain=.gitlab.com; HttpOnly; SameSite=Lax; Secure
+Set-Cookie: experimentation_subject_id=ImUyM2ZiOWJhLTI5MDYtNGE0ZC05NjU1LTQ5NmIwM2M1MjFmZSI%3D--354ed291924ee2129df0f5e4cb13ce515d835f7f; domain=.gitlab.com; path=/; expires=Fri, 30 Mar 2040 18:45:48 -0000; secure; HttpOnly
+Set-Cookie: event_filter=all; path=/
+Set-Cookie: _gitlab_session=0c352b9c937e5c25f4862c83515198af; path=/; expires=Mon, 30 Mar 2020 20:45:49 -0000; secure; HttpOnly
+Vary: Accept-Encoding
+Cache-Control: max-age=0, private, must-revalidate
+Content-Security-Policy: connect-src 'self' https://assets.gitlab-static.net https://gl-canary.freetls.fastly.net wss://gitlab.com https://sentry.gitlab.net https://customers.gitlab.com https://snowplow.trx.gitlab.net https://sourcegraph.com https://ec2.ap-east-1.amazonaws.com https://ec2.ap-northeast-1.amazonaws.com https://ec2.ap-northeast-2.amazonaws.com https://ec2.ap-northeast-3.amazonaws.com https://ec2.ap-south-1.amazonaws.com https://ec2.ap-southeast-1.amazonaws.com https://ec2.ap-southeast-2.amazonaws.com https://ec2.ca-central-1.amazonaws.com https://ec2.eu-central-1.amazonaws.com https://ec2.eu-north-1.amazonaws.com https://ec2.eu-west-1.amazonaws.com https://ec2.eu-west-2.amazonaws.com https://ec2.eu-west-3.amazonaws.com https://ec2.me-south-1.amazonaws.com https://ec2.sa-east-1.amazonaws.com https://ec2.us-east-1.amazonaws.com https://ec2.us-east-2.amazonaws.com https://ec2.us-west-1.amazonaws.com https://ec2.us-west-2.amazonaws.com https://iam.amazonaws.com; frame-ancestors 'self'; frame-src 'self' https://www.google.com/recaptcha/ https://www.recaptcha.net/ https://content.googleapis.com https://content-cloudresourcemanager.googleapis.com https://content-compute.googleapis.com https://content-cloudbilling.googleapis.com https://*.codesandbox.io; img-src * data: blob:; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://assets.gitlab-static.net https://gl-canary.freetls.fastly.net https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://www.recaptcha.net/ https://apis.google.com 'nonce-ZSeGNHmU8S256QtRpLoR0g=='; style-src 'self' 'unsafe-inline' https://assets.gitlab-static.net https://gl-canary.freetls.fastly.net; worker-src https://assets.gitlab-static.net https://gl-canary.freetls.fastly.net https://gitlab.com blob:
+Referrer-Policy: strict-origin-when-cross-origin
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: DENY
+X-Permitted-Cross-Domain-Policies: none
+X-Request-Id: 1TPwQAoxDD9
+X-Runtime: 0.438274
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000
+Gitlab-Lb: fe-14-lb-gprd
+Gitlab-Sv: web-01-sv-gprd
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 57c3fd643d7fc677-MAD
+Content-Encoding: gzip

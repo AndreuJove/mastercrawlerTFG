@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <title>1D protein structure prediction : Home Page </title>
+  <meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1' />
+  <meta http-equiv='Content-Language' content='en' />
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <meta http-equiv="imagetoolbar" content="no" />
+  <meta name='MSSmartTagsPreventParsing' content='true' />
+  <link rel='icon' href='https://www.bioinformatics.org/crnpred/wiki/pub/skins/bio/bioicon.png' type='image/png' />
+  <link rel='SHORTCUT ICON' href='https://www.bioinformatics.org/crnpred/wiki/pub/skins/bio/bioicon.png' />
+  <link rel='stylesheet' href='https://www.bioinformatics.org/crnpred/wiki/pub/skins/bio/bio.css' type='text/css' />
+  <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+    #mainsidebar { border-left:1px solid #cccccc; border-right:0px; } 
+  #sidebarbottom { display:none; } 
+  #headlogo { margin-top:4px; } 
+  #headbrowse { display:none; }
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <link rel='stylesheet' href='https://www.bioinformatics.org/crnpred/wiki/pub/skins/bio/bio2.css' type='text/css' /><link rel='alternate' title='1D protein structure prediction RSS Feed'
+      href='https://www.bioinformatics.org/crnpred/wiki/Main/AllRecentChanges?action=rss'
+      type='application/rss+xml' />
+  <link rel='alternate' title='1D protein structure prediction Atom Feed'
+      href='https://www.bioinformatics.org/crnpred/wiki/Main/AllRecentChanges?action=atom'
+      type='application/atom+xml' />
+    <meta name='robots' content='index,follow' />
+
+ </head>
+
+ <body>
+  <!--PageHeaderFmt-->
+  <table summary='Site Header' id='sitehead'
+   cellpadding='0' cellspacing='0' border='0' align='center'>
+   <tr>
+    <td id='headleft' title='1D protein structure prediction Home'>
+     <div id='headlogo'>1D protein structure prediction</div>
+    </td>
+    <td id='headright'>
+     <div id='headcmdsupper'>
+      <span class='headsearch'><a href='https://www.bioinformatics.org/crnpred/wiki/Site/Search'
+       title='Search the site' rel='nofollow'>Search</a>: </span><form
+       class='headsearch search' action='https://www.bioinformatics.org/crnpred/wiki'><input
+       class='searchbox' type='text' name='q' value='' size='40' /><input
+       class='searchbutton' type='submit' value='Go' /> 
+       <input type='hidden' name='n' value='Main.HomePage' />
+       <input type='hidden' name='action' value='search' />
+      </form></div>
+     <div id='headcmdslower'>
+      <span id='headbrowse'><a href='https://www.bioinformatics.org/crnpred/wiki/Main/HomePage'
+       title='Browse the page' rel='nofollow' accesskey='v'>View</a> |
+      </span><span id='headedit'><a href='https://www.bioinformatics.org/crnpred/wiki/Main/HomePage?action=edit'
+       title='Edit this page' rel='nofollow'>Edit</a> |
+      </span><span id='headdiff'><a href='https://www.bioinformatics.org/crnpred/wiki/Main/HomePage?action=diff'
+       title='History of this page' rel='nofollow'>History</a> |
+      </span><span id='headabout'><a href='https://www.bioinformatics.org/crnpred/wiki/Main/AboutThisSite' title='About this site' rel='nofollow'>About 1D protein structure prediction</a></span></div>
+    </td>
+   </tr>
+  </table>
+  <!--/PageHeaderFmt-->
+  <!--PageAdminTopFmt--><!--/PageAdminTopFmt-->
+ 
+  <table summary='Site Main' id='sitemain'
+   cellpadding='0' cellspacing='0' border='0' align='center'>
+   <tr>
+    <!--PageLeftFmt-->
+    <td id='mainsidebar' >
+     <table summary='SideBar' id='sidebar' width='100%'
+      cellpadding='0' cellspacing='0' border='0'>
+      <tr><td>
+       <ul><li><a class='selflink' href='https://www.bioinformatics.org/crnpred/wiki/Main/HomePage'>HomePage</a>
+</li></ul><p class='vspace'></p><p class='sidehead' > CRNPRED
+</p><ul><li><a class='wikilink' href='https://www.bioinformatics.org/crnpred/wiki/Main/Download'>Download</a>
+</li><li><a class='urllink' href='http://crnpred.pdbj.org/' rel='nofollow'>Online prediction</a>
+</li><li><a class='urllink' href='http://bioinformatics.org/groups/?group_id=608' rel='nofollow'>BiO project page</a>
+</li></ul><p class='vspace'></p><p class='sidehead' > Project Wiki
+</p><ul><li><a class='wikilink' href='https://www.bioinformatics.org/crnpred/wiki/PmWiki/BasicEditing'>Basic Editing</a>
+</li><li><a class='wikilink' href='https://www.bioinformatics.org/crnpred/wiki/PmWiki/DocumentationIndex'>Documentation Index</a>
+</li><li><a class='wikilink' href='https://www.bioinformatics.org/crnpred/wiki/Main/WikiSandbox'>WikiSandbox</a>
+</li></ul><p class='vspace'></p><p style='text-align: right;' > <span style='font-size:83%'><a class='wikilink' href='https://www.bioinformatics.org/crnpred/wiki/Site/SideBar?action=edit'>edit SideBar</a></span>
+</p>
+<div
+       id='sidebarbottom'><ul><li><span style='color: gray;' ><span style='font-size:83%'><a style='color: gray' class='wikilink' href='https://www.bioinformatics.org/crnpred/wiki/Main/HomePage?action=login'>Login</a></span>&nbsp;</span>
+</li></ul>
+</div></td></tr>
+     </table>
+    </td>
+    <!--/PageLeftFmt-->
+    <td id='maincontent'>
+     <table summary='Content' id='sitecontent' width='100%'
+      cellpadding='0' cellspacing='0' border='0'>
+      <tr><td> 
+       <!--PageTitleFmt-->
+       <div id='location'
+        title='Home Page was last modified on June 10, 2009, at 01:09 AM' ><span
+        class='grouplink'>Main</span><span
+        class='separator'>&raquo;</span><span class='titlelink'>Home Page</span></div>
+       <div style='display:none;'><h1>Home Page</h1></div>
+       <!--/PageTitleFmt-->
+       <!--PageText-->
+<div id='wikitext'>
+<h2>CRNPRED: a software for accurate prediction of 1D protein structures.</h2>
+<p class='vspace'></p><p>CRNPRED is a program that predicts secondary structures (SS), contact numbers (CN), and residue-wise contact orders (RWCO) of a native protein structure from its amino acid sequence.
+</p>
+<p class='vspace'></p><p>The prediction scheme uses an output of PSI-BLAST (sequence profile), and is based on 
+a novel machine learning technique called Critical Random Networks.
+</p>
+<p class='vspace'></p><p>For the methodology, refer to the following paper:
+</p><ul><li>A.R. Kinjo and K. Nishikawa, <strong>Predicting secondary structures, contact numbers, and residue-wise contact orders of native protein structure from amino acid sequence using critical random networks</strong> <em>BIOPHYSICS</em>, <strong>1</strong>:67-74 (2005) <a class='urllink' href='http://dx.doi.org/10.2142/biophysics.1.67' rel='nofollow'>doi:10.2142/biophysics.1.67</a>
+</li></ul><p class='vspace'></p><p>The paper describing the software has been published as:
+</p><ul><li>A.R. Kinjo and K. Nishikawa, <strong>CRNPRED: Highly accurate prediction of one-dimensional protein structures by large-scale critical random networks</strong> <em>BMC Bioinformatics</em> <strong>7</strong>:401 (2006) <a class='urllink' href='http://dx.doi.org/10.1186/1471-2105-7-401' rel='nofollow'>doi:10.1186/1471-2105-7-401</a>
+</li></ul><p class='vspace'></p><p>CRNPRED predicts 3 types of 1D structures: SS, CN, and RWCO. To find out why these 3 types are of interest, refer to 
+</p><ul><li>A.R. Kinjo and K. Nishikawa, <strong>Recoverable one-dimensional encoding of three-dimensional protein structures</strong> <em>Bioinformatics</em>, <strong>21</strong>:2167-2170 (2005) <a class='urllink' href='http://dx.doi.org/10.1093/bioinformatics/bti330' rel='nofollow'>doi:10.1093/bioinformatics/bti330</a>
+</li></ul><p class='vspace'></p><h2>Prediction Web Server</h2>
+<p class='vspace'></p><p>The web-based prediction service is available at
+</p><ul><li><span style='font-size:144%'>  <a target='_blank'  class='urllink' href='http://crnpred.pdbj.org/' rel='nofollow'>http://crnpred.pdbj.org/</a> </span>
+</li></ul>
+</div>
+
+      </td></tr>
+     </table>
+    </td>
+    <!--PageRightFmt--><!--/PageRightFmt-->
+   </tr>
+  </table>
+  <!--PageAdminBtmFmt--><!--/PageAdminBtmFmt-->
+  <table summary='Site Footer' id='sitefoot'
+   cellpadding='0' cellspacing='0' border='0' align='center'>
+   <!--PageFooterFmt-->
+   <tr>
+    <td id='footleft'>
+     <span id='footeditsb'>
+      <a href='https://www.bioinformatics.org/crnpred/wiki/Site/SideBar?action=edit'
+       title='Edit the Side(B)ar' rel='nofollow'
+       accesskey='b'>Edit SideBar</a>
+	 </span><span id='footedit'>|
+	  <a href='https://www.bioinformatics.org/crnpred/wiki/Main/HomePage?action=edit'
+       title='(E)dit this page' rel='nofollow'
+       accesskey='e'>Edit Page</a>
+     </span><span id='foothist'>|
+      <a href='https://www.bioinformatics.org/crnpred/wiki/Main/HomePage?action=diff'
+       title='(H)istory of this page' rel='nofollow'
+       accesskey='h'>Page History</a></span> 
+    </td>
+    <td id='footmiddle'>
+     <span id='footlastmod'>Page last modified on June 10, 2009, at 01:09 AM</span> 
+    </td>
+    <td id='footright'>
+     <span id='footchanges'><a href='https://www.bioinformatics.org/crnpred/wiki/Main/RecentChanges'
+       title='Recent (C)hanges in this section'  rel='nofollow'
+       accesskey='c'>Recent Changes</a>
+      <a href='https://www.bioinformatics.org/crnpred/wiki/Main/AllRecentChanges'
+       title='(A)ll Recent changes for the entire site' rel='nofollow'
+       accesskey='a'>(All)</a>
+     </span><span id='footeditlogin'> |
+       <a href='https://www.bioinformatics.org/crnpred/wiki/Main/HomePage?action=loginadmin'
+        title='Admin Login' rel='nofollow'>Admin</a></span>
+    </td>
+   </tr>
+   <!--/PageFooterFmt-->
+   <tr>
+    <td id='sitesole' colspan='3'>
+      
+    </td>
+   </tr>
+  </table>
+  <!-- vim: expandtab sw=1 ts=1 sts=1 :
+  -->
+ </body>
+</html>

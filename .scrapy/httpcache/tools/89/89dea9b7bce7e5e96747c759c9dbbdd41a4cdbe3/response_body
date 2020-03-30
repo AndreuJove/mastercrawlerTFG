@@ -1,0 +1,219 @@
+<html>
+
+<head>
+ <title>DCMF Data Retrieval</title>
+ <META HTTP-EQUIV="Description" NAME="Description" CONTENT="The Homepage of Dr Richard Edwards - Bioinformatics & Molecular Evolution @UNSW">
+ <META HTTP-EQUIV="Keywords" NAME="Keywords" CONTENT="richard edwards, ucd, shields, rcsi, bioinformatics, haqesac, gasp, badasp, presto, gablam, slimfinder, gopher, southampton, biological sciences, molecular evolution, slim">
+
+<!-- SETUP TABBER CODE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+ <link rel="stylesheet" href="http://www.slimsuite.unsw.edu.au/stylesheets/rje_tabber.css" TYPE="text/css" MEDIA="screen">
+
+<!-- Setup Standard CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+ <link rel="stylesheet" href="http://www.slimsuite.unsw.edu.au/stylesheets/slimhtml.css" TYPE="text/css" MEDIA="screen">
+
+ <!-- ~~~~~~~~~~~ Tabber Javascript ~~~~~~~~~~~ -->
+<script type="text/javascript">
+document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+var tabberOptions = {
+ /* Optional: start manually (run tabber) at end of file
+*/
+'manualStartup':true
+};
+</script>
+<!-- Load the tabber code -->
+<script type="text/javascript" src="http://www.slimsuite.unsw.edu.au/javascript/tabber.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2479191-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- END Tabber Javascript ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</head>
+
+ <body>
+
+
+<TABLE width=1170 border=0>
+<TR width=100%>
+<TD width=240 valign=top align=LEFT rowspan="2">
+
+ <!-- START OF SIDEBAR LINKS -->
+
+<IMG SRC="http://www.slimsuite.unsw.edu.au/graphics/UNSW_460px.jpg" width=230 BORDER=0><BR>
+<hr width=230>
+<TABLE WIDTH=240>
+<tr>
+<td width=120 valign=top align=LEFT>
+<a href="http://www.slimsuite.unsw.edu.au/" target="_top">
+<IMG SRC="http://www.slimsuite.unsw.edu.au/graphics/EdwardsLabLogo_300px.jpg" WIDTH=120 BORDER=0>
+</a></td>
+<td valign=center align=CENTER><h1 style="font-size:1.4em;">Edwards<br />Lab</h1></td>
+</tr>
+</TABLE>
+
+<!-- H2 style="color:#979E45"><small>Dr Richard J. Edwards</small></H2-->
+<hr width=240>
+
+<TABLE WIDTH=240 ID="linktab">
+
+<TR><TH>Lab Links</TH></TR>
+<TR ID="linktab3"><TD>
+<a href="http://www.slimsuite.unsw.edu.au/" target="_top">Homepage</a>
+</TD></TR>
+<TR ID="linktab2"><TD>
+<A HREF="http://edwardslab.blogspot.co.uk/" TARGET="_top">EdwardsLab Blog</A>
+</TD></TR>
+<tr id="linktab"><td>
+<a href="http://edwardslab.blogspot.com.au/p/research.html" target="_blank">Research</a>
+</td></tr>
+<tr id="linktab"><td>
+<a href="http://edwardslab.blogspot.com.au/p/people.html" target="_blank">People</a>
+</td></tr>
+<tr id="linktab"><td>
+<a href="http://edwardslab.blogspot.com.au/p/publications.html" target="_blank">Publications</a>
+</td></tr>
+<tr id="linktab"><td>
+<a href="http://www.slimsuite.unsw.edu.au/genomics.php" target="_blank">Organisms</a>
+</td></tr>
+<tr id="linktab"><td>
+<a href="http://www.slimsuite.unsw.edu.au/servers/apollo.php" target="_blank">Genomes</a>
+</td></tr>
+<TR><TH>Software</TH></TR>
+<tr ID="linktab3"><td>
+<a href="http://www.slimsuite.unsw.edu.au/servers.php" target="_blank">Webservers</a>
+</td></tr>
+<tr ID="linktab2"><td>
+<a href="http://slimsuite.blogspot.com/" target="_blank">SLiMSuite Blog</a>
+</td></tr>
+<tr ID="linktab2"><td>
+<a href="https://github.com/slimsuite" target="_blank">Lab GitHub</a>
+</td></tr>
+<tr ID="linktab"><td>
+<a href="http://rest.slimsuite.unsw.edu.au/restcmd" target="_blank">REST Servers</a>
+</td></tr>
+<tr ID="linktab"><td>
+<a href="http://bioware.ucd.ie/" target="_blank">Bioware@UCD</a>
+</td></tr>
+<TR><TH>Other Stuff</TH></TR>
+<tr ID="linktab2"><td>
+<a href="http://maptimeblog.blogspot.com/" target="_blank">MapTime</a>
+</td></tr>
+<tr ID="linktab"><td>
+<a href="http://www.slimsuite.unsw.edu.au/teaching/upgma/" target="_blank">UPGMA Walkthrough</a>
+</td></tr>
+<tr ID="linktab"><td>
+<a href="http://cabbagesofdoom.blogspot.co.uk/p/molecular-evolution-glossary.html" target="_blank">Molecular Evolution Glossary</a>
+</td></tr>
+</table>
+
+<!-- hr width=240 />
+
+<!-- a href="http://www.abacbs.org/conference/" title="Australian Bioinformatics And Computational Biology Society 2015 Conference"><img src="../graphics/abacbs2015_logo.png" width=240 /></a>
+
+<!-- END OF SIDEBAR LINKS -->
+
+<hr width=240 />
+
+<a class="twitter-timeline" href="https://twitter.com/slimsuite" data-widget-id="494985472494419970">Tweets by @slimsuite</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</TD>
+<TD valign=top></TD>
+
+<TD width=900  valign=top>
+
+
+	<h1>Whole genome sequencing of an anaerobic, dichloromethane-fermenting Peptococcaceae, “DCMF”, from an enrichment culture - Supplementary data</h1>
+
+    
+    <pgold><b>DISCLAIMER:</b> The data on these webpages has not yet been published and is the intellectual property of UNSW. 
+    It is provided in good faith and should not be used prior to publication without consent from Mike Manefield, Richard Edwards or Matt Lee at UNSW. Publication details will be added soon.</pgold>
+
+<p>These data and tools are part of the supplementary material for the genome assembly of an unusual, dichloromethane-fermenting Peptococcaceae strain, DCMF. DCMF was isolated by the Manefield group at UNSW before being sequenced, assembled and annotated in collaboration with the Edwards lab. This site has four main navigation pages (see below):</p>
+
+<table>
+<tr>
+
+<td valign=top></td>
+<td width="150" valign=center align=center>
+<p><a href="./dcmf-apollo.php" target="_blank"><img id="software" width=100 src="http://www.slimsuite.unsw.edu.au/graphics/button-software.gif" alt="Genome search" title="DCMF genome sequence search tool" /></a></p>
+</td><td width=20 valign=top></td>
+
+<td width="150" valign=top align=center>
+<p><a href="./index-jgi.php" target="_blank"><img id="jgi" height=100 src="http://www.slimsuite.unsw.edu.au/graphics/button-dna.jpg" alt="TigerSnake" title="Full JGI protein annotation table"  /></a></p>
+</td><td width=20 valign=top></td>
+
+<td width="150" valign=top align=center>
+<p><a href="./index-ncbi.php" target="_blank"><img id="ncbi" height=100 src="http://www.slimsuite.unsw.edu.au/graphics/button-ncbi.gif" alt="CaneToad" title="Full NCBI protein annotation table" /></a></p>
+</td><td width=20 valign=top></td>
+
+<td width="150" valign=top align=center>
+<p><a href="https://edwapollo.babs.unsw.edu.au/apollo-2.0.8/120/jbrowse/index.html?loc=chr_WON710A1__DCMF160804:1..250000&tracks=PROKKA-CDS,JGI-CDS,NCBI-CDS" target="_blank"><img id="WebApollo" height=100 src="http://www.slimsuite.unsw.edu.au/graphics/button-webapollo.gif" alt="WebApollo" title="DCMF v1.0 WebApollo genome browser"  /></a></p>
+</td><td valign=top></td>
+</tr>
+
+<tr align=center style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;color:#cc113b;">
+<td></td>
+<td width="150">DCMF genome sequence search tool</td>
+<td></td>
+<td width="150">Full JGI protein annotation table</td>
+<td></td>
+<td width="150">Full NCBI protein annotation table</td>
+<td></td>
+<td width="150">DCMF v1.0 WebApollo genome browser</td>
+<td></td>
+</tr>
+
+</table>
+
+
+<h2>DCMF WebApollo Genome browser and search tool</h2>
+
+<p>The <a href="./index-apollo.php">DCMF genome search</a> server allows simple Exonerate or BLAST+ searches of DNA, CDS or protein sequences against the DCMF genome, linking results out to our <a href="https://edwapollo.babs.unsw.edu.au/apollo-2.0.8/120/jbrowse/index.html">WebApollo genome browser</a> with Prokka, JGI and NCBI annotation. Links to the browser are also provided in the protein tables.</p>
+
+    <h2>Additional protein annotation</h2>
+
+    <p>Protein sequences were predicted using <a href="http://www.vicbioinformatics.com/software.prokka.shtml">prokka</a>, the <a href="https://genome.jgi.doe.gov/">JGI Genome Portal</a> annotation pipeline and NCBI. Full tables of annotation are available for <a href="./index-jgi.php">JGI</a> and <a href="./index-ncbi.php">NCBI</a> annotations. Each annotation includes links out to multiple sequence alignments and trees (see below) as well as the <a href="https://edwapollo.babs.unsw.edu.au/apollo-2.0.8/120/jbrowse/index.html">WebApollo genome browser</a>. <b>WARNING:</b> These pages are big and may take a few seconds to load.</p>
+    
+    
+    <p>Proteins were further annotated via high-throughput homology searching, multiple sequence alignment and molecular phylogenetics
+	using <a href="http://rest.slimsuite.unsw.edu.au/haqesac">HAQESAC</a> and <a href="http://rest.slimsuite.unsw.edu.au/multihaq">MulitHAQ</a>.  
+	For JGI proteins, putative taxonomic assignments for each protein were then made using <http://rest.slimsuite.unsw.edu.au/taxamap>TaxaMap</a>,
+	which identifies the taxonomic grouping of the clade to which that protein was found to belong.</p>
+	
+	<p>Each protein was subject to a BLAST+ (blastp)
+	search against all NCBI and JGI proteins annotated for DCMF, all <a href="http://www.uniprot.org/taxonomy/2">bacterial</a> proteins in the
+	<a href="http://www.uniprot.org/">UniProt Knowledgebase</a> (download <code>2017-02-06</code>), and the published proteomes for a set of closely related bacteria as identified from a 16S phylogeny (see paper for details). <a href="http://rest.slimsuite.unsw.edu.au/haqesac">HAQESAC</a> was used to
+	iteratively generate and clean up <a href="http://www.clustal.org/omega/">Clustal Omega</a> multiple sequence alignments
+	to produce a high quality alignment against a set of close homologues. The neighbor-joining tree implementation of
+	<a href="http://www.clustal.org/clustal2/">Clustal W2</a> was used to make a phylogenetic tree. 
+	(<b>NOTE:</b> These alignments and trees are designed to give an automated first look at a protein. Where individual
+	protein alignment and/or phylogenetic inference details are important, more careful analysis is recommended.)</p>
+
+
+
+    <pgold><hr>&copy; 2019 RJ Edwards. Contact: <a href="mailto:richard.edwards@unsw.edu.au">richard.edwards@unsw.edu.au</a>.</pgold>
+
+</TD></TR></TABLE>
+
+ </body>
+
+ <script type="text/javascript">
+
+/* Since we specified manualStartup=true, tabber will not run after
+   the onload event. Instead let's run it now, to prevent any delay
+   while images load.
+*/
+
+tabberAutomatic(tabberOptions);
+
+</script>
+
+</html>

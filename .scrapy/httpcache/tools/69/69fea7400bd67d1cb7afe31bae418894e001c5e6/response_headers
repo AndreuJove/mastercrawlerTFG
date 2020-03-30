@@ -1,0 +1,11 @@
+Vary: Accept-Encoding
+Content-Type: text/html;charset=UTF-8
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=0
+Date: Mon, 30 Mar 2020 18:47:00 GMT
+X-Application-Context: application:8081
+X-Xss-Protection: 1; mode=block
+Content-Language: en
+X-Content-Type-Options: nosniff
+Etag: "0786ed305606d82002a2be2695cbe1882"
+X-Frame-Options: DENY

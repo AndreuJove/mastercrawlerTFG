@@ -1,0 +1,771 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>DBD: Transcription factor database Home</title>
+<style type="text/css">
+    h1 {font-size:144%;}
+    h2 {font-size:129%;}
+    h3 {font-size:114%;}
+    h4 {font-size:100%;}
+    body {margin:1em;font-family:verdana,arial,sans-serif;}
+    ul {width:80%;}
+    dl {padding:1em;}
+    
+    #hd {position:relative;}
+    #hd .logo {width:65px;height:38px;vertical-align:middle;padding-right:10px;}
+
+    #bd h1,h2,h3,p{padding:.5em;}
+    
+    #code {clear:both;}
+    #code .code {padding:1em;background:#DEDEDE;border:1px solid black;font-size:92%;}
+    
+    #logger {position:relative;float:right;clear:both;margin:1em;width:30em;padding:.5em;}
+    
+    #panel {width:40%;background:#DEDEDE;border:1px solid #000;margin:2em;padding:1em;}
+    #panel div {margin-top:1em;padding-bottom:.5em;border-bottom:1px solid #404040;}
+    
+    #coder {position:absolute;background:#DEDEDE;border:1px solid #000;margin:1em;padding:.5em;bottom:10px;right:10px;}
+    #output {position:relative;width:30em;height:15em;margin-top:1em;}
+
+    #searchmod {position:relative;padding:1em;} 
+/*    #searchmod {position:absolute;padding:1em;} */
+
+/*    #genomeSearchAutocomplete, #domainSearchAutocomplete {position:relative;margin-bottom:1.5em;width:40%;}  /* set width of widget here */
+    #genomeSearchAutocomplete, #domainSearchAutocomplete {position:absolute;margin-bottom:1.5em;width:40%;} /* set width of widget here */
+    #genomeSearchAutocomplete {z-index:9001;} /* for IE z-index of absolute divs inside relative divs issue - z-index for #genomeSearchAutocomplete must be higher than #domainSearchAutocomplete */
+    #domainSearchAutocomplete {z-index:9000;} /* for IE z-index of absolute divs inside relative divs issue */
+/*    #genomeTextInput, #domainTextInput {_position:absolute;width:100%;height:1.7em;} */
+    #genomeTextInput, #domainTextInput {position:relative;width:100%;height:1.7em;} 
+    #genomeSuggestions, #domainSuggestions {position:absolute;top=1.0em;width:100%;} 
+/*    #genomeSuggestions, #domainSuggestions {position:relative;top:1.0em;width:100%;} */
+    #genomeSuggestions .yui-ac-content, #domainSuggestions .yui-ac-content {position:absolute;width:100%;border:1px solid #404040;background:#fff;overflow:hidden;z-index:9050;} 
+/*    #genomeSuggestions .yui-ac-content, #domainSuggestions .yui-ac-content {position:relative;width:100%;border:1px solid #404040;background:#fff;overflow:hidden;z-index:9050;} */
+/*    #genomeSuggestions .ysearchquery,   #domainSuggestions .ysearchquery   {position:absolute;right:10px;color:#808080;z-index:10;} */
+/*    #genomeSuggestions .yui-ac-shadow,  #domainSuggestions .yui-ac-shadow  {position:absolute;margin:.3em;width:100%;background:#a0a0a0;z-index:9049;} */
+/*    #genomeSuggestions ul, #domainSuggestions ul {width:100%;} */
+/*    #genomeSuggestions ul, #domainSuggestions ul {padding:0px;width:100%;} */
+    #genomeSuggestions ul, #domainSuggestions ul {list-style: none;margin: 0;padding: 0;width:100%;} 
+    #genomeSuggestions li, #domainSuggestions li {padding:0 5px;cursor:default;white-space:nowrap;} 
+/*    #genomeSuggestions li, #domainSuggestions li {cursor:default;white-space:nowrap;} */
+    #genomeSuggestions li.yui-ac-highlight, #domainSuggestions li.yui-ac-highlight {background:#a0a0a0;}
+/*    #genomeSuggestions li.yui-ac-prehighlight, #domainSuggestions li.yui-ac-prehighlight {background:pink;} */
+
+/***********************************************
+** Do not remove this notice.
+**
+** Copyright 2002 by Mike Hall.
+** See http://www.brainjar.com for terms of use.
+***********************************************/
+
+div.tabBox {margin: 0px 0px 2px 0px;}
+
+div.tabArea {
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0px 2px 4px 2px;
+}
+
+a.tab {
+  color: white;
+  background-color: #5B5B5B; 
+  border: 1px solid #dcb;
+  border-bottom-width: 0px;
+  -moz-border-radius: .71em .71em 0em 0em;
+  -webkit-border-radius: .71em .71em 0em 0em;
+  border-radius: .71em .71em 0em 0em;
+  border-radius-topleft: .71em;
+  border-radius-topright: .71em;
+  padding: 0 1em 0 1em;
+  position: relative;
+  text-decoration: none;
+  top: 3px;
+  z-index: 100;
+}
+
+a.activetab {
+  color: #5B5B5B;
+  background-color: #CAE1FF;
+  border: 1px solid #dcb;
+  border-bottom-width: 0px;
+  -moz-border-radius: .71em .71em 0em 0em;
+  -webkit-border-radius: .71em .71em 0em 0em;
+  border-radius: .71em .71em 0em 0em;
+  border-radius-topleft: .71em;
+  border-radius-topright: .71em;
+  padding: 0 1em 0 1em;
+  position: relative;
+  text-decoration: none;
+  top: 3px;
+  z-index: 100;
+}
+
+a.activetab:visited {
+  color: #5B5B5B;
+  background-color: #CAE1FF;
+}
+
+a.activetab:hover {
+  color: #5B5B5B;
+  background-color: #CAE1FF;
+}
+
+a.tab:visited {
+  color: white;
+  background-color: #5B5B5B; 
+}
+
+a.tab:hover { color: #CAE1FF; }
+
+div.tabMain {
+  padding: 0px 4px 0px 2px;
+  position: relative;
+  z-index: 101;
+}
+
+div.tabIframeWrapper { width: 100%; }
+
+tooltipDiv {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	display: none;
+	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #fff;
+	background-color: #cde9f2;
+	color: #3278a0;
+	font-family: verdana, sans-serif;
+	font-size: 11px;
+	white-space: nowrap;
+}
+
+/*
+iframe.tabContent {
+  background-color: #fff;
+  border: 1px solid #dcb;
+  width: 100%;
+  height: 90ex;
+}
+*/
+
+body {
+	margin: 0;
+	background-color: #fff;
+	border: 0;
+	padding: 2px;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
+
+p.text_justify {
+	text-align: justify;
+}
+
+.frame { }
+.framedata { }
+.column { }
+.columndata { }
+.cell { padding: 2px; }
+
+.loginbanner {
+	background-color: #5B5B5B;
+	border:	1px solid #dcb;
+	padding: 0px 5px 2px 5px;
+	font-size: 80%; font-weight: bold;
+	color: #FFFFFF;
+}
+
+.cellbanner {
+	background-color: #CAE1FF;
+	border:	1px solid #dcb;
+	padding: 0px 5px 2px 5px;
+	font-size: 80%; font-weight: bold;
+	color: black;
+}
+
+.cellbody {
+	background-color: #fff;
+	border-right:  1px solid #dcb;
+	border-bottom: 1px solid #dcb;
+	border-left:   1px solid #dcb;
+	padding: 5px;
+}
+
+table.texttable {
+	border-collapse: collapse;
+	border:	1px solid #5B5B5B;
+	padding: 0px 5px 2px 5px;
+	color: black;
+}
+
+.keyrow { 
+	border-top: 3px solid #5B5B5B; 
+	border-bottom: 2px solid #5B5B5B;
+	padding: 0px 5px 2px 5px;
+	font-weight: bold;
+	color: black;
+}
+
+.bottomrow {
+	border-bottom: 3px solid #5B5B5B;
+	padding: 0px 5px 2px 5px;
+	color: black;
+}
+
+caption.texttable { 
+	caption-side: top; 
+	width: auto;
+	text-align: left 
+}
+
+/* order is important */
+/*
+a:link { color: darkblue; }
+a:visited { color: black; }
+a:hover { color: blue; }
+a:active { color: blue; }
+*/
+
+a.non { text-decoration: none; }
+a.smallnon { font-size: 80%; text-decoration: none; }
+
+p.hang {
+	text-indent: -1em;
+	margin-left: 1em;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+pre.darkgreen { color: darkgreen; }
+pre.darkblue { color: darkblue; }
+
+span.logname {
+	font-weight: bold;
+	font-size: 80%;
+	color: darkblue;
+}
+
+span.logtext { font-size: 80%; }
+
+span.sestext {
+	font-size: 80%;
+	color: darkblue;
+}
+
+button.logout {
+	padding: 0;
+	font-weight: bold;
+	font-size: 80%;
+	color: white;
+	float: right;
+}
+
+button.darkblue {
+	padding: 0;
+	font-weight: bold;
+	color: white;
+}
+
+.citation_title{
+        margin:         1em 0;
+        padding:        0.5em;
+        font-size:      15px;
+        background-color: #f0f8ff;
+        border:         solid 1px #ccc;
+}
+
+table.role { margin: 2px; font-size: 90%; font-weight: bold; background-color: #39628b; }
+td.role { text-align: right; font-size: 100%; font-weight: bold; color: #fff; }
+td img.decor { display: block; }
+
+a.external { text-decoration: none; }
+a.external:link { color: #fff }
+a.external:visited { color: #fff }
+a.external:hover { color: #ffc }
+a.external:active { color: #ffc }
+
+a.nav { text-decoration: none; }
+a.nav:link { color: #5B5B5B }
+a.nav:visited { color: #5B5B5B }
+a.nav:hover { color: #CAE1FF }
+a.nav:active { color: #CAE1FF }
+
+td.navtext {
+	font-weight: bold;
+	text-align: left;
+	font-size: 75%;
+}
+
+td.titletext {
+/*	text-align: center; */
+	text-align: left; 
+	font-weight: bold;
+	width: 20%;
+}
+
+td.maintext {
+	text-align: left;
+	width: 20%;
+}
+
+td.maintext_grey {
+	text-align: left;
+	width: 20%;
+	background-color: #DDDDDD;
+        border: 1px solid #DDDDDD;
+}
+
+td.mainnumber {
+	text-align: left;
+}
+
+td.mainnumber_grey {
+	text-align: left;
+	background-color: #DDDDDD;
+}
+
+/* FOOTER */
+
+.footer { font-size: 10px; }
+
+</style>
+<script type="text/javascript">
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+// 
+// Coded by Travis Beckham
+// http://www.squidfingers.com | http://www.podlob.com
+// If want to use this code, feel free to do so, but please leave this message intact.
+//
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+// --- version date: 06/13/04 ---------------------------------------------------------
+
+tooltip = {
+	name : "tooltipDiv",
+	offsetX : 40,
+	offsetY : -10,
+	tip : null
+};
+
+tooltip.init = function () {
+	if (!document.getElementById) return;
+	
+	// It would be nice to be able to generate the tooltip div, 
+	// but when using document.createElement Explorer5/MacOS9, 
+	// the tooltip div becomes 100% of the window height.
+	// Therefore, we have to use document.getElementById to access
+	// a div that is already in the body.
+	
+	// this.tip = document.createElement ("div");
+	// this.tip.setAttribute ("id", this.name);
+	// document.body.appendChild (this.tip);
+	
+	this.tip = document.getElementById (this.name);
+	if (this.tip) document.onmousemove = function (evt) {tooltip.move (evt)};
+	
+	var a;
+	var anchors = document.getElementsByTagName ("a");
+	for (var i = 0; i < anchors.length; i ++) {
+		a = anchors[i];
+		if (a.className == "tooltip") {
+			a.onmouseover = function () {tooltip.show (this.title)};
+			a.onmouseout = function () {tooltip.hide ()};
+		}
+	}
+};
+
+tooltip.move = function (evt) {
+	var x=0, y=0;
+	if (document.all) {// Explorer
+	
+		// Explorer5 contains the documentElement object but it's empty, 
+		// so we must check if the scrollLeft property is available.
+		
+		// If Explorer6 is in Quirks mode, the documentElement properties 
+		// will still be defined, but they will contain the number 0.
+		
+		// If Explorer6 is in Standards compliant mode, the document.body 
+		// properties will still be defined, but they will contain the number 0.
+		
+		x = (document.documentElement && document.documentElement.scrollLeft) ? document.documentElement.scrollLeft : document.body.scrollLeft;
+		y = (document.documentElement && document.documentElement.scrollTop) ? document.documentElement.scrollTop : document.body.scrollTop;
+		x += window.event.clientX;
+		y += window.event.clientY;
+		
+	} else {// Mozilla
+		x = evt.pageX;
+		y = evt.pageY;
+	}
+	// If the style property value is not a string containing the unit measurement,
+	// browsers in standard compliant mode will not set the property.
+	this.tip.style.left = (x + this.offsetX) + "px";
+	this.tip.style.top = (y + this.offsetY) + "px";
+};
+
+tooltip.show = function (text) {
+	if (!this.tip) return;
+	this.tip.innerHTML = text;
+	// Without the next line, Explorer5/Mac has a redraw problem.
+	this.tip.style.visibility = "visible";
+	this.tip.style.display = "block";
+};
+
+tooltip.hide = function () {
+	if (!this.tip) return;
+	// Without the next line, Explorer5/Mac has a redraw problem.
+	this.tip.style.visibility = "hidden";
+	this.tip.style.display = "none";
+	this.tip.innerHTML = "";
+};
+
+window.onload = function () {
+	tooltip.init ();
+}
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<table cellpadding="0" width="100%" cellspacing="0" border="0" class="frame"><tr>
+
+<!-- Top START -->
+<td class="framedata" valign="top" colspan="1">
+<table cellpadding="0" width="100%" cellspacing="0" border="0" class="column">
+<tr><td class="columndata">
+
+<!-- Cell START -->
+<table border=0 CellSpacing=1 CellPadding=7 Width=800>
+	<tr>
+		<td class="main" align="right" valign="center">
+			<img src="Images/dbd.gif">
+		</td>
+		<td class="main" align="center" valign="center">
+			<table>
+				<tr>
+					<td><h2 class="dbhead">DBD: Transcription factor prediction database</h2></td>
+				</tr>
+				<tr>
+					<td align=right>Release 2.0 </td>
+				</tr>
+				<tr>
+					<td align=center><a href="http://www.transcriptionfactor.org">www.transcriptionfactor.org</a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<form method=post action="/DBD/index.cgi?Search/Seqid">
+	<b>Sequence ID search:</b> 
+	<input type=text name="seqid" size="50">
+	<button type=submit name="search" value="search">Search DBD</button>
+</form>
+<div class="tabBox" style="clear:both;">
+	<div class="tabArea">
+<a class="activetab"
+href="/index.cgi?Home">Home</a>
+<a class="tab"
+href="/index.cgi?Browse">Browse Genomes</a>
+<a class="tab"
+href="/index.cgi?Domain+domain:all">Browse Families</a>
+<a class="tab"
+href="/index.cgi?Search">Search</a>
+<a class="tab"
+href="/index.cgi?About">About</a>
+<a class="tab"
+href="/index.cgi?Download">Download</a>
+<a class="tab"
+href="/index.cgi?Links">Links</a>
+</div>
+</div>
+<!-- Cell END -->
+
+</td></tr>
+</table></td>
+<!-- Top END -->
+
+</tr><tr>
+
+<!-- Column 1 START -->
+<td class="framedata" valign="top">
+<table cellpadding="0" width="100%" cellspacing="0" border="0" class="column">
+<tr><td class="columndata">
+
+<!-- Cell START -->
+<table cellpadding="0" width="100%" cellspacing="0" border="0" class="cell">
+<tr><td align=left class="cellbanner">
+Introduction
+</td></tr><tr><td class="cellbody">
+
+<p class="text_justify">DBD is a database of predicted transcription factors in completely sequenced genomes.<br>
+The predicted transcription factors all contain assignments to
+sequence specific DNA-binding domain families. 
+The predictions are based on domain assignments from the 
+<a href="http://supfam.org">SUPERFAMILY</a> and 
+<a href="http://www.sanger.ac.uk/Software/Pfam/">Pfam</a> 
+hidden Markov model libraries.
+Benchmarks of our transcription factor predictions show they are
+accurate and have wide coverage on a genomic scale. <br>
+The DBD consists of predicted transcription factor repertoires for 
+</pre>
+<table border cellspacing=2 cellpadding=4 bgcolor=white><tr><td>
+	<font color="red" size="3">
+		An error occured in context "Home" cell "0.01"
+		<br>in the section containing the code:
+	</font>
+</td></tr><tr><td>
+	<pre class="darkgreen">001  
+002 
+003 import dbd
+004 
+005 cellhead()
+006 
+007 print "Introduction"
+008 
+009 cellbody()
+010 
+011 print """
+012 &lt;p class="text_justify"&gt;DBD is a database of predicted transcription factors in completely sequenced genomes.&lt;br&gt;
+013 The predicted transcription factors all contain assignments to
+014 sequence specific DNA-binding domain families. 
+015 The predictions are based on domain assignments from the 
+016 &lt;a href="http://supfam.org"&gt;SUPERFAMILY&lt;/a&gt; and 
+017 &lt;a href="http://www.sanger.ac.uk/Software/Pfam/"&gt;Pfam&lt;/a&gt; 
+018 hidden Markov model libraries.
+019 Benchmarks of our transcription factor predictions show they are
+020 accurate and have wide coverage on a genomic scale. &lt;br&gt;
+021 The DBD consists of predicted transcription factor repertoires for """
+022 
+023 [genome_count] = dbd.get_individual_genome_count()
+024 
+025 print '''%s''' %genome_count
+026 
+027 print """ completely sequenced genomes.&lt;br&gt;
+028 
+029 	From this website you can:
+030 	&lt;ul&gt;
+031 		&lt;li&gt;&lt;a href="%(url)s?Browse"&gt;Browse genome-wide&lt;/a&gt; transcription factor repertoire predictions&lt;/li&gt;
+032 		&lt;li&gt;View manually curated list of sequence specific &lt;a href="%(url)s?Domain+domain:all"&gt; DNA binding domain families&lt;/a&gt;&lt;/li&gt;
+033 		&lt;li&gt;&lt;a href="%(url)s?Search"&gt;Search&lt;/a&gt; for a sequence id, domain family or submit a protein sequence&lt;/li&gt;
+034 	&lt;/ul&gt;
+035 
+036 See the &lt;a href="%(url)s?About"&gt;About&lt;/a&gt; section and the recent publication for further details.&lt;br&gt;
+037 
+038 
+039 &lt;fieldset&gt;
+040 
+041 &lt;h2 class="citation_title"&gt;Genomic repertoires of DNA-binding transcription factors across the tree of life&lt;/h2&gt;
+042 
+043 &lt;a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%%22Charoensawan+V%%22%%5BAuthor%%5D' target="blank"&gt;Varodom Charoensawan&lt;/a&gt;,
+044 &lt;a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%%22Wilson+D%%22%%5BAuthor%%5D' target="blank"&gt;Derek Wilson&lt;/a&gt;,
+045 &lt;a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%%22Teichmann+SA%%22%%5BAuthor%%5D' target="blank"&gt;Sarah A. Teichmann&lt;/a&gt;
+046 &lt;br&gt;
+047 
+048 &lt;em&gt;Nucleic Acids Research&lt;/em&gt; 2010 Nov;38(21):7364-77. doi: 10.1093/nar/gkq617. Epub 2010 Jul 30. Review.
+049 &lt;br&gt;
+050 
+051 &lt;b&gt;Abstract&lt;/b&gt;  [ &lt;a href="http://www.ncbi.nlm.nih.gov/pubmed/20675356"&gt;&lt;img src=Images/pubmed.gif border=0 alt=PubMed&gt;&lt;/a&gt; ] &amp;nbsp;
+052 &lt;b&gt;Full text&lt;/b&gt; [ &lt;a href="http://nar.oxfordjournals.org/content/38/21/7364.long"&gt;HTML&lt;/a&gt; &amp;#183;
+053                    &lt;a href="http://nar.oxfordjournals.org/content/38/21/7364.full.pdf"&gt;&lt;img alt=PDF title=PDF src=Images/pdf.gif border=0&gt;&lt;/a&gt; ]
+054 
+055 &lt;br&gt;
+056 
+057 &lt;h2 class="citation_title"&gt;Lineage-specific expansion of DNA-binding transcription factor families&lt;/h2&gt;
+058 
+059 &lt;a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%%22Charoensawan+V%%22%%5BAuthor%%5D' target="blank"&gt;Varodom Charoensawan&lt;/a&gt;,
+060 &lt;a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%%22Wilson+D%%22%%5BAuthor%%5D' target="blank"&gt;Derek Wilson&lt;/a&gt;,
+061 &lt;a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%%22Teichmann+SA%%22%%5BAuthor%%5D' target="blank"&gt;Sarah A. Teichmann&lt;/a&gt;
+062 &lt;br&gt;
+063 
+064 &lt;em&gt;Trends Genetics&lt;/em&gt; 2010 Sep;26(9):388-93. doi: 10.1016/j.tig.2010.06.004. Epub 2010 Jul 31.
+065 &lt;br&gt;
+066 
+067 &lt;b&gt;Abstract&lt;/b&gt;  [ &lt;a href="http://www.ncbi.nlm.nih.gov/pubmed/20675012"&gt;&lt;img src=Images/pubmed.gif border=0 alt=PubMed&gt;&lt;/a&gt; ] &amp;nbsp;
+068 &lt;b&gt;Full text&lt;/b&gt; [ &lt;a href="http://www.sciencedirect.com/science/article/pii/S0168952510001277"&gt;HTML&lt;/a&gt; &amp;#183;
+069                    &lt;a href="http://pdn.sciencedirect.com/science?_ob=MiamiImageURL&amp;_cid=271227&amp;_user=776054&amp;_pii=S0168952510001277&amp;_check=y&amp;_origin=article&amp;_zone=toolbar&amp;_coverDate=2010--30&amp;view=c&amp;originContentFamily=serial&amp;wchp=dGLbVlS-zSkWA&amp;md5=085f289edbdeeb5360631a1a4060e1ad&amp;pid=1-s2.0-S0168952510001277-main.pdf"&gt;&lt;img alt=PDF title=PDF src=Images/pdf.gif border=0&gt;&lt;/a&gt; ]
+070 
+071 &lt;br&gt;
+072 
+073 &lt;h2 class="citation_title"&gt;DBD - taxonomically broad transcription factor predictions: new content and functionality&lt;/h2&gt;
+074 
+075 &lt;a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%%22Wilson+D%%22%%5BAuthor%%5D' target="blank"&gt;Derek Wilson&lt;/a&gt;, 
+076 &lt;a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%%22Charoensawan+V%%22%%5BAuthor%%5D' target="blank"&gt;Varodom Charoensawan&lt;/a&gt;, 
+077 &lt;a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%%22Kummerfeld+SK%%22%%5BAuthor%%5D' target="blank"&gt;Sarah K. Kummerfeld&lt;/a&gt;, 
+078 &lt;a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Search&amp;itool=pubmed_AbstractPlus&amp;term=%%22Teichmann+SA%%22%%5BAuthor%%5D' target="blank"&gt;Sarah A. Teichmann&lt;/a&gt;
+079 &lt;br&gt;
+080 
+081 &lt;em&gt;Nucleic Acids Research&lt;/em&gt; 2008 36(Database issue):D88-D92; doi:10.1093/nar/gkm964
+082 &lt;br&gt;
+083 
+084 &lt;b&gt;Abstract&lt;/b&gt;  [ &lt;a href="http://www.ncbi.nlm.nih.gov/pubmed/18073188"&gt;&lt;img src=Images/pubmed.gif border=0 alt=PubMed&gt;&lt;/a&gt; ] &amp;nbsp; 
+085 &lt;b&gt;Full text&lt;/b&gt; [ &lt;a href="http://nar.oxfordjournals.org/cgi/content/full/36/suppl_1/D88"&gt;HTML&lt;/a&gt; &amp;#183; 
+086                    &lt;a href="http://nar.oxfordjournals.org/cgi/reprint/36/suppl_1/D88.pdf"&gt;&lt;img alt=PDF title=PDF src=Images/pdf.gif border=0&gt;&lt;/a&gt; ]
+087 
+088 &lt;br&gt;
+089 &lt;b&gt;Download citation&lt;/b&gt;
+090         [ &lt;a href="./articles/nar2008.ris"&gt;RIS (for EndNote, Reference Manager, ProCite)&lt;/a&gt; &amp;#183;
+091           &lt;a href="./articles/nar2008_bibtex.txt"&gt;BibTeX&lt;/a&gt; ]
+092 &lt;/fieldset&gt;
+093 
+094 The previous DBD release (1.2) can be found in the &lt;a href="/archive/DBD1.2/index.cgi?Home"&gt;archive&lt;/a&gt;.
+095 	""" %({"url" : globals.HomeURLBase})
+096 
+097 
+098 cellend()
+099 </pre>
+</td></tr><tr><td>
+	<pre class="darkblue">Traceback (most recent call last):
+  File "/net/isilonP/public/rw/research/teichmann/apache/live/DBD/web.py", line 148, in gen_cell
+    exec _code in _globals_d, _locals_d
+  File "&lt;string&gt;", line 23, in &lt;module&gt;
+  File "/net/isilonP/public/rw/research/teichmann/apache/live/DBD/dbd.py", line 528, in get_individual_genome_count
+    c = get_db_cursor()
+  File "/net/isilonP/public/rw/research/teichmann/apache/live/DBD/dbd.py", line 68, in get_db_cursor
+    db = MySQLdb.connect(host="mysql-teichmann-web.ebi.ac.uk", port=4412, user="admin", passwd="z2Kd6OvN", db="DBD2")
+  File "/usr/lib64/python2.6/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib64/python2.6/site-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on 'mysql-teichmann-web.ebi.ac.uk' (111)")
+</pre>
+</td></tr></table>
+
+</td></tr></table>
+<!-- Cell END -->
+
+</td></tr>
+<tr><td class="columndata">
+
+<!-- Cell START -->
+<table cellpadding="0" width="100%" cellspacing="0" border="0" class="cell">
+<tr><td align=left class="cellbanner">
+Recent news
+</td></tr><tr><td class="cellbody">
+
+Recent updates to DBD<br>
+
+<table> 
+<!--
+        <tr>
+                <td nowrap valign="top"><strong>ddth Mmm  YYYY</strong></td>
+
+                <td>Short title
+                <a href="/index.cgi?Home/News">Further details</a>
+                </td>
+        </tr>
+
+-->
+
+	 <tr>
+                <td nowrap valign="top"><strong>9th Nov 2011</strong></td>
+
+                <td>Pedobacter Heparinus genome is added ...
+                <a href="/index.cgi?Home/News">Further details</a>
+                </td>
+        </tr>
+
+        <tr>
+                <td nowrap valign="top"><strong>30th Aug 2008</strong></td>
+
+                <td>New fungal genomes ...
+                <a href="/index.cgi?Home/News">Further details</a>
+                </td>
+        </tr>
+
+
+        <tr>
+                <td nowrap valign="top"><strong>20th Aug 2008</strong></td>
+
+                <td>Integrated transcription factor predictions for the
+                <a href="/index.cgi?Genome+gn:yd"><em>Dictyostelium purpureum</em></a> genome ... 
+                <a href="/index.cgi?Home/News">Further details</a>
+                </td>
+        </tr>
+
+
+        <tr>
+                <td nowrap valign="top"><strong>18th Aug 2008</strong></td>
+
+                <td>Added domain assignments for over 50 bacterial genomes from the
+                <a href="http://www.ncbi.nlm.nih.gov/" target="NCBI_home">NCBI</a>  ... 
+                <a href="/index.cgi?Home/News">Further details</a>
+                </td>
+        </tr>
+
+
+        <tr>
+                <td nowrap valign="top"><strong>11th Aug 2008</strong></td>
+                <td>
+                  Reclassified 8 domains ...
+                  <a href="/index.cgi?Home/News">Further details</a>
+                </td>
+        </tr>
+
+
+        <tr>
+                <td nowrap valign="top"><strong>8th Aug 2008</strong></td>
+
+                <td>Transcription factor predictions for new green algae
+                <a href="/index.cgi?Genome+gn:o8"><em>Ostreococcus</em> RCC809</a>.
+                </td>
+        </tr>
+</table>
+
+Further details on recent updates to DBD can be found in the <a href="/index.cgi?Home/News">News archive</a>.
+</td></tr></table>
+<!-- Cell END -->
+
+</td></tr>
+</table></td>
+<!-- Column 1 END -->
+
+</tr><tr>
+
+<!-- Bottom START -->
+<td class="framedata" valign="top" colspan="1">
+<table cellpadding="0" width="100%" cellspacing="0" border="0" class="column">
+<tr><td class="columndata">
+
+<!-- Cell START -->
+<table class="footer" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 2px;">
+	<tr>
+		<td width="99%"> 
+			<center>
+				Please cite: 
+				<a href="http://nar.oxfordjournals.org/cgi/content/full/gkm964?ijkey=i2lAeeS6O9CiKcw&keytype=ref">
+				Derek Wilson, Varodom Charoensawan, Sarah K. Kummerfeld and Sarah A. Teichmann,
+				DBD - taxonomically broad transcription factor predictions: new content and functionality
+				<i>Nucleic Acids Research</i> 2008 doi: 10.1093/nar/gkm964</a>.
+
+				<br>
+				<br>
+				Please send feedback, comments or questions to 
+				<a href="mailto:dbd@mrc-lmb.cam.ac.uk">Sarah A. Teichmann</a>.
+
+                		<br>
+                		<br>
+				&copy Copyright 2005-2010 The <a href="http://www.mrc.ac.uk/">Medical Research Council</a> and the DBD authors.
+			</center>
+		</td>
+		<td valign=middle>
+		        <span style="font-family: helvetica,arial,sans-serif;font-size: 60%;">Powered&nbsp;by&nbsp;</span> 
+		</td>
+		<td valign=bottom>
+		  	<a href="http://www.it.usyd.edu.au/~bob/web.cgi?Cellerator">
+			    	<img src="Images/cellerator.png" title="Cellerator Home" alt="Cellerator" width=80 height=15 border=0>
+		  	</a>
+		</td>
+	</tr>
+</table>
+<!-- Cell END -->
+
+</td></tr>
+</table></td>
+<!-- Bottom END -->
+
+</tr></table>
+
+<!-- Rendered in 0.07 cpu / 0.62 wall seconds. -->
+</body></html>

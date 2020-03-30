@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>Codon Usage Database</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#F0F0F0">
+
+<IMG ALIGN="middle" SRC="images/codon.gif"
+ALT="Codon Usage Database"><BR>
+
+<HR ALIGN="LEFT" SIZE="1">
+
+<H3>Data source</H3>
+
+<BLOCKQUOTE>
+	<A HREF="http://www.ncbi.nlm.nih.gov/Genbank/GenbankOverview.html">
+        NCBI-GenBank</a> Flat File Release 160.0 [June 15 2007].
+</BLOCKQUOTE>
+
+<H3>Data amount</H3>
+
+<BLOCKQUOTE>
+	   35,799 organisms<BR>
+	3,027,973 complete protein coding genes (CDS's)<BR>
+</BLOCKQUOTE>
+
+<HR ALIGN="LEFT" SIZE="1">
+
+<A HREF="readme_codon.html">Announcement</A>
+
+<HR ALIGN="LEFT" SIZE="1">
+
+<B>QUERY Box for search with Latin name of organism</B>
+
+<DL>
+<DD>
+<FORM METHOD="GET" ACTION="/codon/cgi-bin/spsearch.cgi">
+<INPUT SIZE="40" NAME="species">
+<BR>
+Case:
+<INPUT TYPE="radio" NAME="c" VALUE="s" CHECKED>sensitive
+<INPUT TYPE="radio" NAME="c" VALUE="i">insensitive
+<BR>
+<INPUT TYPE=SUBMIT VALUE="Submit">
+<INPUT TYPE=RESET VALUE="Clear">
+</DD>
+
+<P>
+
+<DD>Input a scientific name (or its <A HREF="regexp.html">regular
+expression</A>) for an organism and press "Submit" or return key. Use
+<B>Latin name</B> such as "Marchantia polymorpha", "Saccharomyces
+cerevisiae" etc., not "liverwort", "yeast" etc.
+
+</FORM>
+</DL>
+
+<B>Alphabetical lists of all organisms</B>
+
+<DL>
+<DD>
+<PRE><A HREF="/codon/A.html">A</A>  <A HREF="/codon/B.html">B</A>  <A HREF="/codon/C.html">C</A>  <A HREF="/codon/D.html">D</A>  <A HREF="/codon/E.html">E</A>  <A HREF="/codon/F.html">F</A>  <A HREF="/codon/G.html">G</A>  <A HREF="/codon/H.html">H</A>  <A HREF="/codon/I.html">I</A>  <A HREF="/codon/J.html">J</A>  <A HREF="/codon/K.html">K</A>  <A HREF="/codon/L.html">L</A>  <A HREF="/codon/M.html">M</A>
+
+<A HREF="/codon/N.html">N</A>  <A HREF="/codon/O.html">O</A>  <A HREF="/codon/P.html">P</A>  <A HREF="/codon/Q.html">Q</A>  <A HREF="/codon/R.html">R</A>  <A HREF="/codon/S.html">S</A>  <A HREF="/codon/T.html">T</A>  <A HREF="/codon/U.html">U</A>  <A HREF="/codon/V.html">V</A>  <A HREF="/codon/W.html">W</A>  <A HREF="/codon/X.html">X</A>  <A HREF="/codon/Y.html">Y</A>  <A HREF="/codon/Z.html">Z</A>
+
+<A HREF="/codon/Chloroplast.html">Chloroplast</A>  <A HREF="/codon/Mitochondrion.html">Mitochondrion</A>
+
+<A HREF="/codon/OTHERS.html">Others (intials are not capital)</A></PRE>
+
+</DL>
+
+<HR ALIGN="LEFT" SIZE="1">
+
+<B><!-- A HREF="http://www.kazusa.or.jp/codon/CUTG.html" -->
+<A HREF="ftp://ftp.kazusa.or.jp/pub/codon/current/">
+CUTG:</A> Codon Usage Tabulated from GenBank (ftp distribution)</B>
+<br>
+<A HREF="ftp://ftp.ebi.ac.uk/pub/databases/cutg/">
+EBI mirror</a> (European Bioinformatics Institute, Cambridge, UK)
+
+<HR ALIGN="LEFT" SIZE="1">
+
+<B>Additional Service</B>
+<BR>
+<A HREF="countcodon.html">
+Countcodon program:</A> compilation a sequence into a codon usage table
+
+<HR ALIGN="LEFT" SIZE="1">
+
+<I><A HREF="http://www.kazusa.or.jp/~yn/">
+NAKAMURA, Yasukazu</A></I>
+|
+<I><A HREF="http://www.kazusa.or.jp/en/plant/">
+Department of Plant Gene Research</A></I>
+|
+<I><A HREF="http://www.kazusa.or.jp/">Kazusa</A></I>
+<!-- |
+(I)(A HREF="http://www.dna.affrc.go.jp/htdocs/stats/codon.html")
+Access stat(/A)(/I -->
+
+</BODY>
+</HTML>

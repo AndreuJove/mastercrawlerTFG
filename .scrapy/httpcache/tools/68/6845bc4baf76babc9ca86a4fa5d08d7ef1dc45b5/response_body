@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang="en_US">
+<HEAD>
+  <TITLE>Switch gene - Diamond-Blackfan Anemia - Leiden Open Variation Database</TITLE>
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META name="Author" content="LOVD development team, LUMC, Netherlands">
+  <META name="Generator" content="gPHPEdit / GIMP @ GNU/Linux (Ubuntu)">
+  <LINK rel="stylesheet" type="text/css" href="./styles.css">
+  <LINK rel="shortcut icon" href="./favicon.ico">
+  <LINK rel="alternate" type="application/atom+xml" title="Diamond-Blackfan Anemia Atom 1.0 feed" href="./api/feed.php" />
+
+  <SCRIPT type="text/javascript">
+    <!--
+    navHome_B     = new Image();
+    navHome_B.src = './gfx/tab_home_B.png';
+    navHome_H     = new Image();
+    navHome_H.src = './gfx/tab_home_H.png';
+    navVariants_B     = new Image();
+    navVariants_B.src = './gfx/tab_variants_B.png';
+    navVariants_H     = new Image();
+    navVariants_H.src = './gfx/tab_variants_H.png';
+    navSubmitters_B     = new Image();
+    navSubmitters_B.src = './gfx/tab_submitters_B.png';
+    navSubmitters_H     = new Image();
+    navSubmitters_H.src = './gfx/tab_submitters_H.png';
+    navSubmit_B     = new Image();
+    navSubmit_B.src = './gfx/tab_submit_B.png';
+    navSubmit_H     = new Image();
+    navSubmit_H.src = './gfx/tab_submit_H.png';
+    navDocs_B     = new Image();
+    navDocs_B.src = './gfx/tab_docs_B.png';
+    navDocs_H     = new Image();
+    navDocs_H.src = './gfx/tab_docs_H.png';
+
+    // Used for tab images.
+    function lovd_imageSwitch (image_id, image_mode) {
+      document.getElementById(image_id).src = eval(image_id + '_' + image_mode + '.src');
+    }
+
+    function lovd_switchGeneInline () {
+      varForm = '<FORM action="/home.php" id="SelectGeneDBInline" method="get" style="margin : 0px;"><SELECT name="select_db" onchange="document.getElementById(\'SelectGeneDBInline\').submit();"><OPTION value="GATA1">GATA1 (GATA binding protein 1 (globin transcription factor 1))</OPTION><OPTION value="RPL11">RPL11 (ribosomal protein L11)</OPTION><OPTION value="RPL15">RPL15 (ribosomal protein L15)</OPTION><OPTION value="RPL26">RPL26 (ribosomal protein L26)</OPTION><OPTION value="RPL31">RPL31 (ribosomal protein L31)</OPTION><OPTION value="RPL35A">RPL35A (ribosomal protein L35a)</OPTION><OPTION value="RPL5">RPL5 (ribosomal protein L5)</OPTION><OPTION value="RPS10">RPS10 (ribosomal protein S10)</OPTION><OPTION value="RPS17">RPS17 (ribosomal protein S17)</OPTION><OPTION value="RPS19">RPS19 (ribosomal protein S19)</OPTION><OPTION value="RPS24">RPS24 (ribosomal protein S24)</OPTION><OPTION value="RPS26">RPS26 (ribosomal protein S26)</OPTION><OPTION value="RPS7">RPS7 (ribosomal protein S7)</OPTION></SELECT><INPUT type="submit" value="Switch"></FORM>';
+      document.getElementById('gene_name').innerHTML=varForm;
+    }
+
+    //-->
+  </SCRIPT>
+  <SCRIPT type="text/javascript" src="./inc-js-openwindow.php"></SCRIPT>
+</HEAD>
+
+<BODY style="margin : 0px;">
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="100%"><TR><TD>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="100%" class="logo">
+  <TR>
+    <TD width="150">
+      <IMG src="./gfx/LOVD_logo130x50.jpg" alt="LOVD - Leiden Open Variation Database" width="130" height="50">
+    </TD>
+    <TD valign="top" style="padding-top : 2px;">
+      <H2 style="margin-bottom : 2px;">Diamond-Blackfan Anemia</H2>
+    </TD>
+    <TD valign="top" align="right" style="padding-right : 5px; padding-top : 2px;">
+      LOVD v.2.0 Build 36 [ <A href="./status.php">Current LOVD status</A> ]<BR>
+      <A href="./submitters.php?action=register"><B>Register as submitter</B></A> | <A href="./account_login.php"><B>Log in</B></A><BR>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="100%" class="logo">
+  <TR>
+    <TD align="left" style="background : url('./gfx/tab_fill.png');">
+      <IMG src="./gfx/tab_0F.png" alt="" width="33" height="30" align="left">
+      <A href="/home.php"><IMG src="./gfx/tab_home_F.png" alt="Home" title="Home" width="41" height="30" align="left" id="navHome" border="0"></A>
+      <IMG src="./gfx/tab_FB.png" alt="" width="33" height="30" align="left">
+      <A href="/variants.php?action=search_unique"><IMG src="./gfx/tab_variants_B.png" alt="View unique variants" title="View unique variants" width="56" height="30" align="left" id="navVariants" border="0" onmouseover="lovd_imageSwitch('navVariants', 'H');" onmouseout="lovd_imageSwitch('navVariants', 'B');"></A>
+      <IMG src="./gfx/tab_BB.png" alt="" width="33" height="30" align="left">
+      <A href="/submitters.php?action=public_list"><IMG src="./gfx/tab_submitters_B.png" alt="Public list of submitters" title="Public list of submitters" width="75" height="30" align="left" id="navSubmitters" border="0" onmouseover="lovd_imageSwitch('navSubmitters', 'H');" onmouseout="lovd_imageSwitch('navSubmitters', 'B');"></A>
+      <IMG src="./gfx/tab_BB.png" alt="" width="33" height="30" align="left">
+      <A href="/submit.php"><IMG src="./gfx/tab_submit_B.png" alt="Submit new data" title="Submit new data" width="50" height="30" align="left" id="navSubmit" border="0" onmouseover="lovd_imageSwitch('navSubmit', 'H');" onmouseout="lovd_imageSwitch('navSubmit', 'B');"></A>
+      <IMG src="./gfx/tab_BB.png" alt="" width="33" height="30" align="left">
+      <A href="/docs/index.php"><IMG src="./gfx/tab_docs_B.png" alt="LOVD manual table of contents" title="LOVD manual table of contents" width="110" height="30" align="left" id="navDocs" border="0" onmouseover="lovd_imageSwitch('navDocs', 'H');" onmouseout="lovd_imageSwitch('navDocs', 'B');"></A>
+      <IMG src="./gfx/tab_B0.png" alt="" width="33" height="30" align="left">
+    </TD>
+  </TR>
+</TABLE>
+
+<DIV style="padding : 5px; margin-bottom : 5px;">
+<TABLE border="0" cellpadding="0" cellspacing="0" width="100%" class="submenu">
+  <TR>
+    <TD>
+      <TABLE border="0" cellpadding="0" cellspacing="0">
+        <TR>
+          <TD align="center"><A href="/home.php">Home</A></TD>
+          <TD style="padding : 0px;">&nbsp;</TD>
+          <TD align="center" style="background : #C8DCFA;"><A href="/home.php?action=switch_db">Switch&nbsp;gene</A></TD>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+</TABLE>
+</DIV>
+
+
+
+
+<DIV style="padding : 0px 10px;">
+<TABLE border="0" cellpadding="0" cellspacing="0" width="100%">
+  <TR>
+    <TD>
+
+
+
+
+
+
+
+
+      <IMG src="./gfx/header_home_select.png" alt="Home - Select gene database" width="500" height="30"><BR>
+      <BR>
+      Please select a gene database:<BR>
+      <FORM action="/home.php" id="SelectGeneDB" method="get">
+        <SELECT name="select_db" onchange="document.getElementById('SelectGeneDB').submit();">
+          <OPTION value="GATA1">GATA1 (GATA binding protein 1 (globin transcription factor 1))</OPTION>
+          <OPTION value="RPL11">RPL11 (ribosomal protein L11)</OPTION>
+          <OPTION value="RPL15">RPL15 (ribosomal protein L15)</OPTION>
+          <OPTION value="RPL26">RPL26 (ribosomal protein L26)</OPTION>
+          <OPTION value="RPL31">RPL31 (ribosomal protein L31)</OPTION>
+          <OPTION value="RPL35A">RPL35A (ribosomal protein L35a)</OPTION>
+          <OPTION value="RPL5">RPL5 (ribosomal protein L5)</OPTION>
+          <OPTION value="RPS10">RPS10 (ribosomal protein S10)</OPTION>
+          <OPTION value="RPS17">RPS17 (ribosomal protein S17)</OPTION>
+          <OPTION value="RPS19">RPS19 (ribosomal protein S19)</OPTION>
+          <OPTION value="RPS24">RPS24 (ribosomal protein S24)</OPTION>
+          <OPTION value="RPS26">RPS26 (ribosomal protein S26)</OPTION>
+          <OPTION value="RPS7">RPS7 (ribosomal protein S7)</OPTION>
+        </SELECT><BR>
+        <INPUT type="submit" value="Select gene database">
+      </FORM>
+
+
+
+
+
+
+
+
+
+    </TD>
+  </TR>
+</TABLE>
+</DIV>
+<BR>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="100%" class="footer">
+  <TR>
+    <TD width="84">
+      &nbsp;
+    </TD>
+    <TD align="center">
+  Powered by <A href="http://www.LOVD.nl/2.0/" target="_blank">LOVD v.2.0</A> Build 36<BR>
+  &copy;2004-2014 <A href="http://www.lumc.nl/" target="_blank">Leiden University Medical Center</A>
+    </TD>
+    <TD width="42" align="right">
+      <IMG src="./gfx/lovd_mapping_99.png" alt="" title="" width="32" height="32" id="mapping_progress" style="margin : 5px;">
+    </TD>
+    <TD width="42" align="right">
+      <IMG src="./gfx/lovd_update_newer_blue.png" alt="" width="32" height="32" style="margin : 5px;">
+    </TD>
+  </TR>
+</TABLE>
+
+</TD></TR></TABLE>
+
+<SCRIPT type="text/javascript">
+  <!--
+  objImg = document.getElementById('mapping_progress');
+
+function lovd_HTTPRequest (sURL) {
+    // Create HTTP request object.
+    var objHTTP;
+    try {
+        // W3C standard.
+        objHTTP = new XMLHttpRequest();
+    } catch (e) {
+        // Internet Explorer?
+        try {
+            objHTTP = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                objHTTP = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+                // Ok, last try!
+                try {
+                    objHTTP = window.createRequest();
+                } catch (e) {
+                    // Never mind.
+                    objHTTP = false;
+                }
+            }
+        }
+    }
+
+    if (objHTTP) {
+        objHTTP.open("GET", sURL, false);
+        objHTTP.send(null);
+        return objHTTP;
+
+    } else {
+        return false;
+    }
+}
+
+
+
+  function lovd_mapVariants () {
+    // Request file that will do the actual work.
+    objHTTP = lovd_HTTPRequest("http://www.dbagenes.unito.it/ajax-map_variants.php");
+
+    if (!objHTTP || objHTTP.status != 200) {
+        // Don't try again.
+        objImg.src = "./gfx/lovd_mapping_99.png";
+        objImg.title = "There was a problem with LOVD while mapping variants to the genome.";
+    } else {
+        aResponse = objHTTP.responseText.split("\t");
+        // 2010-05-03; 2.0-26; Verify output, to prevent PHP errors from freaking out the browser (= every 50 microseconds a new request).
+        // Took (and shortened) the "is_numeric()" implementation from http://phpjs.org/functions/is_numeric:449 (thanks guys).
+        if (aResponse.length == 2 && !isNaN(aResponse[0])) {
+            objImg.src = "./gfx/lovd_mapping_" + aResponse[0] + ".png";
+            objImg.title = aResponse[1];
+
+            if (aResponse[1] != "All done!") {
+                setTimeout("lovd_mapVariants()", 50);
+            } else {
+                objImg.setAttribute("onclick", "lovd_mapVariants();");
+            }
+        } else {
+            objImg.title = "Error occured: " + objHTTP.responseText;
+        }
+    }
+  }
+
+setTimeout("lovd_mapVariants()", 500);
+  // -->
+</SCRIPT>
+
+</BODY>
+</HTML>

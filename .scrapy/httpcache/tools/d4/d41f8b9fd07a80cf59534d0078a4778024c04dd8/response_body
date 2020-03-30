@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="iso-8859-7"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7" />
+<title>FORTH/ICE-HT - Staff</title>
+<style type='text/css'>@import url(../_styles/iceht.css);</style>
+    <script type="text/javascript" src="../_scripts/functions.js"></script>
+<style type="text/css">
+<!--
+body {
+    background:#ffffff;
+    font: normal 11px Verdana, Arial;
+    color: #303030;
+    text-align:center;
+    margin:0px;
+    padding:0px;
+}
+#TopLinks { height: 20px; margin-top: 20px; }
+#TopLinks li {
+    font: normal 11px Tahoma, Arial, Verdana;
+    color: #b6dcf3;
+    display: inline;
+}
+#TopLinks li a {
+    font: normal 11px Tahoma, Arial, Verdana;
+    color: #b6dcf3;
+}
+#TopLinks li a:hover {
+    color: #fff;
+}
+#search {
+    background:  url(../_gfx/bg_search.gif) no-repeat bottom;
+    float:left;
+    width:259px;
+    height:40px;
+    padding:0px;
+    margin:0px;
+}
+#search div { padding-top: 13px; padding-left: 0px; }
+#search label {
+    font: bold 11px Arial, Verdana;
+    color: #b1170b;
+}
+#search input {
+    border: 0px;
+    width: 130px;
+    height: 16px;
+    padding: 0px 0px;
+    font: normal 12px Arial, Verdana;
+    color: #acacad;
+}
+.footer2 {
+    font: normal 10px Verdana, Arial;
+    color: #a6a6a6;
+}
+.footer2 a {
+    font: bold 10px Verdana, Arial;
+    color: #a6a6a6;
+}
+-->
+</style></head>
+
+<body>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="148" align="center" valign="top" class="tdheader2"><table width="765" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="506" height="40" colspan="2" align="left"><ul id="TopLinks">
+          <li><a href="../index.html">Homepage</a>&nbsp;&nbsp;|&nbsp;</li>
+          <li><a href="../sitemap.html">Sitemap</a></li>
+      
+</ul></td>
+        <td width="259"><div id="search"><div style="float:left">
+    <form action="http://www.iceht.forth.gr/searchresults.html" id="searchbox_001326610828956815321:kxgaiqyp__y">
+      <input type="hidden" name="cx" value="001326610828956815321:kxgaiqyp__y" />
+      <input type="hidden" name="cof" value="FORID:11" />
+			<img src="../_gfx/passepartout.gif" alt="search" style="width:73px;height:16px;" border="0" />
+			<input type="text" name="q" id="inpSearch" /><img src="../_gfx/passepartout.gif" alt="search" style="width:16px;height:16px;" border="0" /><input name="sa" type="image" style="width:16px;height:16px;" value="Search" src="../_gfx/passepartout.gif" />
+			</form><script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_001326610828956815321%3Akxgaiqyp__y"></script>
+<!-- Google CSE Search Box Ends --></div>
+        </div></td>
+      </tr>
+      <tr>
+        <td width="506" height="80" colspan="2" align="left"><a href="http://www.forth.gr/" target="forth"><img src="../_gfx/bg_index_logo_en2.jpg" alt="Foundation for Research and Technology Hellas" width="402" height="80" hspace="10" border="0" /></a></td>
+        <td width="259" rowspan="2"><img src="../_gfx/bg_index_pic2b.gif" alt="FORTH/ICE-HT" width="259" height="108" /></td>
+      </tr>
+      <tr align="left">
+        <td width="460" height="28"><img src="../_gfx/passepartout.gif" alt="passepartout" width="10" height="10" /><img src="../_gfx/title.gif" width="275" height="28" alt="Institute of Chemical Engineering Sciences"/></td>
+          <td width="46" align="right"><img src='../_gfx/flag-greek.gif' alt='Ελληνική Έκδοση' width="19" height="13" border="0" onmouseover="AlphaImage(this,'on');" onmouseout="AlphaImage(this,'off');" /><img src="../_gfx/passepartout.gif" alt="passepartout" width="7" height="10" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="tdmainpage">
+  <tr>
+    <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="41" class="tdshade"><img src="../_gfx/passepartout.gif" alt="passepartout" width="10" height="41" /></td>
+      </tr>
+    </table></td>
+    <td width="765" align="center" valign="top">
+	<table width="765" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="5" valign="top"><img src="../_gfx/bg_inside_main_left.gif" alt="bg_inside_main_left" width="5" height="262" /></td>
+        <td width="755" valign="top" bgcolor="#FFFFFF"><table width="755" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="5"><img src="../_gfx/passepartout.gif" alt="passepartout" width="5" height="10" /></td>
+            <td width="200" align="left" valign="top">
+			      <!-- <LeftMenu> -->
+      <div><img src="../_gfx/bg_LeftMenuTop_big.gif" alt="bg_LeftMenuTop_big" width="190" height="17" /></div>
+      <ul class="LeftMenu">
+        <li><a href="../about.html">About ICE-HT</a></li>
+	<li><a href="../tour.html">Tour</a></li>
+        <li><a href="../news.html">News-Events</a></li>
+        <li><a href="../rd.html">R&amp;D</a></li>
+        <li><a href="../achievements.html">Achievements</a></li>
+        <li id='activemn'><a href="../staff.html">Staff</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../facilities.html">Facilities</a></li>
+        <li><a href="../seminars.html">Seminars</a></li>
+        <li><a href="../journals.html">Scientific Journals Editing</a></li>
+        <li><a href="../spin-offs.html">Spin-off Companies &amp; Associations</a></li>
+        <li><a href="../announcements.html">Announcements-Bids</a></li>
+        <li><a href="../jobs.html">Job Opportunities</a></li>
+		<li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <div><img src="../_gfx/bg_LeftMenuBottom_big.gif" alt="bg_LeftMenuBottom_big" width="190" height="13" /></div>
+        <!-- </LeftMenu> -->
+      <div align="center"><br /><br /><br /><iframe name="banners" class="buttonsframe" src="../banners.html" frameborder="0" width="190" height="370" scrolling="no"></iframe></div></td>
+            <td width="15"><img src="../_gfx/passepartout.gif" alt="passepartout" width="15" height="10" /></td>
+            <td width="535" valign="top"><table width="515" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" class="tdyouarehere"><img src="../_gfx/passepartout.gif" alt="passepartout" width="515" height="3" /></td>
+              </tr>
+              <tr>
+                <td align="left">
+                  <table width="515" border="0" cellpadding="0" cellspacing="0" class="tdyouarehere">
+                    <tr>
+                      <td width="15" align="left" valign="top"><img src="../_gfx/ArrowRightRed.gif" alt="ArrowRightRed" width="5" height="9" hspace="5" vspace="2" /></td>
+                      <td width="500"><div id="youarehere">You are here: <a href="../index.html">ICE-HT 
+                                </a>&gt; <a href="../staff.html">Staff </a> &gt; Vasilis BURGANOS </div></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height="3" align="left" class="tdyouarehere"><img src="../_gfx/youarehere2.gif" alt="youarehere2" width="515" height="3" /></td>
+              </tr>
+              <tr>
+                <td align="left">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="left"><h2>Vasilis BURGANOS </h2></td>
+              </tr>
+             <tr>
+                      <td align="left">
+					  
+					  <table width="100%" border="0">
+          <tr> 
+                            <td width="180"><img src="../images/burganos.jpg" alt="Vasilis BURGANOS" width="170" height="199" border="0" /></td>
+                            <td align="left">Research Director<br />
+                            &amp;<br />
+																							FORTH/ICE-HT Director
+														</td>
+          </tr>
+          <tr> 
+                            <td colspan="2" class="align-center"><hr />
+                            </td>
+          </tr>
+          <tr> 
+                            <td colspan="2" ><strong>Tel. :</strong> +30 2610-965215&nbsp;&nbsp;&nbsp;<strong>Email:</strong> 
+                              <a href="mailto:vbur@iceht.forth.gr">vbur@iceht.forth.gr</a> 
+                            </td>
+          </tr>
+          <tr> 
+            <td height="23" colspan="2" > <hr ></hr> <p align="right"><font size="-2" color="#003366" face="Verdana, Arial, Helvetica"><i>Last updated: December 2018 </i></font></p></td>
+          </tr>
+        </table>
+					   
+                     </td></tr>
+
+			  <tr>
+                <td align="left"> 
+		<h1>Education: </h1>
+        <p> 1988: PhD in Chemical Engineering, Univ. of Rochester, USA <br />
+          1986: MSc in Chemical Engineering, Univ. of Rochester, USA <br />
+          1983: Diploma in Chemical Engineering, NTU, Athens, Greece </p>
+                           
+		<p>&nbsp;</p>
+		
+		<h1>Previous Employment/Occupation:</h1>
+        <p> 
+		 1995-1999: Principal Researcher, FORTH/ICE-HT, Greece<br /> 
+1992-97, 2004-14: Adjunct Lecturer (non-remunerated), University of Patras, Greece<br />
+1990-1995: Research Associate, FORTH/ICE-HT, Greece <br />
+1988-1990: Post-Doctoral Fellow, FORTH/ICE-HT, Greece <br />
+1983-1988: Research and Teaching Assistant, Univ. of Rochester, USA 
+ 
+        </p>
+         <p>&nbsp;</p>  
+		 
+		 <h1>Research Activities:</h1>
+        <p>Diffusion and sorption in  porous materials. Single and multi phase flow in porous media. Evaporation and  film formation. Flow at nanoscales. Pore structural analysis and digital  reconstruction. Membrane-based separation processes. Hybrid media. Molecular  simulations.</p>
+        <p>&nbsp;</p>
+                        <h1>
+                          Participation in Research Projects: </h1>
+        <p>1988-present: Participated in  several European and national programmes, including RTD projects, Marie-Curie  mobility and training projects, Networks of Excellence, and industry-funded  projects. Principal Researcher in 25 EC or GSRT-funded projects, and 10  industrial contracts.</p>
+                            <p>&nbsp;</p>
+						<h1> 
+                          Publications: </h1>
+                        <p>Over 190 publications in  refereed journals and conference proceedings.</p>
+                        <p>&nbsp;</p>   
+                        <h1> 
+                          Conferences: </h1>
+                        <p>Participated in numerous international and national conferences. <br />
+						Member of the scientific and organizing committees of international and national conferences.<br />
+Key-note lecturer in international conferences.<br />
+Main organizer of conferences, workshops, and intensive courses<br />
+"Membranes: Preparation, Properties and Applications", MRS Annual Meeting, Boston (2002)<br />
+"XII International Conference on Computational Methods in Water Resources", CMWR XII, Crete (1998)<br />
+"Nanostructured materials &amp; Membrane Training Course", NanoMemCourse, Marie Curie Conferences and Training (2008)<br />
+"4th Panhellenic Symposium on Porous Materials", Patras (2009). 
+</p>
+                        <p>&nbsp;</p>    <h1> 
+                          Teaching Activities: </h1>
+        <p> 2005-2014: Design of new materials and preparation processes (Graduate School, Department of Materials Science, University of Patras, Greece).<br />
+2004-2013: Physical chemistry, classical and statistical thermodynamics (Graduate School, Department of Materials Science, University of Patras, Greece).<br />
+1992-1997: Mass and energy balances, algebra, analysis, transport phenomena in separation processes (Department of Chemical Engineering, University of Patras, Greece).<br />
+1993 : Filtration of suspensions and aerosols (Department of Chemistry, University of Sofia, Bulgaria).<br />
+1983-1987:Process control, chemical reaction kinetics, chemical engineering lab, mathematics for chemical engineers, numerical analysis for chemical engineers, analysis and design of chemical reactors (TA, Department of Chemical Engineering, University of Rochester, USA).</p>
+                       <p>&nbsp;</p>     <h1> Editorship and Books: </h1>
+        <ul class="listBullet">
+          <li>Editor, Computational Methods in Surface and Ground Water Transport, Southampton, 1998.</li>
+          <li>Editor, Computational Methods in Contamination and Remediation of Water Resources, Southampton, 1998.</li>
+          <li>Guest Editor, Materials Research Society Bulletin, Membranes and Membrane Processes, 1999.</li>
+          <li>Editor, Materials Research Society, Symposium Proceedings, "Membranes - Preparation, Properties,  and Applications", Warrendale, PA 2003.</li>
+          <li>Booklet: "Recommendations for the Assessment of a Potential Risk of Groundwater Pollution Originating from a Soil Contamination in the Unsaturated Zone", pp. 1-66, with P. Grathwohl et al., Tubingen, 2003.</li>
+          <li>Encyclopedia of Membranes, Springer, 2015 (6 entries).</li>
+          <li>Academic Editor, Mathematical Problems in Engineering, 2018-present.</li>
+          <li>Guest Editor, Special Issue, Molecular Dynamics Simulation in Materials, Materials, 2018-present.</li>
+          </ul>
+            <p>&nbsp;</p>
+                        <h1> 
+						
+                          Selected Publications: </h1>
+						  <br />
+        <ul class="listBullet">
+         <li>&quot;<a href="https://doi.org/10.1016/j.memsci.2018.08.007">Transport and reaction phenomena in multilayer membranes functioning as bioartificial kidney devices</a>&quot;, R. Refoyo, E.D. Skouras,  N.V. Chevtchik, D. Stamatialis, V.N. Burganos, J. Membr. Sci., 565, 61-71 (2018)</li>
+         <li>&quot;<a href="https://doi.org/10.1016/j.jpowsour.2017.08.070">An integrated simulator of structure and anisotropic flow in gas diffusion layers with hydrophobic additives</a>&quot;, V.N.Burganos, E.D. Skouras, A.N. Kalarakis, J. Power Sources, 365, 179-189 (2017)</li>
+		 <li>&quot;<a href="http://dx.doi.org/10.1016/j.memsci.2016.11.013">Three-dimensional reconstruction of bioactive membranes and pore-scale simulation of enzymatic reactions: the case of lactose hydrolysis</a>&quot;, N. Bali, A.J. Petsi, E.D. Skouras, V.N. Burganos, J. Membr. Sci., 524, 225-234 (2017)</li>
+          <li>&quot;<a href="http://dx.doi.org/10.1021/acs.iecr.6b03759">Three-Dimensional  Simulation of the Effects of Demolition Waste Recycling into Rotary Cement  Kilns</a>&quot;, E.D. Skouras, V.N. Burganos, Ind. Eng. Chem. Res., 56, 301-310  (2017)</li>
+          <li>&quot;<a href="http://dx.doi.org/10.1016/j.euromechflu.2013.06.013">Heat transfer and  natural convection of nanofluids in porous media</a>&quot;, G.C. Bourantas, E.D.  Skouras, V.C. Loukopoulos, V.N. Burganos, European J. Mechanics B-Fluids, 43,  45-56 (2014)</li>
+          <li>&quot;<a href="http://dx.doi.org/10.1007/s11242-012-0010-4">Mesoscopic simulation of rarefied flow in narrow channels and porous media</a>&quot;, A.N. Kalarakis, V. Michalis, E.D. Skouras, V.N. Burganos, Transp. Porous Media, 94, 385-398 (2012)</li>
+          <li>	&quot;<a href="http://dx.doi.org/10.1016/j.ces.2010.01.028">Deposition of Brownian particles during evaporation of two-dimensional sessile droplets</a>&quot;, A.J. Petsi, A.N. Kalarakis, V.N. Burganos, Chem. Eng. Sci., 65, 2978-2989 (2010)</li>
+          <li>&quot;<a href="http://www.springerlink.com/content/k01v1u8552641804/">Rarefied fluid viscosity from DSMC calculations in nanosized channels</a>&quot;, V. Michalis, A.N. Kalarakis, E.D. Skouras, and V.N. Burganos, Microfl. Nanofl., 9, 847-863 (2010)</li>
+          </ul>
+		
+        
+       <p></p>
+        <p align="right"><a href="burganos/publications.html"><strong>Full List of Publications</strong></a></p>
+		 <p align="right">&nbsp;</p>	
+              </td></tr>
+			  <tr>
+                <td align="left">&nbsp;</td>
+              </tr>
+            </table>			</td>
+
+          </tr>
+        </table></td>
+		<td width="5" valign="top"><img src="../_gfx/bg_inside_main_right.gif" alt="bg_inside_main_right" width="5" height="262" /></td>
+      </tr>
+
+    </table>
+	</td>
+    <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="41" class="tdshade"><img src="../_gfx/passepartout.gif" alt="passepartout" width="10" height="41" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top">
+	<table width="765" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="765" colspan="2" valign="top" bgcolor="#FFFFFF"><img src="../_gfx/main_bottom2.gif" alt="main_bottom2" width="765" height="18" /></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" bgcolor="#FFFFFF"><img src="../_gfx/passepartout.gif" alt="passepartout" width="10" height="20" /></td>
+        <td align="right" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="635" align="left" valign="top" bgcolor="#FFFFFF" class="footer2"><img src="../_gfx/passepartout.gif" alt="passepartout" width="10" height="10" />FORTH/ICE-HT, Stadiou Str., Platani, P.O. Box 1414, GR-26504 Patras, Hellas. <br />
+            <img src="../_gfx/passepartout.gif" alt="passepartout" width="10" height="10" />Tel.: [+30]2610.965.300 E-mail: <a href="mailto:info@iceht.forth.gr">info@iceht.forth.gr</a><br /><img src="../_gfx/passepartout.gif" alt="passepartout" width="10" height="10" />
+        </td>
+        <td width="140" rowspan="2" align="right" valign="bottom" bgcolor="#FFFFFF"><a href="https://www.espa.gr" target="_blank"><img src="../_gfx/espa.jpg" alt="ΕΣΠΑ" width="115" height="58" hspace="5" /></a><img src="../_gfx/passepartout.gif" alt="passepartout" width="10" height="10" /></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="635" align="left" valign="top" class="footer2"><img src="../_gfx/passepartout.gif" alt="passepartout" width="10" height="10" />&copy; Copyright FOUNDATION FOR RESEARCH AND TECHNOLOGY HELLAS, All rights reserved.<br />
+          <br /><img src="../_gfx/passepartout.gif" alt="passepartout" width="10" height="10" /><a href='../contact.html'>Contact</a> | <a href='../phonebook.html'>Phonebook</a> | <a href='../links.html'>Links</a> | Greek</td>
+	  </tr>
+<tr bgcolor="#FFFFFF">
+        <td width="825" align="center" valign="top" class="footer2" colspan="2">
+	<br /><br />
+        <a href="https://www.forth.gr/_gfx/pdf/ConditionofUseITE_EN.pdf" target="_blank">Conditions of Use</a> | <a href="https://www.forth.gr/_gfx/pdf/PrivacyPolicy_EN.pdf" target="_blank">Privacy Policy</a>
+</td></tr>
+    </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30" align="center" valign="top" class="tdlastdots"></td>
+  </tr>
+</table>
+</body>
+</html>

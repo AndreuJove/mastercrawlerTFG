@@ -1,0 +1,322 @@
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56758913-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+ 
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title>ASL Data Processing Toolbox</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+        <!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+        //-->
+    </script>
+<meta name="keywords" content="arterial spin labeling, perfusion, neuroimaging, functional, mri, fmri, university of pennsylvania, imaging, brain">
+<meta name="description" content="The Center for Functional Neuroimaging at the University of Pennsylvania provides unification for currently distributed medical center efforts in physiological and clinical brain imaging and advance the general interests of the brain imaging community through targeted methods development, symposia and colloquia, handling of regulatory issues, and fund-raising efforts.">
+    <style type="text/css">
+        <!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+.style2 {color: #FF0000}
+.style3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: bold;
+}
+        -->
+    </style>
+</head>
+<div id="Layer4" style="position:absolute; width:594px; height:369px; z-index:3; left: 15px; top: 10px; visibility: visible;">
+    <table width="600" height="700" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="19" height="27">&nbsp;</td>
+        <td><div align="left"><font color="990000" size="4" face="Arial, Helvetica, sans-serif">ASL Data Processing Toolbox: ASLtbx </font>(<span class="style3"><a href="ASLtbx_manual.pdf">manual</a> in pdf, <a href="ASLtbxmanualChinese.pdf">Chinese version (&#20013;&#25991;&#29256;)</a>, <strong><span class="style2">SPM12 compatible now!</span></strong></span>)</div></td>
+        <td width="28">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="27">&nbsp;</td>
+            <td class="style1"><p style="margin-top: 0;"><strong>This toolkit can be used for both resting ASL data processing and ASL perfusion fMRI data processing with corresponding changes to the settings</strong>. We are now only releasing the packaged ASLtbx through the GPL license. All correspondence can be addressed to: Ze Wang through <a href="mailto:redhatw@gmail.com">(redhatw at gmail dot com)</a> or <a href="mailto:zewangnew@163.com">(zewangnew at 163 dot com)</a>. Questions or suggestions or discussions can be posted in the discussion forum:<a href="https://groups.google.com/forum/#!forum/asltbx-discussion-board">https://groups.google.com/forum/#!forum/asltbx-discussion-board</a>. </p>
+            <p>This toolkit is distributed &quot;<strong><span class="style2">AS IS</span></strong>&quot;. This is no warranty to the accuracy of the package, and we are not responsible for any data interpretations or quality judgements&nbsp;though academic discussions are welcome, depending on how much free time we have.<strong><span class="style2"> Please check this webpage for updates</span></strong>. We will unlikely send emails out unless there are significant changes. </p>
+<p>Other sources: 1. ASLtbx has been converted into executive binary files in ANTS pipedream developed by Brain Avants from the PICSL: http://www.picsl.upenn.edu/ANTS/pipedream.php. </p>
+<p style="margin-bottom: 0;">2. Chris Rorden has also provided a wraper for most of the functions available in ASLtbx, as well as sample data: http://www.mccauslandcenter.sc.edu/CRNL/tools/asl.</p>
+<p>&nbsp;</p></td>
+          <td>&nbsp;</td>
+      </tr>
+        <tr>
+          <td height="19">&nbsp;</td>
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td height="19">&nbsp;</td>
+        <td><p class="style1" style="margin-top:0; margin-bottom: 0;"><strong><em>Overview</em></strong></p>
+          <p class="style1" style="MARGIN-TOP: 0pt;">ASLtbx and the sample data provided in this website are free for academic use. The current version of ASLtbx is based on Matlab 5.3 and above versions (MathWorks Inc, Natick MA) and SPM 5/8/12 (The Wellcome Trust Centre for Neuroimaging at University College London). It's a collection of batch scripts, implementing a pipeline for processing ASL MRI data for resting or functional studies. Some details about the ASL data processing pipeline can be found in the following reference, which should also be the appropriate citation for this toolbox:</p>
+		  <p align="justify" class="style1" style="margin-bottom: 0;">1. Ze Wang, Geoffrey Aguirre, Hengyi Rao, JiongJiong Wang, Anna R. Childress, John A. Detre, Empirical ASL data analysis using an ASL data processing toolbox: ASLtbx, Magnetic Resonance Imaging, 2008, 26(2):261-9.</p>
+		  <p align="justify" class="style1" style="margin-top: 0;"><span class="style1" style="margin-top: 0; margin-bottom: 0;">2. Ze Wang, Improving cerebral blood flow quantification for arterial spin labeled perfusion MRI by removing residual motion artifacts and global signal fluctuations,          Magnetic Resonance Imaging, 2012 (in press). http://dx.doi.org/10.1016/j.mri.2012.05.004.</span></p>
+   		  <p class="style1" style="TEXT-ALIGN: justify; margin-bottom: 0pt;">The current version has been tested with SPM5/8/12, and we are implementing more data denoising procedures, which have been partly published in the following papers. </p>
+          <p class="style1" style="MARGIN-BOTTOM: 0pt; TEXT-ALIGN: justify">William T. Hu*, Ze Wang*, Virginia M.-Y. Lee, John Q. Trojanowski, John Detre, Murray Grossman, Distinct Cerebral Perfusion Patterns in FTLD and AD, Neurology, 2010 Sep 7;75(10):881-8. (contributed equally).</p>
+          <p class="style1" style="MARGIN-BOTTOM: 0pt; TEXT-ALIGN: justify">Ze Wang, Sandhitsu R. Das, Sharon X. Xie, Steven E Arnold, John A Detre, David A. Wolk, For ADNI, Arterial Spin Labeled MRI in Prodromal Alzheimer's Disease: A Multi-Site Study, NeuroImage: clinical, 2013, 2, 630-636.</p>
+          <p class="style1" style="MARGIN-BOTTOM: 0pt; TEXT-ALIGN: justify">Ze Wang, Support Vector  Machine Learning-based Cerebral Blood Flow Quantification for Arterial Spin  Labeling MRI, <strong><em>Human Brain Mapping</em></strong>, 2014, 35(7):2869-75.</p>
+
+        </td>
+        <td>&nbsp;</td>
+
+      </tr>
+      <tr>
+        <td height="19">&nbsp;</td>
+        <td class="style3">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="19">&nbsp;</td>
+        <td><p class="style1" style="margin-bottom: 0;"><em><strong>Cerebral Blood Flow calculation code</strong></em></p>
+          <p class="style1" style="margin-top: 0">This program is independent of SPM except for two SPM functions for reading and writing images. We are now converting the CBF quantification code into C++ code so that it can be incorporated into other neuroimaging data analysis packages too. </p>
+          <p class="style1" style="MARGIN-TOP: 0pt">The current version is written in Matlab m-scripts (asl_perf_subtract.m), which can be used in batch mode or interactively through the GUI. <strong>Once ready, online CBF calculation code working in Siemens platform will be available following the same procedures as those for getting our ASL imaging sequence</strong>. For a simple trial, you can just type asl_perf_subtract in Matlab command window and follow the steps prompt in a popup window. Documentations about the quantification procedure can be found by typing "help asl_perf_subtract" in Matlab command window or checking the code directly. </p>
+          <p class="style1" style="MARGIN-TOP: 0pt">Note: this code will output the whole brain mean CBF value. When that value is abnormally low, like 12, you may need to check the mean CBF map to see whether there are large areas with extremely negative CBF values. The most vulnerable regions might be found in the inferior slices and superior slices and regions close to the ventricles. </p>
+        </td>
+        <td>&nbsp;</td>
+
+      </tr>
+      <tr>
+        <td height="72">&nbsp;</td>
+        <td><p class="style1" style="margin-bottom: 0;">&nbsp;</p>
+          <p class="style1" style="margin-top: 0; margin-bottom: 0;"><em><strong>Processing ASL data in batch mode</strong></em></p>
+          <p class="style1" style="MARGIN-TOP: 0pt;">Please refer to the <a href="documents/ASLtbx_manual.pdf">manual</a> and the  readme file included in the zip file for an overview of the whole processing steps, especially for setting the environment variables, parameters, and options for processing a whole dataset. Briefly, you need to follow the same data organization rule for each subject, and modify the setting file: par.m. Each processing step like motion correction, coregisteration, smoothing, CBF calculation, normalization, GLM, group analysis, etc, is coded in a separate file. The processing pipeline is in "batch_run.m". The setting file can be tested by typing "par" in Matlab and check the field by typing "PAR.subjects{:}" etc. Once the setting file is ok, you can test several steps in batch_run.m.</p>
+		  <p class="style1" style="margin-bottom: 0pt;">Some people may want to use the pure boxcar function as the reference in GLM. In the toolbox, this can be done by turning on line 73 "SPM.xBF.name='Fourier set' and commenting out line 74 "SPM.xBF.name='hrf'".</p>
+        </td>
+
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="72">&nbsp;</td>
+        <td><p class="style1" style="margin-bottom: 0;">&nbsp;</p>
+          <p class="style1" style="margin-top: 0; margin-bottom: 0;"><em><strong>Running GLM using SPM user interface</strong></em></p>
+
+          <p class="style1" style="margin-top: 0; margin-bottom: 0;">It may be helpful to perform ASL data analysis step by step using SPM interface. For SPM&lt;8,  before running GLM on perfusion difference images or CBF images using SPM, you should change the default relative threshold that is used to remove background voxels. Just type "spm_defaults" and "defaults.mask.thresh=0.01" (or set it to -inf) after you load spm GUI. Then you can go ahead to set up the design matrix. For SPM8, you need to load SPM.mat after setting up the design matrix and change the threshold in the mat file by typing &quot;</p>
+          <div><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">load SPM</span></div>
+          <div><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">SPM.xM.TH=-inf*ones(SPM.nscan,<wbr>1)</span></div>
+          <div><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">save SPM SPM</span>&quot;. </div>
+          <p class="style1" style="margin-top: 0; margin-bottom: 0;">.This problem has been solved in the batch scripts. </p>
+	    <p class="style1" style="margin-top: 0; margin-bottom: 0;">&nbsp;</p></td>
+        <td>&nbsp;</td>
+
+      </tr>
+      <tr>
+        <td height="72">&nbsp;</td>
+
+
+
+        <td>
+		  <p class="style1" style="margin-bottom: 0;"><em><strong>Download</strong></em></p>
+		  <p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Please register before downloading ASLtbx, ASL toolbox Manual and two sample datasets. We are providing a CASL sample dataset and a PASL sample dataset. But please beware of that by providing sample data, we are not intending to provide any golden standard for either CASL or PASL mean CBF maps.</p>
+		  <p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">&nbsp;</p>
+
+          <p class="style1" style="margin-top: 0; margin-bottom: 0;"><em><strong>
+		  Please fill the DOWNLOAD registration form</strong></em></p>
+
+        <p class="style1" style="margin-top: 0; margin-bottom: 0;">Please enter your information to download ASLtbx and sample datasets.</p></td>
+        <td>&nbsp;</td>
+          	        <form action="download.php" method="post" target="_blank">
+
+          <table>
+
+            <tr>
+
+              <td class="style1" style="margin-top: 0; margin-bottom: 0;" >   &nbsp;&nbsp;&nbsp;&nbsp;  Name</td>
+
+              <td><input type="text" maxlength=100 name="V_Name" value="" /><span style="font-size:small;font-style:italic;color:red;">required</span></td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="style1" style="margin-top: 0; margin-bottom: 0;" >  &nbsp;&nbsp;&nbsp;&nbsp;  Email</td>
+
+              <td><input type="text" maxlength=100 name="V_Email"  value="" /><span style="font-size:small;font-style:italic;color:red;">required</span></td>
+
+            </tr>
+
+            <tr>
+
+              <td class="style1" style="margin-top: 0; margin-bottom: 0;" >   &nbsp;&nbsp;&nbsp;&nbsp;  Institution</td>
+
+              <td><input maxlength=100  type="text" name="V_Institution" value="" /><span style="font-size:small;font-style:italic;color:red;">required</span></td>
+
+            </tr>
+
+            <tr>
+
+              <td class="style1" style="margin-top: 0; margin-bottom: 0;" >   &nbsp;&nbsp;&nbsp;&nbsp;  Country</td>
+
+              <td><input type="text"  maxlength=100 name="V_Country" value="" /><span style="font-size:small;font-style:italic;color:red;">required</span></td>
+
+            </tr>
+            <tr>
+
+		    <td class="style1" style="margin-top: 0; margin-bottom: 0;" >   &nbsp;&nbsp;&nbsp;&nbsp;  Title</td>
+              <td><input type="text"  maxlength=100 name="V_Title" value="" /><span style="font-size:small; font-style:italic;">(optional)</span></td>
+
+            </tr>
+            <tr>
+
+		    <td class="style1" style="margin-top: 0; margin-bottom: 0;" >   &nbsp;&nbsp;&nbsp;&nbsp;  </td>
+              <td><input type="checkbox"   name="V_ReceivEmail" value="y" /><span style="font-size:small; font-style:italic;"> Check to revceive Email updates</span></td>
+
+            </tr>
+
+          </table>
+
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="Submit" />   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onClick="window.location='http://cfn.upenn.edu/perfusion/';">Cancel</button>
+
+        </form>
+      <tr>
+        <td height="72">&nbsp;</td>
+                      
+      <tr>
+   	    <td><p class="style1" style="margin-bottom: 0;">&nbsp;</p>
+   	      <p class="center" style="margin-top: 3; margin-bottom: 0;"> &nbsp;&nbsp; ASLtbx has been downloaded  <em><strong>7130</strong></em>  times since Jan 2009. Those who were using the toolkit before 2009 were not included in this number.</p>
+              
+        <td height="72">&nbsp;</td>
+<td>
+ <tr>
+
+<p class="style1" style="margin-bottom: 0;"><em><strong>History</strong></em></p>
+<hr />
+<p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">06-27-2015 at Hangzhou</p>
+<p class="style1" style="MARGIN-TOP: 0pt; margin-bottom: 0;">
+<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<ul style="margin-top: 0">
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Made a new version for SPM12. Major new features include: </p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">1) wraper functors for most of the processing steps,</p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">2) reset orientation code works for different type of NIFTI images now,</p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">3) temporal filtering provided.</p></li>
+</li>
+</ul>
+</p>
+<hr />
+<p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">18-July-2012</p>
+<p class="style1" style="MARGIN-TOP: 0pt; margin-bottom: 0;">
+<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<ul style="margin-top: 0">
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Updated manual, ASL MoCo code, and asl_perf_subtract.m. Major new features include: </p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">1) user can choose either M0wm or M0csf for estimating M0b,</p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">2) M0wm or M0csf value can be directly fed into the quantification routine,</p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">3) more support for using the 4D Nifti format.</p></li>
+</li>
+</ul>
+</p>
+<hr />
+<p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">28-May-2011</p>
+<p class="style1" style="MARGIN-TOP: 0pt; margin-bottom: 0;">
+<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<ul style="margin-top: 0">
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Manual has been updated and can be downloaded without registration.</p></li>
+</li>
+</ul>
+</p>
+<hr />
+<p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">19-Nov-2010</p>
+<p class="style1" style="MARGIN-TOP: 0pt; margin-bottom: 0;">
+<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<ul style="margin-top: 0">
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">asl_perf_subtract.m has been updated with new parameters (T1b, T2wm, Rwm-blood) from the latest literature. CBF quantification for PASL using voxelwise M0 value has been updated. Please see the document therein for the details.</p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Scripts for PASL resting sample data have been updated.</p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">an option added in asl_perf_subtract to allow outputting Nifti images.</p></li>
+</li>
+</ul>
+</p>
+<hr />
+<p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">18-Nov-2010</p>
+<p class="style1" style="MARGIN-TOP: 0pt; margin-bottom: 0;">
+<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<ul style="margin-top: 0">
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Updated the motion correction procedure and no separate motion correction is required now. Note the scripts for the two resting ASL datasets have not been updated.</p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Manual has been partly revised with corrections to the instructions and typos.</p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">The README.txt file has been updated.</p></li>
+</li>
+</ul>
+</p>
+<hr />
+<p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">23-Sep-2010</p>
+<p class="style1" style="MARGIN-TOP: 0pt; margin-bottom: 0;">
+<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<ul style="margin-top: 0">
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Added Pulsed ASL(PASL) example dataset with corresponding pre-set scripts.(51MB).</p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Changed the name of CASL example dataset from "ASL_Example_data.zip" to "CASL_Example_data.zip"</p></li>
+</li>
+</ul>
+</p>
+<hr />
+<p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">18-Sep-2010</p>
+<ul style="margin-bottom: 0">
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Added the first version of the ASL toolbox Manual.</p></li>
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Updated asl_perf_subtract.m.</p></li>
+</li>
+</ul>
+<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<hr />
+<p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">2004 to 2009</p>
+<ul style="margin-bottom: 0">
+<li><p class="style1" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt">Created a prototype of asl_perf_subtract in May 2004. More history records can be found in the scripts.</p></li>
+</li>
+</ul>
+<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<hr />
+  </table>
+</td>
+
+                </p>
+                 </tr>
+  <td>  <p class="style1" style="margin-bottom: 0;">All correspondence should be addressed to <a href="mailto:zewang@mail.med.upenn.edu"> zewangnew at 163.com</a> or redhatw at gmail dot com. </p></td>
+                 <td>&nbsp;</td>
+
+             </tr>
+</div>
+</body>
+</html>
+
+

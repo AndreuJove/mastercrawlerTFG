@@ -1,0 +1,27 @@
+Date: Mon, 30 Mar 2020 18:48:33 GMT
+Content-Type: text/html; charset=utf-8
+Set-Cookie: __cfduid=d17c646d62b2ddad7d900a05629cea6251585594111; expires=Wed, 29-Apr-20 18:48:31 GMT; path=/; domain=.biorxiv.org; HttpOnly; SameSite=Lax
+Set-Cookie: SSESS1dd6867f1a1b90340f573dcdef3076bc=dsx_COTLZcAwn409_gxXiYYTY0B5bct6BQWx7qKbBk0; expires=Wed, 22-Apr-2020 22:21:52 GMT; path=/; domain=.biorxiv.org; secure; HttpOnly
+Set-Cookie: SESS1dd6867f1a1b90340f573dcdef3076bc=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.biorxiv.org; httponly
+Age: 0
+Cache-Control: no-cache, must-revalidate
+Cf-Railgun: b2c55b006a 1.74 1.877486 0030 e6be
+Content-Language: en
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Link: <https://www.biorxiv.org/content/10.1101/741280v2>; rel="canonical",<https://www.biorxiv.org/node/950220>; rel="shortlink"
+Vary: Accept-Encoding
+Via: 1.1 varnish
+X-Content-Type-Options: nosniff
+X-Drupal-Cache: MISS
+X-Frame-Options: SAMEORIGIN
+X-Generator: Drupal 7 (http://drupal.org)
+X-Highwire-Sitecode: biorxiv
+X-Highwire-Smart-Code: biorxiv_production
+X-Varnish: 455375450
+X-Varnish-Cache: 
+X-Varnish-Ttl: 
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 57c4015edcd3d681-MAD
+Content-Encoding: gzip

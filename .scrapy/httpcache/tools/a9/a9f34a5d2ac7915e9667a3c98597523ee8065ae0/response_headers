@@ -1,0 +1,23 @@
+Server: nginx
+Content-Type: text/html; charset=UTF-8
+Vary: Accept-Encoding
+Vary: Cookie
+Cache-Control: max-age=43200, public
+Date: Mon, 30 Mar 2020 17:08:51 GMT
+Link: <https://www.crick.ac.uk/research/labs/peter-van-loo/software>; rel="canonical"
+Link: </research/labs/peter-van-loo/software>; rel="revision"
+X-Ua-Compatible: IE=edge
+Content-Language: en
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+X-Frame-Options: SameOrigin
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Last-Modified: Mon, 30 Mar 2020 17:08:50 GMT
+Etag: W/"1585588130"
+X-Generator: Drupal 8 (https://www.drupal.org)
+Content-Security-Policy: default-src 'self' 'unsafe-inline' *.hotjar.com *.hotjar.io 'unsafe-eval' *.crick.ac.uk *.google.com *.google-analytics.com *.gstatic.com *.googleapis.com *.vimeo.com *.vimeocdn.com *.youtube.com *.soundcloud.com *.twitter.com *.youtube.com *.twimg.com theta360.com cdn.rawgit.com raw.githubusercontent.com data:;; script-src 'self' 'unsafe-inline' *.hotjar.com *.hotjar.io 'unsafe-eval' theta360.com crick.us13.list-manage.com *.mailchimp.com *.theta360.com *.google.com *.google-analytics.com *.googleapis.com use.typekit.net *.vimeocdn.com *.vimeo.com vimeo.com *.twitter.com *.twimg.com *.youtube.com *.googletagmanager.com tagmanager.google.com cdnjs.cloudflare.com cdn.rawgit.com https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js; style-src 'self' 'unsafe-inline' use.typekit.net p.typekit.net cdnjs.cloudflare.com *.google.com *.googleapis.com *.twitter.com *.mailchimp.com; font-src 'self' 'unsafe-inline' use.typekit.net fonts.googleapis.com *.gstatic.com; report-uri /report-csp-violation
+X-Content-Security-Policy: default-src 'self' 'unsafe-inline' *.hotjar.com *.hotjar.io 'unsafe-eval' *.crick.ac.uk *.google.com *.google-analytics.com *.gstatic.com *.googleapis.com *.vimeo.com *.vimeocdn.com *.youtube.com *.soundcloud.com *.twitter.com *.youtube.com *.twimg.com theta360.com cdn.rawgit.com raw.githubusercontent.com data:;; script-src 'self' 'unsafe-inline' *.hotjar.com *.hotjar.io 'unsafe-eval' theta360.com crick.us13.list-manage.com *.mailchimp.com *.theta360.com *.google.com *.google-analytics.com *.googleapis.com use.typekit.net *.vimeocdn.com *.vimeo.com vimeo.com *.twitter.com *.twimg.com *.youtube.com *.googletagmanager.com tagmanager.google.com cdnjs.cloudflare.com cdn.rawgit.com https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js; style-src 'self' 'unsafe-inline' use.typekit.net p.typekit.net cdnjs.cloudflare.com *.google.com *.googleapis.com *.twitter.com *.mailchimp.com; font-src 'self' 'unsafe-inline' use.typekit.net fonts.googleapis.com *.gstatic.com; report-uri /report-csp-violation
+X-Webkit-Csp: default-src 'self' 'unsafe-inline' *.hotjar.com *.hotjar.io 'unsafe-eval' *.crick.ac.uk *.google.com *.google-analytics.com *.gstatic.com *.googleapis.com *.vimeo.com *.vimeocdn.com *.youtube.com *.soundcloud.com *.twitter.com *.youtube.com *.twimg.com theta360.com cdn.rawgit.com raw.githubusercontent.com data:;; script-src 'self' 'unsafe-inline' *.hotjar.com *.hotjar.io 'unsafe-eval' theta360.com crick.us13.list-manage.com *.mailchimp.com *.theta360.com *.google.com *.google-analytics.com *.googleapis.com use.typekit.net *.vimeocdn.com *.vimeo.com vimeo.com *.twitter.com *.twimg.com *.youtube.com *.googletagmanager.com tagmanager.google.com cdnjs.cloudflare.com cdn.rawgit.com https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js; style-src 'self' 'unsafe-inline' use.typekit.net p.typekit.net cdnjs.cloudflare.com *.google.com *.googleapis.com *.twitter.com *.mailchimp.com; font-src 'self' 'unsafe-inline' use.typekit.net fonts.googleapis.com *.gstatic.com; report-uri /report-csp-violation
+From-Origin: same
+X-Drupal-Cache: HIT
+Content-Encoding: gzip

@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Adepth Home page</title>
+    <script language="javascript" type="text/javascript">
+        function controlGrid(cb) {
+            var msg = document.getElementById('warngrid');
+            msg.style.display = "none";
+            if (cb.checked) {
+                var grid1 = parseFloat(document.getElementById('grid1').value);
+                var grid2 = parseFloat(document.getElementById('grid2').value);
+                var grid3 = parseFloat(document.getElementById('grid2').value);
+                if ((grid1 != NaN && grid1 < 0.5) || (grid2 != NaN && grid2 < 0.5) || (grid2 != NaN && grid2 < 0.5)) {
+                    msg.style.display = "inline";
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        .style1
+        {
+            width: 365px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+    </div>
+    <div id="container">
+        <div id="main">
+            <div id="logo">
+                <h1>Adepth</h1>
+                <p class="Style3">
+                    <span id="tagline">measures of atomic depths in macromolecules</span></p>
+            </div>
+            <form name="form1" method="post" action="Default.aspx" onsubmit="javascript:return window.WebForm_OnSubmit();" enctype="multipart/form-data" id="form1">
+<script type="text/javascript">//<![CDATA[
+	var theForm;
+	if (document.getElementById) { theForm = document.getElementById ('form1'); }
+	else { theForm = document.form1; }
+//]]></script>
+
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEMDAwQAgAADgEMBQEMEAIPAQEHZW5jdHlwZQETbXVsdGlwYXJ0L2Zvcm0tZGF0YQAOAQwFEQwQAg0MAA8BAQdvbkNsaWNrARJjb250cm9sR3JpZCh0aGlzKTsAAAAAIIACAAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAgAAAAIAAAARAgAAAAQAAAAGAwAAAAtncmlkX291dHB1dAYEAAAAC2V4dHJ1ZGVkUERCCgoLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfDcZ2ybRNCHS8nl+/IaGZIaHESg==" />
+</div>
+
+<script src="/adepth/WebResource.axd?d=+pVZecXajtwjDGWTbrTcLkAPlvM=_2pHgSPFkB4UryO3Ang9xGWyD81k=_f&t=634387511280000000" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+WebFormValidation_Initialize(window);
+window.WebForm_OnSubmit = function () {
+if (!window.ValidatorOnSubmit()) return false;
+return true;
+}
+//]]></script>
+
+            <div id="intro" style="font-size: small;">
+            <br />
+                <h2>
+                    Welcome to Adepth</h2>
+                <p>
+                    The server computes the atomic depths in proteins which is derived from trilinear interpolation of the signed distance function (SDF) at the nearest grid points surrounding the atom. <br />
+                    <br />
+                    The atomic depth value is the distance of the atomic center from the solvent accessible surface.<br />
+                    <br />
+                    Results are included in the PDB file in the occupancy and B-factor columns.</p>
+                
+            </div>
+                <div id="step1" class="headerstyle">
+                    <table border="0" cellpadding="0" cellspacing="0" summary="">
+                        <tr>
+                            <td style="font-size: 1.4em; width: 100%">
+                                1. Input your PDB file</td>
+                            <td style="text-align: right; width: 10px">
+                                <a href="reference.html#step1" title="go to help page" target="_blank">
+                                    </a></td>
+                        </tr>
+                    </table>
+                </div>
+                Simply enter the PDB code or upload a .pdb file.<br />
+            <table border="0" summary="">
+                <tr>
+                    <td valign="top">
+                        PDB code&nbsp;:<br>
+                        &nbsp;<font size="1%" color="red">must exist in PDB</font>&nbsp;
+                    </td>
+                    <td class="style1">
+                        <table border="0" summary=""><tr><td><input type="text" maxlength="4" name="pdbFilename" id="pdbFilename" style="width:40px;" /></td> <td style="vertical-align: middle;">(Type : <b>1AY1</b>  as a test molecule)</td></tr></table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        or upload your PDB file :
+                    </td>
+                    <td class="style1">
+                        <input type="file" name="pdb_file" id="pdb_file" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        PDB chain ID :
+                    </td>
+                    <td class="style1">
+                        <input type="text" name="chain_id" id="chain_id" style="width:40px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Probe radius :
+                    </td>
+                    <td class="style1">
+                        <input type="text" value="1.5" name="radius" id="radius" style="width:40px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Grid size (X, Y, Z) in &Aring; :
+                    </td>
+                    <td class="style1">
+                        <input type="text" value="1.0" name="grid1" id="grid1" style="width:40px;" />&nbsp;<input type="text" value="1.0" name="grid2" id="grid2" style="width:40px;" />&nbsp;<input type="text" value="1.0" name="grid3" id="grid3" style="width:40px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Output grid file (dx format) :
+                    </td>
+                    <td class="style1">
+                        <input id="grid_output" type="checkbox" name="grid_output" onClick="controlGrid(this);" /> <span id="warngrid" style="color: red; display: none;">Using a small grid spacing will generate very large dx file. Computation may take several minutes</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="middle">
+                        Print-out only extruded PDB :
+                    </td>
+                    <td style=" white-space: nowrap;" class="style1">
+                    <table border="0" summary="" style="display:inline;"><tr><td valign="middle">
+                        <input id="extrudedPDB" type="checkbox" name="extrudedPDB" />&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                        Min value:</td><td><input type="text" name="minExtruPdb" id="minExtruPdb" style="width:40px;" /></td><td>
+                        &nbsp;</td><td>Max value:</td><td><input type="text" name="maxExtruPdb" id="maxExtruPdb" style="width:40px;" />
+                        </td></tr></table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Grid boundary (in &Aring;) :
+                    </td>
+                    <td class="style1">
+                        <input type="text" value="5" name="gridBoundary" id="gridBoundary" style="width:40px;" />
+                    </td>
+                </tr>
+            </table>
+                <div id="step2" class="headerstyle">
+                    <table border="0" cellpadding="0" cellspacing="0" summary="">
+                        <tr>
+                            <td style="font-size: 1.4em; width: 100%">
+                                2. Getting results</td>
+                            <td style="text-align: right; width: 10px"> </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                Enter a valid e-mail address where we can send a link to the results when the run is completed.
+                <br />
+                E-mail :
+                <input type="text" name="email" id="email" />&nbsp;<span id="RegularExpressionValidator1" style="visibility:hidden;color:Red;">Invalid email address</span>
+<!--                <span id="RequiredFieldValidator1" style="visibility:hidden;color:Red;">email is mandatory</span>
+-->                <br /><br />
+                
+                    <b>If you find this site useful, please cite :</b><br />
+<span style="font-style: italic;">Adepth: new representation and its implications for atomic depths of macromolecules</span><br />
+Shu-wen W. Chen; Jean-Luc Pellequer<br />
+<a href="http://dx.doi.org/10.1093/nar/gkt299">Nucleic Acids Research 2013</a>
+<br /><br />
+
+            <input type="submit" name="Run" value="Run analysis" onclick="WebForm_DoPostback(&quot;Run&quot;,&quot;&quot;,null,false,true,false,false,&quot;&quot;)" id="Run" />
+                &nbsp;<input id="Reset" name="Reset" type="reset" value="Clear input" />
+                
+<script type="text/javascript">//<![CDATA[
+var RegularExpressionValidator1 = document.all ? document.all ["RegularExpressionValidator1"] : document.getElementById ("RegularExpressionValidator1");
+RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+RegularExpressionValidator1.validationexpression = "\\w+([-+.\']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+RegularExpressionValidator1.controltovalidate = "email";
+RegularExpressionValidator1.errormessage = "Invalid email address";
+var RequiredFieldValidator1 = document.all ? document.all ["RequiredFieldValidator1"] : document.getElementById ("RequiredFieldValidator1");
+RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator1.initialvalue = "";
+RequiredFieldValidator1.controltovalidate = "email";
+RequiredFieldValidator1.errormessage = "email is mandatory";
+//]]></script>
+
+
+<div>
+
+
+
+<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="/adepth/Default.aspx" /><input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAEAAAD/////AQAAAAAAAAAPAQAAAA0AAAAIFZn/KlmXHVWSbA7Iq93gBazd4AWt3eAFGnBAeg93i4+cGvPkrudTDZAx8QicS8IFa0IBAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO72RMntjpYhus7MNM6MOurpqVnj" /><input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" /><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+</div>
+
+<script type="text/javascript">//<![CDATA[
+window._form = theForm;
+window.__doPostBack = function (eventTarget, eventArgument) {
+	if(theForm.onsubmit && theForm.onsubmit() == false) return;
+	theForm.__EVENTTARGET.value = eventTarget;
+	theForm.__EVENTARGUMENT.value = eventArgument;
+	theForm.submit();
+}
+//]]></script>
+
+<script src="/adepth/WebResource.axd?d=+pVZecXajtwjDGWTbrTcLkAPlvM=_qjSO119rRtir7+RpmFcYBWg8MM0=_f&t=634387511280000000" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+WebForm_Initialize(window);
+//]]></script>
+
+<script type="text/javascript">//<![CDATA[
+	var Page_Validators =  new Array(document.getElementById ('RegularExpressionValidator1'), document.getElementById ('RequiredFieldValidator1'));
+//]]></script>
+
+
+<script type="text/javascript">//<![CDATA[
+
+window.Page_ValidationActive = false;
+window.ValidatorOnLoad();
+window.ValidatorOnSubmit = function () {
+	if (this.Page_ValidationActive) {
+		return this.ValidatorCommonOnSubmit();
+	}
+	return true;
+};
+//]]></script>
+</form>
+            <p class="internallink">
+                [ <a href="#top">Back to top</a> ]</p>
+        </div>
+        <div id="sidebar">
+            <p style="text-align: center">
+                <img src="IMAGES/logo_CEA.jpg" alt="" width="100" /><br />
+                <br />
+                &nbsp;</p>
+            <p>
+                &nbsp;</p>
+            <h2 class="sidelink menuheader">
+                Menu:</h2>
+            <a class="sidelink" href="sample/Adepth_tutorial1.pdf">Tutorial</a>
+            <br />
+            <h4>
+                Comment and request: <br />
+                <a href="mailto:jean-luc.pellequer@cea.fr">Coordinator</a></h4>
+            <br />
+            <br />
+            <h4>Click <a href="sample/newBALL1_b3.0_l5_s25.pdb">here</a> to download the standard molecule</h4>
+        </div>
+        <div class="clear">
+            &nbsp;</div>
+    </div>
+    <div id="footer">
+        DSV/MAR/iBEB/SBTN/LIRM<br>
+        <img src="/icons/copyright.gif" width="20" height="14" border="0" alt="" /><span>CEA
+            2010 - Tous droits r&eacute;serv&eacute;s - <a href="/legal.htm" target="_blank">Mentions
+                l&eacute;gales</a></span>
+    </div>
+</body>
+</html>
+

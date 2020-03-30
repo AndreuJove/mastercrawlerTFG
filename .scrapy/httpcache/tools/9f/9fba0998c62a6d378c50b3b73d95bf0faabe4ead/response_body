@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://ms-imaging.org/wp/xmlrpc.php" />
+<title>MS Imaging &#8211; Home of Mass Spectrometry Imaging</title>
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="MS Imaging &raquo; Feed" href="https://ms-imaging.org/wp/feed/" />
+<link rel="alternate" type="application/rss+xml" title="MS Imaging &raquo; Comments Feed" href="https://ms-imaging.org/wp/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/ms-imaging.org\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=d5ff92493e10ae6d077730a06b4e8bcd"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='ai1ec_style-css'  href='//ms-imaging.org/wp/wp-content/plugins/all-in-one-event-calendar/public/themes-ai1ec/vortex/css/ai1ec_parsed_css.css?ver=2.5.37' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://ms-imaging.org/wp/wp-includes/css/dist/block-library/style.min.css?ver=d5ff92493e10ae6d077730a06b4e8bcd' type='text/css' media='all' />
+<link rel='stylesheet' id='bbp-default-css'  href='https://ms-imaging.org/wp/wp-content/plugins/bbpress/templates/default/css/bbpress.css?ver=2.5.14-6684' type='text/css' media='screen' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://ms-imaging.org/wp/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='pmpro_frontend-css'  href='https://ms-imaging.org/wp/wp-content/plugins/paid-memberships-pro/css/frontend.css?ver=2.2.5' type='text/css' media='screen' />
+<link rel='stylesheet' id='pmpro_print-css'  href='https://ms-imaging.org/wp/wp-content/plugins/paid-memberships-pro/css/print.css?ver=2.2.5' type='text/css' media='print' />
+<link rel='stylesheet' id='pmpro-member-directory-styles-css'  href='https://ms-imaging.org/wp/wp-content/plugins/pmpro-member-directory-master/css/pmpro-member-directory.css?ver=d5ff92493e10ae6d077730a06b4e8bcd' type='text/css' media='all' />
+<link rel='stylesheet' id='colormag_google_fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600&#038;ver=d5ff92493e10ae6d077730a06b4e8bcd' type='text/css' media='all' />
+<link rel='stylesheet' id='colormag_style-css'  href='https://ms-imaging.org/wp/wp-content/themes/colormag/style.css?ver=d5ff92493e10ae6d077730a06b4e8bcd' type='text/css' media='all' />
+<link rel='stylesheet' id='colormag-fontawesome-css'  href='https://ms-imaging.org/wp/wp-content/themes/colormag/fontawesome/css/font-awesome.css?ver=4.2.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-content/themes/colormag/js/colormag-custom.js?ver=d5ff92493e10ae6d077730a06b4e8bcd'></script>
+<!--[if lte IE 8]>
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-content/themes/colormag/js/html5shiv.min.js?ver=d5ff92493e10ae6d077730a06b4e8bcd'></script>
+<![endif]-->
+<link rel='https://api.w.org/' href='https://ms-imaging.org/wp/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ms-imaging.org/wp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://ms-imaging.org/wp/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="canonical" href="https://ms-imaging.org/wp/" />
+<link rel='shortlink' href='https://ms-imaging.org/wp/' />
+<link rel="alternate" type="application/json+oembed" href="https://ms-imaging.org/wp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fms-imaging.org%2Fwp%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://ms-imaging.org/wp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fms-imaging.org%2Fwp%2F&#038;format=xml" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="home page-template-default page page-id-2 pmpro-body-has-access no-sidebar-full-width wide">
+<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header clearfix">
+		<div id="header-text-nav-container" class="clearfix">
+         
+			
+			<div class="inner-wrap">
+
+				<div id="header-text-nav-wrap" class="clearfix">
+					<div id="header-left-section">
+												<div id="header-text" class="">
+                        							<h1 id="site-title">
+   								<a href="https://ms-imaging.org/wp/" title="MS Imaging" rel="home">MS Imaging</a>
+   							</h1>
+                     							                        <p id="site-description">Home of Mass Spectrometry Imaging</p>
+                     <!-- #site-description -->
+						</div><!-- #header-text -->
+					</div><!-- #header-left-section -->
+					<div id="header-right-section">
+									    	</div><!-- #header-right-section -->
+
+			   </div><!-- #header-text-nav-wrap -->
+
+			</div><!-- .inner-wrap -->
+
+			
+			<nav id="site-navigation" class="main-navigation clearfix" role="navigation">
+				<div class="inner-wrap clearfix">
+					                  <div class="home-icon front_page_on">
+                     <a href="https://ms-imaging.org/wp/" title="MS Imaging"><i class="fa fa-home"></i></a>
+                  </div>
+                                 <h4 class="menu-toggle"></h4>
+               <div class="menu-primary-container"><ul id="menu-mainmenu" class="menu"><li id="menu-item-2665" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2665"><a href="https://ms-imaging.org/wp/mass-spectrometry-imaging-society/">Society</a>
+<ul class="sub-menu">
+	<li id="menu-item-2241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2241"><a href="https://ms-imaging.org/wp/about/">About the website</a></li>
+	<li id="menu-item-2671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2671"><a href="https://ms-imaging.org/wp/mass-spectrometry-imaging-society/">About MSIS</a></li>
+	<li id="menu-item-3286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3286"><a href="https://ms-imaging.org/wp/mass-spectrometry-imaging-society/msis-executive-committee/">MSIS Executive committee</a></li>
+	<li id="menu-item-3302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3302"><a href="https://ms-imaging.org/wp/mass-spectrometry-imaging-society/msis-general-assemblies/">MSIS &#8211; General Assemblies</a></li>
+	<li id="menu-item-3455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3455"><a href="https://ms-imaging.org/wp/msis-newsletters-series/">MSIS &#8211; Newsletters series</a></li>
+	<li id="menu-item-2666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2666"><a href="https://ms-imaging.org/wp/membership-account/">Membership</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2835"><a href="https://ms-imaging.org/wp/membership-account/membership-levels/">Signup</a></li>
+		<li id="menu-item-2670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2670"><a href="https://ms-imaging.org/wp/membership-account/">Account</a></li>
+		<li id="menu-item-2668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2668"><a href="https://ms-imaging.org/wp/membership-account/membership-billing/">Membership Billing</a></li>
+		<li id="menu-item-2669" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2669"><a href="https://ms-imaging.org/wp/membership-account/members/">Members</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-2246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2246"><a href="https://ms-imaging.org/wp/software-license/">Software</a>
+<ul class="sub-menu">
+	<li id="menu-item-1776" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1776"><a href="https://ms-imaging.org/wp/software-license/">>>> Activation</a></li>
+	<li id="menu-item-1778" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1778"><a href="https://ms-imaging.org/wp/biomap/">BioMap</a></li>
+	<li id="menu-item-1781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1781"><a href="https://ms-imaging.org/wp/mmsit/">MMSIT</a></li>
+	<li id="menu-item-1790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1790"><a href="https://ms-imaging.org/wp/4000-series-imaging/">4000 Series Imaging</a></li>
+	<li id="menu-item-1791" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1791"><a href="https://ms-imaging.org/wp/createtargetanalyzethis/">AnalyzeThis!</a></li>
+	<li id="menu-item-1792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1792"><a href="https://ms-imaging.org/wp/mitsutoshi-setou/">Axima2Analyze</a></li>
+	<li id="menu-item-1793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1793"><a href="https://ms-imaging.org/wp/msimageview/">MSImageView</a></li>
+	<li id="menu-item-1794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1794"><a href="https://ms-imaging.org/wp/paquan/">msIQuant</a></li>
+</ul>
+</li>
+<li id="menu-item-1831" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1831"><a href="https://ms-imaging.org/wp/imzml/">imzML</a>
+<ul class="sub-menu">
+	<li id="menu-item-1651" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1651"><a href="https://ms-imaging.org/wp/imzml/">Overview</a></li>
+	<li id="menu-item-1652" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1652"><a href="https://ms-imaging.org/wp/imzml/background/">Background</a></li>
+	<li id="menu-item-1653" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1653"><a href="https://ms-imaging.org/wp/imzml/data-structure/">Data Structure</a></li>
+	<li id="menu-item-1654" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1654"><a href="https://ms-imaging.org/wp/imzml/controlled-vocabulary/">Controlled Vocabulary</a></li>
+	<li id="menu-item-1655" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1655"><a href="https://ms-imaging.org/wp/imzml/documentation/">Documentation</a></li>
+	<li id="menu-item-1656" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1656"><a href="https://ms-imaging.org/wp/imzml/example-files-test/">Example Files</a></li>
+	<li id="menu-item-1657" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1657"><a href="https://ms-imaging.org/wp/imzml/software-tools/">Software Tools</a></li>
+	<li id="menu-item-3172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3172"><a href="https://ms-imaging.org/wp/imzml/applications-of-imzml/">Applications of imzML</a></li>
+	<li id="menu-item-1672" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1672"><a href="https://ms-imaging.org/wp/imzml/gallery/">Gallery</a></li>
+	<li id="menu-item-1659" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1659"><a href="/wp/forums/forum/imzml/">Forum</a></li>
+</ul>
+</li>
+<li id="menu-item-1660" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1660"><a href="/wp/introduction-2/">COST MSI</a>
+<ul class="sub-menu">
+	<li id="menu-item-1661" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children menu-item-1661"><a href="https://ms-imaging.org/wp/introduction-2/">Introduction</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1664" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1664"><a href="https://ms-imaging.org/wp/what-is-cost/">What is COST?</a></li>
+		<li id="menu-item-1665" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1665"><a href="https://ms-imaging.org/wp/background/">Background</a></li>
+		<li id="menu-item-1666" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1666"><a href="https://ms-imaging.org/wp/what-activities-are-supported/">Supported activities</a></li>
+		<li id="menu-item-1667" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1667"><a href="https://ms-imaging.org/wp/how-to-join/">How to join</a></li>
+		<li id="menu-item-1674" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1674"><a href="https://ms-imaging.org/wp/short-term-scientific-missions/">Exchange visits (STSM)</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1867"><a href="https://ms-imaging.org/wp/representatives/">Contact</a></li>
+	<li id="menu-item-1663" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1663"><a href="https://ms-imaging.org/wp/working-groups/">Working Groups</a></li>
+	<li id="menu-item-1668" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children menu-item-1668"><a href="https://ms-imaging.org/wp/meetings/">Agenda</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1669" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1669"><a href="https://ms-imaging.org/wp/training-courses/">Training courses</a></li>
+		<li id="menu-item-1670" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1670"><a href="https://ms-imaging.org/wp/meetings/">Meetings</a></li>
+		<li id="menu-item-1675" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1675"><a href="https://ms-imaging.org/wp/workshops/">Workshops</a></li>
+		<li id="menu-item-1680" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1680"><a href="https://ms-imaging.org/wp/studies/">Studies</a></li>
+		<li id="menu-item-1671" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1671"><a href="https://ms-imaging.org/wp/category/cost/past-activities/">Past activities</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1681" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1681"><a href="https://ms-imaging.org/wp/achievements/">Achievements</a></li>
+</ul>
+</li>
+<li id="menu-item-1626" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1626"><a href="https://ms-imaging.org/wp/category/reference/">Information</a>
+<ul class="sub-menu">
+	<li id="menu-item-1629" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1629"><a href="https://ms-imaging.org/wp/category/reference/literature/">Literature</a></li>
+	<li id="menu-item-1630" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1630"><a href="https://ms-imaging.org/wp/category/reference/technical-note/">Technical Note</a></li>
+	<li id="menu-item-1648" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1648"><a href="https://ms-imaging.org/wp/overview-of-commercial-instruments/">Instrumentation</a></li>
+	<li id="menu-item-1649" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1649"><a href="https://ms-imaging.org/wp/category/news/archive/">News Archive</a></li>
+	<li id="menu-item-2229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2229"><a href="https://ms-imaging.org/wp/msi-mass-list/">MSiMass List</a></li>
+</ul>
+</li>
+<li id="menu-item-1822" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1822"><a href="/wp/forums/">Forum</a></li>
+<li id="menu-item-2221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2221"><a href="http://ms-imaging.org/wp/wp-admin">Login</a></li>
+<li id="menu-item-2242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2242"><a href="https://ms-imaging.org/wp/contact/">Contact</a></li>
+<li id="menu-item-3199" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3199"><a href="https://ms-imaging.org/wp/mass-spectrometry-imaging-society/ourcon/">OurCon</a></li>
+<li id="menu-item-3234" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3234"><a href="https://ms-imaging.org/wp/events/">Events</a></li>
+</ul></div>                                                <i class="fa fa-search search-top"></i>
+                  <div class="search-form-top">
+                     <form action="https://ms-imaging.org/wp/" class="search-form searchform clearfix" method="get">
+   <div class="search-wrap">
+      <input type="text" placeholder="Search" class="s field" name="s">
+      <button class="search-icon" type="submit"></button>
+   </div>
+</form><!-- .searchform -->                  </div>
+               				</div>
+			</nav>
+
+		</div><!-- #header-text-nav-container -->
+
+		
+	</header>
+			<div id="main" class="clearfix">
+		<div class="inner-wrap clearfix">
+   <div class="front-page-top-section clearfix">
+      <div class="widget_slider_area">
+         <section id="colormag_featured_posts_slider_widget-2" class="widget widget_featured_slider widget_featured_meta clearfix">               <div class="widget_slider_area_rotate">
+                     <div class="single-slide displayblock">
+               <figure class="slider-featured-image"><a href="https://ms-imaging.org/wp/2020/01/13/interested-in-organizing-the-next-ourcon-ix-2021-in-europe/" title="Interested in organizing the next OurCon IX 2021 in Europe?"><img width="800" height="445" src="https://ms-imaging.org/wp/wp-content/uploads/2020/01/MSIS_call-for-ourcon-2021-1-800x445.jpg" class="attachment-colormag-featured-image size-colormag-featured-image wp-post-image" alt="Interested in organizing the next OurCon IX 2021 in Europe?" title="Interested in organizing the next OurCon IX 2021 in Europe?" /></a></figure>               <div class="slide-content">
+                  <div class="above-entry-meta"><span class="cat-links"><a href="https://ms-imaging.org/wp/category/news/actual/"  rel="category tag">Actual</a>&nbsp;</span></div>                  <h3 class="entry-title">
+                     <a href="https://ms-imaging.org/wp/2020/01/13/interested-in-organizing-the-next-ourcon-ix-2021-in-europe/" title="Interested in organizing the next OurCon IX 2021 in Europe?">Interested in organizing the next OurCon IX 2021 in Europe?</a>
+                  </h3>
+                  <div class="below-entry-meta">
+                     <span class="posted-on"><a href="https://ms-imaging.org/wp/2020/01/13/interested-in-organizing-the-next-ourcon-ix-2021-in-europe/" title="6:18 pm" rel="bookmark"><i class="fa fa-calendar-o"></i> <time class="entry-date published" datetime="2020-01-13T18:18:23+02:00">January 13, 2020</time></a></span>                     <span class="byline"><span class="author vcard"><i class="fa fa-user"></i><a class="url fn n" href="https://ms-imaging.org/wp/author/t-porta/" title="t.porta">t.porta</a></span></span>
+                     <span class="comments"><i class="fa fa-comment"></i><a href="https://ms-imaging.org/wp/2020/01/13/interested-in-organizing-the-next-ourcon-ix-2021-in-europe/#respond">0</a></span>
+                  </div>
+               </div>
+
+            </div>
+                     <div class="single-slide displaynone">
+               <figure class="slider-featured-image"><a href="https://ms-imaging.org/wp/2020/01/10/release-msis-newsletter-01/" title="Release MSIS Newsletter 01"><img width="800" height="445" src="https://ms-imaging.org/wp/wp-content/uploads/2020/01/MSIS_Newsletter_January_2020_announcement-800x445.jpg" class="attachment-colormag-featured-image size-colormag-featured-image wp-post-image" alt="Release MSIS Newsletter 01" title="Release MSIS Newsletter 01" /></a></figure>               <div class="slide-content">
+                  <div class="above-entry-meta"><span class="cat-links"><a href="https://ms-imaging.org/wp/category/news/actual/"  rel="category tag">Actual</a>&nbsp;</span></div>                  <h3 class="entry-title">
+                     <a href="https://ms-imaging.org/wp/2020/01/10/release-msis-newsletter-01/" title="Release MSIS Newsletter 01">Release MSIS Newsletter 01</a>
+                  </h3>
+                  <div class="below-entry-meta">
+                     <span class="posted-on"><a href="https://ms-imaging.org/wp/2020/01/10/release-msis-newsletter-01/" title="8:43 am" rel="bookmark"><i class="fa fa-calendar-o"></i> <time class="entry-date published" datetime="2020-01-10T08:43:57+02:00">January 10, 2020</time></a></span>                     <span class="byline"><span class="author vcard"><i class="fa fa-user"></i><a class="url fn n" href="https://ms-imaging.org/wp/author/t-porta/" title="t.porta">t.porta</a></span></span>
+                     <span class="comments"><i class="fa fa-comment"></i><a href="https://ms-imaging.org/wp/2020/01/10/release-msis-newsletter-01/#respond">0</a></span>
+                  </div>
+               </div>
+
+            </div>
+               </div>
+      </section>      </div>
+
+      <div class="widget_beside_slider">
+               </div>
+   </div>
+   <div class="main-content-section clearfix">
+      <div id="primary">
+         <div id="content" class="clearfix">
+
+         
+            <div class="article-container">
+               
+                  
+                     
+<article id="post-2" class="post-2 page type-page status-publish has-post-thumbnail hentry pmpro-has-access">
+	
+	<header class="entry-header">
+         		<h2 class="entry-title">
+   			About this site&#8230;   		</h2>
+      	</header>
+
+	<div class="entry-content clearfix">
+		<p><img src="/wp/wp-content/uploads/2006/10/technology.jpg" alt=" " width="173" height="110" align="right" border="0" hspace="5" vspace="5" />This site is dedicated to sharing knowledge on mass spectrometry imaging (MSI, also termed imaging MS or MS imaging). In brief, this is an emerging field in science allowing true label-free molecular imaging of flat samples, e.g. biological tissue sections. On this site you find a lot of information on matrix-assisted laser desorption/ionization mass spectrometric imaging (MALDI MSI), but also other techniques including SIMS, DESI, LA ICP MSI, IMC and more are represented. The software section hosts multiple programs for image acquisition and processing, including <a href="/wp/biomap/">BioMap</a>. Since 2012, this site also hosts information from the <a href="/wp/introduction-2/" target="_blank" rel="noopener noreferrer">COST action on MS imaging</a> and on the <a href="/wp/introduction/">imzML</a> data format. As of the 2017, the site is home of and operated by the Mass Spectrometry Imaging Society.</p>
+<p><strong>NEW: CALENDAR! Find all events where MSI is present in our new calendar! All conferences, courses, workshops are listed <a href="https://ms-imaging.org/wp/events/">here</a>.</strong></p>
+			</div>
+
+	</article>
+                  
+                  
+
+                           </div>
+                  </div>
+      </div>
+         </div>
+
+
+		</div><!-- .inner-wrap -->
+	</div><!-- #main -->
+         <div class="advertisement_above_footer">
+         <div class="inner-wrap">
+            <aside id="colormag_728x90_advertisement_widget-3" class="widget widget_728x90_advertisement clearfix">
+      <div class="advertisement_728x90">
+                     <div class="advertisement-title">
+               <h3 class="widget-title"><span>Mass Spectrometry Imaging Society</span></h3>            </div>
+         <div class="advertisement-content"><a href="/wp/mass-spectrometry-imaging-society/" class="single_ad_728x90" target="_blank" rel="nofollow">
+                                    <img src="/wp/wp-content/uploads/2017/02/MSIcommunity.png" width="728" height="90">
+                           </a></div>      </div>
+      </aside>         </div>
+      </div>
+   			<footer id="colophon" class="clearfix">
+			
+			<div class="footer-socket-wrapper clearfix">
+				<div class="inner-wrap">
+					<div class="footer-socket-area">
+                  <div class="footer-socket-right-section">
+   						                  </div>
+                  <div class="footer-socket-left-sectoin">
+   						<div class="copyright">Copyright &copy; 2020 <a href="https://ms-imaging.org/wp/" title="MS Imaging" ><span>MS Imaging</span></a>. All rights reserved.<br>Theme: ColorMag by <a href="https://themegrill.com/themes/colormag" target="_blank" title="ThemeGrill" rel="designer"><span>ThemeGrill</span></a>. Powered by <a href="https://wordpress.org" target="_blank" title="WordPress"><span>WordPress</span></a>.</div>                  </div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<a href="#masthead" id="scroll-up"><i class="fa fa-chevron-up"></i></a>
+	</div><!-- #page -->
+			<!-- Memberships powered by Paid Memberships Pro v2.2.5.
+ -->
+	<script type='text/javascript' src='https://ms-imaging.org/wp/wp-content/plugins/bbpress/templates/default/js/editor.js?ver=2.5.14-6684'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/ms-imaging.org\/wp\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.1'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LccCpcUAAAAAH-CZCURTe-i74D2E_x5xe7pnnHf&#038;ver=3.0'></script>
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-content/themes/colormag/js/jquery.bxslider.min.js?ver=4.2.10'></script>
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-content/themes/colormag/js/colormag-slider-setting.js?ver=d5ff92493e10ae6d077730a06b4e8bcd'></script>
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-content/themes/colormag/js/navigation.js?ver=d5ff92493e10ae6d077730a06b4e8bcd'></script>
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-content/themes/colormag/js/fitvids/jquery.fitvids.js?ver=20150311'></script>
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-content/themes/colormag/js/fitvids/fitvids-setting.js?ver=20150311'></script>
+<script type='text/javascript' src='https://ms-imaging.org/wp/wp-includes/js/wp-embed.min.js?ver=d5ff92493e10ae6d077730a06b4e8bcd'></script>
+<script type="text/javascript">
+( function( grecaptcha, sitekey ) {
+
+	var wpcf7recaptcha = {
+		execute: function() {
+			grecaptcha.execute(
+				sitekey,
+				{ action: 'homepage' }
+			).then( function( token ) {
+				var forms = document.getElementsByTagName( 'form' );
+
+				for ( var i = 0; i < forms.length; i++ ) {
+					var fields = forms[ i ].getElementsByTagName( 'input' );
+
+					for ( var j = 0; j < fields.length; j++ ) {
+						var field = fields[ j ];
+
+						if ( 'g-recaptcha-response' === field.getAttribute( 'name' ) ) {
+							field.setAttribute( 'value', token );
+							break;
+						}
+					}
+				}
+			} );
+		}
+	};
+
+	grecaptcha.ready( wpcf7recaptcha.execute );
+
+	document.addEventListener( 'wpcf7submit', wpcf7recaptcha.execute, false );
+
+} )( grecaptcha, '6LccCpcUAAAAAH-CZCURTe-i74D2E_x5xe7pnnHf' );
+</script>
+		<script type="text/javascript">
+			var bwpRecaptchaCallback = function() {
+				// render all collected recaptcha instances
+			};
+		</script>
+
+		<script src="https://www.google.com/recaptcha/api.js?onload=bwpRecaptchaCallback&#038;render=explicit" async defer></script>
+</body>
+</html>

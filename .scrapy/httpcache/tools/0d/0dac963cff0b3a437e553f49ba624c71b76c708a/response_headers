@@ -1,0 +1,14 @@
+Server: gunicorn/19.8.1
+Vary: Cookie,Accept-Language,Accept-Encoding
+Cache-Control: public
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=0
+Date: Mon, 30 Mar 2020 18:49:06 GMT
+Access-Control-Max-Age: 1000
+Content-Language: en
+Access-Control-Allow-Origin: *
+Set-Cookie: csrftoken=oF4h4nj4Yf5LhS0R6XwZI9zqz9A5y2HSGY3W2qK8JVxeUODa4bN3TAs0buN3KVTw; expires=Mon, 29 Mar 2021 18:49:06 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+X-Frame-Options: SAMEORIGIN
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+Access-Control-Allow-Headers: x-requested-with, Content-Type, origin, authorization, accept, client-security-token

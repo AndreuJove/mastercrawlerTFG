@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Classification of Transporters using Efficient RBF Networks with PSSM Profiles and Biochemical Properties</title>
+<style type="text/css" title="currentStyle">@import "i.css";</style>
+</head>
+<script type='text/javascript'>
+function ClearPicArea()
+{
+	var s=document.getElementById('PicArea');
+	s.innerHTML='';
+}
+function ClearInfoArea()
+{
+	var s=document.getElementById('InfoArea');
+	s.innerHTML='';
+}
+function ClearArea()
+{
+	var s=document.getElementById('Area');
+	s.innerHTML='';
+}
+function PicMsg(Msg)
+{
+	var s=document.getElementById('PicArea');
+	s.innerHTML+=Msg;
+}
+function InfoMsg(Msg)
+{
+	var s=document.getElementById('InfoArea');
+	s.innerHTML+=Msg;
+}
+function LoadFile(FileName)
+{
+	var s;
+	var LoadFileRequest;
+	if (window.ActiveXObject)	// IE
+		LoadFileRequest = new ActiveXObject("Msxml2.XMLHTTP");
+	else if(window.XMLHttpRequest)		// Mozilla, Safari, ...
+		LoadFileRequest = new XMLHttpRequest();
+	else{}
+	if(LoadFileRequest)
+	{
+		LoadFileRequest.onreadystatechange=function()
+		{
+			if (LoadFileRequest.readyState==4)
+			{
+				s=document.getElementById('Area');
+				s.innerHTML=LoadFileRequest.responseText;
+			}
+		};
+		LoadFileRequest.open('GET',FileName,true);
+		LoadFileRequest.send(null);
+	}
+	else
+	{
+		s=document.getElementById('Area');
+		s.innerHTML='Error';
+	}
+}
+function LoadFileClearPicArea(FileName)
+{
+	var s;
+	var LoadFileRequest;
+	if (window.ActiveXObject)	// IE
+		LoadFileRequest = new ActiveXObject("Msxml2.XMLHTTP");
+	else if(window.XMLHttpRequest)		// Mozilla, Safari, ...
+		LoadFileRequest = new XMLHttpRequest();
+	else{}
+	
+	if(LoadFileRequest)
+	{
+		LoadFileRequest.onreadystatechange=function()
+		{
+			if (LoadFileRequest.readyState==4)
+			{
+				s=document.getElementById('Area');
+				s.innerHTML=LoadFileRequest.responseText;
+				ClearPicArea();
+			}
+		};
+		LoadFileRequest.open('GET',FileName,true);
+		LoadFileRequest.send(null);
+	}
+	else
+	{
+		s=document.getElementById('Area');
+		s.innerHTML='Error';
+	}
+}
+</script>
+
+<body>
+<center>
+<embed src="Carboxylator_title.swf" height="189" width="800">
+<BR>
+<BR>
+<a href="index.php"><img src="Prediction.jpg" /></a>
+<a href="index.php?item=Intro"><img src="Introduction.jpg" /></a>
+<a href="index.php?item=Dataset"><img src="Dataset.jpg" /></a>
+<a href="index.php?item=Result"><img src="Result.jpg" /></a>
+
+<BR>
+<div id="InfoArea">
+</div>
+<div id="PicArea">
+</div>
+<div id="Area"></div>
+<script type='text/javascript'>LoadFile('Carboxylator-Content.html');</script>
+<HR>
+If you have any problem, please contact 
+<A HREF="mailto:francis@saturn.yzu.edu.tw">Tzong-Yi Lee</A>
+<BR>
+</center>
+</body>
+</html>

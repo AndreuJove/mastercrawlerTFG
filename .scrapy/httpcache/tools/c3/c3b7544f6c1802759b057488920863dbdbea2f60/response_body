@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta name="generator" content="CoffeeCup Visual Site Designer, Version 7.0 Build 26 for Windows">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="generator" content="CoffeeCup Visual Site Designer (www.coffeecup.com)">
+<meta name="created" content="Tue, 27 Nov 2012 17:57:04 GMT">
+
+
+<title> SoftwareC </title>
+
+<style type="text/css">
+
+   /* TEXT STYLES */
+
+.textstyle0 {font-family:Arial;font-weight:bold;font-style:normal;font-size:48px;text-decoration:none;color:#00ff00;}
+.textstyle1 {font-family:Arial;font-weight:bold;font-style:normal;font-size:23px;text-decoration:none;color:#000000;}
+.textstyle2 {font-family:Arial;font-weight:bold;font-style:normal;font-size:18px;text-decoration:none;color:#000000;}
+.textstyle3 {font-family:Arial;font-weight:bold;font-style:normal;font-size:15px;text-decoration:none;color:#000000;}
+.textstyle4 {font-family:Arial;font-weight:bold;font-style:normal;font-size:13px;text-decoration:none;color:#000000;}
+.textstyle5 {font-family:Arial;font-weight:bold;font-style:normal;font-size:10px;text-decoration:none;color:#000000;}
+
+
+   /* OBJECT STYLES */
+
+div.Object263 { position:absolute; top:95px; left:161px; z-index:0; }
+div.Object264 { position:absolute; top:93px; left:0px; z-index:1; }
+div.Object265 { position:absolute; top:90px; left:333px; z-index:2; }
+div.Object266 { position:absolute; top:40px; left:333px; z-index:3; }
+div.Object267 { position:absolute; top:0px; left:333px; z-index:4; }
+div.Object268 { position:absolute; top:0px; left:0px; z-index:5; }
+div.Object269 { position:absolute; top:108px; left:11px; z-index:6; }
+div.Object270 { position:absolute; top:152px; left:11px; z-index:7; }
+div.Object271 { position:absolute; top:196px; left:11px; z-index:8; }
+div.Object272 { position:absolute; top:244px; left:11px; z-index:9; }
+div.Object273 { position:absolute; top:342px; left:11px; z-index:10; }
+div.Object274 { position:absolute; top:385px; left:12px; z-index:11; }
+div.Object275 { position:absolute; top:169px; left:167px; z-index:12; }
+div.Object276 { position:absolute; top:464px; left:170px; z-index:13; }
+div.Object277 { position:absolute; top:292px; left:11px; z-index:14; }
+div.Object278 { position:absolute; top:579px; left:11px; z-index:15; }
+div.Object279 { position:absolute; padding-right:5px; top:17px; left:56px; z-index:16; text-align:center; width:213px; }
+div.Object280 { position:absolute; padding-right:5px; top:119px; left:263px; z-index:17; text-align:left; width:85px; }
+div.Object281 { position:absolute; padding-right:5px; top:195px; left:195px; z-index:18; text-align:left; width:64px; }
+div.Object282 { position:absolute; padding-right:5px; top:482px; left:203px; z-index:19; text-align:left; width:521px; }
+div.Object283 { position:absolute; padding-right:5px; top:225px; left:184px; z-index:20; text-align:left; width:541px; }
+div.Object284 { position:absolute; padding-right:5px; top:673px; left:204px; z-index:21; text-align:left; width:481px; }
+div.Object285 { position:absolute; padding-right:5px; top:799px; left:205px; z-index:22; text-align:left; width:512px; }
+div.Object286 { position:absolute; padding-right:5px; top:975px; left:207px; z-index:23; text-align:left; width:503px; }
+div.Object287 { position:absolute; padding-right:5px; top:1083px; left:208px; z-index:24; text-align:left; width:499px; }
+div.Object288 { position:absolute; padding-right:5px; top:1186px; left:203px; z-index:25; text-align:left; width:521px; }
+div.Object289 { position:absolute; padding-right:5px; top:1275px; left:204px; z-index:26; text-align:left; width:521px; }
+
+
+
+   /* BODY STYLES */
+
+body {
+ margin:0px;
+ padding :0px;
+ text-align:center;
+ height:100%;
+ width:100%;
+ background-image: url('files/midt.jpg');
+}
+
+
+   /* LINK STYLES */
+
+A:link { color:#00ff00;}
+
+A:visited  { color:#00ff00;}
+
+A:hover  { color:#00ff00;}
+
+   /* IMAGE STYLES */
+
+img { border:0 none}
+
+
+
+   /* CONTAINER RULES */
+
+#container { position:relative; margin:0px auto 0 auto; height:1400px; width:740px; text-align:left; padding-left:0px;}
+
+</style>
+</head>
+
+<body>
+
+<div class="Object263"><img src="files/IMG_165.jpg"  alt="" width="12px" height="501px"></div>
+
+<div class="Object264"><img src="files/IMG_166.jpg"  alt="" width="10px" height="509px"></div>
+
+<div class="Object265"><img src="files/IMG_167.jpg"  alt="" width="407px" height="17px"></div>
+
+<div class="Object266"><img src="files/IMG_168.jpg"  alt="" width="407px" height="17px"></div>
+
+<div class="Object267"><img src="files/IMG_169.jpg"  alt="" width="407px" height="15px"></div>
+
+<div class="Object268"><img src="files/IMG_22.jpg"  alt="" width="350px" height="108px"></div>
+
+<div class="Object269"><a href="http://cinxiabase.vmhost.psu.edu/" onMouseOver='img_mo0.src="files/mo_IMG_171.jpg"' onMouseOut='img_mo0.src="files/IMG_171.jpg"'><img src="files/IMG_171.jpg" name="img_mo0" alt="" width="156px" height="43px"></a></div>
+
+<div class="Object270"><a href="projects.html" onMouseOver='img_mo1.src="files/mo_IMG_172.jpg"' onMouseOut='img_mo1.src="files/IMG_172.jpg"'><img src="files/IMG_172.jpg" name="img_mo1" alt="" width="156px" height="43px"></a></div>
+
+<div class="Object271"><a href="software.html" onMouseOver='img_mo2.src="files/mo_IMG_173.jpg"' onMouseOut='img_mo2.src="files/IMG_173.jpg"'><img src="files/IMG_173.jpg" name="img_mo2" alt="" width="156px" height="43px"></a></div>
+
+<div class="Object272"><a href="mailto:jcv128@psu.edu" onMouseOver='img_mo3.src="files/mo_IMG_174.jpg"' onMouseOut='img_mo3.src="files/IMG_174.jpg"'><img src="files/IMG_174.jpg" name="img_mo3" alt="" width="156px" height="43px"></a></div>
+
+<div class="Object273"><a href="index.html" onMouseOver='img_mo4.src="files/mo_IMG_175.jpg"' onMouseOut='img_mo4.src="files/IMG_175.jpg"'><img src="files/IMG_175.jpg" name="img_mo4" alt="" width="156px" height="43px"></a></div>
+
+<div class="Object274"><img src="files/IMG_176.jpg"  alt="" width="153px" height="17px"></div>
+
+<div class="Object275"><img src="files/IMG_29.jpg"  alt="" width="573px" height="11px"></div>
+
+<div class="Object276"><img src="files/IMG_30.jpg"  alt="" width="561px" height="11px"></div>
+
+<div class="Object277"><a href="weblinks.html" onMouseOver='img_mo5.src="files/mo_IMG_179.jpg"' onMouseOut='img_mo5.src="files/IMG_179.jpg"'><img src="files/IMG_179.jpg" name="img_mo5" alt="" width="156px" height="43px"></a></div>
+
+<div class="Object278"><a href="files/Download/SNPHunter.exe" ><img src="files/IMG_180.jpg"  alt="" width="153px" height="17px"></a></div>
+
+<div class="Object279"><span class="textstyle0">Software<br>
+</span></div>
+
+<div class="Object280"><span class="textstyle1">BETAS<br>
+</span></div>
+
+<div class="Object281"><span class="textstyle2">Notes:<br>
+</span></div>
+
+<div class="Object282"><span class="textstyle3">SNPHunter: </span><span class="textstyle4">Searches an alignment file (e.g. AceParser output) for SNPs 
+using multiple parameters and filters (works with AssemblyFilter) for quality, 
+homopolymer runs, and alternative splicing/assembly error. Options to include 
+Blast annotation and ORF information for codon position and 
+synonomous/nonsynonymous amino acid changes and to generate population 
+specific output. <br>
+Download version:<br>
+ 2.22: <a href="files/Download/SNPHunter0.exe">SNPHunter.exe</a>, <a href="files/Download/AssemblyFilter.exe">AssemblyFilter.exe<br>
+</a> 2.10:<a href="files/Download/SNPHunter210.exe"> SNPHunter.exe</a>, <a href="files/Download/AssemblyFilter.exe">AssemblyFilter.exe<br>
+</a> 1.00: <a href="files/Download/SNPHunter1.exe">SNPHunter1.exe<br>
+</a> Doc: <a href="files/Download/SNPHunterOverview_221.pdf">SNPHunterOverview<br>
+</a></span></div>
+
+<div class="Object283"><span class="textstyle4">&#62;These perl scripts are designed to be run from the Windows command-prompt 
+(Vista/7) and have standard Unix/DOS-like options functunality.<br>
+e.g. C:&#62;script1.exe -i input.txt -o output.txt etc.<br>
+<br>
+&#62;Both pre-packaged executables (exe) and code (pl) are available for most of the 
+scripts. Executables are optimized for 64-bit Windows and may or may not 
+function on 32-bit systems.<br>
+<br>
+&#62;All scripts include a help option for a general description of function followed by 
+option list.<br>
+e.g.  C:&#62;script1.exe -h<br>
+<br>
+&#62;Feel free to contact me<br>
+ for bugs or suggestions at: jcv128@psu.edu<br>
+<br>
+</span></div>
+
+<div class="Object284"><span class="textstyle3">AceParser: </span><span class="textstyle4">Parse an Ace file (Phred/Phrap output) into a tab-delimited 
+assembly alignment file. Options to include embedded annotation from 
+multiple sources.<br>
+Download version:<br>
+1.33: <a href="files/Download/AceParser.exe">AceParser.exe<br>
+</a>1.31: <a href="files/Download/AceParser_r131.exe">AceParser.exe<br>
+</a></span></div>
+
+<div class="Object285"><span class="textstyle3">TranscriptSimulator: </span><span class="textstyle4">Simple text-based, next-gen output simulator. 
+Specifically designed to simulate transcriptome next-gen reads, including 454 
+and Illumina. Uses a model to simulate transcription followed by simulated 
+sequencing using various customizable parameters. Uses a nucleotide gene 
+set as a template (e.g. in silico predicted gene set). Version 0.50 includes 
+simple sequencing error model and slightly more realistic 454 error model. 
+Version 0.70 has simulated SNPs/Indels with an improved model.<br>
+Download version:<br>
+0.70: <a href="files/Download/TranscriptSimulator.exe">TranscriptSimulator.exe</a>, <a href="files/Download/TranscriptSimulatorNotes.txt">TranscriptSimulatorNotes.txt<br>
+</a></span></div>
+
+<div class="Object286"><span class="textstyle3">QualSim: </span><span class="textstyle4">Very experimental text-based Phred quality score simulator for 
+next-gen sequencer output. Intended for use with TranscriptSimulator script. 
+Attempts to create realistic quality scores for a gene sequence set using a 
+large amount of training data (e.g. 454 reads).<br>
+Download version:<br>
+0.40: <a href="files/Download/">QualSim.exe<br>
+</a></span></div>
+
+<div class="Object287"><span class="textstyle3">SimAssemblyStage1</span><span class="textstyle5">:</span><span class="textstyle3"> </span><span class="textstyle4">Perfectly aligns TranscriptSimulator reads to their 
+nucleotide templates using read title inforamation, creating ideal simulated 
+assembly of super contigs. <br>
+Download version:<br>
+0.20: <a href="files/Download/SimAssemblyStage1.exe">SimAssemblyStage1.exe<br>
+</a></span></div>
+
+<div class="Object288"><span class="textstyle3">SimAssemblyStage2</span><span class="textstyle5">:</span><span class="textstyle3"> </span><span class="textstyle4">Creates an optimal simulated assembly alignment of 
+contigs using the output of SimAssemblyStage1. <br>
+Download version:<br>
+0.20: <a href="files/Download/SimAssemblyStage2.exe">SimAssemblyStage2.exe<br>
+</a></span></div>
+
+<div class="Object289"><span class="textstyle3">TableParser</span><span class="textstyle5">:</span><span class="textstyle3"> </span><span class="textstyle4">Simple tool for extracting sequences from tab-delimited 
+assembly alignment files (e.g. SimAssembly and AceParser output). Parses out 
+contigs, singletons, and assembled reads into separate files.<br>
+Download: <a href="files/Download/TableParser.exe">TableParser.exe</a>,<a href="files/Download/TableParser.zip"> TableParser.pl<br>
+<br>
+</a></span></div>
+
+</body>
+</html>

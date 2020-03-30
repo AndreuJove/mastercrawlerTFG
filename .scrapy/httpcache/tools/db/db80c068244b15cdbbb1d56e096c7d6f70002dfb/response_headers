@@ -1,0 +1,22 @@
+Accept-Ranges: bytes
+Age: 0
+Cache-Control: must-revalidate, no-cache, private
+Content-Encoding: gzip
+Content-Language: en
+Content-Type: text/html; charset=UTF-8
+Date: Mon, 30 Mar 2020 18:45:07 GMT
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Link: <https://datascience.cancer.gov/>; rel="shortlink", <https://datascience.cancer.gov/>; rel="canonical"
+Link: <https://datascience.cancer.gov/home>; rel="revision"
+Server: nginx
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Vary: Accept-Encoding
+Via: varnish
+X-Ah-Environment: prod
+X-Cache: MISS
+X-Content-Type-Options: nosniff
+X-Drupal-Dynamic-Cache: UNCACHEABLE
+X-Frame-Options: SAMEORIGIN
+X-Generator: Drupal 8 (https://www.drupal.org)
+X-Request-Id: v-92fd2274-72b6-11ea-8151-a7c805f557ca
+X-Ua-Compatible: IE=edge

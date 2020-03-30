@@ -1,0 +1,14 @@
+Server: GitHub.com
+Content-Type: text/html
+Location: https://shahlab.ca/projects/defuse/
+X-Github-Request-Id: 8B56:05B2:3401E3:412C73:5E823A8D
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 18:50:05 GMT
+Via: 1.1 varnish
+Age: 1232
+X-Served-By: cache-mad22028-MAD
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1585594206.927688,VS0,VE0
+Vary: Accept-Encoding
+X-Fastly-Request-Id: c2668034295d6e0e11782dcae080aa3254b09a43

@@ -1,0 +1,18 @@
+Date: Mon, 30 Mar 2020 18:48:10 GMT
+Content-Type: text/html;charset=utf-8
+Content-Language: en
+Etag: W/"6abb6402121c4cb17002f7c7f826b2b2"
+Link: <https://static.parastorage.com/>; rel=preconnect; crossorigin,<https://fonts.gstatic.com>; rel=preconnect; crossorigin,<https://static.wixstatic.com/>; rel=preconnect;,<https://static.parastorage.com/unpkg/requirejs-bolt@2.3.6/requirejs.min.js>; rel=preload; as=script;,<https://static.parastorage.com/unpkg/lodash@4.17.15/lodash.min.js>; rel=preload; as=script ; crossorigin=anonymous;,<https://static.parastorage.com/unpkg/zepto@1.2.0/dist/zepto.min.js>; rel=preload; as=script ; crossorigin=anonymous;,<https://static.wixstatic.com/>; rel=preconnect; crossorigin;,<https://www.cannabisdraftmap.org/_api/v2/dynamicmodel>; rel=preload; as=fetch ; crossorigin=anonymous;,<https://static.parastorage.com/services/wix-bolt/1.5478.0/bolt-main/app/main-r.min.js>; rel=preload; as=script ; crossorigin=anonymous;
+Age: 1244
+Set-Cookie: ssr-caching="cache,desc=hit,varnish=hit, dc,desc=euw2";Version=1;Expires=Mon, 30-Mar-2020 18:27:46 GMT;Max-Age=20
+Set-Cookie: hs=-193603545; Path=/; Domain=www.cannabisdraftmap.org; HTTPOnly
+Set-Cookie: svSession=f35dce482fa6a40194eea40f9e814119f79654ead1feca096a92850b22d107308df9946dd0f3a4ed6ba093cb0989f3f41e60994d53964e647acf431e4f798bcdd87fa5b03aa00a317faa1fd782009f4d88e8114d488d44bbb33bff295c96271d; Max-Age=63071999; Expires=Wed, 30 Mar 2022 18:48:09 GMT; Path=/; Domain=www.cannabisdraftmap.org
+Set-Cookie: XSRF-TOKEN=1585594090|3Rn1c1-X5h2j; Path=/; Domain=www.cannabisdraftmap.org
+Server-Timing: cache;desc=hit, varnish;desc=hit, dc;desc=euw2
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Vary: Accept-Encoding
+X-Seen-By: sHU62EDOGnH2FBkJkG/Wx8EeXWsWdHrhlvbxtlynkVhQj1BaGUHEZdeNXf9X2Qzk,2d58ifebGbosy5xc+FRaloPX4ngKfQM8fEHbwELHijkVbQ/eW2EIeodsFdUsbVNuWIHlCalF7YnfvOr2cMPpyw==,Nlv1KFVtIvAfa3AK9dRsI1nIZCpqg9BJ2Nb9dekz80wfbJaKSXYQ/lskq2jK6SGP,2UNV7KOq4oGjA5+PKsX47F8xRgV30iIDzySL0NmaUxo=
+X-Wix-Request-Id: 1585594090.746301636305118838
+Cache-Control: private,max-age=0,must-revalidate
+Server: Pepyaka/1.15.10
+Content-Encoding: gzip

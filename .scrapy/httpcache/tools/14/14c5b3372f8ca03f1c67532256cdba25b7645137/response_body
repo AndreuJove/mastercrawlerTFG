@@ -1,0 +1,437 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+
+<!-- Include the header of the page. It must be followed by the footer.html at the end of the page -->
+<!-- ********************************************************************************************* -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='en'>
+<head>
+  <title>ChIP-Seq</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="shortcut icon" href="/sib_images/DNA_binary.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="/sib_css/sib-expasy.css" />
+  <link rel="stylesheet" href="/css_files/chipseq_body_style.css" type="text/css" media="screen" charset="utf-8">
+
+  <meta charset="UTF-8" /> 
+  <link rel="stylesheet" href="http://epd.epfl.ch/sib_css/jquery-ui.css" />
+  <script src="https://epd.epfl.ch/scripts/jquery-1.10.2.js"></script>
+  <script src="https://epd.epfl.ch/scripts/jquery-ui.js"></script>
+  <!-- All needed for epd.js -->
+  <script language="javascript" type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
+  <script language="javascript" type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+  <script language='javascript' type='text/javascript' src='https://epd.epfl.ch/scripts/epd.js'></script> <!-- toggle_class() -->
+
+
+  <style type="text/css">
+  #triangle {
+    color: #FFF;
+  }
+
+  .hl-item {
+    /*width: 160px;*/
+    /*height: 30px; */
+    width: 275px;
+    height: 50px;
+    /*margin-left: 40%;*/
+    /*background: #CC0000; default red color */
+    background: #00ff01;
+    text-align:center;
+    overflow:hidden;
+  }
+
+  .hl-item-link {
+    font-size: 12px !important;
+  }
+
+  .hl-item p a {
+    /*color:#FFF;*/
+    color:#000;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    vertical-align:middle;
+  }
+
+  .subtext {
+    /*padding-top:15px; */
+    padding-top:5px;
+  }
+
+  #highlight {
+    position:absolute;
+    display: inline;
+    left:60%;
+    background:none;
+    z-index:99;
+  }
+  #twitter {
+    position: absolute;
+    display: inline;
+    right: 30px;
+    top: 100px;
+    background: none;
+    z-index: 99;
+  }
+  #twitter_msg {
+    position: absolute;
+    display: inline;
+    right: 160px;
+    top: 103px;
+    background: none;
+    color: #1689B7;
+    font-family: arial;
+    z-index: 99;
+  }
+  </style>
+
+  <script language="javascript" type="text/javascript">
+  jQuery.noConflict();
+  jQuery(document).ready(function(){
+  	
+	//Remove outline from links
+	jQuery(".hl-item-link").click(function(){
+		jQuery(this).blur();
+	});
+	
+	//When mouse rolls over
+	jQuery(".hl-item").mouseover(function(){
+		jQuery(this).stop().animate({height:'200px'},{queue:false, duration:600, easing: 'easeOutBounce'}) // For EPD job
+		//jQuery(this).stop().animate({height:'240px'},{queue:false, duration:600, easing: 'easeOutBounce'}) default one
+		//jQuery(this).stop().animate({height:'275px'},{queue:false, duration:600, easing: 'easeOutBounce'})
+	});
+	
+	//When mouse is removed
+	jQuery(".hl-item").mouseout(function(){
+		jQuery(this).stop().animate({height:'50px'},{queue:false, duration:600, easing: 'easeOutBounce'})
+		//jQuery(this).stop().animate({height:'30px'},{queue:false, duration:600, easing: 'easeOutBounce'})
+	});
+	
+  });
+  </script>
+</head>
+
+<body onload='check_url_parameters()'>
+
+<div id='sib_top'><a name='TOP'></a></div>
+<div id='sib_container'>
+<!-- Advertise SIB Training Course: SIB_course2018_w250px.png 250px wide -->
+<!--
+<div id="highlight">
+  <div class="hl-item">
+    <p><a class="hl-item-link" href="http://www.sib.swiss/training/course/2018-04-chipseq" target="_blank">To learn more about our resources<br> register for our course in April (Week 2) ▼<br/></a></p>
+    <p class="subtext">
+     <a href="http://www.sib.swiss/training/course/2018-04-chipseq" target="_blank"><img src="/icons/SIB_course2018_w250px.png" border="0"/></a>
+    </p>
+  </div>
+</div>
+-->
+<!-- Advertise MGA-Search Page -->
+<!--
+<div id="highlight">
+  <div class="hl-item">
+    <p><a class="hl-item-link" href="/mga/searchMga.php" target="_blank">A New User-friendly Tool<br>To easily search through our Data Repository ▼<br/></a></p>
+    <p class="subtext">
+     <a href="/mga/searchMga.php" target="_blank"><img src="/icons/MGA-Search_ads-275px.png" border="0"/></a>
+    </p>
+  </div>
+</div>
+-->
+<!-- Advertise EPD open poistion -->
+<!--
+<div id="highlight">
+  <div class="hl-item">
+    <p><a class="hl-item-link" href="https://apply.refline.ch/499599/0076/pub/1/index.html" target="_blank">Work with us!<br/ >Open position as EPD developer &darr;<br/></a></p>
+    <p class="subtext">
+     <a href="https://apply.refline.ch/499599/0076/pub/1/index.html" target="_blank"><img src="/icons/EPD_position_w250px.png" border="0"/></a>
+    </p>
+  </div>
+</div>
+-->
+  <div id="twitter_msg">
+    To get all news messages from us
+  </div>
+  <div id="twitter">
+    <a href="https://twitter.com/EPD_SIB" class="twitter-follow-button" data-show-count="false">Follow @EPD_SIB</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+
+  <div id='sib_header'>
+    <a href='http://www.isb-sib.ch/' id='sib_logo' target = '_blank'><span>Swiss Institute of Bioinformatics</span></a>
+
+      <div id='sib_other_logo'>
+	<a href='/chipseq/' id='chipseq_logo' ><span style="visibility:hidden;">ChIP-Seq</span></a>
+      </div>
+
+      <div id='sib_title'>
+      </div>
+
+      <div id='sib_header_nav'>
+        <img src = '/icons/EPFL_logo_182X53_transp.gif' alt = 'ChIP-Seq'>
+      </div>
+
+  </div>
+
+<div id='sib_body'>
+
+<div id='sib_navigation'>
+  <a class='navigation' href='https://ccg.epfl.ch' title='Computational Cancer Genomics'>Computational Cancer Genomics</a>&nbsp;|&nbsp;<a class='navigation' href='http://www.expasy.org' title='ExPASy'>ExPASy</a>&nbsp;|&nbsp;<a class='navigation' href='http://www.epfl.ch' title='EPFL'>EPFL</a>&nbsp;|&nbsp;<a class='navigation' href='/chipseq/' title='Home Page'><b>Home Page</b></a>
+<!--<br><span style='color:red; font-size:13px'>Due to maintenance activity, ChIP-Seq will not be operational starting January 22 until January 24. Please <a href="/chipseq/webmail.php" style='color: red;'>contact us</a> in case of problems.</span>-->
+<!--<br><span style='color:red; font-size:13px'>Due to recent maintenance activity, ChIP-Seq Website will not be operational starting January 22 until January 24. We apologize for the inconvenience and thank you for your understanding.</span>-->
+<!--
+<br><span style='color:red; font-size:13px'>We are experiencing problems with our servers. The ChIP-Seq Website is therefore not operational. We are trying to fix this as soon as possible. We apologize for the inconvenience and thank you for your understanding.</span>
+-->
+</div>
+
+<div id="sib_left_menu">
+   <ul class='sib_menu' id='category_expanding_menu'>
+
+   <li class='menu_title' id="menu_vg">ChIP-Seq Tools</li>
+
+      <li style = 'display: block'>
+      <ul class='sib_submenu'>
+      <li class='sib_submenu'><a href="/chipseq/chip_cor.php">ChIP-Cor</a></li>
+      <li class='sib_submenu'><a href="/chipseq/chip_extract.php">ChIP-Extract</a></li>
+      <li class='sib_submenu'><a href="/chipseq/chip_peak.php">ChIP-Peak</a></li>
+      <li class='sib_submenu'><a href="/chipseq/chip_part.php">ChIP-Part</a></li>
+      <li class='sib_submenu'><a href="/chipseq/chip_center.php">ChIP-Center</a></li>
+      <li class='sib_submenu'><a href="/chipseq/chip_track.php">ChIP-Track</a></li>
+      <li class='sib_submenu'><a href="/chipseq/chip_convert.php">ChIP-Convert</a></li>
+      </ul>
+      </li>
+
+   <li class='menu_title' id="menu_vg"><a href="/mga/" style="font-size:13px">MGA Database</a></li>
+      <li style = 'display: block'>
+      <ul class='sib_submenu'>
+      <li class='sib_submenu'><a href="/mga/searchMga.php">MGA-Search</a></li>
+      <li class='sib_submenu'><a href="/chipseq/data/html/res_data.php">MGA Data Overview</a></li>
+      <li class='sib_submenu'><a href="ftp://ccg.epfl.ch/mga/">MGA FTP-Site</a></li>
+      <li class='sib_submenu'><a href="/mga/AssemblyTable.html">Genome Assembly Table</a></li>
+      </ul>
+      </li>
+
+   <li class='menu_title' id="menu_vg">Other Resources</li>
+      <li style = 'display: block'>
+      <ul class='sib_submenu'>
+      <li class='sib_submenu'><a href="http://epd.epfl.ch">EPD</a></li>
+      <li class='sib_submenu'><a href="/ssa/">SSA</a></li>
+      <li class='sib_submenu'><a href="/pwmtools/pwmscan.php">PWMScan</a></li>
+      </ul>
+      </li>
+
+   <li class='menu_title' id="menu_vg">Documentation</li>
+      <li style = 'display: block'>
+      <ul class='sib_submenu'>
+      <li class='sib_submenu'><a href="/chipseq/tutorials.php">Tutorials</a></li>
+      <li class='sib_submenu'><a href="/chipseq/general_doc.php">General Documentation</a></li>
+      </ul>
+      </li>
+
+   <li class='menu_title' id='menu_categories'><a href="/chipseq/references.php">References</a></li>
+   <li class='menu_title' id='menu_categories'><a href="/FAQ/FAQ_ChIP-Seq.php">Frequently Asked Questions</a></li>
+   <li class='menu_title' id='menu_categories'><a href="/chipseq/doc/ChIP-Seq_cloud.php">ChIP-Seq on Amazon Cloud</a></li>
+
+   <li class='menu_title'><a href="/chipseq/news.php">What is new</a></li>
+   <li class='menu_title'><a href="/chipseq/webmail.php">Contact us</a></li>
+
+   </ul>
+</div>
+
+<div id="sib_content">
+
+<div style='font-size: 13px; text-align: justify; width:90%; padding-left: 25px; min-height:600px; display: inherit'>
+
+<!-- News statement at the top of the page -->
+<div class="news" style="border-style: solid; border-width: 1px; border-color: darkgrey; padding: 5px 5px 5px 5px;" >
+<table style="width:100%; table-layout: fixed;">
+<tr>
+<td style="font-size: 14px; width: 45px; vertical-align: text-top;">
+   <a href="/chipseq/news.php">News</a>:
+</td>
+   <!-- This div truncate words at the end of the line-->
+   <!-- td><div style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" -->
+   <td><div style="font-size: 14px;">
+2018-10-08 -- New Software release (1.5.4)<div class="divnews" style="display:none;">The new software release includes the following updates:
+<ul><li> Replace format conversion Perl scripts <i>sga2bed.pl</i>, <i>sga2wig.pl</i>, and <i>bed2sga.pl</i> with corresponding C programs (<i>sga2bed, sga2wig, bed2sga</i>);</li>&#13;
+<li> Add format conversion program <i>bed2bed_display</i> to convert BED to BED track suitable for visualizing signal peak regions;</li>
+<li> <i>chippeak</i>: add check on chromosome boundaries after peak refinement;</li>
+<li> <i>chipcenter</i>: add check on chromosome boundaries after read shifting;</li>
+<li> Update User's Guide.</li>
+</ul></div></div>
+</td>
+<td style="width: 30px; vertical-align: text-top;">
+<div class='divnews' style="display:block">
+<a href="#" style='font-size: 12px;' onclick="toggle_class('divnews');">more</a>
+</div>
+<div class='divnews' style="display:none">
+<a href="#" style='font-size: 12px;' onclick="toggle_class('divnews');">less</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+<p>
+
+<br>
+<div style='font-size: 14px; text-align: justify;'>
+The ChIP-Seq Web Server provides access to a set of useful tools performing common ChIP-Seq data analysis tasks, including positional correlation analysis, peak detection, and genome partitioning into signal-rich and signal-poor regions.  <br>
+Users can analyse their own data by uploading mapped sequence tags in various formats, including BED and BAM. 
+<br>The server also provides access to hundreds of publicly available data sets such as ChIP-seq data, RNA-seq data (i.e. CAGE), DNA-methylation data, sequence annotations (promoters, polyA-sites, etc.), and sequence-derived features (CpG, phastCons scores).
+<br>
+</div>
+<p>
+<table align=center width=100% border=1 cellpadding=5 cellspacing=2 bordercolor=darkgrey>
+ <tr>
+  <td valign=top width=100%>
+   <table CELLPADDING=5 CELLSPACING=5 BORDER=0 WIDTH=100%>
+   <tr>
+   <td width="35%" align=center style='font-size: 14px' nowrap>
+    <b>The source code is available on</b></td>
+   <td width="65%">
+    <a href="https://sourceforge.net/projects/chip-seq/" target="_blank"><img src='/icons/images-sourceforge.jpeg' style='border-style: none' width='100'></a>
+   </td>
+  </tr>
+ </table>
+</td>
+</tr>
+</table>
+
+<p>
+<table border=1 width=100% cellpadding=5 align=left bordercolor=darkgrey>
+    <tr>
+      <td valign=top><span style="font-size:14px; line-height:1.3"><b>The ChIP-Seq Tools</b></span>
+      <p>
+	<ul>
+	  <li>
+	    <a href="/chipseq/chip_cor.php">ChIP-Cor</a>: 
+            Generation of an aggregation plot (feature correlation plot) for specific genomic features.
+	  </li>
+       </ul>
+      </p>
+      <p>
+	<ul>
+	  <li>
+	    <a href="/chipseq/chip_extract.php">ChIP-Extract</a>: 
+            Extraction of specific genome annotation features around reference genomic anchor points. 
+            The output is a table with rows representing each reference anchor point and columns the feature
+	    tag occurence at specific distances. This table can be used to generate heatmaps.
+	  </li>
+       </ul>
+      </p>
+      <p>
+	<ul>
+	  <li>
+	    <a href="/chipseq/chip_center.php">ChIP-Center</a>: 
+            Read tag shifting to estimated center-positions of DNA fragments. 
+	  </li>
+       </ul>
+      </p>
+      <p>
+	<ul>
+	  <li>
+	    <a href="/chipseq/chip_peak.php">ChIP-Peak</a>: 
+            Narrow peak caller that uses a fixed width peak size. 
+	  </li>
+       </ul>
+      </p>
+      <p>
+	<ul>
+	  <li>
+	    <a href="/chipseq/chip_part.php">ChIP-Part</a>: 
+            Broad peak caller algorithm used for broad regions of enrichment
+            found in ChIP-seq experiments targeted at histone marks.
+	  </li>
+       </ul>
+      </p>
+      <p>
+	<ul>
+	  <li>
+	    <a href="/chipseq/chip_track.php">ChIP-Track</a>:
+            Generation of UCSC Genome Browser annotation tracks for data visualization.
+	  </li>
+       </ul>
+      </p>
+      <p>
+	<ul>
+	  <li>
+	    <a href="/chipseq/chip_convert.php">ChIP-Convert</a>:
+            Format conversion tool for BED, BAM, SGA, and other data formats.  
+            Data export from our local data repository, the Mass Genome Annotation (MGA) database,
+            is also available.
+	  </li>
+       </ul>
+      </p>
+      </td>
+    </tr>
+  <tr>
+      <td valign=top>
+	<span style="font-size:14px"><b> Acces to the Mass Genome Annotation (MGA) database</b> </span>
+	<p>
+	  <ul>
+	    <li>
+	      <a href="/mga/searchMga.php">
+		MGA-Search</a>: 
+                Fast full-text search of our local collection of publicly available datasets. 
+	    </li>
+          </ul>
+	</p>
+      </td>
+    </tr>
+</table>
+
+<p>
+</p>
+
+<p style="margin-top: 1cm">
+  <div style='border-style: solid; border-width: 1px; border-color: darkgrey; font-size: 14px; padding: 3px 3px 3px 3px' >
+    You find our <b>on-line Tutorial Series</b> <a target='_blank'
+    href='/chipseq/tutorials.php'>here</a>.
+  </div>
+
+<p>Please cite us using the following reference:</p>
+<p>
+<div  border=0 width="80%">
+<ul style='padding-left: 10px'>
+<li style='list-style-type: none; font-size: 14px; white-space: nowrap'>
+    Ambrosini, G., Dreos, R., Kumar, S., and Bucher, P. <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3288-8">BMC Genomics (2016) <b>17</b>: 938.</a> <b>DOI</b>:10.1186/s12864-016-3288-8<br>
+<i>The ChIP-Seq tools and web server: a resource for analyzing ChIP-seq and other types of genomic data</i>
+</li>
+</ul>
+</div>
+
+<!-- ######### Insert the footer #########-->
+</div> <!-- page style -->
+</div> <!-- sib_content -->
+</div> <!-- sib_body -->
+
+<div id='sib_last_update'>Last update January 2020</div>
+<div id='sib_footer_b'>
+  <div id='sib_footer_content'>
+    <a href='http://www.isb-sib.ch'>Swiss Institute of Bioinformatics</a>
+    | <a href='http://ccg.vital-it.ch' target='_blank'>Computational Cancer Genomics</a>
+    | <a href='http://www.epfl.ch' target='_blank'>EPFL</a>
+    | <a href='/chipseq/webmail.php'>Contact Us</a>
+    <div id='sib_footer_right'>
+      <div id='div_gototop'>
+        <a href='#TOP' id='footer_gototop'><img src='/sib_images/triangle.png' id='gototop_img' alt='Top of the page' onmouseover='document.getElementById("gototop_img").src="/sib_images/triangle_on.png";' onmouseout='document.getElementById("gototop_img").src="/sib_images/triangle.png";'/><span id='gototop_label' onmouseover='document.getElementById("gototop_img").src="/sib_images/triangle_on.png";' onmouseout='document.getElementById("gototop_img").src="/sib_images/triangle.png";'>Back to the Top</span></a>  
+      </div>
+    </div>
+  </div>
+</div>
+
+</div> <!-- sib_container -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  //ga('create', 'UA-19572759-1', 'auto');
+  ga('create', 'UA-11543973-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>

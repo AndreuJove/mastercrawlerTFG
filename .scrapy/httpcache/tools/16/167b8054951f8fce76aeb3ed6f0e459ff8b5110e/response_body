@@ -1,0 +1,349 @@
+<html>
+<head>
+<title>C-I-TASSER: contact-guided protein structure prediction</title>
+
+<!-- ==AAA== ======beginning of head====== -->
+<!--
+  When you compose a webpage at the webserver, please have following in mind:
+     1, please keep the following 4 tags unchanged:
+            ==AAA==
+            ==BBB==
+            ==CCC==
+            ==DDD==
+         These tags will be used to update the frame of the webpages.
+     2, the content between '==AAA==' and '==BBB==' and content between 
+        '==CCC==' and '==DDD==' will be mandatorily rewritten by the system 
+        program. You can put your own contents outside these two regions.
+	Thus, your page should look like the following:
+	   [your content]
+            ==AAA==
+ 	      [system content]
+            ==BBB==
+	   [your content]
+            ==CCC==
+ 	      [system content]
+            ==DDD==
+-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/css/all.css" type="text/css" />
+<script type="text/javascript" src="/css/minmax.js"></script>
+<script type="text/javascript" src="/css/all.js"></script>
+</head>
+<body>
+<!-- End of declaration -->
+
+<div id="z_top">
+  <a href="/" id="z_lab_logo"><img alt="Zhang Lab" src="/image/logo_top.jpg" /></a>
+  <a href="http://www.umich.edu" id="z_um_logo"><img alt="University of Michigan" src="/image/wordmark_m_web.gif" /></a>
+</div>
+
+<div id="z_menu">
+  <a class="z_menu_main" href="/">Home</a>
+  <a class="z_menu_main" href="/research">Research</a>
+  <a class="z_menu_main" href="/services">Services</a>
+  <a class="z_menu_main" href="/papers">Publications</a>
+  <a class="z_menu_main" href="/people">People</a>
+  <a class="z_menu_main" href="https://medicine.umich.edu/dept/dcmb/education/course-descriptions/bioinf-528-structural-bioinformatics">Teaching</a>
+  <!-- <a class="z_menu_main" href="/funding">Funding</a> -->
+  <a class="z_menu_main" href="/job">Job Opening</a>
+  <a class="z_menu_main" href="/facility">Facilities</a>
+  <a class="z_menu_main" href="/news">News</a>
+  <a class="z_menu_main" href="https://zhanglab.ccmb.med.umich.edu/bbs/?q=forum/2">Forum</a>
+  <a class="z_menu_main" href="/labonly">Lab Only</a>
+  <div class="z_clear"></div>
+</div>
+
+<div id="z_body">
+  <div id="z_sidebar">
+    <a id="z_sidebar_title" href="/services">Online Services</a>
+    <p class="z_sidebar_menu z_sidebar_menu1">
+      <a href="/I-TASSER">&#9679;<span>I-TASSER</span></a>
+      <a href="/QUARK">&#9679;<span>QUARK</span></a>
+      <a href="/LOMETS">&#9679;<span>LOMETS</span></a>
+      <a href="/COACH">&#9679;<span>COACH</span></a>
+      <a href="/COFACTOR">&#9679;<span>COFACTOR</span></a>
+      <a href="/MetaGO">&#9679;<span>MetaGO</span></a>
+      <a href="/MUSTER">&#9679;<span>MUSTER</span></a>
+      <a href="/CEthreader">&#9679;<span>CEthreader</span></a>
+      <a href="/SEGMER">&#9679;<span>SEGMER</span></a>
+      <a href="/FG-MD">&#9679;<span>FG-MD</span></a>
+      <a href="/ModRefiner">&#9679;<span>ModRefiner</span></a>
+      <a href="/REMO">&#9679;<span>REMO</span></a>
+      <a href="/DEMO">&#9679;<span>DEMO</span></a>
+      <a href="/spring">&#9679;<span>SPRING</span></a>
+      <a href="/COTH">&#9679;<span>COTH</span></a>
+      <a href="/BSpred">&#9679;<span>BSpred</span></a>
+      <a href="/ANGLOR">&#9679;<span>ANGLOR</span></a>
+      <a href="/BSP-SLIM">&#9679;<span>BSP-SLIM</span></a>
+      <a href="/SAXSTER">&#9679;<span>SAXSTER</span></a>
+      <a href="/ThreaDom">&#9679;<span>ThreaDom</span></a>
+      <a href="/ThreaDomEx">&#9679;<span>ThreaDomEx</span></a>
+      <a href="/EvoDesign">&#9679;<span>EvoDesign</span></a>
+      <a href="/GPCR-I-TASSER">&#9679;<span class="z_narrow">GPCR-I-TASSER</span></a>
+      <a href="/BindProf">&#9679;<span>BindProf</span></a>
+      <a href="/BindProfX">&#9679;<span>BindProfX</span></a>
+      <a href="/SSIPe">&#9679;<span>SSIPe</span></a>
+      <a href="/ResQ">&#9679;<span>ResQ</span></a>
+      <a href="/IonCom">&#9679;<span>IonCom</span></a>
+      <a href="/STRUM">&#9679;<span>STRUM</span></a>
+      <a href="/DAMpred">&#9679;<span>DAMpred</span></a>
+    </p>
+    <p class="z_sidebar_menu z_sidebar_menu2">
+      <a href="/TM-score">&#9679;<span>TM-score</span></a>
+      <a href="/TM-align">&#9679;<span>TM-align</span></a>
+      <a href="/MM-align">&#9679;<span>MM-align</span></a>
+      <a href="/RNA-align">&#9679;<span>RNA-align</span></a>
+      <a href="/NW-align">&#9679;<span>NW-align</span></a>
+      <a href="/LS-align">&#9679;<span>LS-align</span></a>
+      <a href="/EDTSurf">&#9679;<span>EDTSurf</span></a>
+      <a href="/MVP">&#9679;<span>MVP</span></a>
+      <a href="/MVP-Fit">&#9679;<span>MVP-Fit</span></a>
+      <a href="/SPICKER">&#9679;<span>SPICKER</span></a>
+      <a href="/HAAD">&#9679;<span>HAAD</span></a>
+      <a href="/PSSpred">&#9679;<span>PSSpred</span></a>
+      <a href="/3DRobot">&#9679;<span>3DRobot</span></a>
+      <a href="/MR-REX">&#9679;<span>MR-REX</span></a>
+      <a href="/I-TASSER-MR">&#9679;<span>I-TASSER-MR</span></a>
+      <a href="/SVMSEQ">&#9679;<span>SVMSEQ</span></a>
+      <a href="/NeBcon">&#9679;<span>NeBcon</span></a>
+      <a href="/ResPRE">&#9679;<span>ResPRE</span></a>
+      <a href="/WDL-RF">&#9679;<span>WDL-RF</span></a>
+      <a href="/ATPbind">&#9679;<span>ATPbind</span></a>
+      <a href="/DockRMSD">&#9679;<span>DockRMSD</span></a>
+      <a href="/DeepMSA">&#9679;<span>DeepMSA</span></a>
+    </p>
+    <p class="z_sidebar_menu z_sidebar_menu1">
+      <a href="/BioLiP">&#9679;<span>BioLiP</span></a>
+      <a href="/Ecoli">&#9679;<span>E. coli</span></a>
+      <a href="/GLASS">&#9679;<span>GLASS</span></a>
+      <a href="/GPCR-HGmod">&#9679;<span>GPCR-HGmod</span></a>
+      <a href="/GPCR-RD">&#9679;<span>GPCR-RD</span></a>
+      <a href="/GPCR-EXP">&#9679;<span>GPCR-EXP</span></a>
+      <a href="/Tara-3D">&#9679;<span>Tara-3D</span></a>
+      <a href="/TM-fold">&#9679;<span>TM-fold</span></a>
+      <a href="/decoys">&#9679;<span>DECOYS</span></a>
+      <a href="/potential">&#9679;<span>POTENTIAL</span></a>
+      <a href="/RW">&#9679;<span>RW/RWplus</span></a>
+      <a href="/EvoEF">&#9679;<span>EvoEF</span></a>
+      <a href="/HPSF">&#9679;<span>HPSF</span></a>
+      <a href="/THE-DB">&#9679;<span>THE-DB</span></a>
+      <a href="/casp7">&#9679;<span>CASP7</span></a>
+      <a href="/casp8">&#9679;<span>CASP8</span></a>
+      <a href="/casp9">&#9679;<span>CASP9</span></a>
+      <a href="/casp10">&#9679;<span>CASP10</span></a>
+      <a href="/casp11">&#9679;<span>CASP11</span></a>
+      <a href="/casp12">&#9679;<span>CASP12</span></a>
+      <a href="/casp13">&#9679;<span>CASP13</span></a>
+    </p>
+  </div>
+  <div id="z_page">
+<!-- ==BBB== ======ending of head======== -->
+
+<!--------begin text --------->
+
+<center>
+<!--<img src="http://zhanglab.ccmb.med.umich.edu/image/ITASSER_logo.png"><br>-->
+<img src=img/C-I-TASSER.png width=400><br>
+</center>
+<p align="justify">
+C-I-TASSER (Contact-guided Iterative Threading ASSEmbly Refinement) is a
+composite approach that uses contact information to enhance the accuracy of
+protein structure and function predictions. Starting from a sequence,
+C-I-TASSER first generates contact-map of all residue pairs using 
+<a href=/NeBcon/>NeBcon</a>, <a href=/ResPRE/>ResPRE</a>, 
+<a href=/ResTriplet/>ResTriplet</a>, and <a href=/TripletRes/>TripletRes</a>.
+It then identifies structural templates from the PDB by multiple threading
+approach <a href=/LOMETS/>LOMETS</a>, with full-length atomic models
+constructed by contact-map guided fragment assembly simulations. Functions of
+the target are derived from the structure model by
+<a href=/COFACTOR>COFACTOR</a>. C-I-TASSER (as 'Zhang-Server') 
+was ranked as the No. 1 server for protein structure prediction
+in the community-wide
+<a href=http://www.predictioncenter.org/casp12/zscores_final.cgi?model_type=first&gr_type=server_only target=_blank>CASP12</a>
+and
+<a href=http://www.predictioncenter.org/casp13/zscores_final.cgi?model_type=best&gr_type=server_only target=_blank>CASP13</a>
+experiment.
+The benchmark data showed that C-I-TASSER could generate significantly
+more accurate models than
+<a href=/I-TASSER/>I-TASSER</a>,
+especially for the sequences that do not have homologous templates
+in the PDB.<p>
+
+<!--<br>-->
+<!--<br>-->
+<!--<center>-->
+<!--<a href=https://zhanglab.ccmb.med.umich.edu/CI-TASSER/download.html>-->
+<!--Download and install CI-TASSER program package</a>-->
+<!--</center>-->
+<!--<p>-->
+
+<center>
+[<a href=/C-I-TASSER/2019-nCov/><b>2019-nCoV Coronavirus</b></a>]
+[<b><a href=example>View example output</a></b>]
+[<b><a href=check.html>Check previous jobs</a></b>]
+[<b><a href=bin/stat.cgi>Server statistics</a></b>]
+[<b><a href=help.html>Help</a></b>]
+[<b><a href=/bbs/?q=forum/2>Forum</a></b>]
+</center>
+<hr>
+<b>C-I-TASSER On-line Server</b>:</b>
+<ul>
+<table style="font-family:Times New Roman;">
+    <tr>
+    <td>
+    <FORM id="form1" name="form1" METHOD="POST" ENCTYPE="MULTIPART/FORM-DATA" ACTION="bin/receive.cgi">
+    Copy and paste your sequence below ([10, 750] residues in
+    <a href=/FASTA>FASTA format</a>). <a href="javascript:example()">Click here for a sample input:</a>
+    <br>
+    <TEXTAREA NAME="SEQUENCE" ROWS=8 COLS=75></TEXTAREA>
+    <p>
+    Or upload the sequence from your local computer:
+    <br/>
+    <input type="file" name="seq_file" size="50">
+    <p>
+    Email: (mandatory, where results will be sent to)<br>
+    <input type="text" name="REPLY-E-MAIL" size=30>
+    <p> 
+    Password: (mandatory, please click <a href=/I-TASSER/registration.html>here</a>
+    if you do not have an I-TASSER password)<br>
+    <input type="password" name="PASSWORD" size=30>
+    <p>
+    ID: (optional, your given name of the protein)<br>
+    <input type="text" name="TARGET" size=30><p>
+    <input type="checkbox" name="PREFUNC" value="true" checked>Predict protein function based on structure model (running time may be doubled).<p>
+
+
+    <a id="option1" href="javascript:formAction('show',1)">
+    <img id="optionGraphic1" border=0 src="img/right_triangle.gif"/>
+    <b>Advanced options</b></a>
+    </a> <a href=./help.html#advanced target=blank>[?]</a>
+    <div id="optionForm1" style="display:none">
+    <ul>
+
+    <li>Assign full contact map:
+    <a href="javascript:example_contact()">Example contact</a>
+    <a href=help.html#CONTACT target=blank>[?]</a><br>
+    <TEXTAREA NAME="CONTACT_TXT" ROWS=6 COLS=30></TEXTAREA>
+    <p> Or upload sequence from your computer: <br>
+    <input type="file" name="contact_file" size="50">
+    <br>
+
+    <li>Exclude templates: <a href=help.html#HOMOFLAG target=blank>[?]</a>
+    <br><input type="radio" name="HOMOFLAG" value="real" checked>keep all identified templates (recommended).
+    <br><input type="radio" name="HOMOFLAG" value="benchmark">remove templates from protein sharing &gt;30% sequence identity with target.
+    <br>
+
+    </ul>
+    </div>
+
+
+    <input type="submit" value="Run C-I-TASSER"> <input type="reset" value="Clear form">
+    <br>(Please submit a new job only after your old job is completed)
+    </FORM>
+    </td>
+    </tr>
+</table>
+</ul>
+
+
+<!--<hr width=50% align=left>-->
+<!--<b>C-I-TASSER Resource:</b>-->
+<!--<ul>-->
+<!--<a href=https://www.xsede.org><img src=img/power_by_xsede.gif></a>-->
+<!--</ul>-->
+
+<a name="update"></a>
+
+<hr>
+<b>References:</b>
+<ul>
+<li>
+Wei Zheng, Yang Li, Chengxin Zhang, Robin Pearce, S. M. Mortuza, Yang Zhang.
+"Deep-learning contact-map guided protein structure prediction in CASP13."
+Proteins: Structure, Function, and Bioinformatics, 87: 1149-1164 (2019).
+[<a href=/papers/2019_19.pdf>PDF</a>][<a href=/papers/2019_19_support.pdf>Support Information</a>]
+</li>
+<li>
+Chengxin Zhang, S M Mortuza, Baoji He, Yanting Wang, and Yang Zhang.
+"Template-based and free modeling of I-TASSER and QUARK pipelines using predicted contact maps in CASP12."
+Proteins: Structure, Function, and Bioinformatics (2017). doi: 10.1002/prot.25414
+[<a href=/papers/2018_6.pdf>PDF</a>]
+</li>
+<li>Baoji He, S M Mortuza, Yanting Wang, Hongbin Shen, Yang Zhang. 
+NeBcon: Protein contact map prediction using neural network training coupled with naïve Bayes classifiers.
+Bioinformatics (2017) doi: 10.1093/bioinformatics/btx164.
+[<a href=/papers/2017_6.pdf>PDF</a>] [<a href=/papers/2017_6_support.pdf>Support Information</a>]
+</li>
+<li>
+Yang Li, Jun Hu, Chengxin Zhang, Dong-Jun Yu, and Yang Zhang.
+"ResPRE: high-accuracy protein contact map prediction by coupling precision matrix with deep residual neural networks." Bioinformatics (2019)
+doi: 10.1093/bioinformatics/btz291.
+[<a href=/ResPRE>Server</a>]
+</li>
+
+</ul>
+
+<!--------end text -------->
+
+<!-- ==CCC== ======beginning of tail==== -->
+ </div></div> <!-- for closing all the opening tags. -->
+</div>
+<p>
+  
+<p id="z_foot">
+<a href="mailto:yangzhanglab\@umich.edu">yangzhanglab<img src=http://zhanglab.ccmb.med.umich.edu/image/at.gif width=10 border=0>umich.edu</a>  
+|  (734) 647-1549 | 100 Washtenaw Avenue, Ann Arbor, MI 48109-2218
+</p>
+<br>
+</body>
+</html>
+<!-- ==DDD== =======ending of tail====== -->
+
+<script type="text/javascript">
+function popup(mylink, windowname)
+{
+    if (! window.focus)return true;
+    var href;
+    if (typeof(mylink) == 'string') href=mylink;
+    else href=mylink.href;
+    window.open(href, windowname, 'width=500,height=200,scrollbars=yes');
+    return false;
+}
+
+function example()
+{
+    var STR=IO("example.fasta");
+    document.form1.SEQUENCE.value = STR;
+}
+
+
+function IO(U, V) 
+{
+    var X = !window.XMLHttpRequest ? new ActiveXObject('Microsoft.XMLHTTP') : new XMLHttpRequest();
+    X.open(V ? 'PUT' : 'GET', U, false );
+    X.setRequestHeader('Content-Type', 'text/html')
+    X.send(V ? V : '');
+    return X.responseText;
+}
+
+</script>
+
+<script type="text/javascript">
+function formAction (action, id)
+{
+    if (action == 'show')
+    {
+        document.getElementById("optionForm"+id).style.display= "block";
+	document.getElementById("optionGraphic"+id).src="img/down_triangle.gif";
+	document.getElementById("option"+id).href= "javascript:formAction('hide', "+id+")";
+    }
+    
+    if (action == 'hide')
+    {
+        document.getElementById("optionForm"+id).style.display= "none";
+	document.getElementById("optionGraphic"+id).src="img/right_triangle.gif";
+	document.getElementById("option"+id).href= "javascript:formAction('show', "+id+")";
+    }
+}
+</script>

@@ -1,0 +1,16 @@
+Server: Apache/2.2.15 (Red Hat)
+Vary: Cookie,Accept-Encoding
+Cache-Control: public, max-age=10800
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=0
+Date: Mon, 30 Mar 2020 18:44:05 GMT
+Link: <https://www.ebi.ac.uk/asd>; rel="canonical",<https://www.ebi.ac.uk/node/13269>; rel="shortlink"
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+X-Drupal-Cache: HIT
+Content-Language: en
+Access-Control-Allow-Origin: *
+Etag: "1585592597-1"
+Set-Cookie: X-Mapping-ejmejipg=CC06570E52A369CD9D53232FEB862E2D; path=/
+X-Frame-Options: SAMEORIGIN
+Last-Modified: Mon, 30 Mar 2020 18:23:17 GMT

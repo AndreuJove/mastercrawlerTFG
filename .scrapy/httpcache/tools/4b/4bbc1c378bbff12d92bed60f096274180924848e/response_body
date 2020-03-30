@@ -1,0 +1,569 @@
+
+
+
+
+
+
+
+
+
+
+    
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Header for BG group pages - different for each page... -->
+<head id="top">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Java Bioinformatics Analyses Web Services (JABAWS) at the Barton Group -
+                                        Bioinformatics Research Group in the Division of Computational Biology,
+                                        School of Life Sciences, University of Dundee, UK.">
+    <meta name="author" content="Fabio Madeira (v2.2)">
+
+    <title>JABAWS | Java Bioinformatics Analyses Web Services (JABAWS) | Main Page</title>
+
+    <!-- Header section of BG website pages - includes navbar and logos  must be used with an h2-xxxx.html file before -->
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+                function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-5356328-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+    <link rel="shortcut icon" href="/jabaws/static/img/BG_intense2_small.ico">
+    
+    <link href="/jabaws/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/jabaws/static/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="/jabaws/static/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    
+    
+
+</head>
+<!--/navbar and header -->
+
+
+<body>
+<hr />
+<!-- BG header part -->
+<div class="container" id="mainpage">
+    <div class="row">
+
+        <div class="col-md-2 col-xs-2 text-center">
+            <a href="http://www.compbio.dundee.ac.uk/"></br>
+                <img src="/jabaws/static/img/BG_with_text.svg" style="width:70%;height:70%" alt="Barton Group Logo"></a>
+        </div>
+        <div class="col-md-1 col-xs-1 text-left"></div>
+        <div class="col-md-6 col-xs-6 text-center">
+            <a href="/jabaws/">
+                <img src="/jabaws/static/img/jabaws2.2.svg" style="width:100%;height:100%" alt="Barton Group Banner"></a>
+        </div>
+        <div class="col-md-1 col-xs-1 text-left"></div>
+        <div class="col-md-2 col-xs-2 text-center">
+            <a href="http://www.dundee.ac.uk"></br>
+                <img src="/jabaws/static/img/University_white_logo.svg" style="width:90%;height:90%" alt="University of Dundee Logo"></a>
+        </div>
+        
+        <!--<div class="col-md-1 col-xs-1 text-left"></div>-->
+        <!--<div class="col-md-10 col-xs-10 text-left">-->
+        <!--<img src="static/jabaws2.2_header.svg" style="width:100%;height:100%" alt="Barton Group Banner">-->
+        <!--</div>-->
+        <!--<div class="col-md-2 col-xs-2 text-left"></div>-->
+    </div>
+</div>
+<!--navbar region  -->
+<div class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/jabaws/"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                </li>
+                <li>
+                    <a href="/jabaws/getting_started.jsp" ><i class="fa fa-fighter-jet" aria-hidden="true"></i> Getting Started</a>
+                </li>
+
+                <li>
+                    <a href="/jabaws/download.jsp" ><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/jabaws/man_about.jsp" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-file-text-o" aria-hidden="true"></i> Documentation<b class="caret"></b></a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="/jabaws/docs/index.html">Table of Contents</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/getting_started.html">Getting Started</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/included_tools.html">Included Tools</a>
+                        </li>
+                        <li class="divider"></li>
+                       <li>
+                            <a href="/jabaws/docs/client.html">Command Line Client (CLI)</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/war.html">Web Application Archive (WAR)</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/va.html">Virtual Appliance (VA)</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/jabaws/docs/advanced.html">Advanced Usage</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/develop.html">For Developers</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/jabaws/docs/changelog.html">Changelog</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/stats.html">Usage Statistics</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/jabaws/docs/full_javadoc/">Complete JavaDoc</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/dm_javadoc/">Data Model JavaDoc</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    
+                    
+                    
+                        
+                            <a href="/jabaws/ServiceStatus" >
+                                <i class="fa fa-heartbeat" aria-hidden="true" style="color: green"></i> Service Status</a>
+                        
+                        
+                    
+                </li>
+                <li>
+                    <a href="/jabaws/PublicAnnualStat" >
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i> Usage Statistics</a>
+                </li>
+                <!--Includes funding and contacts (v2.2)-->
+                <li>
+                    <a href="/jabaws/about.jsp" ><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+<!--/navbar and header -->
+
+<!--body -->
+<div class="container">
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <h1 class="panel-title">Welcome to the JABAWS 2.2 website</h1>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                 <div class="col-md-6">
+                        <p class="justify">
+                            JABAWS is free software which provides web services conveniently
+                            packaged to run on your local computer, server or cluster.
+                        </p>
+                        <p class="justify">
+                            Services for multiple sequence alignment include
+                            <a href="http://www.clustal.org/omega">Clustal Omega</a>,
+                            <a href="http://www.clustal.org/clustal2">Clustal W</a>,
+                            <a href="http://align.bmr.kyushu-u.ac.jp/mafft/software/">MAFFT</a>,
+                            <a href="http://www.drive5.com/muscle">MUSCLE</a>,
+                            <a href="http://www.tcoffee.org/Projects_home_page/t_coffee_home_page.html">T-Coffee</a>,
+                            <a href="http://probcons.stanford.edu/">ProbCons</a>,
+                            <a href="http://msaprobs.sourceforge.net/">MSAProbs</a>, and
+                            <a href="http://sourceforge.net/projects/glprobs/">GLProbs</a>.
+                            Analysis services allow prediction of protein disorder with
+                            <a href="http://dis.embl.de/">DisEMBL</a>,
+                            <a href="http://iupred.enzim.hu">IUPred</a>,
+                            Jronn (a Java implementation of <a href="http://www.strubi.ox.ac.uk/RONN">Ronn</a> by P. Troshin and G. Barton, unpublished), and
+                            <a href="http://globplot.embl.de/">GlobPlot</a>; and calculation of amino acid alignment conservation
+                            with <a href="http://www.compbio.dundee.ac.uk/aacon">AACon</a>.
+                            The secondary structure for an RNA aligment can be predicted with the RNAalifold program from the
+                            <a href="http://www.tbi.univie.ac.at/RNA">Vienna RNA package</a>.
+                        </p>
+                        <p class="justify">
+                            JABAWS web-services can be accessed through the <a href="http://www.jalview.org">Jalview</a> desktop
+                            graphical user interface (GUI) (version 2.8 onwards) or the JABAWS Command Line Interface (CLI) client.
+                            In this way you can perform computations on your sequences using the publicly available servers
+                            running at the University of Dundee. Alternatively, JABAWS installation allows you to perform analysis
+                            limited only by your own computing resources, by running it in your local computer, server or cluster.
+                        </p>
+                        <p class="justify">
+                            The public server based on JABAWS 2.1 at the
+                            <a href="https://www.dundee.ac.uk/">University of Dundee</a> has been in production since
+                            October 2013 and serviced over 442,000 jobs for users worldwide.
+                        </p>
+                 </div>
+                 <div class="col-md-6 ">
+                    <img class="pull-right" src="/jabaws/static/img/aligment.png"
+                         style="width:100%;height:100%" alt="Jalview: Sequence Alignment">
+                 </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <h1 class="panel-title"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;For Users</h1>
+            </div>
+            <div class="panel-body">
+                <p class="justify">
+                    <strong>Server: </strong><a href="/jabaws/#public_server">Public JABAWS server</a> or
+                    the <a href="/jabaws/getting_started.jsp#va">JABAWS Virtual Appliance (VA)</a>
+                </p>
+                <p>
+                    <strong>Client: </strong><a href="http://www.jalview.org/">Jalview</a>
+                </p>
+                <br/>
+                
+                    
+                    
+                
+                <p><a class="btn btn-default" href="/jabaws/getting_started.jsp" role="button">Getting Started &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <h1 class="panel-title"><i class="fa fa-flask" aria-hidden="true"></i>&nbsp;&nbsp;For Bioinformaticians/Developers</h1>
+            </div>
+            <div class="panel-body">
+                <p>
+                    <strong>Server: </strong><a href="/jabaws/#public_server">Public JABAWS server</a>,
+                    the <a href="/jabaws/getting_started.jsp#va">JABAWS Virtual Appliance (VA)</a>, the
+                <a href="/jabaws/getting_started.jsp#war">JABAWS Web Application aRchive (WAR)</a> or
+                    <a href="/jabaws/docs/docker.html">Docker Containers</a>
+                </p>
+                <p>
+                    <strong>Client: </strong><a href="http://www.jalview.org/">Jalview</a> or the
+                    <a href="/jabaws/getting_started.jsp#client">Command Line Interface (CLI) Client</a>
+                </p>
+                <br/>
+                
+                    
+                    
+                    
+                    
+                
+                <p><a class="btn btn-default" href="/jabaws/getting_started.jsp" role="button">Getting Started &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <h1 class="panel-title"><i class="fa fa-server" aria-hidden="true"></i>&nbsp;&nbsp;For System Administrators</h1>
+            </div>
+            <div class="panel-body">
+                <p>
+                    <strong>Server: </strong><a href="/jabaws/getting_started.jsp#war">
+                    JABAWS Web Application aRchive (WAR)</a>
+                </p>
+                <p>
+                    <strong>Client: </strong><a href="/jabaws/getting_started.jsp#client">
+                    Command Line Interface (CLI) Client</a>
+                </p>
+                <br/>
+                
+                    
+                    
+                
+                <p><a class="btn btn-default" href="/jabaws/getting_started.jsp" role="button">Getting Started &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="public_server">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <h1 class="panel-title">Public JABAWS Server</h1>
+            </div>
+            <div class="panel-body">
+
+                <p class="justify">
+                    You can access our public JABAWS web services with <a href="http://www.jalview.org/">Jalview</a>,
+                    <a href="/jabaws/getting_started.jsp#client">JABAWS CLI</a>, or
+                    <a href="/jabaws/docs/develop.html#accessing-jabaws-from-your-program">with your own program</a>.
+                    The latest versions of Jalview (version 2.9 or later) are fully compatible
+                    with JABAWS 2.2 and are configured to use the public JABAWS server by default.
+                </p>
+                <ul>
+                    <li>The JABAWS public web services address is <strong><a href="http://www.compbio.dundee.ac.uk/jabaws">http://www.compbio.dundee.ac.uk/jabaws</a></strong> </li>
+                    <li>A detailed description of the JABAWS web services is available from here:
+                        <a href="/jabaws/RegistryWS?"
+                           title="/jabaws/RegistryWS?" rel=nofollow">WSDL List</a></li>
+                </ul>
+                <p class="justify">
+                    These web services accept submissions of <strong>less than one thousand sequences</strong>.
+                    Should you find this to be insufficient for your needs, or if you are concerned about privacy,
+                    then you can download and
+                    run the <a href="/jabaws/getting_started.jsp#war">JABAWS WAR</a> on your own hardware.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <h1 class="panel-title">New in JABAWS 2.2</h1>
+            </div>
+            <div class="panel-body">
+                <p class="justify">
+                    The current JABAWS version is 2.2 released on 18 August 2017. Among the new developments in JABAWS 2.2 are:
+                                </p>
+                    <ul>
+                        <li>Several programs included in JABAWS, including Clustal Omega, ClustalW, Mafft and T-coffee, were updated.
+                        <li><a href="http://www.compbio.dundee.ac.uk/aacon/">AACon</a>
+                            was also updated to the latest release, version 1.1.</li>
+                        <li><a href="/jabaws/ServiceStatus" >Service Status</a> and
+                            <a href="/jabaws/PublicAnnualStat" >Usage Statistics</a>
+                            are now cached and refreshed asynchronously for improved Website loading times.</li>
+                        <li>We now provide a <a href="https://www.docker.com/" >Docker</a> image which allows for JABAWS to be run in Docker containers. </li>
+                        <li>The website looks were updated to use the Twitter <a href="http://getbootstrap.com/">Bootstrap</a> CSS framework,
+                            and documentation pages are now generated with <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a>.
+                        </li>
+                    </ul>
+                <p class="justify">
+                    More information about the changes introduced in the latest release can be found in the
+                    <a href="/jabaws/docs/changelog.html">changelog</a> pages.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <h1 class="panel-title">Reference</h1>
+            </div>
+            <div class="panel-body">
+		<p class="justify">
+                    Peter V Troshin,  James B Procter,  Alexander Sherstnev,  Daniel L Barton,  F&aacute;bio Madeira and Geoffrey J. Barton (2018)
+                    <strong>JABAWS 2.2 Distributed Web Services for Bioinformatics: Protein Disorder, Conservation and RNA Secondary Structure</strong>
+                    <em>Bioinformatics</em> bty045. doi: <a href="https://doi.org/10.1093/bioinformatics/bty045">
+                    10.1093/bioinformatics/bty045</a>.
+                </p>
+                <p class="justify">
+                    Peter V. Troshin, James B. Procter and Geoffrey J. Barton (2011)
+                    <strong>Java Bioinformatics Analysis Web Services for Multiple Sequence Alignment - JABAWS:MS</strong>
+                    <em>Bioinformatics</em> 27 (14): 2001-2002. doi: <a href="https://doi.org/10.1093/bioinformatics/btr304">
+                    10.1093/bioinformatics/btr304</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <h1 class="panel-title">ELIXIR-UK</h1>
+            </div>
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <span class="align-middle"><a href="https://www.elixir-europe.org/">
+                            <img src="static/img/elixir_uk.png" style="width:80%;height:80%" alt="ELIXIR UK"
+                                 title="UK BBSRC"/></a>
+                        </span>
+                    </div>
+                    <div class="col-md-9">
+                        <p class="justify">
+                            <a href="http://www.compbio.dundee.ac.uk/jabaws/">JABAWS</a> and
+                            <a href="http://www.compbio.dundee.ac.uk/aacon/">AACon</a> are part of the
+                            "Dundee Resource for Protein Sequence analysis and structure prediction", which is an
+                            <a href="http://www.elixir-uk.org/">ELIXIR-UK</a> resource.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <span class="align-left"><a href="http://www.bbsrc.ac.uk/">
+                                    <img src="static/img/bbsrc_flat.jpg" style="width:110%;height:110%" alt="UK BBSRC"
+                                         title="UK BBSRC"/></a>
+                                </span>
+                            </div>
+                            <div class="col-md-4">
+                                <span class="align-right"><a href="http://www.jalview.org/">
+                                    <img src="static/img/jalview.svg" style="width:100%;height:100%" alt="JALVIEW"
+                                         title="JALVIEW"/></a>
+                                </span>
+                            </div>
+                            <div class="col-md-4">
+                                <span class="align-right"><a href="http://www.compbio.dundee.ac.uk/jpred/index.html">
+                                    <img src="static/img/jpred4.svg" style="width:100%;height:100%" alt="JPRED"
+                                         title="JPRED"/></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!--/body and footer -->
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="list-unstyled">
+                <li>
+                    <strong><a href="http://www.compbio.dundee.ac.uk/">The Barton Group</a></strong>
+                </li>
+            </ul>
+            <a href="http://www.compbio.dundee.ac.uk/"><img src="/jabaws/static/img/BG_with_text.svg" style="width:55%; height:55%"
+                                                            alt="Barton Group Logo with Text at Bottom"></a>
+        </div>
+
+        <div class="col-md-3">
+
+            <ul class="list-unstyled">
+                <li>
+                    <strong><a href="/jabaws/index.jsp">JABAWS</a></strong>
+                </li>
+                <ul>
+                    <li>
+                        <a href="/jabaws/getting_started.jsp">Getting Started</a>
+                    </li>
+                    <li>
+                        <a href="/jabaws/download.jsp">Download</a>
+                    </li>
+                    <li>
+                        <a href="/jabaws/about.jsp">About</a>
+                    </li>
+                    <li>
+                        <a href="/jabaws/about.jsp#mailing">Mailing List</a>
+                    </li>
+                    <li>
+                        <a href="/jabaws/about.jsp#citing">Citing JABAWS</a>
+                    </li>
+                    <li>
+                        <a href="/jabaws/ServiceStatus" >Service Status</a>
+                    </li>
+
+                    <li>
+                        <a href="/jabaws/PublicAnnualStat" >Usage Statistics</a>
+                    </li>
+                    <li>
+                        <a href="/jabaws/about.jsp#funding">Funding</a>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-unstyled">
+                <li>
+                    <strong><a href="/jabaws/docs/index.html">Documentation</a></strong>
+                    <ul>
+                        <li>
+                            <a href="/jabaws/docs/getting_started.html">Getting Started</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/included_tools.html">Included Tools</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/client.html">Command Line Client (CLI)</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/war.html">Web Application Archive (WAR)</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/va.html">Virtual Appliance (VA)</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/advanced.html">Advanced Usage</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/develop.html">For Developers</a>
+                        </li>
+                        <li>
+                            <a href="/jabaws/docs/changelog.html">Changelog</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <p>
+                <a href="#">Back to top <i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+            </p>
+        </div>
+    </div>
+    <hr>
+    <p class="text-right"><small>
+        Site Last updated: 27 March 2018 by F&aacute;bio Madeira. This site was built using the <a href="http://getbootstrap.com">Bootstrap framework.</a>
+    </small></p>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="/jabaws/static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/jabaws/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/jabaws/static/js/main.js" ></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

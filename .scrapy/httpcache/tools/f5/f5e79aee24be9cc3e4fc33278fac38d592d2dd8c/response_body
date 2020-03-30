@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<head><base href="http://webs.iiitd.edu.in/raghava/anticp/">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>AntiCP: Prediction and Designing of Anticancer Peptides</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<style type="text/css">
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+background-color: lightyellow;
+padding: 5px;
+bottom:-100px;
+left: -150px;
+border: 1px dashed gray;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+.thumbnail:hover span{ /*CSS for enlarged image on hover*/
+visibility: visible;
+top: 01;
+left: 0px; /*position where enlarged image should offset horizontally */
+}
+</style>
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="logo">
+		<h1></a></h1>
+		<p> </p>
+	</div>
+	<hr />
+	<!-- end #logo -->
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" class="first">Home</a></li>
+				<li class="current_page_item"><a href="submission.php">Peptide Design</a></li>
+				<li><a href="multi_pep.php">Virtual Screening</a></li>
+				<li><a href="submit_prot.php">Protein Scan</a></li>
+                                <li><a href="motifs.php">Motif Scan</a></li>
+				<li><a href="algo1.html">Algorithm</a></li>	
+				<li><a href="datasets.php">Datasets</a></li>
+				<li><a href="help.html">Help</a></li>
+				<li><a href="developers.html">Team</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+
+			</ul>
+		</div>
+		<!-- end #menu -->
+	</div>
+	<!-- end #header -->
+	<!-- end #header-wrapper -->
+	<div id="page">
+	<div>
+		<div id="content">
+			<div class="p">
+
+
+<HR 20><marquee behavior=alternate scrollamount="6" direction="left" >********* <a href="http://osddlinux.osdd.net/">OSDDlinux for Standalone, Galaxy & Local version</a>********<tr><td colspan="2" align="centre">
+<b>If you are using this prediction server, please cite  Tyagi A . <i>et. al.  </i>(2013),In Silico Models for Designing and Discovering Novel Anticancer Peptides, <a href="http://www.nature.com/srep/2013/131018/srep02984/full/srep02984.html">Scientific Reports, 3 (10.1038/srep02984). </b> </a> ********
+</td></tr>  </marquee><HR 20>			<table align=center border=0 width =800px><tr><td align=center>
+				<font size=6><b>Welcome to AntiCP</b></font>
+			</td></tr></table>
+			<div class="entry">
+					
+			
+</div>
+			</div>
+
+
+<table border="0">
+<!-- <div class="post2">
+				
+				<div class="entry"> -->
+<tr><td>			
+<!--td> <a class="thumbnail" href="#thumb"><img src="images/anticp.jpg" width="650px"  height="250 px" border="2" /><span><img src="images/anticp.jpg" width="650px" /><br /></span></a></td-->  
+          <img border="0" src="images/anticp.jpg" width="812" height="230" style="border: 2px solid rgb(0, 0, 0);">
+</td></tr>			
+  <tr>
+    <td align=justify><font size=4>
+      <b>AntiCP</b> is web based prediction server for Anticancer peptides. SVM models developed are based on amino acid composition and binary profile features. Positive
+    	 dataset consists of 225 antimicrobial peptides with anticancer properties. This server is extremely useful for the researchers working in the field of Anticancer peptides. This server allows the users to design ACPs and their mutants with different physicochemical properties.</p>
+Major Features include:<br/><br/>
+(1) <b> Peptide Design:</b> This module allows the users to generate all possible single mutant analogs of their peptides and predict whether the analogs are having anti cancer property or not.<br/><br/>
+(2) <b>Virtual Screening:</b> This module of AntiCP allows the user to predict anti cancer property in bulk deposited query peptides.<br/><br/>
+(3) <b>Protein Scan:</b> This module generates all possible overlapping peptides and their single mutant analogs of protein submitted by the user. It also predicts whether overlapping peptide/analog is ACP or not.<br/><br/>
+(4) <b>Motif Scan:</b> Allows user to identify motifs related to anti cancer property in their sequences.
+<br/>
+<br/><br/><br/>
+</font></td>
+</tr>     
+</table>
+</div></body></html>

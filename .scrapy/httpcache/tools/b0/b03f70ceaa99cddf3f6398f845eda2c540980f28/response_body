@@ -1,0 +1,423 @@
+<!--ensures Anchors are correctly displayed by ensuring a buffer of 150pxs is displayed above the anchor to account for the navbar -->
+<style>
+    a.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+</style>
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Cafe Variome</title>
+
+		<meta name="viewport" content="width=device-width" initial-scale="1">
+		<meta name="keywords" content="mutation, diagnostics, database" />
+		<meta name="author" content="Administrator" />
+		<meta name="description" content="Cafe Variome" />
+
+		<link rel="stylesheet" type="text/css" href="https://www.cafevariome.org/css" />
+<!--		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/bootstrap-responsive.css" />-->
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/global.css" />
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/prettify.css" />
+<!--		<link rel="stylesheet" href="" />-->
+                <link rel="stylesheet" src="https://www.cafevariome.org/assets/jquery-ui/jquery-ui.css">
+<!--		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/jquery-ui.css" />-->
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/fileUploader.css" />
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/DT_bootstrap.css" />
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/jquery.cluetip.css" type="text/css" />
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/bootstrap-arrows.css" type="text/css" />
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/cookiecuttr.css" type="text/css" />
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/jquery.treetable.css" />
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/jquery.treetable.theme.default.css" />
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/jquery.switchButton.css" />
+		<link rel="stylesheet" href="https://www.cafevariome.org/resources/css/bootstrap-editable.css" type="text/css" />
+		
+                
+
+		<!-- extra CSS-->
+		
+		<script src="https://www.cafevariome.org/resources/js/libs/modernizr-2.5.3.min.js"></script>
+
+		<!-- favicon and touch icons -->
+
+		<link rel="shortcut icon" href="https://www.cafevariome.org/resources/images/ico/favicon.ico" />
+		<link rel="apple-touch-icon" href="https://www.cafevariome.org/resources/images/ico/apple-touch-icon-precompresse.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="https://www.cafevariome.org/resources/images/ico/apple-touch-icon-57x57-precompressed.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="https://www.cafevariome.org/resources/images/ico/apple-touch-icon-72x72-precompressed.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="https://www.cafevariome.org/resources/images/ico/apple-touch-icon-114x114-precompressed.png" />
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-37141634-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+                <script type="text/javascript">
+			var baseurl = "https://www.cafevariome.org/";
+		</script>
+	<!-- note: jstree requires the addBack function that wasn't added to jQuery until 1.8, therefore I have changed 1.7.1 to 1.8.1 (tb143) -->
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>-->
+                <script type="text/javascript" src="https://www.cafevariome.org/assets/jQuery/jquery-3.3.1.js"></script>
+<!--                <script src="https://www.cafevariome.org/resources/js/jquery.jstree.js"></script>-->
+<!--		<script>window.jQuery || document.write('<script src="https://www.cafevariome.org/resources/js/libs/jquery-1.7.1.min.js"><\/script>')</script>           -->
+<!--		<script src="https://www.cafevariome.org/resources/js/libs/underscore-1.3.1.min.js"></script>-->
+<!--            <script src="https://www.cafevariome.org/resources/js/plugins.js"></script>-->
+		<script src="https://www.cafevariome.org/resources/js/script.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/cafevariome.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/bootbox.js"></script>
+                <script src="https://www.cafevariome.org/assets/jquery-ui/jquery-ui.js"></script>
+<!--		<script src="https://www.cafevariome.org/resources/js/jquery-ui.js"></script>-->
+		<script src="https://www.cafevariome.org/resources/js/jquery.dataTables.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/DT_bootstrap.js"></script>
+<!--		<script src=""></script> -->
+		<script src="https://www.cafevariome.org/resources/js/jquery.metadata.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/jquery.simple-color.js"></script> 
+		<script src="https://www.cafevariome.org/resources/js/jquery.cluetip.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/highcharts.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/bootstrap-arrows.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/jquery.cookiecuttr.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/jquery.cookie.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/jquery.maskedinput.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/jquery.treetable.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/jquery.switchButton.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/jquery.dataTables.delay.min.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/json3.js"></script> 
+		<script src="https://www.cafevariome.org/resources/js//tinymce/tinymce.min.js"></script>        
+		<!-- tb143 -->
+			<script src="https://www.cafevariome.org/resources/js/phenotypeList.js"></script>
+			<script src="https://www.cafevariome.org/resources/js/form_complete.js"></script>
+		<!--      <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />  -->
+                
+           
+		
+		<script src="https://www.cafevariome.org/resources/js/json3.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/jquery.fileUploader.js"></script>
+		<script src="https://www.cafevariome.org/resources/js/bootstrap-editable.js"></script>
+		<!-- Include Font Awesome -->
+		<!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">-->
+		<!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
+		
+		<script type="text/javascript">
+			var baseurl = "https://www.cafevariome.org/";
+		</script>
+                <script type="text/javascript" src="https://www.cafevariome.org/assets/js/bootstrap.min.js"></script>
+				
+		<script>
+			tinymce.init({
+			mode : "exact",
+			elements : "page_content,txtTextArea2",
+			plugins: "preview image code visualblocks link",
+//			selector:'textarea',
+			toolbar: "preview bold italic hr styleselect link code visualblocks image bullist numlist alignleft aligncenter alignright alignjustify undo redo",
+			menubar : false,
+			verify_html : false
+//			style_formats: [
+//				{title: 'Bold text', inline: 'b'},
+//				{title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+//				{title: 'testbew', inline: 'span', styles: {color: '#ff0000'}},
+//				{title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+//				{title: 'Example 1', inline: 'span', classes: 'well'},
+//				{title: 'Example 2', inline: 'span', classes: 'example2'},
+//				{title: 'Table styles'},
+//				{title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+//			],
+//			formats: {
+//				alignleft: {selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'left'},
+//				aligncenter: {selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'center'},
+//				alignright: {selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'right'},
+//				alignfull: {selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes: 'full'},
+//				bold: {inline: 'span', 'classes': 'bold'},
+//				italic: {inline: 'span', 'classes': 'italic'},
+//				underline: {inline: 'span', 'classes': 'underline', exact: true},
+//				strikethrough: {inline: 'del'},
+//				customformat: {inline: 'span', styles: {color: '#00ff00', fontSize: '20px'}, attributes: {title: 'My custom format'}}
+//			},
+//			setup: function(editor) {
+//				editor.addButton('well', {
+//					text: 'Well',
+//					icon: false,
+//					onclick: function() {
+//						editor.insertContent('<div class="well"></div>');
+//					}
+//				});
+//			}
+//			setup : function(ed){
+//				ed.addButton('well', // name to add to toolbar button list
+//				{
+//				title : 'Add well', // tooltip text seen on mouseover
+////				image : 'http://myserver/ma_button_image.png',
+//				text: 'Well',
+//				onclick : function() {
+//					ed.execCommand('FormatBlock', false, '<div class="well"></div>');
+//				}
+//				});
+//			}
+		});
+		</script>
+	</head>
+	<body style="padding-top:25px">
+<!--            <script>$(document).click(function() { $("nav").hide(); }); $("#sidenav").click(function(e) { e.stopPropagation(); return false; });</script>-->
+            <script>
+var ARNY = (function(){
+	var _baseUrl = "https://www.cafevariome.org/";
+	return{
+		"language": "english",
+		"baseUrl": _baseUrl,
+		"uri_segment_1":"",
+		"uri_segment_2":""
+	}
+})();
+</script>
+<header id="header" class="navbar navbar-fixed-top">
+    <div class="container-fluid" >
+    <div class="navbar navbar-inverse navbar-fixed-top" style="visibility:visible !important;display:block !important">
+    <div class="container" id="nav_container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="margin:15px 10px 13px 10px">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a  class="navbar-brand" href="https://www.cafevariome.org/"><img src="https://www.cafevariome.org/assets/images/CVLogos/cafevariome-logo-full.png" style="width:123px; height:60px; padding:0px; float:left"></a>
+        </div>
+        <div class="collapse navbar-collapse text-center" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="https://www.cafevariome.org/home" style="padding:21px 10px 19px 10px">Home</a></li>
+<!--                <li ><a href="https://www.cafevariome.org/news" style="padding:21px 10px 19px 10px">News</a></li>-->
+                <li ><a href="https://www.cafevariome.org/about"style="padding:21px 10px 19px 10px">About </a></li>
+                <li ><a href="https://www.cafevariome.org/dataowner"style="padding:21px 10px 19px 10px">Data Owners </a></li>
+                <li ><a href="https://www.cafevariome.org/datadiscovery"style="padding:21px 10px 19px 10px">Data Discovery </a></li>
+                <li ><a href="https://www.cafevariome.org/contact"style="padding:21px 10px 19px 10px">Contact Us </a></li>          
+            </ul>
+        </div>
+    </div>
+</div>
+
+  </div>
+</header>
+<div id="main" role="main" class="row">
+	<script>
+    
+$(document).ready(function () {
+	$.cookieCuttr();
+
+});
+</script>
+<div class="jumbotron" style="margin:0px !important; padding:0px">
+    <div class="text-center">
+        <h1>Cafe Variome</h1>
+        <h2 style="margin:0 !important">A data discovery platform for biomedical data.</h2>
+    </div>
+    <div class="row text-center" style="padding-top:0px;padding-bottom:0px">
+<!--        <div class="center-block" style="max-width:1200px">
+            <div class="col-xs-12">
+                <h3>Cafe Variome is currently being used within a number of different projects:</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-2  col-sm-3 col-xs-6 col-md-offset-1" align="centre" style="padding-top:10px;padding-left:10px">
+                    <a  href="http://ep-ad.org/" target="_blank"><img class="img-responsive center-block logo" src="https://www.cafevariome.org/assets/images/296pxwidth/296_epad_logo.png" alt="European Prevention of Alzheimer's Dementia Consortium" data-toggle='tooltip' title="European Prevention of Alzheimer's Dementia Consortium" style="max-width:150px"></a>
+                </div>
+                <div class="col-lg-2 col-md-2  col-sm-3 col-xs-6" align="centre" style="padding-top:23px;padding-bottom:13px;padding-left:10px">
+                    <a   href="http://www.solve-rd.eu/"target="_blank"><img class="img-responsive center-block logo" src="https://www.cafevariome.org/assets/images/296pxwidth/296_solve_logo.png" alt="Solve-RD" data-toggle='tooltip' title='Solve-RD' style="max-width:150px"></a>
+                </div>
+                <div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-2  col-sm-3 col-xs-6" align="centre" style="padding-top:10px;padding-left:10px">
+                    <a  href='' target="_blank"><img class="img-responsive center-block logo" src="" alt="" data-toggle='tooltip' title='' style="max-width:150px"></a>
+                </div>
+                <div class="col-lg-2 col-md-2  col-sm-3 col-xs-6" align="centre" style="padding-top:18px;padding-bottom:8px;padding-left:10px">
+                    <a  href="http://www.phenosystems.com/www/index.php" target="_blank"><img class="img-responsive center-block logo" src="https://www.cafevariome.org/assets/images/296pxwidth/296_ibs_logo.png" alt="Information BioSystems" data-toggle='tooltip' title='Information BioSystems - Alamut software' style="max-width:150px"></a>
+                </div>
+                    <div class="clearfix visible-sm visible-xs"></div>
+                <div class="col-lg-2 col-md-2  col-sm-3 col-xs-6" align="centre" style="padding-left:10px">
+                    <a href='http://www.emif.eu/' target="_blank"><img class="img-responsive center-block logo" src="https://www.cafevariome.org/assets/images/296pxwidth/296_emif_logo.png" alt="European Medical Information Framework" data-toggle='tooltip' title='European Medical Information Framework' style="max-height:70px"></a>
+                </div>
+                <div class="clearfix visible-md visible-lg"></div>
+                <div class="col-lg-2 col-md-2  col-sm-3 col-xs-6 col-md-offset-1" align="centre" style="padding-top:10px;padding-left:10px">
+                    <a href="http://www.etoxproject.eu/" target="_blank"><img class="img-responsive center-block logo" src="https://www.cafevariome.org/assets/images/296pxwidth/296_etox_logo.png" alt="eTOX" data-toggle='tooltip' title='eTOX' style="max-width:150px"></a>
+                </div>
+                <div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-2  col-sm-3 col-xs-6" align="centre" style="padding-top:14px;padding-left:10px">
+                    <a href='https://www.efpia.eu/' target="_blank"><img class="img-responsive center-block logo" src="https://www.cafevariome.org/assets/images/296pxwidth/296_efpia_logo.png" alt="European Federation of Pharmaceutical Industries and Associations" data-toggle='tooltip' title='European Federation of Pharmaceutical Industries and Associations' style="max-width:150px"></a>
+                </div>
+                <div class="col-lg-2 col-md-2  col-sm-3 col-xs-6" align="centre" style="padding-top:23px;padding-left:10px">
+                    <a href="http://www.phenosystems.com/www/index.php" target="_blank"><img class="img-responsive center-block logo" src="https://www.cafevariome.org/assets/images/296pxwidth/296_pheno_logo.png" alt="PhenoSystems" data-toggle='tooltip' title='PhenoSystems - GenSearch software'style="max-width:150px"></a>
+                </div>
+                <div class="clearfix visible-sm visible-xs"></div>
+                <div class="col-lg-2 col-md-2  col-sm-3 col-sm-offset-3  col-md-offset-0 col-xs-6"  align="centre" style="padding-top:17px;padding-left:10px">
+                    <a href="http://www.imi.europa.eu/" target="_blank"><img class="img-responsive center-block logo" src="https://www.cafevariome.org/assets/images/296pxwidth/296_imi_logo.png" alt="Innovative Medicine Initiative" data-toggle='tooltip' title='Innovative Medicine Initiative' style="max-width:150px"></a>
+                </div>
+                <div class="col-lg-2 col-md-2  col-sm-3 col-xs-6 col-md-offset-0" align="centre" style="padding-top:10px;padding-left:10px">
+                    <a href="" target="_blank"><img class="img-responsive center-block logo" src="" alt="" data-toggle='tooltip' title='' style="max-width:150px"></a>
+                </div>
+                <div class="clearfix visible-sm visible-xs visible-md visible-lg"></div>
+            </div>
+        </div>
+-->    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row divider-to-light"></div>
+    <h2 class="text-center">Overview</h2>
+    <div class="center-block " style="max-width:1200px">
+        <div class="col-container">
+            <div class="col">
+                <h3>What is Cafe Variome?</h3>
+                <p>Cafe Variome is a flexible web-based, data discovery tool that can be quickly installed by any biomedical data owner to enable the “existence” rather than the “substance” of the data to be discovered.</p>
+                <div class="clearfix visible-sm visible-xs visible-lg visible-md"></div>
+                <h3>What data is Cafe Variome designed for?</h3>
+                <p>
+                    Cafe Variome has been designed for use with all sensitive biomedical data, whether this be genomic variants or cohort data.
+                </p>
+                <p>
+                    For full details please look at the <a href="about#Data"> data section</a>.
+                </p>
+                <div class="clearfix visible-sm visible-xs visible-lg visible-md"></div>
+                <h3>Who is cafe Variome designed for?</h3>
+                <p>Cafe Variome is designed for owners of sensitive biomedical data who would like to make their data discoverable but don't want to risk exposing the content to the outside world. This is not limited to individual institutions, federated Cafe Variome networks can be setup by consortia.</p>
+<!--                <p>Cafe Variome is also designed for those wanting to discover data and provides a simple, yet powerful, query builder to ensure the returned response is as accurate as possible.</p>-->
+                <div class="clearfix visible-sm visible-xs visible-lg visible-md"></div>
+            </div>
+            <div class='col text-center' style="align-content: center;vertical-align:middle">
+                <h3>Want to explore a Cafe Variome installation to learn more?</h3>
+                <a href="https://central.cafevariome.org" target="_blank"><img class="img-responsive center-block" src="https://www.cafevariome.org/assets/images/CVLogos/cvc_transparent.png" alt="Cafe Variome Central" data-toggle='tooltip' title='Cafe Variome Central' style="max-width:300px"></a>
+                <h3>Take a look through <a href="https://central.cafevariome.org" target="_blank"> Cafe Variome Central</a>, our installation created from publicly available datasets.</h3>
+            </div>
+        </div>
+        <div class="text-center">
+            <h3>Why should I use Cafe Variome?</h3>
+            <p>Cafe Variome allows for quick and secure data discovery with differential levels of data sharing available.</p>
+            <p>Cafe Variome is not a database, all data is retained on the data owners servers and the data owner has full control over it. With the in-built administrators dashboard, setting the discovery and sharing policies is quick and simple.</p>
+            <p>Federated networks allow consortia to quickly and securely make their data discoverable between each other whilst ensuring those external to the network cannot discover the data.</p>
+<!--                <p>Only discoverable data elements (or obfuscated copies thereof) are remotely queried. The return statement of the query will not display the content of the data, instead it will display if the data exists or not or a count of matching data elements along with information on how to access the data. </p>-->
+            <p>Only the existence of data can be discovered through the Cafe Variome data queries, the actual content of the data does not leave the data owners servers and as such remains secure. The data can become viewable based upon the sharing policy applied.</p>
+        </div>
+        <div class="clearfix visible-sm visible-xs visible-lg visible-md"></div>
+        <h3 class="text-center">For further details please have a look at our <a href="about">about section</a> or <a href="contact">contact us</a> for further information.</h3>
+    </div>
+
+        <div class="clearfix visible-xs visible-sm">
+            <div class="divider-to-dark"></div>
+                <div class="row-dark text-center">
+                    <h1 style="margin:0px !important">Features</h1>
+                </div>
+        </div>
+        <div class="clearfix visible-md visible-lg">
+            <div class="row text-center">
+                <h2>Features</h2>
+            </div>
+        </div>
+
+        <div class="row text-center" style="padding:0px !important">
+            <div class="center-block" style="max-width:1200px">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="well-dark ">
+                        <h3>Optional Beacon Service</h3>
+                        <img src="https://www.cafevariome.org/assets/images/affiliations_partners/beacon_logo.png" style="max-height:228px"class="img-responsive center-block">
+                        <p style="padding:10px;height:104px"> With the optional beacon service your data can be discovered by even more potential collaborators whilst still allowing for full control over what data is discoverable.<br /><a href="https://www.cafevariome.org/about#Beacon">What is Beacon?</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" >
+                    <div class="well-dark">
+                        <h3>Create Federated Networks</h3>
+                        <img src="https://www.cafevariome.org/assets/images/screenshots/federated.png" style="max-height:228px"class="img-responsive center-block">
+                        <p style="padding:10px;height:104px"> Create a federated network of Cafe Variome installations to allow data discovery across each installation within the network.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" >
+                    <div class="well-dark ">
+                        <h3>Differential Access Levels</h3>
+                        <div class="well" style="background-color:#5cb85c;margin:10px 15px 15px 15px">Open Access</div>
+                        <div class="well" style="background-color:#d9534f;margin:15px">Restricted Access</div>
+                        <div class="well" style="background-color:#337ab7;margin:15px">Linked Access</div>
+                            <p style="padding:10px;height:104px"> Set data to three different access levels to tailor who can access what data and how.<p>
+                    </div>
+                </div>
+		<div class="clearfix"></div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="well-dark well-group">
+                        <h3>Clean, Intuitive Interface</h3>
+                        <img src="https://www.cafevariome.org/assets/images/screenshots/admin_dashboard.png" style="max-height:228px" class="img-responsive center-block">
+                        <p style="padding:10px;height:104px">The clean, intuitive interface allows all tasks to be completed quickly and easily.</p>
+                    </div>
+                </div>  
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="well-dark well-group">
+                        <h3>Query builder</h3>
+                        <div style="height:228px">
+                            <div class="clearfix visible-md visible-lg">
+                                <img style="padding-top:45px;" src="https://www.cafevariome.org/assets/images/discoveryCarousel/simple.png" class="img-responsive center-block">
+                            </div>
+                            <div class="clearfix visible-xs visible-sm">
+                                <img style="padding-top:0px;" src="https://www.cafevariome.org/assets/images/discoveryCarousel/simple.png" class="img-responsive center-block">
+                            </div>
+                        </div>
+                        <p style="padding:10px;height:104px">The simple to use query builder is built upon AND/OR queries, the query builder allows for complex queries to be easily created and the in-built ambiguity check ensures the query returns the desired response.</p>
+                    </div>
+                </div>  
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="well-dark well-group">
+                        <h3>Minimum data responses</h3>
+                        <div style="height:228px;">
+                            <img style="padding-top:65px;" src="https://www.cafevariome.org/assets/images/discoveryCarousel/smallresults.png" class="img-responsive center-block">
+                        </div>
+                        <p style="padding:10px;height:104px">The returned responses are either a confirmation of whether the data exists or a count of the number of matching data elements. Further details can be seen based on the sharing policy applied to each response.</p>
+                    </div>
+                </div>  
+            </div>
+        <div class="clearfix visible-xs visible-sm">
+            <div class="divider-to-light"></div>
+        </div>
+</div>
+</div>
+<!--		<script>
+			$(".example-basic-expandable").treetable({ expandable: true });	
+		</script>-->
+
+	
+		
+	
+		<!-- extra js-->
+                
+<script>
+    
+    // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction();};
+
+// Get the navbar
+var navbar = document.getElementById("myAboutNavbar");
+
+// Get the offset position of the navbar
+var sticky = 38;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+                <footer id="footer" class="container">
+	<div class="row">
+		<hr>
+                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" style="text-align:left"><p><a href="https://www.le.ac.uk" target="_blank"><img src="https://www.cafevariome.org/assets/images/affiliations_partners/uol_logo.png"/></a><br />Produced at the <a href=https://www.le.ac.uk target="_blank"> University of Leicester <br /></a> by the <a href="https://www.le.ac.uk/bioinformatics" target="_blank">Bioinformatics Research Group</a></p>  </div>
+		<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" style="text-align: right;"><p><a href="http://www.cafevariome.org" target="_blank"><img src="https://www.cafevariome.org/assets/images/CVLogos/cafevariome_icon.png" /></a></p><p class="muted">Powered by <a href="http://www.cafevariome.org" target="_blank">Cafe Variome</a></p></div>
+	</div>
+</footer>	</body>
+</html>

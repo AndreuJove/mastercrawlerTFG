@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>D.&nbsp;E.&nbsp;Shaw Research</title>
+<link href="desres.css" rel="stylesheet" type="text/css">
+<!--[if IE]><link href="desresIE.css" rel="stylesheet"><![endif]-->
+</head>
+<body>
+<div class="menu">
+		
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39844808-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+	<a href="index.html">About D. E. Shaw Research</a> 
+
+
+
+	<a href="people.html">People</a> 
+
+
+
+	<a href="resources.html" id="active" name="active">Resources</a> 
+
+
+
+	<a href="publications.html">Publications</a> 
+
+
+
+	<a href="joining.html">Joining</a> 
+
+
+
+	<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="logo"><a href=
+"/index.html"><img class="logo" src=
+"images/logo.gif" alt="D.&nbsp;E.&nbsp;Shaw Research" border="0" height="45"
+width="198"></a></div>
+<div class="bodytext" id="nophoto">
+<h1>Desmond</h1>
+<p>Desmond is a software package developed at D.&nbsp;E.&nbsp;Shaw Research to
+perform high-speed molecular dynamics simulations of biological systems. The 
+code uses novel parallel algorithms and numerical techniques to achieve high 
+performance and accuracy on NVIDIA GPUs.</p>
+<p>Desmond is available without cost for non-commercial use by universities and other not-for-profit research institutions. (Licenses for the commercial use of Desmond are available from Schr&ouml;dinger, LLC.)</p>
+<ul class="para2">
+<li><a href="downloads/download_desmond.cgi"><strong>Download Desmond for Non-Commercial Use</strong></a></li>
+</ul>
+<ul class="para">
+<li><a href="resources_whatdesmonddoes.html">What Desmond Does</a></li>
+<li><a href="resources_desmondpublications.html">Desmond-Related
+Publications</a></li>
+<li><a href="mailto:Desmond@DEShawResearch.com?subject=Desmond%20Question">Send
+Us a Question About Desmond</a></li>
+</ul>
+<div class="back"><a href="resources.html">Return to Resources</a></div>
+</div>
+</body>
+</html>

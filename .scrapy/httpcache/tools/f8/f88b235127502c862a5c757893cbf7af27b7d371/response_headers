@@ -1,0 +1,14 @@
+X-Proxy-Request-Received: 0
+Server: LoadBalancer
+Date: Mon, 30 Mar 2020 18:46:30 GMT
+X-Aldryn-App: brainmapportal-live-4cc80a57cd6e400d8548758be1f3c0a5
+X-Proxy-Request-Routed: 1
+X-Proxy-Request-Forwarded: 1
+X-Proxy-Response-Received: 19
+Content-Type: text/html; charset=utf-8
+Expires: Mon, 30 Mar 2020 18:47:10 GMT
+Cache-Control: max-age=40
+Vary: , Origin, Accept-Language, Cookie, Accept-Encoding
+Content-Language: en
+Content-Encoding: gzip
+Set-Cookie: django_language=en; expires=Tue, 30-Mar-2021 18:46:30 GMT; Max-Age=31536000; Path=/

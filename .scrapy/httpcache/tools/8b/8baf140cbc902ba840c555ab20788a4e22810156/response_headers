@@ -1,0 +1,21 @@
+Accept-Ranges: bytes
+Age: 10209
+Cache-Control: public, max-age=21600
+Content-Encoding: gzip
+Content-Language: en
+Content-Type: text/html; charset=utf-8
+Date: Mon, 30 Mar 2020 18:44:03 GMT
+Etag: "1585583633-0"
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Last-Modified: Mon, 30 Mar 2020 15:53:53 GMT
+Link: <https://www.broadinstitute.org/ataris-computational-quantification-gene-suppression-phenotypes-multisample-rnai-screens>; rel="canonical",<https://www.broadinstitute.org/node/4492>; rel="shortlink"
+Server: nginx
+Vary: Cookie,Accept-Encoding
+Via: varnish
+X-Ah-Environment: prod
+X-Cache: HIT
+X-Cache-Hits: 3
+X-Content-Type-Options: nosniff
+X-Drupal-Cache: MISS
+X-Generator: Drupal 7 (https://www.drupal.org)
+X-Request-Id: v-a79a6092-729e-11ea-912c-6bc4f40151ab

@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>3FunMap: Full-sib family functional mapping tools</TITLE>
+ <META name=keywords content=Eip>
+ <LINK rel=stylesheet type=text/css href="css/style.css">
+</HEAD>
+
+<BODY leftMargin=0 topMargin=0 bgColor=#ffffff marginheight="0" marginwidth="0">
+<Center>
+<!--Header-->
+<TABLE border=0 cellSpacing=0 cellPadding=0 width="980px" height=60>
+  <TBODY>
+  <TR>
+    <TD height=40 width=200><A href="http://statgen.psu.edu/"><IMG border=0 src="img/sg-title.gif"></A></TD>
+    <TD width="100%" align=right>   <IMG src="img/link-chn.jpg"> </TD></TR>
+  </TBODY>
+</TABLE>
+
+<!-- Navigator toolbar -->
+<TABLE border=0 cellSpacing=0 cellPadding=0 width="980px">
+  <TBODY>
+  <TR>
+    <TD bgColor=#000000 height=1 colSpan=3>
+    <IMG border=0 src="img/dummy.gif" width=1 height=1></TD></TR>
+  <TR>
+    <TD rowSpan=3 width=180><A href="http://statgen.psu.edu/"><IMG border=0 src="img/bgt.gif" width=180 height=60></A></TD>
+    <TD bgColor=#666666 rowSpan=3 width=1><IMG border=0  src="img/dummy.gif" width=1 height=1></TD>
+    <TD bgColor=#f0f0f0 height=19 width="100%" align=right>
+      <TABLE border=0 cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD><A class=tt href="../index.html">Home</A>&nbsp;&nbsp;</TD>
+          <TD><A class=tt href="../research.html">Research</A>&nbsp;&nbsp;</TD>
+          <TD><A class=tt href="../resource.html">Resource</A>&nbsp;&nbsp;</TD>
+          <TD><A class=tt href="../aboutus.html">About us</A>&nbsp;&nbsp;</TD>
+          <TD><A class=tt href="../sitemap.html">Sitemap</A>&nbsp;&nbsp;&nbsp;</TD></TR>
+        </TBODY>
+      </TABLE>
+  </TD></TR>
+  <TR>
+    <TD bgColor=#999999 height=1><IMG border=0 src="img/dummy.gif"  width=1 height=1></TD></TR>
+  <TR>
+    <TD height=40 align=right><IMG border=0 src="img/hand-script.jpg" width=400 height=40><SPAN class=pkl></SPAN></TD></TR>
+  <TR>
+    <TD bgColor=#666666 height=1 colSpan=3><IMG border=0 src="img/dummy.gif" width=1 height=1></TD></TR>
+   </TBODY>
+</TABLE>
+
+<!-- contents & code-->
+<TABLE border=0 cellSpacing=0 cellPadding=0 width="980px">
+  <TBODY>
+  <TR>
+    <TD bgColor=#f0f0f0 vAlign=top width=180 style="text-align: justify">
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=180>
+        <TBODY>
+        <TR><TD class=bs height=20 vAlign=bottom style="font-size:13px">
+        <IMG border=0 src="img/dummy.gif" width=5 height=5>R Packages</TD></TR>
+        <TR><TD  height=18 ><A class=t style="font-size:11px"href="funmap.html">&nbsp;Funmap Package</A></TD></TR>
+        <TR><TD  height=18 ><A class=t style="font-size:11px" href="eip.html">&nbsp;EIP Package</A></TD></TR>
+        <TR><TD  height=18 ><A class=t style="font-size:11px" href="fgwas-r2.html">&nbsp;R/fGWAS Package</A></TD></TR>
+        <TR><TD  height=18 ><A class=t style="font-size:11px" href="harupdf.html">&nbsp;HaruPDF Package</A></TD></TR>
+        <TR><TD><IMG border=0 src="img/dummy.gif" width=10  height=5></TD></TR>
+        <TR><TD bgColor=#999999 height=1><IMG border=0 src="img/dummy.gif" width=1 height=1></TD></TR>
+
+        <TR><TD class=bs height=20 vAlign=bottom style="font-size:13px">
+        <IMG border=0 src="img/dummy.gif" width=5 height=5>Software</TD></TR>
+        <TR><TD  height=18 ><A class=t style="font-size:11px"href="3funmap.html">&nbsp;3FunMap Software</A></TD></TR>
+        <TR><TD  height=18 ><A class=t style="font-size:11px" href="fgwas-soft2.html">&nbsp;fGWAS Software</A></TD></TR>
+        <TR><TD><IMG border=0 src="img/dummy.gif" width=10  height=5></TD></TR>
+        <TR><TD bgColor=#999999 height=1><IMG border=0 src="img/dummy.gif" width=1 height=1></TD></TR>
+
+      </TBODY>
+      </TABLE>
+     <BR>
+    </TD>
+
+   <TD bgColor=#666666 width=1><IMG border=0 src="img/dummy.gif" width=1 height=1></TD>
+    <TD width=29><IMG border=0 src="img/dummy.gif" width=29 height=1></TD>
+    <TD vAlign=top width="100%"  style="text-align: justify"><SPAN class=pkl></SPAN>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD align=left>
+              <A href="../index.html">Home</A>&gt;&gt;<A href="../resource.html">Resource</A> &gt;&gt;
+              <A href="../software.html">Software</A>
+          </TD>
+       </TR>
+       </TBODY>
+       </TABLE>
+      <BR>
+      <H1>3FunMap: Full-sib family functional mapping tools. (Version 1.0)</H1>
+      <BR>
+      <BR>
+
+
+      <H2 style="padding-bottom:0px;">Description:</H2>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" style="height:5px">
+        <TBODY>
+        <TR>
+          <TD background=img/ln02.gif></TD></TR>
+        </TBODY>
+      </TABLE>
+
+      <!--description-->
+
+3FunMap is a Windows software that can be used to construct genetic linkage maps and perform functional QTL mapping
+with molecular markers generated in a full-sib family. For linkage analysis, the software utilizes seven segregation
+types of markers to estimate the recombination and simultaneously predict the linkage phase between any two markers.
+It takes heuristic search method for ordering large number of markers of a linkage group by incorporating local ordering
+methods. Multi-locus linkage phases for the optimal order of each linkage group are predicted based on three-point
+linkage analysis.<BR><BR>
+
+For functional QTL mapping, the algorithm is based on interval mapping method, and the growth trajectory is described
+by Legendre polynomial. The QTL segregation patterns are considered to be sorted into three types, full cross
+(segregating 1:1:1:1), F2 cross (segregating 1:2:1), and test cross (segregating 1:1). The model selection criteria
+of AIC and BIC are applied not only to determine the order of Legendre polynomial, but also to discriminate the QTL
+segregation pattern. 3FunMap can plot the log-likelihood ratio (LR) profiles along the whole genome and the Legendre
+polynomial curves for each QTL genotype. In practical QTL mapping, the threshold of LR for each QTL model can be
+obtained through permutations.
+
+
+For more details, please refer to the <A style="color:blue; text-decoration:underline" href="3funmap/3funmap_intro.pdf">document</A>.<br><br>
+
+
+
+      <H2 style="padding-bottom:0px;">Download:</H2>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" style="height:5px">
+        <TBODY>
+        <TR>
+          <TD background=img/ln02.gif></TD></TR>
+        </TBODY>
+      </TABLE>
+      The windows version and the document can be downloaded from the following link.<BR>
+<BR>
+      <TABLE border=0 cellSpacing=1 cellPadding=5 bgColor=#cccccc>
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff width=600>
+            <UL style="margin-top: 1px; margin-bottom: 1px;">
+              <LI><A href="3funmap/3funmap-setup.exe">Windows version</A><FONT size=-1> (03/02/2011, 1.1 MB)</FONT> </LI>
+              <LI><A href="3funmap/3funmap_intro.pdf">Manual for the 3FunMap software</A><FONT size=-1> (3/02/2011)</FONT> </LI>
+            </UL>
+           </TD>
+         </TR>
+         </TBODY>
+      </TABLE>
+
+ <BR>
+
+
+
+      <H2 style="padding-bottom:0px;">Screenshots:</H2>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" style="height:5px">
+        <TBODY>
+        <TR>
+          <TD background=img/ln02.gif></TD></TR>
+        </TBODY>
+      </TABLE>
+
+      <TABLE border=0 cellSpacing=1 cellPadding=10 bgColor=#c0c0c0><TBODY>
+        <TR>
+          <TD bgColor=#ffffff width=600>
+<table>
+<tr>
+<td width=15%><IMG src="img/reminder.png" ></TD>
+<td>Please click the graph to get the original one.</TD>
+</tr>
+</table>
+          </TD>
+      </TR>
+      </TBODY>
+      </TABLE>
+	  <!--samples-->
+<BR>
+
+<table>
+<tr align="center"><td width="602px"><B>Figure1: Linkage result</B></td></tr>
+<tr align="center"><td width="602px"><A target=_blank href="3funmap/figure1.jpg"><IMG src="3funmap/figure1-1.jpg" ></A><BR><BR></td></tr>
+
+<tr align="center"><td width="602px"><B>Figure2: LR profile</B></td></tr>
+<tr align="center"><td width="602px"><A target=_blank href="3funmap/figure2.jpg"><IMG src="3funmap/figure2-1.jpg" ></A><BR><BR></td></tr>
+
+<tr align="center"><td width="602px"><B>Figure3: Genotype curves</B></td></tr>
+<tr align="center"><td width="602px"><A target=_blank href="3funmap/figure3.jpg"><IMG src="3funmap/figure3-1.jpg" ></A><BR><BR></td></tr>
+</table>
+
+
+      <BR><BR>
+
+
+
+      <H2 style="padding-bottom:0px;">Update History:</H2>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" style="height:5px">
+        <TBODY>
+        <TR>
+          <TD background=img/ln02.gif></TD></TR>
+        </TBODY>
+      </TABLE>
+      03/03/2011: Version 1.0 is Released <BR><BR><BR></TD>
+   </TR>
+   </TBODY>
+</TABLE>
+
+<!-- footer -->
+<TABLE border=0 cellSpacing=0 cellPadding=0 width="980px">
+  <TBODY>
+  <TR>
+    <TD bgColor=#666666 height=1><IMG border=0 src="img/dummy.gif"
+      width=1 height=1></TD></TR>
+
+  <TR>
+    <TD bgColor=#000000 height=1><IMG border=0 src="img/dummy.gif"
+      width=1 height=1></TD></TR>
+  <TR>
+    <TD align=center>Copyright&copy; 2009-, <SPAN class=footer_link>
+         <A href="http://statgen.psu.edu/" style="text-decoration:none">Center for Statistical Genetics</A></SPAN>,
+         <SPAN class=footer_link><A href="http://www.psu.edu">Penn State University</A></Span>, All Rights Reserved.
+    </TD></TR>
+</TBODY>
+</TABLE>
+</Center>
+</BODY>
+</HTML>

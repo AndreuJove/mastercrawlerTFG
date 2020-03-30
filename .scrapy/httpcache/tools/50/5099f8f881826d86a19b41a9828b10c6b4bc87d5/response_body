@@ -1,0 +1,140 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>Bio Search Computing</title>
+		<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+		<!-- GOOGLE ANALYTICS -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-33687213-1', 'polimi.it');
+		  ga('send', 'pageview');
+		</script>
+
+		<script>
+			//(function() {
+
+			  var httpRequest;
+
+			  function makeRequest(url) {
+				if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+				  httpRequest = new XMLHttpRequest();
+				} else if (window.ActiveXObject) { // IE
+				  try {
+					httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+				  }
+				  catch (e) {
+					try {
+					  httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					catch (e) {}
+				  }
+				}
+
+				if (!httpRequest) {
+				  alert('Giving up :( Cannot create an XMLHTTP instance');
+				  return false;
+				}
+				httpRequest.onreadystatechange = processResponse;
+				httpRequest.open('GET', url);
+				httpRequest.send();
+			  }
+
+			  function processResponse() {
+				if (httpRequest.readyState === 4) {
+				  if (httpRequest.status === 200) {
+					console.info('[Analytics] Response: ' + httpRequest.responseText);
+
+					var response = JSON.parse(httpRequest.responseText);
+					if (response) {
+						var numberOfVisits = response["bio-seco"].visits[0];
+						console.info('[Analytics] Total Visits: ', numberOfVisits);
+						var canvas = document.getElementById('navigation-menu');
+						var nVisitors = document.createElement('span');
+						nVisitors.innerHTML = 'Access number: ' + numberOfVisits;
+						nVisitors.setAttribute('style','color:white; float:right; position:relative; top:42px;');
+						canvas.appendChild(nVisitors);
+					} else {
+						console.warn('[Analytics] No results found');
+					}
+				  } else {
+					console.error('There was a problem with the request.');
+				  }
+				}
+			  }
+			  //makeRequest('http://www.bioinformatics.deib.polimi.it/AnalyticsQueryWrapper/AnalyticsServlet');
+			  //makeRequest('/AnalyticsQueryWrapper/AnalyticsServlet'); // Questa riga è messa in fondo al body
+			//})();
+		</script>
+		<!-- END -->
+
+
+	</head>
+	<body>
+	  <div id="freeze"><div>Loading...<br>Please wait</div></div>
+		<script type='text/javascript'
+		    src='../steal/steal.js?seco,development'>
+   		</script>
+   		<script type='text/javascript' src='./resources/lib/VDM.js'></script>
+   		<script type='text/javascript' src='http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2&mkt=en-us'></script>
+
+    	<!-- Plan bar -->
+	    <div id="queryBar" class="plan_bar">
+			<div id="navigation-menu">
+				<ul> <!-- http://www.search-computing.org/ -->
+					<li><a href="http://searchcomputing.deib.polimi.it/UIDemoBio#goal" target="goal" title="Goal of Bio-SeCo">Goal</a></li>
+					<li><a href="http://searchcomputing.deib.polimi.it/UIDemoBio#example" target="example" title="Example of Bio-SeCo use">Example</a></li>
+					<li><a href="http://searchcomputing.deib.polimi.it/UIDemoBio#video" target="video" title="Video Tutorial of Bio-SeCo">Video</a></li>
+					<!--	<li><a href="videos.html" target="video" title="Video Tutorial of Bio-SeCo">Video</a></li>
+					-->
+					<li><a href="http://searchcomputing.deib.polimi.it/UIDemoBio#old" target="video_old" title="Video of the Old Version of Bio-SeCo">Old version</a></li>
+					<li><a href="BMCBioinformatics_2014_15_S1_S3.pdf" target="publication" title="BMC Bioinformatics publication">Publication</a></li>
+				</ul>
+			</div>
+	    	<div id="demoLogo" class="demo_logo">
+	    		<div class="appLogo" style="cursor:pointer"><a href="http://www.search-computing.org/" target="SeCo" title="SeCo"><img src="./css/images/SeCoLogo.png" height="40px" /></a></div>
+	    		<div class="appTitle" onclick="window.open('http://www.search-computing.org/UIDemoBio');" style="cursor:pointer"><span>Bio Search Computing</span></div>
+	    		<div style="clear:both"></div>
+	    	</div>
+			<div id="dataupdate-warning">Bio-SeCo allows exploring and integrating data from external resources (e.g. NCBI and WU BLAST, Array Express, ...).<br/>Provided data are as updated as in the external resources used.</div>
+	    </div>
+
+	    <!-- Action buttons -->
+	    <a id="newUIQuery" class="action_button new_plan new_plan_button">
+	    	New Query Session
+	    </a>
+	    <a id="selectService" class="action_button" style="display:none;">
+	    	Select<br/>Source
+	    </a>
+	    <!--<a id="selectView" class="action_button" style="display:none;">
+	    	Select Visualization-->
+	    <a id="selectView" class="action_button" style="display:none;">
+	    	<span>Select Visualization</span>
+	    	<div id="viewList" class="viewList"></div>
+	    </a>
+	    <a id="saveQueryPlan" class="action_button" style="display:none;">
+	    	SAVE!<br/>Save Plan
+	    </a>
+
+	    <div style="height: 90px; position: fixed; top: 0px; left: 0px; background-color: rgb(255, 255, 255); width: 100%; z-index: 1000;"></div>
+	    <div style="width: 90px; position: fixed; top: 0px; left: 0px; background-color: rgb(255, 255, 255); height: 100%; z-index: 1000;"></div>
+
+	    <!-- Containers -->
+	    <div id="c" class="view_container"></div>
+	    <div class="panel">
+	    	<div class="step objects"></div>
+	    	<div class="step sources"></div>
+	    	<div class="step services"></div>
+	    	<div class="step form"></div>
+	    </div>
+	    <div class="savePlanPanel"></div>
+
+		<!-- GOOGLE ANALYTICS -->
+		<script type='text/javascript'>makeRequest('/AnalyticsQueryWrapper/AnalyticsServlet');</script>
+	</body>
+</html>

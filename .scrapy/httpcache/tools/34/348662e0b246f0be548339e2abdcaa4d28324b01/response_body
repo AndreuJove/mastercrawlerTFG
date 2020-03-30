@@ -1,0 +1,118 @@
+
+
+<!DOCTYPE html>
+<HTML><HEAD><TITLE>ComiR: Combinatorial miRNA target prediction </TITLE><link rel="icon" href="images/ComiR_logo_small.ico" >
+
+
+</HEAD>
+<BODY>
+<center>
+	<tr>
+		<td align="center">
+		<a href="index2.php" target="_blank"><img src="images/ComiR_logo_animated.gif" height="22%" width="22%" border=0></a>
+		<br><i><strong><font size="5" color="red">Combinatorial miRNA target prediction tool</font></strong></i></td>
+	</tr>
+<br><br>
+
+<table  width="70%">
+
+<tr> 
+	<td align=justify> 
+<hr>
+<font size="4"> ComiR (<font color="red"><b>Co</b></font>mbinatorial <font color="red"><b>miR</b></font>NA targeting) predicts whether a given mRNA is targeted 
+	   by a set of miRNAs. ComiR uses miRNA expression to improve and combine multiple miRNA targets for each of the four prediction algorithms: 
+	   <A HREF="http://www.microrna.org" TARGET="_BLANK">miRanda</A>, 
+	   <A HREF="http://genie.weizmann.ac.il/pubs/mir07/mir07_data.html" TARGET="_BLANK">PITA</A>, 
+	   <A HREF="http://www.targetscan.org" TARGET="_BLANK">TargetScan</A> and 
+	   <A HREF="http://www.microrna.org" TARGET="_BLANK">mirSVR</A>. 
+	   The composite scores of the four algorithms are then combined using a support vector machine trained on Drosophila Ago1 IP data.<br><br>
+
+
+	   <center><button style="background:blue;" onclick="window.location='index2.php'" TARGET="_blank"> <font color="white" size="+1"><b>Click here to run ComiR </b></font></button><br><br>Last update: 10/20/2015    <button style="background:yellow;" onclick="window.location='whatsnew.html'" TARGET="_blank">What's new?</button><br></center>
+<hr>
+Supported species: <i>H. sapiens</i>, <i>M. musculus</i>, <i>D. melanogaster </i>, <i>C. elegans</i>.<br>
+Comments/suggestions: clc196 [at] pitt [dot] edu<br>
+<br>
+<center>Click to downoad ComiR <a href="COMIR_script/COMIR.tar.gz"> script </a> and <a href="COMIR_script/help.txt"> help </a> file.<br>Download specific species files here: <br><a href="COMIR_script/hsa_data.tar.gz"> H.sapiens </a> (380G; tar.gz:15G) <br><a href="COMIR_script/mmu_data.tar.gz"> M.musculus </a>(68G; tar.gz:9.3G)<br><a href="COMIR_script/dme_data.tar.gz"> D.melanogaster </a>(3G; tar.gz:520M)<br><a href="COMIR_script/cel_data.tar.gz"> C.elegans </a>(1.3G; tar.gz:275M)<br><br></center>
+<hr>
+<br>If you find ComiR useful please cite:<br>
+<UL><LI>
+C. Coronnello, R. Hartmaier, A. Arora, L. Huleihel, K.V. Pandit, A.S Bais, M. Butterworth, N. Kaminski, G.D. Stormo, S. Oesterreich, P.V. Benos (2012), <font color="red"> <a href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1002830" TARGET="_blank">Novel modeling of combinatorial miRNA targeting identifies SNP with potential role in bone density</a></font>", <b> PLoS Comput Bio</b> 8(12): e1002830. doi:10.1371/journal.pcbi.1002830
+</li></UL>
+<UL><LI>
+C. Coronnello, P.V. Benos (2013), <font color="red"> <a href="" TARGET="_blank">ComiR: Combinatorial microRNA target prediction tool</a></font>", <b> Nucl Acids Res</b> 41 (Web Server issue): W159-64
+</li></UL>
+</font>
+
+<hr>
+
+<center> <b>Useful Links</b>
+<table width="80%" border=1 CELLPADDING=3 CELLSPACING=1 RULES=COLS FRAME=VSIDES> <thead style="background:blue"> <td><center><font color="white"> 
+miRNA info databases</font></center>
+</td>
+<td><font color="white"><center>
+validated miRNA - target databases</center></font>
+</td>
+<td><font color="white"><center>
+other target prediction tools </center></font>
+</td>
+</thead>
+<tr>
+<td>
+<A HREF="http://www.mirbase.org" TARGET="_BLANK">miRBase</A>,
+<A HREF="http://www.microrna.org/microrna/getExprForm.do" TARGET="_BLANK">Tissue specific expression</A>,
+   <A HREF="http://genes.mit.edu/mirscan/" TARGET="_BLANK">MiRscan</A>,
+<A HREF="http://www.mir2disease.org" TARGET="_BLANK">mir2disease</A>
+</td>
+<td>
+<A HREF="http://diana.cslab.ece.ntua.gr/tarbase/" TARGET="_BLANK">TarBase</A>,
+<A HREF="http://mirecords.biolead.org" TARGET="_BLANK">miRecords</A>
+</td>
+<td>
+<A HREF="http://www.microrna.org" TARGET="_BLANK">miRanda</A>, 
+<A HREF="http://genie.weizmann.ac.il/pubs/mir07/mir07_data.html" TARGET="_BLANK">PITA</A>, 
+<A HREF="http://www.targetscan.org" TARGET="_BLANK">TargetScan</A>,
+   <A HREF="http://bibiserv.techfak.uni-bielefeld.de/rnahybrid/" TARGET="_BLANK">RNAhybrid</A>,
+   <A HREF="http://diana.pcbi.upenn.edu/cgi-bin/micro_t.cgi/" TARGET="_BLANK">DIANA MicroT</A>,
+<A HREF="http://mirtar.mbc.nctu.edu.tw/human/" TARGET="_BLANK">miRTar</A>, 
+<A HREF="http://www.isical.ac.in/~bioinfo_miu/" TARGET="_BLANK">TargetMiner</A>, 
+<A HREF="http://pictar.mdc-berlin.de/" TARGET="_BLANK">PicTar</A>, 
+<A HREF="http://www.psi.toronto.edu/genmir/" TARGET="_BLANK">GenMiR++</A>, 
+<A HREF="http://talasso.cnb.csic.es" TARGET="_BLANK">TaLasso</A>
+
+</td>
+</tr>
+</table>
+</center>
+<br>&nbsp;
+
+<font size=2><center>
+	<a href="http://www.pitt.edu" TARGET="_blank"><img src="images/pitt_logo.jpg" border=0></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="http://www.nlm.nih.gov/" target="_blank"><img src="/images/NIH_logo-80px.png" border=0></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="http://www.fondazionerimed.eu" TARGET="_blank"><img src="images/Rimed_logo.jpg" border=0></a>
+	<br>
+
+	<BR>&nbsp; Supported by the
+	<A HREF="http://www.nlm.nih.gov/" target="_blank">National Library of Midicine - NIH</A>
+	<BR>&nbsp;
+	<A HREF="http://www.fondazionerimed.com/" target="_blank">Fondazione RiMED</A>
+</center></font>
+
+<br>&nbsp;
+
+<font size=2><center>
+	Go to the <a href="help.html" target="_blank">help page </a><br>
+        Go to the <A HREF="http://www.benoslab.pitt.edu/" TARGET=_BLANK>Benos Laboratory</A> web page <br>
+	Go to the <A HREF="http://www.ccbb.pitt.edu/" TARGET=_BLANK>Department of Computational Biology</A> main web page<br>
+        Go to the <A HREF="http://www.pitt.edu/" TARGET=_BLANK>University of Pittsburgh</A> main web page<br>
+</center></font>
+
+</center>
+</P></I></FONT>
+
+</td></tr></table>
+
+</BODY>
+</HTML>

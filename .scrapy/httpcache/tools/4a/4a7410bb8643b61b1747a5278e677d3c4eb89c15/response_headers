@@ -1,0 +1,15 @@
+Date: Mon, 30 Mar 2020 18:48:11 GMT
+Server: Apache
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Referrer-Policy: origin-when-cross-origin
+Content-Security-Policy: upgrade-insecure-requests
+Cache-Control: private
+Ncbi-Phid: CE885A3AE82339010000000006350351.m_18
+Ncbi-Sid: CE885A3AE823EEB1_1589SID
+Content-Type: text/html; charset=UTF-8
+Set-Cookie: ncbi_sid=CE885A3AE823EEB1_1589SID; domain=.nih.gov; path=/; expires=Tue, 30 Mar 2021 18:48:11 GMT
+Set-Cookie: WebEnv=1XO5bgO6u7W2jwiTelcVR28O2va6FyC08d9eLCKT7oVbBFlpBE25sC46ZDRQcWWO2J7E4C2ObxYTSTMsXhXx3QXz_ipkAfD36STQQ%40CE885A3AE823EEB1_1589SID; domain=.nlm.nih.gov; path=/; expires=Tue, 31 Mar 2020 02:48:12 GMT
+Vary: Accept-Encoding
+Content-Encoding: gzip
+X-Ua-Compatible: IE=Edge
+X-Xss-Protection: 1; mode=block

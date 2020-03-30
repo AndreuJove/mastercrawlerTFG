@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0043)http://webs.iiitd.edu.in/raghava/betaturns/ -->
+<HTML><head><base href="http://webs.iiitd.edu.in/raghava/betaturns/"><TITLE>Prediction of beta turn types</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type><LINK 
+href="http://webs.iiitd.edu.in/raghava/betaturns/persistent-style.css" rel=stylesheet type=text/css>
+<META content="Microsoft FrontPage 5.0" name=GENERATOR></HEAD>
+<BODY bgcolor="white">
+<TABLE border=0 cellPadding=0 cellSpacing=0 height=33 width=476 style="border-collapse: collapse" bordercolor="#111111">
+  <TBODY>
+  <TR>
+    <TD height=77 width=5><IMG height=92 src="temp1_01.gif" 
+      width=144></TD>
+    <TD height=33 rowSpan=2 width=306>
+    <IMG height=191 
+      src="temp1_02.gif" width=750></TD></TR>
+  <TR>
+    <TD height=1 width=5><IMG height=101 src="temp1_05.gif" 
+      width=144></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%" height="653">
+  <TBODY>
+  <TR vAlign=top>
+    <TD height="653">
+      <TABLE border=0 style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE border=0 cellSpacing=0 cellpadding="0" style="border-collapse: collapse" bordercolor="#111111">
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE border=0 cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD colSpan=2 height=72 width=5><A 
+                        href="http://webs.iiitd.edu.in/raghava/betaturns/"><IMG 
+                        border=0 height=99 src="temp1_07.gif" 
+                        width=138></A></TD><B></TR>
+                    <TR>
+                      <TD></TD>
+                      <TD height=76 width=5><A 
+                        href="http://webs.iiitd.edu.in/raghava/betaturns/submit.html"><IMG 
+                        border=0 height=100 src="temp1_09.gif" 
+                        width=137><A></A></TD></TR>
+                    <TR>
+                      <TD></TD>
+                      <TD height=73 width=5><A 
+                        href="http://webs.iiitd.edu.in/raghava/betaturns/turn.html"><IMG 
+                        border=0 height=100 src="temp1_10.gif" 
+                        width=137></A></TD></TR>
+                    <TR>
+                      <TD></TD>
+                      <TD><A 
+                        href="http://webs.iiitd.edu.in/raghava/betaturns/method.html"><IMG 
+                        border=0 height=85 src="temp1_11.gif" 
+                        width=137></A></TD></TR>
+                    <TR>
+                      <TD></TD>
+                      <TD><A 
+                        href="http://webs.iiitd.edu.in/raghava/betaturns/refer.html"><IMG 
+                        border=0 height=85 src="temp1_15.gif" 
+                        width=137></A></TD></TR>
+                    <TR>
+                      <TD></TD>
+                      <TD><A 
+                        href="http://webs.iiitd.edu.in/raghava/betaturns/help.html"><IMG 
+                        border=0 height=85 src="temp1_12.gif" 
+                        width=137></A></TD></TR>
+                    <TR>
+                      <TD colSpan=2><A 
+                        href="http://webs.iiitd.edu.in/raghava/betaturns/who.html"><IMG 
+                        border=0 height=85 src="temp1_13.gif" 
+                        width=138></A></TD></TR>
+                    <TR>
+                      <TD></TD>
+                      <TD><IMG height=24 src="temp1_14.gif" 
+                        width=137></TD></TR></TBODY></TABLE></B></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top height="653">
+<HR 20><marquee behavior=alternate scrollamount=1 ><a href="http://osddlinux.osdd.net/">OSDDlinux for Standalone, Galaxy & Local version</a>  </marquee><HR 20>      <H1>
+      <DIV align=center><FONT color=red><B>BetaTurns: Prediction of beta-turn 
+      types</B></FONT></DIV></H1>
+      <DIV align=justify><FONT color=maroon>
+      <P>The aim of Betaturns server is to predict different types of turns such 
+      as Types I, II, IV, VIII and non-specific in a given amino acid sequence. 
+      The method is based on neural network. It uses two feed-forward 
+      back-propagation neural networks with a single hidden layer, where the 
+      first sequence-to-structure network is trained on PSI-BLAST generated 
+      position specific matrices (<A 
+      href="http://webs.iiitd.edu.in/raghava/betaturns/refer.html#ref1">Altschul 
+      et al. 1997</A>). The second structure-to-structure network is trained on 
+      the outputs obtained from first network and PSIPRED predicted secondary 
+      structure information (<A 
+      href="http://webs.iiitd.edu.in/raghava/betaturns/refer.html#ref5">Jones 
+      1999</A>). It has been trained and tested on a data set of 2881 sequence 
+      unique proteins using five-fold cross-validation technique. 
+      <P>The results show that Type I and II beta-turns have better prediction 
+      performance than type IV and VIII beta-turn types. The final network 
+      yields an overall accuracy of 73.6%, 91.6%, 52.9% and 92.4% and MCC values 
+      0.25, 0.36, 0.05 and 0.10 for Type I, II, IV and VIII beta-turns 
+      respectively and is the highest achieved so far. 
+      <P>The input to the server is a single-letter code amino acid sequence in 
+      fasta or free format. The server predicts the beta-turn types in two 
+      steps. In first step, the residues forming beta-turns are predicted by 
+      using <A href="http://webs.iiitd.edu.in/raghava/betatpred2/" 
+      target=new>BetaTPred2</A>(<A 
+      href="http://webs.iiitd.edu.in/raghava/betaturns/refer.html#ref12">Kaur 
+      and Raghava 2003</A>). The BetaTPred2 predicted beta-turns are further 
+      classified into different types using betaturns server. The output 
+      consists of target sequence, PSIPRED predicted secondary structure 
+      (helix:'H', beta-sheet:'E' and coil:'C',). Turn residues are predicted as 
+      4 residues block with turn types indicated by roman numerals I, II, IV, 
+      VIII for turn types I, II, IV and VIII respectively or 'NS' for 
+      non-specific beta-turn category which does not belong to any of the 4 turn 
+      types. </P></DIV>
+      <P>
+      <P><BR>
+      <DIV align=center><IMG align=left border=0 height=10 
+      src="bar.gif" width=592>
+
+</DIV></FONT></TD></TR></TBODY></TABLE>
+
+
+<hr>
+<h4>
+<u><br>This web server is based on following publication, please cite if you are using this web server <br></u><br>
+Kaur,H. and Raghava, G. P.  S. (2004) A neural network method for prediction of beta-turn types in  proteins using evolutionary information. Bioinformatics  20:2751-8.
+</h4>
+<HR>
+
+
+</BODY></HTML>

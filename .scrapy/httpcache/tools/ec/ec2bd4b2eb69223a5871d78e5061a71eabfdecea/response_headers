@@ -1,0 +1,11 @@
+Date: Mon, 30 Mar 2020 18:49:00 GMT
+Server: Apache
+Strict-Transport-Security: max-age=15552000
+Content-Security-Policy-Report-Only: default-src https: 'unsafe-inline'; report-uri https://fadmin.fi.muni.cz/noauth/report.mpl?loc=cbia-ssl&src=cspro&ver=2018032701
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/html; charset=UTF-8
+Set-Cookie: PHPSESSID=c98n4n79571tdsbfg8g38jfu25; path=/

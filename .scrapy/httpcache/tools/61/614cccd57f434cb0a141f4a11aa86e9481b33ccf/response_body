@@ -1,0 +1,387 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="description" content="Center for Computational Biology" />
+  <meta name="keywords" content="bioinformatics, nextgen, RNA-Seq, computational biology, genetics" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <title>
+
+	  CIDANE
+
+	</title>
+	<script type="text/javascript">
+	function xch(chrcode) {
+	  return String.fromCharCode(chrcode);
+	  }
+	</script>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript">
+	</script>
+
+
+	<script src="/software/cidane/cidane.js" type="text/javascript"> </script>
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/layout.css" type="text/css" />
+	<style type="text/css" media="screen">
+	 .pageStyle #mainContent {
+	    background: none;
+	    background-color:transparent;
+			position: relative;
+			z-index:1;
+	   }
+	/*
+		 .pageStyle #mainContent h3 {
+			 padding-top:2px;
+			 margin-top:4px;
+		 }
+		.pageStyle #mainContent h2 {
+			 padding-top:2px;
+			 margin-top:4px;
+		 }
+	 */
+	</style>
+	  <!--[if lt IE 7]>
+     <style type="text/css" media="screen">
+	   .pageStyle #mainContent {
+	     /* border-top: 1px solid #FFF; 
+	     background: none;
+	     background-color:#FFFFFF; */	 
+	     float:left;
+	     clear:both;
+	    }
+	   .pageStyle #mainContent h4 { 
+	     background: #FFFFFF left center no-repeat url("/css/img/h4bg_nt.png"); 
+	     }	 
+	 	 .pageStyle hr {
+	     position:absolute;
+       border-top:2px solid #9AF;
+	     margin:2px 0;
+	     }
+     </style>
+	<![endif]-->
+	<!--[if lte IE 7]>
+     <style type="text/css" media="screen">
+		   .pageStyle {
+	       margin-top: expression(( 72 - this.height ) / 2); 
+	       }
+     </style>
+	<![endif]-->
+
+  <link rel="stylesheet" href="/software/cidane/cidane.css" type="text/css" />
+
+	
+</head>
+<body class="pageStyle">
+<div id="header" style="height:88px;z-index:1;">
+<div id="iheader2">
+	<div id="ihdr2_mid"> </div>
+	<div id="ihdr2_r"> </div>
+<img class="topright" src="/img/ihdr2_ccblogo.png" usemap="#ccblogomap"/>
+<map name="ccblogomap">
+  <area shape="rect" coords="0,0,224,64" href="/" alt="CCB">
+</map>
+<div class="hdrtitle">
+
+
+
+ <!-- assume Title is defined as well -->
+ <h2>
+	
+	 CIDANE
+	 
+ </h2>
+ <h3>Comprehensive Isoform Discovery and Abundance Estimation</h3>
+
+</div> <!-- hdrtitle -->
+</div> <!-- end #iheader2 -->
+</div> <!-- end #header -->
+
+<div id="container">
+	 <div class="ihdr2crumbs">
+	 <a href="/"> CCB</a>
+	 <span class="dblarr">&raquo;</span>
+	 
+	       
+	           <a href="/software/">Software</a>
+	           <span class="dblarr">&raquo;</span>
+	       
+	    
+	 
+	 
+	 
+	   
+	      
+	        CIDANE
+	      
+	   
+	
+   </div>
+  <div id="pushHeader" style="height:72px;"></div>
+	
+<!-- the mainContent div should follow here -->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57022278-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<div id="mainContent">
+ <div class="tabs">
+   <ul class="tab-links">
+        <li class="active"><a href="#tab1">Home</a></li>
+        <li><a href="#tab2">Manual</a></li>
+   </ul>
+ 
+   <div class="tab-content">
+<div id="tab1" class="tab active">
+<br/>
+<h2>About CIDANE</h2>
+<p>
+CIDANE is a novel framework for genome-based transcript reconstruction and quantification. CIDANE is engineered to not only 
+assembly RNA-seq reads <i>ab initio</i>, but to also make use of the growing annotation 
+of known splice sites, transcription start and end sites, or even full-length transcripts, available for most model organisms.
+To some extent, CIDANE is able to recover splice junctions that are invisible to existing bioinformatics tools.
+</p>
+<br/>
+<h2>News</h2>
+<p>
+<ul style="padding:0">
+	<li class="arrow"><b>CIDANE is on bitbucket - 12/07/15 </b><br/>
+	<ul>
+		<li>
+		CIDANE's source code is hosted on bitbucket <a href="https://bitbucket.org/canzar/cidane">here</a>.
+		</li>
+	</ul>
+ 	</li>
+	<li class="arrow"><b>CIDANE 0.0.1 released - 11/05/14 </b><br/>
+	<ul>
+		<li>
+		This first public release of CIDANE is described in our manuscript submitted for publication, and is now available for download <a href="http://ccb.jhu.edu/software/cidane/CIDANE-0.0.1-alpha.tar.gz">here</a>.
+		</li>
+	</ul>
+ 	</li>
+</ul>
+</p>
+<br/>
+<h2>Getting and installing CIDANE</h2>
+<p>This software is free, open source software released under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License
+</a><a href="http://www.gnu.org/copyleft/gpl.html">
+<img style="vertical-align:middle;" height="25" src="gplv3-127x51.png"></a>.
+CIDANE has been developed and tested on a Linux x86_64 system. The latest version of CIDANE can be downloaded <a href="https://bitbucket.org/canzar/cidane">here</a>. Before building CIDANE, make sure that the following libraries
+are installed on your system:
+
+<ul style="list-style-type:disc;">
+<li>SeqAn (develop version available <a href="http://github.com/seqan/seqan">here</a>): 
+<pre>
+% git clone https://github.com/seqan/seqan.git SeqAn
+% cd SeqAn
+% git checkout develop
+</pre>
+Go to <a href="http://www.seqan.de">http://www.seqan.de</a> for further instructions.</li> 
+<li>IBM ILOG CPLEX Optimizer. CIDANE has been tested with CPLEX version 12.4 using an academic license from IBM</li>
+<li> GNU Scientific Library (available at <a href="http://www.gnu.org/software/gsl/">http://www.gnu.org/software/gsl/</a>)</li>
+</ul>
+<br/>
+
+To build CIDANE on your Linux system, perform the following steps: </p>
+<ol>
+  <li>Extract files to the current directory: <br/> <br/>
+    <pre>
+    % tar -vxzf CIDANE-0.0.1-alpha.tar.gz 
+    </pre>
+  </li>
+  <li> Change to the newly created directory CIDANE-0.0.1 and use CMake (available at <a href="http://www.cmake.org">http://www.cmake.org</a>) to build CIDANE. <br/><br/>
+   <pre>
+    % cd CIDANE-0.0.1 
+    % mkdir build 
+    % cd build 
+    % export FC=gfortran
+    % cmake -DSEQAN_INCLUDE_PATH=&lt;YOUR_SEQAN_INCLUDE_DIR&gt; -DCPLEX_ROOT_DIR=&lt;YOUR_CPLEX_INSTALL_DIR&gt; ../
+    % make 
+   </pre> The GNU Fortran compiler (gfortran) is required to build the <i>glmnet</i><sup>[1]</sup> library. <br/> <br/>
+  </li>
+</ol>
+     This will create binaries <code>CIDANE</code>, <code>exonRefine</code>, and <code>transemble</code> in directory <code>CIDANE-0.0.1/build/bin/</code>. 
+<br/>
+<br/>
+
+<h2>References & Data</h2>
+<p>
+Our paper describing CIDANE will be uploaded as soon as it is accepted for publication. Flux Simulator's .PAR parameter files used to simulate the datasets therein can be downloaded <a href="fluxsim_paras.tgz">here.</a> 
+The alignments of all simulated reads can be downloaded from the <a href="https://uchicago.box.com/CIDANE-FluxSim">University of Chicago cloud storage.</a><br/>
+[1] Friedman J., Hastie T., Tibshirani R: <a href="http://"><b>Regularization paths for generalized linear models via coordinate descent</b></a>.  <i>Journal of Statistical Software</i> <b>33</b>(1), 1-22 (2010) <br/>
+</p>
+<br/>
+<h2>Funding</h2>
+<p>
+This work is supported in part by NIH grant and R01-HG006677 to S.L. Salzberg.
+</p>
+</div> <!-- end of tab1 -->
+
+
+ 
+        <div id="tab2" class="tab">
+
+</br>
+<h2>Workflow</h2>
+</br>
+<p>
+Before running CIDANE (see below), read mappings and exon boundaries have to be compiled into segment counts using
+tools <code>exonRefine</code> and <code>transemble</code>, both located in directory <code>CIDANE-0.0.1/build/bin/</code>:
+<ol>
+<li> <pre> % exonRefine &lt;exon-intron-file&gt;</pre>
+<code>exonRefine</code> generates a gtf/gff file <code>&lt;refined-exons-file&gt;</code> containing all exons refined into non-overlapping segments. Its input <code>&lt;exon-intron-file&gt;</code>
+describes in gtf/gff format known or inferred splice sites, and optionally transcription start and end sites or full-length transcripts. Gene and transcript information will be 
+preserved and can be used during CIDANE's inference process. </br></br>
+</li>
+<li> <pre> % transemble &lt;read-mapping-file&gt; &lt;refined-exons-file&gt; count </pre>
+From <code>&lt;refined-exons-file&gt;</code> generated by <code>exonRefine</code> in step 1 and the read mappings in sam/bam format, <code>transemble</code> generates a file <code>count.cnt</code>  with calculated segment counts. </br></br></li>
+<li> <pre> % CIDANE [mandatory parameters] &lt;refined-exons-file&gt; count.cnt  </pre>
+The transcripts inferred by CIDANE along with their estimated abundances are ouput in a file named transcripts.gtf
+</li>
+</ol>	
+</p>
+
+</br></br>
+
+<h2>Running CIDANE</h2>
+</br>
+<p>
+The following detailed description can also be obtained by typing 
+<pre>
+% CIDANE --help
+</pre>
+</p>
+<br/>
+<h5>Usage</h5>
+<p>
+<pre>
+% CIDANE [options] &lt;refined-exons-file&gt; &lt;segment-count-file&gt;
+</pre>
+</p>
+
+<h5>Options</h5>
+<table style="margin: 6px 6px;" align="center" border="0" cellpadding="3" cellspacing="10" width="95%">
+
+<tr><td nowrap="nowrap" valign="top"><tt>-h/--help</tt></td>
+<td> Displays this help message.</td>
+</tr>
+<tr></tr>
+<tr><th colspan="2">Required library options (will be estimated automatically in future versions)</th> </tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-r/--readlength</tt></td>
+<td> read length</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-fl/--fraglength</tt></td>
+<td> fragment length</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-sd/--sdev</tt></td>
+<td> standard deviation</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-lib/--librarysize</tt></td>
+<td> number of mapped fragments in mio (for fpkm calculation)</td>
+</tr>
+<tr></tr>
+<tr><th colspan="2">Miscellaneous options</th> </tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-gl/--groupLoci</tt></td>
+<td> infer loci from mapping instead of gene_id in provided gtf. Attention, this option currently deactivates option useTranscriptInformation</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-m/--max</tt></td>
+<td> maximal size of loci considered.</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-th/--expThreshold</tt></td>
+<td> threshold of predicted transcripts to be reported. Either min fraction per gene or FPKM depending on parameter absThreshold. In [0..inf], default: 0.1.</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-ta/--absThreshold</tt></td>
+<td> use FPKM threshold instead of isoform fraction per gene</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-nea/--notExonAware</tt></td>
+<td> deactivate exon awareness</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-uti/--useTranscriptInformation</tt></td>
+<td> incorporate annotated transcripts into model</td>
+</tr>
+<tr></tr>
+<tr><th colspan="2">Faux segment cover options</th> </tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-f/--noFaux</tt></td>
+<td> deactivate faux covers.</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-e/--pseudo</tt></td>
+<td> pseudo count for error normalization Default: 1.</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-o/--outdir</tt></td>
+<td> output directory. Default: ./.</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-t/--tsstes</tt></td>
+<td> threshold of spliced alignments to exclude TSS/TES. Default: 0.</td>
+</tr>
+<tr></tr>
+<tr><th colspan="2">Delayed transcript generation options</th> </tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-cg/--useColGen</tt></td>
+<td> apply optional column generation step</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-mr/--maxNofRelaxedEdges</tt></td>
+<td> max number of edges relaxed in SG during column generation. Default: 1.</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-u/--epsilon</tt></td>
+<td> (upper) bound on error by piecewise linear approximation. Default: 0.001.</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-slb/--unexplCovSumBound</tt></td>
+<td> lower bound on sum of intensity of unexplained covers. Default: 1.</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-rw/--cgRegWeight</tt></td>
+<td> scale lambda for transcripts built by CG in second glmnet run. Default: 1.3.</td>
+</tr>
+<tr><td nowrap="nowrap" valign="top"><tt>-rl/--cgRedLambda</tt></td>
+<td> reduce lambda in CG. Default: 0.9.</td>
+</tr>
+
+</table>
+        </div>
+ 
+ 
+    </div>
+</div>
+
+
+
+ 
+</div> <!-- end of #mainContent -->
+
+<div id="pushFooter"></div>
+</div> <!-- end #container -->
+<div id="footer">
+  <div id="footerContent">
+  <a href="http://igm.jhmi.edu/"><img class="topleft" src="/img/igmlogo_fl.png" /></a>
+  <a href="http://www.biostat.jhsph.edu/"><img class="botright" src="/img/jhsphlogo_wbg.png" /></a>
+    <!-- div id="fbar_left">
+    <div id="fbar_right" -->
+     <p>The Center for Computational Biology at Johns Hopkins University</p>
+    <div id="footerlinks"> 
+     <ul>
+        <li><a href="/software.shtml">CCB Software</a></li>
+        <li><a href="/index.shtml">CCB Home</a></li>
+        <!-- li><a href="/contact.shtml">Contact Us</a></li -->
+     </ul>
+    </div> <!-- footerlinks -->
+  </div> <!-- footerContent -->
+</div><!-- end #footer -->
+</body>
+</html>
+

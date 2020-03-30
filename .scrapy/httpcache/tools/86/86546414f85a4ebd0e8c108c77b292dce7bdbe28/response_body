@@ -1,0 +1,454 @@
+
+<html>
+<head>
+	<META NAME=3D"description" CONTENT=3D"ConTra conserved transcription factor binding sites">
+	<META NAME=3D"keywords" CONTENT=3D"ConTra, TFBS, conserved, transcription, factor, binding, sites, tool, DMBR, VIB">
+	<META NAME="description" CONTENT="ConTra conserved transcription factor binding sites">
+	<META NAME="keywords" CONTENT="ConTra, TFBS, conserved, transcription, factor, binding, sites, tool, DMBR, VIB">
+	<META NAME="author" content="Paco Hulpiau / Bart Hooghe / Stefan Broos">
+	<title>ConTra - identification of conserved transcription factor binding sites</title>
+	<link rel='stylesheet' type='text/css' href='images/Enlighten.css'>
+</head>
+
+<body>
+
+
+<script language=javascript  type='text/javascript'>
+function CheckEmail(){
+	var email = form.emailAddress.value;
+	if (email != "" && email != "email address..."){
+		var filter = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+		if (!filter.test(email)) {
+			alert('Please provide a valid email address');
+			email.focus;
+			return false;
+		} else {
+			return true;
+		}
+	} else {
+		return true;
+	}
+}
+</script>
+
+<div id='wrap'>
+	<div id="header">						
+				
+		<div class="headerphoto"></div>
+	
+	</div>
+	<map name="crumb2">
+<AREA
+   HREF="index.php?v2" TITLE="index"
+   SHAPE=POLY COORDS="0,0,161,0,168,15,161,27,0,27">
+<AREA
+   HREF="index.php?v2" TITLE="index"
+   SHAPE=POLY COORDS="162,0,330,0,337,15,330,27,162,27,169,15">
+</map>
+
+<map name="crumb3">
+<AREA
+   HREF="index.php?v2" TITLE="index"
+   SHAPE=POLY COORDS="0,0,161,0,168,15,161,27,0,27">
+<AREA
+   HREF="index.php?v2" TITLE="index"
+   SHAPE=POLY COORDS="162,0,330,0,337,15,330,27,162,27,169,15">
+<AREA
+   HREF="index2_newstyle.php" TITLE="index2_newstyle"
+   SHAPE=POLY COORDS="331,0,500,0,507,15,500,27,331,27,338,15">
+</map>
+
+<map name="crumb4">
+<AREA
+   HREF="index.php?v2" TITLE="index"
+   SHAPE=POLY COORDS="0,0,161,0,168,15,161,27,0,27">
+<AREA
+   HREF="index.php?v2" TITLE="index"
+   SHAPE=POLY COORDS="162,0,330,0,337,15,330,27,162,27,169,15">
+<AREA
+   HREF="index2_newstyle.php" TITLE="index2_newstyle"
+   SHAPE=POLY COORDS="331,0,500,0,507,15,500,27,331,27,338,15">
+<AREA
+   HREF="index3_newstyle.php" TITLE="index3_newstyle"
+   SHAPE=POLY COORDS="501,0,670,0,677,15,670,27,501,27,508,15">
+</map>
+
+<map name="crumb5">
+<AREA
+   HREF="index.php?v2" TITLE="index"
+   SHAPE=POLY COORDS="0,0,161,0,168,15,161,27,0,27">
+<AREA
+   HREF="index.php?v2" TITLE="index"
+   SHAPE=POLY COORDS="162,0,330,0,337,15,330,27,162,27,169,15">
+<AREA
+   HREF="index2_newstyle.php" TITLE="index2_newstyle"
+   SHAPE=POLY COORDS="331,0,500,0,507,15,500,27,331,27,338,15">
+<AREA
+   HREF="index3_newstyle.php" TITLE="index3_newstyle"
+   SHAPE=POLY COORDS="501,0,670,0,677,15,670,27,501,27,508,15">
+<AREA
+   HREF="index4_newstyle.php" TITLE="index4_newstyle"
+   SHAPE=POLY COORDS="671,0,837,0,844,15,837,27.671,27,678,15">
+</map>
+
+<map name="crumb6">
+<AREA
+   HREF="index.php?v2" TITLE="index"
+   SHAPE=POLY COORDS="0,0,161,0,168,15,161,27,0,27">
+<AREA
+   HREF="index.php?v2" TITLE="index"
+   SHAPE=POLY COORDS="162,0,330,0,337,15,330,27,162,27,169,15">
+<AREA
+   HREF="index2_newstyle.php" TITLE="index2_newstyle"
+   SHAPE=POLY COORDS="331,0,500,0,507,15,500,27,331,27,338,15">
+<AREA
+   HREF="index3_newstyle.php" TITLE="index3_newstyle"
+   SHAPE=POLY COORDS="501,0,670,0,677,15,670,27,501,27,508,15">
+<AREA
+   HREF="index4_newstyle.php" TITLE="index4_newstyle"
+   SHAPE=POLY COORDS="671,0,837,0,844,15,837,27.671,27,678,15">
+</map>
+	
+	<div class="imagemenu">
+		<img class="no-border" alt="" src="images/Breadcrumbbarb2.jpg" usemap="#crumb2"/>
+		<div class="text1"><b><a href='index.php?v2' style="color: #ffffff">HOME</a></b></div>
+		<div class="text2"><b><a href='index.php?v2' style="color: #ffffff">STEP 1</a></b></div>
+		<div class="text3" style="color: #A5A5A5"><b>STEP 2</b></div>
+		<div class="text4" style="color: #A5A5A5"><b>STEP 3</b></div>
+		<div class="text5" style="color: #A5A5A5"><b>STEP 4</b></div>
+		<div class="text6" style="color: #A5A5A5"><b>RESULTS</b></div>
+	</div>
+
+
+
+	<!-- content-wrap starts here -->
+	<div id="content-wrap"><div id="content">
+
+    <a href="http://bioit2.irc.ugent.be/contra/v3" id="contrav3--link">
+	Try the new updated ConTra V3 - update 2017
+</a>
+
+    <!-- return to v1 -->
+    <a id = "returnToContraV1-link"
+        href = "http://bioit.dmbr.ugent.be/ConTra/index.php?stay=1"
+    >
+      Or use old ConTra (V1) &raquo;
+    </a>
+
+    <!-- cite -->
+    <hr style = "border: none; border-top: groove white 2px;" />
+    <table width="90%" style= "font-size: 1.1em; margin-left: 50px;">   
+      <tr style="background-color:#026661;">
+        <td style="">
+          <font style="color:#ffffff;font-weight:600">
+            Please cite - ConTra is described in
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="noborder">
+          <b>Broos S, Hulpiau P, Galle J, Hooghe B, Van Roy F, De Bleser P</b>
+        </td>
+      </tr>
+      <tr>
+        <td class="noborder">
+          <a href="http://www.ncbi.nlm.nih.gov/pubmed/21576231" target="_blank">
+            ConTra v2: a tool to identify transcription factor binding sites 
+            across species, update 2011.
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="noborder">
+          <b>Nucleic Acids Res. 2011 Jul;39(Web Server issue):W74-8. Epub 
+            2011 May 16.</b>
+        </td>
+      </tr>
+    </table>
+
+    <hr style = "border: none; border-top: groove white 2px;" />
+
+	<div id="sidebar">
+	 <!-- Start of StatCounter Code -->
+                 <script type="text/javascript">var sc_project=6452294; var sc_invisible=1; var sc_security="a08d09d1";</script>
+                 <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+		 <noscript>
+			 <div class="statcounter"><a title="statistics for vBulletin" href="http://statcounter.com/vbulletin/" target="_blank"><img class="statcounter"src="http://c.statcounter.com/6452294/0/a08d09d1/1/" alt="statistics for vBulletin" ></a></div>
+		 </noscript>
+         <!-- End of StatCounter Code -->
+	<font size="2">			
+	</font><div class="sidebox"><font size="2">
+		</br>
+		</font><h1 class="clear"><font size="2">Site Menu</font></h1>
+		<font size="2">		</font>
+		<ul class="sidemenu">
+		<font size="2">		<li><a href="index.php?v2" class="top">Home</a></li>
+					<li><a href="contradoc.php" target="_blank">Help</a></li>
+					<li><a href="cite_newstyle.php" target="_blank">Citations</a></li>
+					<li><a href="links_newstyle.php" target="_blank">Links</a></li>
+					<li><a href="contact_newstyle.php" target="_blank">Contact</a></li>
+		</font></ul><font size="2">			
+		</font>
+	</div><font size="2">			
+	</div>
+
+	<!-- main starts here -->
+
+	<div id='main'>
+	<br>
+	<b><h1>Step 1 (out of 4):</h1></b> 
+	<p>select the type of analysis and specify the gene/transcript to be subjected to analysis</p>
+
+
+	<FORM name="form" enctype="multipart/form-data" onSubmit="return CheckEmail(this.form)" method="POST" action="index2_newstyle.php">
+
+	<!-- WHICH TYPE OF ANALYSIS? -->
+	<fieldset><legend><b>Type of analysis</b></legend>
+	<table class="noborder">
+		<tr>
+		<td class="noborder"  width="5%">
+		<input type="radio" name="question" value="A" id='qa' checked="checked">&nbsp;
+		</td>
+		<td class="noborder"  width="90%">
+		<b>Visualization: </b>
+		Identify binding sites for 1 or several transcription factors (TFs) in the cross-species alignment of my promoter(s).
+		</td> 
+		<td class="noborder"  width="5%">
+		<a href="contradoc.php#analysis" target="_blank"><img class='no-border' src="help.jpg" valign="center" width="26" height="23" alt="help" border="0"></a>
+		</td>         
+		</tr>
+
+      		<tr>
+         	<td class="noborder"  width="5%">
+   		<input type="radio" name="question" value="B" id='qb'>&nbsp;
+		</td>
+		<td class="noborder"  width="90%">
+   		<b>Exploration: </b>Identify which transcription factors (TFs) can regulate my gene(s)/transcript(s). This can take a long time...
+   		</td> 
+   		<td class="noborder"  width="5%">
+   		<a href="contradoc.php#analysis" target="_blank"><img class='no-border' src="help.jpg" valign="middle" width="26" height="23" alt="help" border="0"></a>
+   		</td>
+		</tr>
+
+
+		<tr>
+		<td class="noborder"  colspan="3" width="100%">
+		</br><b>Enter your e-mail address to receive the results</b> (optional)
+		</td>
+		</tr>
+
+		<tr>
+		<td class="noborder"  colspan="3" width="100%">
+		<input size="70%" name="emailAddress" id="EMAIL" wrap="soft" value="email address...">
+		</td>
+		</tr>
+	</table>
+	</fieldset>
+
+	</br>
+
+	<!-- WHICH ORGANISM? -->
+
+	<fieldset><legend><b>Reference organism</b></legend>
+	<table>
+		<tr>
+		<td class="noborder"  width="50%">Select the organism you're working on.</td>
+		<td class="noborder"  width="45%"><label for="reforg"></label>
+			<select id="reforg" name="reforg">
+							<option value='Human'>Human</option>
+				<option value='Mouse'>Mouse</option>
+				<option value='Cow'>Cow</option>
+				<option value='Chicken'>Chicken</option>
+				<option value='X.+Tropicalis'>X. tropicalis</option>
+				<option value='Zebrafish'>Zebrafish</option>
+				<option value='D.+melanogaster'>D. melanogaster</option>
+				<option value='C.+elegans'>C. elegans</option>
+				<option value='S.+Cerevisiae'>S. cerevisiae</option>
+			</select>
+		</td>
+		<td class="noborder"  width="5%">
+			<a href="contradoc.php#reforg" class="atfd" target="_blank"><img src="help.jpg" valign="middle" class="no-border"></a>
+		</td>
+		</tr>
+	</table>
+	</fieldset>
+
+	</br>
+
+	<!-- SEARCHFIELD FOR GENES OR TRANSCRIPTS -->
+
+	<fieldset><legend><b>Gene or transcript</b></legend>
+	<table class="noborder">
+		<tr style="height:1px"><td class="noborder" ></td><td class="noborder" ></td><td class="noborder" ></td><td class="noborder" ></td></tr>
+		<tr>
+		<td class="noborder"  width="5%">
+		<input type="radio" name="inputtype" value="genes" id="genes" checked="checked">
+		</td>
+		<td class="noborder"  width="90%" colspan="2">
+		Gene or transcript
+		</td> 
+		<td class="noborder"  width="5%">
+		<a href="contradoc.php#genes" target="_blank">
+			<img src="help.jpg" class="no-border" alt="help">
+		</a>
+		</td>
+	   	</tr>
+
+		<tr>
+		<td class="noborder"  colspan="4">
+		</br>
+		<b>valid input:</b> gene name or symbol, Ensembl gene ID (ENSG), entrez gene ID, RefSeq (NM_|NR_) or Ensembl transcript ID (ENST)
+		</td>
+		</tr>
+
+		<tr>
+		<td class="noborder"  colspan="2">
+		</br>
+		<input type="text" name="genes" id="aaa" size="70%" onfocus="document.getElementById('genes').checked=true"></br><td></td></tr><tr>
+		</td>
+        	<td class="noborder"  colspan="2">
+          	</br>Example: <a href="contradoc.php#example" target="_blank">ATOH7</a>
+		<input name="examplemode" type="checkbox" id="examplemode" 
+		onclick="	document.getElementById('aaa').value='ATOH7';
+                                if (document.getElementById('aaa').disabled){
+                                        document.getElementById('aaa').disabled=false;
+                                } else {
+                                        document.getElementById('aaa').disabled=true;
+                                }
+
+				document.getElementById('reforg').value='Human';
+				if (document.getElementById('reforg').disabled){
+					document.getElementById('reforg').disabled=false;
+				} else {
+					document.getElementById('reforg').disabled=true;
+				}
+
+				document.getElementById('qa').checked=true;
+                                if (document.getElementById('qa').disabled){
+                                        document.getElementById('qa').disabled=false;
+                                } else {
+                                        document.getElementById('qa').disabled=true;
+                                }
+
+                                if (document.getElementById('qb').disabled){
+                                        document.getElementById('qb').disabled=false;
+                                } else {
+                                        document.getElementById('qb').disabled=true;
+                                }
+
+				document.getElementById('genes').checked=true;
+                                if (document.getElementById('genes').disabled){
+                                        document.getElementById('genes').disabled=false;
+                                } else {
+                                        document.getElementById('genes').disabled=true;
+                                }
+
+                                if (document.getElementById('maf').disabled){
+                                        document.getElementById('maf').disabled=false;
+                                } else {
+                                        document.getElementById('maf').disabled=true;
+                                }
+
+                                if (document.getElementById('ownmaffile').disabled){
+                                        document.getElementById('ownmaffile').disabled=false;
+                                } else {
+                                        document.getElementById('ownmaffile').disabled=true;
+                                }
+
+				document.getElementById('ownPWMcheck').checked=false;
+                                if (document.getElementById('ownPWMcheck').disabled){
+                                        document.getElementById('ownPWMcheck').disabled=false;
+                                } else {
+                                        document.getElementById('ownPWMcheck').disabled=true;
+                                }
+
+                                if (document.getElementById('ownPWMfile').disabled){
+                                        document.getElementById('ownPWMfile').disabled=false;
+                                } else {
+                                        document.getElementById('ownPWMfile').disabled=true;
+                                }
+
+				"> (Try example)
+		<noscript>
+		</br> (You need to turn on JavaScript!)
+		</noscript>
+	  	<br>
+		<a href="contradoc.php#examples" target="_blank">more examples...</a>
+		</td>
+		<td></td>
+		</tr>
+		<tr>
+		</tr>
+	
+		<tr>
+		<td class="noborder" >
+		<input type="radio" name="inputtype" value="ownmaf" id="maf">
+		</td>
+		<td class="noborder"  colspan="2">
+		alignment file [multifasta, maf or CLUSTAL format]
+		</td> 
+ 		<td class="noborder" >
+		<a href="contradoc.php#maf" target="_blank"><img src="help.jpg" alt="help" class="no-border"></a>
+		</td>
+	   	</tr>
+
+		<tr>
+		<td class="noborder"  colspan="3">
+		<input name="ownmaffile" id="ownmaffile" type="file" size="35" onfocus="document.getElementById('maf').checked=true">
+		(skip step 2/3)
+		</td>
+		</tr>
+	</table>
+	</fieldset>
+
+	</br>
+
+	<fieldset><legend>Use your <b>own PWM collection</b> [optional]</legend>
+	<table>
+		<tr>
+		<td class="noborder"  width="5%">
+		<input type="checkbox" name="ownPWMcheck" id="ownPWMcheck" value="ownPWMs">
+		</td>
+	       	<td class="noborder" width="50%">
+		upload file with your own PWMs (<a href="PWMfile.upload" target="_blank">format</a>) OR upload a multifasta file (max sequence length 50nt)
+		</td>
+		<td class="noborder"  width="45%">
+		<input name="ownPWMs" id="ownPWMfile" type="file" size="25" onclick="document.getElementById('ownPWMcheck').checked=true">
+		</td>
+		</tr>
+	</table>
+	</fieldset>
+
+	<table align="center">
+   <tr height="60px"><td class="noborder" ><input type="submit" name="submit" value="Next" class="button"
+	onclick="
+		document.getElementById('aaa').disabled=false;
+		document.getElementById('reforg').disabled=false;
+		document.getElementById('qa').disabled=false;
+		document.getElementById('qb').disabled=false;
+		document.getElementById('genes').disabled=false;
+		document.getElementById('maf').disabled=false;
+		document.getElementById('ownmaffile').disabled=false;
+		document.getElementById('ownPWMcheck').disabled=false;
+		document.getElementById('ownPWMfile').disabled=false;	
+	">
+	</td></tr>
+   </table>
+
+</td></tr>
+</table>
+</FORM>
+
+
+<table align="center">
+<tr>
+    <td class="noborder" ><a href="contradoc.php" target="_blank">Help</a> | <a href="MAILTO:ConTra@dmbr.UGent.be">Contact</a></td>
+
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

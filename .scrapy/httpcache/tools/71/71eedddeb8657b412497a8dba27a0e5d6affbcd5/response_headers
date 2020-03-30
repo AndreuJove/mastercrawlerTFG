@@ -1,0 +1,20 @@
+Date: Mon, 30 Mar 2020 18:50:19 GMT
+Set-Cookie: __cfduid=dc1cd4f3f1f710aefbfe088759ac7881c1585594219; expires=Wed, 29-Apr-20 18:50:19 GMT; path=/; domain=.dl.acm.org; HttpOnly; SameSite=Lax; Secure
+Set-Cookie: JSESSIONID=f04bdccd-2a35-4681-92c6-dbb1e2393827; domain=.dl.acm.org; path=/; secure; HttpOnly
+Set-Cookie: SERVER=WZ6myaEXBLEM770FsH78JQ==; domain=.dl.acm.org; path=/; secure
+Set-Cookie: MAID=BKTi6IitoYRmTsDkochSCw==; domain=.dl.acm.org; path=/; secure; expires=Sun, 24-Jan-2021 18:50:19 GMT
+Set-Cookie: MACHINE_LAST_SEEN=2020-03-30T11%3A50%3A19.908-07%3A00; domain=.dl.acm.org; path=/; secure; expires=Sun, 24-Jan-2021 18:50:19 GMT
+Location: https://dl.acm.org/doi/10.1145/3233547.3233602
+Cf-Ray: 57c40401891d5478-MAD
+Cache-Control: private
+Link: </wro/ilu2~product.css>; rel=preload; as=style; nopush, </wro/ilu2~product.js>; rel=preload; as=script; nopush, <https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin
+Strict-Transport-Security: max-age=15552000
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+P3P: CP="NOI DSP ADM OUR IND OTC"
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+Vary: Accept-Encoding
+Server: cloudflare
+Alt-Svc: h3-27=":443"; ma=86400, h3-25=":443"; ma=86400, h3-24=":443"; ma=86400, h3-23=":443"; ma=86400

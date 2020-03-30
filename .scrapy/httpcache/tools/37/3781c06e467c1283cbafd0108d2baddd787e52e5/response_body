@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/2002/REC-xhtml1-20020801/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>CrystFEL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="CrystFEL"/>
+<meta name="keywords" content="CrystFEL XFEL"/>
+
+<link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+
+<link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body><div id="overall">
+
+<div id="banner">
+<a href="http://www.desy.de"><img class="logos" src="desy.png" height="82" /></a>
+<a href="http://www.cfel.de"><img class="logos" src="cfel.png" height="82" /></a>
+<a href="index.html"><img class="cf-logo" src="crystfel.png" height="90" /></a>
+<h1><a href="index.html">CrystFEL</a></h1>
+</div>
+
+<div id="colleft">
+
+<h3>Information</h3>
+<ul>
+<li class="leftmenu"><a href="index.html">Home</a></li>
+<li class="leftmenu"><a href="download.html">Download</a></li>
+<li class="leftmenu"><a href="programs.html">Extra programs</a></li>
+<li class="leftmenu"><a href="citations.html">Citations</a></li>
+</ul>
+
+<hr />
+<h3>Documentation</h3>
+<ul>
+<li class="leftmenu"><a href="documentation.html">Overview</a></li>
+<li class="leftmenu"><a href="install.html">Installation</a></li>
+<li class="leftmenu"><a href="manual.html">Manual</a></li>
+<li class="leftmenu"><a href="bestpractice.html">Best Practice</a></li>
+<li class="leftmenu"><a href="faq.html">FAQ</a></li>
+<li class="leftmenu"><a href="hitrate.html">Hit rate calculator</a></li>
+<li class="leftmenu"><a href="changes.html">Changes</a></li>
+<li class="leftmenu"><a href="tutorial.html">Tutorial</a></li>
+<li class="leftmenu"><a href="presentations.html">Presentations</a></li>
+<li class="leftmenu"><a href="reference/index.html">API Reference</a></li>
+</ul>
+
+<hr />
+<ul>
+<li class="leftmenu"><a href="contact.html">Contact</a></li>
+<li class="leftmenu"><a href="http://www.desy.de/imprint/index_eng.html">Legal Information</a></li>
+</ul>
+
+<hr />
+<ul>
+<li class="leftmenu"><a href="http://www.desy.de">DESY Homepage</a></li>
+<li class="leftmenu"><a href="http://www.cfel.de">CFEL Homepage</a></li>
+<li class="leftmenu"><a href="http://desy.cfel.de">DESY@CFEL</a></li>
+</ul>
+
+</div>
+<div id="colmid">
+<h2>About CrystFEL</h2>
+<p>Welcome to the <strong>CrystFEL</strong> page!</p>
+
+<p>CrystFEL is a suite of programs for processing diffraction data acquired "serially" in a "snapshot" manner, such as when using the technique of <strong>Serial Femtosecond Crystallography (SFX)</strong> with a free-electron laser source.  CrystFEL comprises programs for indexing and integrating diffraction patterns, scaling and merging intensities, simulating patterns, calculating figures of merit for the data and visualising the results.  Supporting scripts are provided to help at all stages, including importing data into <a href="http://www.ccp4.ac.uk/">CCP4</a> for further processing.</p>
+
+<p>To begin learning about CrystFEL in more detail, <a href="manual.html">start here.</a></p>
+
+<p>The primary citation for CrystFEL is as follows.  See the list at the end of this page for more references.</p>
+<blockquote>T. A. White, R. A. Kirian, A. V. Martin, A. Aquila, K. Nass, A. Barty and H. N. Chapman. "<em>CrystFEL:</em> a software suite for snapshot serial crystallography".  J. Appl. Cryst. <strong>45</strong> (2012), p335&ndash;341.<br /><a href="http://dx.doi.org/10.1107/S0021889812002312">doi:10.1107/S0021889812002312</a> &mdash; <a href="db5097-reprint.pdf">Download PDF</a> &mdash; <a href="http://scripts.iucr.org/cgi-bin/paper?S0021889812002312">Article on IUCr website</a>.</blockquote>
+
+<h2>Recent News</h2>
+<ul>
+<li><strong>6 February 2020:</strong> CrystFEL version 0.9.0 released!  Here are the <a href="relnotes-0.9.0">release notes</a> with the main points.  See the <a href="download.html">download page</a> or the <a href="changes.html">changes page</a> for more information.</li>
+<li><strong>4 February 2019:</strong> A <a href="http://journals.iucr.org/d/issues/2019/02/00/ba5291/index.html">new article about CrystFEL</a>, providing a step-by-step guide to processing a dataset.</li>
+<li><strong>3 January 2019:</strong> <a href="https://link.springer.com/book/10.1007/978-3-030-00551-1">A new book</a> has been published describing recent discoveries and developments applying X-ray free-electron lasers to structural biology.  <a href="https://link.springer.com/chapter/10.1007/978-3-030-00551-1_7">Chapter 7</a> of the book gives an overview of how the "data mountain" from serial femtosecond crystallography can be handled using programs including CrystFEL.</li>
+<li><strong>19 December 2018:</strong> CrystFEL version 0.8.0 released!  Here are the <a href="relnotes-0.8.0">release notes</a> with the main points.  See the <a href="download.html">download page</a> or the <a href="changes.html">changes page</a> for more information.</li>
+<li><strong>17 May 2018:</strong> CrystFEL version 0.7.0 released!  Here are the <a href="relnotes-0.7.0">release notes</a> with the main points.  See the <a href="download.html">download page</a> or the <a href="changes.html">changes page</a> for more information.</li>
+<li><strong>24 July 2017:</strong> CrystFEL version 0.6.3 released!  Here are the <a href="relnotes-0.6.3">release notes</a> with the main points.  See the <a href="download.html">download page</a> or the <a href="changes.html">changes page</a> for more information.</li>
+<li><strong>28 March 2017:</strong> <a href="https://www.desy.de/news/news_search/index_eng.html?openDirectAnchor=1202">Development of CrystFEL recognised with Max von Laue Prize!</a></li>
+<li><strong>30 March 2016:</strong> <a href="http://dx.doi.org/10.1107/S1600576716004751">New paper</a> published which has details of many improvements in CrystFEL since the early versions.</li>
+<li><strong>21 March 2016:</strong> CrystFEL version 0.6.2 released!  Here are the <a href="relnotes-0.6.2">release notes</a> with the main points.  See the <a href="download.html">download page</a> or the <a href="changes.html">changes page</a> for more information.</li>
+<li><strong>3 August 2015:</strong> CrystFEL version 0.6.1 released!  Here are the <a href="relnotes-0.6.1">release notes</a> with the main points.  See the <a href="download.html">download page</a> or the <a href="changes.html">changes page</a> for more information.</li>
+<li><strong>8 June 2015:</strong> <a href="tutorial.html">Tutorial updated</a> to reflect recent changes in CrystFEL, including how to perform scaling, partiality and post-refinement.</li>
+</ul>
+
+<h2>Acknowledgements</h2>
+<p>The development of CrystFEL is led by Thomas White at the <a href="http://www.cfel.de">Center for Free-Electron Laser Science</a> at the <a href="http://www.desy.de">Deutsches Elektronen-Synchrotron, DESY</a> in Hamburg, Germany.  DESY is a research centre of the <a href="http://www.helmholtz.de/">Helmholtz Gemeinschaft</a>.  See the <a href="contact.html">contact page</a> for more contact details.</p>
+
+<p>Code has been contributed to CrystFEL by Valerio Mariani, Helen Ginn, Oleksandr Yefanov, Steve Aplin, Thomas Grant, Mamoru Suzuki, Keitaro Yamashita, Takanori Nakane, Parker de Waal, Wolfgang Brehm, Alexandra Tolstikova, Fedor Chervinskii, Cornelius Gati, Anton Barty, Karol Nass, Nadia Zatsepin, Chun Hong Yoon, Lorenzo Galli, Andrew Martin, Andrew Aquila, Rick Kirian and Ken Beyerlein.  The design of CrystFEL and its algorithms has been influenced by Henry Chapman, Petra Fromme, James Holton, John Spence and several others.</p>
+
+<p>Development of CrystFEL is primarily funded by the Helmholtz Association via <a href="https://www.helmholtz.de/ueber_uns/die_gemeinschaft/satzung_und_governance/programmorientierte_foerderung/">programme-oriented funds</a>.</p>
+
+<p>Additional funding for CrystFEL is provided by "<a href="http://x-probe.org">X-Probe</a>", a project of the European Union's 2020 Research and Innovation Program Under the Marie Sk&#322;odowska-Curie grant agreement 637295 (2015-2018).</p>
+
+<p>Additional funding for CrystFEL is provided by the <a href="https://www.bmbf.de/">BMBF</a> German-Russian Cooperation "<a href="http://www.syncfelmed.org/">SyncFELMed</a>", grant 05K14CHA (2014-2017).</p>
+
+<p>Past funding for CrystFEL has been received from <a href="https://www.biostruct-x.eu">BioStruct-X</a>, a project funded by the Seventh Framework Programme (FP7) of the European Commission.</p>
+
+<h2>Useful references</h2>
+<p>Here are some papers describing CrystFEL or its algorithms:</p>
+<ul>
+<li>T. A. White. "Processing serial crystallography data with CrystFEL: a step-by-step guide".  Acta Cryst. <strong>D75</strong> (2019).<br /><a href="https://doi.org/10.1107/S205979831801238X">doi:10.1107/S205979831801238X</a> &mdash; <a href="http://journals.iucr.org/d/issues/2019/02/00/ba5291/ba5291.pdf">Download PDF</a></li>
+<li>T. A. White, V. Mariani, W. Brehm, O. Yefanov, A. Barty, K. R. Beyerlein, F. Chervinskii, L. Galli, C. Gati, T. Nakane, A. Tolstikova, K. Yamashita, C. H. Yoon, K. Diederichs and H. N. Chapman. "Recent developments in CrystFEL". J. Applied Crystallography <strong>49</strong> (2016) p680-689.<br /> <a href="http://dx.doi.org/10.1107/S1600576716004751">doi:10.1107/S1600576716004751</a> &mdash; <a href="http://journals.iucr.org/j/issues/2016/02/00/zd5001/zd5001.pdf">Download PDF</a></li>
+<li>O. Yefanov, V. Mariani, C. Gati, T. A. White, H. N. Chapman and A. Barty. "Accurate determination of segmented X-ray detector geometry". Optics Express <strong>23</strong> (2015) p28459-28470.<br /> <a href="http://dx.doi.org/10.1364/OE.23.028459">doi:10.1364/OE.23.028459</a> &mdash; <a href="https://www.osapublishing.org/oe/viewmedia.cfm?uri=oe-23-22-28459&seq=0">Download PDF</a></li>
+<li>T. A. White. "Post-refinement method for snapshot serial crystallography". Phil. Trans. Roy. Soc. B <strong>369</strong> (2014) 20130330.<br /><a href="http://dx.doi.org/10.1098/rstb.2013.0330">doi:10.1098/rstb.2013.0330</a> &mdash; <a href="http://rstb.royalsocietypublishing.org/content/369/1647/20130330.full.pdf">Download PDF</a></li>
+<li>T. A. White, A. Barty, F. Stellato, J. M. Holton, R. A. Kirian, N. A. Zatsepin and H. N. Chapman. "Crystallographic data processing for free-electron laser sources".  Acta Cryst. <strong>D69</strong> (2013), p1231&ndash;1240.<br /><a href="http://dx.doi.org/10.1107/S0907444913013620">doi:10.1107/S0907444913013620</a> &mdash; <a href="http://journals.iucr.org/d/issues/2013/07/00/ba5187/ba5187.pdf">Download PDF</a></li>
+<li>T. A. White, R. A. Kirian, A. V. Martin, A. Aquila, K. Nass, A. Barty and H. N. Chapman. "<em>CrystFEL:</em> a software suite for snapshot serial crystallography".  J. Appl. Cryst. <strong>45</strong> (2012), p335&ndash;341.<br /><a href="http://dx.doi.org/10.1107/S0021889812002312">doi:10.1107/S0021889812002312</a> &mdash; <a href="db5097-reprint.pdf">Download PDF</a> &mdash; <a href="http://scripts.iucr.org/cgi-bin/paper?S0021889812002312">Article on IUCr website</a></li>
+<li>R. A. Kirian, X. Wang, U. Weierstall, K. E. Schmidt, J. C. H. Spence, M. Hunter, P. Fromme, T. White, H. N. Chapman and J. Holton. "Femtosecond protein nanocrystallography - data analysis methods".  Optics Express <strong>18</strong> (2010) p5713.  <a href="http://dx.doi.org/10.1364/OE.18.005713">doi:10.1364/OE.18.005713</a> &mdash; <a href="http://www.opticsinfobase.org/oe/viewmedia.cfm?uri=oe-18-6-5713&seq=0">Download PDF</a></li>
+</ul>
+</div>
+
+</body>
+</html>

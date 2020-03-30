@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<title>AlloFinder Home</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="/ALF/module/mainpage/css/mainpage.css" rel="stylesheet">
+</head>
+
+<body>
+	<!-- 引入头部模块 -->
+	
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<script language = "javascript" type="text/javascript">
+    var path = "/ALF";
+    var basePath = "http://mdl.shsmu.edu.cn:80";
+    var USERID = "null";
+    var LAN = "en";
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!-- 页面icon -->
+<link href="/ALF/images/alloscreen_icon.png" mce_href="/ALF/images/alloscreen_icon.png" rel="icon" type="image/x-icon">
+<link href="/ALF/images/alloscreen_icon.png" mce_href="/ALF/images/alloscreen_icon.png" rel="shortcut icon" type="image/x-icon">
+<!-- 外部引入的css -->   
+<link href="/ALF/css/bootstrap.min.css" rel="stylesheet">
+<link href="/ALF/css/common.css" rel="stylesheet">
+<link rel="stylesheet" href="/ALF/css/DT_bootstrap.css" />
+<link rel="stylesheet" href="/ALF/css/bootstrap-spinner.css">
+<link rel="stylesheet" href="/ALF/css/bootstrap-switch.min.css" />
+<link rel="stylesheet" href="/ALF/css/bootstrap-datetimepicker.min.css" />
+<link rel="stylesheet" href="/ALF/css/font-awesome.min.css">
+<link rel="stylesheet" href="/ALF/css/jquery-impromptu.css">
+<link rel="stylesheet" href="/ALF/js/fileinput/fileinput.min.css">
+<!-- 外部引入的css 结束 -->
+<!-- 引入bootstrap的js -->
+<script src="/ALF/js/selectivizr-min.js"></script>
+<script src="/ALF/js/respond.min.js"></script>
+<script src="/ALF/js/jquery-1.11.3.min.js"></script>
+<script src="/ALF/js/bootstrap.min.js"></script>
+<script src="/ALF/js/fileinput/fileinput.min.js"></script>
+<script src="/ALF/js/fileinput/es.js"></script>
+<script src="/ALF/js/highcharts.js"></script>
+<script src="/ALF/js/bootstrap-notify.min.js"></script>
+<script src="/ALF/js/jquery-impromptu.js"></script>
+<script src="/ALF/js/bootstrap-loading.js"></script>
+<!-- 外部引入的JS结束 -->
+<!-- 自定义JS -->
+<script src="/ALF/js/common.js"></script>
+<!-- 自定义JS 结束 -->
+
+
+	
+
+<script language = "javascript" type="text/javascript">
+    var path = "/ALF";
+    var basePath = "http://mdl.shsmu.edu.cn:80";
+    var LOGINSTATUS = "null";
+    var USERNAME = "null";
+</script>
+<!-- Nav -->
+<div class="top"></div>
+
+<!-- Nav -->
+<nav class="navbar navbar-default nav_customed">
+	<div class="container">
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+ 				<li><a href="/ALF/module/mainpage/mainpage.jsp"><span id="home_link">Home</span></a></li>
+				<li><a href="/ALF/module/job/job_search.jsp"><span id="job_link">Job Queue</span></a></li>
+				<li><a href="/ALF/module/contact/contact.jsp"><span id="contact_link">Contact</span></a></li>
+				<li><a href="/ALF/module/help/help.jsp"><span id="help_link">Help</span></a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- Banner -->
+<div class="banner">
+	<div class="w1010 center">
+		<div class="intro">
+			<h1>Welcome to AlloFinder</h1><div class="clear"></div>
+			<dd>&nbsp;&nbsp;&nbsp;&nbsp;Allostery, known as 'the second secret of life', tweaks innumerable biological processes and plays a fundamental role in human diseases and in drug discovery. Exploration of allostery has thus been regarded as a crucial requirement for biochemical mechanism research and pharmaceutical field. <span style="font-weight:bold;color:#337ab7;">AlloFinder</span> is an interactive platform that identifies potential endogenous or exogenous allosteric modulators as well as their characterization in human allosterome. The platform can be used by biologist to decipher metabolites in the pathways of allosteric feedback and by pharmacologist to facilitate allosteric drug discovery.</dd>
+		</div>
+	</div>
+</div>
+
+	<!-- 引入头部模块  结束-->
+    <div class="container">
+        <div class="tit">Job Submit</div>
+        <div class="row mt20">
+            <div class="col-md-8" id="job_submit_div">
+            	<form id="jobForm" name="jobForm" class="form-horizontal" role="form" method="post" enctype="multipart/form-data" onsubmit="return formSubmit();">
+            		<input hidden id="job_serial_hidden">
+                	<div class="form-group">
+                		<label class="col-xs-3 control-label">Job Name</label>
+    					<div class="row">
+    						<div class="col-xs-4">
+      							<input class="form-control" type="text" name="job_name" reqType="yes" id="job_name"/>
+      						</div>
+      						<input type="button" id="example1" class="btn btn-primary" style="width:90px;" value="Example 1"/>
+      						<input type="button" id="example2" class="btn btn-primary" style="width:90px;" value="Example 2"/> 
+							<input type="text" id="is_example" name="is_example" hidden=true/>
+							<input type="text" id="pdb_name" name="pdb_name" hidden=true/>
+							<input type="text" id="ligand_type" name="ligand_type" hidden=true value="DB"/>
+							<input type="text" id="ligand_name" name="ligand_name" hidden=true/>
+							<input type="text" id="ligand_path" name="ligand_path" hidden=true/>
+							<input type="text" id="pdb_check" name="pdb_check" hidden=true/>
+    					</div>
+                	</div>
+                	<div class="form-group">
+                		<label class="col-xs-3 col-md-3 control-label">Query Protein</label>
+    					<div class="col-xs-2 col-md-2">
+    						<div class="radio">
+								<label>
+        							<input type="radio" name="pdb_type" id="radio_pdb_id" value="PDB_ID"> PDB ID
+    							</label>
+							</div>
+						</div>
+                		<div class="col-xs-5 col-md-5">
+							<input class="form-control" type="text" id="pdb_id" name="pdb_id">
+      					</div>
+                	</div>
+                	<div class="form-group" >
+                		<label class="col-xs-3 col-md-3 control-label"></label>
+                		<div class="col-xs-2 col-md-2">
+    						<div class="radio">
+								<label>
+        							<input type="radio" name="pdb_type" id="radio_pdb_file" value="PDB_FILE"> PDB File 
+    							</label>
+							</div>
+						</div>	
+						<div class="col-xs-2 col-md-2">
+							<input class="btn btn-primary" id="upload_pdb_file_btn" value="Upload File" type="button">
+						</div>
+                		<div class="col-xs-4 col-md-4" id="pdb_file_name_form" hidden>
+							<label id="pdb_file_name_label"  class="file_name_label" style="vertical-align: middle;"></label>
+							<span id="pdb_success_sign" class="glyphicon glyphicon-ok-sign" style="color: green;display: none; vertical-align:middle;" data-toggle="tooltip" data-placement="bottom" title="file uploaded successfully"></span>
+							<input id="pdb_file_uploaded_flag" hidden value="false">
+      					</div>
+                	</div>
+                	<div class="form-group" style="margin-bottom: 5px;">
+                		<label class="col-xs-3 col-md-3 control-label">Ligand Library</label>
+    					<div class="col-xs-8 col-md-8" id="ligand_library_combo_div">
+    					</div>
+                	</div>
+                	<div class="form-group" id="ligand_file_name_form"  style="margin-bottom: 5px;" hidden>
+                		<label class="col-xs-3 col-md-3"></label>
+                		<div class="col-xs-8 col-md-8">
+							<label id="ligand_file_name_label" class="file_name_label"  style="vertical-align: middle;"></label>
+							<span id="ligand_success_sign" class="glyphicon glyphicon-ok-sign" style="color: green;display: none;" data-toggle="tooltip" data-placement="bottom" title="file uploaded successfully"></span>
+							<input id="ligand_file_uploaded_flag" hidden value="false">
+      					</div>
+      				</div>
+                	<div class="form-group" style="margin-bottom: 0px;" hidden>
+                		<label class="col-xs-3 col-md-3 control-label">Advanced Option</label>
+                		<div class="col-xs-8 col-md-8" style="margin-top: 6px;">
+                			<button class="btn" id="advanced_option_btn"><span id="advanced_option_arrow" class="glyphicon glyphicon-chevron-down"></span></button>
+                		</div>
+                	</div>
+                	<div class="form-group" id="advanced_option" hidden>
+                		<label class="col-xs-3 col-md-3 control-label"></label>
+    					<div class="col-xs-5 col-md-5">
+    						<div class="checkbox">
+								<label>
+        							<input type="checkbox" name="filter" id="pharmacophore_filter" value="pharmacophore"> Pharmacophore Mapping
+    							</label>
+    							<a href="/ALF/module/help/help.jsp" target="_blank" data-toggle="tooltip" data-placement="bottom" title="filtering compounds with pharmacophore" style="background: none;cursor:pointer;">
+    								<span class="glyphicon glyphicon-info-sign"></span>
+    							</a>
+							</div>
+    					</div>
+                	</div>
+                	<div class="form-group" style="margin-top: 10px;">
+                		<label class="col-xs-4 col-md-4 control-label"></label>
+    					<div class="col-xs-7 col-md-7">
+    						<div class="row">
+                    			<input type="button" class="btn btn-primary" style="width:90px;" id="runBtn" value="Run"/>
+                    			<input type="button" class="btn btn-primary" style="width:90px;" value="Reset" id="resetBtn">
+    						</div>
+    					</div>
+                	</div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div class="title">News</div>
+                <ul class="news">
+                    <li>
+                        <span>2017.10</span>
+                        <a onclick="return false;" style="pointer-events: none;"><b>AlloFinder V1.01 is released.</b></a>
+                    </li>
+                    <li>
+                        <span>2017.6</span>
+                        <a onclick="return false;" style="pointer-events: none;"><b>Allosterome mapping is optimized.</b></a>
+                    </li>
+                    <li>
+                        <span>2016.12</span>
+                        <a onclick="return false;" style="pointer-events: none;"><b>Endogenous ligand & NCI library are added.</b></a>
+                    </li>
+                    <li>
+                        <span>2016.5</span>
+                        <a onclick="return false;" style="pointer-events: none;"><b>AlloFinder V1.00 is released.</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Choose PDB Chain</h4>
+            </div>
+            <div class="modal-body" id="chainHtml">&nbsp;</div>
+            <div class="modal-footer">
+                <input type="button" class="btn btn-primary" id="chainSubmit" value="Submit"/>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    </div>
+    <!-- 上传pdb -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="new_pdb_file">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>	
+				<h4 class="modal-title">+ Upload PDB file</h4>
+			</div>
+			<div class="modal-body" id="create_pdb_file_modal_body">
+			</div>
+			<div class="modal-footer" style="text-align:center">
+				<button type="button" class="btn btn-primary" id="submit_new_pdb_file">Submit</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="cancel_new_pdb_file">Cancel</button>
+				<button type="button" class="btn btn-primary" id="reset_new_pdb_file">Reset</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.modal -->
+<!-- 上传ligand file -->
+<div class="modal fade" tabindex="-1" role="dialog" id="new_ligand_file">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>	
+				<h4 class="modal-title">+Upload Ligand file</h4>
+			</div>
+			<div class="modal-body" id="create_ligand_file_modal_body">
+			</div>
+			<div class="modal-footer" style="text-align:center">
+				<button type="button" class="btn btn-primary" id="submit_new_ligand_file">Submit</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="cancel_new_ligand_file">Cancel</button>
+				<button type="button" class="btn btn-primary" id="reset_new_ligand_file">Reset</button>
+			</div>
+		</div>
+	</div>
+</div>
+    <!-- 引入底部的JSP -->
+	
+
+<script language = "javascript" type="text/javascript">
+    var path = "/ALF";
+    var basePath = "http://mdl.shsmu.edu.cn:80";
+    var LOGINSTATUS = "null";
+    var USERNAME = "null";
+</script>
+<!-- 页面底部 -->
+<div class="clear"></div>
+<div class="link">
+	<div class="w1010 center">
+		<h2>Quick Links</h2>
+		<ul>
+			<li><a href="http://mdl.shsmu.edu.cn/ASD" target="_blank"><img width=184 height=49 src="/ALF/images/link1.png" alt=""></a></li>
+			<li><a href="https://www.rcsb.org/pdb" target="_blank"><img width=184 height=49 style="border-radius: 10px;" src="/ALF/images/link2.png" alt=""></a></li>
+			<li><a href="http://mdl.shsmu.edu.cn/asbench/" target="_blank"><img width=184 height=49 src="/ALF/images/link3.png" alt=""></a></li>
+			<li><a href="http://mdl.shsmu.edu.cn/ASD/module/tool/tool.jsp" target="_blank"><img width=184 height=49  style="border-radius: 10px;" src="/ALF/images/allolike_new.png" alt=""></a></li>
+			<li><a href="https://www.ebi.ac.uk/chembl/" target="_blank"><img width=184 height=49  style="border-radius: 10px;" src="/ALF/images/link5.png" alt=""></a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="foot">
+	<div class="container">
+		Address: Building 2, Room 1006&1008, 280 South Chongqing Road, Shanghai China, 200025 <br>
+		Email:  jian.zhang@sjtu.edu.cn &   jzhang.dr@gmail.com <br>
+		Tel: +86-2163846590-776922 <br>
+		Fax: +86-2164154900  <br>
+		Copyright © 2009-2017 Molecular Design Laboratory, SJTU All Rights Reserved. Designed by MDL.
+	</div>
+</div>
+	<!-- 引入底部的JSP 结束-->
+	<!-- 引入外部的JS -->
+	<script src="/ALF/module/mainpage/js/mainpage.js"></script>
+	<!-- 引入外部的JS 结束-->
+</body>
+</html>
+

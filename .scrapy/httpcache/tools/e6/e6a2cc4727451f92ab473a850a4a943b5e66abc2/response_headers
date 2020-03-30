@@ -1,0 +1,16 @@
+Date: Mon, 30 Mar 2020 18:48:21 GMT
+Server: Apache
+Cache-Control: max-age=0, private, must-revalidate
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: sameorigin
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Runtime: 0.043246
+X-Request-Id: 3777d3f0-4fbf-421f-be1b-472b38d8487f
+X-Powered-By: Phusion Passenger 5.0.30
+Set-Cookie: _clust_eval_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWYwNGUxMGU1ZWFjZjQzYjIzZDcwODk2MjYyNmRkNGYyBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWptSFRwdmo1T2ZTZHhPTXJSV2NUNjlGUnhVSjVvSnNlSnFqZkF1RTVLMzQ9BjsARg%3D%3D--a4e4262bd91ba49339d8e89a15ced028c42e0e5a; path=/; HttpOnly
+Etag: W/"adccd4b165c3c987f1d7fa3e4cc10da5-gzip"
+Status: 200 OK
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/html; charset=utf-8

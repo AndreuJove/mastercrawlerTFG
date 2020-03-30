@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="http://potentia.cbs.dtu.dk/ChemProt/ChemProt-v3/favicon.ico">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChemProt version 3.0</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--these three are required by the ChemDoodle Web Components library-->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <!--these two are required by the SketcherCanvas plugin-->
+    <link rel="stylesheet" href="js/uis/jquery-ui-1.10.3.custom.css" type="text/css">
+
+  <style type="text/css">
+
+      .autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+    .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+    .autocomplete-no-suggestion { padding: 2px 5px;}
+    .autocomplete-selected { background: #F0F0F0; }
+    .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+    .ui-autocomplete-loading { background:url('images/waiting.gif') no-repeat right center }
+
+    #MYHELP {
+        text-align: center;
+    }
+
+ </style>   
+
+<script type="text/javascript" language="javascript" src="jsme/jsme.nocache.js"></script>
+
+
+<script type="text/javascript">
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    createCookie(name,"",-1);
+}
+
+
+
+
+</script>
+
+
+  <style type="text/css"> 
+   #help { 
+      
+      background-color: red; 
+      position: fixed;
+
+      /* set position */
+      top: 40px;
+      right: 20px;
+
+      /* must have dimension */
+      width: 230px;
+      height: 100px;
+
+
+   }
+
+  </style>
+
+
+
+<script language="JavaScript">
+function check_value() {
+    if (document.getElementById("qsar_value").value == "") {
+        alert("Please select a protein(s) in the List");
+        return false;
+    } 
+}
+
+
+function check_value2() {
+   // return false;
+
+    if (document.getElementById("smipaste").value == "") {
+        
+        if (document.getElementById("compoundid_smiles").value == "") {
+            alert("Please select enter a smiles or compound name");
+            return false;
+        }else{
+            var smiles = document.getElementById("compoundid_smiles").value;
+            console.log('smiles',encodeURI(smiles));
+            var smiles2 = '"' + smiles + '"';
+            var url = "http://potentia.cbs.dtu.dk/ChemProt/ChemProt2/ChemProt-2.0/ChemProt_LinkOut.php?smiles='"+encodeURIComponent(smiles)+"'";
+            location.href = url;
+            console.log(url);
+            return false;
+        }
+
+          alert("Please select enter a smiles or compound name");
+        return false;
+    }else{
+        var smiles = document.getElementById("smipaste").value;
+        console.log('smiles',encodeURI(smiles));
+        var url = "http://potentia.cbs.dtu.dk/ChemProt/ChemProt2/ChemProt-2.0/ChemProt_LinkOut.php?smiles='"+encodeURIComponent(smiles)+"'";
+        location.href = url;
+        return false;
+
+    } 
+}
+
+function submitSmiles() {
+  var smiles = document.JME.smiles();
+  var jme = document.JME.jmeFile();
+  if (smiles == "") {
+    alert("Nothing to submit");
+  }
+  else {
+    document.getElementById("smipaste").value += smiles + "\n";
+    //$("#smipaste").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+    $('#smipaste').css({opacity: 0});
+    $('#smipaste').animate({opacity: 1}, 700 );
+    $('#FORM').submit();
+
+    //opener.fromEditor(smiles,jme);
+    //window.close();
+  }
+}
+function OpenHelpPage() {
+  window.open("New/Help.html","ChemProt v3 Help","toolbar=no,menubar=no,scrollbars=yes,resizable=yes,width=1100,height=800,left=400,top=20");
+}
+
+
+function openHelpWindow() {
+  window.open("http://www.molinspiration.com/jme/help/jme2008hints.html","jmehelp","toolbar=no,menubar=no,scrollbars=yes,resizable=yes,width=6100,height=675,left=400,top=20");
+}
+
+function submitsmiles() {
+    var smiles = document.getElementById('smiles').value;
+    if (smiles != "") {
+		opener.fromEditor(smiles,'');
+		window.close();
+    }
+}
+
+
+</SCRIPT>      
+  </head>
+  <body>
+<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="http://cbs.dtu.dk">CBS</a>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+<!--      <li class="active"><a href="#">Active</a></li>-->
+<!--      <li><a href="#">Heatmap <span class="badge badge-info">New</span></a></li>-->
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Heatmap  <span class="badge badge-info">New</span> <b class="caret"></b> </a>
+        <ul class="dropdown-menu">
+          <li><a href="http://potentia.cbs.dtu.dk/ChemProt/ChemProt-v3/New/#3/0.0000/0.0000&num=3&mt0=protein&mt1=compound&mt2=heatmap&map_location=overview_function_chemical_empty&pidnr=false">Functional Heatmap</a></li>
+
+          <li><a href="http://potentia.cbs.dtu.dk/ChemProt/ChemProt-v3/New/#3/0.0000/0.0000&num=3&mt0=protein&mt1=compound&mt2=heatmap&map_location=overview_pathway_chemical_empty&pidnr=false">Pathway Heatmap</a></li>
+          <li><a href="http://potentia.cbs.dtu.dk/ChemProt/ChemProt-v3/New/#3/0.0000/0.0000&num=3&mt0=protein&mt1=compound&mt2=heatmap&map_location=overview_disease_chemical_empty&pidnr=false">Disease Heatmap</a></li>
+<!--           <li class="divider"></li>
+          <li><a href="http://potentia.cbs.dtu.dk/ChemProt/ChemProt-v3/New/#3/0.0000/0.0000&num=3&mt0=protein&mt1=compound&mt2=heatmap&map_location=overview_function_protein_empty&pidnr=false">Overview Heatmap (Protein)</a></li>          
+          <li><a href="http://potentia.cbs.dtu.dk/ChemProt/ChemProt-v3/New/#3/0.0000/0.0000&num=3&mt0=protein&mt1=compound&mt2=heatmap&map_location=overview_pathway_protein_empty&pidnr=false">Pathwat Heatmap (Protein)</a></li> 
+          <li><a href="http://potentia.cbs.dtu.dk/ChemProt/ChemProt-v3/New/#3/0.0000/0.0000&num=3&mt0=protein&mt1=compound&mt2=heatmap&map_location=overview_disease_protein_empty&pidnr=false">Disease Heatmap (Protein)</a></li>  -->
+
+<!--          <li class="divider"></li>-->
+<!--          <li class="dropdown-header">Dropdown header</li>-->
+<!--          <li><a href="#">Separated link</a></li>-->
+<!--          <li><a href="#">One more separated link</a></li>-->
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="http://potentia.cbs.dtu.dk/ChemProt/ChemProt2/ChemProt-1.0/ChemProt-2.0/index.php">ChemProt version 2.0</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a onclick ="OpenHelpPage()" href="#">Get Started Here!</a></li>
+          <li class="divider"></li>
+          <li><a href="#">References</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+      
+<div class="container">
+          <div class="panel panel-default">
+  <div class="panel-body">
+
+    
+    
+  <div class="page-header">
+    <h1><IMG SRC="css/images/Logo_ChemProt5.png"><small> version 3.0</small></h1> 
+  </div>
+  <div>
+    <p>  
+    The ChemProt 3.0 server is a ressource of annotated and predicted chemical-protein interactions. The server is a compilation of over 1.7 mio unique chemicals with biological activity for more than 20000 proteins.</p>  
+    <p>
+    ChemProt can assist in the in silico evaluation of small molecules (drugs, environmental chemicals and natural products)
+    with the integration of molecular, cellular and disease-associated proteins complexes.
+        </p>
+    <p>
+    You are welcome to read the <a href="New/Help.html">Help page</a> in order to get more
+    information about the different search options. This website is optimized for Chrome Browser.
+</p>
+
+</div>  
+<hr>      
+
+<!-- <div class="row spacer ">
+  <div class="col-sm-6 col-md-4">
+    <a href="#" target="_blank" class="text-center btn-sx btn-primary btn-block">Instructions</a>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <a href="#" target="_blank" class="text-center btn-xs  btn-primary btn-block">Output format</a>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <a href="#" target="_blank" class="text-center btn-sx btn-primary btn-block">References</a>
+  </div>
+</div>    -->     
+
+<br>      
+      
+<!--<h2>Submission</h2>     -->
+ 
+ <form action="ChemProt-v3/New/index.php" method="post" id="FORM" enctype="multipart/form-data">       
+ 
+
+ <!-- <form action="submit.php" method="post">        -->
+
+<!--3 cols-->
+        
+        <div class="row ">
+  <div class="col-sm-6 col-md-4">
+        
+
+<legend>Compound</legend>
+
+
+<div class="form-group">
+   <div class="input-group">
+       <input name="compoundname"  type="Search" placeholder="Type a Compound name..." id="autocomplete-ajax" class="form-control" />
+       <input name="compoundid"  type="hidden" id="compoundid"  />
+       <input name="compoundid_smiles" type="hidden" id="compoundid_smiles" />
+       <div class="input-group-btn">
+           <button class="btn">
+           <span class="glyphicon glyphicon-search"></span>
+           </button>
+       </div>
+   </div>
+   <small><i>Examples: <a id="Citalopram" href="#">Citalopram</a></i></small>
+</div>
+
+
+<hr>
+<div class="form-group">
+     <label>Choose Fingerprint</label>
+   
+<div class="radio">
+  <label>
+    <input type="radio" name="fingerprint" id="None" value="None"  checked>
+    None
+  </label>
+</div>   
+<div class="radio">
+  <label>
+    <input type="radio" name="fingerprint" id="Daylight" value="Daylight">
+    Daylight (1024 bits)
+  </label>
+</div>
+<!-- <div class="radio">
+  <label>
+    <input type="radio" name="fingerprint" id="FP2" value="FP2">
+    FP2
+  </label>
+</div>   -->  
+
+</div>
+<hr>    
+
+  <div class="form-group">
+        <label for="exampleInputEmail1">Choose Tanimoto threshold</label>
+
+    
+<select class="form-control" name="tanimoto">
+  <option value="1.00">1.00</option>
+  <option value="0.95">0.95</option>
+  <option value="0.90">0.90</option>
+  <option selected="selected" value="0.85">0.85</option>
+  <option value="0.80">0.80</option>
+</select>  
+</div>
+    
+<legend>Target</legend>
+    
+<div class="form-group">
+   <div class="input-group">
+       <input name="targetname"  type="Search" placeholder="Search by Target name..." id="autocomplete-target" class="form-control" />
+       <input name="targetid"  type="hidden" id="targetid"  />
+       <div class="input-group-btn">
+           <button class="btn">
+           <span class="glyphicon glyphicon-search"></span>
+           </button>
+       </div>
+   </div>
+   <small><i>Examples: <a id="P31645" href="#">Sodium-dependent serotonin transporter  Homo sapiens (Human) P31645</a></i></small>
+</div>
+   
+    
+  <div class="checkbox">
+    <label>
+      <input name="check_blast" id="check_blast" value="1" type="checkbox"> Include similar proteins (BLAST)
+    </label>
+      <select name="blast_value" class="form-control " >
+        <!-- <option value="" default selected>-log(E-value)</option> -->
+      
+  <option value="1">1</option>
+  <option selected="selected" value="10">10</option>
+  <option value="20">20</option>
+  <option value="30">30</option>
+  <option value="40">40</option>
+  <option value="50">50</option>
+  <option value="60">60</option>
+  <option value="70">70</option>
+  <option value="80">80</option>
+  <option value="90">90</option>
+  <option value="100">100</option>
+</select> 
+      
+  </div>
+    
+ <legend>Disease, Side effect or ATC</legend>    
+    
+
+<div class="form-group">
+   <div class="input-group">
+       <input name="diseasename"  type="Search" placeholder="Seach by Disease name..." id="autocomplete-disease" class="form-control" />
+       <input name="diseaseid"  type="hidden"  id="diseaseid"  />
+       <div class="input-group-btn">
+           <button class="btn">
+           <span class="glyphicon glyphicon-search"></span>
+           </button>
+       </div>
+   </div>
+   <small><i>Examples: <a id="Epilepsy" href="#">Epilepsy</a></i></small>
+</div>
+
+
+
+<div class="form-group">
+   <div class="input-group">
+       <input name="sideeffectname"  type="Search" placeholder="Seach by Side effect..." id="autocomplete-sider" class="form-control" />
+       <input name="sideeffectid"  type="hidden"  id="sideeffectid"  />
+       <div class="input-group-btn">
+           <button class="btn">
+           <span class="glyphicon glyphicon-search"></span>
+           </button>
+       </div>
+   </div>
+   <small><i>Examples: <a id="Cardiac_failure" href="#">Cardiac failure</a></i></small>
+</div>
+
+
+
+<div class="form-group">
+   <div class="input-group">
+       <input name="ATCname"  type="Search" placeholder="Seach by ATC code..." id="autocomplete-atc" class="form-control" />
+       <input name="ATCid"  type="hidden"  id="ATCid"  />
+       <div class="input-group-btn">
+           <button class="btn">
+           <span class="glyphicon glyphicon-search"></span>
+           </button>
+       </div>
+   </div>
+   <small><i>Examples: <a id="A10" href="#">A10</a></i></small>
+</div>
+
+
+    
+  <button type="submit" class="btn-lg btn-block btn-primary"> Submit </button>   <!-- <p><a href="#" class="btn btn-primary" role="button">Submit</a></p> -->
+  <br>    
+</form>      
+<!--dsfsd      -->
+<!-- <a id="Citalopram_smiles" href="#">CN(C)CCCC1(c2ccc(F)cc2)OCc2cc(C#N)ccc21 Citalopram</a><br      
+ -->
+</div>
+            
+ <div class="col-sm-6 col-md-4">
+        <legend>Insert smiles</legend>
+        <i>Paste or import molecules in <a href="http://www.opensmiles.org/spec/open-smiles.html" target="ref">SMI</a> format:</i>
+        <textarea name="smipaste" class="form-control" rows="3" id="smipaste"></textarea>
+        <small></small><i>Examples:</i><br><small><a id="Bromoenol_Lactone" href="#">O=C1OC(=CBr)CCC1c1cccc2ccccc21 Bromoenol Lactone</a></small>
+     <br/>
+     <br/>
+    
+    <button type="submit" class="btn-lg btn-block btn-primary" onclick="return check_value2();"> Submit to ChemProt version 2 </button>  
+
+
+     <br/>
+
+ <!--  SMI FILE        -->
+ <legend>Upload SMILES file</legend>
+        
+  <div class="form-group">
+    <label for="exampleInputFile">SMILES</label>
+    <input type="file" name="SMIFile" id="exampleInputFile">
+    <p class="help-block">Submit a file in SMI format directly from your local disk:</p>
+
+        
+<!-- SDF FILE        -->
+<!-- 
+    <label for="exampleInputFile">SDF</label>
+    <input type="file" name="SDFFile" id="exampleInputFile">
+    <p class="help-block">Submit a file in SDF format directly from your local disk:</p> -->
+  </div>     
+     
+     <br/>
+     
+ <legend>Upload ChemProtIDs</legend>     
+        <textarea name="chemprotpaste" class="form-control" rows="3" id="chemprotpaste"></textarea>
+     <br/>
+
+
+    <legend>Databases</legend>
+<div class="checkbox">
+  <div class="row">    
+      <div class="col-md-5 col-md-offset-1"><span class="glyphicon glyphicon-ok"> ChEMBL</span></div>
+      <div class="col-md-5 col-md-offset-1"><span class="glyphicon glyphicon-ok"> DrugBank</span></div>     
+  </div>
+  <div class="row">    
+      <div class="col-md-5 col-md-offset-1"><span class="glyphicon glyphicon-ok"> BindingDB</span></div>
+      <div class="col-md-5 col-md-offset-1"><span class="glyphicon glyphicon-ok"> STITCH</span></div>     
+  </div>
+  <div class="row">    
+      <div class="col-md-5 col-md-offset-1"><span class="glyphicon glyphicon-ok"> PharmGKB</span></div>
+      <div class="col-md-5 col-md-offset-1"><span class="glyphicon glyphicon-ok"> IUPHAR</span></div>     
+  </div>
+  <div class="row">    
+      <div class="col-md-5 col-md-offset-1"><span class="glyphicon glyphicon-ok"> Ki Database</span></div>
+      <div class="col-md-5 col-md-offset-1"><span class="glyphicon glyphicon-ok"> CTD</span></div>     
+  </div>
+  <div class="row">    
+      <div class="col-md-11 col-md-offset-1"><span class="glyphicon glyphicon-ok"> WOMBAT</span></div>
+  </div>  
+</div>
+              
+
+
+        
+    
+ 
+       
+        
+        <!-- <p><a href="#" class="btn btn-primary" role="button">Submit</a></p> -->
+           
+     
+  </div>      
+   <div class="col-sm-6 col-md-4">
+        <legend>Draw molecule</legend>
+
+       		<div code="JME.class" name="JME" archive="JME.jar" width="350px" height="400px">You have to enable Java and JavaScritpt on you
+			machine !</div>
+		<br>	
+		<form name="form_editor">
+			<input type="button" value=" Submit Molecule " onClick="submitSmiles()"> &nbsp;&nbsp; 
+			<input type="button" value="  Help  " onClick="openHelpWindow()"></br>
+		</form>
+   
+   <form action="New/qsar.php" method="post" id="FORM" enctype="multipart/form-data">       
+
+    </br> </br>
+          r 
+        <legend>QSAR Predictions</legend>
+
+        <i>Paste or import molecules in <a href="http://www.opensmiles.org/spec/open-smiles.html" target="ref">SMI</a> format:</i>
+        <textarea name="smipaste" class="form-control" rows="3" id="smipaste2"></textarea>
+        <small></small><i>Examples:</i><br><small><a id="Bromoenol_Lactone2" href="#">O=C1OC(=CBr)CCC1c1cccc2ccccc21 Bromoenol Lactone</a></small>
+     <br/>
+     <br/>
+     <br/>
+     <legend>Select Proteins In QSAR Prediction</legend>
+   </small>
+<ul>
+  <li>For windows: Hold down the control (ctrl) button to select multiple 
+  protiens</li>
+  <li>For Mac: Hold down the command button to select multiple proteins</li>
+</ul>
+   </small>
+<SELECT name="qsar[]" id="qsar_value" MULTIPLE SIZE=10  width="300" style="width: 300px">
+
+<OPTION VALUE="A3EZI9">A3EZI9
+<OPTION VALUE="A6YCJ1">A6YCJ1
+<OPTION VALUE="B0BL08">B0BL08
+<OPTION VALUE="B0FL73">B0FL73
+<OPTION VALUE="D2K2A8">D2K2A8
+<OPTION VALUE="F1LQT8">F1LQT8
+<OPTION VALUE="G3V7B9">G3V7B9
+<OPTION VALUE="O00311">(O00311) Cell division cycle 7-related protein kinase  Homo sapiens (Human)
+<OPTION VALUE="O00329">(O00329) Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform  Homo sapiens (Human)
+<OPTION VALUE="O00408">(O00408) cGMP-dependent 3',5'-cyclic phosphodiesterase  Homo sapiens (Human)
+<OPTION VALUE="O00444">(O00444) Serine/threonine-protein kinase PLK4  Homo sapiens (Human)
+<OPTION VALUE="O00487">(O00487) 26S proteasome non-ATPase regulatory subunit 14  Homo sapiens (Human)
+<OPTION VALUE="O00519">(O00519) Fatty-acid amide hydrolase 1  Homo sapiens (Human)
+<OPTION VALUE="O00591">(O00591) Gamma-aminobutyric acid receptor subunit pi  Homo sapiens (Human)
+<OPTION VALUE="O00763">(O00763) Acetyl-CoA carboxylase 2   Homo sapiens (Human)
+<OPTION VALUE="O00767">(O00767) Acyl-CoA desaturase  Homo sapiens (Human)
+<OPTION VALUE="O02824">O02824
+<OPTION VALUE="O08914">O08914
+<OPTION VALUE="O09028">O09028
+<OPTION VALUE="O14684">(O14684) Prostaglandin E synthase  Homo sapiens (Human)
+<OPTION VALUE="O14746">(O14746) Telomerase reverse transcriptase  Homo sapiens (Human)
+<OPTION VALUE="O14757">(O14757) Serine/threonine-protein kinase Chk1  Homo sapiens (Human)
+<OPTION VALUE="O14764">(O14764) Gamma-aminobutyric acid receptor subunit delta  Homo sapiens (Human)
+<OPTION VALUE="O14842">(O14842) Free fatty acid receptor 1  Homo sapiens (Human)
+<OPTION VALUE="O14939">(O14939) Phospholipase D2  Homo sapiens (Human)
+<OPTION VALUE="O14965">(O14965) Aurora kinase A  Homo sapiens (Human)
+<OPTION VALUE="O15111">(O15111) Inhibitor of nuclear factor kappa-B kinase subunit alpha  Homo sapiens (Human)
+<OPTION VALUE="O15264">(O15264) Mitogen-activated protein kinase 13  Homo sapiens (Human)
+<OPTION VALUE="O15379">(O15379) Histone deacetylase 3  Homo sapiens (Human)
+<OPTION VALUE="O15399">(O15399) Glutamate receptor ionotropic, NMDA 2D  Homo sapiens (Human)
+<OPTION VALUE="O15530">(O15530) 3-phosphoinositide-dependent protein kinase 1  Homo sapiens (Human)
+<OPTION VALUE="O30463">O30463
+<OPTION VALUE="O34623">O34623
+<OPTION VALUE="O35505">O35505
+<OPTION VALUE="O42275">O42275
+<OPTION VALUE="O42713">O42713
+<OPTION VALUE="O43174">(O43174) Cytochrome P450 26A1  Homo sapiens (Human)
+<OPTION VALUE="O43193">(O43193) Motilin receptor  Homo sapiens (Human)
+<OPTION VALUE="O43293">(O43293) Death-associated protein kinase 3  Homo sapiens (Human)
+<OPTION VALUE="O43451">(O43451) Maltase-glucoamylase, intestinal  Homo sapiens (Human)
+<OPTION VALUE="O43497">(O43497) Voltage-dependent T-type calcium channel subunit alpha-1G  Homo sapiens (Human)
+<OPTION VALUE="O43570">(O43570) Carbonic anhydrase 12  Homo sapiens (Human)
+<OPTION VALUE="O43613">(O43613) Orexin receptor type 1  Homo sapiens (Human)
+<OPTION VALUE="O43614">(O43614) Orexin receptor type 2  Homo sapiens (Human)
+<OPTION VALUE="O54798">O54798
+<OPTION VALUE="O60240">(O60240) Perilipin-1  Homo sapiens (Human)
+<OPTION VALUE="O60391">(O60391) Glutamate receptor ionotropic, NMDA 3B  Homo sapiens (Human)
+<OPTION VALUE="O60563">(O60563) Cyclin-T1  Homo sapiens (Human)
+<OPTION VALUE="O60725">(O60725) Protein-S-isoprenylcysteine O-methyltransferase  Homo sapiens (Human)
+<OPTION VALUE="O60755">(O60755) Galanin receptor type 3  Homo sapiens (Human)
+<OPTION VALUE="O60840">(O60840) Voltage-dependent L-type calcium channel subunit alpha-1F  Homo sapiens (Human)
+<OPTION VALUE="O60894">(O60894) Receptor activity-modifying protein 1  Homo sapiens (Human)
+<OPTION VALUE="O62664">O62664
+<OPTION VALUE="O68720">O68720
+<OPTION VALUE="O70526">O70526
+<OPTION VALUE="O70528">O70528
+<OPTION VALUE="O70536">O70536
+<OPTION VALUE="O75116">(O75116) Rho-associated protein kinase 2  Homo sapiens (Human)
+<OPTION VALUE="O75173">(O75173) A disintegrin and metalloproteinase with thrombospondin motifs 4  Homo sapiens (Human)
+<OPTION VALUE="O75582">(O75582) Ribosomal protein S6 kinase alpha-5  Homo sapiens (Human)
+<OPTION VALUE="O75762">(O75762) Transient receptor potential cation channel subfamily A member 1  Homo sapiens (Human)
+<OPTION VALUE="O75907">(O75907) Diacylglycerol O-acyltransferase 1  Homo sapiens (Human)
+<OPTION VALUE="O76074">(O76074) cGMP-specific 3',5'-cyclic phosphodiesterase  Homo sapiens (Human)
+<OPTION VALUE="O77636">O77636
+<OPTION VALUE="O77746">O77746
+<OPTION VALUE="O88943">O88943
+<OPTION VALUE="O89085">O89085
+<OPTION VALUE="O94806">(O94806) Serine/threonine-protein kinase D3  Homo sapiens (Human)
+<OPTION VALUE="O95067">(O95067) G2/mitotic-specific cyclin-B2 Homo sapiens (Human)
+<OPTION VALUE="O95136">(O95136) Sphingosine 1-phosphate receptor 2  Homo sapiens (Human)
+<OPTION VALUE="O95180">(O95180) Voltage-dependent T-type calcium channel subunit alpha-1H  Homo sapiens (Human)
+<OPTION VALUE="O95263">(O95263) High affinity cAMP-specific and IBMX-insensitive 3',5'-cyclic phosphodiesterase 8B  Homo sapiens (Human)
+<OPTION VALUE="O95264">(O95264) 5-hydroxytryptamine receptor 3B  Homo sapiens (Human)
+<OPTION VALUE="O95271">(O95271) Tankyrase-1  Homo sapiens (Human)
+<OPTION VALUE="O95622">(O95622) Adenylate cyclase type 5  Homo sapiens (Human)
+<OPTION VALUE="O95819">(O95819) Mitogen-activated protein kinase kinase kinase kinase 4  Homo sapiens (Human)
+<OPTION VALUE="O95977">(O95977) Sphingosine 1-phosphate receptor 4  Homo sapiens (Human)
+<OPTION VALUE="O96017">(O96017) Serine/threonine-protein kinase Chk2  Homo sapiens (Human)
+<OPTION VALUE="O96020">(O96020) G1/S-specific cyclin-E2 Homo sapiens (Human)
+<OPTION VALUE="P00185">P00185
+<OPTION VALUE="P00374">(P00374) Dihydrofolate reductase  Homo sapiens (Human)
+<OPTION VALUE="P00375">P00375
+<OPTION VALUE="P00376">P00376
+<OPTION VALUE="P00378">P00378
+<OPTION VALUE="P00381">P00381
+<OPTION VALUE="P00491">(P00491) Purine nucleoside phosphorylase  Homo sapiens (Human)
+<OPTION VALUE="P00517">P00517
+<OPTION VALUE="P00519">(P00519) Tyrosine-protein kinase ABL1  Homo sapiens (Human)
+<OPTION VALUE="P00523">P00523
+<OPTION VALUE="P00533">(P00533) Epidermal growth factor receptor  Homo sapiens (Human)
+<OPTION VALUE="P00734">(P00734) Prothrombin   Homo sapiens (Human)
+<OPTION VALUE="P00735">P00735
+<OPTION VALUE="P00740">(P00740) Coagulation factor IX   Homo sapiens (Human)
+<OPTION VALUE="P00742">(P00742) Coagulation factor X   Homo sapiens (Human)
+<OPTION VALUE="P00747">(P00747) Plasminogen   Homo sapiens (Human)
+<OPTION VALUE="P00749">(P00749) Urokinase-type plasminogen activator   Homo sapiens (Human)
+<OPTION VALUE="P00752">P00752
+<OPTION VALUE="P00760">P00760
+<OPTION VALUE="P00766">P00766
+<OPTION VALUE="P00791">P00791
+<OPTION VALUE="P00797">(P00797) Renin  Homo sapiens (Human)
+<OPTION VALUE="P00915">(P00915) Carbonic anhydrase 1  Homo sapiens (Human)
+<OPTION VALUE="P00918">(P00918) Carbonic anhydrase 2  Homo sapiens (Human)
+<OPTION VALUE="P01127">(P01127) Platelet-derived growth factor subunit B  Homo sapiens (Human)
+<OPTION VALUE="P01375">(P01375) Tumor necrosis factor   Homo sapiens (Human)
+<OPTION VALUE="P01730">(P01730) T-cell surface glycoprotein CD4  Homo sapiens (Human)
+<OPTION VALUE="P01892">(P01892) HLA class I histocompatibility antigen, A-2 alpha chain  Homo sapiens (Human)
+<OPTION VALUE="P02550">P02550
+<OPTION VALUE="P03468">P03468
+<OPTION VALUE="P03952">(P03952) Plasma kallikrein   Homo sapiens (Human)
+<OPTION VALUE="P04035">(P04035) 3-hydroxy-3-methylglutaryl-coenzyme A reductase  Homo sapiens (Human)
+<OPTION VALUE="P04049">(P04049) RAF proto-oncogene serine/threonine-protein kinase  Homo sapiens (Human)
+<OPTION VALUE="P04054">(P04054) Phospholipase A2  Homo sapiens (Human)
+<OPTION VALUE="P04058">P04058
+<OPTION VALUE="P04350">(P04350) Tubulin beta-4A chain  Homo sapiens (Human)
+<OPTION VALUE="P04629">(P04629) High affinity nerve growth factor receptor  Homo sapiens (Human)
+<OPTION VALUE="P04757">P04757
+<OPTION VALUE="P04774">P04774
+<OPTION VALUE="P04775">P04775
+<OPTION VALUE="P04925">P04925
+<OPTION VALUE="P05067">(P05067) Amyloid beta A4 protein   Homo sapiens (Human)
+<OPTION VALUE="P05093">(P05093) Steroid 17-alpha-hydroxylase/17,20 lyase  Homo sapiens (Human)
+<OPTION VALUE="P05106">(P05106) Integrin beta-3  Homo sapiens (Human)
+<OPTION VALUE="P05107">(P05107) Integrin beta-2  Homo sapiens (Human)
+<OPTION VALUE="P05121">(P05121) Plasminogen activator inhibitor 1  Homo sapiens (Human)
+<OPTION VALUE="P05129">(P05129) Protein kinase C gamma type  Homo sapiens (Human)
+<OPTION VALUE="P05177">(P05177) Cytochrome P450 1A2  Homo sapiens (Human)
+<OPTION VALUE="P05362">(P05362) Intercellular adhesion molecule 1  Homo sapiens (Human)
+<OPTION VALUE="P05364">P05364
+<OPTION VALUE="P05412">(P05412) Transcription factor AP-1  Homo sapiens (Human)
+<OPTION VALUE="P05556">(P05556) Integrin beta-1  Homo sapiens (Human)
+<OPTION VALUE="P05696">P05696
+<OPTION VALUE="P05771">(P05771) Protein kinase C beta type  Homo sapiens (Human)
+<OPTION VALUE="P05979">P05979
+<OPTION VALUE="P06213">(P06213) Insulin receptor   Homo sapiens (Human)
+<OPTION VALUE="P06239">(P06239) Tyrosine-protein kinase Lck  Homo sapiens (Human)
+<OPTION VALUE="P06241">(P06241) Tyrosine-protein kinase Fyn  Homo sapiens (Human)
+<OPTION VALUE="P06276">(P06276) Cholinesterase  Homo sapiens (Human)
+<OPTION VALUE="P06401">(P06401) Progesterone receptor  Homo sapiens (Human)
+<OPTION VALUE="P06479">(P06479) Thymidine kinase  Human herpesvirus 1 (strain SC16) (HHV-1) (Human herpes simplex virus 1)
+<OPTION VALUE="P06493">(P06493) Cyclin-dependent kinase 1  Homo sapiens (Human)
+<OPTION VALUE="P06536">P06536
+<OPTION VALUE="P06737">(P06737) Glycogen phosphorylase, liver form  Homo sapiens (Human)
+<OPTION VALUE="P06756">(P06756) Integrin alpha-V   Homo sapiens (Human)
+<OPTION VALUE="P06756">(P06756) Integrin alpha-V   Homo sapiens (Human)
+<OPTION VALUE="P05106">(P05106) Integrin beta-3  Homo sapiens (Human)
+<OPTION VALUE="P07099">(P07099) Epoxide hydrolase 1  Homo sapiens (Human)
+<OPTION VALUE="P07288">(P07288) Prostate-specific antigen  Homo sapiens (Human)
+<OPTION VALUE="P07333">(P07333) Macrophage colony-stimulating factor 1 receptor  Homo sapiens (Human)
+<OPTION VALUE="P07437">(P07437) Tubulin beta chain  Homo sapiens (Human)
+<OPTION VALUE="P07477">(P07477) Trypsin-1   Homo sapiens (Human)
+<OPTION VALUE="P07478">(P07478) Trypsin-2  Homo sapiens (Human)
+<OPTION VALUE="P07607">P07607
+<OPTION VALUE="P07858">(P07858) Cathepsin B   Homo sapiens (Human)
+<OPTION VALUE="P07861">P07861
+<OPTION VALUE="P07900">(P07900) Heat shock protein HSP 90-alpha  Homo sapiens (Human)
+<OPTION VALUE="P07943">P07943
+<OPTION VALUE="P08069">(P08069) Insulin-like growth factor 1 receptor   Homo sapiens (Human)
+<OPTION VALUE="P08104">P08104
+<OPTION VALUE="P08172">(P08172) Muscarinic acetylcholine receptor M2 Homo sapiens (Human)
+<OPTION VALUE="P08173">(P08173) Muscarinic acetylcholine receptor M4 Homo sapiens (Human)
+<OPTION VALUE="P08183">(P08183) Multidrug resistance protein 1  Homo sapiens (Human)
+<OPTION VALUE="P08235">(P08235) Mineralocorticoid receptor  Homo sapiens (Human)
+<OPTION VALUE="P08238">(P08238) Heat shock protein HSP 90-beta  Homo sapiens (Human)
+<OPTION VALUE="P08246">(P08246) Neutrophil elastase  Homo sapiens (Human)
+<OPTION VALUE="P08253">(P08253) 72 kDa type IV collagenase   Homo sapiens (Human)
+<OPTION VALUE="P08254">(P08254) Stromelysin-1  Homo sapiens (Human)
+<OPTION VALUE="P08311">(P08311) Cathepsin G  Homo sapiens (Human)
+<OPTION VALUE="P08419">P08419
+<OPTION VALUE="P08473">(P08473) Neprilysin  Homo sapiens (Human)
+<OPTION VALUE="P08482">P08482
+<OPTION VALUE="P08483">P08483
+<OPTION VALUE="P08485">P08485
+<OPTION VALUE="P08514">(P08514) Integrin alpha-IIb   Homo sapiens (Human)
+<OPTION VALUE="P08514">(P08514) Integrin alpha-IIb   Homo sapiens (Human)
+<OPTION VALUE="P05106">(P05106) Integrin beta-3  Homo sapiens (Human)
+<OPTION VALUE="P08575">(P08575) Receptor-type tyrosine-protein phosphatase C  Homo sapiens (Human)
+<OPTION VALUE="P08581">(P08581) Hepatocyte growth factor receptor  Homo sapiens (Human)
+<OPTION VALUE="P08588">(P08588) Beta-1 adrenergic receptor  Homo sapiens (Human)
+<OPTION VALUE="P08631">(P08631) Tyrosine-protein kinase HCK  Homo sapiens (Human)
+<OPTION VALUE="P08648">(P08648) Integrin alpha-5   Homo sapiens (Human)
+<OPTION VALUE="P08684">(P08684) Cytochrome P450 3A4  Homo sapiens (Human)
+<OPTION VALUE="P08709">(P08709) Coagulation factor VII   Homo sapiens (Human)
+<OPTION VALUE="P08909">P08909
+<OPTION VALUE="P08911">P08911
+<OPTION VALUE="P08912">(P08912) Muscarinic acetylcholine receptor M5 Homo sapiens (Human)
+<OPTION VALUE="P08913">(P08913) Alpha-2A adrenergic receptor  Homo sapiens (Human)
+<OPTION VALUE="P09038">(P09038) Fibroblast growth factor 2  Homo sapiens (Human)
+<OPTION VALUE="P09215">P09215
+<OPTION VALUE="P09216">P09216
+<OPTION VALUE="P09217">P09217
+<OPTION VALUE="P09237">(P09237) Matrilysin  Homo sapiens (Human)
+<OPTION VALUE="P09467">(P09467) Fructose-1,6-bisphosphatase 1  Homo sapiens (Human)
+<OPTION VALUE="P09483">P09483
+<OPTION VALUE="P09483">P09483
+<OPTION VALUE="P12390">P12390
+<OPTION VALUE="P09581">P09581
+<OPTION VALUE="P09619">(P09619) Platelet-derived growth factor receptor beta  Homo sapiens (Human)
+<OPTION VALUE="P09871">(P09871) Complement C1s subcomponent   Homo sapiens (Human)
+<OPTION VALUE="P09917">(P09917) Arachidonate 5-lipoxygenase  Homo sapiens (Human)
+<OPTION VALUE="P0AE18">P0AE18
+<OPTION VALUE="P10253">(P10253) Lysosomal alpha-glucosidase   Homo sapiens (Human)
+<OPTION VALUE="P10323">(P10323) Acrosin   Homo sapiens (Human)
+<OPTION VALUE="P10415">(P10415) Apoptosis regulator Bcl-2 Homo sapiens (Human)
+<OPTION VALUE="P10608">P10608
+<OPTION VALUE="P10635">(P10635) Cytochrome P450 2D6  Homo sapiens (Human)
+<OPTION VALUE="P10721">(P10721) Mast/stem cell growth factor receptor Kit  Homo sapiens (Human)
+<OPTION VALUE="P10827">(P10827) Thyroid hormone receptor alpha  Homo sapiens (Human)
+<OPTION VALUE="P10845">P10845
+<OPTION VALUE="P10980">P10980
+<OPTION VALUE="P11103">P11103
+<OPTION VALUE="P11229">(P11229) Muscarinic acetylcholine receptor M1 Homo sapiens (Human)
+<OPTION VALUE="P11309">(P11309) Serine/threonine-protein kinase pim-1  Homo sapiens (Human)
+<OPTION VALUE="P11362">(P11362) Fibroblast growth factor receptor 1  Homo sapiens (Human)
+<OPTION VALUE="P11387">(P11387) DNA topoisomerase 1  Homo sapiens (Human)
+<OPTION VALUE="P11388">(P11388) DNA topoisomerase 2-alpha  Homo sapiens (Human)
+<OPTION VALUE="P11511">(P11511) Aromatase  Homo sapiens (Human)
+<OPTION VALUE="P11541">P11541
+<OPTION VALUE="P11712">(P11712) Cytochrome P450 2C9  Homo sapiens (Human)
+<OPTION VALUE="P11715">P11715
+<OPTION VALUE="P11802">(P11802) Cyclin-dependent kinase 4  Homo sapiens (Human)
+<OPTION VALUE="P12268">(P12268) Inosine-5'-monophosphate dehydrogenase 2  Homo sapiens (Human)
+<OPTION VALUE="P12389">P12389
+<OPTION VALUE="P12390">P12390
+<OPTION VALUE="P12391">P12391
+<OPTION VALUE="P12392">P12392
+<OPTION VALUE="P12527">P12527
+<OPTION VALUE="P12821">(P12821) Angiotensin-converting enzyme   Homo sapiens (Human)
+<OPTION VALUE="P12822">P12822
+<OPTION VALUE="P12931">(P12931) Proto-oncogene tyrosine-protein kinase Src  Homo sapiens (Human)
+<OPTION VALUE="P13267">P13267
+<OPTION VALUE="P13497">(P13497) Bone morphogenetic protein 1  Homo sapiens (Human)
+<OPTION VALUE="P13516">P13516
+<OPTION VALUE="P13569">(P13569) Cystic fibrosis transmembrane conductance regulator  Homo sapiens (Human)
+<OPTION VALUE="P13612">(P13612) Integrin alpha-4  Homo sapiens (Human)
+<OPTION VALUE="P13612">(P13612) Integrin alpha-4  Homo sapiens (Human)
+<OPTION VALUE="P05556">(P05556) Integrin beta-1  Homo sapiens (Human)
+<OPTION VALUE="P13612">(P13612) Integrin alpha-4  Homo sapiens (Human)
+<OPTION VALUE="P26010">(P26010) Integrin beta-7  Homo sapiens (Human)
+<OPTION VALUE="P13631">(P13631) Retinoic acid receptor gamma  Homo sapiens (Human)
+<OPTION VALUE="P13726">(P13726) Tissue factor  Homo sapiens (Human)
+<OPTION VALUE="P13945">(P13945) Beta-3 adrenergic receptor  Homo sapiens (Human)
+<OPTION VALUE="P14061">(P14061) Estradiol 17-beta-dehydrogenase 1  Homo sapiens (Human)
+<OPTION VALUE="P14084">P14084
+<OPTION VALUE="P14222">(P14222) Perforin-1  Homo sapiens (Human)
+<OPTION VALUE="P14270">P14270
+<OPTION VALUE="P14410">(P14410) Sucrase-isomaltase, intestinal  Homo sapiens (Human)
+<OPTION VALUE="P14416">(P14416) D Homo sapiens (Human)
+<OPTION VALUE="P14635">(P14635) G2/mitotic-specific cyclin-B1 Homo sapiens (Human)
+<OPTION VALUE="P14644">P14644
+<OPTION VALUE="P14646">P14646
+<OPTION VALUE="P14780">(P14780) Matrix metalloproteinase-9   Homo sapiens (Human)
+<OPTION VALUE="P14842">P14842
+<OPTION VALUE="P14867">(P14867) Gamma-aminobutyric acid receptor subunit alpha-1  Homo sapiens (Human)
+<OPTION VALUE="P14902">(P14902) Indoleamine 2,3-dioxygenase 1  Homo sapiens (Human)
+<OPTION VALUE="P15056">(P15056) Serine/threonine-protein kinase B-raf  Homo sapiens (Human)
+<OPTION VALUE="P15121">(P15121) Aldose reductase  Homo sapiens (Human)
+<OPTION VALUE="P15144">(P15144) Aminopeptidase N  Homo sapiens (Human)
+<OPTION VALUE="P15207">P15207
+<OPTION VALUE="P15381">P15381
+<OPTION VALUE="P15431">P15431
+<OPTION VALUE="P15538">(P15538) Cytochrome P450 11B1, mitochondrial  Homo sapiens (Human)
+<OPTION VALUE="P15692">(P15692) Vascular endothelial growth factor A  Homo sapiens (Human)
+<OPTION VALUE="P15823">P15823
+<OPTION VALUE="P16109">(P16109) P-selectin  Homo sapiens (Human)
+<OPTION VALUE="P16116">P16116
+<OPTION VALUE="P16257">P16257
+<OPTION VALUE="P16499">(P16499) Rod cGMP-specific 3',5'-cyclic phosphodiesterase subunit alpha  Homo sapiens (Human)
+<OPTION VALUE="P16753">(P16753) Capsid scaffolding protein   Human cytomegalovirus (strain AD169) (HHV-5) (Human herpesvirus 5)
+<OPTION VALUE="P17252">(P17252) Protein kinase C alpha type  Homo sapiens (Human)
+<OPTION VALUE="P17538">(P17538) Chymotrypsinogen B   Homo sapiens (Human)
+<OPTION VALUE="P17612">(P17612) cAMP-dependent protein kinase catalytic subunit alpha  Homo sapiens (Human)
+<OPTION VALUE="P17706">(P17706) Tyrosine-protein phosphatase non-receptor type 2  Homo sapiens (Human)
+<OPTION VALUE="P17787">(P17787) Neuronal acetylcholine receptor subunit beta-2 Homo sapiens (Human)
+<OPTION VALUE="P17861">(P17861) X-box-binding protein 1  Homo sapiens (Human)
+<OPTION VALUE="P17948">(P17948) Vascular endothelial growth factor receptor 1  Homo sapiens (Human)
+<OPTION VALUE="P18031">(P18031) Tyrosine-protein phosphatase non-receptor type 1  Homo sapiens (Human)
+<OPTION VALUE="P18084">(P18084) Integrin beta-5 Homo sapiens (Human)
+<OPTION VALUE="P18089">(P18089) Alpha-2B adrenergic receptor  Homo sapiens (Human)
+<OPTION VALUE="P18090">P18090
+<OPTION VALUE="P18266">P18266
+<OPTION VALUE="P18405">(P18405) 3-oxo-5-alpha-steroid 4-dehydrogenase 1  Homo sapiens (Human)
+<OPTION VALUE="P18434">P18434
+<OPTION VALUE="P18505">(P18505) Gamma-aminobutyric acid receptor subunit beta-1  Homo sapiens (Human)
+<OPTION VALUE="P18506">P18506
+<OPTION VALUE="P18507">(P18507) Gamma-aminobutyric acid receptor subunit gamma-2  Homo sapiens (Human)
+<OPTION VALUE="P18508">P18508
+<OPTION VALUE="P18564">(P18564) Integrin beta-6 Homo sapiens (Human)
+<OPTION VALUE="P18841">P18841
+<OPTION VALUE="P18901">P18901
+<OPTION VALUE="P19020">P19020
+<OPTION VALUE="P19091">P19091
+<OPTION VALUE="P19099">(P19099) Cytochrome P450 11B2, mitochondrial  Homo sapiens (Human)
+<OPTION VALUE="P19327">P19327
+<OPTION VALUE="P19328">P19328
+<OPTION VALUE="P19429">(P19429) Troponin I, cardiac muscle  Homo sapiens (Human)
+<OPTION VALUE="P19490">P19490
+<OPTION VALUE="P19491">P19491
+<OPTION VALUE="P19492">P19492
+<OPTION VALUE="P19493">P19493
+<OPTION VALUE="P19634">(P19634) Sodium/hydrogen exchanger 1  Homo sapiens (Human)
+<OPTION VALUE="P19643">P19643
+<OPTION VALUE="P19838">(P19838) Nuclear factor NF-kappa-B p105 subunit   Homo sapiens (Human)
+<OPTION VALUE="P19969">P19969
+<OPTION VALUE="P20236">P20236
+<OPTION VALUE="P20248">(P20248) Cyclin-A2  Homo sapiens (Human)
+<OPTION VALUE="P20288">P20288
+<OPTION VALUE="P20292">(P20292) Arachidonate 5-lipoxygenase-activating protein  Homo sapiens (Human)
+<OPTION VALUE="P20309">(P20309) Muscarinic acetylcholine receptor M3 Homo sapiens (Human)
+<OPTION VALUE="P20393">(P20393) Nuclear receptor subfamily 1 group D member 1  Homo sapiens (Human)
+<OPTION VALUE="P20420">P20420
+<OPTION VALUE="P20648">(P20648) Potassium-transporting ATPase alpha chain 1  Homo sapiens (Human)
+<OPTION VALUE="P20701">(P20701) Integrin alpha-L  Homo sapiens (Human)
+<OPTION VALUE="P20701">(P20701) Integrin alpha-L  Homo sapiens (Human)
+<OPTION VALUE="P05107">(P05107) Integrin beta-2  Homo sapiens (Human)
+<OPTION VALUE="P21397">(P21397) Amine oxidase  A  Homo sapiens (Human)
+<OPTION VALUE="P21398">P21398
+<OPTION VALUE="P21451">P21451
+<OPTION VALUE="P21452">(P21452) Substance-K receptor  Homo sapiens (Human)
+<OPTION VALUE="P21453">(P21453) Sphingosine 1-phosphate receptor 1  Homo sapiens (Human)
+<OPTION VALUE="P21462">(P21462) fMet-Leu-Phe receptor  Homo sapiens (Human)
+<OPTION VALUE="P21554">(P21554) Cannabinoid receptor 1  Homo sapiens (Human)
+<OPTION VALUE="P21556">P21556
+<OPTION VALUE="P21730">(P21730) C5a anaphylatoxin chemotactic receptor 1  Homo sapiens (Human)
+<OPTION VALUE="P21731">(P21731) Thromboxane A2 receptor  Homo sapiens (Human)
+<OPTION VALUE="P21836">P21836
+<OPTION VALUE="P21917">(P21917) D Homo sapiens (Human)
+<OPTION VALUE="P22002">P22002
+<OPTION VALUE="P22086">P22086
+<OPTION VALUE="P22303">(P22303) Acetylcholinesterase  Homo sapiens (Human)
+<OPTION VALUE="P22412">P22412
+<OPTION VALUE="P22437">P22437
+<OPTION VALUE="P22460">(P22460) Potassium voltage-gated channel subfamily A member 5  Homo sapiens (Human)
+<OPTION VALUE="P22518">P22518
+<OPTION VALUE="P22607">(P22607) Fibroblast growth factor receptor 3  Homo sapiens (Human)
+<OPTION VALUE="P22612">(P22612) cAMP-dependent protein kinase catalytic subunit gamma  Homo sapiens (Human)
+<OPTION VALUE="P22687">P22687
+<OPTION VALUE="P22694">(P22694) cAMP-dependent protein kinase catalytic subunit beta  Homo sapiens (Human)
+<OPTION VALUE="P22748">(P22748) Carbonic anhydrase 4  Homo sapiens (Human)
+<OPTION VALUE="P22756">P22756
+<OPTION VALUE="P22894">(P22894) Neutrophil collagenase  Homo sapiens (Human)
+<OPTION VALUE="P22909">P22909
+<OPTION VALUE="P23219">(P23219) Prostaglandin G/H synthase 1  Homo sapiens (Human)
+<OPTION VALUE="P23385">P23385
+<OPTION VALUE="P23443">(P23443) Ribosomal protein S6 kinase beta-1  Homo sapiens (Human)
+<OPTION VALUE="P23458">(P23458) Tyrosine-protein kinase JAK1  Homo sapiens (Human)
+<OPTION VALUE="P23574">P23574
+<OPTION VALUE="P23576">P23576
+<OPTION VALUE="P23795">P23795
+<OPTION VALUE="P23944">P23944
+<OPTION VALUE="P23946">(P23946) Chymase  Homo sapiens (Human)
+<OPTION VALUE="P23975">(P23975) Sodium-dependent noradrenaline transporter  Homo sapiens (Human)
+<OPTION VALUE="P23977">P23977
+<OPTION VALUE="P23978">P23978
+<OPTION VALUE="P24008">P24008
+<OPTION VALUE="P24385">(P24385) G1/S-specific cyclin-D1  Homo sapiens (Human)
+<OPTION VALUE="P24530">(P24530) Endothelin B receptor  Homo sapiens (Human)
+<OPTION VALUE="P24723">(P24723) Protein kinase C eta type  Homo sapiens (Human)
+<OPTION VALUE="P24864">(P24864) G1/S-specific cyclin-E1 Homo sapiens (Human)
+<OPTION VALUE="P24941">(P24941) Cyclin-dependent kinase 2  Homo sapiens (Human)
+<OPTION VALUE="P25021">(P25021) Histamine H2 receptor  Homo sapiens (Human)
+<OPTION VALUE="P25024">(P25024) C-X-C chemokine receptor type 1  Homo sapiens (Human)
+<OPTION VALUE="P25025">(P25025) C-X-C chemokine receptor type 2  Homo sapiens (Human)
+<OPTION VALUE="P25095">P25095
+<OPTION VALUE="P25100">(P25100) Alpha-1D adrenergic receptor  Homo sapiens (Human)
+<OPTION VALUE="P25101">(P25101) Endothelin-1 receptor  Homo sapiens (Human)
+<OPTION VALUE="P25102">P25102
+<OPTION VALUE="P25103">(P25103) Substance-P receptor  Homo sapiens (Human)
+<OPTION VALUE="P25104">P25104
+<OPTION VALUE="P25105">(P25105) Platelet-activating factor receptor  Homo sapiens (Human)
+<OPTION VALUE="P25108">P25108
+<OPTION VALUE="P25109">P25109
+<OPTION VALUE="P25115">P25115
+<OPTION VALUE="P25116">(P25116) Proteinase-activated receptor 1  Homo sapiens (Human)
+<OPTION VALUE="P25774">(P25774) Cathepsin S  Homo sapiens (Human)
+<OPTION VALUE="P25910">P25910
+<OPTION VALUE="P25929">(P25929) Neuropeptide Y receptor type 1  Homo sapiens (Human)
+<OPTION VALUE="P26010">(P26010) Integrin beta-7  Homo sapiens (Human)
+<OPTION VALUE="P26664">P26664
+<OPTION VALUE="P26684">P26684
+<OPTION VALUE="P27338">(P27338) Amine oxidase  B  Homo sapiens (Human)
+<OPTION VALUE="P27467">P27467
+<OPTION VALUE="P27487">(P27487) Dipeptidyl peptidase 4   Homo sapiens (Human)
+<OPTION VALUE="P27732">P27732
+<OPTION VALUE="P27815">(P27815) cAMP-specific 3',5'-cyclic phosphodiesterase 4A  Homo sapiens (Human)
+<OPTION VALUE="P27986">(P27986) Phosphatidylinositol 3-kinase regulatory subunit alpha  Homo sapiens (Human)
+<OPTION VALUE="P28074">(P28074) Proteasome subunit beta type-5  Homo sapiens (Human)
+<OPTION VALUE="P28190">P28190
+<OPTION VALUE="P28221">(P28221) 5-hydroxytryptamine receptor 1D  Homo sapiens (Human)
+<OPTION VALUE="P28222">(P28222) 5-hydroxytryptamine receptor 1B  Homo sapiens (Human)
+<OPTION VALUE="P28223">(P28223) 5-hydroxytryptamine receptor 2A  Homo sapiens (Human)
+<OPTION VALUE="P28335">(P28335) 5-hydroxytryptamine receptor 2C  Homo sapiens (Human)
+<OPTION VALUE="P28336">(P28336) Neuromedin-B receptor  Homo sapiens (Human)
+<OPTION VALUE="P28471">P28471
+<OPTION VALUE="P28472">(P28472) Gamma-aminobutyric acid receptor subunit beta-3  Homo sapiens (Human)
+<OPTION VALUE="P28473">P28473
+<OPTION VALUE="P28564">P28564
+<OPTION VALUE="P28565">P28565
+<OPTION VALUE="P28572">P28572
+<OPTION VALUE="P28646">P28646
+<OPTION VALUE="P28647">P28647
+<OPTION VALUE="P28845">(P28845) Corticosteroid 11-beta-dehydrogenase isozyme 1  Homo sapiens (Human)
+<OPTION VALUE="P29089">P29089
+<OPTION VALUE="P29274">(P29274) Adenosine receptor A2a Homo sapiens (Human)
+<OPTION VALUE="P29275">(P29275) Adenosine receptor A2b Homo sapiens (Human)
+<OPTION VALUE="P29276">P29276
+<OPTION VALUE="P29317">(P29317) Ephrin type-A receptor 2  Homo sapiens (Human)
+<OPTION VALUE="P29371">(P29371) Neuromedin-K receptor  Homo sapiens (Human)
+<OPTION VALUE="P29466">(P29466) Caspase-1   Homo sapiens (Human)
+<OPTION VALUE="P29475">(P29475) Nitric oxide synthase, brain  Homo sapiens (Human)
+<OPTION VALUE="P29476">P29476
+<OPTION VALUE="P29477">P29477
+<OPTION VALUE="P29597">(P29597) Non-receptor tyrosine-protein kinase TYK2  Homo sapiens (Human)
+<OPTION VALUE="P29702">P29702
+<OPTION VALUE="P30191">P30191
+<OPTION VALUE="P30291">(P30291) Wee1-like protein kinase  Homo sapiens (Human)
+<OPTION VALUE="P30304">(P30304) M-phase inducer phosphatase 1  Homo sapiens (Human)
+<OPTION VALUE="P30305">(P30305) M-phase inducer phosphatase 2  Homo sapiens (Human)
+<OPTION VALUE="P30411">(P30411) B2 bradykinin receptor  Homo sapiens (Human)
+<OPTION VALUE="P30418">P30418
+<OPTION VALUE="P30518">(P30518) Vasopressin V2 receptor  Homo sapiens (Human)
+<OPTION VALUE="P30530">(P30530) Tyrosine-protein kinase receptor UFO  Homo sapiens (Human)
+<OPTION VALUE="P30536">(P30536) Translocator protein  Homo sapiens (Human)
+<OPTION VALUE="P30542">(P30542) Adenosine receptor A1 Homo sapiens (Human)
+<OPTION VALUE="P30547">P30547
+<OPTION VALUE="P30556">(P30556) Type-1 angiotensin II receptor  Homo sapiens (Human)
+<OPTION VALUE="P30559">(P30559) Oxytocin receptor  Homo sapiens (Human)
+<OPTION VALUE="P30560">P30560
+<OPTION VALUE="P30680">P30680
+<OPTION VALUE="P30729">P30729
+<OPTION VALUE="P30874">(P30874) Somatostatin receptor type 2  Homo sapiens (Human)
+<OPTION VALUE="P30926">(P30926) Neuronal acetylcholine receptor subunit beta-4 Homo sapiens (Human)
+<OPTION VALUE="P30940">P30940
+<OPTION VALUE="P30968">(P30968) Gonadotropin-releasing hormone receptor  Homo sapiens (Human)
+<OPTION VALUE="P30969">P30969
+<OPTION VALUE="P30994">P30994
+<OPTION VALUE="P31214">P31214
+<OPTION VALUE="P31389">P31389
+<OPTION VALUE="P31391">(P31391) Somatostatin receptor type 4  Homo sapiens (Human)
+<OPTION VALUE="P31421">P31421
+<OPTION VALUE="P31424">P31424
+<OPTION VALUE="P31644">(P31644) Gamma-aminobutyric acid receptor subunit alpha-5  Homo sapiens (Human)
+<OPTION VALUE="P31645">(P31645) Sodium-dependent serotonin transporter  Homo sapiens (Human)
+<OPTION VALUE="P31652">P31652
+<OPTION VALUE="P31749">(P31749) RAC-alpha serine/threonine-protein kinase  Homo sapiens (Human)
+<OPTION VALUE="P31751">(P31751) RAC-beta serine/threonine-protein kinase  Homo sapiens (Human)
+<OPTION VALUE="P32238">(P32238) Cholecystokinin receptor type A  Homo sapiens (Human)
+<OPTION VALUE="P32239">(P32239) Gastrin/cholecystokinin type B receptor  Homo sapiens (Human)
+<OPTION VALUE="P32240">P32240
+<OPTION VALUE="P32246">(P32246) C-C chemokine receptor type 1  Homo sapiens (Human)
+<OPTION VALUE="P32247">(P32247) Bombesin receptor subtype-3  Homo sapiens (Human)
+<OPTION VALUE="P32297">(P32297) Neuronal acetylcholine receptor subunit alpha-3 Homo sapiens (Human)
+<OPTION VALUE="P32302">(P32302) C-X-C chemokine receptor type 5  Homo sapiens (Human)
+<OPTION VALUE="P32305">P32305
+<OPTION VALUE="P32745">(P32745) Somatostatin receptor type 3  Homo sapiens (Human)
+<OPTION VALUE="P33261">(P33261) Cytochrome P450 2C19  Homo sapiens (Human)
+<OPTION VALUE="P33316">(P33316) Deoxyuridine 5'-triphosphate nucleotidohydrolase, mitochondrial  Homo sapiens (Human)
+<OPTION VALUE="P33534">P33534
+<OPTION VALUE="P33981">(P33981) Dual specificity protein kinase TTK  Homo sapiens (Human)
+<OPTION VALUE="P34903">(P34903) Gamma-aminobutyric acid receptor subunit alpha-3  Homo sapiens (Human)
+<OPTION VALUE="P34914">P34914
+<OPTION VALUE="P34969">(P34969) 5-hydroxytryptamine receptor 7  Homo sapiens (Human)
+<OPTION VALUE="P34972">(P34972) Cannabinoid receptor 2  Homo sapiens (Human)
+<OPTION VALUE="P34975">P34975
+<OPTION VALUE="P34976">P34976
+<OPTION VALUE="P34978">P34978
+<OPTION VALUE="P34995">(P34995) Prostaglandin E2 receptor EP1 subtype  Homo sapiens (Human)
+<OPTION VALUE="P34998">(P34998) Corticotropin-releasing factor receptor 1  Homo sapiens (Human)
+<OPTION VALUE="P35030">(P35030) Trypsin-3  Homo sapiens (Human)
+<OPTION VALUE="P35218">(P35218) Carbonic anhydrase 5A, mitochondrial  Homo sapiens (Human)
+<OPTION VALUE="P35348">(P35348) Alpha-1A adrenergic receptor  Homo sapiens (Human)
+<OPTION VALUE="P35351">P35351
+<OPTION VALUE="P35353">P35353
+<OPTION VALUE="P35354">(P35354) Prostaglandin G/H synthase 2  Homo sapiens (Human)
+<OPTION VALUE="P35355">P35355
+<OPTION VALUE="P35363">P35363
+<OPTION VALUE="P35367">(P35367) Histamine H1 receptor  Homo sapiens (Human)
+<OPTION VALUE="P35368">(P35368) Alpha-1B adrenergic receptor  Homo sapiens (Human)
+<OPTION VALUE="P35372">(P35372) Mu-type opioid receptor  Homo sapiens (Human)
+<OPTION VALUE="P35408">(P35408) Prostaglandin E2 receptor EP4 subtype  Homo sapiens (Human)
+<OPTION VALUE="P35439">P35439
+<OPTION VALUE="P35462">(P35462) D Homo sapiens (Human)
+<OPTION VALUE="P35463">P35463
+<OPTION VALUE="P35557">(P35557) Glucokinase  Homo sapiens (Human)
+<OPTION VALUE="P35560">P35560
+<OPTION VALUE="P35563">P35563
+<OPTION VALUE="P35610">(P35610) Sterol O-acyltransferase 1  Homo sapiens (Human)
+<OPTION VALUE="P35916">(P35916) Vascular endothelial growth factor receptor 3  Homo sapiens (Human)
+<OPTION VALUE="P35968">(P35968) Vascular endothelial growth factor receptor 2  Homo sapiens (Human)
+<OPTION VALUE="P36544">(P36544) Neuronal acetylcholine receptor subunit alpha-7 Homo sapiens (Human)
+<OPTION VALUE="P36888">(P36888) Receptor-type tyrosine-protein kinase FLT3  Homo sapiens (Human)
+<OPTION VALUE="P36897">(P36897) TGF-beta receptor type-1  Homo sapiens (Human)
+<OPTION VALUE="P37058">(P37058) Testosterone 17-beta-dehydrogenase 3  Homo sapiens (Human)
+<OPTION VALUE="P37136">P37136
+<OPTION VALUE="P37231">(P37231) Peroxisome proliferator-activated receptor gamma  Homo sapiens (Human)
+<OPTION VALUE="P37268">(P37268) Squalene synthase  Homo sapiens (Human)
+<OPTION VALUE="P37288">(P37288) Vasopressin V1a receptor  Homo sapiens (Human)
+<OPTION VALUE="P39086">(P39086) Glutamate receptor ionotropic, kainate 1  Homo sapiens (Human)
+<OPTION VALUE="P39900">(P39900) Macrophage metalloelastase  Homo sapiens (Human)
+<OPTION VALUE="P40763">(P40763) Signal transducer and activator of transcription 3  Homo sapiens (Human)
+<OPTION VALUE="P41143">(P41143) Delta-type opioid receptor  Homo sapiens (Human)
+<OPTION VALUE="P41144">P41144
+<OPTION VALUE="P41145">(P41145) Kappa-type opioid receptor  Homo sapiens (Human)
+<OPTION VALUE="P41146">(P41146) Nociceptin receptor  Homo sapiens (Human)
+<OPTION VALUE="P41149">P41149
+<OPTION VALUE="P41180">(P41180) Extracellular calcium-sensing receptor  Homo sapiens (Human)
+<OPTION VALUE="P41279">(P41279) Mitogen-activated protein kinase kinase kinase 8  Homo sapiens (Human)
+<OPTION VALUE="P41594">(P41594) Metabotropic glutamate receptor 5  Homo sapiens (Human)
+<OPTION VALUE="P41595">(P41595) 5-hydroxytryptamine receptor 2B  Homo sapiens (Human)
+<OPTION VALUE="P41597">(P41597) C-C chemokine receptor type 2  Homo sapiens (Human)
+<OPTION VALUE="P41743">(P41743) Protein kinase C iota type  Homo sapiens (Human)
+<OPTION VALUE="P41972">P41972
+<OPTION VALUE="P42260">P42260
+<OPTION VALUE="P42262">(P42262) Glutamate receptor 2  Homo sapiens (Human)
+<OPTION VALUE="P42330">(P42330) Aldo-keto reductase family 1 member C3  Homo sapiens (Human)
+<OPTION VALUE="P42336">(P42336) Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform  Homo sapiens (Human)
+<OPTION VALUE="P42338">(P42338) Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit beta isoform  Homo sapiens (Human)
+<OPTION VALUE="P42345">(P42345) Serine/threonine-protein kinase mTOR  Homo sapiens (Human)
+<OPTION VALUE="P42574">(P42574) Caspase-3   Homo sapiens (Human)
+<OPTION VALUE="P42684">(P42684) Abelson tyrosine-protein kinase 2  Homo sapiens (Human)
+<OPTION VALUE="P42685">(P42685) Tyrosine-protein kinase FRK  Homo sapiens (Human)
+<OPTION VALUE="P42785">(P42785) Lysosomal Pro-X carboxypeptidase  Homo sapiens (Human)
+<OPTION VALUE="P42866">P42866
+<OPTION VALUE="P42892">(P42892) Endothelin-converting enzyme 1  Homo sapiens (Human)
+<OPTION VALUE="P43114">P43114
+<OPTION VALUE="P43115">(P43115) Prostaglandin E2 receptor EP3 subtype  Homo sapiens (Human)
+<OPTION VALUE="P43116">(P43116) Prostaglandin E2 receptor EP2 subtype  Homo sapiens (Human)
+<OPTION VALUE="P43140">P43140
+<OPTION VALUE="P43143">P43143
+<OPTION VALUE="P43144">P43144
+<OPTION VALUE="P43166">(P43166) Carbonic anhydrase 7  Homo sapiens (Human)
+<OPTION VALUE="P43235">(P43235) Cathepsin K  Homo sapiens (Human)
+<OPTION VALUE="P43351">(P43351) DNA repair protein RAD52 homolog Homo sapiens (Human)
+<OPTION VALUE="P43403">(P43403) Tyrosine-protein kinase ZAP-70  Homo sapiens (Human)
+<OPTION VALUE="P43405">(P43405) Tyrosine-protein kinase SYK  Homo sapiens (Human)
+<OPTION VALUE="P43681">(P43681) Neuronal acetylcholine receptor subunit alpha-4 Homo sapiens (Human)
+<OPTION VALUE="P43681">(P43681) Neuronal acetylcholine receptor subunit alpha-4 Homo sapiens (Human)
+<OPTION VALUE="P17787">(P17787) Neuronal acetylcholine receptor subunit beta-2 Homo sapiens (Human)
+<OPTION VALUE="P45379">(P45379) Troponin T, cardiac muscle  Homo sapiens (Human)
+<OPTION VALUE="P45452">(P45452) Collagenase 3  Homo sapiens (Human)
+<OPTION VALUE="P45983">(P45983) Mitogen-activated protein kinase 8  Homo sapiens (Human)
+<OPTION VALUE="P45984">(P45984) Mitogen-activated protein kinase 9  Homo sapiens (Human)
+<OPTION VALUE="P46098">(P46098) 5-hydroxytryptamine receptor 3A  Homo sapiens (Human)
+<OPTION VALUE="P46616">P46616
+<OPTION VALUE="P46663">(P46663) B1 bradykinin receptor  Homo sapiens (Human)
+<OPTION VALUE="P46925">P46925
+<OPTION VALUE="P47712">(P47712) Cytosolic phospholipase A2   Homo sapiens (Human)
+<OPTION VALUE="P47747">P47747
+<OPTION VALUE="P47811">P47811
+<OPTION VALUE="P47820">P47820
+<OPTION VALUE="P47869">(P47869) Gamma-aminobutyric acid receptor subunit alpha-2  Homo sapiens (Human)
+<OPTION VALUE="P47870">(P47870) Gamma-aminobutyric acid receptor subunit beta-2  Homo sapiens (Human)
+<OPTION VALUE="P47871">(P47871) Glucagon receptor  Homo sapiens (Human)
+<OPTION VALUE="P47898">(P47898) 5-hydroxytryptamine receptor 5A  Homo sapiens (Human)
+<OPTION VALUE="P47900">(P47900) P2Y purinoceptor 1  Homo sapiens (Human)
+<OPTION VALUE="P47901">(P47901) Vasopressin V1b receptor  Homo sapiens (Human)
+<OPTION VALUE="P47936">P47936
+<OPTION VALUE="P47989">(P47989) Xanthine dehydrogenase/oxidase  Homo sapiens (Human)
+<OPTION VALUE="P48039">(P48039) Melatonin receptor type 1A  Homo sapiens (Human)
+<OPTION VALUE="P48048">(P48048) ATP-sensitive inward rectifier potassium channel 1  Homo sapiens (Human)
+<OPTION VALUE="P48067">(P48067) Sodium- and chloride-dependent glycine transporter 1  Homo sapiens (Human)
+<OPTION VALUE="P48145">(P48145) Neuropeptides B/W receptor type 1  Homo sapiens (Human)
+<OPTION VALUE="P48147">(P48147) Prolyl endopeptidase  Homo sapiens (Human)
+<OPTION VALUE="P48169">(P48169) Gamma-aminobutyric acid receptor subunit alpha-4  Homo sapiens (Human)
+<OPTION VALUE="P48730">(P48730) Casein kinase I isoform delta  Homo sapiens (Human)
+<OPTION VALUE="P48736">(P48736) Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform  Homo sapiens (Human)
+<OPTION VALUE="P48974">P48974
+<OPTION VALUE="P49137">(P49137) MAP kinase-activated protein kinase 2  Homo sapiens (Human)
+<OPTION VALUE="P49146">(P49146) Neuropeptide Y receptor type 2  Homo sapiens (Human)
+<OPTION VALUE="P49187">P49187
+<OPTION VALUE="P49285">P49285
+<OPTION VALUE="P49286">(P49286) Melatonin receptor type 1B  Homo sapiens (Human)
+<OPTION VALUE="P49336">(P49336) Cyclin-dependent kinase 8  Homo sapiens (Human)
+<OPTION VALUE="P49354">(P49354) Protein farnesyltransferase/geranylgeranyltransferase type-1 subunit alpha  Homo sapiens (Human)
+<OPTION VALUE="P49355">P49355
+<OPTION VALUE="P49356">(P49356) Protein farnesyltransferase subunit beta  Homo sapiens (Human)
+<OPTION VALUE="P49430">P49430
+<OPTION VALUE="P49682">(P49682) C-X-C chemokine receptor type 3  Homo sapiens (Human)
+<OPTION VALUE="P49768">(P49768) Presenilin-1   Homo sapiens (Human)
+<OPTION VALUE="P49810">(P49810) Presenilin-2   Homo sapiens (Human)
+<OPTION VALUE="P49840">(P49840) Glycogen synthase kinase-3 alpha  Homo sapiens (Human)
+<OPTION VALUE="P49841">(P49841) Glycogen synthase kinase-3 beta  Homo sapiens (Human)
+<OPTION VALUE="P50052">(P50052) Type-2 angiotensin II receptor  Homo sapiens (Human)
+<OPTION VALUE="P50172">P50172
+<OPTION VALUE="P50281">(P50281) Matrix metalloproteinase-14  Homo sapiens (Human)
+<OPTION VALUE="P50406">(P50406) 5-hydroxytryptamine receptor 6  Homo sapiens (Human)
+<OPTION VALUE="P50579">(P50579) Methionine aminopeptidase 2  Homo sapiens (Human)
+<OPTION VALUE="P50613">(P50613) Cyclin-dependent kinase 7  Homo sapiens (Human)
+<OPTION VALUE="P50750">(P50750) Cyclin-dependent kinase 9  Homo sapiens (Human)
+<OPTION VALUE="P51451">(P51451) Tyrosine-protein kinase Blk  Homo sapiens (Human)
+<OPTION VALUE="P51639">P51639
+<OPTION VALUE="P51677">(P51677) C-C chemokine receptor type 3  Homo sapiens (Human)
+<OPTION VALUE="P51679">(P51679) C-C chemokine receptor type 4  Homo sapiens (Human)
+<OPTION VALUE="P51681">(P51681) C-C chemokine receptor type 5  Homo sapiens (Human)
+<OPTION VALUE="P51817">(P51817) cAMP-dependent protein kinase catalytic subunit PRKX  Homo sapiens (Human)
+<OPTION VALUE="P51946">(P51946) Cyclin-H  Homo sapiens (Human)
+<OPTION VALUE="P52333">(P52333) Tyrosine-protein kinase JAK3  Homo sapiens (Human)
+<OPTION VALUE="P52702">P52702
+<OPTION VALUE="P52732">(P52732) Kinesin-like protein KIF11  Homo sapiens (Human)
+<OPTION VALUE="P52895">(P52895) Aldo-keto reductase family 1 member C2  Homo sapiens (Human)
+<OPTION VALUE="P53609">(P53609) Geranylgeranyl transferase type-1 subunit beta  Homo sapiens (Human)
+<OPTION VALUE="P53779">(P53779) Mitogen-activated protein kinase 10  Homo sapiens (Human)
+<OPTION VALUE="P54748">P54748
+<OPTION VALUE="P54750">(P54750) Calcium/calmodulin-dependent 3',5'-cyclic nucleotide phosphodiesterase 1A  Homo sapiens (Human)
+<OPTION VALUE="P54760">(P54760) Ephrin type-B receptor 4  Homo sapiens (Human)
+<OPTION VALUE="P55055">(P55055) Oxysterols receptor LXR-beta  Homo sapiens (Human)
+<OPTION VALUE="P55212">(P55212) Caspase-6   Homo sapiens (Human)
+<OPTION VALUE="P55263">(P55263) Adenosine kinase  Homo sapiens (Human)
+<OPTION VALUE="P55899">(P55899) IgG receptor FcRn large subunit p51  Homo sapiens (Human)
+<OPTION VALUE="P56450">P56450
+<OPTION VALUE="P56481">P56481
+<OPTION VALUE="P56524">(P56524) Histone deacetylase 4  Homo sapiens (Human)
+<OPTION VALUE="P56560">P56560
+<OPTION VALUE="P61073">(P61073) C-X-C chemokine receptor type 4  Homo sapiens (Human)
+<OPTION VALUE="P61169">P61169
+<OPTION VALUE="P62593">P62593
+<OPTION VALUE="P62813">P62813
+<OPTION VALUE="P62937">(P62937) Peptidyl-prolyl cis-trans isomerase A   Homo sapiens (Human)
+<OPTION VALUE="P62942">(P62942) Peptidyl-prolyl cis-trans isomerase FKBP1A  Homo sapiens (Human)
+<OPTION VALUE="P62993">(P62993) Growth factor receptor-bound protein 2  Homo sapiens (Human)
+<OPTION VALUE="P63001">P63001
+<OPTION VALUE="P63079">P63079
+<OPTION VALUE="P63138">P63138
+<OPTION VALUE="P63316">(P63316) Troponin C, slow skeletal and cardiac muscles  Homo sapiens (Human)
+<OPTION VALUE="P63319">P63319
+<OPTION VALUE="P67578">P67578
+<OPTION VALUE="P68363">(P68363) Tubulin alpha-1B chain  Homo sapiens (Human)
+<OPTION VALUE="P68366">(P68366) Tubulin alpha-4A chain  Homo sapiens (Human)
+<OPTION VALUE="P68371">(P68371) Tubulin beta-4B chain  Homo sapiens (Human)
+<OPTION VALUE="P68400">(P68400) Casein kinase II subunit alpha  Homo sapiens (Human)
+<OPTION VALUE="P68403">P68403
+<OPTION VALUE="P68826">P68826
+<OPTION VALUE="P69560">P69560
+<OPTION VALUE="P70536">P70536
+<OPTION VALUE="P70605">P70605
+<OPTION VALUE="P78334">(P78334) Gamma-aminobutyric acid receptor subunit epsilon  Homo sapiens (Human)
+<OPTION VALUE="P78396">(P78396) Cyclin-A1 Homo sapiens (Human)
+<OPTION VALUE="P78527">(P78527) DNA-dependent protein kinase catalytic subunit  Homo sapiens (Human)
+<OPTION VALUE="P78536">(P78536) Disintegrin and metalloproteinase domain-containing protein 17  Homo sapiens (Human)
+<OPTION VALUE="P79208">P79208
+<OPTION VALUE="P80209">P80209
+<OPTION VALUE="P80299">P80299
+<OPTION VALUE="P80365">(P80365) Corticosteroid 11-beta-dehydrogenase isozyme 2  Homo sapiens (Human)
+<OPTION VALUE="P81908">P81908
+<OPTION VALUE="P97612">P97612
+<OPTION VALUE="P97639">P97639
+<OPTION VALUE="P98063">P98063
+<OPTION VALUE="P98170">(P98170) E3 ubiquitin-protein ligase XIAP  Homo sapiens (Human)
+<OPTION VALUE="P9WGR1">P9WGR1
+<OPTION VALUE="P9WHJ3">P9WHJ3
+<OPTION VALUE="Q00535">(Q00535) Cyclin-dependent kinase 5  Homo sapiens (Human)
+<OPTION VALUE="Q00788">Q00788
+<OPTION VALUE="Q00959">Q00959
+<OPTION VALUE="Q00960">Q00960
+<OPTION VALUE="Q00961">Q00961
+<OPTION VALUE="Q00975">(Q00975) Voltage-dependent N-type calcium channel subunit alpha-1B  Homo sapiens (Human)
+<OPTION VALUE="Q00987">(Q00987) E3 ubiquitin-protein ligase Mdm2  Homo sapiens (Human)
+<OPTION VALUE="Q01061">Q01061
+<OPTION VALUE="Q01064">(Q01064) Calcium/calmodulin-dependent 3',5'-cyclic nucleotide phosphodiesterase 1B  Homo sapiens (Human)
+<OPTION VALUE="Q01279">Q01279
+<OPTION VALUE="Q01668">(Q01668) Voltage-dependent L-type calcium channel subunit alpha-1D  Homo sapiens (Human)
+<OPTION VALUE="Q01726">(Q01726) Melanocyte-stimulating hormone receptor  Homo sapiens (Human)
+<OPTION VALUE="Q01727">Q01727
+<OPTION VALUE="Q01782">Q01782
+<OPTION VALUE="Q01959">(Q01959) Sodium-dependent dopamine transporter  Homo sapiens (Human)
+<OPTION VALUE="Q02127">(Q02127) Dihydroorotate dehydrogenase  Homo sapiens (Human)
+<OPTION VALUE="Q02293">Q02293
+<OPTION VALUE="Q02485">Q02485
+<OPTION VALUE="Q02750">(Q02750) Dual specificity mitogen-activated protein kinase kinase 1  Homo sapiens (Human)
+<OPTION VALUE="Q02763">(Q02763) Angiopoietin-1 receptor  Homo sapiens (Human)
+<OPTION VALUE="Q03181">(Q03181) Peroxisome proliferator-activated receptor delta  Homo sapiens (Human)
+<OPTION VALUE="Q04206">(Q04206) Transcription factor p65  Homo sapiens (Human)
+<OPTION VALUE="Q04609">(Q04609) Glutamate carboxypeptidase 2  Homo sapiens (Human)
+<OPTION VALUE="Q04631">Q04631
+<OPTION VALUE="Q04759">(Q04759) Protein kinase C theta type  Homo sapiens (Human)
+<OPTION VALUE="Q05469">(Q05469) Hormone-sensitive lipase  Homo sapiens (Human)
+<OPTION VALUE="Q05513">(Q05513) Protein kinase C zeta type  Homo sapiens (Human)
+<OPTION VALUE="Q05586">(Q05586) Glutamate receptor ionotropic, NMDA 1  Homo sapiens (Human)
+<OPTION VALUE="Q05655">(Q05655) Protein kinase C delta type   Homo sapiens (Human)
+<OPTION VALUE="Q05769">Q05769
+<OPTION VALUE="Q05941">Q05941
+<OPTION VALUE="Q06124">(Q06124) Tyrosine-protein phosphatase non-receptor type 11  Homo sapiens (Human)
+<OPTION VALUE="Q07343">(Q07343) cAMP-specific 3',5'-cyclic phosphodiesterase 4B  Homo sapiens (Human)
+<OPTION VALUE="Q07869">(Q07869) Peroxisome proliferator-activated receptor alpha  Homo sapiens (Human)
+<OPTION VALUE="Q08209">(Q08209) Serine/threonine-protein phosphatase 2B catalytic subunit alpha isoform  Homo sapiens (Human)
+<OPTION VALUE="Q08493">(Q08493) cAMP-specific 3',5'-cyclic phosphodiesterase 4C  Homo sapiens (Human)
+<OPTION VALUE="Q08499">(Q08499) cAMP-specific 3',5'-cyclic phosphodiesterase 4D  Homo sapiens (Human)
+<OPTION VALUE="Q08828">(Q08828) Adenylate cyclase type 1  Homo sapiens (Human)
+<OPTION VALUE="Q08881">(Q08881) Tyrosine-protein kinase ITK/TSK  Homo sapiens (Human)
+<OPTION VALUE="Q12851">(Q12851) Mitogen-activated protein kinase kinase kinase kinase 2  Homo sapiens (Human)
+<OPTION VALUE="Q12866">(Q12866) Tyrosine-protein kinase Mer  Homo sapiens (Human)
+<OPTION VALUE="Q12879">(Q12879) Glutamate receptor ionotropic, NMDA 2A  Homo sapiens (Human)
+<OPTION VALUE="Q13085">(Q13085) Acetyl-CoA carboxylase 1   Homo sapiens (Human)
+<OPTION VALUE="Q13133">(Q13133) Oxysterols receptor LXR-alpha  Homo sapiens (Human)
+<OPTION VALUE="Q13188">(Q13188) Serine/threonine-protein kinase 3   Homo sapiens (Human)
+<OPTION VALUE="Q13224">(Q13224) Glutamate receptor ionotropic, NMDA 2B  Homo sapiens (Human)
+<OPTION VALUE="Q13237">(Q13237) cGMP-dependent protein kinase 2  Homo sapiens (Human)
+<OPTION VALUE="Q13255">(Q13255) Metabotropic glutamate receptor 1  Homo sapiens (Human)
+<OPTION VALUE="Q13258">(Q13258) Prostaglandin D2 receptor  Homo sapiens (Human)
+<OPTION VALUE="Q13370">(Q13370) cGMP-inhibited 3',5'-cyclic phosphodiesterase B  Homo sapiens (Human)
+<OPTION VALUE="Q13393">(Q13393) Phospholipase D1  Homo sapiens (Human)
+<OPTION VALUE="Q13464">(Q13464) Rho-associated protein kinase 1  Homo sapiens (Human)
+<OPTION VALUE="Q13490">(Q13490) Baculoviral IAP repeat-containing protein 2  Homo sapiens (Human)
+<OPTION VALUE="Q13509">(Q13509) Tubulin beta-3 chain  Homo sapiens (Human)
+<OPTION VALUE="Q13547">(Q13547) Histone deacetylase 1  Homo sapiens (Human)
+<OPTION VALUE="Q13639">(Q13639) 5-hydroxytryptamine receptor 4  Homo sapiens (Human)
+<OPTION VALUE="Q13698">(Q13698) Voltage-dependent L-type calcium channel subunit alpha-1S  Homo sapiens (Human)
+<OPTION VALUE="Q13748">(Q13748) Tubulin alpha-3C/D chain  Homo sapiens (Human)
+<OPTION VALUE="Q13885">(Q13885) Tubulin beta-2A chain  Homo sapiens (Human)
+<OPTION VALUE="Q13976">(Q13976) cGMP-dependent protein kinase 1  Homo sapiens (Human)
+<OPTION VALUE="Q14123">(Q14123) Calcium/calmodulin-dependent 3',5'-cyclic nucleotide phosphodiesterase 1C  Homo sapiens (Human)
+<OPTION VALUE="Q14164">(Q14164) Inhibitor of nuclear factor kappa-B kinase subunit epsilon  Homo sapiens (Human)
+<OPTION VALUE="Q14289">(Q14289) Protein-tyrosine kinase 2-beta  Homo sapiens (Human)
+<OPTION VALUE="Q14416">(Q14416) Metabotropic glutamate receptor 2  Homo sapiens (Human)
+<OPTION VALUE="Q14432">(Q14432) cGMP-inhibited 3',5'-cyclic phosphodiesterase A  Homo sapiens (Human)
+<OPTION VALUE="Q14524">(Q14524) Sodium channel protein type 5 subunit alpha  Homo sapiens (Human)
+<OPTION VALUE="Q14654">(Q14654) ATP-sensitive inward rectifier potassium channel 11  Homo sapiens (Human)
+<OPTION VALUE="Q14680">(Q14680) Maternal embryonic leucine zipper kinase  Homo sapiens (Human)
+<OPTION VALUE="Q14790">(Q14790) Caspase-8   Homo sapiens (Human)
+<OPTION VALUE="Q14957">(Q14957) Glutamate receptor ionotropic, NMDA 2C  Homo sapiens (Human)
+<OPTION VALUE="Q15078">(Q15078) Cyclin-dependent kinase 5 activator 1   Homo sapiens (Human)
+<OPTION VALUE="Q15139">(Q15139) Serine/threonine-protein kinase D1  Homo sapiens (Human)
+<OPTION VALUE="Q15418">(Q15418) Ribosomal protein S6 kinase alpha-1  Homo sapiens (Human)
+<OPTION VALUE="Q15661">(Q15661) Tryptase alpha/beta-1  Homo sapiens (Human)
+<OPTION VALUE="Q15722">(Q15722) Leukotriene B4 receptor 1  Homo sapiens (Human)
+<OPTION VALUE="Q15759">(Q15759) Mitogen-activated protein kinase 11  Homo sapiens (Human)
+<OPTION VALUE="Q15761">(Q15761) Neuropeptide Y receptor type 5  Homo sapiens (Human)
+<OPTION VALUE="Q15858">(Q15858) Sodium channel protein type 9 subunit alpha  Homo sapiens (Human)
+<OPTION VALUE="Q16445">(Q16445) Gamma-aminobutyric acid receptor subunit alpha-6  Homo sapiens (Human)
+<OPTION VALUE="Q16513">(Q16513) Serine/threonine-protein kinase N2  Homo sapiens (Human)
+<OPTION VALUE="Q16790">(Q16790) Carbonic anhydrase 9  Homo sapiens (Human)
+<OPTION VALUE="Q16853">(Q16853) Membrane primary amine oxidase  Homo sapiens (Human)
+<OPTION VALUE="Q29010">Q29010
+<OPTION VALUE="Q2NNR5">Q2NNR5
+<OPTION VALUE="Q494W8">(Q494W8) CHRNA7-FAM7A fusion protein  Homo sapiens (Human)
+<OPTION VALUE="P36544">(P36544) Neuronal acetylcholine receptor subunit alpha-7 Homo sapiens (Human)
+<OPTION VALUE="Q4U254">(Q4U254) Protease  Human rhinovirus sp.
+<OPTION VALUE="Q54A96">Q54A96
+<OPTION VALUE="Q5AJ71">Q5AJ71
+<OPTION VALUE="Q5S007">(Q5S007) Leucine-rich repeat serine/threonine-protein kinase 2  Homo sapiens (Human)
+<OPTION VALUE="Q60492">Q60492
+<OPTION VALUE="Q61239">Q61239
+<OPTION VALUE="Q61614">Q61614
+<OPTION VALUE="Q62645">Q62645
+<OPTION VALUE="Q62758">Q62758
+<OPTION VALUE="Q63273">Q63273
+<OPTION VALUE="Q63921">Q63921
+<OPTION VALUE="Q63931">Q63931
+<OPTION VALUE="Q64077">Q64077
+<OPTION VALUE="Q64617">Q64617
+<OPTION VALUE="Q64663">Q64663
+<OPTION VALUE="Q6B856">Q6B856
+<OPTION VALUE="Q6L709">(Q6L709) Thymidine kinase  Human herpesvirus 2 (HHV-2) (Human herpes simplex virus 2)
+<OPTION VALUE="Q6PEY2">(Q6PEY2) Tubulin alpha-3E chain  Homo sapiens (Human)
+<OPTION VALUE="Q6V1X1">(Q6V1X1) Dipeptidyl peptidase 8  Homo sapiens (Human)
+<OPTION VALUE="Q71U36">(Q71U36) Tubulin alpha-1A chain  Homo sapiens (Human)
+<OPTION VALUE="Q72547">(Q72547) Reverse transcriptase/RNaseH  Human immunodeficiency virus 1
+<OPTION VALUE="Q79MP6">Q79MP6
+<OPTION VALUE="Q7TQP3">Q7TQP3
+<OPTION VALUE="Q7ZJM1">(Q7ZJM1) Integrase  Human immunodeficiency virus 1
+<OPTION VALUE="Q862F3">Q862F3
+<OPTION VALUE="Q862L2">Q862L2
+<OPTION VALUE="Q86TI2">(Q86TI2) Dipeptidyl peptidase 9  Homo sapiens (Human)
+<OPTION VALUE="Q86X55">(Q86X55) Histone-arginine methyltransferase CARM1  Homo sapiens (Human)
+<OPTION VALUE="Q8I2J3">Q8I2J3
+<OPTION VALUE="Q8IL11">Q8IL11
+<OPTION VALUE="Q8JXU8">Q8JXU8
+<OPTION VALUE="Q8K4Z4">Q8K4Z4
+<OPTION VALUE="Q8N1C3">(Q8N1C3) Gamma-aminobutyric acid receptor subunit gamma-1  Homo sapiens (Human)
+<OPTION VALUE="Q8N1Q1">(Q8N1Q1) Carbonic anhydrase 13  Homo sapiens (Human)
+<OPTION VALUE="Q8N4C8">(Q8N4C8) Misshapen-like kinase 1  Homo sapiens (Human)
+<OPTION VALUE="Q8NE63">(Q8NE63) Homeodomain-interacting protein kinase 4  Homo sapiens (Human)
+<OPTION VALUE="Q8NER1">(Q8NER1) Transient receptor potential cation channel subfamily V member 1  Homo sapiens (Human)
+<OPTION VALUE="Q8R455">Q8R455
+<OPTION VALUE="Q8TCU5">(Q8TCU5) Glutamate receptor ionotropic, NMDA 3A  Homo sapiens (Human)
+<OPTION VALUE="Q8TDS4">(Q8TDS4) Hydroxycarboxylic acid receptor 2  Homo sapiens (Human)
+<OPTION VALUE="Q8TDV5">(Q8TDV5) Glucose-dependent insulinotropic receptor  Homo sapiens (Human)
+<OPTION VALUE="Q8VHN2">Q8VHN2
+<OPTION VALUE="Q8WUI4">(Q8WUI4) Histone deacetylase 7  Homo sapiens (Human)
+<OPTION VALUE="Q8WW43">(Q8WW43) Gamma-secretase subunit APH-1B  Homo sapiens (Human)
+<OPTION VALUE="Q8WWL7">(Q8WWL7) G2/mitotic-specific cyclin-B3 Homo sapiens (Human)
+<OPTION VALUE="Q91ZM7">Q91ZM7
+<OPTION VALUE="Q920D2">Q920D2
+<OPTION VALUE="Q923Y9">Q923Y9
+<OPTION VALUE="Q92542">(Q92542) Nicastrin Homo sapiens (Human)
+<OPTION VALUE="Q92731">(Q92731) Estrogen receptor beta  Homo sapiens (Human)
+<OPTION VALUE="Q92769">(Q92769) Histone deacetylase 2  Homo sapiens (Human)
+<OPTION VALUE="Q92847">(Q92847) Growth hormone secretagogue receptor type 1  Homo sapiens (Human)
+<OPTION VALUE="Q95136">Q95136
+<OPTION VALUE="Q95214">Q95214
+<OPTION VALUE="Q95323">Q95323
+<OPTION VALUE="Q969S8">(Q969S8) Histone deacetylase 10  Homo sapiens (Human)
+<OPTION VALUE="Q96BI3">(Q96BI3) Gamma-secretase subunit APH-1A  Homo sapiens (Human)
+<OPTION VALUE="Q96DB2">(Q96DB2) Histone deacetylase 11  Homo sapiens (Human)
+<OPTION VALUE="Q96EB6">(Q96EB6) NAD-dependent protein deacetylase sirtuin-1   Homo sapiens (Human)
+<OPTION VALUE="Q96GD4">(Q96GD4) Aurora kinase B  Homo sapiens (Human)
+<OPTION VALUE="Q96Q15">(Q96Q15) Serine/threonine-protein kinase SMG1  Homo sapiens (Human)
+<OPTION VALUE="Q96RI1">(Q96RI1) Bile acid receptor  Homo sapiens (Human)
+<OPTION VALUE="Q99250">(Q99250) Sodium channel protein type 2 subunit alpha  Homo sapiens (Human)
+<OPTION VALUE="Q99500">(Q99500) Sphingosine 1-phosphate receptor 3  Homo sapiens (Human)
+<OPTION VALUE="Q99572">(Q99572) P2X purinoceptor 7  Homo sapiens (Human)
+<OPTION VALUE="Q99705">(Q99705) Melanin-concentrating hormone receptor 1  Homo sapiens (Human)
+<OPTION VALUE="Q99720">(Q99720) Sigma non-opioid intracellular receptor 1  Homo sapiens (Human)
+<OPTION VALUE="Q99808">(Q99808) Equilibrative nucleoside transporter 1  Homo sapiens (Human)
+<OPTION VALUE="Q99895">(Q99895) Chymotrypsin-C  Homo sapiens (Human)
+<OPTION VALUE="Q99928">(Q99928) Gamma-aminobutyric acid receptor subunit gamma-3  Homo sapiens (Human)
+<OPTION VALUE="Q9BQE3">(Q9BQE3) Tubulin alpha-1C chain  Homo sapiens (Human)
+<OPTION VALUE="Q9BUF5">(Q9BUF5) Tubulin beta-6 chain  Homo sapiens (Human)
+<OPTION VALUE="Q9BVA1">(Q9BVA1) Tubulin beta-2B chain Homo sapiens (Human)
+<OPTION VALUE="Q9BY41">(Q9BY41) Histone deacetylase 8  Homo sapiens (Human)
+<OPTION VALUE="Q9ES14">Q9ES14
+<OPTION VALUE="Q9GZU7">(Q9GZU7) Carboxy-terminal domain RNA polymerase II polypeptide A small phosphatase 1  Homo sapiens (Human)
+<OPTION VALUE="Q9H228">(Q9H228) Sphingosine 1-phosphate receptor 5  Homo sapiens (Human)
+<OPTION VALUE="Q9H244">(Q9H244) P2Y purinoceptor 12  Homo sapiens (Human)
+<OPTION VALUE="Q9H2K2">(Q9H2K2) Tankyrase-2  Homo sapiens (Human)
+<OPTION VALUE="Q9H2X6">(Q9H2X6) Homeodomain-interacting protein kinase 2  Homo sapiens (Human)
+<OPTION VALUE="Q9H3N8">(Q9H3N8) Histamine H4 receptor  Homo sapiens (Human)
+<OPTION VALUE="Q9H4B7">(Q9H4B7) Tubulin beta-1 chain Homo sapiens (Human)
+<OPTION VALUE="Q9HAZ1">(Q9HAZ1) Dual specificity protein kinase CLK4  Homo sapiens (Human)
+<OPTION VALUE="Q9HBH9">(Q9HBH9) MAP kinase-interacting serine/threonine-protein kinase 2  Homo sapiens (Human)
+<OPTION VALUE="Q9HC97">(Q9HC97) G-protein coupled receptor 35  Homo sapiens (Human)
+<OPTION VALUE="Q9JJ16">Q9JJ16
+<OPTION VALUE="Q9JLB5">Q9JLB5
+<OPTION VALUE="Q9JN24">Q9JN24
+<OPTION VALUE="Q9N1N9">Q9N1N9
+<OPTION VALUE="Q9NPC1">(Q9NPC1) Leukotriene B4 receptor 2  Homo sapiens (Human)
+<OPTION VALUE="Q9NPH5">(Q9NPH5) NADPH oxidase 4  Homo sapiens (Human)
+<OPTION VALUE="Q9NZ42">(Q9NZ42) Gamma-secretase subunit PEN-2  Homo sapiens (Human)
+<OPTION VALUE="Q9P1W9">(Q9P1W9) Serine/threonine-protein kinase pim-2  Homo sapiens (Human)
+<OPTION VALUE="Q9QYJ6">Q9QYJ6
+<OPTION VALUE="Q9QYN8">Q9QYN8
+<OPTION VALUE="Q9QZN9">Q9QZN9
+<OPTION VALUE="Q9R0C9">Q9R0C9
+<OPTION VALUE="Q9R1M7">Q9R1M7
+<OPTION VALUE="Q9UBF8">(Q9UBF8) Phosphatidylinositol 4-kinase beta  Homo sapiens (Human)
+<OPTION VALUE="Q9UBN7">(Q9UBN7) Histone deacetylase 6  Homo sapiens (Human)
+<OPTION VALUE="Q9UEE5">(Q9UEE5) Serine/threonine-protein kinase 17A  Homo sapiens (Human)
+<OPTION VALUE="Q9UHD2">(Q9UHD2) Serine/threonine-protein kinase TBK1  Homo sapiens (Human)
+<OPTION VALUE="Q9UHL4">(Q9UHL4) Dipeptidyl peptidase 2  Homo sapiens (Human)
+<OPTION VALUE="Q9UKP6">(Q9UKP6) Urotensin-2 receptor  Homo sapiens (Human)
+<OPTION VALUE="Q9UKV0">(Q9UKV0) Histone deacetylase 9  Homo sapiens (Human)
+<OPTION VALUE="Q9ULX7">(Q9ULX7) Carbonic anhydrase 14  Homo sapiens (Human)
+<OPTION VALUE="Q9UN88">(Q9UN88) Gamma-aminobutyric acid receptor subunit theta  Homo sapiens (Human)
+<OPTION VALUE="Q9UNA0">(Q9UNA0) A disintegrin and metalloproteinase with thrombospondin motifs 5  Homo sapiens (Human)
+<OPTION VALUE="Q9UQL6">(Q9UQL6) Histone deacetylase 5  Homo sapiens (Human)
+<OPTION VALUE="Q9WTQ0">Q9WTQ0
+<OPTION VALUE="Q9WUI1">Q9WUI1
+<OPTION VALUE="Q9Y233">(Q9Y233) cAMP and cAMP-inhibited cGMP 3',5'-cyclic phosphodiesterase 10A  Homo sapiens (Human)
+<OPTION VALUE="Q9Y239">(Q9Y239) Nucleotide-binding oligomerization domain-containing protein 1  Homo sapiens (Human)
+<OPTION VALUE="Q9Y251">(Q9Y251) Heparanase   Homo sapiens (Human)
+<OPTION VALUE="Q9Y2D0">(Q9Y2D0) Carbonic anhydrase 5B, mitochondrial  Homo sapiens (Human)
+<OPTION VALUE="Q9Y345">(Q9Y345) Sodium- and chloride-dependent glycine transporter 2  Homo sapiens (Human)
+<OPTION VALUE="Q9Y4K4">(Q9Y4K4) Mitogen-activated protein kinase kinase kinase kinase 5  Homo sapiens (Human)
+<OPTION VALUE="Q9Y5N1">(Q9Y5N1) Histamine H3 receptor  Homo sapiens (Human)
+<OPTION VALUE="Q9Y5X4">(Q9Y5X4) Photoreceptor-specific nuclear receptor  Homo sapiens (Human)
+<OPTION VALUE="Q9Y5Y4">(Q9Y5Y4) Prostaglandin D2 receptor 2  Homo sapiens (Human)
+<OPTION VALUE="Q9Y5Z0">(Q9Y5Z0) Beta-secretase 2  Homo sapiens (Human)
+<OPTION VALUE="Q9ZLT0">Q9ZLT0
+
+
+
+</SELECT>
+     <br/>
+     <br/>
+    
+
+          <button type="submit" class="btn-lg btn-block btn-primary" onclick="return check_value();"> Submit QSAR </button>  
+   </form>  
+
+   </div>  
+ 
+</div>        
+<!-- end 3 cols        -->
+<!--      </div>-->
+      
+<!--      sdfds-->
+
+      
+      
+      <br>
+      <br>
+      <hr>
+      <br>
+      <br>
+
+   <div class="col-sm-6 col-md-4">
+         <legend>CITATIONS</legend>
+For publication of results, please cite:
+
+ChemProt-3.0: A global chemical-biology diseases mapping.
+J. Kringelum, S.K. Kj&aeligrulff, T.I. Opera, S. Brunak, O. Lund, O. Taboureau.
+</br>In review </br>
+
+View the abstract.
+   </div>
+   <div class="col-sm-6 col-md-4">
+    <legend>RESSOURCES</legend>      
+
+
+
+
+<p>The chemical-protein information has been provided by:</p>
+<p>ChEMBL	       WOMBAT & WOMBAT-PK        DrugBank        PubChem Bioassay</p>
+<p>Ki Database	       BindingDB        STITCH        PharmGKB        CTD       IUPHAR</p>
+
+The JME applet (Java Molecular Editor) used above has been provided by courtesy of dr Peter Ertl.
+
+The structure conversion to smile and output visualisation of the chemical structure is performed using Chemaxon
+
+The MACCs and FP2 fingerprints were computed using OpenBabel  software
+
+The protein-protein interactions network were visualized using Cytoscape  software       
+
+      
+   </div>
+   <div class="col-sm-6 col-md-4">
+   <legend>FUNDING</legend>       
+ 
+
+This work has been supported by:
+
+The Innovatives Medicines Initiative Joint Undertaking (eTOX) and (open PHACTS)        
+The Lundbeck Foundation        
+The GENDINOB project supported by the Danish council for Strategic Research 
+   </div>      
+      
+                  
+</form>      
+<!-- END  -->
+      
+      </div>   
+            <div class="footer">
+<legend class="text-center"><a href="New/Help.html">Getting Help</a></legend>                      
+          <div class="container"><p class="text-center">Scientific problems: <a>Olivier Taboureau</a>  Technical problems: <a>Jens Kringelum</a> & <a>Sonny Kim Kjærulff</a>     </p></div>              
+      </div>
+</div>
+
+
+     
+    <div id="help">
+      <span style="color:white; text-align: center; font-size: 130%; padding: 5px 5px 5px 5px;">Please Read Our <a style="color:white;" href="New/Help.html">Help Page</a></span>
+      <div class="text-center"> 
+       <span style="color:white; text-align: center; font-size: 130%; padding: 5px 5px 5px 5px;">Thank You!</span>
+     </div>
+
+<div class="text-center"> 
+
+      <span style="text-align:center;"><button id="MYHELP" type="button" class="btn btn-success">OK</button>      
+    </span>
+
+</div>
+
+
+    </div>
+        
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script type="text/javascript" src="js/jquery.autocomplete.js"></script> 
+    <script type="text/javascript" src="js/demo.js"></script> 
+
+    <script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+
+
+
+
+</script>
+
+  </body>
+</html>

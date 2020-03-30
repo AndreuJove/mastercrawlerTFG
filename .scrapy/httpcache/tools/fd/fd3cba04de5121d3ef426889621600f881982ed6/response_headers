@@ -1,0 +1,25 @@
+Cache-Control: public, max-age=900
+Content-Encoding: gzip
+Content-Language: en
+Content-Type: text/html; charset=utf-8
+Etag: W/"1585594195-0"
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Last-Modified: Mon, 30 Mar 2020 18:49:55 GMT
+Link: <https://cistem.org/>; rel="canonical",<https://cistem.org/>; rel="shortlink"
+Server: nginx
+Strict-Transport-Security: max-age=300
+X-Content-Type-Options: nosniff
+X-Drupal-Cache: MISS
+X-Frame-Options: SAMEORIGIN
+X-Generator: Drupal 7 (https://www.drupal.org)
+X-Pantheon-Styx-Hostname: styx-fe3-b-c8f8fbbbb-jp5mj
+X-Styx-Req-Id: 3f3b9f0e-72b7-11ea-a1e5-f2cc0323dd98
+Date: Mon, 30 Mar 2020 18:49:55 GMT
+X-Served-By: cache-mdw17332-MDW, cache-mad22039-MAD
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+X-Timer: S1585594195.032277,VS0,VE835
+Vary: Accept-Encoding, Cookie, Cookie, Cookie
+Age: 0
+Accept-Ranges: bytes
+Via: 1.1 varnish

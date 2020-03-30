@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Supplemental website for Arboretum</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="bg5">
+	<tr>
+		<td><img src="images/spacer.gif" alt="" width="61" height="61" /></td>
+	</tr>
+	<tr>
+		<td>5
+			<table width="516" border="0" align="center" cellpadding="0" cellspacing="0" class="bg3">
+			<tr>
+				<td class="bg1"><table width="458" border="0" align="center" cellpadding="0" cellspacing="0">
+						<tr>
+							<td width="111"><img src="images/spacer.gif" alt="" width="100" height="23" /></td>
+							<td width="4">&nbsp;</td>
+							<td width="111">&nbsp;</td>
+							<td width="4">&nbsp;</td>
+							<td width="111">&nbsp;</td>
+							<td width="4">&nbsp;</td>
+							<td width="113">&nbsp;</td>
+						</tr>
+						<tr align="center">
+							<td class="bg6"><a href="index.html" class="link1">HOME</a></td>
+							<td>&nbsp;</td>
+							<td class="bg6"><a href="code.html" class="link1">CODE</a></td>
+							<td>&nbsp;</td>
+							<td class="bg6"><a href="data.html" class="link1">DATA</a></td>
+							<td>&nbsp;</td>
+							<td class="bg6"><a href="Supplementarymethods_Final.pdf" class="link1">SUPP METHODS</a></td>
+							<td>&nbsp;</td>
+							<td class="bg6"><a href="arboretum_method_details.pdf" class="link1">ARBORETUM DETAILS</a></td>
+				</table></td>
+			</tr>
+			<tr>
+				<td><table width="516" border="0" cellpadding="0" cellspacing="0" class="bg2">
+						<tr>
+							<td><table width="418" border="0" align="center" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td><h3 class="text1">Arboretum: reconstruction and analysis of the evolutionary history of condition-specific transcriptional programs</h3></td>
+									</tr>
+									<tr><td> <b>Sushmita Roy<sup>1,2,3</sup>, Ilan Wapinski<sup>1,4</sup>, Jenna Pfiffner<sup>1</sup>, Courtney French<sup>1</sup>, Amanda Socha<sup>1</sup>, Jay Konieczka<sup>1</sup>, Naomi Habib<sup>6</sup>, Manolis Kellis<sup>1,2</sup>, Dawn Thompson<sup>1</sup>, Aviv Regev<sup>1,5</sup></b> </td></tr>
+									<tr>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td><p><img src="arbologo.pdf" alt="" width="101" height="101" class="img1" />Arboretum is an algorithm for identifying modules across species. Modules are defined as sets of genes that are co-expressed. Arborteum can reconstruct the module membership of genes in extant as well as ancestral species.</p>
+											<p>Here you can download the software for applying Arboretum to different multi-species datasets. </p>
+									</tr>
+									<tr>
+										<td style="border-bottom: #999999 1px solid;">&nbsp;</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+												<tr valign="top">
+													<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+															<tr>
+																<td class="text2">Abstract</td>
+															</tr>
+															<tr>
+																<td>&nbsp;</td>
+															</tr>
+															<tr>
+															<td>
+															Comparative functional genomics studies the evolution of biological processes by analyzing functional data, such as gene expression profiles, across species. A major challenge is analyzing genomic profiles collected in a complex phylogeny. Here, we present Arboretum, a novel and scalable computational algorithm that integrates expression data from multiple species with species- and gene- phylogenies to infer modules of co-expressed genes in extant and ancestral species, their evolutionary histories and ancestral states. We develop new measures that use the reconstructed histories to determine the patterns of conservation and divergence in gene regulatory modules, and assess the impact of changes in gene content and copy number on module evolution. We used Arboretum to study the evolution of the transcriptional response to heat shock in eight species of Ascomycota fungi. We found that although modules and their expression are largely conserved, there is substantial divergence in the most induced module. Divergence of module organization was facilitated by gene duplication, with at least one of the members of the paralogous pair typically changing its module assignment following duplication. Compared to the transcriptional response to glucose depletion in the same species, the heat shock response diverged more substantially.  Nevertheless, both responses exhibit the same general properties of module conservation and divergence, suggesting these are general principles of evolution of transcriptional programs. Arboretum and its associated analyses provide a comprehensive framework to systematically study regulatory evolution of condition-specific responses.</td>
+															</tr>
+															
+													</table></td>
+												</tr>
+										</table></td>
+									</tr>
+									
+							<tr>
+								<td style="border-bottom: #999999 1px solid;">&nbsp;</td>
+							</tr>
+							<tr><td>1 Broad Institute of MIT and Harvard, 7 Cambridge Center, Cambridge MA, 02142</td></tr> 
+							<tr><td>2 Computer Science and Artificial Intelligence Laboratory (CSAIL), Massachusetts Institute of Technology (MIT), Cambridge, MA 02139</td></tr>
+							<tr><td>3 Biostatistics and medical informatics, University of Wisconsin, Madison, WI 53715</td></tr>
+							<tr><td>4 Department of Systems Biology, Harvard Medical School, Boston MA, 02140</td></tr>
+							<tr><td>5 Howard Hughes Medical Institute, Department of Biology, Massachusetts Institute of Technology, Cambridge MA, 02140</td></tr>
+							<tr><td>6 School of Computer Science &amp; Engineering, Hebrew University, Jerusalem, 91904, Israel </tr></td>
+
+							</table></td>
+						</tr>
+				</table></td>
+			</tr>
+			<tr>
+				<td class="bg4">&nbsp;</td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<table width="516" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+<table width="516" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td align="center" class="style1">Designed by <a href="http://www.webpagetemplates.org/">Web Page Templates</a></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+</body>
+</html>

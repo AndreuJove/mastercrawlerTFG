@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<HTML>
+	<HEAD>
+		<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		<META name="description" content="DBTSS"> 
+		<TITLE>DBTSS Home</TITLE> 
+		<LINK href="./css/dbtss_top.css" rel="STYLESHEET"> 
+		<LINK href="./css/jquery.dataTables.min.css" rel="STYLESHEET"> 
+	</HEAD> 
+	<BODY link="#0000cc" alink="#6600ff" vlink="#330066">
+		<div id="dbtss_header"></div>
+		<div id="err"></div>
+		
+		
+		<TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+			<TR height="100%" valign="top">
+				<TD height="100%" valign="top"><!-- outer table is to align leftbar & content boxes at top of page --> 
+					<div id="index_left_menu">
+						<TABLE width="300" border="0" cellspacing="0" cellpadding="0">
+							<TR height="100%">
+								<TD height="100%"><!--outer table is for black border--> 
+									<TABLE width="100%" bgcolor="#000000" border="0" cellspacing="0" cellpadding="1">
+										<TR>
+											<TD align="left" valign="top" bgcolor="#eef6ee">
+												<div id="left_menu">
+													<ul>
+														<li>
+															<table width="100%" bgcolor="#335533" border="0" cellspacing="0" cellpadding="0"><tr><td>
+															<table width="100%" border="0" cellspacing="5" cellpadding="3">
+															<tr><td><font color="#ffffff"><b>Database Search</b></font></td></tr>
+															<tr> 
+																<td align="center" background="/icons/back.gif" nowrap>
+																	<table border="0" width="100%"><tr><td>
+																	</td></tr><tr><td>
+																		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																		<tr><td bgcolor="#66aa33" background="/icons/spacer.gif"> 
+																			<table border="0" cellspacing="1" cellpadding="2" height="100%" width="100%">
+																				<tr><td bgcolor="#FFFFFF">
+																					<form name="fspc" onSubmit='return false;'>
+																					<div><font color="#113311">Species: </font></div>
+																					<select name="spc" SIZE="1" id="spc"> 
+																						<option value="9606"><i>H. sapiens</i>
+																						<option value="10090"><i>M. musculus</i>
+																						<!--<option value="0301"><i>P. falciparum</i>-->
+																						<!--<option value="1101"><i>D. rerio</i>-->
+																						<!--<option value="1501"><i>C. merolae</i>-->
+																						<!--<option value="0401"><i>R. norvegicus</i>-->
+																						<!--<option value="0501"><i>P. troglodytes</i>-->
+																						<!--<option value="1401"><i>M. fascicularis</i>-->
+																					</select><br />
+																					<div>&nbsp;</div>
+																					<font color="#113311">Keyword:</font><br>
+																					<INPUT type="text" name="keyword" size="25" MAXLENGTH='25' placeholder="keyword (e.g. EGFR, NM_*)">
+																					<div>&nbsp;</div>
+																					<div><input type="button" VALUE='Search' onClick='checkall();'></div>
+																					</form>
+																					<hr />
+																					<form name="lov" onSubmit='return false;'>
+																					<div><font color="#113311">Genome browser:</font></div>
+																					<select name="spc" SIZE="1" id="lift_ov"> 
+																						<option value="hg38">hg38</option>
+																						<option value="hg19_hg38">hg19 to hg38 (Lift over)</option>
+																					</select><br />
+																					<div>&nbsp;</div>
+																					<INPUT type="text" name="region" size="30" MAXLENGTH='30' value='chr1:99,950,000-100,050,000'>
+																					<div>&nbsp;</div>
+																					<div><input type="button" VALUE='Search' onClick='liftover();'></div>
+																					</form>
+																				</td></tr>
+																			</table>
+																		</td></tr></table>
+																	</td></tr></table>
+													  			</td>
+															</tr>
+															</table></td></tr></table>
+														</li>
+														<li>
+															<table width="100%" bgcolor="#335533" border="0" cellspacing="0" cellpadding="0"><tr><td>
+															<table width="100%" border="0" cellspacing="5" cellpadding="3">
+															<tr><td><font color="#ffffff"><b>Human Chromatin Features</b></font></td></tr>
+															<tr> 
+																<td align="center" background="/icons/back.gif" nowrap>
+																	<table border="0" width="100%"><tr><td>
+																	</td></tr><tr><td>
+																		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																		<tr><td bgcolor="#66aa33" background="/icons/spacer.gif"> 
+																			<table border="0" cellspacing="1" cellpadding="2" height="100%" width="100%">
+																				<tr><td bgcolor="#FFFFFF">
+																					<form name="chromatin" onSubmit='return false;'>
+																					<font color="#113311">
+																						<div>Search from Genomic Position</div>
+																						<div>(hg38):</div>
+																					</font>
+																					<INPUT type="text" name="pos" size="15" MAXLENGTH='25' value='chr1:75,787,000'>
+																					<div>&nbsp;</div>
+																					<div><input type="button" VALUE='Search' onClick='searchFromGenomicPos();'></div>
+																					<div>&nbsp;</div>
+																					<font color="#113311">Search from SNP (dbSNP rsID):</font><br>
+																					<INPUT type="text" name="rsid" size="15" MAXLENGTH='25' value='rs375229869'>
+																					<div>&nbsp;</div>
+																					<div><input type="button" VALUE='Search' onClick='searchFromDbsnp();'></div>
+																					<div>&nbsp;</div>
+																					<hr />
+																					
+																					<font color="#113311">
+																						<div>Search from SNV</div>
+																						<div>(COSMIC: somatic mutation):</div>
+																					</font>
+																					<INPUT type="text" name="snv" size="15" MAXLENGTH='25' value='BRAF'>
+																					<div>&nbsp;</div>
+																					<div><input type="button" VALUE='Search' onClick='searchFromCosmic();'></div>
+																					<hr />
+																					<div>&nbsp;</div>
+																					<font color="#113311">
+																						<div>Search from SNV-enriched Gene</div>
+																						<div>in Cancers:</div>
+																					</font>
+																					<div id="search_mut_gene">loading...</div>
+																					<div>&nbsp;</div>
+																					<div><input type="button" VALUE='Search' onClick='searchFromEnriched();'></div>
+																					<hr />
+																					
+																					<div>&nbsp;</div>
+																					<font color="#113311">SNV Summary in Cancers:</font><br />
+																					<INPUT type="text" name="keyword" size="15" MAXLENGTH='25' value='NM_*'>
+																					<div>&nbsp;</div>
+																					<div><input type="button" value='Search' onClick='mutationSearch();'></div>
+																					</form>
+																				</td></tr>
+																			</table>
+																		</td></tr></table>
+																	</td></tr></table>
+																</td>
+															</tr>
+															</table></td></tr></table>
+														</li>
+														<li>
+															<table width="100%" bgcolor="#335533" border="0" cellspacing="0" cellpadding="0"><tr><td>
+															<table width="100%" border="0" cellspacing="5" cellpadding="3">
+															<tr><td><font color="#ffffff"><b>Pathway Map</b></font></td></tr>
+															<tr> 
+																<td align="center" background="/icons/back.gif" nowrap>
+																	<table border="0" width="100%"><tr><td>
+																	</td></tr><tr><td>
+																		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																		<tr><td bgcolor="#66aa33" background="/icons/spacer.gif"> 
+																			<table border="0" cellspacing="1" cellpadding="2" height="100%" width="100%">
+																				<tr><td bgcolor="#FFFFFF">
+																					<form name="pathway" onSubmit='return false;'>
+																					<div><font color="#113311">Species: </font></div>
+																					<select name="spc" SIZE="1" id="spc"> 
+																						<option value="0001"><i>H. sapiens</i></option>
+																					</select><br />
+																					<div>&nbsp;</div>
+																					<div><input type="button" VALUE='Search' onClick='showPathway();'></div>
+																					</form>
+																				</td></tr>
+																			</table>
+																		</td></tr></table>
+																	</td></tr></table>
+																</td>
+															</tr>
+															</table></td></tr></table>
+														</li>
+														<li>
+															<table width="100%" bgcolor="#335533" border="0" cellspacing="0" cellpadding="0"><tr><td>
+															<table width="100%" border="0" cellspacing="5" cellpadding="3">
+															<tr><td><font color="#ffffff"><b>Documents</b></font></td></tr>
+															<tr> 
+																<td align="center" background="/icons/back.gif" nowrap>
+																	<table border="0" width="100%"><tr><td>
+																	</td></tr><tr><td>
+																		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																		<tr><td bgcolor="#66aa33" background="/icons/spacer.gif"> 
+																			<table border="0" cellspacing="1" cellpadding="2" height="100%" width="100%">
+																				<tr><td bgcolor="#FFFFFF">
+																					<div>&nbsp;</div>
+																					<div>- <a href="/?doc:protocol_2017.html">Experimental Procedures</a></div>
+																					<div>&nbsp;</div>
+																				</td></tr>
+																				<tr><td bgcolor="#FFFFFF">
+																					<div>&nbsp;</div>
+																					<div>- <a href="/?doc:data_contents_2017.html">Data Contents</a></div>
+																					<div>&nbsp;</div>
+																				</td></tr>
+																				<tr><td bgcolor="#FFFFFF">
+																					<div>&nbsp;</div>
+																					<div>- <a href="/?doc:help_2017.html">Help</a></div>
+																					<div>&nbsp;</div>
+																				</td></tr>
+																				<tr><td bgcolor="#FFFFFF">
+																					<div>&nbsp;</div>
+																					<div>- <a href="ftp://ftp.hgc.jp/pub/hgc/db/dbtss/">Download</a></div>
+																					<div>&nbsp;</div>
+																				</td></tr>
+																				<tr><td bgcolor="#FFFFFF">
+																					<div>&nbsp;</div>
+																					<div>- <a href="/?doc:links.html">Links</a></div>
+																					<div>&nbsp;</div>
+																				</td></tr>
+																				<tr><td bgcolor="#FFFFFF">
+																					<div>&nbsp;</div>
+																					<!-- <div>- <a href="/index20140915.html">Previous version</a></div> -->
+																					<div>- <a href="/?doc:prev.html">Previous version</a></div>
+																					<div>&nbsp;</div>
+																				</td></tr>
+																			</table>
+																		</td></tr></table>
+																	</td></tr></table>
+																</td>
+															</tr>
+															</table></td></tr></table>
+														</li>
+													</ul>
+													<BR>
+												</div>
+											</TD>
+										</TR>
+									</TABLE>
+								</TD>
+							</TR>
+						</TABLE>
+					</div>
+				</TD>
+				<TD valign="top" width="100%"><!--outer table is for border purposes--> 
+					<div id="result">
+						<table border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+							<td valign="top">
+								<div id="doc">
+									<TABLE border="0" cellspacing="0" cellpadding="0">
+										<TR>
+											<TD><!-- Our DB --> 
+												<TABLE width="100%" bgcolor="#888888" border="0" cellspacing="0" cellpadding="1">
+													<TR>
+														<TD>
+															<TABLE width="100%" bgcolor="#fffff8" border="0" cellspacing="0" cellpadding="0">
+																<TR>
+																	<TD>
+																		<TABLE width="100%" bgcolor="#bed2c3">
+																			<TR>
+																				<TD>
+																					<A name="About"></A><FONT size="4"><B>&nbsp; About this database</B></FONT>
+																				</TD>
+																			</TR>
+																		</TABLE>
+																		<TABLE width="100%" border="0" bgcolor="#fffff8" cellpadding="0">
+																			<TR>
+																				<TH height="3"></TH>
+																			</TR>
+																			<TR>
+																				<TD width="10"></TD>
+																				<TD>
+																					<p>
+																						<b>DBTSS; DataBase of Transcriptional Start Sites.</b>
+																					</p>
+																					<p>
+																						To support transcriptional regulation studies, we have constructed the DBTSS, which represents exact positions of transcriptional start sites (TSSs) in the genome based on our unique experimentally validated TSS sequencing method, TSS-seq. This database includes DBTSS data of a major part of human adult and embryonic tissues are covered. DBTSS now contains 491 million TSS tag sequences for collected from a total of 20 tissues and 7 cell cultures. We also integrated our newly generated RNA-seq data of subcellular- fractionated RNAs and ChIP-seq data of histone modifications, RNA polymerase II and several transcriptional regulatory factors in cultured cell lines. We also included recently accumulating external epigenomic data, such as chromatin map of the ENCODE project.
+																					</p>
+																					<p>
+																						Taken together, we provide a unique data resource to investigate what genomic features are observed in a particular genomic coordinates in a wide variety of samples. We believe new DBTSS is helpful to understand biological consequences of the massively identified TSSs and identify human genetic valuations which are associated with disordered transcriptional regulations.
+																					</p>
+																					<p>
+																						<br />
+																						<b>Funding:</b>
+																					</p>
+																					<p>
+																						<a href="https://dbtss.hgc.jp/">DBTSS</a> is supported by JSPS under the grant ID 221S0002<br />
+																					</p>
+																				</TD>
+																				<TD width="15"></TD>
+																			</TR>
+																		</TABLE>
+																		<br>
+																	</TD>
+																</TR>
+															</TABLE>
+														</TD>
+													</TR>
+												</TABLE>
+											</td>
+										</TR>
+										</TR>
+											<td><br></td>
+
+										<TR>
+											<TD><!-- Statistics --> 
+												<TABLE width="100%" bgcolor="#888888" border="0" cellspacing="0" cellpadding="1">
+													<TR>
+														<TD>
+															<TABLE width="100%" bgcolor="#fffff8" border="0" cellspacing="0" cellpadding="0">
+																<TR>
+																	<TD>
+																		<TABLE width="100%" bgcolor="#bed2c3" border="0">
+																			<TR>
+																				<TD><!--cheap trick to get background on row to be continuous--> 
+																					<TABLE width="100%" cellspacing="0" cellpadding="0">
+																						<TR>
+																							<TD align="left">
+																								<FONT size="4">
+																									<A name="TOC"></A>
+																									<B>&nbsp; References</B>
+																								</FONT>
+																							</TD>
+																							<TD align="right">
+																								&nbsp; 
+																							</TD>
+																						</TR>
+																					</TABLE>
+																				</TD>
+																			</TR>
+																		</TABLE>
+																		<TABLE width="100%" border="0" bgcolor="#fffff8" cellpadding="0">
+																			<TR>
+																				<TH height="3"></TH>
+																			</TR>
+																			<TR>
+																				<TD width="10"></TD>
+																				<TD>
+																					
+																					<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/29126224" target="_blank">Ayako Suzuki, Shin Kawano, Toutai Mitsuyama, Mikita Suyama, Yae Kanai, Katsuhiko Shirahige, Hiroyuki Sasaki, Katsushi Tokunaga, Katsuya Tsuchihara, Sumio Sugano, Kenta Nakai, Yutaka Suzuki. DBTSS/DBKERO for integrated analysis of transcriptional regulation. <i>Nucleic Acids Res.</i> 2018 (Database issue).</a></p>
+																					<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/24069199" target="_blank">Suzuki A, Mimaki S, Yamane Y, Kawase A, Matsushima K, Suzuki M, Goto K, Sugano S, Esumi H, Suzuki Y, Tsuchihara K. Identification and characterization of cancer mutations in Japanese lung adenocarcinoma without sequencing of normal tissue counterparts. <i>PLoS One.</i> 2013 Sep 12;8(9).</a></p>
+																					<p><a href='http://www.ncbi.nlm.nih.gov/pubmed/21372179' target="_blank">Yamashita R, Sathira NP, Kanai A, Tanimoto K, Arauchi T, Tanaka Y, Hashimoto S, Sugano S, Nakai K, Suzuki Y. (2011) Genome-wide characterization of transcriptional start sites in humans by integrative transcriptome analysis. <i>Genome Res.</i> 2011 Mar 3.</a></p>
+																					<p><a href='http://nar.oxfordjournals.org/cgi/reprint/gkp066?ijkey=0N2vXfJ0VWRBz33&keytype=ref' target="_blank">Tsuchihara K, Suzuki Y, Wakaguri H, Irie T, Tanimoto K, Hashimoto S, Matsushima K, Mizushima-Sugano J, Yamashita R, Nakai K, Bentley D, Esumi H and Sugano S. (2009) Massive transcriptoional start site analysis of human genes in hypoxia cells. <i>Nucleic Acids Res.</i> 2009 Feb 22.</a></p>
+																					<P><FONT face="courier" size="3"><B>[Japanese]</B></FONT><br>
+																					<a href='http://www.yodosha.co.jp/book/9784758108119.html' target="_blank">"Database Manual" (Yodosha)</a></P>
+																				</TD>
+																				<TD width="15">
+																				</TD>
+																			</TR>
+																		</TABLE>
+																		<BR>
+																	</TD>
+																</TR>
+															</TABLE>
+														</TD>
+													</TR>
+												</TABLE>
+											</td>
+										</TR>
+										</TR>
+											<td><br></td>
+										<TR>
+										<TR>
+											<TD><!-- Contact us --> 
+												<TABLE width="100%" bgcolor="#888888" border="0" cellspacing="0" cellpadding="1">
+													<TR>
+														<TD>
+															<TABLE width="100%" bgcolor="#fffff8" border="0" cellspacing="0" cellpadding="0">
+																<TR>
+																	<TD>
+																		<TABLE width="100%" bgcolor="#bed2c3">
+																			<TR>
+																				<TD>
+																					<A name="Conditions"></A>
+																					<FONT size="4"><B>&nbsp; Contact us</B></FONT>    
+																				</TD>
+																			</TR>
+																		</TABLE>
+																		<TABLE width="100%" bgcolor="#fffff8" cellpadding="0">
+																			<TR>
+																				<TH height="3"></TH>
+																			</TR>
+																			<TR>
+																				<TD width="10"></TD>
+																				<TD>
+																					<address>We welcome your comments and feedback about our database.<br>Please feel free to contact us...... <span id="uman"></span></address>
+																				</TD>
+																				<TD width="15">
+																				</TD>
+																			</TR>
+																		</TABLE>
+																		<BR>
+																	</TD>
+																</TR>
+															</TABLE>
+														</TD>
+													</TR>
+												</TABLE>
+												<BR>
+											</TD>
+										</TR>
+									</TABLE>
+								</div>
+							</td><td valign="top">
+								<TABLE width="300" height="100%" border="0" cellspacing="0" cellpadding="0">
+									<TR>
+										<TD height="100%" valign="top"><!--outer table is for black border--> 
+											<div id="tweet">
+												<a class="twitter-timeline" data-width="250" data-theme="light" href="https://twitter.com/dbkero">Tweets by dbkero</a> <script async id="wtweet" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+											</div>
+											<div id="news">
+												<div><b>News </b></div>
+												<ul>
+													<li>
+														21 Dec. 2017: DBTSS version 10.1 updated.
+													</li>
+													<br /><br />
+													<li>
+														15 Sep. 2017: DBTSS version 10.0 released.
+													</li>
+													<br /><br />
+													<li>
+														1 Sep. 2017: New C1 data of human lung adenocarcinoma cell line (LC-2/ad: (replicate)) are now available (See browser: Single cell -&gt; C1 -&gt; LC-2/ad (replicate)).
+													</li>
+													<br /><br />
+													<li>
+														25 Aug. 2017: New C1 data of human lung adenocarcinoma cell line (LC-2/ad: +Vandetanib) are now available (See browser: Single cell -&gt; C1 -&gt; LC-2/ad +Vandetanib).
+													</li>
+													<br /><br />
+													<li>
+														18 Aug. 2017: The whole genome shotgun (WGS) reads depth data of Lung adenocarcinoma 26 cell lines were updated as bigWig files (See browser: Lung cancer omix -&gt; [cell line (such as LC2/ad)] -&gt; [cell line] wgs (bw)).
+													</li>
+													<br /><br />
+													<li>
+														10 Aug. 2017: New C1 data of human lung adenocarcinoma cell line (LC-2/ad: Registant +Vandetanib) are now available (See browser: Single cell -&gt; C1 -&gt; LC-2/ad +Vandetanib(Resistant)).
+													</li>
+													<br /><br />
+													<li>
+														04 Aug. 2017: New C1 data of human lung adenocarcinoma cell line (LC-2/ad: Registant) are now available (See browser: Single cell -&gt; C1 -&gt; LC-2/ad (Resistant)).
+													</li>
+													<br /><br />
+													<li>
+														<a href="news.html">News Archives ...</a>
+													</li>
+												</ul>
+												<BR>
+											</div>
+										</TD>
+									</TR>
+								</TABLE>
+							</td>
+						</tr>
+						</table>
+					</div>
+					<table width="100%">
+						<tr>
+							<td colspan="2" align="right">
+								<small>genome browser &copy;  2018 <a href="https://github.com/DBKERO/genome_browser" target="_blank">KERO-browse</a></small>
+							</td>
+						</tr>
+					</table>
+					<div id="dbtss_footer"></div>
+				</TD>
+			</TR>
+		</TABLE>
+		<div id="maximize"><a href="#" onclick="return false"><img src="./icons/zoomi.png" /></a></div>
+		
+		<script src="./js/jquery-2.1.1.min.js"></script>
+		<script src="./js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="./js/dbtss_frame_init.js"></script>
+		<script src="js/bigbed.js"></script>
+		<script src="js/bam.js"></script>
+		<script src="js/gunzip.min.js"></script>
+		<script src="./js/kero_browse.js"></script>
+		<script src="./js/kero_browse_track.js"></script>
+		<script src="./js/kero_browse_track_custom.js"></script>
+		<script src="./js/jquery.dataTables.min.js"></script>
+		<script src="./js/dbtss_top.js"></script>
+		
+	</BODY>
+</HTML>

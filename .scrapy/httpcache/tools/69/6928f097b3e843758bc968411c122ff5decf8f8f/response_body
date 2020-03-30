@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>AphidBase | BIPAA</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://bipaa.genouest.org/is/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="https://bipaa.genouest.org/is/wp-content/themes/twentythirteen/js/html5.js"></script>
+	<![endif]-->
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="BIPAA &raquo; Feed" href="https://bipaa.genouest.org/is/feed/" />
+<link rel="alternate" type="application/rss+xml" title="BIPAA &raquo; Comments Feed" href="https://bipaa.genouest.org/is/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/bipaa.genouest.org\/is\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://bipaa.genouest.org/is/wp-includes/css/dist/block-library/style.min.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='UserAccessManagerLoginForm-css'  href='https://bipaa.genouest.org/is/wp-content/plugins/user-access-manager/assets/css/uamLoginForm.css?ver=2.1.12' type='text/css' media='screen' />
+<link rel='stylesheet' id='twentythirteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CBitter%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='https://bipaa.genouest.org/is/wp-content/themes/twentythirteen/genericons/genericons.css?ver=3.03' type='text/css' media='all' />
+<link rel='stylesheet' id='twentythirteen-style-css'  href='https://bipaa.genouest.org/is/wp-content/themes/twentythirteen/style.css?ver=2013-07-18' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='https://bipaa.genouest.org/is/wp-content/themes/twentythirteen/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='https://bipaa.genouest.org/is/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://bipaa.genouest.org/is/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://bipaa.genouest.org/is/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bipaa.genouest.org/is/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://bipaa.genouest.org/is/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.1.4" />
+<link rel="canonical" href="https://bipaa.genouest.org/is/aphidbase/" />
+<link rel='shortlink' href='https://bipaa.genouest.org/is/?p=31' />
+<link rel="alternate" type="application/json+oembed" href="https://bipaa.genouest.org/is/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbipaa.genouest.org%2Fis%2Faphidbase%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://bipaa.genouest.org/is/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbipaa.genouest.org%2Fis%2Faphidbase%2F&#038;format=xml" />
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-68604708-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+		<style type="text/css" id="twentythirteen-header-css">
+			.site-header {
+			background: url(https://bipaa.genouest.org/is/wp-content/uploads/2016/06/cropped-Bando-BIPAA.png) no-repeat scroll top;
+			background-size: 1600px auto;
+		}
+		@media (max-width: 767px) {
+			.site-header {
+				background-size: 768px auto;
+			}
+		}
+		@media (max-width: 359px) {
+			.site-header {
+				background-size: 360px auto;
+			}
+		}
+		</style>
+	</head>
+
+<body class="page-template-default page page-id-31 page-parent sidebar">
+	<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+			<a class="home-link" href="https://bipaa.genouest.org/is/" title="BIPAA" rel="home">
+				<!--h1 class="site-title">BIPAA</h1>
+				<h2 class="site-description">BioInformatics Platform for Agroecosystem Arthropods</h2-->
+			</a>
+
+			<div id="navbar" class="navbar">
+				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+					<button class="menu-toggle">Menu</button>
+					<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
+					<div class="menu-main-container"><ul id="primary-menu" class="nav-menu"><li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-46"><a href="https://bipaa.genouest.org/is/">BIPAA</a>
+<ul class="sub-menu">
+	<li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="https://bipaa.genouest.org/is/news/">News</a></li>
+	<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="https://bipaa.genouest.org/is/bipaa/about/">About</a></li>
+	<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://bipaa.genouest.org/is/bipaa/projects/">Projects</a></li>
+	<li id="menu-item-761" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-761"><a href="https://www.zotero.org/groups/2356637/bipaa">Publications</a></li>
+	<li id="menu-item-434" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-434"><a href="https://bipaa.genouest.org/archive/">Archive</a></li>
+	<li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-553"><a href="https://bipaa.genouest.org/is/how-to-annotate-a-genome/">Annotation guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-31 current_page_item menu-item-has-children menu-item-43"><a href="https://bipaa.genouest.org/is/aphidbase/" aria-current="page">AphidBase</a>
+<ul class="sub-menu">
+	<li id="menu-item-493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a href="https://bipaa.genouest.org/is/aphidbase/iagc/">International Aphid Genomics Consortium (IAGC)</a></li>
+	<li id="menu-item-721" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-721"><a href="https://bipaa.genouest.org/sp/acyrthosiphon_pisum/">Acyrthosiphon pisum</a></li>
+	<li id="menu-item-745" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-745"><a href="https://bipaa.genouest.org/sp/aphis_glycines/">Aphis glycines</a></li>
+	<li id="menu-item-510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-510"><a href="https://bipaa.genouest.org/sp/daktulosphaira_vitifoliae/">Daktulosphaira vitifoliae (grape phylloxera)</a></li>
+	<li id="menu-item-690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-690"><a href="https://bipaa.genouest.org/sp/diuraphis_noxia/">Diuraphis noxia</a></li>
+	<li id="menu-item-768" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-768"><a href="https://bipaa.genouest.org/sp/dysaphis_plantaginea/">Dysaphis plantaginea</a></li>
+	<li id="menu-item-604" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-604"><a href="https://bipaa.genouest.org/sp/myzus_cerasi/">Myzus cerasi</a></li>
+	<li id="menu-item-722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-722"><a href="https://bipaa.genouest.org/sp/myzus_persicae/">Myzus persicae</a></li>
+	<li id="menu-item-605" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-605"><a href="https://bipaa.genouest.org/sp/rhopalosiphum_padi/">Rhopalosiphum padi</a></li>
+</ul>
+</li>
+<li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-44"><a href="https://bipaa.genouest.org/is/parwaspdb/">ParWaspDB</a>
+<ul class="sub-menu">
+	<li id="menu-item-509" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-509"><a href="https://bipaa.genouest.org/sp/aphidius_ervi/">Aphidius ervi</a></li>
+	<li id="menu-item-724" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-724"><a href="https://bipaa.genouest.org/sp/campoletis_sonorensis/">Campoletis sonorensis</a></li>
+	<li id="menu-item-644" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-644"><a href="https://bipaa.genouest.org/sp/cotesia/">Cotesia congregata</a></li>
+	<li id="menu-item-785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-785"><a href="https://bipaa.genouest.org/sp/cotesia_congregata_catalpae/">Cotesia congregata Catalpae</a></li>
+	<li id="menu-item-645" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-645"><a href="https://bipaa.genouest.org/sp/cotesia/">Cotesia flavipes</a></li>
+	<li id="menu-item-646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-646"><a href="https://bipaa.genouest.org/sp/cotesia/">Cotesia glomerata</a></li>
+	<li id="menu-item-648" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-648"><a href="https://bipaa.genouest.org/sp/cotesia/">Cotesia rubecula</a></li>
+	<li id="menu-item-647" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-647"><a href="https://bipaa.genouest.org/sp/cotesia/">Cotesia sesamiae</a></li>
+	<li id="menu-item-781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-781"><a href="https://bipaa.genouest.org/sp/cotesia_typhae/">Cotesia typhae</a></li>
+	<li id="menu-item-649" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-649"><a href="https://bipaa.genouest.org/sp/cotesia/">Cotesia vestalis</a></li>
+	<li id="menu-item-713" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-713"><a href="https://bipaa.genouest.org/sp/hyposoter_didymator/">Hyposoter didymator</a></li>
+	<li id="menu-item-591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-591"><a href="https://bipaa.genouest.org/sp/leptopilina_boulardi/">Leptopilina boulardi</a></li>
+	<li id="menu-item-519" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-519"><a href="https://bipaa.genouest.org/sp/lysiphlebus_fabarum/">Lysiphlebus fabarum</a></li>
+	<li id="menu-item-694" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-694"><a href="https://bipaa.genouest.org/sp/venturia_canescens/">Venturia canescens</a></li>
+</ul>
+</li>
+<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-78"><a href="https://bipaa.genouest.org/is/lepidodb/">LepidoDB</a>
+<ul class="sub-menu">
+	<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="https://bipaa.genouest.org/is/lepidodb/bac-sequences/">BACs (H. armigera and S. frugiperda)</a></li>
+	<li id="menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608"><a href="https://bipaa.genouest.org/sp/ostrinia_scapulalis/">Ostrinia scapulalis</a></li>
+	<li id="menu-item-756" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-756"><a href="https://bipaa.genouest.org/sp/spodoptera_frugiperda_pub/">Spodoptera frugiperda</a></li>
+	<li id="menu-item-711" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-711"><a href="https://bipaa.genouest.org/sp/spodoptera_littoralis/">Spodoptera littoralis</a></li>
+	<li id="menu-item-667" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-667"><a href="https://bipaa.genouest.org/sp/spodoptera_litura/">Spodoptera litura</a></li>
+	<li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-505"><a href="https://bipaa.genouest.org/sp/thaumetopoea_pityocampa">Thaumetopoea pityocampa</a></li>
+</ul>
+</li>
+<li id="menu-item-702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-702"><a href="https://bipaa.genouest.org/is/coleoptera/">Coleoptera</a>
+<ul class="sub-menu">
+	<li id="menu-item-703" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-703"><a href="https://bipaa.genouest.org/sp/harmonia_axyridis/">Harmonia axyridis</a></li>
+	<li id="menu-item-737" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-737"><a href="https://bipaa.genouest.org/sp/rhynchophorus_ferrugineus/">Rhynchophorus ferrugineus</a></li>
+	<li id="menu-item-773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-773"><a href="https://bipaa.genouest.org/sp/sitophilus_oryzae/">Sitophilus oryzae</a></li>
+</ul>
+</li>
+<li id="menu-item-735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-735"><a href="https://bipaa.genouest.org/is/crustacea/">Crustacea</a>
+<ul class="sub-menu">
+	<li id="menu-item-736" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-736"><a href="https://bipaa.genouest.org/sp/armadillidium_vulgare/">Armadillidium vulgare</a></li>
+</ul>
+</li>
+<li id="menu-item-130" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-130"><a href="https://bipaa-galaxy.genouest.org/">Galaxy</a></li>
+<li id="menu-item-138" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-138"><a href="https://bipaa.genouest.org/account">Create or edit your account</a></li>
+</ul></div>					<form role="search" method="get" class="search-form" action="https://bipaa.genouest.org/is/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>				</nav><!-- #site-navigation -->
+			</div><!-- #navbar -->
+		</header><!-- #masthead -->
+
+		<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+						
+				<article id="post-31" class="post-31 page type-page status-publish hentry">
+					<header class="entry-header">
+						
+						<h1 class="entry-title">AphidBase</h1>
+					</header><!-- .entry-header -->
+
+					<div class="entry-content">
+						<h3>The aphid genome database</h3>
+<p>AphidBase is a reference information system providing genomic resources for the study of aphids. It hosts several reference aphid genomes, including the first aphid genome that was sequenced: Acyrthosiphon pisum.</p>
+<p><a href="https://bipaa.genouest.org/is/aphidbase/iagc/"><img class="alignnone wp-image-475 size-full" src="https://bipaa.genouest.org/is/wp-content/uploads/2017/01/logo_iagc-e1483524325677.png" width="30" height="61" /></a>     <a href="https://bipaa.genouest.org/is/aphidbase/iagc/">International Aphid Genomic Consortium (IAGC)</a></p>
+<p>Currently, AphidBase provides access to the following aphid species:</p>
+<div class="box">
+<p><img class="size-full wp-image-25" src="https://bipaa.genouest.org/is/wp-content/uploads/2015/09/Acyrthosiphon-pisum_medium-e1444138271197.jpg" alt="Acyrthosiphon pisum" width="200" height="150" /><br />
+<a href="https://bipaa.genouest.org/sp/acyrthosiphon_pisum/"></p>
+<div class="overbox">
+<div class="title overtext">Acyrthosiphon pisum</div>
+<div class="tagline overtext">Pea Aphid, LSR1 clone genome</div>
+</div>
+<p></a>
+</div>
+<div class="box">
+<p><img class="size-full wp-image-26" src="https://bipaa.genouest.org/is/wp-content/uploads/2015/12/aphis_glycines-e1449482503408.jpg" alt="Aphis glycines" width="200" height="150" /><br />
+<a href="https://bipaa.genouest.org/sp/aphis_glycines/"></p>
+<div class="overbox">
+<div class="title overtext">Aphis glycines</div>
+<div class="tagline overtext">Soybean aphid</div>
+</div>
+<p></a>
+</div>
+<div class="box">
+<p><img class="size-full wp-image-26" src="https://bipaa.genouest.org/is/wp-content/uploads/2015/12/phylloxera-e1449482985849.jpg" alt="Daktulosphaira vitifoliae" width="200" height="150" /><br />
+<a href="https://bipaa.genouest.org/sp/daktulosphaira_vitifoliae/"></p>
+<div class="overbox">
+<div class="title overtext">Daktulosphaira vitifoliae</div>
+<div class="tagline overtext">Grape phylloxera</div>
+</div>
+<p></a>
+</div>
+<div class="box">
+<p><img class="size-full wp-image-26" src="https://bipaa.genouest.org/is/wp-content/uploads/2018/05/diuraphis_noxia.png" alt="Diuraphis noxia" width="200" height="150" /><br />
+<a href="https://bipaa.genouest.org/sp/diuraphis_noxia/"></p>
+<div class="overbox">
+<div class="title overtext">Diuraphis noxia</div>
+<div class="tagline overtext">Russian wheat aphid</div>
+</div>
+<p></a>
+</div>
+<div class="box">
+<p><img class="size-full wp-image-26" src="https://bipaa.genouest.org/is/wp-content/uploads/2019/11/dysaphis_plantaginea.jpg" alt="Dysaphis plantaginea" width="200" height="150" /><br />
+<a href="https://bipaa.genouest.org/sp/dysaphis_plantaginea/"></p>
+<div class="overbox">
+<div class="title overtext">Dysaphis plantaginea</div>
+<div class="tagline overtext">Rosy apple aphid</div>
+</div>
+<p></a>
+</div>
+<div class="box">
+<p><img class="size-full wp-image-26" src="https://bipaa.genouest.org/is/wp-content/uploads/2017/07/myzus-cerasi.png" alt="Myzus cerasi" width="200" height="150" /><br />
+<a href="https://bipaa.genouest.org/sp/myzus_cerasi/"></p>
+<div class="overbox">
+<div class="title overtext">Myzus cerasi</div>
+<div class="tagline overtext">Black Cherry Aphid</div>
+</div>
+<p></a>
+</div>
+<div class="box">
+<p><img class="size-full wp-image-26" src="https://bipaa.genouest.org/is/wp-content/uploads/2015/10/Myzus_persicae-e1444138456337.jpg" alt="Myzus persicae" width="200" height="150" /><br />
+<a href="https://bipaa.genouest.org/sp/myzus_persicae/"></p>
+<div class="overbox">
+<div class="title overtext">Myzus persicae</div>
+<div class="tagline overtext">G006 and O clones genome</div>
+</div>
+<p></a>
+</div>
+<div class="box">
+<p><img class="size-full wp-image-26" src="https://bipaa.genouest.org/is/wp-content/uploads/2017/07/rhopalosiphum-padi.png" alt="Rhopalosiphum padi" width="200" height="150" /><br />
+<a href="https://bipaa.genouest.org/sp/rhopalosiphum_padi/"></p>
+<div class="overbox">
+<div class="title overtext">Rhopalosiphum padi</div>
+<div class="tagline overtext">Bird cherry-oat aphid</div>
+</div>
+<p></a>
+</div>
+<h3>Useful links:</h3>
+<ul>
+<li><a href="https://listes.inra.fr/sympa/info/aphidgenomics">Aphidgenomics mailing list</a></li>
+<li><a href="https://bipaa.genouest.org/is/phylloxera-genomics-initiative/">Phylloxera Genomics Initiative</a></li>
+<li><a href="http://aphid.aphidnet.org/index.php">APhID</a></li>
+<li><a href="http://aphid.speciesfile.org/Common/basic/Taxa.aspx?TaxonNameID=2525">Aphid Species File</a></li>
+<li><a href="http://www.aphidsonworldsplants.info">Aphids on the World&#8217;s Plants</a></li>
+<li><a href="http://www4.inra.fr/encyclopedie-pucerons">Encyclop&#8217;aphid (in french)</a></li>
+<li><a href="https://wiki.cgb.indiana.edu/display/aphid/Introduction">WiKi</a></li>
+</ul>
+											</div><!-- .entry-content -->
+
+					<footer class="entry-meta">
+											</footer><!-- .entry-meta -->
+				</article><!-- #post -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+</div><!-- #comments -->			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+	<div id="tertiary" class="sidebar-container" role="complementary">
+		<div class="sidebar-inner">
+			<div class="widget-area">
+				<aside id="tag-widget-2" class="widget TagWidget"><h3 class="widget-title">News</h3><ul class = "posts-by-tag-list"><li class="posts-by-tag-item aphidbase bipaa" id="posts-by-tag-item-658"><a class = "posts-by-tag-item-title" href="https://bipaa.genouest.org/is/giga-iii-third-global-invertebrate-genomics-alliance-research-conference-and-workshop/">GIGA III: Third Global Invertebrate Genomics Alliance Research Conference and Workshop</a></li><li class="posts-by-tag-item aphidbase bipaa" id="posts-by-tag-item-651"><a class = "posts-by-tag-item-title" href="https://bipaa.genouest.org/is/european-congress-of-entomology-naples-2-6-july-2018/">European Congress of Entomology, Naples 2-6 July 2018</a></li><li class="posts-by-tag-item aphidbase bipaa" id="posts-by-tag-item-622"><a class = "posts-by-tag-item-title" href="https://bipaa.genouest.org/is/iagc-workshop-at-entomology-2017-denver-2017-11-08/">IAGC Workshop at Entomology 2017 (Denver, 2017-11-08)</a></li><li class="posts-by-tag-item aphidbase" id="posts-by-tag-item-424"><a class = "posts-by-tag-item-title" href="https://bipaa.genouest.org/is/9th-iagc-workshop-orlando-program/">9th IAGC workshop Orlando - program</a></li><li class="posts-by-tag-item aphidbase" id="posts-by-tag-item-135"><a class = "posts-by-tag-item-title" href="https://bipaa.genouest.org/is/ehc-7-european-hemiptera-congress/">EHC 7 – European Hemiptera Congress</a></li></ul></aside>			</div><!-- .widget-area -->
+		</div><!-- .sidebar-inner -->
+	</div><!-- #tertiary -->
+
+		</div><!-- #main -->
+		<footer id="colophon" class="site-footer" role="contentinfo">
+				<div id="secondary" class="sidebar-container" role="complementary">
+		<div class="widget-area">
+					<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">News</h3>		<ul>
+											<li>
+					<a href="https://bipaa.genouest.org/is/special-current-opinion-in-insect-science-issue-on-arthropod-genomes-with-editorial-by-i5k/">Special Current Opinion in Insect Science issue on arthropod genomes, with editorial by i5k</a>
+									</li>
+											<li>
+					<a href="https://bipaa.genouest.org/is/giga-iii-third-global-invertebrate-genomics-alliance-research-conference-and-workshop/">GIGA III: Third Global Invertebrate Genomics Alliance Research Conference and Workshop</a>
+									</li>
+											<li>
+					<a href="https://bipaa.genouest.org/is/european-congress-of-entomology-naples-2-6-july-2018/">European Congress of Entomology, Naples 2-6 July 2018</a>
+									</li>
+											<li>
+					<a href="https://bipaa.genouest.org/is/iagc-workshop-at-entomology-2017-denver-2017-11-08/">IAGC Workshop at Entomology 2017 (Denver, 2017-11-08)</a>
+									</li>
+											<li>
+					<a href="https://bipaa.genouest.org/is/scheduled-downtime-aug-10/">Scheduled downtime Aug 10</a>
+									</li>
+					</ul>
+		</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="https://bipaa.genouest.org/is/wp-login.php">Log in</a></li>
+			<li><a href="https://bipaa.genouest.org/is/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://bipaa.genouest.org/is/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://bipaa.genouest.org/is/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside><aside id="text-4" class="widget widget_text">			<div class="textwidget"><img src="https://bipaa.genouest.org/is/wp-content/uploads/2016/06/bipaa.png"/></div>
+		</aside>		</div><!-- .widget-area -->
+	</div><!-- #secondary -->
+
+			<div class="site-info">
+							</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	<script type='text/javascript' src='https://bipaa.genouest.org/is/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='https://bipaa.genouest.org/is/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='https://bipaa.genouest.org/is/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b'></script>
+<script type='text/javascript' src='https://bipaa.genouest.org/is/wp-content/themes/twentythirteen/js/functions.js?ver=20150330'></script>
+<script type='text/javascript' src='https://bipaa.genouest.org/is/wp-includes/js/wp-embed.min.js?ver=5.1.4'></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-US" prefix="bioschema: http://bioschemas.org/">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"><!-- automatically added by Apache -->
+<script type="application/ld+json">{
+		"@context" : [ "https://schema.org/" ],
+		"@type" : "Organization",
+		"url" : "https://web.expasy.org/compute_pi",
+  		"name": "Compute pI/Mw"
+		
+		, "memberof" : {
+				"@type" : "NGO",
+				"name"  : "SIB Swiss Institute of Bioinformatics",
+				"url"   : "https://sib.swiss/"
+			        }
+		, "parentOrganization" : 
+				{
+				"@type" : "Organization",
+                                "name"  : "ExPASy",
+                                "url"   : "https://www.expasy.org/"
+				}
+		}</script><!-- automatically added by Apache -->
+    <link rel="icon" href="https://web.expasy.org/favicon.ico" ><!-- automatically added by Apache -->
+    <link rel="stylesheet" href="/css/sib_css/sib.css" type="text/css" media="screen" charset="utf-8" >
+	   <link rel="stylesheet" href="/css/sib_css/sib_print.css" type="text/css" media="print" charset="utf-8" >
+           <!--[if lte IE 6]>
+	   <link rel="stylesheet" href="/css/sib_css/sib_ie6.css" type="text/css" media="screen" title="" charset="utf-8">
+           <![endif]-->
+           <link rel="stylesheet" href="/css/base.css" type="text/css"><!-- automatically added by Apache -->
+<TITLE>ExPASy - Compute pI/Mw tool</TITLE>
+
+<meta name="keywords" contents="calculate, predict, calculation, prediction, isoelectric point, molecular weight, position, 2D Gel, locate, coordinates">
+
+</head>
+
+<!-- 1tools 1swiss-prot -->
+
+<body
+ typeof="schema:WebPage"> 
+<!-- ********************************************************************************************** -->
+<!-- START OF HEADER information on top of the page -->
+<div id='sib_top'><a name='TOP'></a></div>
+<div id='sib_container'>
+
+<!-- TODO: Change id to "sib_header" or "sib_header_small" -->
+<div id='sib_header_small'>
+
+<!-- SIB-ExPASy -->
+<div id="sib_expasy_logo" property="schema:isPartOf" typeof="schema:CreativeWork" >
+<a href="https://sib.swiss/" id="sib_link" title="SIB Swiss Institute of Bioinformatics"></a>
+<a property="schema:url" href="https://www.expasy.org" id="expasy_link" title="ExPASy - SIB Bioinformatics Resource Portal"></a>
+</div>
+<!-- SIB-ExPASy END -->
+
+<div class='sib_title_no_logo'>
+<h1><a href="https://web.expasy.org/compute_pi">Compute pI/Mw</a></h1>
+</div>
+
+<! -- Additionnal resource header -->
+<div id='resource_header'></div>
+	<div id='sib_header_nav'>
+		<a property="" href="https://web.expasy.org/compute_pi" title="Home page">Home</a>
+		&nbsp;|&nbsp;
+		<a style="font-weight: bold; color: rgb(204,0,0) !important;" href="/contact" title="Contact">Contact</a>
+	</div>
+</div>
+<!-- END OF HEADER -->
+<!-- ********************************************************************************************** -->
+<div id='sib_body'>
+<!-- automatically added by Apache -->
+<H1>Compute pI/Mw tool</H1>
+
+
+
+<HR>
+
+<B>Compute pI/Mw</B> is a tool which allows the computation of the theoretical
+
+pI (isoelectric point) and Mw (molecular weight) 
+
+for a list of <A HREF="https://www.uniprot.org">UniProt Knowledgebase (Swiss-Prot or TrEMBL)</A> entries or for user entered
+
+sequences [<A HREF=/compute_pi/pi_tool-ref.html>reference</A>].<P>
+
+<HR>
+
+<A HREF="/compute_pi/pi_tool-doc.html">Documentation</A> is available.
+
+<HR>
+
+
+
+<form ENCTYPE="multipart/form-data" method=POST action="/cgi-bin/compute_pi/pi_tool">
+
+
+
+<H2>Compute pI/Mw for Swiss-Prot/TrEMBL entries or a user-entered sequence</H2>
+
+
+
+Please enter one or more UniProtKB/Swiss-Prot protein identifiers (ID) (e.g. <I>ALBU_HUMAN</I>) or UniProt Knowledgebase accession
+
+numbers (AC) (e.g. <I>P04406</I>), separated by spaces, tabs or newlines. Alternatively,
+
+enter a protein sequence in single letter code. The theoretical 
+
+<I>pI</I> and <I>Mw</I> (molecular weight) will then be computed.
+
+<P>
+
+<textarea name="protein" rows=10, cols=40></textarea>
+
+
+
+
+
+<P>
+
+Or upload a file from your computer, containing one Swiss-Prot/TrEMBL ID/AC or one sequence per line: 
+
+<input type=file size=20 name=upfile>
+
+
+
+<p>
+
+Resolution: 
+
+<input type="radio" name="resolution" value="average" checked>Average
+
+or 
+
+<input type="radio" name="resolution" value="monoisotopic">Monoisotopic
+
+<input name="mandatory" class="mandatory"><P>
+
+<input type=submit value="Click here to compute pI/Mw"><INPUT TYPE="reset" VALUE="Reset"><p>
+
+
+
+</form>
+
+
+
+<HR> 
+
+
+<!-- sib_body -->
+<br clear="left" />
+</div>
+<!-- ********************************************************************************************** -->
+<!-- START OF FOOTER information at the bottom of the page -->
+<div id = 'sib_footer'>			
+  <!-- This part of the footer is _left_ justified and should contain SIB on the very left -->	
+  <div id = 'sib_footer_content' property="schema:creator" typeof="schema:NGO">
+    <a property="schema:url" href="https://sib.swiss/" ><span property="schema:name">SIB Swiss Institute of Bioinformatics</span></a>&nbsp;|&nbsp;<a href = "https://www.expasy.org/disclaimer.html">Disclaimer</a>
+	<!-- This part of the footer is _right_ justified -->
+	<div id = "sib_footer_right">	
+      <a href="#TOP" id = "sib_footer_gototop"><span style = "padding-left: 10px">Back to the Top</span></a>				
+    </div>
+  </div>
+</div>
+<!-- END OF FOOTER -->
+</div> 
+<!-- sib_container -->
+
+<script async="async" src='https://www.google-analytics.com/analytics.js' type="text/javascript"></script>
+<script type="text/javascript"/>
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-23625305-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+</script>
+<!-- automatically added by Apache -->
+<!-- automatically added by Apache -->
+</body>
+
+</html>
+

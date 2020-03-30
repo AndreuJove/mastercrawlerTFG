@@ -1,0 +1,19 @@
+Cache-Control: public, max-age=86400
+Content-Type: text/html
+Content-Encoding: gzip
+Content-Md5: 4icWwQBXZYey/anvz6QY7g==
+Last-Modified: Wed, 13 Jun 2018 20:51:24 GMT
+Etag: 0x8D5D16F6D15EE31
+Vary: Accept-Encoding
+Server: Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0
+X-Ms-Request-Id: 706dfd46-801e-006d-64c3-063bde000000
+X-Ms-Version: 2009-09-19
+X-Ms-Lease-Status: unlocked
+X-Ms-Blob-Type: BlockBlob
+Access-Control-Allow-Origin: *
+X-Powered-By: ARR/3.0
+X-Powered-By: ASP.NET
+Request-Context: appId=cid-v1:40b807cf-79d9-42fb-9e0a-8e078447c760
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+Date: Mon, 30 Mar 2020 18:47:04 GMT

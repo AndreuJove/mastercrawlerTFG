@@ -1,0 +1,19 @@
+Date: Mon, 30 Mar 2020 18:48:10 GMT
+Content-Type: text/html; charset=utf-8
+Server: GitHub.com
+Status: 200 OK
+Vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With
+Etag: W/"48a6de199d383bafd860250915607bd2"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Expect-Ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+Content-Security-Policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com wss://live.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com
+Content-Encoding: gzip
+Set-Cookie: _gh_sess=1R%2B3Tk0muama3ZzjS1yPJG9By8FflP7wm6wNM4YJhn%2BV%2FAnZFkXR479qM3V8Ezi7QCs0aAno5dEQNYqRDpme74TThEoeNd8GanOsYkagYF2DrscAHGrvNR19qmlyOUGcbGnua31tzdKoNucpyoracEW0PfAx9EAPyI0sf3C1YbJygtGR8ivsUDoBbQj%2BnC8WlZScltxZGWE4BCEpDH678InfDVAlM%2BIJ2yDlNMCUPlu0m3fcW7X97Pcik5UJUefnXDcfnJtoEMN%2FWJvngSSsyA%3D%3D--NgEuw4XJ13R7%2Bibi--pDjcrBmZKfbZ%2FVwCq445eg%3D%3D; Path=/; HttpOnly; Secure
+Set-Cookie: _octo=GH1.1.665433553.1585594090; Path=/; Domain=github.com; Expires=Tue, 30 Mar 2021 18:48:10 GMT; Secure
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Tue, 30 Mar 2021 18:48:10 GMT; HttpOnly; Secure
+Accept-Ranges: bytes
+X-Github-Request-Id: CE2C:2D3A8:E020D4:1421B4C:5E823EE1

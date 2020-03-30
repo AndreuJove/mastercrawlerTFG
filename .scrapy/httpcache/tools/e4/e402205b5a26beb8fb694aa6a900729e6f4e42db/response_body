@@ -1,0 +1,140 @@
+ <html>
+   <head>
+     <title>AffyProbeMiner</title>
+     <link rel="stylesheet" type="text/css" href="custstyle.htm"">
+   </head>
+
+   <body>
+     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+       <tr>
+         <td>
+             
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+ 
+<TR>
+	<TD><IMG SRC="images/gene-chip.jpg" WIDTH="75" HEIGHT="75">
+</TD><TD>
+<IMG SRC="images/AffyProbeMiner.gif" WIDTH="175" HEIGHT="75" ALT="AffyProbeMiner logo">
+</TD>
+<TD align="left" width="55%" border="0" background="images/fade.jpg"></TD>
+
+<TD>
+    <a href="http://dbbb.georgetown.edu"><IMG SRC="images/gu_dbbb.png" WIDTH="175" HEIGHT="75" ALT="Department of Biostatistics, Bioinformatics and Biomathematics"></a></TD>
+
+	
+<TD>
+<a href="http://www.cit.nih.gov/home.asp">
+      <IMG SRC="images/cit.gif" WIDTH="175" HEIGHT="75" ALT="Center for Information Technology"></a></TD>
+
+<TD>
+<a href="http://discover.nci.nih.gov">
+			<IMG SRC="images/gbg.jpg" WIDTH="300" HEIGHT="75" ALT="Genomics and Bioinformatics Group"></a></TD>
+	</TR>
+</table>
+
+
+                 
+ 
+  <table width="100%" border="0" cellspacing="5">
+    <tbody class="MENUBAR">
+      <tr class="MENUBAR">
+          <td class="SELECTED" align="center"><a class="SELECTED" href="home.html"><font color="white">Home</font></a></td>
+          <td class="MENUBUTTON" align="center"><a class="MENUCHOICE" href="downloadcdf.html"><font color="white">Remapped CDF</font></a></td>
+          <td class="MENUBUTTON" align="center"><a class="MENUCHOICE" href="online.html"><font color="white">Web Server</font></a></td>
+          <td class="MENUBUTTON" align="center"><a class="MENUCHOICE" href="downloadsw.html"><font color="white">Download Software</font></a></td>
+          <td class="MENUBUTTON" align="center"><a class="MENUCHOICE" href="userguide.html"><font color="white">User Guide</font></a></td>
+          <td class="MENUBUTTON" align="center"><a class="MENUCHOICE" href="help.html"><font color="white">FAQ</font></a></td>
+          <td class="MENUBUTTON" align="center"><a class="MENUCHOICE" href="credits.html"><font color="white">Credits</font></a></td>
+          <td class="MENUBUTTON" align="center"><a class="MENUCHOICE" href="links.html"><font color="white">Links</font></a></td>
+      </tr>
+    </tbody>
+  </table>
+             
+
+<p class=DESCTEXT><center><font color="#002EA1" size="+2"><i>AffyProbeMiner</i></font></center></p>
+             
+<p class=DESCTEXT>
+<B><font size="+1"> The problem: </font></B>
+<table width="80%" align="center">
+<tr><td align="justify">
+<font color="red"> 
+<i>
+Between the time the probes for a given short oligonucleotide chip were designed, and the time an analysis is made, the knowledge of expected transcripts for a given organism might have changed. Unless one includes the latest development in transcripts into an analysis, the analysis could suffer from what we like to call a Dorian Gray effect. The chip itself does not change, which means that the probes and their respective sequences remain the same, while the knowledge of the transcripts, and eventually their sequence, might evolve, and in time the immobility of the probe and probe sets give an uglier picture of the biological phenomena to study.
+</i></font>
+</td>
+</tr>
+<tr align="right">
+<td><i> -- Laurent Gautier [in <a href="http://www.bioconductor.org/repository/devel/vignette/altcdfenvs.pdf"> Alternative CDF environments </a>] </i>
+</td>
+</tr>  
+</table>
+<p class=DESCTEXT>
+
+<font size="+1"><B>The solution: </B></font> AffyProbeMiner consists of a set of Perl programs to
+<ul>
+<li> generate a collection of complete coding sequences (CCDSs) composed of <ul><li>RefSeq records with accessions (<i>e.g.</i> NM_012345)</li> <li>CCDSs in GenBank</li></ul>
+<li> regroup probes in AffyMetrix chips into probe sets. The probes in a probe set map to a consistent set of CCDSs 
+</ul>
+<p class=DESCTEXT>
+The practical consequence of the improved grouping and mapping is that the individual probes are members of a consistent probe set - that is, they hybridize to the same mRNA transcript (or set of mRNA transcripts), and therefore are measuring the same entity (or entities).
+<br>
+<br>
+<table width="100%" align="left">
+<tr><td width="50%">
+<font size="+2" color="#C11919"> AffyProbeMiner Features </font>
+</td>
+<td width="50%" align="center">
+<font size="+2" color="#C11919"> Relationship of original and remapped probe sets </font>
+</td></tr></table>
+<br>
+<p>
+<table width="100%" valign="top">
+<tr><td with="50%"> 
+<table>
+<tr><td><b><a href="downloadcdf.html">Download Remapped CDF</a></b></td></td> </tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>CDFs generated for all Affymetrix chips are available in Affymetrix CDF format or in Bioconductor R package format for download.
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b><a href="online.html">Web Server</a></b></td></tr>
+
+<tr><td>&nbsp;</td></tr>
+<tr><td>A file of probe sequences in FASTA format can be uploaded, and remapped CDFs will be generated from the CCDS database. 
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b><a href="downloadsw.html">Download Remapping Software</a></b></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>All Perl programs are available for download.
+</td></tr>
+</table>
+</td>
+<td width="50%" align="right" valign="top"><IMG width="600" height="450" SRC="images/altcdf_redefine_distribution.jpg"></td></tr> 
+</table>
+<table width="100%" align="left">
+<tr><td width="50%">&nbsp;</td><td width="50%" align="center"><a href="data/altcdf_distribution.xls">Download Excel spreadsheet to rotate the 3D histogram </font></a></td></tr></table> 
+     </div>
+<br>
+<br>
+<br>
+
+
+             <hr></hr>
+<p class="FOOTERTEXT">AffyProbeMiner is a joint development of the <a href="http://discover.nci.nih.gov">
+Genomics and Bioinformatics Group, Laboratory of Molecular Pharmacology (LMP), Center for Cancer
+Research (CCR) National Cancer Institute (NCI)</a> and <a href="http://dbbb.georgetown.edu"> Department of Biostatistics, Bioinformatics, and Biomathematics</a>, <a href="http://www.georgetown.edu"> Georgetown University Medical Center. </a> If you have any problems, questions or feedback on the tool, please
+<a href="mailto:hong_cao@sra.com?cc=david_kane@sra.com?cc=hl224@georgetown.edu&subject=AffyProbeMiner">email us.</a></p>
+<p class="FOOTERTEXT"><a href="disclaimer.do">Notice and Disclaimer</a></p>
+
+         </td>
+       </tr>
+
+     </table>
+
+   </body>
+ </html>

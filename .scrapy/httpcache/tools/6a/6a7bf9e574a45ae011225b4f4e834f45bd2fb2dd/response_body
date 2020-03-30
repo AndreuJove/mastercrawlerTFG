@@ -1,0 +1,46 @@
+<HTML>
+<head> <title> DHSMAP (Decay of Haplotype Sharing MAPping software)</title></head>
+<BODY> 
+<br>
+
+<H2><CENTER> DHSMAP </CENTER> </H2>
+<CENTER> version 2.0 <spacer type=horizontal size=10> 
+October 18, 2001 </CENTER>  <spacer type=vertical size=6>
+<CENTER> Copyright(C) <spacer type=horizontal size=10> 
+Andrew Strahs, Kenneth Wilder, Mary Sara McPeek </CENTER>  
+<spacer type=vertical size=6>
+<HR>
+<br>
+
+<blockquote>
+The following files describe the usage, input and output of our DHSMAP
+software for fine-mapping by linkage disequilibrium.  DHSMAP implements
+the mapping methods developed by McPeek and Strahs (1999), 
+<tt><A HREF ="http://www.journals.uchicago.edu/AJHG/journal/issues/v65n3/981087/brief/981087.abstract.html">Assessment of linkage disequilibrium 
+by the decay of haplotype sharing, 
+with application to fine-scale genetic mapping</A>, 
+American Journal of Human Genetics 65:858-875. </tt>
+<br>
+<br>
+<br>
+<CENTER> <dt> <A HREF="README"> <b> README </b></A> </CENTER>
+<br>
+<CENTER> <dt> <A HREF="Changelog"> <b> Changelog </b></A> </CENTER>
+<br>
+<CENTER> <dt> <A HREF="overview.txt"> <b> Overview </b></A> </CENTER>
+<br>
+<CENTER> <dt> <A HREF="searchproc.txt"> 
+<b> Search Procedures </b></A> </CENTER>
+<br>
+<CENTER> <dt> <A HREF="input.txt"> <b> Input </b></A> </CENTER>
+<br>
+<CENTER> <dt> <A HREF="output.txt"> <b> Output </b></A> </CENTER>
+<br>
+<CENTER> <dt> <A HREF="tips.txt"> <b> Tips </b></A> </CENTER>
+<br>
+<CENTER> <dt> <A HREF="download.html"> <b> Download DHSMAP </b></A> </CENTER>
+<br>
+<br>
+
+</HTML>
+</BODY> 

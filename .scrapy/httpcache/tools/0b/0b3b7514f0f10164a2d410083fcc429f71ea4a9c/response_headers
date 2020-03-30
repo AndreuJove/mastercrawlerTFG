@@ -1,0 +1,9 @@
+Date: Mon, 30 Mar 2020 18:48:53 GMT
+Server: PasteWSGIServer/0.5 Python/2.7.11
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html; charset=UTF-8
+Location: /root?tool_id=toolshed.pasteur.fr%2Frepos%2Ffmareuil%2Furgi_tools%2FchangeGffFeatures%2F1.0.0
+Set-Cookie: galaxysession=3ce3e2281e4506fbc8893d59a62f84d8c97b3df63e5331bf32d2c033e5c69826fa3c76eb5817c0a0; expires=Sun, 28-Jun-2020 20:48:53 GMT; httponly; Max-Age=7776000; Path=/; secure; Version=1
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=15768000; includeSubDomains

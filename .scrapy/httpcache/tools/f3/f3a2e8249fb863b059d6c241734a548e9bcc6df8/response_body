@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  
+     <head>
+            <title>
+	            AlignMe - Alignment of membrane proteins based on substitution matrices, hydrophobicity scales and prediction profiles (transmembrane or secondary (TM or SSpred)) or two averaged multiple sequence alignments based on hydrophobicity
+            </title>
+
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+            <meta name="keywords" lang="en-us" content="AlignMe, Align, Me, sequence, protein, alignment, membrane, proteins, membraneproteins, hydrophobicity, amino, acids, acid, hydrophobic, hydrophob, hydropathy, protein, transmembrane, profiles, scales, profile, scale, secondary, structure, predicitions, align, compare, alpha, beta, protein, structures, sequence, analysis, KD, Kyte, Doolittle, vonHeijne, HWvH, Hessa, White, vtml, blosum, phat, slim, bbTM, jufo, psipred, memsat, memsat3, OCTOPUS, TMBpro, triangular, sinoid, rectangular, sliding, window ">
+            <meta name="keywords" lang="en" content="AlignMe, Align, Me, sequence, protein, alignment, membrane, proteins, membraneproteins, hydrophobicity, amino, acids, acid, hydrophobic, hydrophob, hydropathy, protein, transmembrane, profiles, scales, profile, scale, secondary, structure, predicitions, align, compare, alpha, beta, protein, structures, sequence, analysis, KD, Kyte, Doolittle, vonHeijne, HWvH, Hessa, White, vtml, blosum, phat, slim, bbTM, jufo, psipred, memsat, memsat3, OCTOPUS, TMBpro, triangular, sinoid, rectangular, sliding, window ">
+            <meta name="keywords" lang="de" content="AlignMe, Align, Me, Sequenz, Protein, Alignment, Sequenzalignment, Transmembranproteine, Membran, Proteine, Hydrophobizitaet, Membranprotein, Transmembranprotein, Membranproteine, Profile, Skalen, Profil, Skala, Sekundaerstrukturvorhersagen, Vorhersagen, alignen, alpha, beta, Protein, Struktur, Vergleich, Sequenzvergleich, Sequenz, Analyse, Aminosaeuren, AS, hydrophob, hydrophobe, KD, Kyte, Doolittle, vonHeijne, HWvH, Hessa, White, vtml, blosum, phat, slim, bbTM, jufo, psipred, memsat, memsat3, OCTOPUS, TMBpro, triangular, sinoid, rectangular, Fenster">
+            <meta name="description"    content= "AlignMe provides alignments based on substitution matrices, hydrophobicity scales or profiles (e.g. transmembrane or secondary structure predictions). Therefore AlignMe uses a Needleman-Wunsch algorithm with an affine gap penalty scheme.">
+            <meta name="author"         content="E. Sarti, M. Stamm, K. Khafizov, R. Staritzbichler, L. Forrest">
+            <meta name="DC.Publisher"   content="E. Sarti, M. Stamm, K. Khafizov, R. Staritzbichler, L. Forrest">
+            <meta name="DC.Date"        content="2019-06-01T00:00:00+02:00">
+            <meta name="DC.Identifier"  content="index.html">
+            <meta name="DC.Language"    content="en">
+            <meta name="DC.Date.created" content="2019-06-01T00:00:00+02:00">
+            <meta name="SELF.Pagetype"  content="page">
+            
+            <!-- Bootstrap: get remote code instead of local? -->
+            <link href="styles/bootstrap.css" rel="stylesheet" />
+
+            <!-- AlignMe -->
+            <link href="styles/AlignMe.min.css" rel="stylesheet" type="text/css"/>
+     
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="scripts/forrest.js"  ></script>
+            <script type="text/javascript" src="scripts/AlignMe.js"  ></script>
+     
+            <!-- google analytics -->
+            <script type="text/javascript">
+
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-24120730-1']);
+              _gaq.push(['_trackPageview']);
+
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+
+            </script>
+
+
+            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+
+            <!-- search for jobs -->
+	    <script type="text/javascript">
+                function chkFormular () 
+                {
+                    document.getElementById("Searchinputmissing").style.display = 'none';
+                    if (document.getElementById("SearchParameter").value == "")
+                    {
+                            document.getElementById("Searchinputmissing").style.display = 'block';
+                            return false;
+                    }
+                    else
+                    {
+                            return true;
+                    }
+                }
+	     </script>
+
+    </head>
+
+  
+<!-- styling and logos for header -->
+<body style="background-color:rgba(76,74,74,0.34)"> <!-- gray -->
+    <div class="container">
+        <div class="col-lg-1" id="left-column"></div> <!-- gray panel on left -->
+        <div class="col-lg-10" id="center-column" style="background-color:#ffffff"> <!-- white panel in center -->
+                <div class="row"> <!-- logo header row -->
+                    <div id="icname-left-banner" class="col-xs-12 col-sm-3 col-md-3 col-lg-3"  style="text-align:left" >
+                        <a href="http://www.ninds.nih.gov"><img id="logo" src="images/ninds_logo_60px-high.png" alt="Logo" style="margin:25px 0px 10px 0px" /></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="text-align:center">
+                        <h1 style="font-size:50px;font-weight:bold">AlignMe</h1>
+                    </div>
+                    <div class="col-xs-8  col-xs-offset-4 col-sm-3  col-sm-offset-0 col-md-3 col-md-offset-0  col-lg-3 col-lg-offset-0 " >
+                        <img id="logo" src="images/AlignMe_logo_on_white_2019-small.png" alt="Logo" style="margin:5px 0px 5px 0px" />
+                    </div>
+                </div> <!-- row -->
+
+
+                <nav class="navbar  navbar-expand-lg navbar-inverse">  <!-- navigation bar -->
+                   <!-- <div class="container-fluid">-->
+                   <!-- Brand and toggle get grouped for better mobile display -->
+                   <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                   </div>
+                
+
+                   <!-- Collect the nav links, forms, and other content for toggling -->
+                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li id="home-item-menu" class="active"><a href="index.html">Home</a></li>
+                                <li id="alignme-item-menu"><a href="AlignMePW.html">Sequence to Sequence Alignment</a></li>
+                                <li id="alignme-msa-item-menu"><a href="AlignMe_MSA.html">Align Two Multiple Sequence Alignments</a></li>
+                                <li id="faq-item-menu"><a href="FAQ.html">AlignMe FAQ</a></li>
+                              </li>
+                            </ul>
+                   </div>
+
+                   <!-- /.navbar-collapse 
+                   </div>-->
+                   <!-- /.container-fluid -->
+                </nav> <!-- navigation bar -->
+
+<!-- div still to close: center, container, -->
+
+<!-- start main content -->
+
+<!-- subtitle -->
+<h2>Welcome to the AlignMe Web Server</h2>
+
+<br>
+<div id="abstract">
+<b>AlignMe</b> (for sequence Alignment of Membrane Proteins) is a very flexible sequence alignment program that allows the use of various different measures of similarity. These similarity measures include: substitution matrices, hydrophobicity scales and any kind of profiles (i.e. secondary structure predictions or transmembrane predictions). AlignMe can be used to examine detailed similarity between homologous proteins even if there is no notable sequence similarity. The predefined gap/weight sets have been optimized for membrane proteins, and so should be particularly useful for these difficult cases. This webserver is currently running version 1.2.
+<br><br>
+
+<b>Help</b> can be found in any section of the forms by clicking on the "i" buttons. Examples can be processed by clicking on the "Generate example input" Button at the top of each section. Additionally there is an <a href="FAQ.html">FAQ</a> page. 
+<br><br>
+</div> <!-- abstract -->
+
+<div id="modes">
+<h3>Modes of use</h3>
+<table>
+    <tbody>
+    <tr><td height="20px" width="160px"> <a href="AlignMePW.html"> AlignMe pairwise</a></td><td> pairwise (PW) alignment of two sequences, using any combination of scales and profiles </td></tr>
+    <tr><td height="20px" width="160px"> <a href="AlignMe_MSA.html"> AlignMe profile-profile</a></td><td> profile-profile (PP) alignment of two multiple sequence alignments</td></tr>
+    </tbody>
+</table>
+</div> <!-- modes -->
+<br>
+
+<div id="search">
+<h3>Job Search</h3> 
+<!-- LF CHANGE BACK PATH -->
+	<form name="Testform" action="/cgi-bin/search.cgi" method="post" enctype="multipart/form-data" onsubmit="return chkFormular()">
+	<table border="0" id="tablescale">
+		<tbody>
+    			<tr>
+    			<td>
+			<select id="JobSearch" name="JobSearch" size="1">
+        		<option value="Search by Job ID">Search by Job ID</option>
+    			</select>
+    			</td>
+    			<td><input type="text" id="SearchParameter" name="SearchParameter" size="25" maxlength="50"></td>
+    			<td><input type="submit" value="Search"></td>
+    			<td><input type="reset"  value="Reset"></td>
+    			</tr>
+		</tbody>  
+	</table>
+
+	<!-- error checking -->
+	<div id="ERROR">
+		<h4 id="Searchinputmissing" style="display:none">     
+    		ERROR: Please enter a search term! </h4>
+	</div>
+</div> <!-- search -->
+<br>
+
+<div id="downloads">
+<h3>Downloads</h3> 
+	<p><button type="button" onclick="location='download/AlignMe1.1.tar.gz'">Download</button>&nbsp;&nbsp;source code of AlignMe 1.1 incl. examples </p>
+	<p><button type="button" onclick="location='download/AlignMe1.2.tar.gz'">Download</button>&nbsp;&nbsp;source code of AlignMe 1.2 incl. examples </p>
+	<p><button type="button" onclick="location='download/AlignMe_Manual.pdf'">Download</button>&nbsp;&nbsp;manual for the standalone version of AlignMe 1.1 </p>
+	See also: <a href="https://neuroscience.nih.gov/forrestlab/SoftwareData.aspx">forrestlab.org</a>
+</div> <!-- downloads -->
+<br>
+
+<div id="citations">
+<h3>Credits & Citations</h3>
+	AlignMe was written by René Staritzbichler, Marcus Stamm, and Kamil Khafizov in the <a href="http://www.forrestlab.org/"> Forrest lab</a>, formerly at the <a href="https://www.biophys.mpg.de/en.html">Max Planck Institute of Biophysics</a>.
+	The webservice is hosted at the Max Planck Gesellschaft, with thanks to Markus Rampp and the <a href="https://www.mpcdf.mpg.de/about-mpcdf/groups/hpc-application-support">HPC application support team</a>. Ongoing development and support is provided by Edoardo Sarti, <a href="http://proteinformatics.org">René Staritzbichler</a>, and Lucy Forrest and by <a href="http://www.ninds.nih.gov">NINDS.</a><br>
+	<br>
+	If you use AlignMe, please cite:<br>
+	<a href="http://nar.oxfordjournals.org/content/42/W1/W246">
+	Khafizov K, Staritzbichler R, Stamm M and LR Forrest (2014) <i>Nucl. Acids Res.</i> 42:W246-251 </a> <br>
+	<a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0057731">
+	Stamm M, Staritzbichler R, Khafizov K and LR Forrest (2013) <i>PLoS ONE</i> 8:e57731</a> <br>
+	<a href="http://pubs.acs.org/doi/abs/10.1021/bi101256x">
+	Khafizov K, Staritzbichler R, Stamm M and LR Forrest (2011) <i>Biochemistry</i> 49:10702-10713 </a>
+	<br><br>
+</div> <!-- citations -->
+
+<div>Feedback and contact: <a href="mailto:AlignMe@rzg.mpg.de">AlignMe@rzg.mpg.de</a></div>
+
+</form> <!-- end search -->
+<br>
+
+<!-- close formatting -->
+</div> <!-- end center column -->
+</div> <!-- end panel content -->
+</div> <!-- end container -->
+
+	<div class="row"> <!-- footer -->
+            <!--div class="col-md-12"-->
+            <div style="margin:40px 0 20px;text-align:center;">
+                   <p><a href="http://www.mpg.de">MPG</a> |  <a href="https://www.biophys.mpg.de/en.html">MPI BP</a> | <a href="http://www.nih.gov">NIH</a> | <a href="http://www.ninds.nih.gov">NINDS</a>
+                   <br>NINDS Copyright 2017</p>
+            </div>
+            <!--/div!-->
+	</div>  <!-- end footer -->
+
+    	<script>
+        	$(document).ready(function () {
+            	screenResize();
+        	});
+	</script>
+
+    </body>
+</html>

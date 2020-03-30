@@ -1,0 +1,179 @@
+<HTML>
+<HEAD>
+	<TITLE>CCOMP Home Page</TITLE>
+	<META NAME="DESCRIPTION" CONTENT="CCOMP - Ligand/Receptor Complex Comparizon Program">
+	<META NAME="KEYWORDS" CONTENT="molecular biology,protein structure prediction,biodesigner,ccomp,complex,ligand,receptor">
+	<META NAME="ROBOTS" CONTENT="index,follow">
+	<META NAME="AUTHOR" CONTENT="Piotr Rotkiewicz">
+	<META HTTP-EQUIV="CHARSET" CONTENT="ISO-8859-1">
+	<META HTTP-EQUIV="CONTENT-LANGUAGE" CONTENT="English">
+	<link href="../programs.css" rel="styleSheet" type="text/css">
+</HEAD>
+
+<BODY BGCOLOR="#e0e0ea" LINK="#000060" ALINK="#000060" VLINK="#000060" MARGINWIDTH=0 LEFTMARGIN=0>
+
+<center>
+
+<table width=780 cellspacing=0 cellpadding=0 border=0 BGCOLOR="#f0f0ff">
+<tr>
+<TD WIDTH=1 BGCOLOR="#a890b0"><IMG SRC="../img/0.gif" WIDTH="1" HEIGHT="1" BORDER="0"></TD>		
+<td>
+
+<TABLE WIDTH=780 CELLSPACING=0 CELLPADDING=0 BORDER=0 BACKGROUND="../img/pirx_bar6_bg.jpg">
+	<TR HEIGHT=50>
+		<TD ALIGN=LEFT><IMG SRC="../img/pirx_bar6.jpg" BORDER=0></TD>
+	</TR>
+</TABLE>
+
+<TABLE WIDTH=780 CELLSPACING=0 CELLPADDING=0 BORDER=0 BGCOLOR="#BFEFFF">
+	<TR HEIGHT=25 VALIGN=CENTER>
+		<TD WIDTH=20><img src="../img/0.gif" border="0" width="20" height="25"></TD>
+		<TD>
+			<A HREF="../index.shtml">Home</A>&nbsp;>&nbsp;
+			<A HREF="../programs.html">Software</A>&nbsp;>&nbsp;
+			CCOMP</TD>
+	</TD>
+		<TD ALIGN=RIGHT>
+			<A HREF="../index.shtml">Home</A> &#149; 
+			<A HREF="../research.html">Research</A> &#149; 
+			<A HREF="../programs.html">Software</A> &#149; 
+			<A HREF="../personal.html">Personal</A> &#149; 
+			<A HREF="../sitemap.html">Site Map</A> &#149; 
+			<A HREF="/forum/">Forum</A>
+
+		</TD>
+		<TD WIDTH=20><img src="../img/0.gif" border="0" width="20" height="25"></TD>
+	</TR>
+	<TR HEIGHT=1 VALIGN=CENTER BGCOLOR=BLACK>
+		<TD BGCOLOR="#a890b0"><IMG SRC="../img/0.gif" WIDTH=1 HEIGHT=1></TD>
+		<TD BGCOLOR="#a890b0"><IMG SRC="../img/0.gif" WIDTH=1 HEIGHT=1></TD>
+		<TD BGCOLOR="#a890b0"><IMG SRC="../img/0.gif" WIDTH=1 HEIGHT=1></TD>
+		<TD BGCOLOR="#a890b0"><IMG SRC="../img/0.gif" WIDTH=1 HEIGHT=1></TD>
+	</TR>
+</TABLE><TABLE WIDTH=780 HEIGHT=100% CELLSPACING=0 CELLPADDING=0 BORDER=0>
+<TR VALIGN=TOP>
+
+<TD>
+
+<TABLE WIDTH=780 CELLSPACING=0 CELLPADDING=0 BORDER=0>
+
+	<TR VALIGN=TOP>
+		<TD WIDTH=10></TD>
+		<TD VALIGN=TOP align=left>
+
+<br>
+<h1>CCOMP</h1>
+
+CCOMP is a simple command-line tool for comparing ligand/receptor complexes. 
+It can also be used for calculating pairwise all-atom RMSD of slightly different 
+protein structures, taking care of missing atoms, sequence inconsistencies, etc.
+CCOMP reads two files in PDB format, including both a receptor and a ligand, 
+computes a pairwise sequence alignment of the receptor molecules, generates
+alpha-carbon superposition of the receptor structures according 
+to the generated alignment, and computes individual deviations per residuum. 
+Additionally, several statistical measures are calculated. 
+
+<br><br>
+
+<hr>
+
+If you are using this program in your work, please cite: <br><br>
+
+W. Sicinska, P. Rotkiewicz, <i>"Computational analysis of the active sites 
+in binary and ternary complexes of the vitamin D receptor,"</i> 
+<br>J. Ster. Biochem. Mol. Biol., <b>103</b> (3-5), 305-309 (2007)
+
+<hr>
+
+<b>Changes list:</b><br><br>
+
+<b>Version 3.70, July 19, 2007</b>
+  
+<ul>
+<li>added chi2 and chi3 statistics
+</ul>
+
+<br>
+
+<b>Version 3.60, July 17, 2007</b>
+  
+<ul>
+<li>added chi-angle statistics
+</ul>
+
+<br>
+
+<b>Version 3.50, July 16, 2007</b>
+  
+<ul>
+<li>fix: sometimes superimposed structures were not saved
+</ul>
+
+<br>
+
+<b>Version 3.40, December 13, 2006</b>
+  
+<br>
+
+<ul>
+<li>displays ligand-receptor contact list
+</ul>
+
+<br>
+
+<b>Version 3.30, December 9, 2006</b>
+  
+<ul>
+<li>hydrogens are preserved in superposed structures (complex_superposition.pdb)
+</ul>
+
+<hr>
+
+
+Download CCOMP version 3.70, updated on July 19, 2007:
+
+<ul>
+  <li><a href="http://www.pirx.com/cgi-bin/download.cgi?ccomp.zip">ZIP archive (C source code, Windows executable, examples)</a>
+  <li><a href="http://www.pirx.com/cgi-bin/download.cgi?ccomp.c">C source code</a>
+  <li><a href="http://www.pirx.com/cgi-bin/download.cgi?ccomp.exe">Windows executable</a>
+</ul>
+    
+</TD>
+<td width="10"></td>
+</TR>
+</TABLE>
+
+			<TABLE WIDTH=100% BORDER=0 CELLSPACING=0 CELLPADDING=0>
+				<TR HEIGHT=1><TD BGCOLOR="#a890b0"><IMG SRC="../img/0.gif" WIDTH=20 HEIGHT=1></TD><TD BGCOLOR="#a890b0"><IMG SRC="../img/0.gif" WIDTH=20 HEIGHT=1></TD></TR>
+				<TR><TD>
+					&nbsp;&nbsp;&nbsp;<a href="http://www.webtools.org/counter/faq.html#create">[Error Creating Counter File -- Click for more info]</a> visitors since Dec 1, 2006
+				</TD><TD ALIGN=RIGHT height=20>		
+					Copyright &copy; 2004-2007 <A HREF="http://www.pirx.com/personal.html">Piotr Rotkiewicz</A>&nbsp;&nbsp;&nbsp;
+				</TD></TR>
+				<TR HEIGHT=1><TD BGCOLOR="#a890b0"><IMG SRC="../img/0.gif" WIDTH=20 HEIGHT=1></TD><TD BGCOLOR="#a890b0"><IMG SRC="../img/0.gif" WIDTH=20 HEIGHT=1></TD></TR>
+		  </TABLE>			
+
+			</FONT>
+		</TD>
+
+</TD></TR></TABLE>
+
+</TD>
+
+<TD WIDTH=1 BGCOLOR="#a890b0"><IMG SRC="../img/0.gif" WIDTH="1" HEIGHT="1" BORDER="0"></TD>		
+
+</TR></TABLE>
+
+</center>
+
+</FONT>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-329236-1";
+urchinTracker();
+</script>
+
+</BODY>
+</HTML>

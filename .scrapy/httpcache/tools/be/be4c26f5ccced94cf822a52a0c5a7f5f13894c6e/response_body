@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  
+
+    <head>
+      <title>
+        CanBind: CanBind
+      </title>
+      <link rel="stylesheet" href="http://canbind.princeton.edu/media/layout.css" type="text/css">
+      <link href="http://canbind.princeton.edu/media/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <link rel="stylesheet" type="text/css" href="http://canbind.princeton.edu/media/bootstrap/css/bootstrap-responsive.min.css">
+      <script src="http://canbind.princeton.edu/media/jquery.min.js" type="text/javascript"></script>
+      <script src="http://canbind.princeton.edu/media/chosen.jquery.js" type="text/javascript"></script>
+      <script src="http://canbind.princeton.edu/media/bootstrap/js/bootstrap.min.js"></script>
+      <!--<script type="text/javascript" src="${url('/media/jquery.js')}"></script>-->
+      <link rel="stylesheet" type="text/css" href="http://canbind.princeton.edu/media/chosen.css">
+    </head>
+    <body class="index"><div id="wrap">
+      <div id="header">
+        <a href="/"><img src="http://canbind.princeton.edu/media/complex.png" style="height:228.5px; width:164px;" alt="logo"></a>
+      </div>
+      <div id="content">
+    <h1>CanBind</h1>
+    <h4>Exploring protein binding sites mutated in cancer</h4>
+    <hr>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a class="action" href="/browse/">Browse cancer mutations</a></li>
+          <li><a class="action" href="/download/">Download</a></li>
+          <li><a class="action" href="/documentation/">Documentation</a></li>
+          <li><a class="action" href="/about/">About</a></li>
+        </ul>
+      </div>
+    </div>
+      </div>
+      <div id="footer">
+        <hr>
+        <p class="legalese">© 2013 Dario Ghersi</p>
+      </div>
+    </div></body>
+</html>

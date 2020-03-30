@@ -1,0 +1,269 @@
+﻿<!--
+ * Program:     DiagnoProt
+ * Author:      Andre R F Silva, Marlon DM Santos, Diogo B Lima and Paulo C Carvalho
+ * Update:      10/11/2015
+ * Update by:   Diogo Borges Lima
+ * Description: Main Page Project
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>DiagnoProt</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="icon"
+          type="image/png"
+          href="Images/LogoDiagnoProt.png" width="5%"></link>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Script to Activate the Carousel -->
+    <script type="text/javascript">
+
+
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+        $(function () {
+            $('.tooltipIndex').tooltip()
+        })
+    </script>
+
+    <style type="text/css">
+
+        #hiddenText {
+            display: none;
+        }
+
+        #textFooter a {
+            color: #FFF;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+
+        #citation {
+            border-color: gray;
+            border-style: groove;
+            border-width: 3px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            text-align: center;
+        }
+
+        .mainText {
+            margin-top: -20px;
+        }
+
+        #downloadMainPage {
+            margin-top: 10px;
+        }
+
+        .boxImg {
+            background: #eee none repeat scroll 0 0;
+            border: 0px;
+            border-radius: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #hiddenText {
+            display: none
+        }
+
+        .downloadBtn:hover {
+            opacity: 0.7;
+            filter: alpha(opacity=70); /* For IE8 and earlier */
+        }
+
+        #carouselMainPage {
+            width: 35%;
+            margin: 0 auto 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span id="hiddenText">DiagnoProt</span>
+        <a href="index.html">
+            <img id="logo" style="border:0;width:80%; padding-top: 10px; padding-bottom: 10px; padding-left: 60px"
+                 src="Images/logo.png"
+                 alt="DiagnoProt" />
+        </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+            <a class="navbar-brand" href="index.html">DiagnoProt</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active current"><a href="index.html">Home</a></li>
+                <li class=""><a href="download.html">Download</a></li>
+                <li class=""><a href="tutorial.html">Tutorial</a></li>
+                <li class=""><a href="release.html">Release Notes</a></li>
+                <li class=""><a href="https://groups.google.com/forum/#!forum/diagnoprot" target="_blank">Forum</a></li>
+                <li class=""><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="mainText">
+                    <div class="col-lg-12 text-justify">
+                        <hr>
+                        <h2 class="intro-text text-center">
+                            Welcome to
+                            <strong>DiagnoProt</strong>
+                        </h2>
+                        <hr>
+
+                        <div id="carouselMainPage" class="boxImg">
+                            <div id="carousel-example-generic" class="carousel slide">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators hidden-xs">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img class="img-responsive img-small" style="border-radius: 10px;" src="img/slide-1.png" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive img-small" style="border-radius: 10px;" src="img/slide-2.png" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive img-small" style="border-radius: 10px;" src="img/slide-3.png" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive img-small" style="border-radius: 10px;" src="img/slide-4.png" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive img-small" style="border-radius: 10px;" src="img/slide-5.png" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive img-small" style="border-radius: 10px;" src="img/slide-6.png" alt="">
+                                    </div>
+                                </div>
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                    <span class="icon-prev"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                    <span class="icon-next"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <hr class="visible-xs">
+                        <p> Around 75% of all mass spectra remain unidentified by widely adopted proteomic strategies. DiagnoProt is an integrated computational environment that can efficiently cluster millions of spectra and use machine learning to shortlist high-quality unidentified mass spectra that are discriminative of different biological conditions.</p>
+
+                        <p class="video-title" align="center"><b>View a video demonstrating DiagnoProt in action!</b></p>
+
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video width="auto" height="auto" controls>
+                                <source src="DiagnoProt.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                        <!--<div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="" frameborder="0" allowfullscreen></iframe>
+                        </div>-->
+                        <div id="downloadMainPage">
+                            <span id="hiddenText">Download button</span>
+                            <a href="http://patternlabforproteomics.org/diagnoprot/download/ProteomicProfileClassifier.application">
+                                <img class="downloadBtn img-responsive img-border img-center img-rounded img-small tooltipIndex" data-placement="right" title="Download now DiagnoProt just by clicking on this button!" style="border:0"
+                                     src="Images/download.png"
+                                     alt="download" />
+                            </a>
+                        </div>
+                        <br />
+                        <div id="citation" class="tooltipIndex" data-placement="bottom" title="When using DiagnoProt please cite it">
+                            <span id="hiddenText">DOI of the manuscript</span>
+                            <p>
+                                <a href="https://doi.org/10.1093/bioinformatics/btx093" target="_">
+                                    <img class="img-small" style="border:0"
+                                         src="Images/doi.png"
+                                         alt="" />
+                                </a> André R F Silva<sup>*</sup>, Diogo B Lima<sup>*</sup>, Alejandro Leyva,
+                                Rosario Duran, Carlos Batthyany, Priscila F Aquino, Juliana C Leal,
+                                Jimmy E Rodriguez, Gilberto B Domont, Marlon D M Santos, Julia Chamot-Rooke,
+                                Valmir C Barbosa, and Paulo C Carvalho,
+                                <b>“DiagnoProt: a tool for discovery of new molecules by mass spectrometry”</b>,
+                                <i>Bioinformatics</i> (2017) 33 (12): 1883-1885.
+                            </p>
+                        </div>
+                        <div id="citation" class="tooltipIndex" data-placement="bottom" title="When using DiagnoProt please cite it">
+                            <span id="hiddenText">DOI of the manuscript</span>
+                            <p>
+                                <a href="https://doi.org/10.1093/bioinformatics/btz085" target="_">
+                                    <img class="img-small" style="border:0"
+                                         src="Images/doi.png"
+                                         alt="" />
+                                </a> Diogo B Lima, André R F Silva, Mathieu Dupré, Marlon D M Santos,
+                                Milan A Clasen, Louise U Kurt, Priscila F Aquino, Valmir C Barbosa,
+                                Paulo C Carvalho, Julia Chamot-Rooke
+                                <b>“Top-Down Garbage Collector: a tool for selecting high-quality top-down proteomics mass spectra”</b>,
+                                <i>Bioinformatics</i> (2019).
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 id="textFooter"><a href="http://proteomics.fiocruz.br" target="_blank">Computational Mass Spectrometry and Proteomics - Fiocruz</a></h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

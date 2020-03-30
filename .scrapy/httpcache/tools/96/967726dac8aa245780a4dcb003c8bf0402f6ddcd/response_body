@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Generator" content="iWeb 3.0.4" />
+    <meta name="iWeb-Build" content="local-build-20170427" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta name="viewport" content="width=700" />
+    <title>blockbuster</title>
+    <link rel="stylesheet" type="text/css" media="screen,print" href="blockbuster_files/blockbuster.css" />
+    <!--[if lt IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='blockbuster_files/blockbusterIE.css'/><![endif]-->
+    <!--[if gte IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='Media/IE8.css'/><![endif]-->
+    <script type="text/javascript" src="Scripts/iWebSite.js"></script>
+    <script type="text/javascript" src="Scripts/Widgets/SharedResources/WidgetCommon.js"></script>
+    <script type="text/javascript" src="Scripts/Widgets/Navbar/navbar.js"></script>
+    <script type="text/javascript" src="blockbuster_files/blockbuster.js"></script>
+  </head>
+  <body style="background: rgb(101, 101, 101); margin: 0pt; " onload="onPageLoad();" onunload="onPageUnload();">
+    <div style="text-align: center; ">
+      <div style="margin-bottom: 10px; margin-left: auto; margin-right: auto; margin-top: 10px; overflow: hidden; position: relative; word-wrap: break-word;  background: rgb(255, 255, 255); text-align: left; width: 700px; " id="body_content">
+        <div style="margin-left: 0px; position: relative; width: 700px; z-index: 0; " id="nav_layer">
+          <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+          <div class="com-apple-iweb-widget-navbar flowDefining" id="widget0" style="margin-left: 20px; margin-top: 0px; opacity: 1.00; position: relative; width: 660px; z-index: 1; ">
+    
+            <div id="widget0-navbar" class="navbar">
+
+      
+              <div id="widget0-bg" class="navbar-bg">
+
+        
+                <ul id="widget0-navbar-list" class="navbar-list">
+ <li></li> 
+</ul>
+                
+      
+</div>
+              
+    
+</div>
+          </div>
+          <script type="text/javascript"><!--//--><![CDATA[//><!--
+new NavBar('widget0', 'Scripts/Widgets/Navbar', 'Scripts/Widgets/SharedResources', '.', {"path-to-root": "", "navbar-css": ".navbar {\n\tfont-family: 'Helvetica Neue', Arial, sans-serif;\n\tfont-size: .8em;\n\tcolor: #666666;\n\tline-height: 30px;\n\tborder-bottom: 3px solid #ccc;\n}\n\n.navbar-bg {\n\ttext-align: right;}\n\n.navbar-bg ul {\n\tlist-style: none;\n\tmargin: 0px;\n\tpadding: 0px;\n}\n\n\nli {\n\tlist-style-type: none;\n\tdisplay: inline;\n\tpadding: 0px 5px 0px 0px;\n}\n\n\nli a {\n\ttext-decoration: none;\n\tpadding: 10px;\n\tcolor: #666666;\n\tfont-weight: bold;\n}\n\nli a:visited {\n\ttext-decoration: none;\n\tpadding: 10px;\n\tcolor: #666666;\n\tfont-weight: bold;\n}\n\nli a:hover\r{\r\n \tcolor: #999999;\n\ttext-decoration: none;\r}\n\n\nli.current-page a\r{\r\t color: #66ABC5;\n\ttext-decoration: none;\r}\n", "current-page-GUID": "FD97BC64-A2A3-46CE-BC09-EAC3D432E474", "isCollectionPage": "NO"});
+//--><!]]></script>
+          <div style="clear: both; height: 0px; line-height: 0px; " class="spacer"> </div>
+        </div>
+        <div style="height: 75px; margin-left: 0px; position: relative; width: 700px; z-index: 10; " id="header_layer">
+          <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+          <div id="id1" style="height: 43px; left: 20px; position: absolute; top: 20px; width: 515px; z-index: 1; " class="style_SkipStroke shape-with-text">
+            <div class="text-content Normal_External_515_43" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="Header">blockbuster</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div style="height: 86px; width: 150px;  height: 86px; left: 523px; position: absolute; top: 12px; width: 150px; z-index: 1; " class="tinyText style_SkipStroke_1">
+            <img src="blockbuster_files/hoffmann_wo.jpg" alt="" style="border: none; height: 86px; width: 151px; " />
+          </div>
+        </div>
+        <div style="margin-left: 0px; position: relative; width: 700px; z-index: 5; " id="body_layer">
+          <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+          <div id="id2" style="height: 45px; left: 15px; position: absolute; top: 34px; width: 668px; z-index: 1; " class="style_SkipStroke_2 shape-with-text">
+            <div class="text-content Normal_External_668_45" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style">detect blocks of overlapping reads using a gaussian-distribution approach</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div id="id5" style="height: 1746px; left: 11px; position: absolute; top: 55px; width: 675px; z-index: 1; " class="style_SkipStroke_5 shape-with-text">
+            <div class="text-content graphic_textbox_layout_style_default_External_675_1746" style="padding: 0px; ">
+              <div class="graphic_textbox_layout_style_default">
+                <p style="padding-top: 0pt; " class="paragraph_style_1">Langenberger D, Bermudez-Santana C, Hertel J, Hoffmann S, Khaitovitch P, Stadler PF<br /></p>
+                <p class="paragraph_style_2"><br /></p>
+                <p class="paragraph_style_3">1. Introduction<br /></p>
+                <p class="paragraph_style_4">Once short read sequences are mapped to a reference genome, one will face the problem of dividing consecutive reads into blocks to detect specific expression patterns. Due to biological variability and sequencing inaccuracies, the read arrangement does not always show exact block boundaries. The blockbuster tool automatically assigns reads to blocks and gives a unique chance to actually see the different origins where the short reads come from. <br /></p>
+                <p class="paragraph_style_4"><br /></p>
+                <ol>
+                  <li style="line-height: 16px; padding-left: 14px; text-indent: -14px; " class="full-width" value="2">
+                    <p style="text-indent: -14px; " class="paragraph_style_5"><span style="font-size: 13px; " class="Aufzählungszeichen">2.</span><span style="width: 4px; " class="inline-block"></span>Method<br /></p>
+                  </li>
+                </ol>
+                <p class="paragraph_style_4">In the first step, a mapped read u with start and end positions au and bu is replaced by a Gaussian density ρu with meanμu = (bu + au )/2 and variance σu2 . We set σu = s|(bu − au )/2|, where s is a parameter that is used to tune the resolution. For each locus, these Gaussian densities are added up separately for the two reading directions. The resulting curves f + and f − that exhibit pronounced but smooth peaks centered at blocks of reads with nearly identical midpoints (see Figure). <br /></p>
+                <p class="paragraph_style_4"><br /></p>
+                <p class="paragraph_style_4">Now we use a greedy procedure to extract the reads that belong to the same block:<br /></p>
+                <ol>
+                  <li style="line-height: 14px; padding-left: 26px; text-indent: -16px; " class="full-width" value="1">
+                    <p style="text-indent: -16px; " class="paragraph_style_6"><span style="font-size: 12px; " class="Aufzählungszeichen">(1)</span><span style="width: 3px; " class="inline-block"></span>Determine the location xˆ of the highest peak. Set B=∅ and δ=0.<br /></p>
+                  </li>
+                  <li style="line-height: 14px; padding-left: 26px; text-indent: -16px; " class="full-width" value="2">
+                    <p style="text-indent: -16px; " class="paragraph_style_6"><span style="font-size: 12px; " class="Aufzählungszeichen">(2)</span><span style="width: 3px; " class="inline-block"></span>Include in the block B all reads u such that xˆ ∈[μu −(σu +δ),μu +(σu +δ)]. Set δ to the standard deviation of means μu, u∈B, and repeat step (2)<br /></p>
+                  </li>
+                  <li style="line-height: 14px; padding-left: 26px; text-indent: -16px; " class="full-width" value="3">
+                    <p style="text-indent: -16px; " class="paragraph_style_7"><span style="font-size: 12px; " class="Aufzählungszeichen">(3)</span><span style="width: 3px; " class="inline-block"></span>ComputefB =u∈B ρu , output B, remove thereads in B, and set f → f −fB.<br /></p>
+                  </li>
+                </ol>
+                <div class="paragraph paragraph_style_8"><div style="height: 273px; width: 411px;  clear: left; float: left; height: 273px; margin: 12px 12px 12px 0px; position: relative; width: 411px; " class="tinyText style_SkipStroke_3 inline-block"><img src="blockbuster_files/droppedImage.jpg" alt="" style="border: none; height: 273px; width: 411px; " /></div><br /></div>
+                <p class="paragraph_style_4"><br /></p>
+                <p class="paragraph_style_4">This procedure iteratively extracts blocks in an order that intuitively corresponds to their importance (see Figure). Since the area under a peak equals the number of reads in the block the height of the peaks provides a meaningful trade-off between the coherence of a block and its expression level. We therefore suggest to use the height of the peak to define the stop condition for blockbuster.<br /></p>
+                <p class="paragraph_style_4"><br /></p>
+                <p class="paragraph_style_9"><br /></p>
+                <p class="paragraph_style_9"><br /></p>
+                <p class="paragraph_style_9"><br /></p>
+                <p class="paragraph_style_9"><br /></p>
+                <p class="paragraph_style_9"><br /></p>
+                <p class="paragraph_style_9"><br /></p>
+                <p class="paragraph_style_9"><br /></p>
+                <p class="paragraph_style_9"><br /></p>
+                <p class="paragraph_style_9"><br /></p>
+                <ol>
+                  <li style="line-height: 16px; padding-left: 14px; text-indent: -14px; " class="full-width" value="3">
+                    <p style="text-indent: -14px; " class="paragraph_style_10"><span style="font-size: 13px; " class="Aufzählungszeichen">3.</span><span style="width: 4px; " class="inline-block"></span> Quick Start<br /></p>
+                  </li>
+                </ol>
+                <p class="paragraph_style_9">To build blockbuster from source you simply download the archive and extract it with<br /></p>
+                <p class="paragraph_style_9">    <span class="style">tar -xvf blockbuster.tar.gz</span><br /></p>
+                <p class="paragraph_style_9">subsequently go to the new directory and type<br /></p>
+                <p class="paragraph_style_9">    <span class="style">make</span><br /></p>
+                <p class="paragraph_style_11"><br /></p>
+                <p class="paragraph_style_11">First you have to map your sequenced tags to a reference genome (the easiest way to do that is to use <a onclick="window.open(this.href); return false;" title="http://www.bioinf.uni-leipzig.de/Software/segemehl/" href="http://www.bioinf.uni-leipzig.de/Software/segemehl/" onkeypress="window.open(this.href); return false;" class="class1">segemehl</a>) and safe the resulting read locations in a file using the <a onclick="window.open(this.href); return false;" title="http://genome.ucsc.edu/FAQ/FAQformat.html#format1" href="http://genome.ucsc.edu/FAQ/FAQformat.html#format1" onkeypress="window.open(this.href); return false;" class="class2">bed format</a>. The number of times each tag was sequences has be written in the score column of the file (tip: you should normalize this value by the number of times you can map this tag to the genome). The bed file has to be sorted by chromosome, strand, start pos and end pos of each tag.<br /></p>
+                <p class="paragraph_style_11"><br /></p>
+                <p class="paragraph_style_11">Sort bed file:<br /></p>
+                <p class="paragraph_style_11">    <span class="style">sort -k 1,1 -k 6,6 -k 2n,2 -k 3n,3 -o sorted.bed unsorted.bed</span><br /></p>
+                <p class="paragraph_style_11"><br /></p>
+                <p class="paragraph_style_11">Then you simply start blockbuster by typing<br /></p>
+                <p class="paragraph_style_11">    <span class="style">./blockbuster.x file.bed</span><br /></p>
+                <p class="paragraph_style_11"><br /></p>
+                <p class="paragraph_style_11"><br /></p>
+                <p class="paragraph_style_11">In the archive you will also find a file called test.bed. This file contains human reads and it will show you how your input data for blockbuster has to look like.<br /></p>
+                <p class="paragraph_style_11"><br /></p>
+                <p class="paragraph_style_11">There are two different output formats of blockbuster:<br /></p>
+                <p class="paragraph_style_11">    <br /></p>
+                <p class="paragraph_style_11"> - block-ouput: <br /></p>
+                <p class="paragraph_style_12">    <span class="style">./blockbuster.x -print 1 test.bed</span> (default)<br /></p>
+                <p class="paragraph_style_11">    OUTPUT:<br /></p>
+                <p class="paragraph_style_13">  &gt;clusterID chrom clusterStart clusterEnd strand ClusterExpression tagCount blockCount<br /></p>
+                <p class="paragraph_style_13">  blockNb blockChrom blockStart blockEnd blockStrand blockExpression readCount<br /></p>
+                <p class="paragraph_style_11"><br /></p>
+                <p class="paragraph_style_11"> - tag-output:<br /></p>
+                <p class="paragraph_style_12">   <span class="style">./blockbuster.x -print 2 test.bed</span><br /></p>
+                <p class="paragraph_style_11">    OUTPUT:<br /></p>
+                <p class="paragraph_style_13">  &gt;clusterID chrom clusterStart clusterEnd strand ClusterExpression tagCount blockCount<br /></p>
+                <p class="paragraph_style_13">  tagChrom tagStart tagEnd tagID tagExpression tagStrand blockNb<span class="style"><br /></span></p>
+                <p class="paragraph_style_11"><br /></p>
+                <p class="paragraph_style_11">If you use segemehl for mapping, you can directly use the sorted segemehl output-file like this:<br /></p>
+                <p class="paragraph_style_11">    1. sort output file:<br /></p>
+                <p class="paragraph_style_14">     sort -k 10,10 -k 13,13 -k 11n,11 -k 12n,12 -o segemehl.sorted segemehl.out<br /></p>
+                <p class="paragraph_style_14">  <span class="style_1">2. run blockbuster:</span><br /></p>
+                <p class="paragraph_style_15">     ./blockbuster.x -format 2 segemehl.sorted<br /></p>
+                <p class="paragraph_style_11"><br /></p>
+                <ol>
+                  <li style="line-height: 16px; padding-left: 14px; text-indent: -14px; " class="full-width" value="4">
+                    <p style="text-indent: -14px; " class="paragraph_style_16"><span style="font-size: 13px; " class="Aufzählungszeichen">4.</span><span style="width: 4px; " class="inline-block"></span>Usage<br /></p>
+                  </li>
+                </ol>
+                <p class="paragraph_style_17">blockbuster.x [OPTIONS] &lt;file&gt;<br /></p>
+                <p class="paragraph_style_11">[OPTIONS]<br /></p>
+                <div class="paragraph paragraph_style_18"><div id="id3" style="clear: left; float: left; height: 182px; position: relative; width: 150px; " class="style_SkipStroke_4 shape-with-text inline-block"><div class="text-content graphic_textbox_layout_style_default_External_150_182" style="padding: 0px; "><div class="graphic_textbox_layout_style_default"><p style="padding-top: 0pt; " class="paragraph_style_19">-format &lt;int&gt; <br /></p><p class="paragraph_style_19"><br /></p><p class="paragraph_style_19"><br /></p><p class="paragraph_style_19">-distance &lt;int&gt; <br /></p><p class="paragraph_style_19">-minClusterHeight &lt;float&gt;<br /></p><p class="paragraph_style_19">-minBlockHeight &lt;float&gt;<br /></p><p class="paragraph_style_19">-scale &lt;int&gt;<br /></p><p class="paragraph_style_19">-merge &lt;int&gt;<br /></p><p class="paragraph_style_19">-tagFilter &lt;int&gt;<br /></p><p class="paragraph_style_19">-print &lt;int&gt;<br /></p></div></div></div><div id="id4" style="height: 182px; position: relative; width: 342px; " class="style_SkipStroke_5 shape-with-text inline-block"><div class="text-content graphic_textbox_layout_style_default_External_342_182" style="padding: 0px; "><div class="graphic_textbox_layout_style_default"><p style="padding-top: 0pt; " class="paragraph_style_19">file format of input file (default: 1)<br /></p><p class="paragraph_style_19">  (1) bed<br /></p><p class="paragraph_style_19">  (2) segemehl-output<br /></p><p class="paragraph_style_19">minimum distance between two clusters (default: 30)<br /></p><p class="paragraph_style_19">minimum height (readno) of a cluster (default: 10)<br /></p><p class="paragraph_style_19">minimum height (readno) of a block (default: 2)<br /></p><p class="paragraph_style_19">scale stddev for a single read (default: 0.4)<br /></p><p class="paragraph_style_19">merge reads with almost similar means (default: 0)<br /></p><p class="paragraph_style_19">skip tags with expression smaller than this value (default: 0)<br /></p><p class="paragraph_style_19">print out: (1) blocks (2) reads (default: 1)<br /></p></div></div></div><br /></div>
+                <p class="paragraph_style_20">5. Download<br /></p>
+                <p class="paragraph_style_21"><a onclick="window.open(this.href); return false;" title="http://www.bioinf.uni-leipzig.de/~david/LIFE/blockbuster.tar.gz" href="http://www.bioinf.uni-leipzig.de/~david/LIFE/blockbuster.tar.gz" onkeypress="window.open(this.href); return false;" class="class3">blockbuster.tar.gz</a><br /></p>
+                <p class="paragraph_style_20">6. Contact<br /></p>
+                <p class="paragraph_style_9">If you have any further questions, complaints or bug reports please mail to <a class="class4" title="mailto:david@bioinf.uni-leipzig.de?subject=blockbuster" href="mailto:david@bioinf.uni-leipzig.de?subject=blockbuster">david@bioinf.uni-leipzig.de</a> <br /></p>
+                <p class="paragraph_style_9"><br /></p>
+                <p class="paragraph_style_22">7. Reference<br /></p>
+                <p class="paragraph_style_23"><br /></p>
+                <p class="paragraph_style_24">If you use this program in your work you might want to cite:<br /></p>
+                <p class="paragraph_style_24"><br /></p>
+                <p class="paragraph_style_2">Langenberger D, Bermudez-Santana C, Hertel J, Hoffmann S, Khaitovitch P, Stadler PF: &quot;<span class="style_2">Evidence for Human microRNA-Offset RNAs in Small RNA Sequencing Data</span>&quot;, <a onclick="window.open(this.href); return false;" title="http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btp419v1" href="http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btp419v1" onkeypress="window.open(this.href); return false;" class="class5">Bioinformatics</a><span class="style_3"> (2009) vol. 25 (18) pp. 2298-301</span><br /></p>
+              </div>
+              <div style="clear: both; height: 0px; line-height: 0px; " class="tinyText"> </div>
+            </div>
+          </div>
+          <div style="height: 1801px; line-height: 1801px; " class="spacer"> </div>
+        </div>
+        <div style="height: 75px; margin-left: 0px; position: relative; width: 700px; z-index: 15; " id="footer_layer">
+          <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/ArkMAPTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roslin Institute : Bioinformatics : ArkMAP Installation</title>
+<!-- InstanceEndEditable -->
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"  />
+<link href="/style-sheets/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/javascript/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">	CURRENT = new Array(); </script>
+
+<script type="text/javascript">
+CURRENT.push("menu_arkmap");
+</script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<script type="text/javascript">
+$(document).ready(function() {
+	if (CURRENT.length == 0) {
+		CURRENT.push("menu_home");
+	}
+	for (var i = 0; i < CURRENT.length; i++) {
+		element = "#" + CURRENT[i];
+		$(element).addClass("current");
+		vis_element = ".visible_" + CURRENT[i];
+		$(vis_element).show();
+	}
+ });
+ </script>
+</head>
+<body>
+<div id="RIwrapper" align="center"> 
+<div id="frame">
+  <div id="header">
+<img src="/images/roslin_banner.gif" name="banner" width="900" height="150" border="0" usemap="#m_banner" id="banner" />
+      <map name="m_banner" id="m_banner">
+        <area shape="rect" coords="596,15,880,69" href="http://www.ed.ac.uk" target="_blank">
+        <area shape="rect" coords="30,20,350,130" href="http://www.roslin.ac.uk/" target="_blank">
+      </map></div>
+
+  <div id="enclose">
+
+<div id="leftnav">
+
+<a id="menu_home" href="/">Bioinformatics Home</a>
+<a id="menu_resspecies" href="/resspecies/" title="Data system for genetic mapping studies using pedigree, genotype and phenotype data" >resSpecies  mapping and GWAS resources</a>
+<a id="menu_arkdb" href="/arkdb/" title="Public repository for genome mapping data from farmed and other animal species">ArkDB database system</a>
+<a id="menu_arkmap" href="/arkmap/" title="Desktop application that allows users to draw genetic maps">ArkMAP drawing application</a>
+<div class="visible_menu_arkmap" style="display:none">
+<div class="indent1">
+<a id="menu_arkmap_download" href="/arkmap/download.html" title="ArkMAP Downlads: Installers and Executables">Download</a>
+<a id="menu_arkmap_java" href="/arkmap/java.html" title="Detailed instructions for installing and running ArkMAP">Installation Help</a>
+<a id="menu_arkmap_help" href="/arkmap/help/" title="Detailed instructions for using and configuring ArkMAP for downloading and drawing maps" target="_blank">Help: Use & Configuration</a>
+<a id="menu_arkmap_licence" href="/arkmap/licence.html" title="Open Source licence information for the ArkMAP application, and its dependent libraries.">Licence Information</a>
+<a id="menu_arkmap_jensembl" href="/arkmap/arkmap-jensembl.html" title="ArkMAP's integration of the JEnsembl API">JEnsembl API in ArkMAP</a>
+</div>
+</div>
+<a id="menu_gmd" href="/gmd/" title="A generic XML Schema for describing Genomic Mapping Data">GMD data format</a>
+<a id="menu_gtcheck" href="/genotypechecker/" title="A desktop tool for identifying likely data errors in pedigree/genotype datasets and assist data cleansing">GenotypeChecker application</a>
+<div class="visible_menu_gtcheck" style="display:none">
+<div class="indent1">
+<a id="menu_gtcheck_download" href="/genotypechecker/resources.html">Download GenotypeChecker</a>
+<a id="menu_gtcheck_using" href="/genotypechecker/help.html">Using GenotypeChecker</a>
+<div class="indent1">
+<a id="menu_gtcheck_using_run" href="/genotypechecker/java.html" class=" black indent1">Running GenotypeChecker</a>
+<a id="menu_gtcheck_using_load" href="/genotypechecker/loading.html" class="black indent1">Loading Data (Data Formats)</a>
+<a id="menu_gtcheck_using_large" href="/genotypechecker/large.html" class="black indent1">Large Data Sets</a>
+<a id="menu_gtcheck_using_check" href="/genotypechecker/checking.html" class="black indent1">Inheritance Checking</a>
+<a id="menu_gtcheck_using_family" href="/genotypechecker/family.html" class="black indent1">Family Views</a>
+<a id="menu_gtcheck_using_save" href="/genotypechecker/saving.html" class="black indent1">Saving Reports and Cleaned Data</a>
+</div>
+<a id="menu_gtcheck_data" href="/genotypechecker/data.html">Download Test Data</a>
+<a id="menu_gtcheck_licence" href="/genotypechecker/licence.html">Licence</a>
+<a id="menu_gtcheck_future" href="/genotypechecker/future.html">Future Development</a>
+</div>
+</div>
+<a id="menu_viper" href="/viper/" title="A desktop tool for identifying and cleaning data errors in pedigree/genotype datasets">VIPER<br/> Visual Interactive Pedigree Explorer</a>
+<div class="visible_menu_viper" style="display:none">
+<div class="indent1">
+<a id="menu_viper_download" href="/viper/download.html">Download VIPER</a>
+<a id="menu_viper_using" href="/viper/help.html">Using VIPER</a>
+<div class="indent1">
+<a id="menu_viper_using_run" href="/viper/java.html" class=" black indent1">Running VIPER</a>
+<a id="menu_viper_using_load" href="/viper/loading.html" class="black indent1">Loading Data (Data Formats)</a>
+<a id="menu_viper_using_large" href="/viper/large.html" class="black indent1">Large Data Sets</a>
+<a id="menu_viper_using_interface" href="/viper/interface.html" class="black indent1">The VIPER Interface</a>
+<a id="menu_viper_using_sandwich" href="/viper/sandwich.html" class="black indent1">The Pedigree Sandwich View</a>
+<a id="menu_viper_using_options" href="/viper/options.html" class="black indent1">Display Options</a>
+<a id="menu_viper_using_check" href="/viper/checking.html" class="black indent1">Inheritance Checking: Exploring & Cleaning Inconsistent Data</a>
+<a id="menu_viper_using_save" href="/viper/saving.html" class="black indent1">Saving Reports & Cleaned Data</a>
+</div>
+<a id="menu_viper_data" href="/viper/data.html">Download Test Data</a>
+<a id="menu_viper_licence" href="/viper/licence.html">Licence</a>
+<a id="menu_viper_future" href="/viper/future.html">Future Development</a>
+</div>
+</div>
+<a id="menu_haplofinder" href="/haplofinder/" title="Haplofinder script for identifying what pair of allele haplotypes are hidden in an ambiguous consensus">Haplofinder</a>
+<a id="menu_diversity" href="/diversity/" title="Genetic Diversity Databases">Genetic Diversity Databases</a>
+<a id="menu_jensembl" href="http://jensembl.sourceforge.net/" target="_blank" title="Prototype implementation of a Java API to Ensembl datasources">JEnsembl<br/>ENSEMBL Java API</a>
+<a id="menu_lawslaws" href="/lawslaws/" title="A series of observations on Genetic Analysis algorithms and experiments">Law's Laws</a>
+<a id="menu_contact" href="/contact/" title="Contact us">Contact</a>
+
+
+	<div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>
+    <div>&nbsp;</div>
+<a href="http://www.vet.ed.ac.uk/" target="_blank" class="img"><img src="/images/vetschool_crest.jpg" width="165" height="60" border="0"></img></a>
+	<div>&nbsp;</div>  
+<a href="http://www.bbsrc.ac.uk/" target="_blank" class="img"><img src="/images/bbsrclogo.jpg" width="165" height="60" border="0"></img></a></div>
+</div>
+
+<div id="maintext">
+<h1>Roslin Bioinformatics - ArkMAP<!-- InstanceBeginEditable name="Title Add-on2" --><!-- InstanceEndEditable --></h1>
+<!-- InstanceBeginEditable name="body" -->
+<h2>ArkMAP</h2>
+<p><strong>ArkMAP</strong> version 2.0 is our desktop application that allows users to draw and align genetic maps. Maps of interest can be selected and downloaded from :
+<ul>
+<li>Our <a href="http://www.thearkdb.org/" target="_blank">ArkDB database</a> by browsing the available maps by species, analysis, chromosome <em>etc</em>.</li>
+<li> Ensembl datasources: gene-annotated chromosome assemblies may  be downloaded for any of the vertebrate species held in <a href="http://www.ensembl.org/">Ensembl</a> or other taxa held in <a href="http://www.ensemblgenomes.org/">EnsemblGenomes</a>.</li>
+<li> Local mapping data may also be loaded and displayed by the user.</li></ul>
+<p>ArkMAP can be <a href="download.html">installed</a> as an auto-updating  Java WebStart application on any computer, or by using a Windows installer, a Mac Disk Image or a Java  JAR file.<a href="java.html"> Download options</a> are discussed in detail, and full <a href="/arkmap/help" target="_blank">help documentation</a> describing launching and using ArkMAP is available.</p>
+<h2>JEnsembl version of ArkMAP</h2>
+<p>
+
+The original version of the ArkMAP application used WebServices provided by <a href="http://www.ensembl.org/biomart/martview">Ensembl Biomart</a> to access the gene mapping data of the Ensembl Vertebrate genome builds. 
+
+Recently we have initiated the <a href="http://jensembl.sourceforge.net/" target="_blank">JEnsembl project</a> to provide a Java version of the Ensembl PERL API for data access. 
+
+We have now adapted ArkMAP to make use of the JEnsembl API for datasource access  in place of the Biomart access. Our new ArkMAP application  provides access to both the 
+Ensembl Vertebrate and Ensembl Genomes (Plant, Protist, Fungi, Metazoa and Bacterial) datasources. </p>
+
+<p><a href="/arkmap/arkmap-jensembl.html">Example usage of ArkMAP(JEnsembl)</a> is provided, to illustrate the exploration of gene maps downloaded from Ensembl datasources (including separate release and genome build versions of a datasource), the discovery of inter-species gene orthologies, the alignment of chromosomes exhibiting regions of conserved synteny, and the retrieval of variation data for chromosome regions. Code snips demonstrating use of the integrated JEnsembl API within ArkMAP are given. </p>
+<p>The  <a href="/arkmap/help" target="_blank">help documentation</a> for ArkMAP has been updated for the refactored application, and illustrates integration of several features of the JEnsemblAPI, including version aware access to all available genome assemblies at <a href="http://www.ensembl.org" target="_blank">Ensembl</a> and <a href="http://www.ensemblgenomes.org" target="_blank">EnsemblGenomes</a>, retrieval of gene homologues, discovery of regions of conserved synteny and mapping of SNP locations.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- InstanceEndEditable -->
+</div>
+</div>
+</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

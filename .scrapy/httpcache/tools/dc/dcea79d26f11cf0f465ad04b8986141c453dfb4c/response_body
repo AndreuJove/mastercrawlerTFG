@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="description" content="ConoServer is a database of toxins isolated from Cone snails. The database provide annotated information on nucleic acid sequences, protein sequences and 3D structures. It tracks known cysteins frameworks, genetic superfamily and pharmacological families."/>
+	<meta http-equiv="keywords" content="ConoServer, cone snail, cone snail toxin, conopeptide, conotoxin, conophan, contryphan, conantokin, conolysin, conopressin, conomarphin, conorfamide, contulakin, David Craik, Quentin Kaas, Rilei Yu"/>
+	<title>ConoServer</title>
+	<link rel="StyleSheet" href="index.css" type="text/css">
+
+	<link rel="stylesheet" href="lightbox.css" type="text/css" media="screen" />
+	<script src="js/prototype.js" type="text/javascript"></script>
+	<script src="js/scriptaculous.js?load=effects,builder" type="text/javascript"></script>
+	<script src="js/lightbox.js" type="text/javascript"></script>
+	<link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<script>
+function SelectValue(selectid,value) {
+	var i;
+	var select = document.getElementById(selectid);
+	for(i = 0; i < select.options.length; i++) {
+		if (select.options[i].value == value) {
+			select.options[i].selected= true;
+		} else {
+			select.options[i].selected= false;
+		}
+	}
+}
+</script>
+
+
+<div id='globalcontainer'>
+
+<div id='pagehead'>
+	<div>
+	<a href="index.php">
+		<img src="images/conoserver_small.png" alt="ConoServer: A database for conotoxins" class='expl'/>
+	</a>
+	</div>
+	<div><a class='primarycitation' href='http://www.ncbi.nlm.nih.gov/pubmed/22058133'>Kaas Q et al. (2012) <i>Nucleic Acids Res.</i></a>
+<form>
+<div class='firstline'>
+Search a
+<select name="table">
+        <option value='protein'>Protein</option>
+        <option value='nucleicacid'>Nucleic acids</option>
+        <option value='structure'>3D structure</option>
+</select>
+name
+</div>
+<div class='secondline'>
+<input type='text'   name='text' size='30' id='textsearch'\>
+<input type='hidden' name='textfield' value='All fields'\>
+<input type='hidden' name='page' value='list'\>
+<input type='checkbox' name='exactsearch' value='1' style='vertical-align:middle'\>
+<div class='exactmatch'>exact match</div>
+<input type='submit' value='Search' class='button'\>
+<input type='reset' value='Clear' class='button'\>
+</div>
+</form>
+</div>
+	
+	<div id='mainmenu'>
+	<li>
+		<span class='menuleft'></span>
+		<span class='menumid'>
+		<a href='./'>Home</a>
+		</span>
+		<span class='menuright'></span>
+	</li>
+	<li>
+		<span class='menuleft'></span>
+		<span class='menumid'>
+		<a>About</a>
+		</span>
+		<span class='menuright'></span>
+		<div class='sub'>
+			<ul>
+			<li><a href='?page=about_conoserver'>About ConoServer</a></li>
+			<li><a href='?page=about_conotoxins'>About conopeptides</a></li>
+			<li><a href='?page=about_us'>About us</a></li>
+			<li><a href='?page=links'>Related websites</a></li>
+			</ul>
+		</div>
+	</li>
+	<li>
+		<span class='menuleft'></span>
+		<span class='menumid'>
+		<a>Search</a>
+		</span>
+		<span class='menuright'></span>
+		<div class='sub'>
+			<ul>
+			<li><a href='?page=search&table=protein'>Search a peptide</a></li>
+			<li><a href='?page=search&table=nucleicacid'>Search a nucleic acid</a></li>
+			<li><a href='?page=search&table=structure'>Search a 3D structure</a></li>
+			<li><a href='?page=fingerprint'>Search by peptide mass</a></li>
+			<li><a href='?page=stretchsearch'>Search by sequence stretches</a></li>
+			<li><a href='?page=list&table=reference&listonly=1'>Search by references</a></li>
+			</ul>
+		</div>
+	</li>
+	<li>
+		<span class='menuleft'></span>
+		<span class='menumid'>
+		<a>Tools</a>
+		</span>
+		<span class='menuright'></span>
+		<div class='sub'>
+			<ul>
+			<li><a href='?page=conoprec'>ConoPrec: precursor analysis</a></li>
+			<li><a href='?page=ptmdiffmass'>ConoMass 1: differential PTM masses</a></li>
+			<li><a href='?page=identifymasslist'>ConoMass 2: identify peptide mass</a></li>
+			<li><a href='?page=comparemasses'>Compare mass lists</a></li>
+			<li><a href='?page=uniquemasses'>Remove duplicated masses</a></li>
+			<li><a href='?page=download'>Download ConoServer's data</a></li>
+			</ul>
+		</div>
+	</li>
+	<li>
+		<span class='menuleft'></span>
+		<span class='menumid'>
+		<a href='?page=stats'>Statistics</a>
+		</span>
+		<span class='menuright'></span>
+		<div class='sub'>
+			<ul>
+			<li><a href='?page=stats&tab=classification'>On classification schemes</a></li>
+			<li><a href='?page=stats&tab=superfamilies'>On superfamily signal sequences</a></li>
+			<li><a href='?page=stats&tab=organisms'>On cone snail species</a></li>
+			<li><a href='?page=stats&tab=3dstructures'>On 3D structures</a></li>
+			<li><a href='?page=stats&tab=3doverlays'>On structural scaffold conservation</a></li>
+			<li><a href='?page=stats&tab=references'>On journals in ConoServer</a></li>
+			</ul>
+		</div>
+	</li>
+	<li>
+		<span class='menuleft'></span>
+		<span class='menumid'>
+		<a href='?page=classification'>Classification</a>
+		</span>
+		<span class='menuright'></span>
+		<div class='sub'>
+			<ul>
+			<li><a href='?page=classification&type=genesuperfamilies'>Gene superfamilies</a></li>
+			<li><a href='?page=classification&type=cysteineframeworks'>Cysteine frameworks</a></li>
+			<li><a href='?page=classification&type=pharmacologicalfamilies'>Pharmacological families</a></li>
+			</ul>
+		</div>
+	</li>
+	</div>
+</div>
+
+
+<div id='main'>
+
+
+<h1>Cono<span class='CS'>S</span>erver, a database for conopeptides</h1>
+
+<img id='welcomecone' src='images/cone_with_structures_small.jpg'/>
+
+<p class='welcome'>Cono<span class='CS'>S</span>erver is a database specializing
+in the sequence and structures of conopeptides, which are peptides expressed by
+carnivorous marine cone snails.  A fascinating feature of these peptides is
+their high specificity and affinity towards human ion channels, receptors and
+transporters of the nervous system. This makes conopeptides an interesting
+resource for the physiological studies of neuroreceptors and promising drug
+leads. Conopeptides are further described <a
+href='?page=about_conotoxins'>here</a> and a selection of recent reviews on the
+subject can be found <a
+href='?page=about_conotoxins&bpage=keyrefs'>here</a>.</p>
+
+<img style='float:left; margin-right:20px;' src='images/classification/classification_smallpic.png'\>
+
+<p><a href='?page=classification' class='titleref'><b>Classifications.</b></a>
+Conopeptides are classified into disulfide rich (conotoxins) and several classes
+of disulfide poor peptides. The three classification schemes used in ConoServer,
+the gene superfamilies, the cysteine frameworks, and the pharmacological
+families are described and analyzed <a
+href='?page=classification'>here</a>.</p>
+
+
+<img style='float:left; margin-right:20px;' src='images/posttrans_smallpic.png'\>
+<p><a href='?page=about_conotoxins&bpage=ptm'
+class='titleref'><b>Post-translational modifications.</b></a> Conopeptides are
+heavily post-translationally modified and the list of modifications found
+naturally or introduced artificially is provided <a
+href='?page=about_conotoxins&bpage=ptm'>here</a>.</p>
+
+<p><a href='?page=stats' class='titleref'><b>Statistics.</b></a> Statistics on
+the currently known conopeptides are provided <a href='?page=stats'>here</a>.
+The statistics include: the relationship between conopeptide classification
+schemes, the sequence consensus between signal peptides of each gene
+superfamily, the number of entries for each cone snail species, the
+characteristics of conopeptides for which a three-dimensional structure was
+determined, the number of patented sequences, and the journals the most cited in
+the ConoServer.</p>
+
+<table id='statisticstable'>
+<tr>
+	<td class='blank'></td>
+	<th>Number of Entries</th>
+	<th>Species Coverage</th>
+	<th>Links to UniProt, Genbank or PDB</th>
+</tr><tr class='even'>
+	<th>Nucleotides</th>
+	<td>2968</td>
+	<td>86</td>
+	<td>1814</td>
+</tr><tr class='odd'>
+	<th>Proteins</th>
+	<td>7638</td>
+	<td>117</td>
+	<td>4803</td>
+</tr><tr class='even'>
+	<th>Structures</th>
+	<td>222</td>
+	<td>45</td>
+	<td>222</td>
+</tr>
+</table>
+
+<div id='news'>
+<h1>ConoNews</h1>
+<li><span class='date'>2019-09-13
+</span><span>The webserver hosting ConoServer has been upgraded, and nearly all pages have required some modifications of the code. Please do not hesitate to contact us if you notice something is not working properly (email: <a href='mailto:q.kaas@imb.uq.edu.au'>q.kaas@imb.uq.edu.au</a>).
+</span></li>
+</div>
+
+	
+</div>
+
+<div id='foot'>
+<u>Please cite</u>:<br>
+Kaas Q, Yu R, Jin AH, Dutertre S and Craik DJ.
+<a href='http://www.ncbi.nlm.nih.gov/pubmed/22058133'>ConoServer: updated content, knowledge, and discovery tools in the conopeptide database.</a> <i>Nucleic Acids Research</i> (2012) <b>40</b>(Database issue):D325-30<br>
+Kaas Q, Westermann JC, Halai R, Wang CK and Craik DJ.
+<a href='http://www.ncbi.nlm.nih.gov/pubmed/18065428'>ConoServer, a database for conopeptide sequences and structures.</a> <i>Bioinformatics</i> (2008) <b>24</b>(3):445-6
+<p>
+ConoServer is managed at the Institute of Molecular Bioscience <a href='http://imb.uq.edu.au/'>IMB</a>, Brisbane, Australia.
+</p>
+<p>The database and computational tools found on this website may be used for academic research only, provided that it is referred to ConoServer, the database of conotoxins (http://www.conoserver.org) and the above reference is cited. For any other use please contact David Craik (d.craik@imb.uq.edu.au).
+</p>
+<p>
+<a href='http://www.imb.uq.edu.au/'>
+<img src='images/IMB_UQ_small.png'/>
+</a>
+Contacts:<br/>
+<a href="mailto:d.craik@imb.uq.edu.au?subject=ConoServer">David Craik</a><br/>
+<a href="mailto:q.kaas@imb.uq.edu.au?subject=ConoServer">Quentin Kaas</a><br/>
+</p>
+<p>
+Last updated: Tuesday 31 March 2020</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

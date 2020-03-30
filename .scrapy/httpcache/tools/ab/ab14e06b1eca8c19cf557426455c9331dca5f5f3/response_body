@@ -1,0 +1,200 @@
+<html lang="de"><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><meta charset="utf-8"><meta name="robots" content="INDEX,FOLLOW"><meta name="revisit-after" content="7 days"><meta name="abstract" content="Bioinformatics Greifswald"><meta name="keywords" content="Bioinformatics Greifswald"><meta name="description" content="University of Greifswald"><meta property="author" content="University of Greifswald"><meta name="date" content="2018-07-17"><link rel="stylesheet" type="text/css" href="../css/new1.css" media="all"><link rel="stylesheet" type="text/css" href="../css/new2.css" media="screen"><title>Bioinformatics Web Server - University of Greifswald</title><meta name="lastModified" content="2018-07-16"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><style>.stickyFixed {position: fixed !important;  top:0 !important;} </style></head><body id="page-6289" class="">
+      <!-- dark header topbar -->
+      <div class="topbar">
+      </div>
+      <!-- header with uni logo -->
+      <header class="header">
+         <div class="header__content">
+            <div class="header__top-wrapper">
+               <!-- left side banner white spacer -->
+               <div class="header__submenu"></div>
+               <div class="logo">
+                  <a href="https://www.uni-greifswald.de/" title="Universität Greifswald" class="logo-main">
+                  <img src="../images/uni-greifswald_opt.svg" width="400" height="118" alt="Universität Greifswald" title="Universität Greifswald">
+                  </a>
+               </div>
+               <!-- middle part of header -->
+               <div class="organization">
+                  <a href="//bioinf.uni-greifswald.de/">
+                     <h3>Bioinformatics Web Server</h3>
+                  </a>
+               </div>
+            </div>
+            <nav id="nav" class="navigation">
+               <ul class="navigation-list navigation-list--table">
+                  <li class="navigation-list__item navigation-list__item--level-1 navigation-list__item--active"><a href="//bioinf.uni-greifswald.de/">Bioinformatics Group</a></li>
+                  <li class="navigation-list__item navigation-list__item--level-1" data-dropdown="true"><a href="https://math-inf.uni-greifswald.de/">Mathematics and Computer Science</a></li>
+                  <li class="navigation-list__item navigation-list__item--level-1" data-dropdown="true"><a href="https://mnf.uni-greifswald.de/en/faculty/">Faculty of Math. and Natural Sciences</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <div class="container">
+         <div class="grid">
+            <div class="column-1 grid__column grid__column--md-3">
+               <ul class="navigation-sub">
+                  <li class="navigation-sub__item"><a href="../index.html">Home</a></li>
+                  <li class="navigation-sub__item"><a href="../services/index.html">Web Services</a></li>
+                  <li class="navigation-sub__item"><a href="//bioinf.uni-greifswald.de/webaugustus/">    AUGUSTUS</a></li>
+                  <li class="navigation-sub__item"><a href="../forum">        Forum</a></li>
+                  <li class="navigation-sub__item"><a href="//bioinf.uni-greifswald.de/ClassyFlu">    ClassyFlu</a></li>
+                  <li class="navigation-sub__item"><a href="../downloads/index.html">Downloads</a></li>
+                  <li class="navigation-sub__item"><a href="../braker/index.html">    BRAKER</a></li>
+                  <li class="navigation-sub__item"><a href="../publications/index.html">Publications</a></li>
+                  <li class="navigation-sub__item"><a href="../projects/index.html">Open Positions</a></li>
+                  <li class="navigation-sub__item"><a href="../funding/index.html">Funding</a></li>
+                  <li class="navigation-sub__item"><a href="../group/index.html">Contact</a></li>
+                  <li class="navigation-sub__item"><a href="../impressum.html">Impressum</a></li>
+                  <li class="navigation-sub__item"><a href="../datenschutz.html">Data Privacy Protection</a></li>
+               </ul>
+            </div>
+            <div class="column-2 grid__column grid__column--md-9">
+               <main class="main-content">
+                  <div id="c180465" class="csc-default">
+                     <div class="csc-header csc-header-n1">
+                        <h1 class="csc-firstHeader">BRAKER</h1>
+                     </div>
+                  </div>
+                  <div id="c261665" class="csc-default">
+                     <div class="csc-default">
+                        <div class="divider">
+                           <hr>
+                        </div>
+                     </div>
+                  
+                     <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+                        <b>Availability</b><br>
+                        BRAKER is availabe from github at <a href="https://github.com/Gaius-Augustus/BRAKER">https://github.com/Gaius-Augustus/BRAKER</a>.
+                     </p>
+                     <p>BRAKER is a tool for fully automated genome annotation with <a href="http://exon.gatech.edu/GeneMark/">GeneMark-ET</a> and <a href="//bioinf.uni-greifswald.de/webaugustus/">AUGUSTUS</a>. BRAKER is a joint project of <a href="https://www.gatech.edu/">Georgia Institute of Technology, USA </a> and <a href="https://math-inf.uni-greifswald.de/">Institute for Mathematics and Computer Science, University of Greifswald, Germany</a>.
+                     </p><p>
+                     </p><p>In its initial version, BRAKER1 was able to process genome and RNA-Seq data, only. <a href="http://www.biotechniques.com/news/BRAKE-ing-The-Monotony-of-Gene-Annotation/biotechniques-362983.html#.VrhkPn\
+                        UrLJ9">BioTechniques reported on BRAKER1 on 02/05/2016</a>.</p>
+                     <p> BRAKER1 required two input files: </p>
+                     <ul>
+                        <li>genome file in fasta format,</li>
+                        <li>corresponding RNA-Seq alignment file (must contain spliced alignments) in bam format.</li>
+                     </ul>
+                     <p>First, GeneMark-ET performs RNA-Seq supported iterative training and generates initial gene structures. Second, AUGUSTUS uses predicted genes for training and then integrates RNA-Seq read information as extrinsic evidence into final gene predictions.</p>
+                     <p>With the most recent release, <b>BRAKER2</b>, training of GeneMark-EP from alignment information of proteins from species with a longer evolutionary distance to the target genome is possible. You may thus achieve good gene prediction accuracy of GeneMark-EP and AUGUSTUS in the absence of RNA-Seq data. BRAKER1 functionality is fully maintained by BRAKER2. You find more information about BRAKER2 on our <a href="poster.pdf">poster</a> and in <a href="slides.pdf">the slides from our talk at Plants and Animal Genomes conference 2018</a>.</p>
+                     <h2>Accuracy</h2>
+                     <p>We compare prediction accuracy of BRAKER1 on four model species genomes to accuracy of MAKER2 and CodingQuarry (only applicable to fungi). The following table is an excerpt from our publication <a href="https://bioinformatics.oxfordjournals.org/content/early/2015/11/11/bioinformatics.btv661.abstract"><b>BRAKER1: Unsupervised RNA-Seq-Based Genome Annotation with GeneMark-ET and AUGUSTUS</b></a>, Table1:</p>
+                     <p>
+                     </p><table border="1">
+                        <tr>
+                           <th>Level</th>
+                           <th colspan="2"><i>Arabidopsis thaliana</i></th>
+                           <th colspan="2"><i>Caenorhabditis elegans</i></th>
+                           <th colspan="2"><i>Drosophila melanogaster</i></th>
+                           <th colspan="3"><i>S. pombe*</i></th>
+                        </tr>
+                        <tr>
+                           <th></th>
+                           <th>BRAKER1</th>
+                           <th>MAKER2</th>
+                           <th>BRAKER1</th>
+                           <th>MAKER2</th>
+                           <th>BRAKER1</th>
+                           <th>MAKER2</th>
+                           <th>BRAKER1</th>
+                           <th>MAKER2</th>
+                           <th>Coding Quarry</th>
+                        </tr>
+                        <tr>
+                           <td>Gene Sens.</td>
+                           <td><b>64.4</b></td>
+                           <td>51.3</td>
+                           <td><b>55.0</b></td>
+                           <td>41.0</td>
+                           <td><b>64.9</b></td>
+                           <td>55.2</td>
+                           <td>77.4</td>
+                           <td>42.8</td>
+                           <td><b>79.7</b></td>
+                        </tr>
+                        <tr>
+                           <td>Gene Spec.</td>
+                           <td>52.0</td>
+                           <td><b>52.2</b></td>
+                           <td><b>55.2</b></td>
+                           <td>30.8</td>
+                           <td><b>59.4</b></td>
+                           <td>46.3</td>
+                           <td><b>80.5</b></td>
+                           <td>68.7</td>
+                           <td>72.6</td>
+                        </tr>
+                        <tr>
+                           <td>Exon Sens.</td>
+                           <td><b>82.9</b></td>
+                           <td>76.1</td>
+                           <td><b>80.2</b></td>
+                           <td>69.4</td>
+                           <td><b>75.0</b></td>
+                           <td>66.4</td>
+                           <td><b>83.2</b></td>
+                           <td>50.1</td>
+                           <td>79.6</td>
+                        </tr>
+                        <td>Exon Spec.</td>
+                        <td><b>79.0</b></td>
+                        <td>76.1</td>
+                        <td><b>85.3</b></td>
+                        <td>62.3</td>
+                        <td><b>81.7</b></td>
+                        <td>66.9</td>
+                        <td><b>83.2</b></td>
+                        <td>71.4</td>
+                        <td>81.7</td>
+                     </table>
+                     *) Schizosaccharomyces pombe
+                     
+                     <h2>Usage</h2>
+                     <p>For straight forward gene prediction in a genome file with a RNA-Seq alignment bam file, run the following command:</p>
+                     <p><tt>perl braker.pl --genome=genome.fa --bam=RNAseq.bam</tt></p>
+                     <p>For usage with protein data, choose one aligner out of GenomeThreader (gth), Exonerate (exonerate) and Spaln (spaln):</p>
+                     <p><tt>perl braker.pl --genome=genome.fa --bam=RNAseq.bam --prot_seq=protein.fa --prg=(gth|exonerate|spaln) --ALIGNMENT_TOOL_PATH=/path/to/aligner</tt></p>
+                     <p>For usage with protein alignment data from remotely related species (result of the GeneMark-EP protein mapping pipeline):</p>
+                     <p><tt>perl braker.pl --genome=genome.fa --hints=protein.gff --epmode</tt></p>
+                     <p>BRAKER2 produces three important output files in the working directory:</p>
+                     <p>
+                     </p><ul>
+                        <li><tt>hintsfile.gff</tt> - The introns extraced from RNAseq.bam. These introns are used for training GeneMark-ET and for predicting genes with AUGUSTUS. The file is in gff format (see section 3, input argument --hints). If protein data is used, hintsfile.gff contains additional hint types generated from protein data. Those additional hints are used by AUGUSTUS, only.
+                        </li><li><tt>genemark.gtf</tt>  - Genes predicted by GeneMark-EX in gtf format
+                        </li><li><tt>augustus.gff</tt>  - Genes predicted by AUGUSTUS in gtf format
+                     </li></ul>
+                     
+                     <h2>Note:</h2>
+                     <p>We have to correct one important reference in the BRAKER1 publication.
+                        In computations of the gene prediction accuracy for the D. melanogaster genome we used the  r6.07 version of the fly genome and annotation.
+                        However,   the Supplementary materials to the paper (available at the &quot;Bioinformatics&quot;  journal website)
+                        incorrectly cite the earlier  r5.55 version  of the  D. melanogaster genome.
+                     </p>
+                     <h2>Publications</h2>
+                     <p>Please cite the following publications when using BRAKER for your project:
+                     </p><ul>
+                        <li>Hoff, K.J., Lange, S., Lomsadze, A., Borodovsky, M., Stanke, M. (2015) BRAKER1: Unsupervised RNA-Seq-Based Genome Annotation with GeneMark-ET and AUGUSTUS, <a href="https://bioinformatics.oxfordjournals.org/content/early/2015/11/11/bioinformatics.btv661.abstract">Bioinformatics, doi: 10.1093/bioinformatics/btv661</a></li>
+                     </ul>
+
+                     <div class="csc-default">
+                        <div class="divider">
+                           <hr>
+                        </div>
+                     </div>
+                  </div>
+               </main>
+            </div>
+         </div>
+      </div>
+      <footer class="footer footer--padding-bottom">
+         <div class="footer-column footer-column--dark">
+            <div class="footer__content-wrapper">
+               <div class="footer-bottom">
+                  <div class="footer-bottom__copyright">
+                     <p>© 2018  Universität Greifswald</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </body></html>

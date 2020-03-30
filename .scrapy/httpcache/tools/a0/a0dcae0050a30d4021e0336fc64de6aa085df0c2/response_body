@@ -1,0 +1,259 @@
+
+
+
+ <!-- style name parameter is inherited from the call of this JSP -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="author" content="Ben St&ouml;ver" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="http://bioinfweb.info/AlignmentComparator/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://bioinfweb.info/CSS.jsp?styleName=AlignmentComparator" />
+<script type="text/javascript" src="http://bioinfweb.info/Main.js"></script>
+		
+			
+				
+<title>AlignmentComparator</title>
+			
+			
+		
+	</head>
+  
+	
+	
+	<body>
+		<div class="left-top-box">
+			
+
+
+
+	
+		
+		
+	
+	
+
+
+<header>
+	<div class="content-box logo-menu-button-container">
+		<div id="logoContainer" class="logo-container">
+			<a href="http://bioinfweb.info/AlignmentComparator/">
+				<img id="iconImageVert" src="http://bioinfweb.info/AlignmentComparator/Logo.svg" alt="AlignmentComparator icon" style="border-width: 0px; width: 100%;" />
+			</a>
+			<a href="http://bioinfweb.info/AlignmentComparator/">
+				<img id="iconImageHoriz" src="http://bioinfweb.info/AlignmentComparator/Logo.svg" alt="AlignmentComparator icon" style="border-width: 0px; width: 100%; height: auto;" />
+			</a>
+		</div>
+		<div id="menuButtonContainer" class="menu-button-container">
+			<button type="button" class="menu-button" id="mainMenuToggleButton" onClick="toggleMainMenu();">
+				<img src="http://bioinfweb.info/SharedFiles/Icons/Menu.jsp?color=FFFFFF" alt="open main navigation" style="height: 100%; width: 100%" />
+			</button>
+		</div>
+	</div>
+	
+	<nav class="content-box main-navigation" id="mainMenuContainer">
+	  
+<ul>
+	
+
+<li>
+	<a href="http://bioinfweb.info/AlignmentComparator/Download">Download</a>
+	<ul>
+		<li><a href="http://bioinfweb.info/AlignmentComparator/Download/Versions">Version history</a></li>
+		
+			
+		
+	</ul>
+</li>
+	<li><a href="http://bioinfweb.info/AlignmentComparator/License">License</a></li>
+	
+	
+<li>
+	<a href="http://bioinfweb.info/AlignmentComparator/SourceCode">Source code</a>
+	<ul>
+		<li><a href="http://bioinfweb.info/Code/sventon/repos/AlignmentComparator/list/">Repository root</a></li>
+		<li><a href="http://bioinfweb.info/Code/sventon/repos/AlignmentComparator/list/trunk/main/?revision=HEAD">Modules in trunk</a></li>
+		<li><a href="http://bioinfweb.info/Code/sventon/repos/AlignmentComparator/list/tags/?revision=HEAD">Tags</a></li>
+		<li><a href="http://bioinfweb.info/Code/sventon/repos/AlignmentComparator/log/?revision=HEAD">Recent changes</a></li>
+	</ul>
+</li>
+	
+
+
+
+
+<li><a href="http://bioinfweb.info/AlignmentComparator/Bugs">Bugs</a>
+	<ul>
+		<li>
+			<a href="https://secure.bioinfweb.info/Bugs/MantisBT/set_project.php?project_id=12&amp;make_default=no&amp;ref=view_all_bug_page.php" >View bugs</a>
+		</li>
+		<li>
+			<a href="https://secure.bioinfweb.info/Bugs/MantisBT/set_project.php?project_id=12&amp;make_default=no&amp;ref=bug_report_page.php" >Report bug</a>
+		</li>
+		<li>
+			<a href="https://secure.bioinfweb.info/Bugs/MantisBT/set_project.php?project_id=12&amp;make_default=no&amp;ref=summary_page.php" >Summary</a>
+		</li>
+	</ul>
+</li>
+</ul>
+	</nav>
+</header>
+		</div>
+
+		<div class="main-box">
+			
+<div class="content-box path-navigation-button-box">
+	
+
+
+<nav class="path-navigation-box">
+	
+		<a href="http://bioinfweb.info/">
+				<img alt="bioinfweb icon" src="http://bioinfweb.info/SharedFiles/Icons/bioinfweb.jsp?color=EC3333" class="inline-image"> bioinfweb</a> -
+	
+	<ol>
+		
+		<li>AlignmentComparator</li>
+	</ol>
+</nav>
+
+	<div class="column-button-box">
+		<button type="button" class="menu-button" id="columnsToggleButton" onClick="toggleColumns();">
+			<img src="http://bioinfweb.info/SharedFiles/Icons/Columns.jsp?color=FFFFFF" alt="Toggle columns" style="height: 100%; width: 100%" />
+		</button>
+	</div>
+</div>
+			<div class="content-box main-content-container">
+				
+					
+<h1>
+  AlignmentComparator - An application to efficiently visualize and annotate differences 
+  between alternative multiple sequence alignments
+</h1>
+
+
+<div class="in-content-box-right" style="float:right; width:360px;">
+  <div>
+    <a href="http://bioinfweb.info/AlignmentComparator/Screenshot.png">
+      <img src="http://bioinfweb.info/AlignmentComparator/ScreenshotSmall.png" alt="Screenshot of AlignmentComparator" style="border: 0px;" />
+	  </a>
+  </div>
+  <div style="margin-top:5px; margin-bottom:5px;">
+    <small>Example of a comparison of two alternative alignments with AlignmentComparator</small>
+  </div>
+</div>
+
+<p>
+  With a growing number of alternative algorithms for automated multiple sequence alignment (MSA) and different 
+  strategies for manual alignment corrections it becomes more and more relevant to visualize the differences 
+  between alternative MSAs of the same data set. AlignmentComparator is a desktop application that <b>visualizes
+  the differences between two alternative alignments of the same data set</b> and allows to <b>annotate and comment</b>
+  them. This allows the researcher to decide which alternative alignments to take into account as the bases of e.g. a 
+  phylogenetic study or numerous other tasks in biological research. Furthermore, manual alignment corrections can 
+  be visualized or a bioinformatician can determine the effect of changes made to a MSA algorithm, which both is 
+  very relevant in our current research focusing on the improvement of MSA for phylogenetic purposes.
+</p>
+<p>
+  AlignmentComparator is is distributed under 
+  <a href="http://bioinfweb.info/AlignmentComparator/License">GNU General Public License version 3</a>.
+</p>
+
+<h2>Features</h2>
+<ul>
+  <li>Graphically compare two alternative alignments of the same data set.</li>
+  <li>Supports FASTA, Phylip, Nexus and NeXML.</li>
+  <li>Stores comparison results in NeXML.</li>
+</ul>
+
+<h2>Further information</h2>
+<p>
+  A detailed documentation of the usage of AlignmentComparator will be provided in this website before
+  AlignmentComparator reaches beta stage. Until than you can find further information on this 
+  <a href="http://www2.ieb.uni-muenster.de/EvolBiodivPlants/en/Publications/ConferenceContribution?id=96833">conference poster</a>.
+</p>
+<div style="clear: right;"></div>
+
+				
+			</div>
+			
+
+
+<nav class="content-box footer-navigation">
+	<ul>
+		<li><a href="http://bioinfweb.info/"><img alt="bioinfweb icon" src="http://bioinfweb.info/SharedFiles/Icons/bioinfweb_small.jsp?color=4B569E">
+				bioinfweb home</a></li>
+		
+			<li><a href="http://bioinfweb.info/AlignmentComparator/"><img alt="Home icon" src="http://bioinfweb.info/SharedFiles/Icons/Home.jsp?color=4B569E">	Project home</a></li>
+		
+		<li><a href="http://bioinfweb.info/AlignmentComparator/About"><img alt="Section symbol icon" src="http://bioinfweb.info/SharedFiles/Icons/Legal.jsp?color=4B569E">
+				Legal notice</a></li>
+		<li><a href="http://bioinfweb.info/Privacy"><img alt="bioinfweb icon" src="http://bioinfweb.info/SharedFiles/Icons/Privacy.jsp?color=4B569E">
+				Privacy policy</a></li>
+		<li><a href="http://bioinfweb.info/Credits"><img alt="Credits icon (multiple persons)" 
+				src="http://bioinfweb.info/SharedFiles/Icons/Credits.jsp?color=4B569E"> Credits</a></li>
+		
+	</ul>
+</nav>
+
+		</div>
+  
+		<div class="left-bottom-box">
+			
+<div class="content-box" style="padding:0px; text-align:center;">
+	<a href="http://bioinfweb.info/News.rss">
+		<img src="http://bioinfweb.info/SharedFiles/RSSFollow.png" alt="bioinfweb RSS feed" width="25" height="25" style="border-width:0px; margin-top:5px; margin-bottom:5px;" />
+	</a>
+	
+		<a href="https://www.researchgate.net/project/AlignmentComparator-Visualizing-differences-between-alternative-multiple-sequence-alignments">
+			<img src="http://bioinfweb.info/SharedFiles/SocialMedia/ResearchGateLinkIcon.png" alt="AlignmentComparator on ResearchGate" width="25" height="25" style="border-width:0px; margin-top:5px; margin-bottom:5px;" />
+		</a>
+	
+	<a href="http://twitter.com/bioinfweb">
+		<img src="http://bioinfweb.info/SharedFiles/SocialMedia/TwitterLinkIcon.png" alt="bioinfweb on twitter" width="31" height="25" style="border-width:0px; margin-top:5px; margin-bottom:5px;" />
+	</a>
+	<a href="https://github.com/bioinfweb/AlignmentComparator">
+		<img src="http://bioinfweb.info/SharedFiles/SocialMedia/GitHubLinkIcon.png" alt="AlignmentComparator on GitHub" width="25" height="25" style="border-width:0px; margin-top:5px; margin-bottom:5px;" />
+	</a>
+	
+	
+</div>
+
+	
+<div class="content-box" style="padding-left:5px;">
+  <p style="text-align: center;">
+    <a href="http://www2.ieb.uni-muenster.de/EvolBiodivPlants/en/Publications/ConferenceContribution?id=100873">
+      <img src="http://www2.ieb.uni-muenster.de/EvolBiodivPlants/Publications/100873Thumb.png" alt="AlignmentComparator poster IPAM MSA Workshop 2015" style="border-width: 0px;" />
+	  </a>
+	  <small>
+	    <a href="http://www2.ieb.uni-muenster.de/EvolBiodivPlants/en/Publications/ConferenceContribution?id=100873">
+	      Conference poster
+	    </a>
+	    at IPAM MSA Workshop in Jan 2015
+	  </small>
+  </p>
+
+  <p style="text-align: center;">
+    <a href="http://www2.ieb.uni-muenster.de/EvolBiodivPlants/en/Publications/ConferenceContribution?id=96833">
+      <img src="http://www2.ieb.uni-muenster.de/EvolBiodivPlants/Publications/96833Thumb.png" alt="AlignmentComparator poster at MSGE Symposium 2014" style="border-width: 0px;" />
+	  </a>
+	  <small>
+	    <a href="http://www2.ieb.uni-muenster.de/EvolBiodivPlants/en/Publications/ConferenceContribution?id=96833">
+	      Conference poster
+	    </a>
+	    at MSGE Symposium in June 2014
+	  </small>
+  </p>
+</div>
+
+
+	<div class="content-box" style="padding:0px; text-align:center;">
+		<a href="http://bioinfweb.info/">
+			<img src="http://bioinfweb.info/SharedFiles/mainPageLink.png" alt="bioinfweb - Biology &amp; Informatics Website" width="135" height="122" style="border-width:0px; margin-top:5px; margin-bottom:5px;" />
+		</a>
+	</div>
+
+		</div>
+  </body>
+</html>

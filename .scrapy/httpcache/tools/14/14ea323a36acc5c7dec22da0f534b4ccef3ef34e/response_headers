@@ -1,0 +1,32 @@
+Server: nginx/1.15.8
+Date: Mon, 30 Mar 2020 18:44:53 GMT
+Content-Type: text/html; charset=ISO-8859-1
+X-Archive-Orig-Date: Sat, 02 Sep 2006 04:44:47 GMT
+X-Archive-Orig-Server: Apache/2.0.59 (FreeBSD) DAV/2 PHP/4.4.4 mod_ssl/2.0.59 OpenSSL/0.9.7d-p1 mod_perl/2.0.2 Perl/v5.8.8
+X-Archive-Orig-Last-Modified: Fri, 01 Sep 2006 11:24:45 GMT
+X-Archive-Orig-Etag: "1795e3-515-a3a95940"
+X-Archive-Orig-Accept-Ranges: bytes
+X-Archive-Orig-Content-Length: 1301
+X-Archive-Orig-Connection: close
+X-Archive-Guessed-Content-Type: text/html
+X-Archive-Guessed-Charset: utf-8
+Memento-Datetime: Sat, 02 Sep 2006 04:44:46 GMT
+Link: <http://bio.math.berkeley.edu/amap/>; rel="original", <https://web.archive.org/web/timemap/link/http://bio.math.berkeley.edu/amap/>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/http://bio.math.berkeley.edu/amap/>; rel="timegate", <https://web.archive.org/web/20051102014348/http://bio.math.berkeley.edu:80/amap/>; rel="first memento"; datetime="Wed, 02 Nov 2005 01:43:48 GMT", <https://web.archive.org/web/20060717150648/http://bio.math.berkeley.edu:80/amap/>; rel="prev memento"; datetime="Mon, 17 Jul 2006 15:06:48 GMT", <https://web.archive.org/web/20060902044446/http://bio.math.berkeley.edu/amap/>; rel="memento"; datetime="Sat, 02 Sep 2006 04:44:46 GMT", <https://web.archive.org/web/20061217051022/http://bio.math.berkeley.edu:80/amap/>; rel="next memento"; datetime="Sun, 17 Dec 2006 05:10:22 GMT", <https://web.archive.org/web/20161222155748/http://bio.math.berkeley.edu/amap//>; rel="last memento"; datetime="Thu, 22 Dec 2016 15:57:48 GMT"
+Content-Security-Policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org analytics.archive.org pragma.archivelab.org
+X-Archive-Src: ACC-20060902033810-00524-c04.ba.accelovation.com-c/ACC-20060902043144-00551-c01.ba.accelovation.com.arc.gz
+Server-Timing: load_resource;dur=417.136902
+Server-Timing: exclusion.robots.policy;dur=0.300299
+Server-Timing: captures_list;dur=235.020561
+Server-Timing: PetaboxLoader3.datanode;dur=463.264432
+Server-Timing: RedisCDXSource;dur=20.766089
+Server-Timing: LoadShardBlock;dur=193.875758
+Server-Timing: esindex;dur=0.013107
+Server-Timing: CDXLines.iter;dur=16.353836
+Server-Timing: exclusion.robots;dur=0.314504
+Server-Timing: PetaboxLoader3.resolve;dur=105.954051
+X-App-Server: wwwb-app56
+X-Ts: 200
+X-Location: All
+X-Cache-Key: httpsweb.archive.orgen/web/20060902044446/http://bio.math.berkeley.edu/amap/ES
+X-Page-Cache: MISS
+Content-Encoding: gzip

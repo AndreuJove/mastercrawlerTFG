@@ -1,0 +1,21 @@
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Content-Md5: R/xDOZyyP6MDiXTzIeellw==
+Last-Modified: Tue, 15 Oct 2019 05:39:34 GMT
+Vary: Accept-Encoding
+Server: nginx
+X-Ms-Request-Id: 1c34a2ae-001e-0079-1ac3-063471000000
+X-Ms-Version: 2009-09-19
+X-Ms-Meta-Mtime: 2019-01-15T13:26:51.720776829Z
+X-Ms-Lease-Status: unlocked
+X-Ms-Blob-Type: BlockBlob
+Access-Control-Allow-Origin: *
+X-Served: Nginx-Proxito-Sendfile
+X-Deity: web04
+Strict-Transport-Security: max-age=31536000;
+X-Rtd-Project: brie
+X-Rtd-Version: latest
+X-Rtd-Path: /proxito/media/html/brie/latest/index.html
+X-Rtd-Domain: brie.readthedocs.io
+X-Rtd-Version-Method: subdomain
+Date: Mon, 30 Mar 2020 18:47:40 GMT

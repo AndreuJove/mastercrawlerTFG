@@ -1,0 +1,10 @@
+Date: Mon, 30 Mar 2020 18:49:00 GMT
+Server: Apache
+Strict-Transport-Security: max-age=15768000
+Location: https://www.embl.de/%7Ekorbel/CopySeq
+Vary: Accept-Encoding,User-Agent
+Content-Encoding: gzip
+Cache-Control: must-revalidate, private, no-cache, no-store, proxy-revalidate, no-transform, max-age=0
+X-Xss-Protection: 1; mode=block
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8

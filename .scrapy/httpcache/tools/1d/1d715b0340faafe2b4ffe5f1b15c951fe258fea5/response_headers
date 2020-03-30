@@ -1,0 +1,13 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:44:00 GMT
+Content-Type: text/html; charset=UTF-8
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding,Cookie
+Link: <https://asreml.kb.vsni.co.uk/wp-json/>; rel="https://api.w.org/"
+X-Powered-By: WP Engine
+X-Cacheable: SHORT
+Cache-Control: max-age=600, must-revalidate
+X-Cache: HIT: 1
+X-Cache-Group: normal
+Content-Encoding: gzip

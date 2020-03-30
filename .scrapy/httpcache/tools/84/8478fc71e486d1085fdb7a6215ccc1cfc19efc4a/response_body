@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>CARRIE: Computational Ascertainment of Regulatory Relationships Inferred from Expression</title>
+<link href="http://zlab.bu.edu/~phaverty/css/pete_tools.css" type="text/css" rel="stylesheet">
+<script src="http://zlab.bu.edu/~phaverty/js/mouseposition.js" type="text/javascript" language="JavaScript" ></script>
+<script src="http://zlab.bu.edu/~phaverty/js/mouseover_popup.js" type="text/javascript" language="JavaScript" ></script>
+<script src="http://zlab.bu.edu/~phaverty/js/spamguard.js" type="text/javascript" language="JavaScript" ></script>
+</head>
+
+<body>
+
+<div id="Content">
+<h1>CARRIE</h1><h2 class="sub">Computational Ascertainment of Regulatory Relationships (Inferred from Expression)</h2>
+
+<p>CARRIE takes two condition microarray data and applies promoter
+analysis to infer the stimulated/repressed transcriptional regulatory network.</p>
+
+<form method="post" action="../cgi-bin/index.cgi" enctype="multipart/form-data">
+
+<h3>1. Upload Array Data</h3>
+<input type="radio" name="data_type" value="preprocessed" checked><a href="javascript:showPopup('preprocessed')"> Pre-Processed</a><br>
+<input type="radio" name="data_type" value="unprocessed" ><a href="javascript:showPopup('unprocessed')"> Un-Processed</a><br>
+<input type="file" name="array_file"  size="40" maxlength="150">
+
+<h3>2. Choose Criteria for Significant Expression Change</h3>
+<textarea name="fold_change" cols=5 rows=1>2</textarea><a href="javascript:showPopup('fold_change')"> Fold Change</a><br>
+<textarea name="array_pvalue" cols=5 rows=1>0.01</textarea><a href="javascript:showPopup('array_pvalue')"> P-value</a><br>
+
+<h3>3. Choose Matrix List</h3>
+<select name="matrix_list">
+<option value='yeast' selected>TRANSFAC Yeast</option>
+<option value='human'>TRANSFAC Human</option>
+<option value='mouse'>TRANSFAC Mouse</option>
+<option value='rat'>TRANSFAC Rat</option>
+<option value='vertebrate'>TRANSFAC Vertebrate</option>
+<option value ='fruitfly'>TRANSFAC Fruit Fly</option>
+<option value='transfac'>All TRANSFAC</option>
+<option value='jaspar' selected>All JASPAR (Mostly Mammalian)</option>
+</select>
+<a href="/CarrieServer/html/carrie.readme.shtml#matrices" target="NEW">Details</a><br>
+
+<h3>4. Specify Promoters</h3>
+<a href="javascript:showPopup('promoters')">Use ours</a><br>
+<select name="promoters_source">
+<option value="user">Choose One</option>
+<option value="yeast">Yeast</option>
+<option value="mu11ksubb">Mu11kSubB</option>
+<option value="hgu95">HG-U95</option>
+<option value="hgu133">HG-U133</option>
+</select><br>
+
+<a href="javascript:showPopup('promoters')">or upload your own</a><br>
+<input type="file" name="promoters_file"  size="40" maxlength="150">
+
+<h3>5. Choose Criteria for Significant Transcription Factor Detection</h3>
+<textarea name="sig_site" cols=5 rows=1>0.001</textarea><a
+href="javascript:showPopup('sig_site')"> Frequency of Significant Sites in Random Promoters</a><br>
+<textarea name="sig_seq" cols=5 rows=1>0.01</textarea><a href="javascript:showPopup('sig_seq')"> P-value for Binding Site Overabundance in one promoter</a><br>
+<h3>6. <input type="submit"  name="action" value="Choose Transcription Factors"></h3>
+
+</form>
+
+<hr>
+<font size="-1"><i>Form Last Modified: Saturday, 21-Apr-2007 17:08:54 EDT</i></font><br>
+</div>
+
+<div id='preprocessed' class='popup'><p>
+Use this option if you have already calculated the values necessary to find the significant changes in gene expression in you microarray data.  Make sure your preprocessed data is in the proper <a href="carrie.readme.shtml#preprocessed_format" target="CARRIE_README">format</a>.
+<br><br><center><a href="javascript:hidePopup('preprocessed')">Close</a></center>
+</p></div>
+
+<div id='unprocessed' class='popup'><p>
+Use this option if you would like to use our <a href="carrie.readme.shtml#permutation_test" target="CARRIE_README">permutation test</a> program to calculate the significance of each mRNA abundance change in your microarray data.  If you choose this option you must have replicate arrays and use the correct <a href="carrie.readme.shtml#unprocessed_format" target="CARRIE_README">format</a>.
+<br><br><center><a href="javascript:hidePopup('unprocessed')">Close</a></center>
+</p></div>
+
+<div id='fold_change' class='popup'><p>
+Specify an appropriate the minimum (absolute) expression fold change for a significantly regulated gene.  For example, an entry of 2 will require a (non-logged) expression change of two fold for a gene to be considered for the network. If your data includes replicate chips, the average fold change will be used to compare to this cutoff.  If you provide a blank or zero fold change then fold change will not be used as a criterion for choosing significantly regulated genes.
+<br><br><center><a href="javascript:hidePopup('fold_change')">Close</a></center>
+</p></div>
+
+<div id='array_pvalue' class='popup'><p>
+Specify an appropriate cutoff for the probability that the change in expression observed for a given gene was a result of random variation.  For example a P-value cutoff of 0.0001 will specify that a gene will be considered for inclusion in the network its change in expression would be expected to be observed one in 10,000 measurements.  At the present time P-values are NOT corrected to account for the multiple testing problem (i.e. Bonferroni corrected).  The number specified should bin the the format 0.00001 or 5.23e-5.
+<br><br><center><a href="javascript:hidePopup('array_pvalue')">Close</a></center>
+</p></div>
+
+<div id='promoters' class='popup'><p>
+We currently offer promoters for 6221 yeast genes the genes represented on the Affymetrix Mu11ksubB chip.  We hope to add promoters for additional popular chips soon.  We consider the yeast promoters to be the 1000 bases upstream of the transcription start site.  The mamalian promoters are the 5000 upstream bases and 50 bases downstream.  If you would like to use your own promoters we suggest using <a href="http://biowulf.bu.edu/zlab/Promoser">Promoser</a> for mouse, rat, or human promoters and the <a href="http://cgsigma.cshl.org/jian/HTML/retrieveseq.html">Cold Spring Harbor resource</a> for yeast promoters, as we did.  Be certain that the file you upload is in FASTA format.  The first line for each promoter should begin with a greater than sign ">" and then the accession of the gene (corresponding to accessions in your microarray data.  Any further information in this first line should be separated from the accession by a tab.
+<br><br><center><a href="javascript:hidePopup('promoters')">Close</a></center>
+</p></div>
+
+<div id='sig_site' class='popup'><p>
+Specify the frequency of significant binding sites for a single transcription factor in random promoters.  For example, a promoter of length 1000 has slightly fewer than 2000 potential binding sites (both strands included).  A frequency of 0.0005, or one per 2000, would translate to one site per 1000 base long promoter.  In practice, values of approximately 0.1 to 2 per promoter work well.  This cutoff will be used to determine the similarity between a promoter region and known examples of real binding sites that we will call 'significant'.
+<br><br><center><a href="javascript:hidePopup('sig_site')">Close</a></center>
+</p></div>
+
+<div id='sig_seq' class='popup'><p>
+Specify a cutoff for the probability that the overabundance of 'significant' transcription factor binding sites in a promoter occurred by chance.  For example, a value of 1.00e-5 means that we will consider a transcription factor be responsible for the regulation of a gene if there is a one in 10,000 chance that we would observe such a large (or larger) overabundace of 'significant' binding sites for that transcription factor in a promoter like those that did not respond to the stimulus in your microarray experiment.
+<br><br><center><a href="javascript:hidePopup('sig_seq')">Close</a></center>
+</p></div>
+
+
+<div id="Menu">
+<style type="text/css">
+a {
+   font-size: 100%;
+   font-weight: bold;
+}
+</style>
+
+<a href="../html/">CARRIE Home</a><br>
+<a href="../html/carrie.readme.shtml" target="NEW">Instructions</a><br>
+<a href="../html/sample.preprocessed.array.data.txt" target="NEW">Microarray Format</a>
+<a href="../html/sample.promoters.txt" target="NEW">Promoter Format</a><br>
+<a href="../html/sample.CARRIE.output.html" target="NEW">Sample Output</a><br>
+<a href="http://zlab.bu.edu" target="NEW">ZLAB Home</a><br>
+<a href="http://zlab.bu.edu/zlab/resources.shtml" target="NEW">ZLAB Tools</a><br>
+<a href="javascript:spamGuard('phaverty','bu.edu')">Contact Us</a>
+
+</div>
+
+
+</body>
+</html>

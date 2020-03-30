@@ -1,0 +1,11 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:47:03 GMT
+Content-Type: text/html; charset=utf-8
+X-Powered-By: PHP/5.3.5-1ubuntu7.11
+X-Content-Type-Options: nosniff
+Vary: Accept-Encoding,Cookie
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: private, must-revalidate, max-age=0
+Last-Modified: Mon, 30 Mar 2020 18:47:03 GMT
+Location: http://wiki.biouml.org/index.php/Landing
+Content-Encoding: gzip

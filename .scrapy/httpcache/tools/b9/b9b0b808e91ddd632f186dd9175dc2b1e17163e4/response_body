@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <meta name="description" content="Population genetics software">
+  <meta name="keywords" content="keywords">
+  <meta name="author" content="Daniel Lawson">
+  <link rel="stylesheet" type="text/css" href="default.css"
+ media="screen">
+  <title>ChromoPainter</title>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24569432-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<div class="header">
+<div class="title">
+<div class="header">
+<div class="title">
+<div class="header">
+<div class="title">
+<table style="text-align: left; width: 731px; height: 125px;" border="0"
+ cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 100px;"><img
+ src="chromo_large.gif" alt="" style="width: 112px; height: 150px;"><br>
+      </td>
+      <td style="vertical-align: top;">
+      <h1>ChromoPainter<br>
+      </h1>
+      </td>
+      <td style="vertical-align: top; width: 100px;"><img
+ style="width: 112px; height: 150px;" alt="Finestructure Icon"
+ src="finegui_large.gif"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content">
+<h1>About ChromoPainter</h1>
+ChromoPainter is a tool for finding haplotypes in sequence data.&nbsp;
+Each individual is "painted" as a combination of all other sequences.
+It can output a range of features, including:<br>
+<ul>
+  <li>Sample haplotypes</li>
+  <li>Expectations of the number of recombination events at all sites</li>
+  <li>A wide range of related features</li>
+</ul>
+It is useful to generate high quality Principal Components Analysis
+(PCA) from dense data, for creating data summaries for fineSTRUCTURE,
+for dating admixture events, and much more.<br>
+<span style="font-weight: bold;"><br>
+</span><a href="chromopainter.html">Download ChromoPainter</a><br><br>
+
+<h1>How it works</h1>
+This is a rough explanation of why our method works, and also why it is efficient.
+<a href="FigCopymodelExplanation.png"><img
+ alt="ARG comparison" src="FigCopymodelExplanation_small.png"
+ style="border: 0px solid ; width: 500px;"></a><br>
+This figure shows how we paint chromosomes, and why this is a sensible thing to do.
+Imagine data generated from an <a href="http://www.liebertonline.com/doi/abs/10.1089/cmb.1996.3.479">Ancestral Recombination Graph</a>,
+i.e. a large family 
+tree showing <b>all</b> the connections for all ancestors - it is a graph not a tree because
+your distinct relatives will all share the same distant ancestors when we go far enough back in time.  
+For illustration purposes we work with haplotypes, which can be roughly thought of as individuals.
+For any given gene,
+there is a tree relationship between the haplotypes (i.e. figure b). But considering the tree
+from haplotype 1's perspective (the black one), all that matters is the most recent common ancestor with each other
+haplotype.  This is what is shown in Figure a). The time to the most recent common ancestor
+ changes along the genome due to 
+recombination, resulting in different trees for different genes (c.f. figure b i-iii).  Knowing figure a) for <b>all</b>
+haplotypes would be the same as knowing the full Ancestral Recombination Graph
+(excluding unidentifiable recombination).<br><br>
+
+Genetic data is informative about the order recent ancestry but gets less informative as we go back in time.
+The "closest haplotype" is one of the strongest signals in the data.  This is what the 
+<a href="http://stephenslab.uchicago.edu/MSpapers/Li2003.pdf">Li & Stephens</a> "Painting" 
+algorithm (and <a href="chromopainter_info.html">ChromoPainter</a>) looks for, shown in Figure c. We search
+contiguous blocks that match haplotype 1, in this example the orange, green then pink haplotypes.  
+This approach ignores a lot of the (irrelevant) complexity of the graph - recombination that doesn't change
+the closest type can be ignored.  This helps increase statistical power.
+But there is uncertainty, e.g. in Figure b) (ii) when multiple
+haplotypes are equally close. Figure d) shows how we account for uncertainty, by considering
+the expected number of chunks that are copied (which can be cheaply computed in this case).
+Figure e) gives the "coancestry matrix" that we use 
+for inference in <a href="finestructure_info.html">fineSTRUCTURE</a>.
+<br><br>
+
+In this example, the blues and greens are
+a different population to the reds and oranges. Since the genomic tract is very short 
+we have few effectively independent chunks, so just forming populations based on this data would
+be naive. <a href="finestructure_info.html">fineSTRUCTURE</a> can identify the clusters that differ,
+and assess the statistical significance of the differences between them.<br><br> 
+
+A more complex example can be seen in the following figure, which has the same meaning as the previous
+for a more complicated example.
+<a href="FigCopymodelExplanationPopstructure.png"><img
+ alt="ARG comparison" src="FigCopymodelExplanationPopstructure_small.png"
+ style="border: 0px solid ; width: 500px;"></a><br>
+This figure is for a much longer genomic region and has 20 haplotypes split into <b>two different populations</b>.
+The population model is forbids  very close relationships forming between
+the two populations, separating the "red" population from the "blue" at the horizontal dashed line.
+Close examination will show that there are fewer blue chunks and that they are shorter on average. 
+The end result is that fewer chunks
+are copied between populations than within, a feature that we can exploit in fineSTRUCTURE.<br><br>
+
+There are significant efficiency savings made in this process. 
+We can compute the expected number of chunks analytically using standard 
+tools of the "<a href="http://en.wikipedia.org/wiki/Hidden_Markov_model">Hidden</a> <a href="http://www.stat.psu.edu/~jiali/course/stat597e/notes2/hmm.pdf">Markov</a> Model" behind the painting algorithm.  We 
+can similarly account for parameter uncertainty in the fineSTRUCTURE phase, 
+integrating out the uncertain parameters associated with each population.
+
+<h1>ChromoCombine</h1>
+For simple problems, the output of ChromoPainter can be used directly
+in e.g. <a href="finestructure_info.html">fineSTRUCTURE</a>. However, for
+larger problems it is best to split up the data and run ChromoPainter separately
+for different genomic regions and different individuals.
+Therefore ChromoPainter can produce a lot
+of related files on a lot of machines.  To help you combine them correctly,
+we have created a tool called <a href="chromocombine.html">ChromoCombine</a>.
+In essence, all you have to do is place all the files into a single folder
+and tell ChromoCombine about it.  Combining is a simple matter of summing 
+the chunk counts  (and other quantities) across regions, after which the effective
+number of chunks (i.e. the fineSTRUCTURE c factor) needs to be recalculated.
+All of this is done by the program; users shouldn't have to worry about it.<br>
+<span style="font-weight: bold;"><br>
+</span><a href="chromocombine.html">Download ChromoCombine</a><br>
+<h1>Citation and further information<br>
+</h1>
+The correct citation is:<br>
+<ul>
+  <li>Lawson, Hellenthal, Myers, and Falush (2012), <a href="http://www.plosgenetics.org/article/info%3Adoi%2F10.1371%2Fjournal.pgen.1002453">"Inference of
+population structure using dense haplotype data"</a>, PLoS Genetics, 8 (e1002453). (<a
+ href="LawsonEtAl12-Finestructure.pdf">preprint</a> and <a href="LawsonEtAl2012-Finestructure-SupportingInformation.pdf">Supporting Information</a> in a single PDF file rather than many individual files).</li>
+</ul>
+<br>
+</div>
+<!--SIDEBAR AND BOTTOMBAR-->
+<div class="sidenav">
+<ul></ul>
+THIS IS THE LEGACY SITE! See the
+<a href="../finestructure/index.html">new site!</a>
+<ul></ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="search.html">Search</a></li>
+  <li><a href="contents.html">Contents</a></li>
+<ul><h1>ChromoPainter</h1></ul>
+  <li><a href="chromopainter_info.html">Information</a></li>
+  <li><a href="chromopainter.html">Download</a></li>
+  <li><a href="chromocombine.html">ChromoCombine</a></li>
+<ul><h1>fineSTRUCTURE</h1></ul>
+  <li><a href="finestructure_info.html">Information</a></li>
+  <li><a href="finestructure.html">Download</a></li>
+  <li><a href="finestructureR.html">R tools</a></li>
+  <li><a href="greedyfinestructure.html">Greedy Optimisation</a></li>
+<ul><h1>Data</h1></ul>
+  <li><a href="data_suitable.html">Suitable Data</a></li>
+  <li><a href="data_phasing.html">Phasing</a></li>
+  <li><a href="data_example.html">Complex example</a></li>
+<ul><h1>Other</h1></ul>
+  <li><a href="signupform.html">Registration & Updates</a></li>
+  <li><a href="toolsummary.html">Tools and Scripts</a></li>
+  <li><a href="faq.html">FAQs</a></li>
+  <li><a href="links.html">Applications/Links</a></li>
+  <li><a href="comparisons.html">Methods comparison</a></li>
+  <li><a href="whatisapop.html">What is a population?</a></li>
+<ul><h1>Authors</h1></ul>
+  <li><a href="http://www.maths.bris.ac.uk/%7Emadjl/">Daniel Lawson</a></li>
+  <li><a href="http://www.homepages.ucl.ac.uk/~ucbtgrh/">Garrett
+Hellenthal</a><a
+ href="http://www.eva.mpg.de/genetics/neandertals-and-more/group-staff.html?Fsize=0%252C%2B%40%2F%27">Daniel
+Falush</a><a href="http://www.stats.ox.ac.uk/%7Emyers/">Simon Myers</a>
+  </li>
+</div>
+<div class="clearer"><span></span></div>
+</div>
+<div class="clearer"><span></span></div>
+</div>
+<div class="footer"> <span class="left"><small><small><small>&copy;
+2012 <a href="mailto:dan.lawson@bristol.ac.uk">Daniel Lawson</a>.</small></small></small></span>
+<small><small><small><span class="right">
+<!-- Begin Shinystat code -->
+<script type="text/javascript" src="http://codice.shinystat.com/cgi-bin/getcod.cgi?USER=danjlawson"></script>
+<noscript>
+<a href="http://www.shinystat.com" target="_top">
+<img src="http://www.shinystat.com/cgi-bin/shinystat.cgi?USER=danjlawson" alt="Free counter" border="0" /></a>
+</noscript>
+<!-- End Shinystat code -->
+<a
+ href="http://templates.arcsin.se">Website
+template</a> by <a href="http://arcsin.se">Arcsin</a></span></small></small></small>
+<br>
+<br>
+<div class="clearer"><span></span></div>
+</div>
+</div>
+</body>
+</html>

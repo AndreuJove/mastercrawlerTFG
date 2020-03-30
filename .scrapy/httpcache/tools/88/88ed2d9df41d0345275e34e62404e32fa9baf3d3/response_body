@@ -1,0 +1,202 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Elhanan Borenstein Lab</title>
+<link rel=stylesheet type="text/css" href="css/styles.css">
+<!--
+<script language="JavaScript1.2">
+var img_pixel = new Image();
+img_pixel.src = "images/pixel.gif";
+</script>
+-->
+</head>
+
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+<!-- JUST FOR CENTERING - START -->
+<table border="0" cellspacing="0" cellpadding="0" height="100%" width="100%">
+	<tr valign="top" align="center"><td>
+<!-- JUST FOR CENTERING - END -->
+
+
+<!-- PAGE TITLE - START-->
+<table border="0" width=800 cellspacing="0" cellpadding="0">
+
+  <tr><td><img border="0" src="images/pixel.gif" width=1 height=5></td></tr>
+  <tr><td><img border="0" src="images/title_lab_800.jpg"></td></tr>
+  <tr><td><img border="0" src="images/pixel.gif" width=1 height=5></td></tr>
+
+  <!-- <td align="left" valign="bottom" class="normalTxt"><img border="0" src="images/pixel.gif" width=1 height=10>&nbsp;Home > Publications</td> -->
+
+  <tr><td><img border="0" src="images/pixel.gif" width=1 height=5></td></tr>
+
+  <tr><td>
+<!-- PAGE TITLE - END -->
+
+
+<!-- MAIN COLUMN TABLE - START -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0" valign="top">
+<tr>
+
+	<!-- LEFT COLUMN ----------------------------------------------------------------------------------------------------------- START -->
+	<!-- LEFT COLUMN ----------------------------------------------------------------------------------------------------------- START -->
+	<!-- LEFT COLUMN ----------------------------------------------------------------------------------------------------------- START -->
+	<td width="150" valign="top" class="normalTxt">
+
+	<!-- MENU - START -->
+	<table border="0" cellspacing="0" cellpadding="0">
+
+				<tr><td><img class="cImg" src="images/software_burrito.jpg"></td><tr>
+				<tr><td><img src="images/pixel.gif" width="1" height="20" ></td><tr>
+
+				<tr><td><img border="0" src="images/menu_div_150.jpg" width="150" height="1"  hspace="0" vspace="0"></td></tr>
+
+				<tr><td><ul class="navbar"><li><a href="index.html">Home</a></ul></td></tr>
+
+				<tr><td><img border="0" src="images/menu_div_150.jpg" width="150" height="1"  hspace="0" vspace="0"></td></tr>
+
+				<tr><td><ul class="navbar"><li><a href="research.html">Research</a></ul></td></tr>
+
+				<tr><td><img border="0" src="images/menu_div_150.jpg" width="150" height="1"  hspace="0" vspace="0"></td></tr>
+
+				<tr><td><ul class="navbar"><li><a href="people.html">People</a></ul></td></tr>
+
+				<tr><td><img border="0" src="images/menu_div_150.jpg" width="150" height="1"  hspace="0" vspace="0"></td></tr>
+
+				<tr><td><ul class="navbar"><li><a href="publications.html">Publications</a></ul></td></tr>
+
+				<tr><td><img border="0" src="images/menu_div_150.jpg" width="150" height="1"  hspace="0" vspace="0"></td></tr>
+
+				<tr><td><ul class="navbar_s"><li><a href="software.html">Software</a></ul></td></tr>
+
+				<tr><td><img border="0" src="images/menu_div_150.jpg" width="150" height="1"  hspace="0" vspace="0"></td></tr>
+
+				<tr><td><ul class="navbar"><li><a href="download.html">Download</a></ul></td></tr>
+
+				<tr><td><img border="0" src="images/menu_div_150.jpg" width="150" height="1"  hspace="0" vspace="0"></td></tr>
+
+				<tr><td><ul class="navbar"><li><a href="courses.html">Courses</a></ul></td></tr>
+
+				<tr><td><img border="0" src="images/menu_div_150.jpg" width="150" height="1"  hspace="0" vspace="0"></td></tr>
+
+				<tr><td><ul class="navbar"><li><a href="photos.html">Photos</a></ul></td></tr>
+
+				<tr><td><img border="0" src="images/menu_div_150.jpg" width="150" height="1"  hspace="0" vspace="0"></td></tr>
+
+				<tr><td><ul class="navbar"><li><a href="contact.html">Contact</a></ul></td></tr>
+
+				<tr><td><img border="0" src="images/menu_div_150.jpg" width="150" height="1"  hspace="0" vspace="0"></td></tr>
+
+		</table>
+		<!-- MENU - END -->
+
+		<br>
+		<img src="images/elh4_rt_swl_150.jpg">
+		<br><br>
+
+		<a href="elhanan_borenstein.html" class="normalLinkTxt"><b>Elhanan Borenstein, Ph.D.</b></a><br>
+
+		<img border="0" src="images/pixel.gif" width="1" height="5" hspace="0" vspace="0"><br>
+		<b>Phone:</b> (206) 685-8165<br>
+		<b>Fax:</b> (206) 685-7301<br>
+		<img border="0" src="images/pixel.gif" width="1" height="2" hspace="0" vspace="0"><br>
+		<img border="0" src="images/emim_uw_new.jpg" hspace="0" vspace="0"><br>
+
+		<img border="0" src="images/pixel.gif" width="1" height="10" hspace="0" vspace="0"><br>
+
+	</td>
+	<!-- LEFT COLUMN ----------------------------------------------------------------------------------------------------------- END -->
+	<!-- LEFT COLUMN ----------------------------------------------------------------------------------------------------------- END -->
+	<!-- LEFT COLUMN ----------------------------------------------------------------------------------------------------------- END -->
+
+	<!-- VERTICAL SPACER -->
+	<td width="10"><img border="0" src="images/pixel.gif" width="10" height="1" hspace="0" vspace="0"></td>
+	<td width="1" bgcolor="#737373"><img border="0" src="images/pixel.gif" width="1" height="1" hspace="0" vspace="0"></td>
+	<td width="9"><img border="0" src="images/pixel.gif" width="9" height="1" hspace="0" vspace="0"></td>
+
+	<!-- MIDDLE COLUMN ----------------------------------------------------------------------------------------------------------- START -->
+	<!-- MIDDLE COLUMN ----------------------------------------------------------------------------------------------------------- START -->
+	<!-- MIDDLE COLUMN ----------------------------------------------------------------------------------------------------------- START -->
+	<td width="620" valign="top" class="normalTxt">
+
+
+		<table border="0" cellspacing="0" cellpadding="0" width=620 class="normalTxt">
+
+			<tr><td colspan=4><span class="titleTxt">BURRITO</span></td></tr>
+
+			<tr><td colspan=4><img border="0" src="images/pixel.gif" height="15" hspace="0" vspace="0"></td></tr>
+
+<tr><td>
+BURRITO is a web-based tool for interactive exploration of metagenomic datasets, linking taxonomic and functional microbiome profiles. To use this tool, go to BURRITO's website (BURRITO>Home). You can also access BURRITO's code and manual.<br><br>
+<br>
+<br />
+
+<tt><b>&raquo;&nbsp;</b></tt><a href="https://elbo-spice.gs.washington.edu/shiny/burrito/" class="toolTitleFont normalLinkTxt" target="_blank">BURRITO>Home</a><br />
+<tt>&nbsp;&nbsp;</tt>Use BURRITO.<br /><br />
+
+<tt><b>&raquo;&nbsp;</b></tt><a href="https://github.com/borenstein-lab/burrito" class="toolTitleFont normalLinkTxt" target="_blank">BURRITO>Code</a><br>
+<tt>&nbsp;&nbsp;</tt>BURRITO project on GitHub.<br><br>
+
+<tt><b>&raquo;&nbsp;</b></tt><a href="https://borenstein-lab.github.io/burrito/" class="toolTitleFont normalLinkTxt" target="_blank">BURRITO>Manual</a><br>
+<tt>&nbsp;&nbsp;</tt>Learn how to use BURRITO.<br><br>
+
+<br />
+
+</td></tr>
+
+<tr><td colspan=4 bgcolor="#EBEAE1"><img class="hrImgNarrow" border="0" src="images/pixel.gif" width="100%" height="1"  hspace="0" vspace="0"></td></tr>
+<tr><td>
+<br />
+<b>Understanding BURRITO Analysis</b><br />
+<br />
+
+BURRITO is a browser-based tool for interactive and simultaneous visualization of taxonomic and functional abundances in mixed microbial samples.
+BURRITO utilizes genomic content from either a default database or a user-provided table to compute the shares of each function&#39;s total abundance that can be attributed to each taxon.
+Users can interactively explore such links between taxonomic and functional profiles in complex microbiome samples through dynamic highlighting, tooltips, and level-of-detail controls.
+BURRITO further allows users to export publication-ready figures and processed data on taxa-function relationships.
+</td></tr>
+
+<tr><td colspan=4 bgcolor="#EBEAE1"><img class="hrImgNarrow" border="0" src="images/pixel.gif" width="100%" height="1"  hspace="0" vspace="0"></td></tr>
+<tr><td>
+If you are using BURRITO please cite the following paper:<br>
+<b>BURRITO: An interactive multi-omic tool for visualizing taxa-function relationships in microbiome data.</b><br>
+Colin P McNally, Alexander Eng, Cecilia Noecker, William C Gagne-Maynard, and Elhanan Borenstein<br>
+Submitted.
+</td></tr>
+<tr><td colspan=4 bgcolor="#EBEAE1"><img class="hrImgNarrow" border="0" src="images/pixel.gif" width="100%" height="1"  hspace="0" vspace="0"></td></tr>
+
+		</table>
+		<br><img border="0" src="images/pixel.gif" width="620" height="1" hspace="0" vspace="0">
+
+	</td>
+	<!-- MIDDLE COLUMN ----------------------------------------------------------------------------------------------------------- END -->
+	<!-- MIDDLE COLUMN ----------------------------------------------------------------------------------------------------------- END -->
+	<!-- MIDDLE COLUMN ----------------------------------------------------------------------------------------------------------- END -->
+
+	<!-- VERTICAL SPACER -->
+	<td width="10"><img border="0" src="images/pixel.gif" width="10" height="1" hspace="0" vspace="0"></td>
+
+
+</tr>
+</table>
+<!-- MAIN COLUMN TABLE - END -->
+
+
+
+<!-- PAGE TITLE - START-->
+	</td></tr>
+</table>
+<!-- PAGE TITLE - END -->
+
+
+<!-- JUST FOR CENTERING - START-->
+	</td></tr>
+	<tr valign="middle" align="center"><td height="30"><img border="0" src="images/pixel.gif" width="1" height="30"  hspace="0" vspace="0"></td></tr>
+</table>
+<!-- JUST FOR CENTERING - END -->
+
+</body>
+</html>
+

@@ -1,0 +1,83 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>ATIVS</title>
+    </head>
+    <body bgcolor="black">
+    
+        <!--h2 align='center'>Hello JokersWorld!</h2-->
+        <Table align='center'><TR><TD align='center'>
+            <img src="HOME.jpg" />
+            <Table align='center'><TR><TD>
+                <FORM  action="index.jsp" method="post"  align="center">
+                    <input type="hidden" name="request" value="GoToHome_jsp">
+                    <input type="button" name="link" value="HOME"  onclick="submit()" style="border:0px solid #666666;height:25px;font-size:10pt;font-family:verdana; BACKGROUND-COLOR: #E8E8FF;color:#666666">
+                </FORM>
+
+                <!--FORM  action="./JPGsur" method="post"  align="center">
+                    <input type="hidden" name="request" value="GoToHome_jsp">
+                    <input type="button" name="link" value="CheckJPG"  onclick="submit()" style="border:0px solid #666666;height:25px;font-size:10pt;font-family:verdana; BACKGROUND-COLOR: #E8E8FF;color:#666666">
+                </FORM-->
+
+                </TD><TD>
+                <FORM  action="Introduction.jsp" method="post"  align="center">
+                    <input type="hidden" name="request" value="GoToIntroduction_jsp">
+                    <input type="button" name="link" value="Instruction"  onclick="submit()" style="border:0px solid #666666;height:25px;font-size:10pt;font-family:verdana; BACKGROUND-COLOR: #E8E8FF;color:#666666">
+                </FORM>
+                </TD><TD>
+                <FORM  action="Example_Data.jsp" method="post"  align="center">
+                    <input type="hidden" name="request" value="GoToExample_jsp">
+                    <input type="button" name="link" value="Examples"  onclick="submit()" style="border:0px solid #666666;height:25px;font-size:10pt;font-family:verdana; BACKGROUND-COLOR: #E8E8FF;color:#666666">
+                </FORM>
+                </TD><TD>
+                <FORM  action="Contact.jsp" method="post"  align="center">
+                    <input type="hidden" name="request" value="GoToContact_jsp">
+                    <input type="button" name="link" value="Contact"  onclick="submit()" style="border:0px solid #666666;height:25px;font-size:10pt;font-family:verdana; BACKGROUND-COLOR: #E8E8FF;color:#666666">
+                </FORM>
+                </TD><TD>
+                <FORM  action="Statistics.jsp" method="post"  align="center">
+                    <input type="hidden" name="request" value="GoToStatistics_jsp">
+                    <input type="button" name="link" value="Statistics"  onclick="submit()" style="border:0px solid #666666;height:25px;font-size:10pt;font-family:verdana; BACKGROUND-COLOR: #E8E8FF;color:#666666">
+                </FORM>
+        </TD></TR></Table>
+    </TD></TR><TR><TD ALIGN="center">
+        <Table><TR><TD STYLE="width:500px;" ALIGN="left">
+                <font size="2" face="Verdana" color="white">
+        For influenza surveillance, both antigenic and genetic analyses of influenza isolates are routinely carried out to monitor changes in surface antigens.<br><br>
+        Functionalities of ATIVS consist of analyzing both serology data and HA1 sequence data of influenza A/H3N2 viruses.
+                </font>
+        </TD></TR></Table>
+    </TD></TR><TR><TD>
+       <Table align='center'>
+        <TR><TD>
+            <!--a href="MainSrevlet">HI Data</a-->
+            <FORM  action="HI_input.jsp" method="post"  align="center">
+                <input type="hidden" name="request" value="GoToHI_input_jsp">
+                <input type="button" name="link" value="Serology Data"  onclick="submit()" style="border:1px solid #666666;height:40px;width:200px;font-family:verdana; font-size:14pt; BACKGROUND-COLOR: #E8E8FF;color:#666666">
+            </FORM>
+           
+        </TD><TD>
+            <!--a href="MainSrevlet">Seq Data</a-->
+             <FORM  action="SEQ_input.jsp" method="post"  align="center">
+                 <input type="hidden" name="request" value="GoToSEQ_input_jsp">
+                 <input type="button" name="link" value="Sequence Data"  onclick="submit()" style="border:1px solid #666666;height:40px;width:200px; font-size:14pt;font-family:verdana; BACKGROUND-COLOR: #E8E8FF;color:#666666">
+             </FORM>
+        </TD></TR></Table>
+        <!--embed type="application/x-java-applet;version=1.3" ARCHIVE = "PIC1.jar" NAME = "TestApplet" WIDTH = 400 HEIGHT = 300 ALIGN = middle VSPACE = 0 HSPACE = 0 scriptable=false >
+        </embed-->
+        </TD></TR></Table>
+        <hr>
+    <DIV align="center">
+    <font size="2" face="Verdana" color="white">Division of Biostatistics and Bioinformatics<br>
+National Health Research Institutes, Zhunan, Taiwan<br>
+All Rights Reserved<br>
+Last Updated: 2009/04/08</font>
+    </DIV>
+    </body>
+</html>

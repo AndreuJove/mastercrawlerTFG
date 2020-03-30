@@ -1,0 +1,101 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CancerPPD</title>
+<meta name="keywords" content="" />
+<meta name="acancer" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	</div>
+	<div id="menu">
+		<ul id="main">
+			<li class="current_page_item"><a href="index.php">Home</a></li>
+			<li><a href="info.php">Information</a></li>
+			<li><a href="submit.php">Data Submission</a></li>
+			<li><a href="developers.php">Developers</a></li>
+			<li><a href="contact.php">Contact</a></li>
+			<li><a href="assist.php">Assistance</a></li>
+			<li><a href="otherlinks.php">Related Databases</a></li>
+
+		</ul>
+</div>
+        <!-- start page -->
+
+
+ <!-- start content -->
+<marquee scrollamount="10" width="800"  direction="left" SCROLLDELAY=200>
+<font size="3">
+===== Reference: <a href="http://www.ncbi.nlm.nih.gov/pubmed/25270878">Tyagi et al., (2015) CancerPPD: a database of anticancer peptides and proteins</a>  Nucl. Acids Res. 43:D837-43.</font> =====  
+    <a target="_new" href="http://webs.iiitd.edu.in/raghava/cancerppd/mobile"><font size="3"> The Mobile Version of CancerPPD =====</font></a>
+</marquee>
+
+                <div id="sidebar1" class="sidebar">
+                        <ul>
+                                <li>
+                                        <h2>Search</h2>
+                                        <ul>
+                                                <li><a href="basic.php">Basic</a></li>
+                                                <li><a href="adv.php">Conditional</a></li>
+                                                <li><a href="peptide.php">Peptide</a></li>
+                                                <li><a href="smiles.php">SMILES</a></li>
+                                        </ul>
+                                </li>
+                                <li>
+                                        <h2>Browse</h2>
+                                        <ul> 
+					
+                                                <li><a href="protein.php">Protein wise</a></li>
+                                                <li><a href="browse_peptide.php">Peptides wise</a></li>
+                                                <li><a href="browse_tissue.php">Tissue wise</a></li>
+                                                <li><a href="browse_celline.php">Cell Line wise</a></li>
+                                                <li><a href="browse_year.php">Year-wise</a></li>
+                                                <li><a href="browse_assay.php">Assay Type</a></li>
+                                                <li><a href="browse_length.php">Length</a></li>
+                                                <li><a href="browse_chem_mod.php">Modifications</a></li>
+                                        </ul>
+                                </li>
+                                <li>
+                                        <h2>Tools</h2>
+                                        <ul>
+                                                <li><a href="blast.php">BLAST</a></li>
+                                                <li><a href="smith.php">Smith-Waterman</a></li>
+                                                <li><a href="pep.php">Mapping</a></li>
+                                                <li><a href="seq_align.php">Sequence Alignment</a></li>
+                                                <!--li><a href="wheel.php">Helical-Wheel</a></li-->
+                                                <li><a href="struc_align.php">Structure Alignment</a></li>
+                                        </ul>
+                                </li>
+                                <li>
+                                        <h2>Download</h2>
+                                        <ul>
+                                                <li><a href="downseq.php">Sequence</a></li>
+                                                <li><a href="dwnstr.php">Structure</a></li>
+                                                <li><a href="dwnref.php">Reference</a></li>
+                                                <li><a href="acknowledge.php">Acknowledgement</a></li>
+                                        </ul>
+                                </li>
+                </div>
+<table> <tr><td></td></tr></table>
+<table width="800"><tr><td width="" align="justify" valign="top"> 
+	<p><strong><font size=5>CancerPPD</font></strong> is a unique resource of its kind, which provides detailed information related to experimentally verified anticancer peptides (ACPs) and proteins. Data was curated manually from both published articles, patents as well as from other repositories.  Since structures play important roles in the anticancer activity, we have predicted tertiary structures of anticancer peptides using state-of-art method PEPstr and secondary structure states are assigned using DSSP. The important feature of cancerPPD is that it also provides information related to various chemical modifications like non-natural, D-amino acids, modified-amino acid like ornithine. The database is cross-linked with various other related resources in order to provide comprehensive information related to ACPs. </p>
+<table  bgcolor=lightblue border=0><tr><td height=60 width=300 align=center><b>Total Peptide Entries : 3491</b> </td><td align = center height=60 width=300> <b>  Total Cell Lines : 249</b> </td><td height=60 width=300 align=center><b>Total Tissue Types : 21</b></td></tr></table>
+<p align= center><b> <font size=4 color =#8c0209>Mechanisms of ACP's action</font></b></p>
+<img src="images/cancerimage_2.png" alt="" width="800" height="390" />
+<h2> Key Features </h2>
+    (1) <b>Data Retrieval:</b> Tools for data fetching like simple, and advanced search were integrated. In addition, to search peptides, peptide search and SMILES search options are also provided.
+        <br/>(2) <b>Data Analysis:</b> BLAST, Smith-waterman, sequence and structure mapping tools are incorporated, which facilitate the similarity-based search.
+	    <br/>(3) <b>Browsing:</b> Various browsing fields have been provided, which facilitate the data browsing in a very convenient way.	        <br/>
+(4) <b>SMILES and Structures:</b> An important feature of CancerPPD is that it contains information of ACPs in SMILES format. In addition, predicted tertiary structures of all ACPs are available which makes it comprehensive resource.   
+		 </td>
+</tr></table></div>
+<div id="footer">
+     <p>    <a href="http://webs.iiitd.edu.in/raghava" target="_blank">Raghava</a>&nbsp;&bull;&nbsp; <a href="http://webs.iiitd.edu.in" target="_blank" >CSIR-IMTECH</a>&nbsp;&bull;&nbsp;<a href="http://www.csir.res.in" target="_blank">CSIR</a>&nbsp;&bull;&nbsp;<a href="http://webs.iiitd.edu.in/" target="_blank">CRDD</a>&nbsp;&bull;&nbsp;<a href="http://osddlinux.osdd.net/" target="_blank">OSDDlinux</a>&nbsp;&bull;&nbsp;<a href="http://webs.iiitd.edu.in/raghava/gpsr/" target="_blank">GPSR package</a>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <meta name="Generator" content="iWeb 2.0.4" />
+    <meta name="iWeb-Build" content="local-build-20100326" />
+    <meta name="viewport" content="width=700" />
+    <title>BS Seeker</title>
+    <link rel="stylesheet" type="text/css" media="screen,print" href="BS_Seeker_files/BS_Seeker.css" />
+    <!--[if IE]><link rel='stylesheet' type='text/css' media='screen,print' href='BS_Seeker_files/BS_SeekerIE.css'/><![endif]-->
+    <script type="text/javascript" src="Scripts/iWebSite.js"></script>
+    <script type="text/javascript" src="Scripts/Widgets/SharedResources/WidgetCommon.js"></script>
+    <script type="text/javascript" src="Scripts/Widgets/Navbar/navbar.js"></script>
+    <script type="text/javascript" src="Scripts/iWebImage.js"></script>
+    <script type="text/javascript" src="BS_Seeker_files/BS_Seeker.js"></script>
+  </head>
+  <body style="background: #f5f4f4; margin: 0pt; " onload="onPageLoad();" onunload="onPageUnload();">
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1826594-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <div style="text-align: center; ">
+      <div style="margin-bottom: 0px; margin-left: auto; margin-right: auto; margin-top: 0px; overflow: hidden; position: relative; word-wrap: break-word;  text-align: left; width: 700px; " id="body_content">
+        <div style="background: transparent url(BS_Seeker_files/backgroundimage_1.png) no-repeat scroll center center; width: 700px; ">
+          <div style="float: left; height: 0px; line-height: 0px; margin-left: 0px; position: relative; width: 700px; z-index: 10; " id="header_layer">
+            <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+          </div>
+          <div style="margin-left: 0px; position: relative; width: 700px; z-index: 0; " id="nav_layer">
+            <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+            <div style="height: 1px; line-height: 1px; " class="tinyText"> </div>
+            <div class="com-apple-iweb-widget-navbar flowDefining" id="widget0" style="margin-left: 0px; margin-top: 18px; position: relative; width: 700px; z-index: 1; ">
+    
+              <div id="widget0-navbar" class="navbar">
+
+      
+                <div id="widget0-bg" class="navbar-bg">
+
+        
+                  <ul id="widget0-navbar-list" class="navbar-list">
+ <li></li> 
+</ul>
+                  
+      
+</div>
+                
+    
+</div>
+            </div>
+            <script type="text/javascript"><!--//--><![CDATA[//><!--
+new NavBar('widget0', 'Scripts/Widgets/Navbar', 'Scripts/Widgets/SharedResources', '.', {"current-page-GUID": "653E4ADD-60AF-4509-8299-75CADB067615", "path-to-root": "", "isCollectionPage": "NO", "navbar-css": ".navbar {\n\tfont-family: 'Helvetica Neue', Arial, sans-serif;\n\tfont-size: .85em;\n\tcolor: #999;\n\tmargin: 0px;\n\tline-height: 20px;\n\tfont-weight: bold;\n}\n\n.navbar-bg {\n\ttext-align: left;\n\tpadding: 0px;\n}\n\n.navbar-bg ul {\n\tlist-style: none;\n\tmargin: 0px;\n\tpadding: 0px;\n}\n\n\nli {\n\tlist-style-type: none;\n\tdisplay: inline;\n\tpadding: 0px 15px 0px 10px;\n}\n\n\nli a {\n\ttext-decoration: none;\n\tcolor: #999;\n}\n\nli a:visited {\n\ttext-decoration: none;\n\tcolor: #999;\n}\n\nli a:hover\n{\n \tcolor: #F00;\n\ttext-decoration: none;\n}\n\n\nli.current-page a\n{\n\t color: #666;\n\ttext-decoration: none;\n\n}"});
+//--><!]]></script>
+            <div style="clear: both; height: 0px; line-height: 0px; " class="spacer"> </div>
+          </div>
+          <div style="margin-left: 0px; position: relative; width: 700px; z-index: 5; " id="body_layer">
+            <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+            <div style="height: 244px; width: 700px;  height: 244px; left: 0px; position: absolute; top: 1px; width: 699px; z-index: 1; " class="tinyText shadow_0 reflection_0">
+              <div style="position: relative; width: 699px; ">
+                <img src="BS_Seeker_files/shapeimage_1.png" alt="" style="height: 244px; left: 0px; position: absolute; top: 0px; width: 700px; " />
+              </div>
+            </div>
+            
+
+
+            <div class="tinyText" style="height: 52px; left: 23px; position: absolute; top: 532px; width: 316px; z-index: 1; ">
+              <img usemap="#map1" id="shapeimage_2" src="BS_Seeker_files/shapeimage_2.png" style="border: none; height: 62px; left: -4px; position: absolute; top: -4px; width: 326px; z-index: 1; " alt="Pao-Yang Chen, Shawn Cokus, and Matteo Pellegrini&#10;Department of Molecular, Cell and Developmental Biology, &#13;University of California, Los Angeles " title="" /><map name="map1" id="map1"><area href="http://pellegrini.mcdb.ucla.edu/Lab/Home.html" title="http://pellegrini.mcdb.ucla.edu/Lab/Home.html" alt="http://pellegrini.mcdb.ucla.edu/Lab/Home.html" onmouseout="IMmouseout('shapeimage_2', '0');" shape="rect" onmouseover="IMmouseover('shapeimage_2', '0');" coords="9, 9, 264, 23" /></map><img style="height: 14px; left: 5px; position: absolute; top: 5px; width: 255px; " alt="shapeimage_2_link_0" src="BS_Seeker_files/shapeimage_2_link_0.png" id="shapeimage_2_link_0" />
+            </div>
+            
+
+
+            <div style="height: 61px; width: 476px;  height: 61px; left: 9px; position: absolute; top: 9px; width: 476px; z-index: 1; " class="tinyText style_SkipStrokeSkipFillSkipOpacity">
+              <div style="position: relative; width: 476px; ">
+                <img src="BS_Seeker_files/shapeimage_3.png" alt="" style="height: 49px; left: 0px; margin-left: 5px; margin-top: 7px; position: absolute; top: 0px; width: 355px; " />
+              </div>
+            </div>
+            
+
+
+            <div style="height: 26px; width: 56px;  height: 26px; left: 639px; position: absolute; top: 215px; width: 56px; z-index: 1; " class="tinyText style_SkipStroke stroke_0 shadow_1 reflection_1" id="id1">
+              <img src="BS_Seeker_files/ucla_wc125.png" alt="" style="border: none; height: 26px; width: 57px; " />
+            </div>
+            
+
+
+            <div class="tinyText" style="height: 26px; left: 22px; position: absolute; top: 335px; width: 344px; z-index: 1; ">
+              <img usemap="#map2" id="shapeimage_4" src="BS_Seeker_files/shapeimage_4.png" style="border: none; height: 35px; left: -4px; position: absolute; top: -4px; width: 354px; z-index: 1; " alt="Download BS Seeker BS_SEEKER.tgz" title="" /><map name="map2" id="map2"><area href="BS_Seeker_files/BS_SEEKER.tgz" title="BS_Seeker_files/BS_SEEKER.tgz" alt="BS_Seeker_files/BS_SEEKER.tgz" onmouseout="IMmouseout('shapeimage_4', '0');" shape="rect" onmouseover="IMmouseover('shapeimage_4', '0');" coords="131, 8, 216, 25" /></map><img style="height: 17px; left: 127px; position: absolute; top: 4px; width: 85px; " alt="shapeimage_4_link_0" src="BS_Seeker_files/shapeimage_4_link_0.png" id="shapeimage_4_link_0" />
+            </div>
+            
+
+
+            <div class="tinyText" style="height: 27px; left: 22px; position: absolute; top: 442px; width: 280px; z-index: 1; ">
+              <img usemap="#map3" id="shapeimage_5" src="BS_Seeker_files/shapeimage_5.png" style="border: none; height: 35px; left: -4px; position: absolute; top: -4px; width: 290px; z-index: 1; " alt="Supplementary Information (BSS_Supp.pdf)" title="" /><map name="map3" id="map3"><area href="BS_Seeker_files/BSS_Supp.pdf" title="BS_Seeker_files/BSS_Supp.pdf" alt="BS_Seeker_files/BSS_Supp.pdf" onmouseout="IMmouseout('shapeimage_5', '0');" shape="rect" onmouseover="IMmouseover('shapeimage_5', '0');" coords="177, 8, 258, 25" /></map><img style="height: 17px; left: 173px; position: absolute; top: 4px; width: 81px; " alt="shapeimage_5_link_0" src="BS_Seeker_files/shapeimage_5_link_0.png" id="shapeimage_5_link_0" />
+            </div>
+            
+
+
+            <div class="tinyText" style="height: 30px; left: 22px; position: absolute; top: 412px; width: 347px; z-index: 1; ">
+              <img usemap="#map4" id="shapeimage_6" src="BS_Seeker_files/shapeimage_6.png" style="border: none; height: 37px; left: -4px; position: absolute; top: -4px; width: 357px; z-index: 1; " alt="Examples for running BS Seeker" title="" /><map name="map4" id="map4"><area href="EXAMPLES.html" title="EXAMPLES.html" alt="EXAMPLES.html" onmouseout="IMmouseout('shapeimage_6', '0');" shape="rect" onmouseover="IMmouseover('shapeimage_6', '0');" coords="8, 8, 192, 25" /><area href="EXAMPLES.html" title="EXAMPLES.html" alt="EXAMPLES.html" coords="4, 4, 351, 34" /></map><img style="height: 17px; left: 4px; position: absolute; top: 4px; width: 184px; " alt="shapeimage_6_link_0" src="BS_Seeker_files/shapeimage_6_link_0.png" id="shapeimage_6_link_0" />
+            </div>
+            
+
+
+            <div id="id2" style="height: 25px; left: 43px; position: absolute; top: 361px; width: 383px; z-index: 1; " class="style_SkipStroke_1">
+              <div class="text-content graphic_textbox_layout_style_default_External_383_25" style="padding: 0px; ">
+                <div class="graphic_textbox_layout_style_default">
+                  <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style">Type “ tar -xzvf BS_SEEKER.tgz ” to extract the files</p>
+                </div>
+              </div>
+            </div>
+            
+
+
+            <div class="tinyText" style="height: 42px; left: 22px; position: absolute; top: 470px; width: 280px; z-index: 1; ">
+              <img usemap="#map5" id="shapeimage_7" src="BS_Seeker_files/shapeimage_7.png" style="border: none; height: 52px; left: -4px; position: absolute; top: -4px; width: 290px; z-index: 1; " alt="Bowtie is required for running BS Seeker&#10;Download Bowtie aligner" title="" /><map name="map5" id="map5"><area href="http://bowtie-bio.sourceforge.net/index.shtml" title="http://bowtie-bio.sourceforge.net/index.shtml" alt="http://bowtie-bio.sourceforge.net/index.shtml" onmouseout="IMmouseout('shapeimage_7', '0');" shape="rect" onmouseover="IMmouseover('shapeimage_7', '0');" coords="243, 8, 251, 25" /><area href="http://bowtie-bio.sourceforge.net/index.shtml" title="http://bowtie-bio.sourceforge.net/index.shtml" alt="http://bowtie-bio.sourceforge.net/index.shtml" onmouseout="IMmouseout('shapeimage_7', '1');" shape="rect" onmouseover="IMmouseover('shapeimage_7', '1');" coords="8, 25, 156, 42" /><area href="http://bowtie-bio.sourceforge.net/index.shtml" title="http://bowtie-bio.sourceforge.net/index.shtml" alt="http://bowtie-bio.sourceforge.net/index.shtml" coords="4, 4, 284, 46" /></map><img style="height: 17px; left: 239px; position: absolute; top: 4px; width: 8px; " alt="shapeimage_7_link_0" src="BS_Seeker_files/shapeimage_7_link_0.png" id="shapeimage_7_link_0" /><img style="height: 17px; left: 4px; position: absolute; top: 21px; width: 148px; " alt="shapeimage_7_link_1" src="BS_Seeker_files/shapeimage_7_link_1.png" id="shapeimage_7_link_1" />
+            </div>
+            
+
+
+            <div class="tinyText" style="height: 25px; left: 43px; position: absolute; top: 387px; width: 325px; z-index: 1; ">
+              <img usemap="#map6" id="shapeimage_8" src="BS_Seeker_files/shapeimage_8.png" style="border: none; height: 35px; left: -4px; position: absolute; top: -4px; width: 335px; z-index: 1; " alt="Usage" title="" /><map name="map6" id="map6"><area href="USAGE.html" title="USAGE.html" alt="USAGE.html" onmouseout="IMmouseout('shapeimage_8', '0');" shape="rect" onmouseover="IMmouseover('shapeimage_8', '0');" coords="8, 8, 43, 25" /></map><img style="height: 17px; left: 4px; position: absolute; top: 4px; width: 35px; " alt="shapeimage_8_link_0" src="BS_Seeker_files/shapeimage_8_link_0.png" id="shapeimage_8_link_0" />
+            </div>
+            
+
+
+            <div id="id3" style="height: 88px; left: 0px; position: absolute; top: 247px; width: 435px; z-index: 1; " class="style_SkipStroke_1">
+              <div class="text-content graphic_textbox_layout_style_default_External_435_88" style="padding: 0px; ">
+                <div class="graphic_textbox_layout_style_default">
+                  <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_1">BS Seeker performs accurate and fast mapping of bisulfite-treated short reads. It aligns Bisulfite-treated reads generated from the Cokus et al's library protocol (with tags) or the Lister et al's library protocol (with no tags), see <a href="BS_Seeker_files/Fig_1_Prepare_Libaraies.pdf" title="BS_Seeker_files/Fig_1_Prepare_Libaraies.pdf">Fig_1_Prepare_Libaraies.pdf</a>.</p>
+                </div>
+              </div>
+            </div>
+            
+
+
+            <div style="height: 370px; width: 286px;  height: 370px; left: 416px; position: absolute; top: 231px; width: 286px; z-index: 1; " class="tinyText style_SkipStroke_2 shadow_1">
+              <a href="BS_Seeker_files/Fig_2_pre_and_post_processing.pdf" title="BS_Seeker_files/Fig_2_pre_and_post_processing.pdf"><img src="BS_Seeker_files/Fig_2_pre_and_post_processing.png" alt="" style="border: none; height: 371px; width: 286px; " /></a>
+            </div>
+            <div style="height: 584px; line-height: 584px; " class="spacer"> </div>
+          </div>
+          <div style="height: 50px; margin-left: 0px; position: relative; width: 700px; z-index: 15; " id="footer_layer">
+            <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>3D-footprint: a database for the analysis of sequence recognition in protein-DNA complexes of known structure</title>
+	<meta name="author" content="Laboratory of Computational & Structural Biology"/>
+	<meta name="description" content="3D-footprint is a database of DNA-binding protein structures that is updated weekly with Protein Data Bank complexes, providing: interface graphs and footprint diagrams, structure-based binding specificities and sequence logos, classification and clusters of protein-DNA interfaces, downloads, stats, complex of the week, a tutorial, an interactive footprint, a consensus miner"/>
+	<meta name="keywords" content="3d-footprint,3d-pwm,protein-DNA,complex,interface,dnaprot,transcription factor,PDB,binding specificity,sequence logo, position weight matrix"/>
+	<meta name="verify-v1" content="FxMsqfCZ3UuZAu+EXqqYmIDzMXaWEBSE4SVaRTlDiAs=" >	
+	<link rel="shortcut icon" href="./files/favicon.ico"/>
+	<link href="mystyle_simple.css" rel="stylesheet" type="text/css"/>
+
+	<script type="text/javascript"> 
+
+	function TermDemo(){ document.getElementById("termform").term.value = "homeodomain"; }
+	function MotifDemo()
+	{ 
+		var type = document.getElementById("motifform").motiftype.value;
+		if(type == "consensus")
+		{
+			document.getElementById("motifform").motif.value = 
+			"#PATSER/CONSENSUS format:\n" +
+			"A |   0   0 100 100   0   0   0   3\nC | 100   0   0   0   0 100 100  90\n" +
+			"G |   0   0   0   0   0   0   0   4\nT |   0 100   0   0 100   0   0   3\n"; 
+		}
+		else if(type == "transfac")
+		{
+			document.getElementById("motifform").motif.value =
+                	"#TRANSFAC format (A,C,G,T):\nDE      motif_name\n01      1      0      0      5\n" + 
+                	"02      6      0      0      0\n03      1      0      0      5\n04      5      0      0      1\nXX\n";
+		}
+		else if(type = "sequence")
+		{
+			document.getElementById("motifform").motif.value = "TNTGA\n";
+		}
+	}
+	function ProtDemo()
+        { 
+		document.getElementById("protform").protein.value =
+	 	">P0A9E5|FNR_ECOLI (Uniprot)\n" + 
+		"MIPEKRIIRRIQSGGCAIHCQDCSISQLCIPFTLNEHELDQLDNIIERKKPIQKGQTLFKAGDELKSLYAIRSGTIKSYTITEQGDEQITGFHLAGDLVGFDAIGSGHHPSFAQALETSM" +
+		"VCEIPFETLDDLSGKMPNLRQQMMRLMSGEIKGDQDMILLLSKKNAEERLAAFIYNLSRRFAQRGFSPREFRLTMTRGDIGNYLGLTVETISRLLGRFQKSGMLAVKGKYITIENNDALAQLAGHTRNVA";
+ 	}
+	</script>
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19596464-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+	</script>
+</head>
+
+<body>
+<br>
+<div id="logo" style="text-align:center">
+<img src="./files/logo_small.png" alt="3D-footprint logo" />
+</div>
+
+<div id="content">
+
+	<div id="mirrors" style="text-align:right;"><i>mirrors:</i> <a href="http://floresta.eead.csic.es/3dfootprint/">EEAD/CSIC</a>&nbsp;<img src="./files/es.png" alt="Spanish server"> ,  <a href="http://maya.ccg.unam.mx/3dpwm/">CCG/UNAM</a> &nbsp;<img src="./files/mx.png" alt="Mexican server"></div>
+
+	<div id="colOne">
+3D-footprint is a database of DNA-binding protein structures that is updated weekly with <a href="http://www.rcsb.org/pdb">Protein Data Bank</a> complexes, providing:
+	<ul>
+                <li>structure-based binding specificities and sequence logos</li>
+                <li><a href="./SCOPtree.html">classification</a> and  <a href="./clusters.html">clusters</a> of protein-DNA interfaces</li>
+                <li><a href="./download.html">downloads</a> / <a href="./stats.html">stats</a></li>
+		<li><a href="./weekcomplex.html">complex of the week</a></li>
+		<li><a href="./tutorial.html">tutorial</a></li>
+	</ul>
+	<strong>Tools:</strong>
+	<ul>	
+		<li><a href="./footprint.html">footprint</a> your structure</li>
+		<li><a href="./miner.html">consensus miner</a></li>
+	</ul>
+        <table><tr><td><img src="./files/complex.jpg" title="picture of protein-DNA complex" alt="picture of protein-DNA complex" /></td><td><h3><a href="./help.html">help &amp; credits</a></h3></td></tr></table><br/><br/>
+
+<!--	<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=brunocontreras"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=brunocontreras"></script> -->
+        </div>
+
+	<div id="colTwo">
+		<div id="welcome">
+			<a name="termf"></a>
+			<form id="termform" action="./scripts/server/3dpwm.cgi" enctype="multipart/form-data" method="post">
+			<fieldset>  
+        		<legend>find DNA-binding proteins by name</legend> 
+        		<label style="font-style: italic">search term: </label>
+        		<input type="text" id="term" name="term" size="26" title="type here a one word search query"/>
+        		<input type="submit" value="submit" id="submit1" class="submitbutton"/>&nbsp;
+			<input type="button" value="demo" id="termdemo" class="demobutton" onclick="TermDemo()"/><br/>
+        		<small>keyword,PDB code,<a href="./SCOPtree.html">superfamily</a></small>
+			</fieldset>  
+			</form>
+			<br/><a name="motiff"></a>
+			<form id="motifform" action="./scripts/server/3dpwm.cgi" enctype="multipart/form-data" method="post">
+			<fieldset> 
+			<legend>find proteins that recognize a similar DNA motif</legend>
+			<label style="font-style: italic">site to be searched: </label>
+			<textarea name="motif" rows="6" cols="45" id="motif" title="paste here a sequence or motif"></textarea>
+			<br/><label></label>
+			&nbsp;match type <select name="aligntype" class="selectbutton">
+                        <option value="local">local</option>
+                        <option value="global">global</option>
+                        </select>&nbsp;
+			E-value cutoff<input type="text" class="textbox" id="Evalue" name="Evalue" size="5" title="maximum STAMP E-value to report" value="0.01" /><br/>
+			<label></label>
+			<input type="submit" value="submit" id="submit2" class="submitbutton"/>&nbsp;
+			<input type="button" id="motifdemo" value="demo" class="demobutton" onclick="MotifDemo()"/>
+			<select name="motiftype" class="selectbutton">
+			<option value="sequence">sequence</option>
+			<option value="consensus">consensus</option>
+			<option value="transfac">transfac</option>
+			</select>&nbsp;
+			<input type="reset" value="reset" class="submitbutton"/>
+			</fieldset>
+			</form>
+			<br/><a name="protf"></a>
+			<form id="protform" action="./scripts/server/3dpwm.cgi" enctype="multipart/form-data" method="post">
+			<fieldset> 
+			<legend>BLAST similar DNA-binding proteins</legend>
+			<label style="font-style:italic">protein sequence: </label>
+        		<textarea name="protein" rows="3" cols="45" id="protein" tabindex="3" title="type a protein sequence in plain or FASTA format"></textarea>
+			<br/><label></label>
+			<input type="submit" value="submit" id="submit3" class="submitbutton"/>&nbsp;
+			<input type="button" id="protdemo" value="demo" class="demobutton" onclick="ProtDemo()"/>&nbsp;
+			<input type="reset" value="reset" class="submitbutton"/>
+			</fieldset>
+			</form>
+
+			<br/>
+			<div style="font-size:90%;text-align:center;font-style:italic">
+			Created and maintained at the <a href="http://www.eead.csic.es/compbio/">Laboratory of Computational & Structural Biology</a> / <a href="http://www.eead.csic.es?L=1">EEAD-CSIC</a><br/><br/>
+			updated: Tue Feb 25 01:21:05 2020
+		</div>		</div>
+	</div>
+</div>
+</body>
+</html>
+

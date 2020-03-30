@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+<HEAD>
+
+<META name="keywords" content="Cofactory-1.0 server">
+<TITLE>Cofactory-1.0 server</TITLE>
+<style type="text/css">
+TABLE {font-family: helvetica, verdana, arial, tahoma, sans-serif;font-size : 12px;}
+TD {font-family: helvetica, verdana, arial, tahoma, sans-serif;font-size : 12px;}
+H1 {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif;font-weight: bold;font-size: 20px;}
+H2 {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif;font-weight: bold;font-size: 16px;}
+H3 {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif;font-weight: bold;font-size: 14px;}
+P {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif, sans-serif; font-size: 12px; text-align: justify;}
+ul {font-family: helvetica, verdana, arial, tahoma, sans-serif;font-size : 12px;}
+li {font-family: helvetica, verdana, arial, tahoma, sans-serif;font-size : 12px; text-align: justify;}
+input {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif, sans-serif; font-size: 12px;}
+.bulk {color: #000000; font-family: helvetica, verdana, arial, tahoma, sans-serif;font-size: 12px; text-align: justify; font-weight: normal;}
+.nav {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif, sans-serif;font-size: 10px; font-weight: normal;}
+.search {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif, sans-serif;font-size: 10px;font-weight: normal;}
+a:link{color: #FF3399}
+a:active{color: #FF3399}
+a:visited{color: #FF3399}
+a:hover {color: #000000}
+a.black:link{color: #000000}
+a.black:active{color: #000000}
+a.black:visited{color: #000000}
+a.black:hover {color: #FF3399}
+</style><!-- mouse over -->
+<SCRIPT TYPE="text/javascript">
+
+<!-- Hide from old browsers
+
+
+if (navigator.appVersion.indexOf("2.") != -1){
+        check = false;
+        }
+if ((navigator.appVersion.indexOf("3.") != -1) && (navigator.appName.indexOf("Explorer") != -1)){
+        check = false;
+        }
+else {
+        check = true;
+        }
+        
+
+
+function imageon(name)   {
+        document[name].src = eval(name + "on.src");
+}
+
+
+function imageoff(name)  {
+        document[name].src = eval(name + ".src");
+}
+
+
+function on(name)  {
+        if (check == true){
+           imageon(name);
+        }}
+
+
+function off(name)  {
+        if (check == true){
+           imageoff(name);
+        }}
+// --> END HIDE
+</script>
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34009963-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+<!--<body bgcolor="#f8f8f8" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" BOTTOMMARGIN="0"
+LEFTMARGIN="0" RIGHTMARGIN="0"> -->
+
+<body bgcolor="#f8f8f8">
+<!-- center><b>The CBS web site is under hardware upgrade. Please report broken functionality to
+<a href="mailto:webmaster@cbs.dtu.dk">webmaster@cbs.dtu.dk</a>. For a quick fix, replace 'www'
+with 'genome' in CBS URLs.</b></center -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="30"><img src="/images/spacegif.gif" width="30" height="1" alt="" border="0"></td>
+        <td valign="top">
+            <!-- HEADER - LOGO, MENU, SOEGEFELT -->
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                   <tr>
+                        <td colspan="2" height="6"><img src="/images/spacegif.gif" width="1" height="6" alt="" border="0"></td>
+                   </tr>
+                <tr>
+		
+                    <td width="90"><a href="/index.html"><img src="http://www.bioinformatics.dtu.dk/-/media/DTU_Generelt/Navnetraek/Bioinformatik_UK.ashx?mh=100&mw=600" alt="" border="0"></a></td>
+                    <!--  td bgcolor="#B1B4B8" width="90"><a href="/index.html"><img src="/images/m_logo.gif" width="90" height="90" alt="" border="0"></a></td -->
+                    <td width="9999" valign="top">
+                      <h2>Services are gradually being migrated to <a target="_blank" href="https://services.healthtech.dtu.dk/">https://services.healthtech.dtu.dk/</a>.<br> In the near future, cbs.dtu.dk will be retired. Please try out the new site.</h2>
+                    </td></tr>
+<tr>
+          </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" height="5"><img src="/images/spacegif.gif" width="1" height="5" alt="" border="0"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                               <tr><td align="left" valign="top"><p class="nav"><b>
+			       <a href="/index.html">Home</a></b></p>
+</td>
+<td class="search" align="right" valign="top">
+<!-- form name="test" action="/cgi-bin/search.cgi" method="post" class="search">
+<input type="text" name="Words" size="10" class="search">
+<input type="image" src="/images/search.gif" value="Search" class="search">
+</form -->
+</td>
+</tr>
+<tr><td height="10"><img src="/images/spacegif.gif" width="1" height="10" alt="" border="0"></td></tr>
+</table>
+</td></tr></table>
+<table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>
+<p> <script>
+function doBlink() {
+  // Blink, Blink, Blink...
+  var blink = document.all.tags("BLINK")
+  for (var i=0; i < blink.length; i++)
+    blink[i].style.visibility = blink[i].style.visibility == "" ? "hidden" : "" }
+
+function startBlink() {
+  // Make sure it is IE4
+  if (document.all)
+    setInterval("doBlink()",1000)
+}
+window.onload = startBlink;
+</script>
+<!-- START INDHOLD -->
+
+<h1>Cofactory v.1.0 - Identification of Rossmann folds and prediction of FAD, NAD and NADP specificity
+</h1>
+
+<script>
+function setvalue(f,v) {
+	document.getElementById(f).value=v;
+}
+function getvalue(f) {
+	return document.getElementById(f).value;
+}	
+</script>
+<!-- Server introduction text starts here -->
+
+<p class="bulk">
+Cofactory is a server that identifies Rossmann fold sequence domains and predicts
+their specificity for the cofactors FAD, NAD or NADP.
+<p>
+<!-- View the <a href="versions.html">version history</a> of this server. -->
+
+<p>
+<!-- Server introduction text ends here -->
+
+<p>
+
+<!-- Pink bar starts here -->
+
+<table	bgcolor="#FF3399" width="100%" border="0"
+	cellpadding="0" cellspacing="0">
+<tr>
+
+<td bgcolor="#FF3399" width=33% align=center>	<!-- instructions.html -->
+  <a href="instructions.html" target="_blank">
+    <font color="#ffffff"><b>Instructions</b></font>
+  </a>
+</td>
+
+<td width="2"><img src="/images/space_hvid.gif" width="2" height="18"></td>
+    
+<td bgcolor="#FF3399" width=33% align=center>	<!-- output.html -->
+  <a href="output.php" target="_blank">
+    <font color="#ffffff"><b>Output format</b></font>
+  </a>
+</td>
+
+<td width="2"><img src="/images/space_hvid.gif" width="2" height="18"></td>
+    
+<td bgcolor="#FF3399" width=33% align=center>	<!-- abstract.html -->
+  <a href="abstract.html">
+    <font color="#ffffff"><b>Paper abstract</b></font>
+  </a>
+</td>
+
+</tr>
+</table>
+
+<!-- Pink bar ends here -->
+
+<br><p>
+
+<!-- Submission form starts here -->
+
+<form	enctype="multipart/form-data"
+	action="/cgi-bin/webface2.fcgi"
+	method="POST">
+<input	type=HIDDEN name=configfile
+	value="/usr/opt/www/pub/CBS/services/Cofactory-1.0/Cofactory.cf">
+
+<h3>SUBMISSION</h3>
+<p>
+<i>Paste a single amino acid sequence or several sequences in
+<a href="/services/fasta.example.html" target="_blank">FASTA</a>
+format into the field below:</i>
+<br>
+<textarea name="SEQPASTE" rows=3 cols=64>
+</textarea>
+<p>
+<i>Submit a file in
+<a href="/services/fasta.example.html" target="_blank">FASTA</a>
+format directly from your local disk:</i>
+<br>
+<input name="SEQSUB" size=64 type="file">
+<br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Clear fields">
+<p>
+<b>Restrictions:</b>
+<br>
+<!-- 
+<i>At most 4,000 sequences and 2,000,000 amino acids per submission;
+   each sequence not more than 5,000 amino acids.</i>
+<p>
+-->
+<i>At most 2,000 sequences and 200,000 amino acids per submission;
+   each sequence not more than 6,000 amino acids.</i>
+<p>
+
+<b>Confidentiality:</b>
+<br>
+<i>The sequences are kept confidential and will be deleted
+   after processing.</i>
+</form>
+
+<!-- Submission form ends here -->
+
+<hr>
+
+<!-- Reference starts here -->
+
+<a name="citations">
+<h3>CITATIONS</h3>
+<p>For publication of results, please cite:
+<blockquote>
+    <b><br>
+Cofactory: Sequence-based prediction of cofactor specificity of Rossmann
+folds.</b><br>Geertz-Hansen HM, Blom N, Feist AM, Brunak S, Petersen TN.<br>Proteins.
+2014 Feb 13. doi: 10.1002/prot.24536</blockquote>
+</p>
+
+<!-- Reference ends here -->
+
+<hr>
+
+<!-- Software package info starts here -->
+
+<h3>PORTABLE VERSION</h3>
+<p>Would you prefer to run Cofactory at your own site? Cofactory 1.0 is available
+as a stand-alone software package, with the same functionality as the service
+above. Ready-to-ship packages exist for the most common UNIX platforms. There is a
+<a href="/cgi-bin/nph-sw_request?cofactory" target="download">download page</a>
+for academic users; other users are requested to contact CBS at
+<a href="mailto:tnp@cbs.dtu.dk">tnp@cbs.dtu.dk</a>.
+
+<!-- Software package info ends here -->
+
+<!-- Google analytics start here, HMGH account ID -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-45532896-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Google analytics end here -->
+
+
+<br><br><hr>
+<h3>GETTING HELP</h3>
+<div align='center'>
+Scientific problems: <script type="text/javascript">document.write('<a href="mai' + 'lto:' + 'hmgh&#' + (222-158) + ';cbs&#46;dtu&#46;dk">Henrik M. Geertz-Hansen</a>')</script>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Technical problems: <script type="text/javascript">document.write('<a href="mai' + 'lto:' + 'tnp&#' + (141-77) + ';cbs&#46;dtu&#46;dk">Thomas Nordahl Petersen</a>')</script>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </DIV>
+    <BR><HR>
+    </TD>
+    </TR>
+    </TABLE>
+    <TABLE align="center"><TR><TD>
+    <DIV class='nav'><center>This file was last modified  Monday 30th 2014f June 2014 15:08:30 GMT</center><center></center>    </TD></TR></TABLE>
+    <BR><BR>
+    </TD>
+    <!-- TD align="center" valign="top" width="30">
+    <IMG src="/images/log_txtv.gif" width="30" height="476" alt="" border="0">
+    </TD -->
+    </TR>
+    </TABLE>
+    </BODY>
+    </HTML>

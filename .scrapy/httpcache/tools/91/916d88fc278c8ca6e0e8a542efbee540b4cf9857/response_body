@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<link rel="dns-prefetch" href="//download.applied-maths.com" />
+<!--[if IE 9]>
+<link rel="prefetch" href="//download.applied-maths.com" />
+<![endif]-->
+<link rel="shortcut icon" href="https://download.applied-maths.com/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="Discover BioNumerics, the only software platform that offers integrated analysis of all major applications in bioinformatics." />
+<meta name="keywords" content="BioNumerics, software, database, bioinformatics, biological data" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<meta property="og:title" content="BioNumerics Seven: a unique software platform" />
+<meta property="og:description" content="Discover BioNumerics, the only software platform that offers integrated analysis of all major applications in bioinformatics." />
+<meta property="og:updated_time" content="2015-09-16T11:45:25+02:00" />
+<meta property="article:published_time" content="2011-07-13T17:12:57+02:00" />
+<meta property="article:modified_time" content="2015-09-16T11:45:25+02:00" />
+  <title>BioNumerics Seven: a unique software platform | Applied Maths</title>
+  <link type="text/css" rel="stylesheet" href="https://download.applied-maths.com/sites/default/files/cdn/css/https/css_FD2G3kVKCgjpV03wYE739rGzqvWIpdAjLs2qetJ_LJg.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://download.applied-maths.com/sites/default/files/cdn/css/https/css_8I8tOCPjIVP6mfeMJ_e9IPVH1CnLb6wMloNuja55pnc.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://download.applied-maths.com/sites/default/files/cdn/css/https/css_LkUnW8MLjoIE5utvMS7OQ2F-PmGJZBbJ-V2ah6XKgj4.css" media="all" />
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+#sliding-popup.sliding-popup-bottom{background:#646466;}#sliding-popup .popup-content #popup-text h2,#sliding-popup .popup-content #popup-text p{color:#ffffff !important;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="https://download.applied-maths.com/sites/default/files/cdn/css/https/css_8Xzo32nAb6ytjlPwFIuF09jPsUbTqO0gxk0k7iOQ4b4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://download.applied-maths.com/sites/default/files/cdn/css/https/css_6SDU92ph77i68j23Zx0IjHtEyVPnE12FmOBULMCTIU4_layout.css.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://download.applied-maths.com/sites/default/files/cdn/css/https/css_8qeYDdhQaSor6tn_Jf3OIm_JZAaixoVUH-VGBNzM73c_style.css.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://download.applied-maths.com/sites/default/files/cdn/css/https/css_KcPFYXu3Pmr-Tp4F3_tmWKPOCLDLCkNVbIAqHejSSAQ_colors.css.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://download.applied-maths.com/sites/default/files/cdn/css/https/css_2THG1eGiBIizsWFeexsNe1iDifJ00QRS9uSd03rY9co_print.css.css" media="print" />
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="https://download.applied-maths.com/sites/default/files/cdn/css/https/css_dCiH4V9Xgd0GanjuKAijOCkK_qWneqw6hfGASp2Pnmk_ie.css.css" media="all" />
+<![endif]-->
+
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="https://download.applied-maths.com/sites/default/files/cdn/css/https/css_hkZ7mem-zjxMuIaEnb-4EP1X8YQGe5PCJoxJQhQBBZc_ie6.css.css" media="all" />
+<![endif]-->
+  <script type="text/javascript" src="https://download.applied-maths.com/sites/default/files/js/js_qikmINIYTWe4jcTUn8cKiMr8bmSDiZB9LQqvceZ6wlM.js"></script>
+<script type="text/javascript" src="https://www.applied-maths.com/sites/all/modules/amglue/js/YouTube.js?q80a0i"></script>
+<script type="text/javascript" src="https://download.applied-maths.com/sites/default/files/js/js_Qz8OwIAo-wU9ruKfwkIcXnLRHAGNifNCpfhRjOd7UWM.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-15838754-1", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://download.applied-maths.com/sites/default/files/js/js_eiOP8yzjJfwiVuXRs8-sKXpI2QmOcsZddDTWY8JR7l4.js"></script>
+<script type="text/javascript" src="https://www.applied-maths.com/sites/all/themes/amcorporate/js/AMforms.js?q80a0i"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"amcorporate","theme_token":"mSadLVBoC_33J760JBsDz1-JK5EfWyNxdAMRbZNM1Oo","js":{"sites\/all\/modules\/eu-cookie-compliance\/js\/eu_cookie_compliance.js":1,"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/amglue\/js\/YouTube.js":1,"sites\/all\/modules\/custom_search\/js\/custom_search.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/sfsmallscreen.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/superfish\/superfish.js":1,"sites\/all\/themes\/amcorporate\/js\/AMforms.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/facebook_pull\/facebook_pull.css":1,"sites\/all\/modules\/custom_search\/custom_search.css":1,"0":1,"sites\/all\/modules\/eu-cookie-compliance\/css\/eu_cookie_compliance.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/themes\/amcorporate\/css\/layout.css":1,"sites\/all\/themes\/amcorporate\/css\/style.css":1,"sites\/all\/themes\/amcorporate\/css\/colors.css":1,"sites\/all\/themes\/amcorporate\/css\/print.css":1,"sites\/all\/themes\/amcorporate\/css\/ie.css":1,"sites\/all\/themes\/amcorporate\/css\/ie6.css":1}},"custom_search":{"form_target":"_self","solr":0},"eu_cookie_compliance":{"popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":1,"popup_html_info":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies to ensure you get the best experience on our website\u003C\/h2\u003E\u003Cp\u003EBy clicking any link on this page you are giving your consent for us to set cookies.\u003C\/p\u003E    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button\u0022\u003EOK, I agree\u003C\/button\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button\u0022\u003EHide\u003C\/button\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022 \u003EMore info\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/privacy-policy-applied-maths","popup_link_new_window":1,"popup_position":null,"popup_language":"en","domain":""},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/bionumerics":true},"superfish":{"1":{"id":"1","sf":{"animation":{"opacity":"show"},"speed":"\u0027fast\u0027","autoArrows":false,"dropShadows":true,"disableHI":false},"plugins":{"smallscreen":{"mode":"window_width","addSelected":false,"menuClasses":false,"hyperlinkClasses":false,"title":"Dropdown"},"supposition":false,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}}}});
+//--><!]]>
+</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-3 node-type-page" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div id="page-wrapper"><div id="page">
+
+    
+          <div id="top" class="clearfix">
+	            <div class="region region-top">
+    <div id="block-menu-menu-topbar" class="block block-menu">
+
+    
+  <div class="content">
+    <ul class="menu clearfix"><li class="first leaf"><a href="/news" title="News from Applied Maths" class="menutitle">News</a></li>
+<li class="leaf"><a href="/about-applied-maths" title="Information about Applied Maths" class="menutitle">Company</a></li>
+<li class="leaf"><a href="/references" title="References of quality and leadership">References</a></li>
+<li class="last leaf"><a href="/contact-us" title="Get in touch" class="menutitle">Contact</a></li>
+</ul>  </div>
+</div>
+<div id="block-search-form" class="block block-search">
+
+    
+  <div class="content">
+    <form class="search-form" role="search" action="/bionumerics" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search this site </label>
+ <input title="Enter the terms you wish to search for." class="custom-search-box form-text" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-djYPbUB0mmKqd2LtRGW2gvx8h060wRU4xrBn5EUYTmM" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+<div id="block-system-user-menu" class="block block-system block-menu">
+
+    
+  <div class="content">
+    <ul class="menu clearfix"><li class="first last leaf"><a href="/user">Log in</a></li>
+</ul>  </div>
+</div>
+  </div>
+      </div> <!-- /#top -->
+    
+  <div id="header"><div class="section clearfix">
+
+          <a href="/" title="Home" rel="home" id="logo">
+        <img src="https://download.applied-maths.com/sites/all/themes/amcorporate/logo.png" alt="Home" />
+      </a>
+    
+          <div id="name-and-slogan">
+
+                              <div id="site-name" class="element-invisible">
+              <strong>
+                <a href="/" title="Home" rel="home"><span>Applied Maths</span></a>
+              </strong>
+            </div>
+                  
+                  <div id="site-slogan">
+            Manage. Analyze. Discover.          </div>
+        
+      </div> <!-- /#name-and-slogan -->
+    
+      <div class="region region-header">
+    <div id="block-superfish-1" class="block block-superfish">
+
+    <h2 class="element-invisible element-invisible">Dropdown</h2>
+  
+  <div class="content">
+    <ul id="superfish-1" class="menu sf-menu sf-menu-dropdown sf-horizontal sf-style-none sf-total-items-5 sf-parent-items-5 sf-single-items-0"><li id="menu-1589-1" class="active-trail first odd sf-item-1 sf-depth-1 sf-total-children-10 sf-parent-children-0 sf-single-children-10 menuparent"><a href="/software" title="Software packages developed by Applied Maths" class="menutitle sf-depth-1 menuparent">Software</a><ul><li id="menu-1590-1" class="active-trail first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/bionumerics" title="Our flagship software package" class="menusubtitle sf-depth-2 active">BioNumerics</a></li><li id="menu-1708-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/bionumerics/modules" title="An overview of available BioNumerics modules" class="sf-depth-2">Modules</a></li><li id="menu-1593-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/applications" title="Applications for the BioNumerics software" class="sf-depth-2">Applications</a></li><li id="menu-3057-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/features" title="An overview of BioNumerics features" class="sf-depth-2">Features</a></li><li id="menu-1594-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="/licensing-options" title="Powerful standalone and network licensing solutions" class="sf-depth-2">Licensing options</a></li><li id="menu-1729-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="/bionumerics-configurator" title="Configure the BioNumerics software exactly to your research needs!" class="sf-depth-2">Configure now</a></li><li id="menu-1595-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="/software" title="Software packages developed by Applied Maths" class="menusubtitle sf-depth-2">Other packages</a></li><li id="menu-1596-1" class="middle even sf-item-8 sf-depth-2 sf-no-children"><a href="/gelcompar-ii" title="Software for analyzing banding patterns" class="sf-depth-2">Gelcompar II</a></li><li id="menu-1598-1" class="middle odd sf-item-9 sf-depth-2 sf-no-children"><a href="/bionumerics-server" title="Powerful client-server solutions" class="sf-depth-2">BioNumerics Server</a></li><li id="menu-3870-1" class="last even sf-item-10 sf-depth-2 sf-no-children"><a href="/bionumerics-calculation-engine" title="The BioNumerics Calculation Engine" class="sf-depth-2">Calculation Engine</a></li></ul></li><li id="menu-1601-1" class="middle even sf-item-2 sf-depth-1 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="/what-we-offer" title="Services offered by Applied Maths" class="menutitle sf-depth-1 menuparent">Services</a><ul><li id="menu-1603-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/training-workshops" title="Scheduled training workshops" class="sf-depth-2">Workshops</a></li><li id="menu-1604-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/onsite-training" title="On-site training on the use of our software packages" class="sf-depth-2">On-site training</a></li><li id="menu-1606-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/data-analysis" title="Applied Maths can analyze your data" class="sf-depth-2">Data analysis</a></li><li id="menu-1607-1" class="last even sf-item-4 sf-depth-2 sf-no-children"><a href="/script-development" title="Custom development" class="sf-depth-2">Script development</a></li></ul></li><li id="menu-1613-1" class="middle odd sf-item-3 sf-depth-1 sf-total-children-6 sf-parent-children-0 sf-single-children-6 menuparent"><a href="/order-now" title="Information on how to obtain a software license" class="menutitle sf-depth-1 menuparent">Order</a><ul><li id="menu-2398-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/distributors" title="Find a distributor of Applied Maths products" class="sf-depth-2">Distributors</a></li><li id="menu-1615-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/quote-request" title="Get a personalized offer for our BioNumerics software" class="sf-depth-2">Request a quote</a></li><li id="menu-1616-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/obtain-free-evaluation-software-license" title="Obtain a free trial license of our BioNumerics software" class="sf-depth-2">Get free trial</a></li><li id="menu-1619-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/request-upgrade-license-string" title="Request your license string with a free upgrade" class="sf-depth-2">Request license string</a></li><li id="menu-3775-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="/request-calculation-engine-project" title="Request your credentials for a Calculation Engine project" class="sf-depth-2">Request Calculation Engine project</a></li><li id="menu-3111-1" class="last even sf-item-6 sf-depth-2 sf-no-children"><a href="/order/buy-credits" title="Buy BioNumerics Calculation Engine credits online" class="sf-depth-2">Buy Calculation Engine credits</a></li></ul></li><li id="menu-1608-1" class="middle even sf-item-4 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/support" class="menutitle sf-depth-1 menuparent">Support</a><ul><li id="menu-1610-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/knowledge-base" title="Search our comprehensive Knowledge Base" class="sf-depth-2">Knowledge Base</a></li><li id="menu-1609-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/faq" title="Frequently Asked Questions" class="sf-depth-2">FAQ</a></li><li id="menu-1611-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/tutorial-movies" title="Tutorial videos by Applied Maths" class="sf-depth-2">Tutorial movies</a></li><li id="menu-2087-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/tutorials" title="Tutorials for the BioNumerics software" class="sf-depth-2">Tutorials</a></li><li id="menu-2637-1" class="last odd sf-item-5 sf-depth-2 sf-no-children"><a href="/ask-support-question" title="Contact the Applied Maths support team" class="sf-depth-2">Ask a support question</a></li></ul></li><li id="menu-1620-1" class="last odd sf-item-5 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/downloadable-documents-and-software-upgrades" title="Downloadable documents and software upgrades" class="menutitle sf-depth-1 menuparent">Download</a><ul><li id="menu-1853-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/download/brochures" title="Brochures of our products" class="sf-depth-2">Brochures</a></li><li id="menu-1854-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/download/software" title="Download software upgrades" class="sf-depth-2">Software</a></li><li id="menu-1855-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/download/manuals" title="Downloadable installation manuals and quick guides" class="sf-depth-2">Manuals</a></li><li id="menu-1856-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/download/sample-data" title="Download sample data as used in the tutorials" class="sf-depth-2">Sample data</a></li><li id="menu-1857-1" class="last odd sf-item-5 sf-depth-2 sf-no-children"><a href="/download/open-source" title="Download open source projects from Applied Maths" class="sf-depth-2">Open source projects</a></li></ul></li></ul>  </div>
+</div>
+  </div>
+
+  </div></div> <!-- /.section, /#header -->
+
+  
+  
+  <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
+
+          <div id="breadcrumb"><h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a> › <a href="/software" title="Software packages developed by Applied Maths" class="menutitle active-trail">Software</a> › BioNumerics Seven: a unique software platform</div></div>
+    
+    
+    <div id="content" class="column"><div class="section">
+            <a id="main-content"></a>
+                    <h1 class="title" id="page-title">
+          <a href="/bionumerics?title=h1"><img class="bn7logo-title-h1" title="BioNumerics version 7" alt="BioNumerics Seven" src="/sites/all/themes/amcorporate/images/bn7logoh1.png" /></a>: a unique software platform        </h1>
+                          <div class="tabs">
+                  </div>
+                          <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-3" class="node node-page node-full node-full clearfix" about="/bionumerics" typeof="foaf:Document">
+
+      <span property="dc:title" content="BioNumerics Seven: a unique software platform" class="rdf-meta element-hidden"></span>
+  
+  <div class="content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2>Software for analysis of electrophoresis patterns, phenotype arrays, sequences and much more</h2>
+<p>BioNumerics is the only software platform that offers integrated analysis of all major <a href="/applications">applications</a> in Bioinformatics: 1D electrophoresis gels, all kinds of chromatographic and spectrometric profiles, phenotype characters, microarrays, and sequences. The unique power of BioNumerics lies in its ability to combine information from various genomic and phenotypic sources into one global database and conduct conclusive analyses.</p> 
+
+<h2>Excellence in biological data management and analysis</h2>
+<p>The software platform BioNumerics runs on industry leading database engines such as Oracle&reg; and Microsoft&reg; SQL Server&trade;. With its integrated networking and client-server features, the software is the perfect backbone for universal data management and analysis within and between laboratories of any size.</p>
+
+<p>Take a look at our offer and discover all BioNumerics <a href="/bionumerics/modules">modules</a>, <a href="/applications">applications</a> and <a href="/features">features</a>. Do you have any questions? <a href="/contact-us">Ask them online!</a> Interested in the BioNumerics software platform? Then please contact us for a <a href="/quote-request">price quote</a>.</p>
+
+<div id="bn-slogan" class="clearfix">
+	<!--Contains box with different research fields-->
+	<div id="bn-markets">
+		BioNumerics has applications in microbiology, virology, mycology and plant &amp; animal breeding
+	</div>
+	<!--Contains "Manage Analyze Discover" and colored chevron-->
+	<div id="bn-chevron">
+		Manage. Analyze. Discover.
+	</div>
+	<!--Wrapper for data types and analysis options + explanations for each-->
+	<div id="bn-options">
+		<ul id="bn-manage" class="bn-option">
+			<li>
+				Sequences
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/features/assembling-sequences-trace-files" title="Learn more...">Assemble Sanger sequencing data in batch</a></li>
+						<li><a href="/features/assembling-next-generation-sequencing-data" title="Learn more...">Preprocess and assemble next generation sequencing (NGS) data on your desktop or on a cloud-based or locally deployed Calculation Engine</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Character sets
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/features/character-import-text-or-excel-files" title="Learn more...">Import and preprocess character data from a wide range of sources, including phenotype panels, antibiotic resistance profiles, microarrays, etc.</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				1-D fingerprints
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/features/gel-image-processing-and-normalization" title="Learn more...">Import and normalize all types of gel and sequencer based electrophoresis patterns</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Spectral profiles
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/features/analyzing-maldi-tof-spectra" title="Learn more...">Import and preprocess mass spectrometry (MALDI, SELDI), gas chromatography, HPLC and other spectra</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Trend data
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/bionumerics/modules/trend-data-module" title="Learn more...">Import sequential measurements of one parameter in function of another (e.g. growth or enzymatic activity in function of time)</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Meta data
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/bionumerics/modules/general-bionumerics-seven-functionality" title="Learn more...">Store meta data for experiments, samples, organisms, patients</a></li>
+						<li><a href="/bionumerics/modules/general-bionumerics-seven-functionality" title="Learn more...">Create rich and object-oriented databases using levels and dependencies</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<ul id="bn-analyze" class="bn-option">
+			<li>
+				Clustering
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/features/cluster-analysis-based-pairwise-similarities" title="Learn more...">Wide array of tree and network inference algorithms</a></li>
+						<li><a href="/features/cluster-significance-tools" title="Learn more...">Integrated tree reliability and significance analysis</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Identification
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/features/classifiers" title="Learn more...">Powerful classifiers including Naive Bayesian, SVM, Shrunken Centroids</a></li>
+						<li><a href="/features/identification-projects" title="Learn more...">Consensus results on multiple data sets and classifiers</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Statistics
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/features/principal-components-analysis-pca-and-discriminant-analysis" title="Learn more...">Ordination, partitioning, and group validation techniques, powerful plotting</a></li>
+						<li><a href="/features/anova-and-manova" title="Learn more...">Numerous statistical tests including ANOVA and MANOVA</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Sequence analysis
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/features/snp-analysis" title="Learn more...">Multiple sequence alignment and powerful mutation search</a></li>
+						<li><a href="/features/primer-design" title="Learn more...">Primer design, restriction enzyme analysis, frame determination, oligo databasing,...</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Genome comparison
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/features/chromosome-comparisons-and-alignments" title="Learn more...">Genome alignment, annotation, and whole genome SNP analysis</a></li>
+						<li><a href="/applications/wgmlst"  title="Learn more...">Whole genome MLST (wgMLST) for high-resolution bacterial typing</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Metagenomics
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/features/deep-sequencing-microbial-communities" title="Learn more...">In depth metagenomics analysis based on deep sequencing of phylogenetic marker genes</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<ul id="bn-discover" class="bn-option">
+			<li>
+				Report
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/bionumerics/modules/general-bionumerics-seven-functionality" title="Learn more...">Powerful and comprehensive graph and chart creation tools</a></li>
+						<li>Professional printing and exporting of reports and analyses</li>
+						<li>Customized reporting using BioNumerics&lsquo; Python script language</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Share
+				<div class="bn-explanation">
+					<ul>
+						<li><a href="/bionumerics/modules/general-bionumerics-seven-functionality" title="Learn more...">Peer-to-peer data exchange and database sharing</a></li>
+						<li><a href="/bionumerics/modules/general-bionumerics-seven-functionality" title="Learn more...">Client-server based data sharing networks</a></li>
+						<li>Access to public databases (MLST.net, pubMLST, pubTRST, EMBL, GenBank, SRA,...)</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				Publish
+			</li>
+		</ul>
+	</div>
+</div></div></div></div>  </div>
+
+  
+  
+</div>
+  </div>
+</div>
+  </div>
+      
+    </div></div> <!-- /.section, /#content -->
+
+          <div id="sidebar-second" class="column sidebar"><div class="section">
+          <div class="region region-sidebar-second">
+    <div id="block-menu-menu-commerce" class="block block-menu">
+
+    
+  <div class="content">
+    <ul class="menu clearfix"><li class="first leaf"><a href="/obtain-free-evaluation-software-license?comm=1" title="Obtain a free trial version of our software">Free trial license</a></li>
+<li class="last leaf"><a href="/quote-request?comm=1" title="Get a personalized offer">Request a quote</a></li>
+</ul>  </div>
+</div>
+<div id="block-menu-block-2" class="block block-menu-block">
+
+    
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-2">
+  <ul class="menu clearfix"><li class="first expanded active-trail active menu-mlid-328"><a href="/bionumerics" title="Our flagship software package" class="menusubtitle active-trail active">BioNumerics</a><ul class="menu clearfix"><li class="first leaf menu-mlid-1707"><a href="/bionumerics/modules" title="An overview of available BioNumerics modules">Modules</a></li>
+<li class="leaf menu-mlid-1466"><a href="/applications">Applications</a></li>
+<li class="leaf menu-mlid-1410"><a href="/features" title="An overview of BioNumerics features">Features</a></li>
+<li class="leaf menu-mlid-1408"><a href="/licensing-options" title="Powerful standalone and network licensing solutions">Licensing options</a></li>
+<li class="last leaf menu-mlid-1728"><a href="/bionumerics-configurator" title="Configure the BioNumerics software exactly to your research needs!">Configure now</a></li>
+</ul></li>
+<li class="last collapsed menu-mlid-327"><a href="/software" title="Software packages developed by Applied Maths" class="menusubtitle">Other packages</a></li>
+</ul></div>
+  </div>
+</div>
+  </div>
+      </div></div> <!-- /.section, /#sidebar-second -->
+    
+  </div></div> <!-- /#main, /#main-wrapper -->
+
+            <div id="under_content" class="clearfix"><div class="section">
+          <div class="region region-under-content">
+    <div id="block-system-main-menu" class="block block-system block-menu">
+
+    
+  <div class="content">
+    <ul class="menu clearfix"><li class="first expanded active-trail"><a href="/software" title="Software packages developed by Applied Maths" class="menutitle active-trail">Software</a><ul class="menu clearfix"><li class="first expanded active-trail"><a href="/bionumerics" title="Our flagship software package" class="menusubtitle active-trail active-trail active">BioNumerics</a><ul class="menu clearfix"><li class="first leaf"><a href="/bionumerics/modules" title="An overview of available BioNumerics modules">Modules</a></li>
+<li class="leaf"><a href="/applications">Applications</a></li>
+<li class="leaf"><a href="/features" title="An overview of BioNumerics features">Features</a></li>
+<li class="leaf"><a href="/licensing-options" title="Powerful standalone and network licensing solutions">Licensing options</a></li>
+<li class="last leaf"><a href="/bionumerics-configurator" title="Configure the BioNumerics software exactly to your research needs!">Configure now</a></li>
+</ul></li>
+<li class="last collapsed"><a href="/software" title="Software packages developed by Applied Maths" class="menusubtitle">Other packages</a></li>
+</ul></li>
+<li class="expanded"><a href="/what-we-offer" title="Services offered by Applied Maths" class="menutitle">Services</a><ul class="menu clearfix"><li class="first leaf"><a href="/training-workshops" title="Scheduled training workshops">Workshops</a></li>
+<li class="leaf"><a href="/onsite-training" title="On-site training on the use of our software packages">On-site training</a></li>
+<li class="leaf"><a href="/data-analysis" title="Applied Maths can analyze your data">Data analysis</a></li>
+<li class="last leaf"><a href="/script-development" title="Custom development">Script development</a></li>
+</ul></li>
+<li class="expanded"><a href="/order-now" title="Information on how to obtain a software license" class="menutitle">Order</a><ul class="menu clearfix"><li class="first leaf"><a href="/distributors" title="Find a distributor of Applied Maths products">Distributors</a></li>
+<li class="leaf"><a href="/quote-request" title="Get a personalized offer for our BioNumerics software">Request a quote</a></li>
+<li class="leaf"><a href="/obtain-free-evaluation-software-license" title="Obtain a free trial license of our BioNumerics software">Get free trial</a></li>
+<li class="leaf"><a href="/request-upgrade-license-string" title="Request your license string with a free upgrade">Request license string</a></li>
+<li class="leaf"><a href="/request-calculation-engine-project" title="Request your credentials for a Calculation Engine project">Request Calculation Engine project</a></li>
+<li class="last leaf"><a href="/order/buy-credits" title="Buy BioNumerics Calculation Engine credits online">Buy Calculation Engine credits</a></li>
+</ul></li>
+<li class="expanded"><a href="/support" title="Technical support from Applied Maths" class="menutitle">Support</a><ul class="menu clearfix"><li class="first leaf"><a href="/knowledge-base" title="Search our comprehensive Knowledge Base">Knowledge Base</a></li>
+<li class="leaf"><a href="/faq" title="Frequently Asked Questions">FAQ</a></li>
+<li class="leaf"><a href="/tutorial-movies" title="Tutorial videos by Applied Maths">Tutorial movies</a></li>
+<li class="leaf"><a href="/tutorials" title="Tutorials for the BioNumerics software">Tutorials</a></li>
+<li class="last leaf"><a href="/ask-support-question" title="Contact the Applied Maths support team">Ask a support question</a></li>
+</ul></li>
+<li class="expanded"><a href="/downloadable-documents-and-software-upgrades" title="Downloadable documents and software upgrades" class="menutitle">Download</a><ul class="menu clearfix"><li class="first leaf"><a href="/download/brochures" title="Brochures of our products">Brochures</a></li>
+<li class="leaf"><a href="/download/software" title="Download software upgrades">Software</a></li>
+<li class="leaf"><a href="/download/manuals" title="Downloadable installation manuals and quick guides">Manuals</a></li>
+<li class="leaf"><a href="/download/sample-data" title="Download sample data as used in the tutorials">Sample data</a></li>
+<li class="last leaf"><a href="/download/open-source" title="Download open source projects from Applied Maths">Open source projects</a></li>
+</ul></li>
+<li class="expanded"><a href="/news" title="News from Applied Maths" class="menutitle">News</a><ul class="menu clearfix"><li class="first leaf"><a href="/press-releases" title="A list of press releases from Applied Maths">Press releases</a></li>
+<li class="leaf"><a href="/upcoming-events" title="Conferences we attend">Upcoming events</a></li>
+<li class="last leaf"><a href="/social-media" title="Social media">Social media</a></li>
+</ul></li>
+<li class="last expanded"><a href="/about-applied-maths" title="Information about Applied Maths" class="menutitle">About us</a><ul class="menu clearfix"><li class="first collapsed"><a href="/about-applied-maths" title="Information about Applied Maths" class="menusubtitle">Company</a></li>
+<li class="collapsed"><a href="/references" title="References of quality and leadership" class="menusubtitle">References</a></li>
+<li class="last collapsed"><a href="/contact-us" title="Get in touch" class="menusubtitle">Contact us</a></li>
+</ul></li>
+</ul>  </div>
+</div>
+  </div>
+      </div></div> <!-- /.section, /#under_content -->
+    
+
+  <div id="footer-wrapper"><div class="section">
+
+          <div id="footer" class="clearfix">
+          <div class="region region-footer">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <p>© 2020 Applied Maths NV. All rights reserved.</p>  </div>
+</div>
+<div id="block-menu-menu-secondary-menu" class="block block-menu">
+
+    
+  <div class="content">
+    <ul class="menu clearfix"><li class="first leaf"><a href="/interested-becoming-distributor" title="Interested in becoming a distributor?">Distributorship</a></li>
+<li class="leaf"><a href="/privacy-policy-applied-maths" title="Privacy policy at Applied-Maths.com">Privacy policy</a></li>
+<li class="last leaf"><a href="/download/eula" title="End User License Agreement for Applied Maths software">License agreement</a></li>
+</ul>  </div>
+</div>
+  </div>
+      </div> <!-- /#footer -->
+    
+  </div></div> <!-- /.section, /#footer-wrapper -->
+
+</div></div> <!-- /#page, /#page-wrapper -->
+  <script type="text/javascript" src="https://download.applied-maths.com/sites/default/files/js/js_paiTaEsc1HNeBS2rkLc1NrprKrFnApv70kuY8awAaTI.js"></script>
+</body>
+</html>
+
+<!-- Page cached by Boost @ 2020-03-30 20:39:02, expires @ 2020-03-31 20:39:02, lifetime 1 day -->

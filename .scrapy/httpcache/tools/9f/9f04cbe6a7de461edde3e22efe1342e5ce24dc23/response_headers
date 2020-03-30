@@ -1,0 +1,20 @@
+Date: Mon, 30 Mar 2020 18:48:13 GMT
+Server: Apache
+Strict-Transport-Security: max-age=15768000;includeSubdomains
+Cache-Control: max-age=0, private, must-revalidate
+Content-Type: text/html; charset=utf-8
+Etag: W/"f0a8370e440130894f6e88e2d9f28ee0-gzip"
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: DENY
+X-Permitted-Cross-Domain-Policies: none
+X-Request-Id: j8388CKHnM1
+X-Runtime: 0.136330
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+Set-Cookie: experimentation_subject_id=ImI3M2YwNmFiLWYxNGItNDU5Yi04MGNhLWNhOWU4OWZmZWVlMiI%3D--a7072ed1eba370ecc2b3cda65e8484455e635dc3; domain=.inra.fr; path=/; expires=Fri, 30 Mar 2040 19:48:13 -0000; secure; HttpOnly
+Set-Cookie: event_filter=all; path=/
+Set-Cookie: _gitlab_session=96c11e8c57c5df3b470d5a7d982b7e8d; path=/; expires=Mon, 30 Mar 2020 20:48:13 -0000; secure; HttpOnly
+Vary: Accept-Encoding
+Content-Encoding: gzip

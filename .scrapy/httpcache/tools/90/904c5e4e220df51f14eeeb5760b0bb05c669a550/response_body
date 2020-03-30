@@ -1,0 +1,101 @@
+<html> 
+<head>
+<title> CAP3 Assembly Program</title>
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="style.css" type="text/css">
+<body>
+<img src="./imgs/cab1.gif"><img src="./imgs/cab2.gif">
+</br>
+<h2>Run CAP3 program for Sequence Assembly</h2>
+<strong>Important:</strong>
+If the file of reads is named ' xyz ', then the file of quality values must be named ' xyz.qual ',and the file of constraints named ' xyz.con '.</br></br>
+
+ 
+<form method="post" enctype="multipart/form-data" action="cap3.php">
+
+<table cellspacing="6px">
+	<tr>
+		<td>
+			Please, upload sequences in <a href="cap3doc.html#fileformat">FASTA format</a> from local file: 
+		</td>
+		<td>
+			<input type="file" name="seqfile">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Please, upload the the <a href="cap3doc.html#qualformat">quality values </a>from local file (optional): 
+		</td>
+		<td>
+			<input type="file"name="qualfile">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Please, upload <a href="cap3doc.html#conformat">constraint values</a> from local file (optional): 
+		</td>
+		<td>
+			<input type="file" name="confile">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Please, upload <a href="cap3doc.html#clipformat">clipping information</a> from local file (optional): 
+		</td>
+		<td>
+			<input type="file" name="clipfile">
+		</td>
+	</tr>
+</table>
+
+</br><a href="cap3doc.html#capparam">Parameters with default values</a></br></br> 
+
+<table cellspacing="6px">
+	<tr>
+		<td>
+			base quality cutoff for clipping (>5) 
+		</td>
+		<td>
+			<input type="text" name="qualoff" value="12" size="3">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			overlap length cutoff (>20) 
+		</td>
+		<td>
+			<input type="text" name="overlapoff" value="30" size="3">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			overlap percent identity cutoff (>65) 
+		</td>
+		<td>
+			<input type="text" name="percentoff" value="75" size="3">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			overlap similarity score cutoff(>100) 
+		</td>
+		<td>
+		<input type="text" name="smscore" value="500" size="3">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			min # of good reads at clip pos (>0) 
+		</td>
+		<td>
+			<input type="text" name="numread" value="2" size="3">
+		</td>
+	</tr>
+</table>
+ 
+</br><input type="submit" name="runcap" value="Run CAP3">&nbsp;&nbsp;<input type="reset" value="Reset All"></br></br>
+ 
+</form> 
+</body> 
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0041)http://webs.iiitd.edu.in/raghava/abcpred/ -->
+<HTML><head><base href="http://webs.iiitd.edu.in/raghava/abcpred/"><base href="http://webs.iiitd.edu.in/raghava/abcpred/"><base href="http://webs.iiitd.edu.in/raghava/abcpred/"><TITLE>ABCpred main page</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="B- cell epitope prediction using Recurrent Neural Network." 
+name=description>
+<META 
+content="B cell epitope, prediction server, vaccine,  Artificial neural network, Recurrent neural Network" 
+name=keywords>
+<META 
+content="Suipto saha, Research Fellow, BIC, IMTECH; G.P.S raghav, Coordinator and Scientist, BIC, IMTECH" 
+name=author>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR><!--------Mouse over - mouse out------->
+<SCRIPT language=JavaScript>
+<!-- hide JavaScript code from browsers that are not JavaScript enabled
+	var mouse1_off = new Image();
+	mouse1_off.src = "home.jpg";
+	var mouse1_on = new Image();
+	mouse1_on.src = "home2.jpg";
+
+	var mouse2_off = new Image();
+	mouse2_off.src = "submission.jpg";
+	var mouse2_on = new Image();
+	mouse2_on.src = "submission2.jpg";
+
+
+        var mouse3_off = new Image();
+	mouse3_off.src = "Help.jpg";
+	var mouse3_on = new Image();
+	mouse3_on.src = "Help2.jpg";
+       
+         
+
+	var mouse4_off = new Image();
+	mouse4_off.src = "method.jpg";
+	var mouse4_on = new Image();
+	mouse4_on.src = "method2.jpg";
+
+
+	var mouse5_off = new Image();
+	mouse5_off.src = "team.jpg";
+	var mouse5_on = new Image();
+	mouse5_on.src = "team2.jpg";
+
+
+	function MouseOn(imageName){
+		document.images[imageName].src = eval(imageName + "_on.src");
+			}
+	function MouseOff(imageName){
+		document.images[imageName].src = eval( imageName + "_off.src" );
+			}
+			
+			
+//end hiding of JavaScript code !-- end of script -->
+
+</SCRIPT>
+</HEAD>
+<BODY bgColor=white>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#ffffff border=0>
+  <TBODY>
+  <TR>
+    <TD align="center'>&#13;&#10;<table border=" width="80%" cellpadding="0" 
+    cellspacing="0" 0?>
+  <TR>
+    <TD align=middle><IMG src="Header1.jpg"></TD></TR>
+  <TR>
+    <TD align=middle>
+      <DIV>
+<HR 20><marquee> <h2><a href="http://webs.iiitd.edu.in/raghava/abcpred/">Updated version at IIIT Delhi </a></h2> </marquee><HR 20>      <P>
+      <HR align=center width=635>
+      <FONT face="Courier New" color=#132169 SIXE="20"><B>Artificial neural 
+      network based B-cell epitope prediction server 
+  </B></DIV></FONT></TD></TR></TBODY></TABLE><BR><!------MENU --------><TR><TD>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" align=center border=0 
+valign="Center">
+  <TBODY>
+  <TR bgColor=#e5e5e5 height=20>
+    <TD><A onmouseover="MouseOn('mouse1');" onmouseout="MouseOff('mouse1');" 
+      href="http://webs.iiitd.edu.in/raghava/abcpred/index.html"><IMG 
+      src="home.jpg" name=mouse1></A> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A onmouseover="MouseOn('mouse2');" onmouseout="MouseOff('mouse2');" 
+      href="http://webs.iiitd.edu.in/raghava/abcpred/ABC_submission.html"><IMG 
+      src="submission.jpg" 
+      name=mouse2></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A onmouseover="MouseOn('mouse3');" 
+      onmouseout="MouseOff('mouse3');" 
+      href="http://webs.iiitd.edu.in/raghava/abcpred/ABC_help.html"><IMG 
+      src="Help.jpg" name=mouse3></A> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A onmouseover="MouseOn('mouse4');" onmouseout="MouseOff('mouse4');" 
+      href="http://webs.iiitd.edu.in/raghava/abcpred/ABC_method.html"><IMG 
+      src="method.jpg" name=mouse4></A> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <A onmouseover="MouseOn('mouse5');" onmouseout="MouseOff('mouse5');" 
+      href="http://webs.iiitd.edu.in/raghava/abcpred/ABC_team.html"><IMG 
+      src="team.jpg" name=mouse5></A> 
+</TD></TR></TBODY></TABLE><!---------menu ends--------><! --------- INTRODUCTION---------><TR><TD>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="25%">
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD><IMG height=160 alt="" src="bcell25.gif" 
+            width=190>
+            <DIV align=center>B-cell and epitope of antigen </DIV>
+            <HR align=center width=175>
+          </TD></TR>
+        <TR>
+          <TD><IMG height=160 alt="" src="network.jpg" 
+            width=190>
+            <DIV align=center>Recurrent neural network</DIV>
+            <HR align=center width=150>
+          </TD></TR>
+<TD><TR>
+<DIV align=center><b><A href="http://webs.iiitd.edu.in/raghava/abcpred/dataset.html"><b><font size="6">Datasets  </b></font></A></DIV>
+
+</TD></TR></TBODY></TABLE></TD>
+    <TD align=left width="75%">
+      <DIV align=center valign="center">
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#ffffff 
+        border=0><TBODY>
+        <TR>
+          <TD><FONT face="Courier New" color=#132169 SIXE="10"><B>
+            <DIV align=justify>The aim of ABCpred server is to predict 
+            <I>B cell epitope(s) </I> in an antigen sequence, using 
+            artificial neural network. This is the first server developed based on recurrent neural network (machine based technique) using fixed length patterns.</B></FONT>
+            <HR>
+            </DIV></TD></TR><BR>
+        <TR>
+          <TD><FONT face="Courier New" color=#132169 SIXE="10"><B>
+            <DIV align=justify>Algorithm:</B> The machine-learning technique need fixed length patterns for training or testing whereas B-cell epitopes vary 5 to 30 residues as reported in literature(Bcipep database <A 
+            href="http://webs.iiitd.edu.in/raghava/bcipep"><FONT 
+            color=#006000><B>Bcipep</B></FONT></A>). In order to overcome this problem we made an attempt to create datasets of fixed length patterns from B-cell epitopes by eliminating or adding residues at terminals. The dataset used for training and testing consists of 700 B-cell epitopes and 700 non B-cell epitopes (random peptides) of maximum length of 20 residues. We tried different neural networks and achived an accuracy of 65.93% using recurrent neural network. </FONT>
+            <HR>
+            </DIV></TD></TD>
+        <TR>
+          <TD><FONT face="Courier New" color=#393582 SIXE="10">
+            <DIV align=justify><B>Users can select window length of 10, 12, 14, 
+            <B>16</B> and 20 as predicted epitope length. It presents the 
+            results in graphical and tabular frame. In case of graphical frame, 
+            this server plot the epitopes in blue color along protein backbone 
+            (black color), which assist the users in rapid visulaziation of 
+            B-cell epitope on protein. The tabular output is in the form of a 
+            table, which will provide the aminoacids length from N-terminal to 
+            C-terminal in a protein predicted by the server. </B></FONT>
+            <HR>
+            </DIV></TD></TD>
+        <TR>
+          <TD><FONT face="Courier New" color=#352fa2 SIXE="10">
+            <DIV align=justify>The server is able to predict epitopes with 
+            <B>65.93% accuracy</B> using recurrent neural network. 
+            <HR>
+            </DIV></FONT></TD></TD>
+        <TR>
+          <TD><FONT face="Courier New" color=red SIXE="12">
+            <DIV align=justify><B>Please cite following paper if you are using 
+            ABCpred server</B><BR>Saha, S and Raghava G.P.S. (2006) Prediction 
+            of Continuous B-cell Epitopes in an Antigen Using Recurrent Neural 
+            Network. Proteins,<b>65(1)</b>,40-48<A href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=AbstractPlus&list_uids=16894596&query_hl=1&itool=pubmed_docsum"> PMID: 16894596 </A>
+  </DIV></FONT></TD></TD></TR></TBODY></TABLE></FONT></DIV></TD></TR></TBODY></TABLE><!----------introduction end--------><TR><TD>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" align=center border=0 
+valign="Center">
+  <TBODY>
+  <TR bgColor=#e5e5e5 height=20>
+    <TD>
+      <DIV align=left>Contact :&nbsp;<A 
+      href="http://webs.iiitd.edu.in/raghava"><B> <FONT color=#666666 
+      size=4>G.P.S. Raghava </A></B></FONT></DIV></TD>
+    <TD>
+      <DIV align=center><A href="http://webs.iiitd.edu.in/bic"><B><FONT 
+      color=#666666>Bioinformatics Centre </FONT></B></A></DIV></TD>
+    <TD>
+      <DIV align=right><A href="http://webs.iiitd.edu.in/"><B><FONT 
+      color=#666666 size=2>Institute of Microbial Technology,India 
+      </FONT></B></A></DIV>
+    <TD></TD></TR></TBODY></TABLE></TD></TR><BR>
+<DIV 
+align=center><B><!--#exec cgi="/cgi-bin/abcpred/counter.cgi"--></B></DIV></TD></TR></TABLE></BODY></HTML>

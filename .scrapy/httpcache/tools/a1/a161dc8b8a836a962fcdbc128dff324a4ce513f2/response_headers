@@ -1,0 +1,10 @@
+Date: Mon, 30 Mar 2020 18:49:04 GMT
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+X-Permitted-Cross-Domain-Policies: none
+Strict-Transport-Security: max-age=31536000
+Location: https://omics.pnl.gov/software/DAnTE.php
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/html; charset=iso-8859-1
+Set-Cookie: TS01c5dffe=0194455fd26e1b6c3dffcbd0aabc72faf63440f6754b09eb7a661e2232b4b993a6d4b48b4a87cb93f3862ffa92ee4c385715396115; Path=/; HTTPOnly

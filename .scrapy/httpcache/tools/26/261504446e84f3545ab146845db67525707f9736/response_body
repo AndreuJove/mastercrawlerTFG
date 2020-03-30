@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="genome ugr bioinformatics tools">
+    <meta name="author" content="Carmen Navarro">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>University of Granada - Genome web server</title>
+    <!--link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css"  href="/static/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="/static/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/jumbotron.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- Contact dialog -->  
+    <div class="modal fade" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>  Contact</h4>
+          </div>
+          <div class="modal-body">
+            <p>If you have any comments or suggestions, contact us at <i class="icon-envelope"></i> <b>cnluzon at decsai.ugr.es</b>.</p>
+          </div>
+          <!--<div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>-->
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="citemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="cite-modal-label"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> How to cite</h4>
+          </div>
+          <div class="modal-body">
+            <p>If you use Cisminer, please cite the Cisminer publication: </p>
+            <p>Navarro, C., Lopez, F. J., Cano, C., Garcia-Alcalde, F., Blanco, A. (2014). CisMiner: Genome-wide in-silico cis-regulatory module prediction by fuzzy itemset mining. PloS one, 9(9), e108065.</p>
+          </div>
+          <!--<div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  
+    <!-- Server error dialog -->
+    <div class="modal hide" id="server_error_dialog">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <i class="icon-remove"></i><h3 style="display:inline"> Error</h3>
+      </div>
+      <div class="modal-body">
+        <center>
+          <p>ProphNet server seems to be down. It should automatically be up in an hour. If this situation continues, please contact fvictor at correo.ugr.es. Sorry for the inconvenience!</p>
+        </center>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+  
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Cisminer </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav">
+          
+            <li><a href="/"><span class="glyphicon glyphicon-home"" aria-hidden="true"></span>  home</a></li>
+            
+            <li><a href="/team"><span class="glyphicon glyphicon-user"" aria-hidden="true"></span>  team</a></li>
+            
+            <li><a href="/tools"><span class="glyphicon glyphicon-wrench"" aria-hidden="true"></span>  tools</a></li>
+            
+            <li><a href="/publications"><span class="glyphicon glyphicon-education"" aria-hidden="true"></span>  publications</a></li>
+            
+            <li><a href="#" data-toggle="modal" data-target="#contactmodal"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> contact</a></li>
+            
+<li><a href="#" data-toggle="modal" data-target="#citemodal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> how to cite</a></li>
+
+          </ul>
+          
+           <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><!--<span class="glyphicon glyphicon-copyright-mark" aria-hidden="true" ></span>-->2016 DECSAI. University of Granada</a></li>
+          </ul>
+          
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </nav>
+
+    <div class="container-fluid" id="content">
+
+    
+
+      <div class="row-fluid">
+        <div class="col-sm-3 col-md-3">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#results" data-toggle="tab">Genome wide results</a></li>
+            <li><a href="#customgff" data-toggle="tab">Gff custom query</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="results">
+              <!--<h3>Browse genome-wide results</h3>-->
+              <form id='fregumod' name="fregumod" method="post">
+
+                <div class="form-group">
+                  <label for="inputJob">Job name</label>
+                  <input type="text" class="form-control" name="inputJob" id="inputJob" placeholder="my job">
+                </div>
+ 
+                <div class="form-group">
+                  <label for="organismSelect">Organism</label>
+                  <select class="form-control" name="organismSelect" id='organismSelect'>
+                    <option>Saccharomyces cerevisiae</option>
+                    <option>Drosophila melanogaster</option>
+                    <!--<option>Homo sapiens</option>-->
+                  </select>
+                </div>
+        
+                <div class="form-group" id="tfDatabases" name="tfDatabases">
+                  <label for="tfDatabases">TF databases</label>
+
+                    <div class="checkbox">
+                      <label><input type="checkbox" name="checkboxJaspar" id="checkboxJaspar"> JASPAR</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" name="checkboxTransfac" id="checkboxTransfac"> TRANSFAC (v7 public) <a href="#" rel='popover' data-original-title='<strong>TF databases<strong>' data-content='Please, note that the version of TRANSFAC used online is the public free version.'><span class="badge badge-info">?</span></a></label>
+                    </div>
+                </div>
+
+                <div id="errorArea">
+                </div>
+
+                <div class="form-group pull-right">
+                  <div class="btn-group btn-group-lg">
+                    <button type="button" id="buttonClear" class="btn btn-default">Clear</button>
+                    <button type="button" id="buttonDemo" class="btn btn-info">Demo</button>
+                    <button type="button" id="buttonRun" class="btn btn-primary" data-loading-text="Loading...">Run!</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane" id="customgff">
+              <form id='fgff' name="fgff" enctype='multipart/form-data' method="post"> 
+              <h3>Upload custom Gff file</h3>
+              <div class="form-group">
+                <label for="in_gff_file">File input <a href="#" rel='popover' data-original-title='<strong>Gff file<strong>' data-content='A <a href="http://genome.ucsc.edu/FAQ/FAQformat.html#format3">valid gff file</a> must be provided.'><span class="badge badge-info">?</span></a></label>
+                <input type="file" id="in_gff_file" name="in_gff">
+                <p class="help-block">Upload a valid gff file here.</p>
+              </div>
+
+              <div id="errorAreaGff">
+              </div>
+
+              <div class="form-group pull-right">
+                  <div class="btn-group btn-group-lg">
+                    <!--<button type="button" id="buttonClearGff" class="btn btn-default">Clear</button>-->
+                    <!--<button type="button" id="buttonDemoGff" class="btn btn-info">Download demo file</button>-->
+                    <a class="btn btn-info" href="/static/cisminer/example.gff">Download demo file</a>
+                    <button type="button" id="buttonRunGff" class="btn btn-primary" data-loading-text="Loading...">Run!</button>
+                  </div>
+              </div>
+
+            </form>
+            </div>
+            
+          </div>
+        </div>
+
+        </div>
+        <div id='cisminer-content' class="col-sm-9 col-md-9">
+          <h1 class="page-header">Welcome to the regulatory modules search web!</h1>
+          <p class="lead">
+            <strong>CisMiner</strong> is an online tool to search for putative Cis-Regulatory Modules genome-wide. Our computational methodology screens the provided genome or regions for Transcription Factor Binding Sites and searches for clusters using fuzzy technology. Fuzzy clustering overcomes the problem of sharp boundaries, where relevant Transcription Factor Binding Sites for the discovered Cis-Regulatory Modules could be arbitrarily omitted or viceversa due to an arbitrary sharp distance threshold otherwise. In addition, cutting-edge Transcription Factor databases and scan tools are used for our search. 
+          </p>
+          <p class="lead">
+            If you want to perform an <strong>Analysis</strong>, fill out the form on the left. If you just want to give it a try, click on the <strong>Demo</strong> button. If you want to know more about regulatory modules, go to the <strong><a href="./about">About</a></strong> section or go to the <a href="./help"><strong>help section</strong></a>. 
+          </p>
+          <p class="lead">
+            Regulatory modules is a tool developed in the <strong>Department of Computer Science and Artificial Intelligence</strong> at the <strong>University of Granada</strong>.
+          </p>
+      </div>
+
+
+
+    </div>
+
+   <!--  <div class="container">
+      <footer>
+        <p>2016 University of Granada.</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="/static/bower_components/jquery/dist/jquery.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/static/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/static/bower_components/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/static/common/js/utils.js" type="text/javascript"></script> 
+    
+    <script src="/static/cisminer/js/cisminer_form.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+   
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+  </body>
+</html>

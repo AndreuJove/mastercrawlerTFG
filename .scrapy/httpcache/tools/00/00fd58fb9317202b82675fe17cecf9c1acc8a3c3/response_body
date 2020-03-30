@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+ 
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />    
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+
+		<title>16S Classifier</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Nikhil and Ashok" />
+
+<meta name="google-site-verification" content="sUisIErYGzfZnsWR08xF5FdYOiaf-THVelBDksAFDvQ" />
+<meta name="keywords" content="16S, 16S rRNA, 16S gene, 16S TOOL, 16S SOFTWARE, 16S RRNA SOFTWARE, 16S RRNA ANALYSIS, 16S RRNA ANALYSIS TOOL, 16S RRNA TOOL, 16S RNA, 16S DNA, 16S CLASSIFIER, 16S RRNA CLASSIFIER, CLASSIFY 16S RRNA, 16S ANALYSIS TOOL, 16S ANALYSIS, METAGENOMIC ANALYSIS, MACHINE LEARNING, RANDOM FOREST, RDP CLASSIFIER LIKE TOOL, LIKE RDP CLASSIFIER, RDP CLASSIFIER ALTERNATIVE, RDP ALTERNATIVE, TAXONOMIC ANALYSIS, PHYLOGENETIC ANALYSIS, GENE, BIOLOGY, BIOINFORMATICS, READS, MICROBIAL, MICROBES, ENVIRONMENTAL SAMPLES, PREDICTION, PREDICT, SERVER, METAGENOME, GENOME, METAGENOMICS, GENOMICS, IISERB, IISER BHOPAL, METAINFORMATICS LABORATORY, VINEET SHARMA, NIKHIL CHAUDHARY, ASHOK K SHARMA, PLOS ONE, INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH" />
+
+		<!--Grab the Stylesheets-->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+		<link href="css/style1.css" rel="stylesheet" type="text/css">
+		<link href="css/flexslider.css" rel="stylesheet" type="text/css">
+		
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		<div class="container" style= "background-color: #FFFFFF;">
+			<header class="sixteen columns alpha omega">
+<div style="float:left; margin-left: 50px; margin-top: 20px">
+<a href="application.php"><img class="brand" src="img/logo.png" />
+</div>
+<div style="float:left; font-family: 'ChunkFive Regular'; margin-left: 55px; margin-top: 45px; font-size: 60pt;">
+<font>16S Classifier</font>
+<div style=" font-family: 'ChunkFive Regular';  font-size: 13pt;">
+<font>Fast and Accurate Taxonomic Classification of 16S rRNA Sequences</font>
+</div>
+</div>
+
+<div style="float:right; margin-right: 40px; margin-top: 28px; ">
+<a href="application.php"><img class="brand" src="img/download.jpg" />
+</div>
+
+
+		<!--	<a href="index.html"><img class="brand" src="img/logo.png" alt="Tri"></a>
+             <a href="index.html"><img class="brand" src="img/logo.png" alt="Tri"></a>-->
+
+
+
+
+
+
+				<nav class="main-nav sixteen columns">
+					<ul class="ten columns alpha">
+						
+						<li><a href="application.php">Home</a></li>
+						<li><a href="algorithm.html">Algorithm</a></li>
+						<li><a href="download.html">Download</a></li>
+						<li><a href="team.html">Team</a></li>
+						
+					</ul>
+					<div class="social six columns omega">
+						<a href="#"></a>
+						<a href="#"></a>
+					</div> <!--Close Social Div-->
+				</nav>
+			</header>
+	      	<section class="sixteen columns feature">
+		        
+	     	</section>
+	     	
+<div id="appmain" class="sixteen columns post">
+<p class="paragraph">'16S Classifier' is a Random Forest based tool which is developed to carry out fast, efficient and accurate taxonomic classification of 
+16S rRNA sequences. It has the unique ability to classify small Hypervariable Regions of 16S rRNA. 
+<br>Input can be complete 16S rRNA gene or a selected Hypervariable Region or
+a combination of multiple Hypervariable Regions.</p></div>
+                <div class="sixteen columns">
+				<div class = "heading" style= margin-top:10px>
+					<h1>16S Classifier Usage</h1>
+				</div>
+				<p class ='paragraph'>The input file must be <b> single line nucleotide sequences </b>in fasta format with a <b>'.fasta' </b>extension and the primers should be removed from the sequences before submission. Select the appropriate 16S region from the drop down menu. </p>
+				<div class="article-container" style="">
+					<p> UPLOAD SEQUENCE <p> <hr>
+					<form action="" method="post" enctype="multipart/form-data">
+						<table style="width:100%">
+							<tr><td style="width:250px; "><p style="margin-top:0px">Upload File (max. 50MB)</p></td>
+							<label for="file"></label>
+							<td style="width:auto"><input type="file" name="file" id="file" />
+							<input type="checkbox" name="chkd" id="chekd" />Upload Sample File</td></tr>
+							<tr><td style="width:250px"><p style="margin-bottom:0px; margin-top:0px;">16S Region</p></td>
+							<td style="width:auto">
+							<select style="width:88px" name="typeof" id="typof">
+								<option value="v2" >V2</option>
+																	<option value="v3">V3</option>
+																	<option value="v4">V4</option>
+																	<option value="v5">V5</option>
+																	<option value="v6">V6</option>
+																	<option value="v7">V7</option>
+																	<option value="v8">V8</option>
+																	<option value="v23">V23</option>
+																	<option value="v34">V34</option>
+																	<option value="v35">V35</option>
+																	<option value="v45">V45</option>
+																	<option value="v56">V56</option>
+																	<option value="v67">V67</option>
+																	<option value="v78">V78</option>
+																	<option value="Complete16S">Complete 16S</option>
+															</select>
+							<a title="Select the 16S region" ><img style="width:20px; position:absolute; margin-left:20px; margin-top:8px" src="http://metagenomics.iiserb.ac.in/woods/images/info.jpg">
+							</a>
+							</td></tr>
+							<input type="hidden" name="fileuploaded" value="1" />
+							<tr><td colspan="2" ><p><input type="submit" name="submit" value="Submit" /></p></td></tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			
+		
+			<div class="row">
+
+			</div> 
+
+<p> How to cite: </p>
+
+<p>Chaudhary N, Sharma AK, Agarwal P, Gupta A, Sharma VK (2015):16S Classifier: A Tool for Fast and Accurate Taxonomic Classification of 16S rRNA Hypervariable Regions in Metagenomic Datasets. PLoS ONE, 10(1): e0116106.
+
+<div>
+
+<footer class="row"> </p>
+<p>Copyright © 2014 Indian Institute of Science Education and Research Bhopal, India. All rights reserved. </p>
+        </footer>
+                </div><!--Close Container Div-->
+
+
+	
+<!-- Start of StatCounter Code for Blogger / Blogspot -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=10263947; 
+var sc_invisible=0; 
+var sc_security="11421c63"; 
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter_xhtml.js'></"+"script>");
+//]]>
+</script>
+<noscript><div class="statcounter"><a title="blogger counter" href="http://statcounter.com/blogger/" class="statcounter"><img class="statcounter" src="http://c.statcounter.com/10263947/0/11421c63/0/" alt="blogger counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Blogger / Blogspot -->
+
+<div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://metagenomics.iiserb.ac.in/16Sclassifier', 'user' : 1163851, 'server' : '3', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2015-03-27', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www3.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www3.clustrmaps.com/user/21711c24b"><img src="http://www3.clustrmaps.com/stats/maps-no_clusters/metagenomics.iiserb.ac.in-16Sclassifier-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+
+
+
+		<!--Grab JS Files-->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+	<!--	<script type="text/javascript" src="js/jquery.flexslider.js" ></script>-->
+
+		<script type="text/javascript">
+			// Can also be used with $(document).ready()
+			$(window).load(function() {
+			  $('.flexslider').flexslider({
+			    animation: "slide"
+			  });
+			});
+		</script>
+	    <script>
+	    document.getElementById("chekd").onchange = function() {
+	    document.getElementById("file").disabled = this.checked;
+	    document.getElementById("typof").disabled = this.checked;
+	      };
+
+</script>
+	</body>
+</html>

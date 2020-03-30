@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-US" prefix="bioschema: http://bioschemas.org/">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"><!-- automatically added by Apache -->
+<script type="application/ld+json">{
+		"@context" : [ "https://schema.org/" ],
+		"@type" : "Organization",
+		"url" : "https://web.expasy.org/decrease_redundancy",
+  		"name": "Decrease Redundancy"
+		
+		, "memberof" : {
+				"@type" : "NGO",
+				"name"  : "SIB Swiss Institute of Bioinformatics",
+				"url"   : "https://sib.swiss/"
+			        }
+		, "parentOrganization" : 
+				{
+				"@type" : "Organization",
+                                "name"  : "ExPASy",
+                                "url"   : "https://www.expasy.org/"
+				}
+		}</script><!-- automatically added by Apache -->
+    <link rel="icon" href="https://web.expasy.org/favicon.ico" ><!-- automatically added by Apache -->
+    <link rel="stylesheet" href="/css/sib_css/sib.css" type="text/css" media="screen" charset="utf-8" >
+	   <link rel="stylesheet" href="/css/sib_css/sib_print.css" type="text/css" media="print" charset="utf-8" >
+           <!--[if lte IE 6]>
+	   <link rel="stylesheet" href="/css/sib_css/sib_ie6.css" type="text/css" media="screen" title="" charset="utf-8">
+           <![endif]-->
+           <link rel="stylesheet" href="/css/base.css" type="text/css"><!-- automatically added by Apache -->
+<title>Decrease redundancy</title>
+  </head>
+  <body  typeof="schema:WebPage"> 
+<!-- ********************************************************************************************** -->
+<!-- START OF HEADER information on top of the page -->
+<div id='sib_top'><a name='TOP'></a></div>
+<div id='sib_container'>
+
+<!-- TODO: Change id to "sib_header" or "sib_header_small" -->
+<div id='sib_header_small'>
+
+<!-- SIB-ExPASy -->
+<div id="sib_expasy_logo" property="schema:isPartOf" typeof="schema:CreativeWork" >
+<a href="https://sib.swiss/" id="sib_link" title="SIB Swiss Institute of Bioinformatics"></a>
+<a property="schema:url" href="https://www.expasy.org" id="expasy_link" title="ExPASy - SIB Bioinformatics Resource Portal"></a>
+</div>
+<!-- SIB-ExPASy END -->
+
+<div class='sib_title_no_logo'>
+<h1><a href="https://web.expasy.org/decrease_redundancy">Decrease Redundancy</a></h1>
+</div>
+
+<! -- Additionnal resource header -->
+<div id='resource_header'></div>
+	<div id='sib_header_nav'>
+		<a property="" href="https://web.expasy.org/decrease_redundancy" title="Home page">Home</a>
+		&nbsp;|&nbsp;
+		<a style="font-weight: bold; color: rgb(204,0,0) !important;" href="/contact" title="Contact">Contact</a>
+	</div>
+</div>
+<!-- END OF HEADER -->
+<!-- ********************************************************************************************** -->
+<div id='sib_body'>
+<!-- automatically added by Apache -->
+
+<body>
+<H1>Decrease redundancy</H1>
+<p>
+This program allows you to reduce the redundancy in a set of aligned or unaligned sequences.
+<p>
+The algorithm used by this program was developed by <a href="http://www.tcoffee.org/homepage.html">C&eacute;dric Notredame</a> and is unpublished.
+<p>
+<p>
+<form action='/cgi-bin/decrease_redundancy/reduce_redundancy.cgi' method=POST>
+Input a set of <b>several sequences</b> or an alignment in any format (such as FASTA):
+<br>
+<textarea name="text" cols=70 rows=20></textarea>
+<p>
+<input type=checkbox name=aln> The input is an alignment
+<input type=checkbox name=disttable> Output complete distance table
+<p>
+Use the following rules to decrease redundancy:
+<br> <input type=text name='U' value=90 size=3> % max similarity
+<br> <input type=text name='n' value='' size=3> max number of sequences
+<br> <input type=text name='N' value='' size=3> % of sequences to keep
+<br> <input type=text name='L' value='' size=3> % min similarity
+<br> Keep the following sequences:
+<input type=text name='keep value=''>
+(separate multiple entries with ':')
+<br>
+</select>
+<input type=submit>
+<input type=reset>
+<br>
+</form>
+
+<hr>
+The trim algorithm works as follow:
+
+<ol>
+<li>
+Computes all the pairwise alignments (PAM250, gop=-10, gep=-1) or use a multiple alignment.
+<li>
+Measure the %id (number id/number matches) of each pair
+<li>
+if a minimum identity <i>min%</i> is set: all the sequences with less than <i>min%</i> identity with ANY sequence in the set will be removed so that in the remaining set ALL the pairs of sequences have more than <i>min%</i> identity. The removal will stop uncompleted if the set becomes smaller than <i>n</i>.
+<li>
+Remove one of the two closest sequences until either <i>n</i> is reached or until all the sequences have less than <i>max%</i> identity.
+<li>
+return the new set.
+</ol>
+
+Please note that this algorithm is order dependent and may not give the same results if sequences are fed in a different order.
+
+
+
+<!-- sib_body -->
+<br clear="left" />
+</div>
+<!-- ********************************************************************************************** -->
+<!-- START OF FOOTER information at the bottom of the page -->
+<div id = 'sib_footer'>			
+  <!-- This part of the footer is _left_ justified and should contain SIB on the very left -->	
+  <div id = 'sib_footer_content' property="schema:creator" typeof="schema:NGO">
+    <a property="schema:url" href="https://sib.swiss/" ><span property="schema:name">SIB Swiss Institute of Bioinformatics</span></a>&nbsp;|&nbsp;<a href = "https://www.expasy.org/disclaimer.html">Disclaimer</a>
+	<!-- This part of the footer is _right_ justified -->
+	<div id = "sib_footer_right">	
+      <a href="#TOP" id = "sib_footer_gototop"><span style = "padding-left: 10px">Back to the Top</span></a>				
+    </div>
+  </div>
+</div>
+<!-- END OF FOOTER -->
+</div> 
+<!-- sib_container -->
+
+<script async="async" src='https://www.google-analytics.com/analytics.js' type="text/javascript"></script>
+<script type="text/javascript"/>
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-23625305-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+</script>
+<!-- automatically added by Apache -->
+
+    </body>
+</html>

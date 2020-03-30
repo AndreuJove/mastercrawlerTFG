@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<style type="text/css" media="screen,handheld,projection">
+  @import url("https://grigoryanlab.org/main.css");
+</style>
+
+<TITLE>CCCP (Coiled-coil Crick Parameterization)</TITLE>
+<script type="text/javascript" src="http://grigoryanlab.org/google-analytics-code.js"></script>
+</HEAD>
+
+<BODY>
+<div id="middleForApps">
+<div id="windowForApps">
+<div id="marginForApps">
+<div id="centraltextcolumn">
+<div id="maintext">
+
+<TABLE WIDTH="100%"><TR>
+<TD BGCOLOR="red"><CENTER><FONT COLOR="white" SIZE=+3><B>&nbsp;CCCP&nbsp;</B></FONT></CENTER></TD>
+<TD><B><FONT SIZE=+1>CCCP (Coiled-coil Crick Parameterization)</FONT></B><BR>
+A suite of tools for fitting Crick parameters<SUP>1,2</SUP> for coiled-coil structures and
+generating structures based on parameters. Contact gevorg.grigoryan at gmail dot com with bug reports and requests.
+</TD>
+</TR></TABLE>
+
+<BR>
+
+<UL>
+<LI><A HREF="index.fit.php">Structure Fitter</A><BR>
+<LI><A HREF="index.gen.php">Structure Generator</A><BR>
+<LI><A HREF="index.ai.php">Accommodation Index Analizer</A><BR>
+<LI><A HREF="sourceForDownload">Matlab/Octave source code</A><BR>
+</UL>
+
+<BR>
+<SUP>1</SUP> F. H. Crick, "The Fourier Transform of a Coiled Coil", <I>Acta Cryst.</I>, <B>6</b>: 685 (1953)
+<BR>
+<SUP>2</SUP> G. Grigoryan, W. F. DeGrado, "Probing Designability via a Generalized Model of Helical Bundle Geometry", <I>J. Mol. Biol.</I>, <b>405</b>(4): 1079-1100 (2011)
+
+</div>
+</div>
+
+<div id="navbar">
+<br><br>
+<hr/>
+<A HREF="http://www.grigoryanlab.org/index.php?sec=home">HOME</A>
+|
+<A HREF="http://www.grigoryanlab.org/index.php?sec=research">Research</A>
+|
+<A HREF="http://www.grigoryanlab.org/index.php?sec=pubs">Publications</A>
+|
+<A HREF="http://www.grigoryanlab.org/index.php?sec=people">People</A>
+|
+<A HREF="http://www.grigoryanlab.org/index.php?sec=links">Links</A>
+|
+<A HREF="http://www.grigoryanlab.org/index.php?sec=contact">Contact</A>
+<font color="#005E0D" weight="bold">@ Grigoryan Lab</font>
+</div>
+
+<div id="navbarText">
+<p>
+<table width=100%>
+<tr>
+  <td>
+    Dartmouth College, Hanover, NH, 03755 USA<br>
+    Departments of <a href="http://web.cs.dartmouth.edu">Computer Science</a>, <a href="http://biology.dartmouth.edu">Biological Sciences</a>, and <a href="http://chemistry.dartmouth.edu">Chemistry</a><br>
+    <a href="http://biomt.dartmouth.edu/">Institute for Biomolecular Targeting</a><br>
+  </td>
+  <td align="right">
+
+  </td>
+</tr>
+</table>
+</p>
+</div>
+</div>
+</div>
+</div>
+</BODY>
+
+</HTML>
+

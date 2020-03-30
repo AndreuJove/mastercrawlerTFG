@@ -1,0 +1,51 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (X11; U; Linux 2.2.14-5.0smp i686) [Netscape]">
+   <title>CCHMMPROF: Predictor of coiled-coil segments in proteins</title>
+</head>
+<body text="#ff00ff" bgcolor="#000000" link="#ffffff" vlink="#ff0000" alink="#ffffff">
+
+<center>
+<h1>
+<br>
+<i><font color="#3366FF"><font size=+4>CCHMMPROF: an hmm-based predictor of coiled-coil segments in proteins </font></font></i></h1></center>
+
+<ul>
+<center><img SRC="/oldpredictors/cchmm/cc.gif" ALT="cchmmprof" BORDER=0 ><!/CENTER></center>
+</ul>
+
+<hr><form method="post" ><b><i><font size=+1>
+
+
+Your e-mail address => <input name="address"><P>
+<p>
+
+Sequence name [Optional] => <input name="seqname"><P>
+<p>
+
+
+<p><b><i><font size=+2>Paste your sequence</font></i></b>
+<br><textarea name="text" rows=20 cols=80 ></textarea>
+<p><font size=+2><b><i>Press&nbsp;<input type="submit" value="here"></i></b>&nbsp;
+<b><i>to submit your prediction (<font color="#009900">and please wait</font>)</i></b></font></form></center>
+<br>
+<br>
+</i>
+
+The sequence can be pasted in 
+<a href="/oldpredictors/cchmm/raw.txt">raw</a> or in 
+<a href="/oldpredictors/cchmm/fasta.txt"> fasta </a> formats.
+<br>
+
+<br>
+For details see:
+<br>
+<a href="http://bioinformatics.oxfordjournals.org/content/25/21/2757.abstract?sid=c2bf9bc9-d288-47fb-ae5d-7be24ccf35af">
+Bartoli L., Fariselli P., Krogh A., Casadio R. CCHMM_PROF: a HMM-based coiled-coil predictor with evolutionary information. Bioinformatics. 25:2757-2763. (2009). </a>
+
+
+<p><br>
+</body>
+</html>

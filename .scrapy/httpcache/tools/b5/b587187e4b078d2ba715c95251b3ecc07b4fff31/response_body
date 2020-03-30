@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>CentroidFold</title>
+<style type="text/css">
+<!--
+  table.option {
+    font-size:0.8em;
+  }
+  td {
+    text-align:left;
+    vertical-align:top;
+  }
+  a {
+    text-decoration:none;
+  }
+  a:hover {
+    text-decoration:underline;
+  }
+  pre {
+    color:#000000;
+    font-family:monospace;
+    font-size:1.2em;
+  }
+  div.description {
+    width:800px;
+    font-size:0.8em;
+    padding:8px;
+    background-color:#DDEEFF;
+    border-radius:1em;
+  }
+//-->
+</style>
+<script type="text/javascript">
+<!--
+  function ribozyme() {
+    document.qsub.query.value=">M33000.1/55-110\nACGCUGUCUGUACUUGUAUCAGUACACUGACGAGUCCCUAAAGGACGAAACAGCGC";
+  }
+  function trna() {
+    document.qsub.query.value=">AL138651.1/64525-64597\nGGGGAUGUAGCUCAUAUGGUAGAGCGCUCGCUUUGCAUGCGAGAGGCACAGGGUUCGAUUCCCUGCAUCUCCA";
+  }
+  function snorna() {
+    document.qsub.query.value=">AJ609485.1/1-127\nCUGGAGACUAAGAAAAUAGAGUCCUUGAAAUCAAGCUGACUCUGCUUUUAGCCUCCUAAAUGAAAAGGUAGAUAGAACAGGUCUUGUUUGCAAAAUAAAUUCAAGACCUACUUAUCUACCAACAGCA";
+  }
+  function riboswitch() {
+    document.qsub.query.value=">TPP-riboswitch, AF269819/18111669\nCCUACUAGGGGAGCCAAAAGGCUGAGAUGAAUGUAUUCAGACCCUUAUAACCUGAUUUGGUUAAUACCAACGUAGGAAAGUAGUUAUUAACUAUUCGUCAUUGAGAUGUCUUGGUCUAACUACUUUCUUCGCUGGGAAGUAGUU";
+  }
+//-->
+</script>
+</head>
+
+<body style="font-family:'Lucida Grande',Meiryo,sans-serif; color:#000000; font-size:1em">
+<div style="width:800px;">
+<a href="http://rtools.cbrc.jp/centroidfold/"><img src="image/CentroidFold.png" alt="CentroidFold" width=350></a><br>
+<p class="description">
+CentroidFold based on a generalized centroid estimator is one of the most accurate tools for predicting RNA secondary structures. The predicted secondary structure is coloured according to base pairing probabilities.
+</p>
+</div>
+<div>
+<form method="post" name="qsub" action="register.cgi">
+
+<p>
+<span style="font-weight:bold;">Enter your RNA sequence (single FASTA format, &lt= 400nt)</span><br>
+<span style="font-size:0.8em;">
+Samples:&nbsp;
+<a href="javascript:ribozyme()">Hammerhead ribozyme</a>,
+<a href="javascript:trna()">tRNA</a>,
+<a href="javascript:snorna()">H/ACA snoRNA</a>,
+<a href="javascript:riboswitch()">TPP-riboswitch</a>
+</span>
+<br>
+<textarea name="query" rows=6 cols=100></textarea><br>
+<input type="submit" value="Submit">
+</p>
+<span style="font-weight:bold;">Options</span><br>
+<span style="font-size:0.8em;">
+</span>
+<table class="option">
+<tr><td>
+<select name="model_str_1">
+<option selected value="BL">McCaskill(BL)</option>
+<option value="Turner">McCaskill(Turner)</option>
+<option value="CONTRAfold">CONTRAfold</option>
+</select>
+</td>
+<td>: specify the inference engine</td>
+</tr>
+<tr><td>
+<select name="gamma_1">
+<option value="1024">2^10</option>
+<option value="512">2^9</option>
+<option value="256">2^8</option>
+<option value="128">2^7</option>
+<option value="64">2^6</option>
+<option value="32">2^5</option>
+<option value="16">2^4</option>
+<option value="8">2^3</option>
+<option value="4" selected>2^2</option>
+<option value="2">2^1</option>
+<option value="1">2^0</option>
+<option value="0.5">2^-1</option>
+<option value="0.25">2^-2</option>
+<option value="0.125">2^-3</option>
+<option value="0.0625">2^-4</option>
+<option value="0.03125">2^-5</option>
+
+</select>
+</td>
+<td>: weight of base pairs</td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>CHSalign</title>
+</head>
+<body background="CHSalign_files/bg.jpg" bgcolor="#F0F8FF">
+<left>
+<body>
+
+<p><img border="0" src="CHSalign_files/CHSalign.png" width="301" height="108"></p>
+<p><font face="Arial">[<a href="index.html"><font color="#FF0000">Home</font></a>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+[<a href="examples.html"><font color="#FF0000">Examples</font></a>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+[<a href="contact.html"><font color="#FF0000">Contact</font></a>]</font></p>
+
+
+<hr>
+
+<form name="form1" method="post" action="CHSalign.php" enctype="multipart/form-data">
+	
+	<input type= "hidden" value="d" checked name="ch"> 
+	<input type="hidden" value="st" checked name="rna_type_d" style="font-weight: 700"> 
+	<input type="hidden" value="st" checked name="rna_type_q" style="font-weight: 700">
+</form>
+<p class="MsoNormal" style="text-indent:0in"><font face="Arial">
+<span lang="EN-NZ">RNA junctions are 
+important structural elements of RNA molecules. 
+They are formed by three or more helices 
+coming together in three-dimensional space. 
+<a href="http://nar.oxfordjournals.org/content/early/2011/09/14/nar.gkr629.full">Recent studies</a> have focused on the annotation 
+and prediction of coaxial helical stacking (CHS)
+motifs within junctions. 
+Here we develop a web server, called CHSalign, 
+for computing the secondary structure alignment 
+of RNA molecules containing CHS motifs.
+</span></font></p>
+
+<p class="MsoNormal" style="text-indent:0in"><font face="Arial">
+<span lang="EN-NZ">
+The web server has two versions: CHSalign_p and
+<!-- CHSalign_s,--> 
+CHSalign_u. </span></font></p>
+<p class="MsoNormal" style="text-indent:0in"><font face="Arial">
+CHSalign_p<span lang="EN-NZ"> accepts as input two 
+RNA secondary structures where the structures 
+are not annotated with CHS motifs, 
+and produces as output an optimal 
+local alignment between the two RNA structures 
+while taking into account their junctions and coaxial helical stacking
+in the junctions. 
+This version is a pipeline, which 
+invokes our previously developed 
+<a href="http://nature.njit.edu/biosoft/Junction-Explorer/">Junction Explorer</a> tool to automatically predict and identify 
+the junctions and CHS motifs within the 
+junctions in the input structures, 
+and then aligns the input structures
+containing the CHS motifs.
+The output displays 
+the predicted CHS motifs in the input structures in addition to aligned 
+junctions and nucleotides. Click <a href="CHSalign_p.html">here</a> to see a 
+demo and to run the CHSalign_p program.
+Note: To predict and identify the junctions 
+and CHS motifs within the junctions in a single structure R, 
+please use two identical structures R and R as input of the
+CHSalign_p program, which will display the predicted CHS motifs in R.
+
+</span></font></p>
+<p class="MsoNormal" style="text-indent:0in"><font face="Arial">CHSalign_u<span lang="EN-NZ"> 
+accepts as input two RNA secondary structures, 
+both containing CHS motifs annotated manually by the user, 
+and produces as output an 
+optimal local alignment between the two annotated structures. Click
+<a href="CHSalign_u.html">here</a> to see a demo and to run the CHSalign_u 
+program.</span></font></p>
+<p class="MsoNormal" style="text-indent:0in"><font face="Arial">
+<span lang="EN-NZ">
+The web server accepts input RNA data in three formats: Bpseq, CT and Vienna
+dot-bracket notation. 
+Click <a 
+href="http://nature.njit.edu/biosoft/Junction-Explorer/help.pdf">here</a> 
+to see an introduction to the three data formats. 
+</span></font></p>
+
+<p class="MsoNormal" style="text-indent:0in"><span lang="en-nz">
+<font face="Arial">The web server does not handle pseudoknots. Pseudoknots in 
+the example molecules on this website have been removed using the
+<a href="http://www.ibi.vu.nl/programs/k2nwww/">K2N </a>tool.
+</font></span></p>
+</p>
+
+
+<p class="MsoNormal" style="text-indent:0in"><span lang="en-nz">
+<font face="Arial">Programs related to the web server can be downloaded 
+<a href="http://web.njit.edu/~wangj/CHSalign">here</a>.
+</font></span></p>
+</p>
+
+
+
+<p class="MsoNormal" style="text-indent:0in"><span lang="en-nz">
+<font face="Arial">
+<b>References:</b>
+<br>
+<br>
+Lei Hua, Yang Song, Namhee Kim, Christian Laing, Jason T. L. Wang and 
+Tamar Schlick.
+<a 
+href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147097">
+CHSalign: a web server that builds upon Junction-Explorer and RNAJAG for
+pairwise alignment of RNA secondary structures with coaxial helical
+stacking</a>.
+<I>PLoS One</I> 2016;11(1):e0147097.<br>
+<br>
+Christian Laing, Dongrong Wen, Jason T. L. Wang and Tamar Schlick.
+<a 
+href="http://nar.oxfordjournals.org/content/early/2011/09/14/nar.gkr629.full">
+Predicting coaxial helical stacking in RNA junctions</a>.
+<I>Nucleic Acids Research</I> 2012;40(2):487-498.
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

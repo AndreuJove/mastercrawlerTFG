@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <meta name="Generator" content="iWeb 2.0.4" />
+    <meta name="iWeb-Build" content="local-build-20130603" />
+    <meta name="viewport" content="width=1000" />
+    <title>COMmunication MApping</title>
+    <link rel="stylesheet" type="text/css" media="screen,print" href="COMMA_files/COMMA.css" />
+    <link rel="stylesheet" type="text/css" media="screen,print" href="COMMA_files/bootstrap.css" />
+    <!--[if IE]><link rel='stylesheet' type='text/css' media='screen,print' href='COMMA_files/COMMAIE.css'/><![endif]-->
+    <script type="text/javascript" src="Scripts/iWebSite.js"></script>
+    <script type="text/javascript" src="COMMA_files/COMMA.js"></script>
+  </head>
+  <body style="background: #E5E5E5; margin: 0pt; " onload="onPageLoad();">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42729335-1', 'upmc.fr');
+  ga('send', 'pageview');
+
+</script>
+    <div style="text-align: center; ">
+      <div style="margin-bottom: 10px; margin-left: auto; margin-right: auto; margin-top: 10px; overflow: hidden; position: relative; word-wrap: break-word;  background: #ffffff; text-align: left; width: 1000px; " id="body_content">
+        <div style="float: left; margin-left: 0px; position: relative; width: 1000px; z-index: 0; " id="nav_layer">
+          <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+          <div style="clear: both; height: 0px; line-height: 0px; " class="spacer"> </div>
+        </div>
+        <div style="height: 75px; margin-left: 0px; position: relative; width: 1000px; z-index: 10; " id="header_layer">
+          <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+          <div id="id1" style="height: 43px; left: 29px; position: absolute; top: 20px; width: 553px; z-index: 1; " class="style_SkipStroke">
+            <div class="text-content Normal_External_503_43" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style">COMmunication MApping</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-left: 0px; position: relative; width: 1000px; z-index: 5; " id="body_layer">
+          <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
+          <div id="id2" style="height: 32px; left: 29px; position: absolute; top: 12px; width: 700px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_503_32" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_1">A method to dissect proteins dynamical architectures.</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div id="id3" style="height: 20px; left: 29px; position: absolute; top: 85px; width: 85px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_85_20" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_1">Overview</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div id="id4" style="height: 305px; left: 29px; position: absolute; top: 115px; width: 563px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_503_165" style="padding: 0px; ">
+              <div class="style_4">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_2">Proteins adapt to environmental conditions by changing their shape and motions. Characterising protein conformational dynamics is increasingly recognised as necessary to understand how proteins function. Given a conformational ensemble, computational tools are needed to extract in a systematic way pertinent and comprehensive biological information. Communication Mapping (COMMA) is a new method to decipher the dynamical architecture of a protein. The method first extracts residue-based dynamic properties from all-atom molecular dynamics simulations. Then, it integrates them in a graph theoretic framework, where it identifies groups of residues or protein regions that mediate allosteric communication. COMMA introduces original concepts to contrast the different roles played by these regions, namely communication blocks and communicating segment pairs, and evaluates the connections and communication strengths between them. Our method permits to compare in a direct way the dynamical behaviour either of proteins with different characteristics or of the same protein in different conditions. COMMA is a fully automated tool with broad applicability and is freely available to the community.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div id="id5" style="height: 20px; left: 29px; position: absolute; top: 420px; width: 85px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_85_20" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_1">Download</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div id="id6" style="height: 20px; left: 29px; position: absolute; top: 450px; width: 563px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_503_20" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_2">The COMMA package is available <a title="http://www.lcqb.upmc.fr/COMMA/COMMA.zip" href="http://www.lcqb.upmc.fr/COMMA/package/COMMA.zip">here</a>.</p>
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_2">The results of COMMA on 4 studied systems (Protein A, P53, KIT wild-type and KIT D816V)</p>
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_2">are downloadable <a title="http://www.lcqb.upmc.fr/COMMA/Data.zip" href="http://www.lcqb.upmc.fr/COMMA/package/Data.zip">here</a>.</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+
+          <div id="id7" style="height: 20px; left: 29px; position: absolute; top: 550px; width: 142px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_142_20" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_1">System requirements</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div id="id8" style="height: 351px; left: 29px; position: absolute; top: 580px; width: 563px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_503_281" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-top: 0pt; " class="paragraph_style_2">Platform independent.<br /></p>
+                <p class="paragraph_style_2">The program COMMA requires some external tools that should be installed:<br /></p>
+                <ol>
+                  <li style="line-height: 15px; padding-left: 8px; text-indent: 0px; " class="full-width">
+                    <p style="text-indent: 0px; " class="paragraph_style_3"><span style="font-size: 12px; " class="Puce">-</span> <span class="style">Eigen</span>, a c++ library for linear algebra.<br /></p>
+                  </li>
+                  <li style="line-height: 15px; padding-left: 16px; text-indent: -8px; " class="full-width">
+                    <p style="text-indent: -8px; " class="paragraph_style_4"><span style="font-size: 12px; " class="Puce">-</span><span style="width: 4px; " class="inline-block"></span><span class="style">MDTraj</span>, a python library to analyse MD simulation trajectories.<br /></p>
+                  </li>
+                  <li style="line-height: 15px; padding-left: 16px; text-indent: -16px; " class="full-width">
+                    <p style="text-indent: -16px; " class="paragraph_style_5"><span style="font-size: 0px; position: relative; top: -8px; " class="Puce"></span><span style="width: 16px; " class="inline-block"></span><span class="style_1">McGibbon RT, Beauchamp KA, Harrigan MP, Klein C, Swails JM, Hernández CX, Schwantes CR, Wang LP, Lane TJ, Pande VS. (2015) </span><span class="style_2">Biophysical journal.</span><span class="style_1">, 109:1528-1532</span><br /></p>
+                  </li>
+                  <li style="line-height: 15px; padding-left: 16px; text-indent: -8px; " class="full-width">
+                    <p style="text-indent: -8px; " class="paragraph_style_4"><span style="font-size: 12px; " class="Puce">-</span><span style="width: 4px; " class="inline-block"></span><span class="style">Numpy python package</span> <br /></p>
+                  </li>
+                  <li style="line-height: 15px; padding-left: 16px; text-indent: -8px; " class="full-width">
+                    <p style="text-indent: -8px; " class="paragraph_style_4"><span style="font-size: 12px; " class="Puce">-</span><span style="width: 4px; " class="inline-block"></span><span class="style">PyMol</span> (external tool).<br /></p>
+                  </li>
+                  <li style="line-height: 15px; padding-left: 16px; text-indent: -16px; " class="full-width">
+                    <p style="text-indent: -16px; " class="paragraph_style_5"><span style="font-size: 0px; position: relative; top: -8px; " class="Puce"></span><span style="width: 16px; " class="inline-block"></span><span class="style_1">DeLano WL. (2002), The pymol molecular graphics system.</span><br /></p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div id="id9" style="height: 20px; left: 29px; position: absolute; top: 850px; width: 142px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_142_20" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_1">Installation</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+
+          <div id="id10" style="height: 42px; left: 29px; position: absolute; top: 880px; width: 563px; z-index: 1; " class="style_SkipStroke_2">
+            <div class="text-content style_External_503_42" style="padding: 0px; ">
+              <div class="style_4">
+                <ol>
+                  <li style="line-height: 15px; padding-left: 8px; text-indent: 0px; " class="full-width" value="1">
+                    <p style="padding-top: 0pt; text-indent: 0px; " class="paragraph_style_7"><span style="font-size: 12px; " class="Puce">1.</span> Unzip the COMMA.zip in the directory of your choice.<br /></p>
+                  </li>
+                  <li style="line-height: 15px; padding-left: 8px; text-indent: 0px; " class="full-width" value="2">
+                    <p style="padding-bottom: 0pt; text-indent: 0px; " class="paragraph_style_7"><span style="font-size: 12px; " class="Puce">2.</span> Add COMMA_HOME to system variables, it should point to the COMMA directory.</p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div id="id11" style="height: 19px; left: 29px; position: absolute; top: 980px; width: 194px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_194_19" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_1">Instructions for running COMMA</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+         <div id="id12" style="height: 1505px; left: 29px; position: absolute; top: 1010px; width: 563px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_503_865" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-top: 0pt; " class="paragraph_style_2">The instructions for running COMMA can be found in the README file. <br /></p>
+		<p class="paragraph_style_2">The following input files for COMMA have to be all in the same folder:<br /></p>
+                <ol>
+                  <li style="line-height: 15px; padding-left: 8px; text-indent: 0px; " class="full-width">
+                    <p style="text-indent: 0px; " class="paragraph_style_3"><span style="font-size: 12px; " class="Puce">-</span><span class="style_5"> </span>the structure in PDB format (.pdb), with the numbering of residues that should start from one.<br /></p>
+                  </li>
+                  <li style="line-height: 15px; padding-left: 8px; text-indent: 0px; " class="full-width">
+		    <p style="text-indent: 0px; " class="paragraph_style_3"><span style="font-size: 12px; " class="Puce">-</span><span class="style_5"> </span>all the trajectories (PDB, XTC, TRR, DCD, binpos, NetCDF or MDTraj HDF5 format)<br /></p>
+		  </li>
+	  </ol>
+                <p class="paragraph_style_2">An example of a command line to execute COMMA is:<br /></p>
+                <p class="paragraph_style_2"> <br /></p>
+                <p class="paragraph_style_2"><br /></p>
+
+
+                <p class="paragraph_style_2">COMMA will then ask whether to perform Pre-processing on the MD trajectories or not (yes or no). If parameters are already computed (ex. INT matrix, CP matrix, ...), print no.<br /></p>
+                <p class="paragraph_style_2">After the execution, in the specified data path, 2 folders will be created by COMMA, 1) Parameters, where all the parameters measured/used by COMMA are placed in and 2) Results, that contains all the generated outputs: adjacency matrices for the PCN and pathway-based and clique-based connected components, all pairs of communicating segments, their direct contact and a list of their strenghts and the average structure for each replicate.<br /></p>
+		<p class="paragraph_style_8"><br /></p>
+                <p class="paragraph_style_2">Two pml scripts are generated in data directory for the system:<br /></p>
+                <ol>
+                  <li style="line-height: 15px; padding-left: 8px; text-indent: 0px; " class="full-width" value="1">
+                    <p style="text-indent: 0px; " class="paragraph_style_7"><span style="font-size: 12px; " class="Puce">1.</span> StructureName_ComBlocks.pml: to visualize all connected components and Cliques on the structure in pymol.<br /></p>
+                  </li>
+                  <li style="line-height: 15px; padding-left: 8px; text-indent: 0px; " class="full-width" value="2">
+                    <p style="text-indent: 0px; " class="paragraph_style_7"><span style="font-size: 12px; " class="Puce">2.</span> StructureName_SegPairs.pml: to visualize all pairs of communicating segments and their direct contact in pymol.<br /></p>
+                  </li>
+                </ol>
+                <p class="paragraph_style_11"><br /></p>
+                <p class="paragraph_style_11"><br /></p>
+              </div>
+            </div>
+          </div>
+
+
+
+	  <div id="id13" style="height: 58px; left: 30px; position: absolute; top: 1150px; width: 563px; z-index: 1; " class="style_SkipStroke_3">
+            <div class="text-content style_External_503_54 vertical-align-middle-middlebox" style="padding: 0px; ">
+              <div class="style_8 vertical-align-middle-innerbox">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_8">$COMMA_HOME/COMMA "/home/yasaman/Desktop/Data/1BDD" "1BDD_20_50.pdb" "1BDD_20_50.binpos" "1BDD_20_50_0.binpos" </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="id16" style="height: 20px; left: 29px; position: absolute; top: 1550px; width: 85px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_85_20" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_1">Licence</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div id="id17" style="height: 20px; left: 29px; position: absolute; top: 1580px; width: 563px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_503_20" style="padding: 0px; ">
+              <div class="Normal">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_2">The COMMA package has been developed under the CeCILL licence (see <a title="http://www.lcqb.upmc.fr/COMMA/LICENCE" href="http://www.lcqb.upmc.fr/COMMA/package/LICENCE">LICENCE)</a>.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div id="id18" style="height: 19px; left: 29px; position: absolute; top: 1650px; width: 194px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_194_19" style="padding: 0px; ">
+              <div class="style_4">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_1">Contact</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div id="id19" style="height: 20px; left: 29px; position: absolute; top: 1680px; width: 563px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content style_External_503_20" style="padding: 0px; ">
+              <div class="style_4">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_13">For questions, comments or suggestions feel free to contact <a title="mailto:yasaman.karami@upmc.fr" href="mailto:yasaman.karami@upmc.fr">Yasaman Karami</a>, <a title="mailto:elodie.laine@upmc.fr" href="mailto:elodie.laine@upmc.fr">Elodie Laine</a> </p>
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_2">or <a title="mailto:alessandra.carbone@lip6.fr" href="mailto:alessandra.carbone@lip6.fr">Alessandra Carbone</a>.</p>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div id="id20" style="height: 20px; left: 29px; position: absolute; top: 1750px; width: 85px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content Normal_External_85_20" style="padding: 0px; ">
+              <div class="style_4">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_1">Reference</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div id="id21" style="height: 100px; left: 29px; position: absolute; top: 1780px; width: 563px; z-index: 1; " class="style_SkipStroke_1">
+            <div class="text-content style_External_503_20" style="padding: 0px; ">
+              <div class="style_4">
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_2">If you use COMMA, please cite:</p>
+                <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_2">Y. Karami, E. Laine and A. Carbone, Dissecting protein architecture with communication blocks and communicating segment pairs, BMC bioinformatics 17.2 (2016).</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div style="height: 498px; width: 313px;  height: 498px; left: 650px; position: absolute; top: 80px; width: 313px; z-index: 1; " class="tinyText style_SkipStroke_4">
+            <img src="COMMA_files/KIT_web.png" alt="" style="border: none; height: 498px; width: 313px; " />
+          </div>
+          
+
+
+          <div style="height: 1900px; line-height: 1900px; " class="spacer"> </div>
+        </div>
+
+	<hr style='background-color:#CCCCCC;border-width:0;color:#CCCCCC;height:2px;width:95%;'/>
+ <div class="footer">
+                    <div class="row">
+                      <div class="col-xs-3 col-sm-3 col-lg-3" style="padding-left: 20px;">
+                      <center><a href="https://www.sorbonne-universite.fr/"><img id="UPMC-logo" class="img-responsive" src="COMMA_files/sorbonne-uni-logo.png" alt="" style="max-height: 70px;"></a></center>
+                     </div>
+
+                     <div class="col-xs-2 col-sm-2 col-lg-2">
+                       <center><a href="http://www.cnrs.fr"><img id="CNRS-logo" class="img-responsive" src="COMMA_files/CNRS-logo.svg.png" alt="" style="max-height: 70px;"></a></center>
+                     </div>
+
+                     <div class="col-xs-2 col-sm-2 col-lg-2">
+                        <center><a href="http://www.lcqb.upmc.fr"><img class="img-responsive" src="COMMA_files/LCQB-logo.png" alt="" style="max-height: 70px;"></a></center>
+                     </div>
+
+                    <div class="col-xs-4 col-sm-4 col-lg-4" style="padding-right: 0px;">
+                        <center><a href="http://iscd.upmc.fr/"><img id="ISCD-logo" class="img-responsive" src="COMMA_files/logoOrange_2018.png" alt="" style="max-height: 70px;"></a></center>
+                    </div>
+
+                </div>
+                </div>
+
+
+
+
+
+      </div>
+    </div>
+  </body>
+</html>
+
+

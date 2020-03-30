@@ -1,0 +1,260 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><!-- #BeginTemplate "/Templates/grafss.dwt" --><!-- DW6 -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Mozilla/4.76 [en] (X11; U; Linux 2.4.9-xfs i686) [Netscape]">
+<!-- #BeginEditable "doctitle" --> 
+<title>COGNAC: COnnection tables Graphs for Nucleic ACids</title>
+<!-- #EndEditable --> 
+<meta name="description" content="CoGNac: Design a nucleic acid 3D arrangement query to search against the CoGNac database.">
+<meta name="keywords" content="binding, site, prediction, 3D motif, universiti kebangsaan malaysia, bioinformatics, firdaus raih, peter artymiuk, grafss, graph theory, rna motif">
+<link rel="stylesheet" href="tinybox.css" />
+<script type="text/javascript" src="tinybox.js"></script>
+
+
+
+<script language="JavaScript">
+<!--for iframe firefox
+function autoResize(id){
+    var newheight;
+    var newwidth;
+
+    if(document.getElementById){
+        newheight=document.getElementById(id).contentWindow.document .body.scrollHeight;
+        newwidth=document.getElementById(id).contentWindow.document .body.scrollWidth;
+    }
+
+    document.getElementById(id).height= (newheight) + "px";
+    document.getElementById(id).width= (newwidth) + "px";
+}
+//-->
+</script>
+
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<style type="text/css">
+hr { border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+body,td,th { font-family: Arial, Helvetica, sans-serif; font-size: 10px;}
+a:link{ text-decoration:none; color:blue; }
+a:visited{ text-decoration:none; color:purple; }
+a:hover{ text-decoration:none; color:red; }
+a:active{ text-decoration:none; color:#0000FF; }
+
+table.broad { border:1px solid green; text-align: center;}
+td.broad { font-family:  Arial; font-size: 9.5pt;
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	text-align: center;
+}
+
+/*table.result { 
+		border:1px solid grey; 
+		text-align: center; 
+		/*width:880px; */
+/*		width: 1000px;
+		height: auto;
+		
+		 
+	}
+*/
+html, body { height:100%; } 
+.iframe-wrapper { height:100%; }
+</style>
+</head>
+<body bgcolor="white" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('images/cognac1.png','images/cognac2.png','images/sprite2.png','images/imaaagine.png','images/assam2.png','images/nassam2.png','images/about2.png','images/home2.png','images/contacts2.png')">
+
+  <table COLS=1 WIDTH="875" row="1" align="center" >
+    <tr bgcolor="#666666"> 
+      <td width="401" height="74"> 
+        <div align="left"><a href="http://grafss.org"><img src="images/graffs_logo.jpg" width="400" height="89" border="0"></a></div>
+      </td>
+      <td width="462" valign="top" height="74"> <div align="center"><!-- #BeginEditable "Program_name" --><a href="http://mfrlab.org/grafss/cognac"><img src="images/cognac-logo.png" width="475" height="89"></a><!-- #EndEditable --></div></td>
+    </tr>
+    <tr> 
+      <td colspan="2" height="26"> 
+        <table width="100%" bordercolor="#FFFFFF" border="0">
+          <tr bgcolor="#FFFFFF"> 
+            <td colspan="3" height="13"> 
+              <div align="center"><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://mfrlab.org/grafss/imaaagine/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','images/imaaagine2.png',1)"><img src="images/imaaagine.png" border="0" name="Image3"><a href="http://mfrlab.org/grafss/sprite/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/sprite2.png',1)"><img src="images/sprite1.png" width="60" height="20" border="0" name="Image2"></a> <a href="http://mfrlab.org/grafss/assam/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','images/assam2.png',1)"><img src="images/assam1.png" width="60" height="20" border="0" name="Image1"></a><a href="http://mfrlab.org/grafss/nassam/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','images/nassam2.png',1)"><img src="images/nassam1.png" width="60" height="20" border="0" name="Image4"><a href="http://mfrlab.org/grafss/cognac" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/cognac2.png',1)"><img src="images/cognac1.png" width="60" height="20" border="0" name="Image8"></a></font></div>
+            </td>
+            <td width="37%" height="13"> 
+              <div align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','images/about2.png',1)"><img src="images/about1.png" width="80" height="20" border="0" name="Image5"></a><a href="mailto:info@mfrlab.org?" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/contacts2.png',1)"><img src="images/contacts1.png" width="60" height="20" border="0" name="Image6"></a><a href="http://mfrlab.org/grafss/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/home2.png',1)"><img src="images/home1.png" width="60" height="20" border="0" name="Image7"></a></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"><!-- #BeginEditable "Program_info" -->
+      <table width="100%" border="0">
+        <tr><br><br>
+	    <td colspan="3"><p><font size="3" face="Arial, Helvetica, sans-serif" color="#000000"><strong>COGNAC: COnnection tables Graphs for Nucleic ACids</strong></font> </td>
+	    </tr>
+	  <tr>
+	    <td height="181" valign="top"><p align="justify"><font size="2" face="Arial, Helvetica, sans-serif">The COGNAC server is a graph theoretical program that analyses and annotates hydrogen bonded interactions between bases in RNA 3D structures (PDB formatted).
+              <!-- 3D arrangements of nucleic acids in PDB structures that conform to the query will be returned to the user.-->
+A major component of RNA structure stabilization are the hydrogen bonded interactions between the base residues. The importance and biological relevance for large clusters of base interactions can be much more easily investigated when their occurrences can be systematically detected, catalogued, and compared. <br>
+<br>
+The COGNAC server first runs a hydrogen bond calculation program to determine the hydrogen bonds. Currently the user also has the option of using either a database containing both protonated and non-protonated base residue reference libraries. The connectivity of the hydrogen bonds are then transferred into a connection table. COGNAC, which is a graph theoretical implementation of the Ullmann subgraph isomorphism, then solves the problem of matching a query connection table graph representation to its matching subgraph; here, the search queries represent possible base interactions and the relationships are mapped by a graph theoretical algorithm.</font><br>
+	      <br>
+            <br>
+          </p></td>
+	    <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	    <td width="26%" rowspan="2" valign="top"> <div align="justify"><br>
+	        <font size="1" face="Arial, Helvetica, sans-serif">See example of a connection table for a base triple here: <a href="http://27.126.156.175/cognac/COGNAC-ConnectionTableTripleExample.pdf" target="_new">PDF</a> | <a href="pic/COGNAC-ConnectionTableTripleExample.png" target="_new">PNG image</a>.</font><br>
+	      
+	      </div>	      <p align="justify"><font size="1" face="Arial, Helvetica, sans-serif"><strong>Precomputed example:</strong><br>
+A search of all patterns in 1FFK, the large ribosomal subunit from <i>Haloarcula marismortui. </i>[<a href="http://27.126.156.175/cognac/overall.php?id=1FFK_all&resno=all_pattern&db_upload_enter=upload&pdb=1FFK&hbpred_type=non_protonated">See example</a>] <br>
+<br>
+<strong>Demonstration run (1 structure):</strong><br>
+Click <a href="exe_upload_1ffk.php" target="iframe2-nassam-cognac-bottom2">HERE</a> to load a prefilled display of a search for triples in 1FFK. The display will appear in the frame below (please scroll down). Click "submit" to see the result.</font>
+<br><br>
+<strong>Demonstration run (2 structures):</strong><br>
+Click <a href="exe_upload_mode2.php" target="iframe2-nassam-cognac-bottom2">HERE</a> to load a prefilled display of a search for all patterns in 4JUX and 4BTD. The display will appear in the frame below (please scroll down). Click "submit" to see the result.</font>
+
+</p></td>
+	    </tr>
+	  <tr>
+	    <td valign="top" colspan = "3"><div align="justify">
+	    <!--
+	    	<font size="2" face="Arial, Helvetica, sans-serif"><br><br>COGNAC users have the choice of providing three types of input for searching:<br>
+              <br>
+              <strong>Option 1</strong>: Allows a user to search a database of PDB sourced structures for hydrogen bonded base interactions from base pairs to formations containing as many as six bases. <br>
+          <strong>Option 2</strong>: A user with an RNA structure of interest can opt to upload the structure and then annotate the structure for all possible hydrogen bonded base interactions.</font> <br>
+          <font size="2" face="Arial, Helvetica, sans-serif"><strong>Option 3</strong>: A user can opt to compare the COGNAC hydrogen bonded interactions annotations for two different but closely related structures - such as between mutants or structures that are bound and unbound to ligands.</font><br>
+          <br>
+          <br>
+        -->  
+        </div></td>
+	 
+	    </tr>
+	  <tr>
+	    <td colspan="3"><div align="justify">
+	      <p><strong><font size="2" face="Arial, Helvetica, sans-serif"> <strong>Citation for referencing COGNAC:</strong></font></strong><font size="2" face="Arial, Helvetica, sans-serif"><br>
+	       1. Mohd Firdaus-Raih, Hazrina Yusof Hamdani, Nurul Nadzirin, Effirul Ikhwan Ramlan, Peter Willett and Peter J. Artymiuk. 2014. COGNAC: a web server for searching and annotating hydrogen-bonded base interactions in RNA three-dimensional structures. Nucleic Acids Res. 42 (W1): W382-W388. <a href = "http://nar.oxfordjournals.org/content/42/W1/W382.full">HTML</a>, <a href = "http://nar.oxfordjournals.org/content/42/W1/W382.full.pdf+html">PDF</a>
+	       </font></p>
+
+	      <!--
+	      <p><strong><font size="2" face="Arial, Helvetica, sans-serif"> <strong>To run a search:</strong></font></strong><font size="2" face="Arial, Helvetica, sans-serif"><br>
+	        STEP 1. Select to search either the option of (1) searching for a specific set of hydrogen bonded base connections in a database of RNA structures (sourced from the PDB) or (2) to upload an RNA structure (in PDB format) to annotate the hydrogen bonded base interactions present in the query structure.<br>
+	        STEP 2. Select the library for Hydrogen bond Donors-Acceptors: &quot;Non-protonated&quot; for  non-protonated donor atoms and &quot;Protonated&quot; for both non-protonated and protonated donor atoms possibilities. <br>
+	        STEP 3.
+	        Select the number of residues and the arrangement of the interactions for the query patterns from the list provided (2-6 bases or select  &quot;All patterns&quot; for arrangement types). <br>
+	        STEP 4. For specific patterns selected in STEP 3; enter the specific residue or general type (for all base possibilities). </font></p>
+	      -->
+
+	      <p><strong><font size="2" face="Arial, Helvetica, sans-serif"> <strong>To run a search:</strong></font></strong><font size="2" face="Arial, Helvetica, sans-serif"><br>
+	        STEP 1. Select to search either the option of (1) searching for a specific set of hydrogen bonded base connections in a database of RNA structures (sourced from the PDB) or (2) to upload an RNA structure (in PDB format) to annotate the hydrogen bonded base interactions present in the query structure.<br>
+	        STEP 2.
+	        Select the number of residues and the arrangement of the interactions for the query patterns from the list provided (2-6 bases or select  &quot;All patterns&quot; for arrangement types). <br>
+	        <!--2. Enter the specific residue or general type and set the distances between the residues. <br><br>-->
+	        STEP 3. For specific patterns selected in STEP 2; enter the specific residue or general type (for all base possibilities). </font></p>
+	      
+	      <p><font size="2" face="Arial, Helvetica, sans-serif">For searches using Option 3; the difference is mainly in the requirement to have two structures uploaded. Please note that the program does not filter out highly dissimilar structures which are not useful comparisons. <strong><br>
+	        <br>
+	        <!--
+	<strong>Notes for setting up your search:</strong><br>
+	ALL residues must be connected as a whole, although not all distances need to be defined. <br>
+	For distances that are not defined, a wildcard value is used during the search. <br>
+	The distances entered will carry a variable tolerance value of (+/-)1.5 Angstroms. <br>
+	Please see example searches for assistance. <br><br>
+	-->
+	        <strong>Search times and output visualization:</strong><br>
+	        </strong>1. Each search may take time to complete depending on the complexity of the query and the server load (usually completed within 2 minutes). Users are advised to bookmark the results page or copy the link to the results for analysis at a later point in time if a search takes more than 10 minutes. <br>
+	        2. Please note that COGNAC output can be visualized using JSMol. This bypasses issues with Java such as the block by the Mac OSX operating system when using Jmol. <br>
+	        3. Search results will be kept for at least 2 days. The main search results can be downloaded to your local computer while still retaining the server side ability to view the hits in Jmol. <br>
+	        <br>
+	        Please email <a href="mailto:info@mfrlab.org?">info@mfrlab.org</a> for help or if you've detected any problems with the search.</font><strong><br>
+	          </strong><br>
+	        </p>
+        </div></td>
+	    </tr>
+	  </table>
+	<br>
+	<hr> 
+      <table width="100%" border="0" bgcolor="#FFFFFF">
+
+        <tr valign="top"> 
+          <td colspan="3"> 
+<!--	<iframe src='index_upload.php' NAME="top" frameborder="0" style="width:100%" id="iframe1" onLoad="autoResize('iframe1');"></iframe>
+<iframe src='empty.html' NAME="bottom"  frameborder="0" style="width:100%" id="iframe2" onLoad="autoResize('iframe2');"></iframe>
+-->
+                    <iframe src='index_upload.php' NAME="iframe-cognac-top" frameborder="0" style="width:100%" id="iframe-cognac-top" onLoad="autoResize('iframe-cognac-top');"></iframe>
+                    <br/>                    
+                    <iframe src='empty.html' NAME="iframe2-nassam-cognac-bottom2" frameborder="0" style="width:100%" scrolling="no" id="iframe2-nassam-cognac-bottom2" onLoad="autoResize('iframe2-nassam-cognac-bottom2');"></iframe>
+                    <br/>
+                    <iframe src='empty.html' NAME="iframe2-nassam-cognac-bottom3"  frameborder="0" style="width:100%" id="iframe2-nassam-cognac-bottom3" onLoad="autoResize('iframe2-nassam-cognac-bottom3');"></iframe>
+
+
+          </td>
+        </tr>
+      </table>
+<br/>
+<!--
+<b><font size="2" face="Arial, Helvetica, sans-serif">Precomputed example:</font></b><br>	
+	<font face="Arial, Helvetica, sans-serif" size="2">1. Search for a "Ser-[D/E]-Ser-[D/E]-Ser-[D/E]" arrangement [<a href="http://27.126.156.175/imaaagine/result.php?id=S-Acid&resno=6">See example</a>] <br>
+2. Search for a four-Arginine cluster arrangement [<a href="http://27.126.156.150/imaaagine/result.php?id=4-Arg-cluster&resno=4cen">See example</a>] <br>
+3. Search for a pattern of two Asp-His-Ser triads [<a href="http://27.126.156.175/imaaagine/result.php?id=DHS-triads&resno=6">See example</a>] <br><br>
+
+<b><font size="2" face="Arial, Helvetica, sans-serif">Demonstration search:</font></b><br>
+Click <a href="display_S-Acid.php" target="bottom">HERE</a> to load a prefilled display of a "Ser-[D/E]-Ser-[D/E]-Ser-[D/E]" arrangement.
+-->
+<center>
+<script type="text/javascript">
+	var content2 = "<img src='../images/rere_search.png' alt='' />";
+	T$('testclick2').onclick = function(){TINY.box.show(content2,0,0,0,1)}
+</script>
+<br/><br><hr><br>
+<a href="http://www.genomemalaysia.gov.my"><img src="../images/logo-genom.png" alt="MGI" border="0"></a><br/> <font size="1" face="Arial, Helvetica, sans-serif">Computational resources provided by the Genome Computing Centre, Malaysia Genome Institute</font></center>
+      
+      <br/><br/>     
+      <!-- Site Meter --> 
+      <div align="center">
+        <script type="text/javascript" src="http://s41.sitemeter.com/js/counter.js?site=s41grafss">
+</script>
+        <noscript> <a href="http://s41.sitemeter.com/stats.asp?site=s41grafss" target="_top"> 
+        <img src="http://s41.sitemeter.com/meter.asp?site=s41grafss" alt="Site Meter" border="0" width="31" height="32"/></a> 
+        </noscript> <!-- Copyright (c)2006 Site Meter --> </div>
+      <!-- #EndEditable --></td>
+    </tr>
+    <tr> 
+      <td colspan="2">
+        <div align="center"><font size="1" face="Arial, Helvetica, sans-serif">Email: 
+          info@mfrlab.org</font></div>
+      </td>
+    </tr>
+  </table>
+
+</body>
+<!-- #EndTemplate --></html>
+
+
+
+

@@ -1,0 +1,18 @@
+Date: Mon, 30 Mar 2020 18:44:08 GMT
+Content-Type: text/html; charset=UTF-8
+Server: nginx
+Vary: Accept-Encoding
+X-Request-Id: NA
+Set-Cookie: GLOBAL_FIGSHARE_SESSION_KEY=905089657d61ec17449cbb6e5d119acb78093851d3bc7f1846dd4942ab65d7c3d422c0e1; expires=Thu, 30-Apr-2020 18:44:08 GMT; httponly; Path=/; SameSite=None; secure; domain=.figshare.com
+Set-Cookie: FIGINSTWEBIDCD=905089657d61ec17449cbb6e5d119acb78093851d3bc7f1846dd4942ab65d7c3d422c0e1; expires=Thu, 30-Apr-2020 18:44:08 GMT; httponly; Path=/; SameSite=None; secure
+Set-Cookie: fig_tracker_client=ef76acdf-f8e8-4547-bc25-5e7480ff1ac0; Max-Age=31536000; Path=/; expires=Tue, 30-Mar-2021 18:44:08 GMT; secure; HttpOnly
+P3P: CP="CAO PSA OUR"
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+Access-Control-Allow-Origin: https://figshare.com
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE, PUT
+Access-Control-Allow-Headers: Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+Cache-Control: no-cache, no-store, must-revalidate;
+Content-Encoding: gzip

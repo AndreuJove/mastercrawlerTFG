@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=NodeList.prototype.forEach%2CCustomEvent%2CElement.prototype.closest%2CPromise%2CObject.assign%2CString.prototype.includes%2CNumber.isNaN" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.optimizely.com/js/12008327199.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" href="//cdn.graphpad.com/assets/0.43.0/css/style.css">
+	<link rel="icon" href="/www/graphpad/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/www/graphpad/images/favicon.ico" type="image/x-icon" />
+	<title>Page Not Found - GraphPad</title>
+	
+<!-- Google Tag Manager -->
+<script>
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({"environment": "production"});
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQGN2HT');
+</script>
+<!-- End Google Tag Manager -->
+
+</head>
+
+<body >
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQGN2HT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> <header class="header" role="banner">
+	<div class="grid-container">
+		<div class="header__layout navbar grid-x grid-padding-x">
+			<div class="cell">
+				<div class="grid-x align-justify">
+					<div class="navbar__header align-justify">
+						<div class="header__logo">
+							<a href="/" class="header__logo-link h-10">
+								<img src="//cdn.graphpad.com/assets/0.43.0/images/logo/logo-graphpad-white.svg" class="image logo h-10" alt="GraphPad" />
+							</a>
+						</div>
+						<button type="button" class="navbar__toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="navbar__collapse collapse" id="navbar">
+						<ul class="nav nav--inverted primary-nav" id="navbar">
+							<li><a href="/scientific-software/prism/" class="nav__item-link">Prism</a></li>
+							<li><a href="/customers/" class="nav__item-link">Customers</a></li>
+							<li><a href="/data-analysis-resource-center/" class="nav__item-link">Resources</a></li>
+							<li><a href="/support/" class="nav__item-link">Support</a></li>
+							<li><a href="/how-to-buy/" class="nav__item-link">Pricing</a></li>
+						</ul>
+						<ul class="nav secondary-nav nav--inverted">
+							<li class="secondary-nav__item secondary-nav__item-cart">
+								<a href="/ecommerce/" class="link nav__item-link"><span class="gp-icon gp-icon-cart"></span>Cart</a>
+							</li>
+							<li class="secondary-nav__item secondary-nav__item-profile">
+								<a href="/myaccount" class="link nav__item-link"><span class="gp-icon gp-icon-profile"></span>Sign In</a>
+							</li>
+							<li class="secondary-nav__item secondary-nav__item-search dropdown">
+								<a href="javascript:void(0);" class="link nav__item-link" id="headerBlockSearch" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									<span class="gp-icon gp-icon-search"></span>
+								</a>
+								<div class="header__search dropdown-menu" aria-labelledby="headerBlockSearch">
+									<div class="grid-container">
+										<div class="grid-x">
+											<div class="cell">
+                                                <form method="get" action="/search/" class="search-form field">
+                                                    <input id="searchquery" name="searchquery" type="search" class="field__input field__search  " placeholder="Search..." autocomplete="off">
+												</form><!-- end search-form -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="secondary-nav__item secondary-nav__item-trial">
+								<a href="/demos/" class="button button-s"><span class="gp-icon gp-icon-download"></span>Free Trial</a>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div>
+			</div>
+		</div>
+	</div><!-- /.container-fluid -->
+</header><!-- /.header -->
+
+<main>
+    <div role="main" class="gp-light-gray-3">
+        <section class="py-4 py-4--medium">
+            <div class="grid-container">
+                <div class="grid-x grid-margin-x align-center">
+                    <div class="cell medium-10 large-8">
+                        <div class="panel py-16">
+                            <div class="grid-x grid-margin-x grid-padding-x align-center">
+                                <div class="cell medium-10 large-9">
+                                    <h1 class="heading heading-xl mb-6 text-center">
+                                        Sorry, the page you're looking for can't be found.
+                                    </h1>
+                                    <p class="text-l text-center">
+                                        Did you trying searching? Or, try one of the links below.
+                                    </p>
+                                    <div class="grid-x align-center">
+                                        <div class="medium-8">
+                                            <div class="grid-x">
+                                                <div class="cell medium-6 small-12">
+                                                    <ul class="ul ">
+                                                        <li class="li ul__li">
+                                                            <a href="/" class="link text-m ">
+                                                                Homepage
+                                                            </a>
+                                                        </li>
+                                                        <li class="li ul__li">
+                                                            <a href="/prism/" class="link text-m ">
+                                                                Prism
+                                                            </a>
+                                                        </li>
+                                                        <li class="li ul__li">
+                                                            <a href="/demos/" class="link text-m ">
+                                                                Prism Free Trial
+                                                            </a>
+                                                        </li>
+                                                        <li class="li ul__li">
+                                                            <a href="/how-to-buy/" class="link text-m ">
+                                                                How to Buy Prism
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cell medium-6 small-12">
+                                                    <ul class="ul ">
+                                                        <li class="li ul__li">
+                                                            <a href="/quickcalcs/" class="link text-m ">
+                                                                QuickCalcs
+                                                            </a>
+                                                        </li>
+                                                        <li class="li ul__li">
+                                                            <a href="/data-analysis-resource-center/" class="link text-m ">
+                                                                Resources
+                                                            </a>
+                                                        </li>
+                                                        <li class="li ul__li">
+                                                            <a href="/support/" class="link text-m ">
+                                                                Support
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main> <footer class="footer">
+	<div class="footer__nav">
+		<div class="footer-nav">
+			<div class="grid-container">
+				<div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
+					<div class="cell medium-auto small-6">
+						<ul class="footer-nav__list">
+							<li>Scientific software</li>
+							<li><a href="/scientific-software/prism/" class="link link--inverted">GraphPad Prism</a></li>
+							<li><a href="/demos/" class="link link--inverted">Prism Free Trial</a></li>
+							<li><a href="/customers/" class="link link--inverted">Prism Customers</a></li>
+							<li><a href="/scientific-software/instat/" class="link link--inverted">InStat</a></li>
+							<li><a href="/scientific-software/statmate/" class="link link--inverted">StatMate</a></li>
+						</ul>
+					</div>
+					<div class="cell medium-auto small-6">
+						<ul class="footer-nav__list">
+							<li>How to buy</li>
+							<li><a href="/how-to-buy/" class="link link--inverted">Pricing</a></li>
+							<li><a href="/how-to-buy/student/" class="link link--inverted">Student Pricing</a></li>
+						</ul>
+					</div>
+					<div class="cell medium-auto small-6">
+						<ul class="footer-nav__list">
+							<li>Data analysis resources</li>
+							<li><a href="/quickcalcs/" class="link link--inverted">QuickCalcs</a></li>
+							<li><a href="/guides/prism/8/statistics/" class="link link--inverted">Statistics Guide</a></li>
+							<li><a href="/guides/prism/8/curve-fitting/" class="link link--inverted">Curve Fitting Guide</a></li>
+						</ul>
+					</div>
+					<div class="cell medium-auto small-6">
+						<ul class="footer-nav__list">
+							<li>Help</li>
+							<li><a href="/support/" class="link link--inverted">Support</a></li>
+							<li><a href="/guides/prism/8/user-guide/" class="link link--inverted">Prism 8 User Guide</a></li>
+						</ul>
+					</div>
+					<div class="cell medium-auto small-6">
+						<ul class="footer-nav__list">
+							<li>Company</li>
+							<li><a href="/company/" class="link link--inverted">About</a></li>
+							<li><a href="/company/" class="link link--inverted">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer__copyright">
+		<div class="grid-container">
+			<div class="grid-x grid-margin-x grid-padding-x align-middle">
+				<div class="cell small-12 medium-shrink footer__copyright-first">
+					<a href="/" class="logo-footer-link">
+						<img src="//cdn.graphpad.com/assets/0.43.0/images/logo/logo-graphpad-white.svg" class="image logo h-10" alt="GraphPad" />
+					</a>
+				</div>
+				<div class="cell medium-auto footer__copyright-last">
+					<p class="text-s text--inverted">
+						&copy; 2018 GraphPad Software. All rights reserved.
+						<a class="text-s text--inverted" href="/company/terms/">Terms</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="text-s text--inverted" href="/company/privacy-policy/">Privacy</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<script type="text/javascript" src="//cdn.graphpad.com/assets/0.43.0/js/pl-vendor-libraries.js"></script>
+<script type="text/javascript" src="//cdn.graphpad.com/assets/0.43.0/js/pl-source.js"></script>
+<script>
+	document.addEventListener("DOMContentLoaded", function(){
+		if(!graphpad.initialized) {
+			graphpad.init();
+		}
+	});
+</script>
+
+</body>
+</html>
+

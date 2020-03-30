@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	  <base href="https://www.cellmicrocosmos.org/index.php/cm4-project" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="PathwayIntegration, Pathway Visualization, Protein Mapping, KEGG, BRENDA, UniProt, Gene Ontology, Reactome, ANDCell, Cell Microcosmos, Cell, Microcosmos, Bielefeld University, Björn Sommer, AG Bioinformatik" />
+  <meta name="author" content="bjoern" />
+  <meta name="description" content="The CELLmicrocosmos 4.1+ PathwayIntegration is a Java WebStart tool to correlate a virtual cell with protein-associated networks using different databases (Beta-Phase, unpublished yet)." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>CELLmicrocosmos.org - project</title>
+  <link href="https://www.cellmicrocosmos.org/index.php/cm4-project" rel="canonical" />
+  <link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/templates/protostar/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="/modules/mod_ariextmenu/mod_ariextmenu/js/css/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="/modules/mod_ariextmenu/mod_ariextmenu/js/css/menu.fix.css" type="text/css" />
+  <link rel="stylesheet" href="/modules/mod_lofarticlesslideshow/assets/jstyle.css" type="text/css" />
+  <style type="text/css">
+.body .container {
+    background-color: transparent;
+    border-style: none;
+    width: 1280px;
+    box-shadow: none;
+}
+
+body.site {
+    border-style: none;
+    color: #888888;
+//    background-image: url('/images/backgrounds/bg_Melbourne_NewHorizons_2015.jpg');
+}
+
+/* Rescaling of the complete website */
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    body.site {
+        /* Retina-specific settings */
+        -moz-transform: scale(0.79, 0.79) translate(0px, -79px);
+        zoom: 0.79;
+        zoom: 79%;
+     }
+}
+@media 
+(-webkit-min-device-pixel-ratio: 3), 
+(min-resolution: 288dpi) { 
+    body.site {
+        /* Phone-specific settings (e.g. Samsung S7) */
+        -moz-transform: scale(0.5, 0.5) translate(0px, -100px);
+        zoom: 0.5;
+        zoom: 50%;
+     }
+}
+@media 
+(-webkit-min-device-pixel-ratio: 4), 
+(min-resolution: 384dpi) { 
+    body.site {
+        /* Phone-specific Extra High DPI settings */
+        -moz-transform: scale(0.3, 0.3) translate(0px, -150px);
+        zoom: 0.3;
+        zoom: 30%;
+     }
+}
+
+.search {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+UL.ux-menu {
+    background: none;
+    background-color: transparent;
+    line-height: 14px;
+}
+
+.ux-menu a {
+    background: none;
+    background-color: transparent;
+    background-position: left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    border-style: none;
+    color: #000000;
+    font-style: normal;
+    padding: 6px 0px;
+    line-height: 14px;
+}
+
+.ux-menu ul a, .ux-menu.ux-menu-vertical a {
+    background: none;
+    background-image: none;
+    border: 0 none;
+    //border-right: 1px solid #E3DAD1;
+}
+
+.ux-menu.ux-menu-vertical .ux-menu-arrow, .ux-menu ul .ux-menu-arrow {
+    background: none;
+    background-image: none;
+    height: 8px;
+    top: 14px;
+    width: 11px;
+    //display: none;
+    //float: right;
+    //position: absolute;
+    //right:0;
+}
+
+UL {
+    border-style: none;
+}
+
+UL.ux-menu ul a.ux-menu-link-last, .ux-menu.ux-menu-vertical a.ux-menu-link-last {
+    border-style: none;
+}
+
+.ux-menu ul a, .ux-menu.ux-menu-vertical a {
+    border-style: none;    
+    //border-right: 10px solid #E3DAD1;
+}
+
+UL.ux-menu a.ux-menu-link-parent {
+    //background-image: url("http://joomla.cellmicrocosmos.org/images/cell_unselected.jpg");
+    background-color: transparent;
+    background-position: left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    min-width: 1px;
+    padding-right: 24px;
+    color: #000000;
+    border-style: none;
+    font-style: normal;
+}
+UL.ux-menu a.ux-menu-link-parent:hover {
+    //background-image: url("http://joomla.cellmicrocosmos.org/images/cell_preselected.jpg");
+    background-color: transparent;
+    background-position: left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    min-width: 1px;
+    padding-right: 24px;
+    font-style: normal;
+}
+
+UL.ux-menu a.ux-menu-item-main  {
+    //background-image: url("http://joomla.cellmicrocosmos.org/images/cell_preselected.jpg");
+    background-color: transparent;
+    background-position: left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    border-style: none;
+    font-style: normal;
+}
+
+UL.ux-menu a.ux-menu-link-level-0  {
+    //background-image: url("http://joomla.cellmicrocosmos.org/images/cell_unselected.jpg");
+    background-color: transparent;
+    background-position: left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    border-style: none;
+    font-style: normal;
+}
+
+UL.ux-menu a.ux-menu-link-level-1  {
+    //background-image: url("http://joomla.cellmicrocosmos.org/images/cell_unselected.jpg");
+    background-color: transparent;
+    background-position: left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    border-style: none;
+}
+
+UL.ux-menu a.ux-menu-link-level-2  {
+    //background-image: url("http://joomla.cellmicrocosmos.org/images/cell_unselected.jpg");
+    background-color: transparent;
+    background-position: left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    border-style: none;
+}
+
+UL.ux-menu a:hover {
+    //background-image: url("http://joomla.cellmicrocosmos.org/images/cell_preselected.jpg");
+    background-color: transparent;
+    background-position: left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    color: #000000;
+}
+
+UL.ux-menu a.current {
+    //background-image: url("http://joomla.cellmicrocosmos.org/images/cell_selected.jpg");
+    background-color: transparent;
+    background-position: left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    border-style: none;
+    color: #000000;
+}
+
+UL.ux-menu-link-show {
+     visibility: visible;
+}
+
+UL.ux-menu a.ux-menu-link-show {
+     visibility: visible;
+}
+
+LI.ux-menu-link-show {
+     visibility: visible;
+}
+
+LI.ux-menu a.ux-menu-link-show {
+     visibility: visible;
+}
+
+LI a.ux-menu-link-level-0-show {
+     visibility: visible;
+     //padding: 10px 14px;
+     line-height: 14px;
+     display: block;
+     font-weight: bold;
+     //font-style: italic;
+     position: relative;
+     clear: both;
+     float:left;
+}
+
+.ux-menu li {
+     position: relative;
+     clear: both;
+     float:left;
+     white-space: nowrap;
+}
+
+LI a.ux-menu-link-level-1-show {
+     visibility: visible;
+     //padding: 10px 14px;
+     line-height: 14px;
+     display: block;
+     font-weight: bold;
+     //font-style: italic;
+     position: relative;
+     clear: both;
+     float:left;
+}
+
+LI a.ux-menu-link-level-2-show {
+     visibility: visible;
+     //padding: 10px 14px;
+     line-height: 14px;
+     display: block;
+     font-weight: bold;
+     //font-style: italic;
+     position: relative;
+     clear: both;
+     float:left;
+}
+
+UL.ux-menu-sub{
+      display: block;
+      //clear: left;
+      //float: left;
+      position: relative;
+}
+
+UL.ux-menu-sub-show {
+    display: block;
+    clear: left;
+    float:left;
+    position: relative;
+}
+
+#content {
+    //background-image: url('http://joomla.cellmicrocosmos.org/images/bg_humancellanimation0301.jpg');
+    height: 700px;//700px;//625px;//525px;
+    width: 700px;//625px;//525px;
+    background-color: #000000;
+    margin: 4 0px;
+    overflow: auto;
+    //border-width:medium; 
+    //border-color:#AAAAAA; 
+    //border-style:solid;
+    -moz-box-shadow: 0 0 2px 2px #888;
+    -webkit-box-shadow: 0 0 2px 2px#888;
+    box-shadow: 0 0 2px 2px #888;
+}
+
+#sidebar {
+    background-color: transparent;
+    height: 740px;
+    width: 120px;
+    padding: 0px 0px 0px 0px;
+    margin: -15px 0px 0px -80px;
+    overflow: visible;
+    float: left;
+}
+
+#aside {
+    background-color: transparent;
+    height: 740px;
+    width: 1px;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+.row-fluid {
+   display: block;
+}
+.row-fluid [class*="span"] {
+    float: left;
+    margin-left: 0px;
+    min-height: 1px;
+}
+
+.row-fluid .span3 {
+    //width: 13%;
+    width: 90px;
+    float: left;
+    margin-left: 0px;
+    min-height: 1px;
+}
+
+.row-fluid .span6 {
+     background-color: #000000;
+     margin-right: 5px;
+     //height: 525px;
+     //width: 525px;
+}
+
+.row-fluid .span6 .categories-list {
+     margin-right: 10px;
+     margin-left: 10px;
+}
+
+.row-fluid .span6 .category-list {
+     margin-right: 10px;
+     margin-left: 10px;
+}
+
+.row-fluid .span9 {
+     background-color: #000000;
+     height: 625px;//525px;
+     width: 625px;//525px;
+}
+
+.item-page {
+     background-color: transparent;
+     height: 300px;
+     color: #BBBBBB;
+     margin-right: 10px;
+     margin-left: 10px;
+}
+item-page.a:link {
+    text-decoration: none;
+}
+item-page.a {
+    border: medium none;
+    color: #DDDDDD;
+    font-size: 10pt;
+    font-weight: bold;
+}
+item-page.a:link {
+    color: #DDDDDD;
+}
+item-page.a:hover {
+    color: #DDDDDD;
+}
+item-page.a:focus {
+    color: #DDDDDD;
+}
+item-page.a:active {
+    color: #DDDDDD;
+}
+
+.blog {
+     background-color: #000000;
+     color: #BBBBBB;
+     margin-right: 10px;
+     margin-left: 10px;
+}
+
+
+.page-header {
+    border-style: none;
+    color: #BBBBBB;
+}
+.site-title {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 48px;
+    transparent;
+    //width: 90px;
+    //height: 545px;
+}
+
+.brand {
+    display: none;
+}
+
+.well {
+     margin-top: -52px;
+     padding: 0px 0px 0px 9px;
+     border-style: none;
+     background-color: transparent;
+     box-shadow: none;
+}
+
+#cmsite {
+     margin-left: -50px;//-46px; //-56px;
+     margin-bottom: 1px;
+     background-color: #000000;
+     box-shadow: 0 0 2px 2px #888888;
+}
+
+.cellselected {
+     box-shadow: 0 0 1px 1px #888888;
+}
+
+.cellunselected {
+     box-shadow: 0 0 1px 1px #888888;
+}
+
+
+div.tableleft {
+    background-color: #000000;
+    border: 1px solid #AAAAAA;
+    color: #DDDDDD;
+    float: left;
+    font-size: 10pt;
+    line-height: 14pt;
+    margin: 0 0 1px 25px;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    text-indent: 3pt;
+    vertical-align: bottom;
+    width: 300px;
+    clear: both;
+}
+
+div.tableright {
+    background-color: #000000;
+    border: 1px solid #777777;
+    color: #AAAAAA;
+    float: right;
+    font-size: 10pt;
+    font-weight: normal;
+    line-height: 14pt;
+    margin: 0 10px 3px 0;
+    padding: 2px 3px 0px 3px; 
+    position: relative;
+    text-align: left;
+    vertical-align: bottom;
+    width: 440px;
+    clear: both;
+}
+
+
+div.textcenter h2 {
+    color: #BBBBBB;
+    font-size: 14pt;
+    font-weight: normal;
+    line-height: 16pt;
+    margin-bottom: 3px;
+    margin-top: 0;
+    margin-left: 0;
+    clear: both;
+}
+
+.bgimage1 {
+    height: 700px;//625px;//525px;
+    width: 100%;//700px;//625px;//525px;
+    background-color: #456456;
+    background-image: url('http://joomla.cellmicrocosmos.org/images/bg_humancellanimation0301.jpg');
+    margin: -10px -10px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    overflow: hidden;
+    //overflow: auto;
+    //border-width:medium; 
+    //border-color:#AAAAAA; 
+    //border-style:solid;
+    //-moz-box-shadow: 0 0 2px 2px #888;
+    //-webkit-box-shadow: 0 0 2px 2px#888;
+    //box-shadow: 0 0 2px 2px #888;
+}
+
+.lof-ass {
+    margin-bottom: -699px;
+    padding-left: 232px;
+    padding-top: 466px;
+}
+.lof-ass .lof-css3, .lof-ass .lof-css3 .preload {
+    box-shadow: 0 0 0px #000;
+}
+.lof-ass .red {
+    border: 0px solid #000;
+}UL#ariext96 LI A{font-size:14px;font-weight:normal;text-transform:none;text-align:left;}
+  </style>
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/templates/protostar/js/template.js" type="text/javascript"></script>
+  <script src="/templates/protostar/js/byrei-dyndiv_1.0rc1.js" type="text/javascript"></script>
+  <script src="/modules/mod_ariextmenu/mod_ariextmenu/js/ext-core.js" type="text/javascript"></script>
+  <script src="/modules/mod_ariextmenu/mod_ariextmenu/js/menu.min.js" type="text/javascript"></script>
+  <script src="/modules/mod_lofarticlesslideshow/assets/jscript.js" type="text/javascript"></script>
+  <script type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});;Ext.EventManager.on(window, "load", function() { new Ext.ux.Menu("ariext96", {"direction":"vertical","autoWidth":false,"transitionDuration":0.2}); Ext.get("ariext96").select(".ux-menu-sub").removeClass("ux-menu-init-hidden"); });
+  </script>
+  <!--[if IE]><link rel="stylesheet" type="text/css" href="/modules/mod_ariextmenu/mod_ariextmenu/js/css/menu.ie.min.css" /><![endif]-->
+  <!--[if lt IE 8]><script type="text/javascript" src="/modules/mod_ariextmenu/mod_ariextmenu/js/fix.js"></script><![endif]-->
+
+			<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+		<style type="text/css">
+			h1,h2,h3,h4,h5,h6,.site-title{
+				font-family: 'Open Sans', sans-serif;
+			}
+		</style>
+			<style type="text/css">
+		body.site
+		{
+			<!-- border-top: 3px solid #555555; -->
+			border-top: none;
+			background-color: #ffffff		}
+		a
+		{
+			color: #555555;
+		}
+		.navbar-inner, .nav-list > .active > a, .nav-list > .active > a:hover, .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover,
+		.btn-primary
+		{
+			background: #555555;
+		}
+		.navbar-inner
+		{
+			-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
+			-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
+			box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
+		}
+	</style>
+		<!--[if lt IE 9]>
+		<script src="/media/jui/js/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body class="site com_content view-article no-layout no-task itemid-202">
+
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<img src="https://www.cellmicrocosmos.org/images/Cm_Icon.gif" alt="CELLmicrocosmos.org" /> 					</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<!-- Begin Sidebar -->
+				<div id="sidebar" class="span3">
+					<div class="sidebar-nav">
+								<div class="moduletable">
+					
+
+<div class="custom"  >
+	<p style="margin: 0px; background-color: transparent;"><img style="float: right; background-color: transparent;" src="/images/left_border_Cm4.png" alt="" align="left" /></p></div>
+		</div>
+	
+					</div>
+				</div>
+				<!-- End Sidebar -->
+								<div id="content" role="main" class="span6">
+					<!-- Begin Content -->
+							<div class="moduletable">
+					<!------------------------------------- THE CONTENT ------------------------------------------------->
+<div id="lofass110" class="lof-ass " style="height:231px; width:465px">
+<div class="lofass-container  lof-css3 red lof-snright">
+    
+        <div class="preload"><div></div></div>
+            <div class="lof-startstop"><div></div></div>
+         
+     <!-- MAIN CONTENT --> 
+      <div class="lof-main-wapper" style="height:231px;width:233px;">
+      	
+                      <div class="lof-main-item ">
+                              
+                                <a target="_parent" title="03.06.2019 EUROVIS 2020 3rd MolVA Workshop" href="/index.php/home/cellmicrocosmos-news/272-03-06-2019-eurovis-2020-3rd-molva-workshop">
+               		<img src="https://www.cellmicrocosmos.org/cache/lofthumbs/233x231-3rdMoVAatEUROVIS2020.png" title="03.06.2019 EUROVIS 2020 3rd MolVA Workshop" width="233" alt="03.06.2019 EUROVIS 2020 3rd MolVA Workshop" >                </a>
+                				
+                 
+                     
+                 <div class="lof-description">
+                    <h4><a target="_parent" title="03.06.2019 EUROVIS 2020 3rd MolVA Workshop" href="/index.php/home/cellmicrocosmos-news/272-03-06-2019-eurovis-2020-3rd-molva-workshop">03.06.2019 EUROVIS 2020 3rd MolVA Workshop</a></h4>
+                                        <p>EUROVIS 2020 Workshop on Molecular Graphics and Visual Analysis of Molecular Data
+Workshop at the...</p>
+                                     </div>
+                                              </div> 
+                        <div class="lof-main-item">
+                              
+                                <a target="_parent" title="03.06.2019 EUROVIS 2019 2nd MolVA Workshop" href="/index.php/home/cellmicrocosmos-news/271-22-11-2018-cfp-eurovis-2019-2nd-molva-workshop-3">
+               		<img src="https://www.cellmicrocosmos.org/cache/lofthumbs/233x231-MolVA2018_ViaMD_front.png" title="03.06.2019 EUROVIS 2019 2nd MolVA Workshop" width="233" alt="03.06.2019 EUROVIS 2019 2nd MolVA Workshop" >                </a>
+                				
+                 
+                     
+                 <div class="lof-description">
+                    <h4><a target="_parent" title="03.06.2019 EUROVIS 2019 2nd MolVA Workshop" href="/index.php/home/cellmicrocosmos-news/271-22-11-2018-cfp-eurovis-2019-2nd-molva-workshop-3">03.06.2019 EUROVIS 2019 2nd MolVA Workshop</a></h4>
+                                        <p>EUROVIS 2019 Workshop on Molecular Graphics and Visual Analysis of Molecular Data
+Workshop at the...</p>
+                                     </div>
+                                              </div> 
+                        <div class="lof-main-item">
+                              
+                                <a target="_parent" title="13.-15.03.2019 VizBi X" href="/index.php/home/cellmicrocosmos-news/264-13-15-03-2019-vizbi-x">
+               		<img src="https://www.cellmicrocosmos.org/cache/lofthumbs/233x231-VizBi2019_245x490.jpg" title="13.-15.03.2019 VizBi X" width="233" alt="13.-15.03.2019 VizBi X" >                </a>
+                				
+                 
+                     
+                 <div class="lof-description">
+                    <h4><a target="_parent" title="13.-15.03.2019 VizBi X" href="/index.php/home/cellmicrocosmos-news/264-13-15-03-2019-vizbi-x">13.-15.03.2019 VizBi X</a></h4>
+                                        <p>Visualizing Biological Data (VIZBI 2019)
+10 years of Visualizing Biological Data will be...</p>
+                                     </div>
+                                              </div> 
+                        <div class="lof-main-item">
+                              
+                                <a target="_parent" title="25.-26.02.2019 BioVis Workshop@KoRS-CB" href="/index.php/home/cellmicrocosmos-news/265-25-26-02-2019-biovis-workshop-kors-cb">
+               		<img src="https://www.cellmicrocosmos.org/cache/lofthumbs/233x231-blender_Cm2_logos.png" title="25.-26.02.2019 BioVis Workshop@KoRS-CB" width="233" alt="25.-26.02.2019 BioVis Workshop@KoRS-CB" >                </a>
+                				
+                 
+                     
+                 <div class="lof-description">
+                    <h4><a target="_parent" title="25.-26.02.2019 BioVis Workshop@KoRS-CB" href="/index.php/home/cellmicrocosmos-news/265-25-26-02-2019-biovis-workshop-kors-cb">25.-26.02.2019 BioVis Workshop@KoRS-CB</a></h4>
+                                        <p>Hand-on in Konstanz: Bio Visualization with Blender and MembraneEditor
+In the context of the...</p>
+                                     </div>
+                                              </div> 
+                        <div class="lof-main-item">
+                              
+                                <a target="_parent" title="22.11.2018 CfP EUROVIS 2019 2nd MolVA Workshop" href="/index.php/home/cellmicrocosmos-news/263-22-11-2018-cfp-eurovis-2019-2nd-molva-workshop-2">
+               		<img src="https://www.cellmicrocosmos.org/cache/lofthumbs/233x231-MolVA2018_ViaMD_front.png" title="22.11.2018 CfP EUROVIS 2019 2nd MolVA Workshop" width="233" alt="22.11.2018 CfP EUROVIS 2019 2nd MolVA Workshop" >                </a>
+                				
+                 
+                     
+                 <div class="lof-description">
+                    <h4><a target="_parent" title="22.11.2018 CfP EUROVIS 2019 2nd MolVA Workshop" href="/index.php/home/cellmicrocosmos-news/263-22-11-2018-cfp-eurovis-2019-2nd-molva-workshop-2">22.11.2018 CfP EUROVIS 2019 2nd MolVA Workshop</a></h4>
+                                        <p>EUROVIS 2019 Workshop on Molecular Graphics and Visual Analysis of Molecular Data
+Call For...</p>
+                                     </div>
+                                              </div> 
+                        <div class="lof-main-item">
+                              
+                                <a target="_parent" title="19.10.2018 ImmMolMod@BDVA2018" href="/index.php/home/cellmicrocosmos-news/259-19-10-2018-immmolmod-bdva2018">
+               		<img src="https://www.cellmicrocosmos.org/cache/lofthumbs/233x231-bdva-poster-2018-v3_4icon.png" title="19.10.2018 ImmMolMod@BDVA2018" width="233" alt="19.10.2018 ImmMolMod@BDVA2018" >                </a>
+                				
+                 
+                     
+                 <div class="lof-description">
+                    <h4><a target="_parent" title="19.10.2018 ImmMolMod@BDVA2018" href="/index.php/home/cellmicrocosmos-news/259-19-10-2018-immmolmod-bdva2018">19.10.2018 ImmMolMod@BDVA2018</a></h4>
+                                        <p>BDVA 2018 Workshop on&nbsp;Immersive Molecular Modelling Workshop - ImmMolMod
+In the context of...</p>
+                                     </div>
+                                              </div> 
+                        <div class="lof-main-item">
+                              
+                                <a target="_parent" title="14.08.2018 VINCI 2018 in Växjö" href="/index.php/home/cellmicrocosmos-news/258-14-08-2018-vinci-2018-in-vaexjoe">
+               		<img src="https://www.cellmicrocosmos.org/cache/lofthumbs/233x231-figure 2-4c.png" title="14.08.2018 VINCI 2018 in Växjö" width="233" alt="14.08.2018 VINCI 2018 in Växjö" >                </a>
+                				
+                 
+                     
+                 <div class="lof-description">
+                    <h4><a target="_parent" title="14.08.2018 VINCI 2018 in Växjö" href="/index.php/home/cellmicrocosmos-news/258-14-08-2018-vinci-2018-in-vaexjoe">14.08.2018 VINCI 2018 in Växjö</a></h4>
+                                        <p>Presentation at VINCI 2018
+Ath VINCI 2018 conference in Växjö, Sweden, Mehmood Ghaffar will...</p>
+                                     </div>
+                                              </div> 
+                    
+      </div>
+      <!-- END MAIN CONTENT --> 
+        <!-- NAVIGATOR -->
+                      <div class="lof-buttons-control">
+                  <a href="/" onclick="return false;" class="lof-previous">Previous</a>
+                  <a href="/" class="lof-next"  onclick="return false;">Next</a>
+                </div>
+                        
+              <div class="lof-navigator-outer">
+                    <ul class="lof-navigator">
+                                            <li>
+                            <div>
+                                                                 <img src="https://www.cellmicrocosmos.org/cache/lofthumbs/60x60-3rdMoVAatEUROVIS2020.png" title="03.06.2019 EUROVIS 2020 3rd MolVA Workshop" width="60" alt="03.06.2019 EUROVIS 2020 3rd MolVA Workshop" > 
+                                                                                                  <h4>03.06.2019 EUROVIS 2020 3rd MolVA Workshop</h4>
+                                                                                                                            </div>    
+                        </li>
+                                             <li>
+                            <div>
+                                                                 <img src="https://www.cellmicrocosmos.org/cache/lofthumbs/60x60-MolVA2018_ViaMD_front.png" title="03.06.2019 EUROVIS 2019 2nd MolVA Workshop" width="60" alt="03.06.2019 EUROVIS 2019 2nd MolVA Workshop" > 
+                                                                                                  <h4>03.06.2019 EUROVIS 2019 2nd MolVA Workshop</h4>
+                                                                                                                            </div>    
+                        </li>
+                                             <li>
+                            <div>
+                                                                 <img src="https://www.cellmicrocosmos.org/cache/lofthumbs/60x60-VizBi2019_245x490.jpg" title="13.-15.03.2019 VizBi X" width="60" alt="13.-15.03.2019 VizBi X" > 
+                                                                                                  <h4>13.-15.03.2019 VizBi X</h4>
+                                                                                                                            </div>    
+                        </li>
+                                             <li>
+                            <div>
+                                                                 <img src="https://www.cellmicrocosmos.org/cache/lofthumbs/60x60-blender_Cm2_logos.png" title="25.-26.02.2019 BioVis Workshop@KoRS-CB" width="60" alt="25.-26.02.2019 BioVis Workshop@KoRS-CB" > 
+                                                                                                  <h4>25.-26.02.2019 BioVis Workshop@KoRS-CB</h4>
+                                                                                                                            </div>    
+                        </li>
+                                             <li>
+                            <div>
+                                                                 <img src="https://www.cellmicrocosmos.org/cache/lofthumbs/60x60-MolVA2018_ViaMD_front.png" title="22.11.2018 CfP EUROVIS 2019 2nd MolVA Workshop" width="60" alt="22.11.2018 CfP EUROVIS 2019 2nd MolVA Workshop" > 
+                                                                                                  <h4>22.11.2018 CfP EUROVIS 2019 2nd MolVA Workshop</h4>
+                                                                                                                            </div>    
+                        </li>
+                                             <li>
+                            <div>
+                                                                 <img src="https://www.cellmicrocosmos.org/cache/lofthumbs/60x60-bdva-poster-2018-v3_4icon.png" title="19.10.2018 ImmMolMod@BDVA2018" width="60" alt="19.10.2018 ImmMolMod@BDVA2018" > 
+                                                                                                  <h4>19.10.2018 ImmMolMod@BDVA2018</h4>
+                                                                                                                            </div>    
+                        </li>
+                                             <li>
+                            <div>
+                                                                 <img src="https://www.cellmicrocosmos.org/cache/lofthumbs/60x60-figure 2-4c.png" title="14.08.2018 VINCI 2018 in Växjö" width="60" alt="14.08.2018 VINCI 2018 in Växjö" > 
+                                                                                                  <h4>14.08.2018 VINCI 2018 in Växjö</h4>
+                                                                                                                            </div>    
+                        </li>
+                          
+                    </ul>
+              </div>
+              
+  </div>
+ </div> <script type="text/javascript">
+
+  var _lofmain =  $('lofass110'); 
+   var object = new LofArticleSlideshow( _lofmain,
+                  { 
+                    fxObject:{
+                    transition:Fx.Transitions.Quad.easeInOut,  
+                    duration:500                    },
+                    startItem:0,
+                    interval:5000,
+                    direction :'hrleft', 
+                    navItemHeight:116,
+                    navItemWidth:247,
+                    navItemsDisplay:2,
+                    navPos:'right',
+					autoStart:1,
+					descOpacity:1                  } );
+      object.registerButtonsControl( 'click', {next:_lofmain.getElement('.lof-next'),
+                         previous:_lofmain.getElement('.lof-previous')} );
+  
+</script>
+
+		</div>
+	
+					
+<div id="system-message-container">
+<div id="system-message">
+</div>
+</div>
+					<div class="item-page">
+								
+	
+		
+								<div style="margin-left: -10px; margin-right: -10px;">
+<table style="height: 699px; width: 699px;" border="0" cellspacing="0" cellpadding="0" align="left">
+<tbody>
+<tr>
+<td style="height: 233px; width: 233px; background-color: #333333; background-image: url('/images/pics/cm4/sin_Cm4_233x233px.jpg');">&nbsp;</td>
+<td style="height: 233px; width: 233px; background-color: #333333;">
+<h2 style="text-align: center;">CELLmicrocosmos</h2>
+<h2 style="text-align: center;">4.2</h2>
+<h2 style="text-align: center;">PathwayIntegration</h2>
+<p style="text-align: center;">Pre-Release: 18.02.2013</p>
+<p style="text-align: center;">Self-Executable: 22.11.2015</p>
+<p style="text-align: center;"><a href="/index.php/cm4-project/cm4-news">changes</a></p>
+</td>
+<td style="background-color: #666666;">
+<ul>
+<li><a href="/index.php/cm4-start">Java WebStart Version</a> for fast installation</li>
+<li>Localize protein-related networks or datasets based on different <a href="/index.php/infrastructure">cytological data sources</a></li>
+<li>Visualize and explore this data with our Subcellular Localization Charts</li>
+<li>Import SBML networks <br />(Level 2, Version 3 and 4)<br />from other software packages</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="background-color: #333333; text-align: center;">
+<h3><a href="/index.php/cm4-start">Start the <br />Java Webstart<br /> Version!</a></h3>
+<h3>Pre-Release Info</h3>
+<p>The Source Code will be published after the first full publication.</p>
+<p>The documentation is not <br />completely finished by now!</p>
+</td>
+<td style="background-color: #555555; text-align: center;">
+<h3><a href="/index.php/cm4-project/cm4-news">Watch out for News</a></h3>
+<p>Find info about current updates <br />(Last Update: 22.11.2015)</p>
+<h3><a href="/index.php/infrastructure">Databases</a></h3>
+<p>Learn about the infrastructure</p>
+<h3><a href="/index.php/cm2-forum">Visit the Forum</a></h3>
+<p>Problems &amp; Solutions</p>
+</td>
+<td style="background-color: #777777;">&nbsp;
+<ul>
+<li>Visualize 2D networks based on the selected localizations</li>
+<li>Map the generated networks into a 3D cell environment (based on the <a href="/index.php/cm1-project">Cm1 project</a>)</li>
+<li>Export cell models in VRML97</li>
+<li>Supports Stereoscopic 3D Visualization for professional Graphic Cards (e.g. NVIDIA Quadro FX) or regular monitors in side-by-side format</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="background-color: #555555; text-align: center; height: 233px; width: 233px;">
+<h3>JCBC Article 2013</h3>
+<p>The Online Version has been published! <a href="/index.php/jcbc-2013" target="_parent">Read more!</a></p>
+<p>Or learn about all <a href="/index.php/cm4-publications" target="_parent"><br />associated publications</a> in <br /><a href="/index.php/jib-2010" target="_parent">JIB 2010</a> or in <a href="/index.php/biostec-2010" target="_parent">BIOSTEC 2010.</a></p>
+<h3>Team</h3>
+<p>Thanks go to<br /><a href="http://team.CELLmicrocosmos.org" target="_blank">team.CELLmicrocosmos.org</a></p>
+</td>
+<td style="background-color: #777777; text-align: center; height: 233px; width: 233px;"><br />
+<p><!--<h3 style="text-align: center;">BIOSTEC 2010</h3>
+<p>The former version 4.1 has been published and presented at the <em><a href="http://www.bioinformatics.biostec.org/BIOINFORMATICS2010/" target="_blank">BIOSTEC 2010 Bioinformatics <br /> Conference</a></em> in Valencia<br />(20-23 January 2010). <br /> To download the publication, just proceed with the<br /><a href="/index.php/biostec-2010" target="_parent">BIOSTEC 2010 section</a>.</p>
+<h3 style="text-align: center;">JIB Article 2010</h3>
+<p>Find supplementary material for the paper published in the<em> Journal of Integrative Bioinformatics</em> for which the Cm 4.2 application has been used.</p>
+<p>More information and the link to the online article you will find <a href="/index.php/jib-2010" target="_parent">here</a>.</p>--></p>
+</td>
+<td style="background-color: #999999; height: 233px; width: 233px; text-align: center;"><br style="color: #000000;" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+	
+						 </div>
+
+					
+					<!-- End Content -->
+				</div>
+								<div id="aside" class="span3">
+					<!-- Begin Right Sidebar -->
+					<div class="well ">
+<div id="ariext96_container" class="ux-menu-container ux-menu-clearfix">
+
+	<!--ul id="ariext96" class="ux-menu ux-menu-vertical" -->
+	<!-- Cm extension -->
+	<ul id="ariext96" class="ux-menu ux-menu-vertical" >
+	
+					<li class="ux-menu-item-main ux-menu-item-level-0 ux-menu-item-parent ux-menu-item218 ux-menu-item-parent-pos0">
+				<a href="javascript:void(0);" class=" ux-menu-link-level-0 ux-menu-link-first ux-menu-link-parent" title="">
+					
+					&nbsp;<img id='cmsite' alt='selected' src='../../../images/Cm4_Icon.gif' />&nbsp;<img alt='empty' src='../../../images/cell_empty.gif' />					
+					
+					<b style='vertical-align: bottom;'>Cm4 PathwayIntegration</b>									</a>
+			
+	<!--ul class="ux-menu-sub ux-menu-init-hidden" -->
+	<!-- Cm extension -->
+	<ul class="ux-menu-sub ux-menu-init-hidden" >
+	
+					<li class=" ux-menu-item-level-1 ux-menu-item219">
+				<a href="/" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					&nbsp;<img id='cmsite' alt='selected' src='../../../images/Cm_Icon.gif' />&nbsp;<img alt='empty' src='../../../images/cell_empty.gif' />					
+					
+					<b style='vertical-align: bottom;'>CELLmicrocosmos project</b>									</a>
+						</li>
+					<li class=" ux-menu-item-level-1 ux-menu-item215">
+				<a href="/index.php/cm1-project" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					&nbsp;<img id='cmsite' alt='selected' src='../../../images/Cm1_Icon.gif' />&nbsp;<img alt='empty' src='../../../images/cell_empty.gif' />					
+					
+					<b style='vertical-align: bottom;'>Cm1 CellExplorer</b>									</a>
+						</li>
+					<li class=" ux-menu-item-level-1 ux-menu-item216">
+				<a href="/index.php/cm2-project" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					&nbsp;<img id='cmsite' alt='selected' src='../../../images/Cm2_Icon.gif' />&nbsp;<img alt='empty' src='../../../images/cell_empty.gif' />					
+					
+					<b style='vertical-align: bottom;'>Cm2 MembraneEditor</b>									</a>
+						</li>
+					<li class=" ux-menu-item-level-1 ux-menu-item217">
+				<a href="/index.php/cm3-project" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					&nbsp;<img id='cmsite' alt='selected' src='../../../images/Cm3_Icon.gif' />&nbsp;<img alt='empty' src='../../../images/cell_empty.gif' />					
+					
+					<b style='vertical-align: bottom;'>Cm3 CellEditor</b>									</a>
+						</li>
+					<li class=" ux-menu-item-level-1 ux-menu-item340">
+				<a href="/index.php/cm5-project" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					&nbsp;<img id='cmsite' alt='selected' src='../../../images/Cm5_Icon.gif' />&nbsp;<img alt='empty' src='../../../images/cell_empty.gif' />					
+					
+					<b style='vertical-align: bottom;'>Cm5 CellVisualization</b>									</a>
+						</li>
+					<li class=" ux-menu-item-level-1 ux-menu-item309">
+				<a href="/index.php/next-workshop-2014" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					&nbsp;<img id='cmsite' alt='selected' src='../../../images/Cm_neXt_Icon.gif' />&nbsp;<img alt='empty' src='../../../images/cell_empty.gif' />					
+					
+					<b style='vertical-align: bottom;'>Cm neXt workshop</b>									</a>
+						</li>
+			</ul>
+			</li>
+					<li class="ux-menu-item-main ux-menu-item-level-0 ux-menu-item-parent ux-menu-item202 ux-menu-item-parent-pos1 current ux-menu-show">
+				<a href="/index.php/cm4-project" class=" ux-menu-link-level-0 current ux-menu-link-parent" title="">
+					
+					<img class='cellselected' alt='selected' src=	'../../../images/cell_selected.jpg' />&nbsp;					
+					
+					project									</a>
+			
+	<!--ul class="ux-menu-sub ux-menu-init-hidden" -->
+	<!-- Cm extension -->
+	<ul class="ux-menu-sub ux-menu-init-hidden" >
+	
+					<li class=" ux-menu-item-level-1 ux-menu-item204 ux-menu-show">
+				<a href="/index.php/cm4-project/cm4-news" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					<img class='cellselected' alt='selected' src=	'../../../images/cell_selected.jpg' />&nbsp;&nbsp;<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					news									</a>
+						</li>
+					<li class=" ux-menu-item-level-1 ux-menu-item297 ux-menu-show">
+				<a href="/index.php/cm4-project/cm4-posters" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					<img class='cellselected' alt='selected' src=	'../../../images/cell_selected.jpg' />&nbsp;&nbsp;<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					posters									</a>
+						</li>
+			</ul>
+			</li>
+					<li class="ux-menu-item-main ux-menu-item-level-0 ux-menu-item-parent ux-menu-item203 ux-menu-item-parent-pos2">
+				<a href="/index.php/cm4-start" class=" ux-menu-link-level-0 ux-menu-link-parent" title="">
+					
+					<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					start										...
+					<!-- span class="ux-menu-arrow"></span> -->
+									</a>
+			
+	<!--ul class="ux-menu-sub ux-menu-init-hidden" -->
+	<!-- Cm extension -->
+	<ul class="ux-menu-sub ux-menu-init-hidden" >
+	
+					<li class=" ux-menu-item-level-1 ux-menu-item288">
+				<a href="/index.php/cm4-start/startcm4" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;&nbsp;<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					startCm4 (SSL)									</a>
+						</li>
+			</ul>
+			</li>
+					<li class="ux-menu-item-main ux-menu-item-level-0 ux-menu-item-parent ux-menu-item325 ux-menu-item-parent-pos3">
+				<a href="/index.php/download-cm4" class=" ux-menu-link-level-0 ux-menu-link-parent" title="">
+					
+					<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					download										...
+					<!-- span class="ux-menu-arrow"></span> -->
+									</a>
+			
+	<!--ul class="ux-menu-sub ux-menu-init-hidden" -->
+	<!-- Cm extension -->
+	<ul class="ux-menu-sub ux-menu-init-hidden" >
+	
+					<li class=" ux-menu-item-level-1 ux-menu-item326">
+				<a href="/index.php/download-cm4/downloadcm4" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;&nbsp;<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					downloadCm4 (SSL)									</a>
+						</li>
+			</ul>
+			</li>
+					<li class="ux-menu-item-main ux-menu-item-level-0 ux-menu-item291 ux-menu-item-parent-pos4">
+				<a href="/index.php/infrastructure" class=" ux-menu-link-level-0" title="">
+					
+					<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					infrastructure									</a>
+						</li>
+					<li class="ux-menu-item-main ux-menu-item-level-0 ux-menu-item205 ux-menu-item-parent-pos5">
+				<a href="/index.php/jcbc-2013" class=" ux-menu-link-level-0" title="">
+					
+					<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					JCBC 2013									</a>
+						</li>
+					<li class="ux-menu-item-main ux-menu-item-level-0 ux-menu-item206 ux-menu-item-parent-pos6">
+				<a href="/index.php/jib-2010" class=" ux-menu-link-level-0" title="">
+					
+					<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					JIB 2010									</a>
+						</li>
+					<li class="ux-menu-item-main ux-menu-item-level-0 ux-menu-item-parent ux-menu-item207 ux-menu-item-parent-pos7">
+				<a href="/index.php/biostec-2010" class=" ux-menu-link-level-0 ux-menu-link-parent" title="">
+					
+					<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					BIOSTEC 2010										...
+					<!-- span class="ux-menu-arrow"></span> -->
+									</a>
+			
+	<!--ul class="ux-menu-sub ux-menu-init-hidden" -->
+	<!-- Cm extension -->
+	<ul class="ux-menu-sub ux-menu-init-hidden" >
+	
+					<li class=" ux-menu-item-level-1 ux-menu-item208">
+				<a href="/index.php/biostec-2010/screenshots" class=" ux-menu-link-level-1 ux-menu-link-level-1-show" title="">
+					
+					<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;&nbsp;<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					screenshots									</a>
+						</li>
+			</ul>
+			</li>
+					<li class="ux-menu-item-main ux-menu-item-level-0 ux-menu-item209 ux-menu-item-parent-pos8">
+				<a href="/index.php/cm4-publications" class=" ux-menu-link-level-0 ux-menu-link-last" title="">
+					
+					<img class='cellunselected' alt='unselected' src='../../../images/cell_unselected.jpg' />&nbsp;					
+					
+					publications									</a>
+						</li>
+			</ul>
+</div></div>
+					<!-- End Right Sidebar -->
+				</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<!--
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right"><a href="#top" id="back-top">Back to Top</a></p>
+			<p>&copy; CELLmicrocosmos.org 2020</p>
+		</div>
+	</footer>
+	-->
+	
+</body>
+</html>

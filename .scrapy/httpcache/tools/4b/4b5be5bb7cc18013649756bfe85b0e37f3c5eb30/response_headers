@@ -1,0 +1,14 @@
+Date: Mon, 30 Mar 2020 18:49:27 GMT
+Server: Apache/2.4.25 (Ubuntu)
+Strict-Transport-Security: max-age=63072000; includeSubdomains;
+Last-Modified: Wed, 25 Mar 2020 16:48:14 GMT
+Etag: "d56-5a1b0a267d6d3-gzip"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Content-Type: text/html

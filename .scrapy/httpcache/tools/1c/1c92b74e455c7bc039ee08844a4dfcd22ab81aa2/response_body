@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+ <HEAD>
+  <TITLE>LGA and AS2TS servers Web Site</TITLE>
+ </HEAD>
+<!-- Background white, links blue (unvisited), navy (visited), red (active) -->
+ <BODY
+  BGCOLOR="#FFFFFF"
+  TEXT="#000000"
+  LINK="#0000FF"
+  VLINK="#000080"
+  ALINK="#FF0000"
+ >
+  <P>
+  <HR>
+   <a href="./icons/KPATH_team.gif"><IMG ALIGN="LEFT" SRC="./icons/KPATH_team_s.gif" WIDTH="120" HEIGHT="80" ALT="Tom Slezak's group"></a>
+   <IMG ALIGN="RIGHT" SRC="./icons/wnv_m.gif" WIDTH="120" HEIGHT="80" ALT="WNV, signature regions"><BR>
+  <CENTER> 
+   <FONT Size=+5><B>
+   Welcome to AS2TS system!
+  </FONT>
+  </CENTER> 
+  <BR CLEAR=Left>
+  <P CLEAR=Right>
+
+  <HR>
+
+  <CENTER> 
+  <P>
+   <FONT Size=+2 COLOR="GREEN"><B>
+   Services marked as
+   <IMG SRC="./icons/hand.right.gif" WIDTH="20" HEIGHT="20">
+   are ready to use<BR>
+   </B></FONT>
+  <P>
+   <FONT Size=+1 COLOR="RED"><B>
+   Services marked as
+   <IMG SRC="./icons/construction_red.gif" WIDTH="25" HEIGHT="25">
+   are under reconstruction<BR>
+   </B></FONT>
+  </CENTER> 
+  <HR>
+  <P>
+
+<TABLE>
+ <TR>
+   <TD VALIGN="TOP">
+   <FONT Size=+2 COLOR="DARKGREEN"><B>
+   Protein Sequence Analysis services:
+   </B></FONT>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A  HREF="/AS2TS/SEQALSV/seqalsv.html">
+        SEQALSV - Sequence Alignment-based Sequence Variability </A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/SEQALSV/seqalsv_help.html">Service description</A>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A  HREF="/AS2TS/SOV/sov.html">
+        SOV - segment overlap measure </A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/SOV/sov_help.html">Service description</A>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/construction_red.gif" WIDTH="18" HEIGHT="18">
+        <A  HREF="/AS2TS/LIB_seq/as2ts_lib_start.html">
+        Local Sequence Library for AS2TS system</A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/LIB_seq/as2ts_lib_seq_help.html">Service description</A>
+   </TD>
+
+ <TR>
+   <TD VALIGN="TOP">
+&nbsp;
+   </TD>
+
+ <TR>
+   <TD VALIGN="TOP">
+   <FONT Size=+2 COLOR="DARKGREEN"><B>
+   Protein Structure Analysis services:
+   </B></FONT>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A HREF="/AS2TS/LGA/lga.html">
+        LGA - pairwise protein structure comparison </A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A HREF="/AS2TS/LGA/lga_format.html">Service description</A>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A HREF="/AS2TS/LGA_list_1/lga_pdblist.html">
+        LGA - list of PDB models structure comparison </A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A HREF="/AS2TS/LGA_list_1/lga_pdblist_format.html">Service description</A>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A  HREF="/AS2TS/STRALCP/index.html">
+        STRALCP - Structure Alignment-based Clustering of Proteins </A>
+
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/STRALCP/stralcp_format.html">Service description</A>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A  HREF="/AS2TS/STRALSV/index.html">
+        STRALSV - Structure Alignment-based Sequence Variability </A>
+
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/STRALSV/stralsv_format.html">Service description</A>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A HREF="/AS2TS/RBOW/index.html">
+        RBOW - Elbow Angle Calculation </A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/RBOW/calculation.htm">Service description</A>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/construction_red.gif" WIDTH="18" HEIGHT="18">
+        <A  HREF="/AS2TS/LIB_str/as2ts_local_pdb.html">
+        Local Structure Library for AS2TS system</A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/LIB_str/as2ts_local_pdb_help.html">Service description</A>
+   </TD>
+
+ <TR>
+   <TD VALIGN="TOP">
+&nbsp;
+   </TD>
+
+ <TR>
+   <TD VALIGN="TOP">
+   <FONT Size=+2 COLOR="DARKGREEN"><B>
+   Protein Structure Modeling services:
+   </B></FONT>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A  HREF="/AS2TS/AL2TS/al2ts.html">
+        AL2TS - sequence-structure alignment (AL) into tertiary structure (TS) </A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/AL2TS/al2ts_help.html">Service description</A>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A  HREF="/AS2TS/AS2TS/as2ts.html">
+        AS2TS - amino-acid sequence (AS) into tertiary structure (TS) </A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/AS2TS/as2ts_help.html">Service description</A>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/construction_red.gif" WIDTH="18" HEIGHT="18">
+        <A  HREF="/AS2TS/AS2TS_MB/index.html">
+        AS2TS - Model Builder </A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/AS2TS_MB/as2ts_MB_help.html">Service description</A>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A HREF="/AS2TS/LGA_dig/lga_dig.html">
+        LGA - modeler (DIG-SC: deletions, insertions, gaps, side-chains) </A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A HREF="/AS2TS/LGA_dig/lga_dig_format.html">Service description</A>
+   </TD>
+ <TR>
+   <TD VALIGN="TOP">
+   <IMG SRC="./icons/hand.right.gif" WIDTH="17" HEIGHT="16">
+        <A  HREF="/AS2TS/SCWRL/scwrl.html">
+        SCWRL - side-chain builder for AS2TS system</A>
+   </TD>
+   <TD VALIGN="TOP">
+        * <A  HREF="/AS2TS/SCWRL/scwrl_help.html">Service description</A>
+   </TD>
+</TABLE>
+
+  <P>
+  <HR>
+  <P>
+
+   <FONT Size=+1 COLOR="BROWN">
+   <A HREF="/AS2TS/system.html">Home</A> |  
+   <A HREF="/AS2TS/system_links.html">Other Resources</A> |  
+   <A HREF="/AS2TS/download_area/">Download Area</A> | 
+   <A HREF="/AS2TS/docs/helprasmol.html">Help RasMol</A>
+   </FONT>
+
+  <P>
+
+<hr>
+<p>
+<U>Citing AS2TS services:</U><br>
+<font SIZE=-1>
+Zemla A., Zhou Ecale C., Slezak T., Kuczmarski T.,
+Rama D., Torres C., Sawicka D., Barsky D.:
+"AS2TS system for protein structure modeling and analysis",
+Nucleic Acids Research, 2005, 33 (Web Server Issue),
+pp. W111-W115.
+<a HREF="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=15980437&query_hl=2">[MEDLINE]</a>
+</font>
+<p>
+
+<font SIZE=-1 COLOR="BROWN">
+Please send any comments or suggestions concerning <br>
+these facilities to
+</font>
+<font SIZE=-1>
+<b><i>
+<a href="/AS2TS/people/Zemla/">Adam Zemla</a>
+</i></b>:
+
+<a href="mailto:adamz@llnl.gov">adamz@llnl.gov</a>
+</font>
+<hr>
+<!-- UCRL-WEB-206292 | <a href="http://www.llnl.gov/disclaimer.html">LLNL Disclaimers</a> -->
+  <DIV ALIGN="CENTER">
+   <IMG SRC="./icons/comp.blue.gif" WIDTH="40" HEIGHT="30" ALT="In front of you">
+  </DIV>
+ </BODY>
+</HTML>

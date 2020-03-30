@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资源或业务被限制访问  Access Forbidden</title>
+<style type="text/css">
+body{
+ background:#ECECEC;	
+ font-size:16px;
+ line-height:200%;
+ font-family:"Microsoft Yahei";
+}
+.block {
+	padding:40px;
+	border:1px solid #CCC;
+	-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-box-shadow: #666 0px 0px 10px;
+-moz-box-shadow: #666 0px 0px 10px;
+box-shadow: #666 0px 0px 10px;background: #FFF;
+  max-width:880px;
+  width:80%;
+  height: auto;
+  margin:40px auto;
+}
+.cont{
+	color:#666;
+	margin-top:10px;
+}
+h1{
+	font-size:46px;
+	font-family:"Microsoft Yahei";
+	text-align:center;
+}
+h2{
+	font-size:24px;;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+}
+a{
+	padding:5px 10px;
+	color:#FFF;
+	background:#060;
+	text-decoration:none;
+	margin:0 5px;
+	border-radius:3px;
+}
+a:hover{
+	background:#090;
+}
+</style>
+</head>
+
+<body>
+<div class="block">
+  <h2>资源或业务被限制访问</h2>
+  <div class="cont">
+    <p>因以下原因：</p>
+<p>一、资源或业务仅限中山大学教职员和学生访问（请在校园网内或通过VPN隧道访问），或
+<p>二、资源或业务不在服务时段（请在服务时段访问）。</p>
+  <h2>Access Forbidden</h2>
+  <div class="cont">
+<p>1. The web page that you are trying to access is ONLY provided for students,faculty and staff  of Sun Yat-sen University. </p>
+<p>2. The website can ONLY be accessed during restricted hours.</p>
+  </div>
+</div>
+</body>
+</html>

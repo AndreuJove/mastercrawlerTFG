@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<head>
+<meta name="keywords" content="CGE Server">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CGE Server</title>
+
+
+<!-- STYLESHEETS -->
+<style type="text/css">/* special */</style>
+<link href="/cge/css/main.css" rel="StyleSheet" type="text/css" media="all">
+<link href="/cge/css/login.css" rel="StyleSheet" type="text/css" media="all">
+<!--[if IE 8]>
+<style type="text/css">
+	/* css for IE 8 */
+	body{
+		text-align: center;
+	}
+	div.body {
+		text-align: left;
+	}
+</style>
+<![endif]-->
+
+<!-- JAVASCRIPTS -->
+<!-- script type="text/javascript" src="/piwik/piwik.js"></script --><!-- Piwik -->
+<script type="text/javascript" src="/cge/js/jquery.js"></script>
+<script type="text/javascript" src="/cge/js/jQuery.xml2json.js"></script>
+<script type="text/javascript" src="/cge/js/main.js"></script>
+<!--<script type="text/javascript" src="/cge/user/login/js/login.js"></script>-->
+<script type="text/javascript" src='/tools_new/client/platform/scripts/login.js'></script>
+<script type="text/javascript">
+		$(document).ready(function(){ if(!window.stop_default_login){ showLogin(); } });
+			console.log('error4');</script>
+</head>
+<body><div class='body'>
+<!-- <img src='< ?php echo $imageroot?>banner.gif' alt='CGE Banner'> -->
+<div id="banner" style="height:60px;width:1024px;background-image:url('/images/cge_buttons/banner.gif');">
+<div id="login"></div>
+<div id="reset"></div>
+<div id="logged"></div>
+</div>
+<br>
+<table class='mytab'>
+   <tr>
+      <td class='left'></td>
+      <td  class='myselected' width='200' align='center' onclick='window.location = &quot;./&quot;'><span class='button'>Home</span></td>
+      <td  width='200' align='center' onclick='window.location = &quot;/services/&quot;'><span class='button'>Services</span></td>
+      <td  width='200' align='center' onclick='window.location = &quot;instructions.php&quot;'><span class='button'>Instructions</span></td>
+      <td  width='200' align='center' onclick='window.location = &quot;output.php&quot;'><span class='button'>Output</span></td>
+      <td  width='200' align='center' onclick='window.location = &quot;abstract.php&quot;'><span class='button'>Article abstract</span></td>
+      <td class='right'></td>
+   </tr>
+</table>
+<h1>CCMetagen 1.0</h1>
+
+<!-- START CONTENT -->
+
+<!-- Form Begins -->
+<form enctype = "multipart/form-data"
+      action  = "/cgi-bin/webface.fcgi"
+      method  = "POST"
+      id      = "theform"
+      >
+<!-- Config Filepath -->
+<input type   = 'hidden'
+       name   = 'configfile'
+       value  = '/srv/www/htdocs/services/CCMetagen-1.0/config.cf'
+       >
+<!-- UserID + SessionID + UserIP -->
+<input type   = 'hidden'
+       name   = 'userID'
+       value  = 'Anonymous'
+       >
+<input type   = 'hidden'
+       name   = 'usersession'
+       value  = ''
+       >
+<input type   = "hidden"
+       name   = "userip"
+       value  = "79.152.50.41"
+       >
+
+<!-- Uploadpath -->
+<input type  = "hidden"
+       name  = "uploadpath"
+       value = "notset"
+       >
+
+<!-- START CONTENT -->
+View the <a href="/services/CCMetagen-1.0/history.php">version history</a> of this server. <br>
+
+<!-- UNDER CONSTRUCTION -->
+<!--
+<br><br><font size="16" color="#B22222"><strong>UNDER MAINTENANCE<br>The server is currently undergoing some updates to significantly improve the speed of the analysis, as a result the server will be temporary unstable if sequence data is uploaded.<br>We are sorry for the inconvenience this might cause.<br></strong></font><br><br>
+-->
+
+<!-- CHOOSE DATABASE-->
+<strong>Select a database</strong><br>
+<select name="database" style="width:300px;">
+	<option selected="selected" value="NCBI-nt">NCBI-nt</option>
+	<option value="NCBI-nt-no-env">NCBI-nt no environmental</option>
+	<!--
+	<option value="RefSeq-bf">RefSeq-bf</option>
+	-->
+</select>
+<br><br>
+
+<strong>Input file(s): fastq and fasta formats are supported both as plain text and gzipped files, fastq is recommended. This server can also handle the .res file from KMA.</strong><br>
+<!-- JavaScript Uploader Iframe -->
+<div id="iframeWrapper">
+<iframe onload="onIFrameLoad();" style="overflow:hidden;" id="myIframe" src="/tools/client/single-uploader" height="320" width="1024" frameBorder="5" ></iframe>
+</div>
+
+<!-- END OF FORM -->
+
+<!-- NOTES -->
+<br>
+<b>Note:</b> The program accepts paired end or single end data, interleaved format are treated as single end at the moment. It runs one sample at a time, therefore do not upload multiple samples.<br>
+We recommend using the command-line version to analyze data exceeding 1.5 GB, gzipped data are allowed.<br>
+<!--
+<ul>
+<li><i>And even make a list </i><a href="#ref01">and link to something on the page</a> or <a href="http://www.google.com"> a different page</a>.</li>
+<li><b>And the list can contain more lines</b></li>
+</ul>
+-->
+<br>
+
+<hr><!-- REFERENCES - ->
+
+<h3>REFERENCES</h3>
+<ol>
+<li><a name="ref01">Here you can reference something</a>
+</ol>
+
+<hr><!-- CITATIONS -->
+
+<h3>CITATIONS</h3>
+<p>For publication of results, please cite:</p>
+<ul>
+  <li>
+        CCMetagen: comprehensive and accurate identification of eukaryotes and prokaryotes in metagenomic data<br>
+        Vanessa R. Marcelino, Philip T.L.C. Clausen, Jan P. Buchmann, Michelle Wille, Jon Iredell, Wieland Meyer, Ole Lund, Tania C. Sorrell, Edward C. Holmes<br>
+  </li>
+</ul>
+<br>
+<h3>DEPENDENCIES</h3>
+<ul>
+  <li>
+	Rapid and precise alignment of raw reads against redundant databases with KMA<br>
+	Philip T.L.C. Clausen, Frank M. Aarestrup, Ole Lund.<br>
+  </li>
+</ul>
+<ul>
+  <li>
+        Interactive metagenomic visualization in a Web browser.<br>
+        Ondov BD, Bergman NH, Phillippy AM.<br>
+  </li>
+</ul>
+<ul>
+  <li>
+        Database resources of the National Center for Biotechnology Information<br>
+        NCBI Resource Coordinators<br>
+  </li>
+</ul>
+
+<!-- END OF CONTENT -->
+<br>
+<br>
+<table class='mytab' style='clear:both;'>
+   <tr>
+      <td class='left'></td>
+      <td class='none' width='98' align='left'><span class='button'>Support</span></td>
+      <td width='451' align='center' onclick='contact(&quot;plan&#&quot;+(103+2+3-102)+&quot;4;dtu%2Edk&quot;, &quot;Scientific problems with CCMetagen-1.0&quot;, &quot;Dear Philip Clausen,\n&quot;);'><span class='button'>Scientific problems</span></td>
+      <td width='451' align='center' onclick='contact(&quot;food-cgehelp&#&quot;+(181+2+3-180)+&quot;4;dtu%2Edk&quot;, &quot;Technical problems with CCMetagen-1.0&quot;, &quot;Dear CGE Support,\n&quot;);'><span class='button'>Technical problems</span></td>
+      <td class='right'></td>
+   </tr>
+</table>
+<br>
+<div class='nav'>
+<center>
+Copyright DTU 2011 / All rights reserved<br>
+Center for Genomic Epidemiology, DTU, Kemitorvet, Building 204, 2800 Kgs. Lyngby, Denmark<br>
+Funded by: The Danish Council for Strategic Research<br>
+Last modified March 17, 2020 14:05:50 GMT<br></center></div></div></body>
+</html>
+
+<script type="text/javascript" src="/tools/server/uploader/scripts/h5utils.js"></script>
+<script type="text/javascript" src="/tools/server/uploader/scripts/iframeConnectionService.js"></script>

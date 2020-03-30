@@ -1,0 +1,8 @@
+Server: squid/4.6
+Mime-Version: 1.0
+Date: Mon, 30 Mar 2020 18:44:57 GMT
+Content-Type: text/html;charset=utf-8
+X-Squid-Error: ERR_ACCESS_DENIED 0
+X-Cache: MISS from webcache.bioacademy.gr
+X-Cache-Lookup: NONE from webcache.bioacademy.gr:80
+Via: 1.1 webcache.bioacademy.gr (squid/4.6)

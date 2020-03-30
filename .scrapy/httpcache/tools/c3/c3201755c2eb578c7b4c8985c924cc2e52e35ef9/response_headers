@@ -1,0 +1,5 @@
+Server: PasteWSGIServer/0.5 Python/2.7.8
+Date: Mon, 30 Mar 2020 18:46:02 GMT
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html
+Set-Cookie: galaxysession=c6ca0ddb55be603aae6dfcf479a8cf58c662de4ea5eb8a28e5fce14881c17741eda4c16e46f2dec1; expires=Mon, 29-Jun-2020 02:46:02 GMT; httponly; Max-Age=7776000; Path=/; Version=1

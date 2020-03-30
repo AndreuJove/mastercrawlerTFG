@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CLUSTOM-CLOUD</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+
+<link rel="stylesheet" type="text/css" href="css/main_style.css" title="wsite-theme-css" />
+<link rel="stylesheet" type="text/css" href="css/site.css" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet'
+	type='text/css'
+/>
+
+<style type='text/css'>
+.wsite-elements.wsite-not-footer div.paragraph, .wsite-elements.wsite-not-footer p,
+	.wsite-elements.wsite-not-footer .product-block .product-title,
+	.wsite-elements.wsite-not-footer .product-description, .wsite-elements.wsite-not-footer .wsite-form-field label,
+	.wsite-elements.wsite-not-footer .wsite-form-field label,
+	#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title,
+	#wsite-content .product-description, #wsite-content .wsite-form-field label,
+	#wsite-content .wsite-form-field label, .blog-sidebar div.paragraph,
+	.blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label
+	{
+	
+}
+
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title,
+	#wsite-content .product-description, #wsite-content .wsite-form-field label,
+	#wsite-content .wsite-form-field label, .blog-sidebar div.paragraph,
+	.blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label
+	{
+	
+}
+
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p,
+	.wsite-elements.wsite-footer .product-block .product-title,
+	.wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label,
+	.wsite-elements.wsite-footer .wsite-form-field label {
+	
+}
+
+.wsite-elements.wsite-not-footer h2, .wsite-elements.wsite-not-footer .product-long .product-title,
+	.wsite-elements.wsite-not-footer .product-large .product-title,
+	.wsite-elements.wsite-not-footer .product-small .product-title,
+	#wsite-content h2, #wsite-content .product-long .product-title,
+	#wsite-content .product-large .product-title, #wsite-content .product-small .product-title,
+	.blog-sidebar h2 {
+	
+}
+
+#wsite-content h2, #wsite-content .product-long .product-title,
+	#wsite-content .product-large .product-title, #wsite-content .product-small .product-title,
+	.blog-sidebar h2 {
+	
+}
+
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title,
+	.wsite-elements.wsite-footer .product-large .product-title,
+	.wsite-elements.wsite-footer .product-small .product-title {
+	
+}
+
+#wsite-title {
+	
+}
+
+.wsite-menu-default a {
+	
+}
+
+.wsite-menu a {
+	
+}
+
+.wsite-image div, .wsite-caption {
+	
+}
+
+.galleryCaptionInnerText {
+	
+}
+
+.fancybox-title {
+	
+}
+
+.wslide-caption-text {
+	
+}
+
+.wsite-phone {
+	
+}
+
+.wsite-headline {
+	
+}
+
+.wsite-headline-paragraph {
+	
+}
+
+.wsite-button-inner {
+	
+}
+
+.wsite-not-footer blockquote {
+	
+}
+
+.wsite-footer blockquote {
+	
+}
+
+.blog-header h2 a {
+	
+}
+
+#wsite-content h2.wsite-product-title {
+	
+}
+
+.wsite-product .wsite-product-price a {
+	
+}
+</style>
+<style>
+.wsite-background {
+	background-image: url('images/bg.png') !important;
+	background-repeat: no-repeat !important;
+	background-position: 50% 50% !important;
+	background-size: 100% !important;
+	background-color: transparent !important;
+	background: inherit;
+}
+
+body.wsite-background {
+	background-attachment: fixed !important;
+}
+
+.wsite-background.wsite-custom-background {
+	background-size: cover !important
+}
+</style>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+	
+</script>
+
+</head>
+<body class="short-header-page  wsite-theme-light  wsite-page-index">
+	<div id="banner-wrap" class="wsite-background wsite-custom-background">
+		<div id="banner-cover">
+
+			<div id="header-wrap">
+				<div id="header" class="container">
+					
+					<h1 id="logo">
+						
+					</h1>
+					
+				</div>
+				
+			</div>
+
+			<div id="banner" class="container">
+				<div id="banner-content">
+					<h2>
+						<span class="wsite-text wsite-headline"> <font size="7">CLUSTOM-CLOUD</font>
+						</span>
+					</h2>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="main-wrap">
+		<div class="container">
+			<div id='wsite-content' class='wsite-elements wsite-not-footer'>
+				<h2 class="wsite-content-title" style="text-align: left;">
+					<em style="">CLUST</em><span style="">ering 16S NGS sequences by&nbsp;</span><em style="">O</em><span style="">verlap&nbsp;</span><em style="">M</em><span
+						style=""
+					>inimization</span><br />
+				</h2>
+
+				<div>
+					<div style="height: 20px; overflow: hidden; width: 100%;"></div>
+					<hr class="styled-hr" style="width: 100%;"></hr>
+					<div style="height: 20px; overflow: hidden; width: 100%;"></div>
+				</div>
+
+				<h2 class="wsite-content-title" style="text-align: left;">What is CLUSTOM-CLOUD?&nbsp;</h2>
+
+				<div class="paragraph" style="text-align: left;">
+					A CLUSTOM-CLOUD is the distributed 16S sequence-clustering program based on In-Memory Data Grid(IMDG) technology – a distributed data structure to store an entire data in the main memory of multiple computing nodes. The CLUSTOM-CLOUD is able to rapidly cluster extremely large amounts of sequence data with high accuracy. Furthermore, it is designed for platform independence and ease of use without any complicated installation step. As like CLUSTOM(for details, see original <a
+						href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0062623" title=""
+					>CLUSTOM</a> paper), CLUSTOM-CLOUD also accepts a FASTA file of 16S sequences as input, validates the input format, assigns them to OTUs, and outputs a couple of files that represent: (i) sequences per OTU; (ii) the representative sequences of OTUs (refined seeds); and (iii) the number of sequences per OTU.
+					<br />
+				</div>
+
+				<div>
+					<div class="wsite-multicol">
+						<div class="wsite-multicol-table-wrap" style="margin: 0 -15px;">
+							<table class="wsite-multicol-table">
+								<tbody class="wsite-multicol-tbody">
+									<tr class="wsite-multicol-tr">
+										<td class="wsite-multicol-col" style="width: 33.333333333333%; padding: 0 15px;">
+
+
+
+											<h2 class="wsite-content-title" style="text-align: left;">
+												<font size="4"><strong>Platform Independent</strong></font>
+											</h2>
+
+											<div class="paragraph" style="text-align: left;">
+												<span style="">CLUSTOM-CLOUD, which is written in java language, is platform independent, and supports various computing
+													environments without any complicated installation.</span><br /> <span style=""></span><br /> <span style=""></span><span style=""></span><br />
+												<span style=""></span>
+											</div>
+
+
+
+										</td>
+										<td class="wsite-multicol-col" style="width: 33.333333333333%; padding: 0 15px;">
+
+
+
+											<h2 class="wsite-content-title" style="text-align: left;">
+												<font size="4"><strong>Scalability and InMemoryDataGrid</strong></font>
+											</h2>
+
+											<div class="paragraph" style="text-align: left;">
+												CLUSTOM-CLOUD is high availability and scalability sequence clustering program based on In-Memory Data Grid (IMDG). <span
+													style="text-align: justify;"
+												>By using the IMDG technique, CLUSTOM-CLOUD is capable of rapidly clustering the vast amount of sequence data.</span><br /> <span style=""></span>
+											</div>
+
+
+
+										</td>
+										<td class="wsite-multicol-col" style="width: 33.333333333333%; padding: 0 15px;">
+
+
+
+											<h2 class="wsite-content-title" style="text-align: left;">
+												<strong><font size="4">Easy to use</font></strong>
+											</h2>
+
+											<div class="paragraph" style="text-align: left;">Just all you need to set the single xml and configuration files for CLUSTOM CLOUD.
+												Please take a look at the manual. &nbsp; &nbsp;&nbsp;</div>
+
+
+
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<h2 class="wsite-content-title" style="text-align: left;">Download CLUSTOM-CLOUD</h2>
+
+				<div class="paragraph" style="text-align: left;">
+					14 October, 2015: Release 1.0.0 available (&nbsp;<a
+						href="release/clustom_cloud.zip"  title=""
+					>download</a> and <a href="docs/manual.pdf" title="">manual</a> )
+						,&nbsp;Java version of CLUSTOM (<a href="http://clustom.kopri.re.kr/servlet/Download?dir=samples&file=CLUSTOM_JAVA.tar.gz">download</a>)
+				
+				<br /><br /> <strong style="line-height: normal; text-align: justify;"><font size="4" >
+				*&nbsp;The previous version of CLUSTOM that can be accessed at http://clustom.kopri.re.kr is not available any more. </font></strong><br />
+				If you want to run CLUSTOM, please download and use the java version of CLUSTOM above. Nevertheless, If you still have difficulty in running CLUSTOM, just contact us (email: kmkim@kopri.re.kr or rbdls77@kopri.re.kr) so that we can run your sequence data.
+				</div>
+
+				<h2 class="wsite-content-title" style="text-align: left;">Paper&nbsp;</h2>
+
+				<div class="paragraph" style="text-align: left;">
+					<span style="">1. Oh J, Choi C-H, Park M-K, Kim BK, Hwang K, Lee S-H, et al. (2016)&nbsp;</span><strong style="line-height: normal; text-align: justify;"><font
+						size="4"
+					>CLUSTOM-CLOUD:&nbsp; In-Memory Data Grid-Based Software for Clustering 16S rRNA Sequence Data in the Cloud Environment</font></strong><span
+						style=""
+					>.&nbsp;</span> PLoS ONE 11(3): e0151064(<a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151064">link</a>)<br /> <span style=""></span>
+					<span style="">2. Hwang K, et al. (2013)&nbsp;</span><strong style="line-height: normal; text-align: justify;"><font
+						size="4"
+					>CLUSTOM:&nbsp; A Novel Method for Clustering 16S rRNA Next Generation Sequences by Overlap Minimization</font></strong><span
+						style=""
+					>.&nbsp;</span> PLoS ONE 8(5): e62623.(<a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0062623">link</a>)<br /> <span style="">&nbsp;</span>					
+				</div>
+				
+				<h2 class="wsite-content-title" style="text-align: left;">Samples&nbsp;</h2>
+				<div class="paragraph" style="text-align: left;">
+				<table id="sample">
+					<tbody><tr>
+						<td>Input (16S reads) datasets :</td>
+						<td><a href="samples/high.zip">dataset1(high),</a></td>
+						<td><a href="samples/intermediate.zip">dataset2(intermediate),</a></td>
+						<td><a href="samples/low.zip">dataset3(low),</a></td>
+						<td><a href="samples/all_random_1000000.fasta.zip">dataset4(1000K)</a></td>
+					</tr>
+				</tbody></table>
+				</div>
+				
+
+				<h2 class="wsite-content-title" style="text-align: left;">Contact Information</h2>
+
+				<div class="paragraph" style="text-align: left;">
+					Kyung Mo Kim (&nbsp;<a href="mailto:kmkim@kopri.re.kr" style="" title="">kmkim@kopri.re.kr</a>)
+					<br /> <span style="">Kyuin Hwang (</span><a href="mailto:rbdls77@kopri.re.kr" style="" title="">rbdls77@kopri.re.kr</a><span style="">)</span>
+					<br /> <span style="">Jeongsu Oh (</span><a href="mailto:ofang@kribb.re.kr" style="" title="">ofang@nnibr.re.kr</a><span style="">)</span>
+					<br />
+				</div>
+
+				<h2 class="wsite-content-title" style="text-align: left;">Copyright&nbsp;</h2>
+
+				<div class="paragraph" style="text-align: left;">
+					Clustom Cloud Background image is&nbsp;<a href="http://www.freepik.com">designed by Freepik</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="footer-wrap">
+		<div class="container">
+			<p class="text-muted">Division of Polar Life Sciences, Korea Polar Research Institute, Republic of Korea; Copyright @ All Rights Reserved.</p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+
+
+
+
+</body>
+</html>
+

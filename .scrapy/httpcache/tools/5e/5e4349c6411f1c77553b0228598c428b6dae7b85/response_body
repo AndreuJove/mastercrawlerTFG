@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+        <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CHiCAGO &laquo;  Functional Gene Control Group</title>
+    <link rel="pingback" href="http://functionalgenecontrol.group/xmlrpc.php" />
+    <link rel="alternate" type="application/rss+xml" title="Functional Gene Control Group" href="http://functionalgenecontrol.group/feed" />
+
+    <link rel='dns-prefetch' href='//functionalgenecontrol.group' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Functional Gene Control Group &raquo; Feed" href="http://functionalgenecontrol.group/feed" />
+<link rel="alternate" type="application/rss+xml" title="Functional Gene Control Group &raquo; Comments Feed" href="http://functionalgenecontrol.group/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Functional Gene Control Group &raquo; CHiCAGO Comments Feed" href="http://functionalgenecontrol.group/chicago/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/functionalgenecontrol.group\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.17"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='layerslider_css-css'  href='http://functionalgenecontrol.group/wp-content/plugins/LayerSlider/css/layerslider.css?ver=4.1.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-includes/js/swfobject.js?ver=2.2-20120417'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-content/plugins/LayerSlider/js/layerslider.kreaturamedia.jquery.js?ver=4.1.1'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-content/plugins/LayerSlider/js/jquery-easing-1.3.js?ver=1.3.0'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-content/plugins/LayerSlider/js/jquerytransit.js?ver=0.9.9'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-content/plugins/LayerSlider/js/layerslider.transitions.js?ver=4.1.1'></script>
+<script type='text/javascript' src='http://regulatorygenomicsgroup.org/wp-content/uploads/wpcu3er/jquery.cu3er.js?ver=4.6.17'></script>
+<link rel='https://api.w.org/' href='http://functionalgenecontrol.group/wp-json/' />
+<link rel='shortlink' href='http://functionalgenecontrol.group/?p=2221' />
+<link rel="alternate" type="application/json+oembed" href="http://functionalgenecontrol.group/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffunctionalgenecontrol.group%2Fchicago" />
+<link rel="alternate" type="text/xml+oembed" href="http://functionalgenecontrol.group/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffunctionalgenecontrol.group%2Fchicago&#038;format=xml" />
+<link href="http://functionalgenecontrol.group/wp-content/themes/Sterling/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://functionalgenecontrol.group/wp-content/themes/Sterling/css/primary-blue.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://functionalgenecontrol.group/wp-content/themes/Sterling/css/_mobile.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="canonical" href="http://functionalgenecontrol.group/chicago" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;lang=en-SG" />
+
+<!--styles generated by site options-->
+<style type='text/css'>
+.article_preview strong a {color:#603e25 !important;}
+.post-leave-comment {display:none !important;}
+.post-categories {display:none !important;}
+.blog-main-preview {margin-bottom:50px !important;}
+h7 {font-family:"Lucida Console", Monaco, monospace}
+.top-aside {display: none !important;}
+
+*{font-family:"Open Sans",arial,sans-serif !important;}
+.top-aside .social_icons a {font-weight:600;padding-top:3px;}
+nav a {font-size:14.5px;padding:3px 4px;}
+header .sub-menu a, .sidebar li, input, textarea, select {font-size:12px;}
+div.breadcrumbs {font-size:10px;}
+.metadata, .small_banner .page-banner-description {font-size:12px;}
+.footer-callout-content p {font-size:16px;}
+.social_icons a {padding-bottom:8px;}
+.small_banner .page-banner-heading {font-weight:300;padding-bottom:3px;}
+h3 {font-size: 16px;font-weight: 600;}
+.business-hours .day, strong, .tabs_type_1 dt, .tabs_type_2 dt, .accordion dt, .tt-contentbox-title span, .tt-dropcap-round, .tt-dropcap-square, .tt-dropcap-text {font-weight: 600;}
+.preview h2, .preview h2 a {font-size:22px;}
+.widget-heading {font-size: 15px;font-weight: 600;}
+.tt-button, #content-container p, p.callout-heading, .footer-content p, .banner-slider p{font-family:arial,sans-serif !important;}
+p.callout-heading {letter-spacing:0px;}
+.banner-slider h1, .banner-slider h2, .banner-slider h3, .banner-slider h4, .banner-slider h5, .banner-slider h6 {font-weight: 300;}
+			
+
+#tt-boxed-layout {-moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);-webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);}
+.shadow.top{background:url(http://functionalgenecontrol.group/wp-content/themes/Sterling/images/shadows/shadow-3.png) top center no-repeat;}
+.top-aside{padding:8px 0;}
+.small_banner {padding:1px 0;}
+.footer-content {padding:20px 0;}
+header {padding:28px 0;}
+</style>
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="http://functionalgenecontrol.group/wp-content/themes/Sterling/css/IE.css" />
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script type="text/javascript" src="http://functionalgenecontrol.group/wp-content/themes/Sterling/framework/js/IE.js"></script>
+        <script type="text/javascript" src="http://functionalgenecontrol.group/wp-content/themes/Sterling/framework/js/respond.js"></script>
+    <![endif]-->
+
+    <link href="http://functionalgenecontrol.group/wp-content/themes/Sterling/css/primary-teal.css" rel="stylesheet" type="text/css" media="screen" />
+<!-- Styles generated by custom page styling options. -->
+<style type="text/css">body, html {background-color:# !important;}</style>
+</head>
+<body class="page page-id-2221 page-template-default">
+<div id="tt-wide-layout">    <header>
+        <div class="center-wrap">
+            <div class="companyIdentity">
+                                                            <a href="http://functionalgenecontrol.group"><img src="http://regulatorygenomicsgroup.org/wp-content/uploads/network_image_small4-1.jpg" alt="Functional Gene Control Group" /></a>
+                                                </div><!-- end .companyIdentity -->
+            <nav>
+                <ul>
+                    <li id="menu-item-2007" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2007"><a href="http://functionalgenecontrol.group/">Home</a></li>
+<li id="menu-item-1595" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1595"><a href="#">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-2009" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2009"><a href="http://functionalgenecontrol.group/about-mikhail">Mikhail&#8217;s bio</a></li>
+	<li id="menu-item-1594" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1594"><a target="_blank" href="http://www.lms.mrc.ac.uk">MRC London Institute of Medical Sciences →</a></li>
+	<li id="menu-item-2556" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2556"><a href="http://imperial.ac.uk">Imperial College →</a></li>
+</ul>
+</li>
+<li id="menu-item-2010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2010"><a href="http://functionalgenecontrol.group/research">Research</a></li>
+<li id="menu-item-2273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2273"><a href="http://functionalgenecontrol.group/people">People</a>
+<ul class="sub-menu">
+	<li id="menu-item-2274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2274"><a href="http://functionalgenecontrol.group/people">Our group</a></li>
+	<li id="menu-item-2279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2279"><a href="http://functionalgenecontrol.group/people/group-photos">Group photos</a></li>
+</ul>
+</li>
+<li id="menu-item-2011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2011"><a href="http://functionalgenecontrol.group/publications">Publications</a></li>
+<li id="menu-item-2271" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-2271"><a href="#">Software</a>
+<ul class="sub-menu">
+	<li id="menu-item-2248" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2221 current_page_item menu-item-2248"><a href="http://functionalgenecontrol.group/chicago">CHiCAGO</a></li>
+	<li id="menu-item-2620" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2620"><a href="http://functionalgenecontrol.group/chicdiff">Chicdiff</a></li>
+</ul>
+</li>
+<li id="menu-item-2014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2014"><a href="http://functionalgenecontrol.group/contact-us">Contact</a></li>
+<li id="menu-item-2015" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2015"><a href="http://functionalgenecontrol.group/join-us">Join us</a></li>
+                </ul>
+            </nav>
+        </div><!-- end .center-wrap -->
+    </header>    <section class="small_banner">
+            <div class="center-wrap banner-no-crumbs">
+                    <p class="page-banner-heading">CHiCAGO</p>
+        
+                    <div id="banner-search">
+                <form method="get" class="searchform" action="http://functionalgenecontrol.group/">
+    <fieldset>
+        <input type="text" name="s" class="s" value="Search..." onfocus="if(this.value=='Search...')this.value='';" onblur="if(this.value=='')this.value='Search...';" />
+    </fieldset>
+</form>            </div><!-- end #banner-search -->
+        
+        
+            </div><!-- end .center-wrap -->
+    <div class="shadow top"></div>
+    <div class="shadow bottom"></div>
+    <div class="tt-overlay"></div>
+    </section>
+
+    <section id="content-container" class="clearfix">
+        <div id="main-wrap" class="clearfix">
+            <div class="two_thirds">
+<h3>CHiCAGO: Capture HiC Analysis of Genomic Organisation</h3>
+<p>CHiCAGO is a set of tools for calling significant interactions in Capture HiC data, such as Promoter Capture HiC. </p>
+<h4>The statistical foundations of CHiCAGO</h4>
+<p>CHiCAGO uses a <strong>convolution background model</strong> accounting for both random ‘<strong>Brownian collisions</strong>’ between chromatin fragments (that are distance-dependent) and ‘<strong>technical noise</strong>’. It <strong>borrows information across interactions</strong> (with appropriate normalisation) to estimate these background components separately on different subsets of data. </p>
+<p>CHiCAGO then performs a <strong>p-value weighting</strong> procedure based on the expected true positive rates at different distance ranges (estimated from data), with scores representing <strong>soft-thresholded -log weighted p-values</strong>. </p>
+<h4>The software</h4>
+<p>CHiCAGO consists of an open-source R package (<strong>Chicago</strong>), a data package with subsets of published Promoter Capture HiC datasets for training purposes (<strong>PCHiCdata</strong>) and a set of command line tools for pre-processing and post-processing (<strong>chicagoTools</strong>). All of these, along with detailed documentation, are available from this bitbucket repository: </p>
+<p><a href="https://bitbucket.org/chicagoTeam/chicago">https://bitbucket.org/chicagoTeam/chicago</a></p>
+<p>The R packages are also part of the <a href="http://bioconductor.org">Bioconductor</a> 3.3 release (requires R version &gt;= 3.3.0). However, as Bioconductor releases only happen twice a year, the package versions found on Bitbucket may be more recent. Bitbucket can also be used to install the packages with R versions &gt;= 3.2.</p>
+<p>The Chicago package vignette in HTML format can also be viewed <a href="http://regulatorygenomicsgroup.org/wp-content/uploads/Chicago_vignette.html" target="_blank">here</a> (opens in a new window). </p>
+<p><strong>Compatibility notices!</strong><br />
+(1) Chicago is currently not compatible with <strong>bedtools v2.26</strong> due to BED format compliance checking introduced in this version. Please do not upgrade from v2.25 while we are working to resolve this issue.<br />
+(2) Chicago is incompatible with R package <strong>Delaporte v2.3.0</strong> that appeared on CRAN on 2 June 2016 (earlier versions are fine). The compatible updated Delaporte v2.3.1 is now available on CRAN &#8211; many thanks to package author Avraham Adler for cooperation. Please check that you are running a compatible version.</p>
+<h4>The paper</h4>
+<p>CHiCAGO is presented in this paper: </p>
+<p>Cairns J* / Freire-Pritchett P*, Wingett SW, Várnai C, Dimond A, Plagnol V, Zerbino D, Schoenfelder S, Javierre B-M, Osborne C, Fraser P, Spivakov M. <a href="http://www.genomebiology.com/2016/17/1/127">CHiCAGO: Robust Detection of DNA Looping Interactions in Capture Hi-C data.</a> Genome Biology. 2016. 17:127. </p>
+<h4>Credits</h4>
+<p>CHiCAGO has been mainly developed by <strong>Jonathan Cairns</strong>, <strong>Paula Freire Pritchett</strong> and <strong>Mikhail Spivakov</strong> in our group, with invaluable contributions from <a href="http://www.bioinformatics.babraham.ac.uk/people.html">Steven Wingett</a> (Babraham Bioinformatics / Nuclear Dynamics ISP) and great ideas from <a href="https://www.ucl.ac.uk/ukpdc/research-groups/neurogenetics-group/vincent-plagnol">Vincent Plagnol</a> (UCL) and <a href="http://www.ebi.ac.uk/about/people/daniel-zerbino">Daniel Zerbino</a> (EMBL-EBI). </p>
+<p>The package has so far been extensively tested on Promoter Capture HiC data from our collaborators at Babraham Institute (<a href="http://www.babraham.ac.uk/our-research/nuclear-dynamics/peter-fraser">Fraser</a> and <a href="http://www.babraham.ac.uk/our-research/epigenetics/peter-rugg-gunn">Rugg-Gunn</a> groups, with special thanks to <strong>Stefan Schoenfelder</strong> and <strong>Biola-Maria Javierre</strong>) and at KCL (<a href="https://kclpure.kcl.ac.uk/portal/cameron.osborne.html">Cameron Osborne</a>).</p>
+<h4>Contact</h4>
+<p>For specific issues, please submit a report on Bitbucket: </p>
+<p><a href="https://bitbucket.org/chicagoTeam/chicago/issues">https://bitbucket.org/chicagoTeam/chicago/issues</a> </p>
+<p>If you have any general feedback on CHiCAGO or would like to collaborate, please don&#8217;t hesitate to drop a line to Mikhail (mikhail.spivakov/babraham.ac.uk). </p>
+</div>
+<div class="one_third">
+<p><img src="http://regulatorygenomicsgroup.org/media/Chicago.png" alt="Chicago schematic" /></p>
+</div>
+
+        </div><!-- end #main-wrap -->
+
+</section><!-- END content-container -->
+
+
+<footer>
+    <div class="center-wrap tt-relative">
+        <div class="footer-content clearfix">
+                            <div class="footer-default-one">
+                                    </div><!-- end .footer-default-one -->
+
+                <div class="footer-default-two">
+                                    </div><!-- end .footer-default-two -->
+
+                <div class="footer-default-three">
+                                    </div><!-- end .footer-default-three -->
+                    </div><!-- end .footer-content -->
+    </div><!-- end .center-wrap -->
+
+    <div class="footer-copyright clearfix">
+        <div class="center-wrap clearfix">
+    	    <div class="foot-copy">
+    	        <p>Copyright © 2018 Mikhail Spivakov / Functional Gene Control Group. All rights reserved.</p>
+    	    </div><!-- end .foot-copy -->
+
+    	                    <a href="#" id="scroll_to_top" class="link-top">Scroll to Top</a>
+            
+                            <ul class="footer-nav">
+                    <li id="menu-item-2016" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2016"><a href="http://functionalgenecontrol.group/">Home</a></li>
+<li id="menu-item-2017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2017"><a href="http://functionalgenecontrol.group/research">Research</a></li>
+<li id="menu-item-2018" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2018"><a href="http://functionalgenecontrol.group/people">People</a></li>
+<li id="menu-item-2019" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2019"><a href="http://functionalgenecontrol.group/publications">Publications</a></li>
+<li id="menu-item-2020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2020"><a href="http://functionalgenecontrol.group/join-us">Join us</a></li>
+                </ul>
+                    </div><!-- end .center-wrap -->
+    </div><!-- end .footer-copyright -->
+
+    <div class="shadow top"></div>
+    <div class="tt-overlay"></div>
+</footer>
+
+</div><!-- end .tt-wide-layout -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39455534-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-includes/js/comment-reply.js?ver=4.6.17'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-content/themes/Sterling/framework/js/custom-main.js?ver=4.6.17'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-content/themes/Sterling/framework/js/jquery.prettyPhoto.js?ver=4.6.17'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-content/themes/Sterling/framework/js/jquery.superfish.js?ver=4.6.17'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-content/themes/Sterling/framework/js/jquery.cycle.all.min.js?ver=4.6.17'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-content/themes/Sterling/framework/js/jquery.easing.1.3.js?ver=4.6.17'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-content/themes/Sterling/framework/js/jquery.isotope.js?ver=4.6.17'></script>
+<script type='text/javascript' src='http://functionalgenecontrol.group/wp-includes/js/wp-embed.min.js?ver=4.6.17'></script>
+
+
+</body>
+</html>

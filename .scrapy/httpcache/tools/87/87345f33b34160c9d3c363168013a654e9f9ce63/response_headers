@@ -1,0 +1,19 @@
+Content-Security-Policy-Report-Only: script-src 'unsafe-eval' 'strict-dynamic' 'unsafe-inline' 'self' http: https: https://d301sr5gafysq2.cloudfront.net 'nonce-qiWucsVVd4WVr65B'; style-src 'self' 'unsafe-inline' https://aui-cdn.atlassian.com https://d301sr5gafysq2.cloudfront.net; report-uri https://web-security-reports.services.atlassian.com/csp-report/bb-website; default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: *; connect-src bitbucket.org *.bitbucket.org bb-inf.net *.bb-inf.net analytics.atlassian.com as.atlassian.com api-private.stg.atlassian.com api-private.atlassian.com intake.opbeat.com api.media.atlassian.com api.segment.io xid.stride.com xid.statuspage.io xid.atlassian.com xdid.hipchat.com xid.sourcetreeapp.com bam.nr-data.net sentry.io bqlf8qjztdtr.statuspage.io https://d301sr5gafysq2.cloudfront.net; object-src about:; base-uri 'self'
+Server: nginx
+Vary: Cookie, Accept-Language, Accept-Encoding
+Cache-Control: max-age=900
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Date: Mon, 30 Mar 2020 18:49:59 GMT
+X-Served-By: app-1104
+Content-Language: en
+Etag: W/"534b7ff53d895c409bbc44b5a599093c"
+X-Static-Version: b18f3492f8a3
+X-Content-Type-Options: nosniff
+X-Render-Time: 0.282395124435
+Set-Cookie: csrftoken=MISDlTXVT1IvYFRQlnCp4txUU7CIlYlDTIXnJLsyx5CThXXqTftSGOoDYcgp3hrm; expires=Mon, 29-Mar-2021 18:49:59 GMT; Max-Age=31449600; Path=/; secure
+X-Request-Count: 2636
+X-Frame-Options: SAMEORIGIN
+X-Version: b18f3492f8a3
+X-Cache-Info: caching

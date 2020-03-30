@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4503755-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4503755-1');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MW3Z3W2');</script>
+<!-- End Google Tag Manager -->
+
+
+<!--stylesheets-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/styles/main.css?v=2.6">
+	
+	<link href="/css/safariFixes.css" rel="stylesheet" type="text/css" />
+	<!--/stylesheets-->
+	
+	<!--additional_stuff-->
+	
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+	
+	<!-- Social Sharing -->
+		<!--<div id="fb-root"></div>-->
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- /Social Sharing -->
+	<!--/additional_stuff-->
+
+	<!-- cookies -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+		<script>
+		window.addEventListener("load", function(){
+		window.cookieconsent.initialise({
+		  "palette": {
+			"popup": {
+			  "background": "#eaf7f7",
+			  "text": "#5c7291"
+			},
+			"button": {
+			  "background": "#009fe4"
+			}
+		  },
+		  "theme": "classic",
+		  "position": "top",
+		  "static": true,
+		  "content": {
+			"message": "This site uses cookies to store information on your computer. Some of these cookies are essential to make our site work and others give us insight into how the site is being used. By continuing to browse the site you are agreeing to the use of cookies.",
+			"dismiss": "X",
+			"link": "More Info",
+			"href": "https://www.acdlabs.com/company/privacypolicy.php"
+		  }
+		})});
+		</script>
+	<!-- /cookies -->	<title>ACD/Labs Column Selector :: ACD/Labs.com</title>
+	<meta name="description" content="">
+	
+</head>
+<body>
+	<!-- header -->
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MW3Z3W2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+	  <section class="top-bar-gradient">
+        <div class="row">
+          <div class="small-12 medium-8 columns welcome-message">
+			<ul class="inline-list">
+			<li><a href='/account/login.php'>Login</a> | <a href='/account/register.php'>Register</a></li>			</ul>
+		  </div>
+          <div class="small-12 medium-4 columns text-right">
+            <div class="input-group">
+			  <input type="text" class="st-default-search-input input-group-field">
+			  </div>            
+          </div>  
+        </div>
+      </section>
+      <section class="row">
+        <!-- Start Site Branding -->
+        <div class="small-12 medium-12 large-2 columns site-branding">
+          <a href="/home/" rel="home"><img src="/images/layout/ACDlabs-logo.svg" alt="ACD Labs Logo" itemscope="" itemtype="http://schema.org/Organization"></a>
+        </div>
+        <!-- End Site Branding -->
+        <!-- Desktop Menu Starts here -->
+        <div class="large-10 columns flex-menu show-for-large">
+          <ul class="vertical medium-horizontal menu dropdown" data-responsive-menu="accordion medium-dropdown" role="menubar" data-dropdown-menu="duony1-dropdown-menu" data-mutate="y0a3m5-responsive-menu">
+            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-label="Platforms and Products">
+            <a href="/products/" title="Platforms and Products">Platforms and Products</a>
+            <ul class="vertical menu submenu is-dropdown-submenu first-sub" data-submenu="" role="menu">
+                <li role="menuitem" class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-right"><a href="/products/spectrus/" title="Spectrus Platform">Spectrus Platform</a>
+					<ul class="vertical menu">
+						<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/spectrus/katalyst/" title="Katalyst">Katalyst</a></li>
+						<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/luminata/" title="Luminata">Luminata</a></li>
+						<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/metasense/" title="MetaSense">MetaSense</a></li>
+						<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/" title="All Spectrus Products">All Spectrus Products</a></li>
+						<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/fileformats/" title="Supported Data Formats for ACD/Spectrus Products">Supported Data Formats</a></li>
+					</ul>
+				</li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/percepta/" title="Percepta Platform">Percepta Platform</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/enterprise/" title="Data Management and Informatics">Data Management and Informatics</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/support/version/" title="Current Software Version">Current Software Version</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://webstore.acdlabs.com/" title="ACD/Labs Web Store: Buy Online" target="_blank">Buy Online</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/" title="All Products">All Products</a></li>
+            </ul>
+            </li>
+			
+            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-label="Solutions">
+            <a href="/solutions/" title="Solutions">Solutions</a>
+            <ul class="vertical menu submenu is-dropdown-submenu first-sub" data-submenu="" role="menu">
+                <li role="menuitem" class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-right" aria-haspopup="true" aria-label="by Industry">
+                <a href="/solutions/solutions_industry.php" title="ACD/Labs Solutions by Industry">by Industry</a>
+                <ul class="vertical menu">
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/agrochem/" title="Agrochemical">Agrochemical</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/chem_mat_sci/" title="Chemicals and Material Science">Chemicals and Material Science</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/cro/" title="Contract Research Organizations">Contract Research Organizations</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/flavors/" title="Flavors and Fragrances">Flavors and Fragrances</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/food_bev/" title="Food and Beverages">Food and Beverages</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/forensics/forensictox/" title="Forensics and Doping Laboratories">Forensics and Doping Laboratories</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/pharma/" title="">Pharmaceutical</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/environmental/waterquality/" title="">Water and Environmental</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/academia/" title="Academia">Academia</a></li>
+                </ul>
+                </li>
+                <li role="menuitem" class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-right" aria-haspopup="true" aria-label="by Scientific Activity">
+                <a href="/solutions/solutions_sci_activity.php" title="Solutions by Scientific Activity">by Scientific Activity&nbsp;&nbsp;</a>
+                <ul class="vertical menu submenu is-dropdown-submenu" data-submenu="" role="menu">
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/dd/" title="Drug Discovery">Drug Discovery</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/km/" title="Knowledge Management">Knowledge Management</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/openaccess/" title="Open Access Laboratory">Open Access Laboratory</a></li>
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/analysis/" title="Quality Assurance and Competitive Analysis">Quality Assurance and Competitive Analysis</a></li>
+                </ul>
+                </li>
+                <li role="menuitem" class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-right" aria-haspopup="true" aria-label="Enterprise Solutions">
+                <a href="/solutions/solutions_enterprise.php" title="Enterprise Solutions from ACD/Labs">Enterprise Solutions&nbsp;&nbsp;</a>
+                <ul class="vertical menu submenu is-dropdown-submenu" data-submenu="" role="menu">
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/spectrus/katalyst/" title="Katalyst: High Throughput Experimentation">Katalyst: High Throughput Experimentation</a></li>
+					<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/luminata/" title="Luminata: CMC Decision Support">Luminata: CMC Decision Support</a></li>
+					<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/metasense/" title="MetaSense: Metabolite ID Solution">MetaSense: Metabolite ID Solution</a></li>
+                    
+                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/solutions/pharma/preformulation/" title="Decision-Support for Preformulation Studies">Decision-Support for Preformulation Studies</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-label="Services and Support">
+            <a href="/support/" title="Services and Support">Services and Support</a>
+            <ul class="vertical menu submenu is-dropdown-submenu first-sub" data-submenu="" role="menu">
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/enterprise/prof_serv/" title="Professional Services">Professional Services</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/support/technicalsupport.php" title="Technical Support">Technical Support</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/support/version/" title="Current Software Version">Current Software Version</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/enterprise/automation/" title="Automation">Automation</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/enterprise/integration/" title="Integration">Integration</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/enterprise/support_matrix/" title="Support Matrix">Support Matrix</a></li>
+				<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/products/fileformats/" title="Supported Data Formats for ACD/Spectrus Products">Supported Data Formats</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/resources/knowledgebase/faqs/" title="FAQ">FAQ</a></li>
+            </ul>
+            </li>
+            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-label="Resources">
+            <a href="/resources/" title="Resource Search">Resources</a>
+            <ul class="vertical menu submenu is-dropdown-submenu first-sub" data-submenu="" role="menu">
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/resources/knowledgebase/" title="Resource Search">Resource Search</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://blog.acdlabs.com/" target="_blank" title="Blog">Blog</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/newsletters/" title="Newsletters">Newsletters</a></li>
+				<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/resources/freeware/chemsketch/" title="ChemSketch Freeware">ChemSketch Freeware</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/resources/freeware/" title="Web Applications">Web Applications</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/iupac/nomenclature/" target="_blank" title="IUPAC Blue Book">IUPAC Blue Book</a></li>
+            </ul>
+            </li>
+            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-label="About Us">
+            <a href="/company/aboutus/index.php" title="About Us">About Us</a>
+            <ul class="vertical menu submenu is-dropdown-submenu first-sub" data-submenu="" role="menu">
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/contact/" title="Contact Us">Contact Us</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/company/media/" title="Media">Media</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/company/events/" title="Events">Events</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/careers/" title="Careers">Careers</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/company/reference.php" title="Reference ACD/Labs">Reference ACD/Labs</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/company/privacypolicy.php" title="Privacy Policy">Privacy Policy</a></li>
+                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="/company/terms.php" title="Terms of Use">Terms of Use</a></li>
+            </ul>
+          </li>
+		  <!-- customer portal -->
+		  		  <!-- /customer portal -->		  
+        </ul>
+      </div>
+        <!-- Desktop Menu Ends here -->
+      </section>
+      <!-- Mobile Menu Starts here -->
+      <section class="hide-for-large">
+        <div class="title-bar" data-responsive-toggle="mobile-menu" data-hide-for="large">
+          <div class="title-bar-title" data-toggle="mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i> MENU</div>
+        </div>
+        <nav id="mobile-menu" data-animate="hinge-in-from-top hinge-out-from-top" class="fast">
+          <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>		
+            <li>
+              <a href="/products/" title="Platforms and Products">Platforms and Products</a>
+              <ul class="vertical menu sublevel-1">
+                <li><a class="subitem" href="/products/spectrus/" title="Spectrus Platform">Spectrus Platform</a></li>
+                <li><a class="subitem" href="/products/percepta/" title="Percepta Platform">Percepta Platform</a></li>
+                <li><a class="subitem" href="/products/enterprise/" title=">Management and Informatics Data">Management and Informatics Data</a></li>
+                <li><a class="subitem" href="/support/version/" title="Current Software Version">Current Software Version</a></li>
+                <li><a class="subitem" href="http://webstore.acdlabs.com/" title="ACD/Labs Web Store: Buy Online" target="_blank">Buy Online</a></li>
+                <li><a class="subitem" href="/products/" title="All Products">All Products</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/solutions/" title="Solutions">Solutions</a>
+              <ul class="vertical menu sublevel-1">
+                <li>
+                  <a>by Industry</a>
+                  <ul class="vertical menu sublevel-2">
+                   <li><a class="subitem" href="/solutions/agrochem/" title="Agrochemical">Agrochemical</a></li>
+                    <li><a class="subitem" href="/solutions/chem_mat_sci/" title="Chemicals and Material Science">Chemicals and Material Science</a></li>
+                    <li><a class="subitem" href="/solutions/cro/" title="Contract Research Organizations">Contract Research Organizations</a></li>
+                    <li><a class="subitem" href="/solutions/flavors/" title="Flavors and Fragrances">Flavors and Fragrances</a></li>
+                    <li><a class="subitem" href="/solutions/food_bev/" title="Food and Beverages">Food and Beverages</a></li>
+                    <li><a class="subitem" href="/solutions/forensics/forensictox/" title="Forensics and Doping Laboratories">Forensics and Doping Laboratories</a></li>
+                    <li><a class="subitem" href="/solutions/pharma/" title="">Pharmaceutical</a></li>
+                    <li><a class="subitem" href="/solutions/environmental/waterquality/" title="">Water and Environmental</a></li>
+                    <li><a class="subitem" href="/solutions/academia/" title="Academia">Academia</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a>by Scientific Activity</a>
+                  <ul class="vertical menu sublevel-2">
+                   <li><a class="subitem" href="/solutions/dd/" title="Drug Discovery">Drug Discovery</a></li>
+                    <li><a class="subitem" href="/solutions/km/" title="Knowledge Management">Knowledge Management</a></li>
+                    <li><a class="subitem" href="/solutions/openaccess/" title="Open Access Laboratory">Open Access Laboratory</a></li>
+                    <li><a class="subitem" href="/solutions/analysis/" title="Quality Assurance and Competitive Analysis">Quality Assurance and Competitive Analysis</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a>Enterprise Solutions</a>
+                  <ul class="vertical menu sublevel-2">
+					<li><a class="subitem" href="/solutions/metasense/" title="MetaSense: Metabolite ID Solution">MetaSense: Metabolite ID Solution</a></li>
+                    <li><a class="subitem" href="/solutions/irm/" title="Luminata: CMC Decision Support">Luminata: CMC Decision Support</a></li>
+                    <li><a class="subitem" href="/solutions/pharma/preformulation/" title="Decision-Support for Preformulation Studies">Decision-Support for Preformulation Studies</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/support/" title="Services and Support">Services and Support</a>
+              <ul class="vertical menu sublevel-1">
+                <li><a class="subitem" href="/products/enterprise/prof_serv/" title="Professional Services">Professional Services</a></li>
+                <li><a class="subitem" href="/support/technicalsupport.php" title="Technical Support">Technical Support</a></li>
+                <li><a class="subitem" href="/support/version/" title="Current Software Version">Current Software Version</a></li>
+                <li><a class="subitem" href="/products/enterprise/automation/" title="Automation">Automation</a></li>
+                <li><a class="subitem" href="/products/enterprise/integration/" title="Integration">Integration</a></li>
+                <li><a class="subitem" href="/products/enterprise/support_matrix/" title="Support Matrix">Support Matrix</a></li>
+                <li><a class="subitem" href="/resources/knowledgebase/faqs/" title="FAQ">FAQ</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/resources/" title="Resources">Resources</a>
+              <ul class="vertical menu sublevel-1">
+                <li><a class="subitem" href="/resources/knowledgebase/" title="Resource Search">Resource Search</a></li>
+                <li><a class="subitem" href="http://blog.acdlabs.com/" target="_blank" title="Blog">Blog</a></li>
+                <li><a class="subitem" href="/newsletters/" title="Newsletters">Newsletters</a></li>
+				 <li><a class="subitem" href="/resources/freeware/chemsketch/" title="ChemSketch Freeware">ChemSketch Freeware</a></li>
+                <li><a class="subitem" href="/resources/freeware/" title="Web Applications">Web Applications</a></li>
+                <li><a class="subitem" href="/iupac/nomenclature/" target="_blank" title="IUPAC Blue Book">IUPAC Blue Book</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/company/aboutus/index.php" title="About Us">About Us</a>
+              <ul class="vertical menu sublevel-1">
+                 <li><a class="subitem" href="/contact/" title="Contact Us">Contact Us</a></li>
+                <li><a class="subitem" href="/company/media/" title="Media">Media</a></li>
+                <li><a class="subitem" href="/company/events/" title="Events">Events</a></li>
+                <li><a class="subitem" href="/careers/" title="Careers">Careers</a></li>
+                <li><a class="subitem" href="/company/reference.php" title="Reference ACD/Labs">Reference ACD/Labs</a></li>
+                <li><a class="subitem" href="/company/privacypolicy.php" title="Privacy Policy">Privacy Policy</a></li>
+                <li><a class="subitem" href="/company/terms.php" title="Terms of Use">Terms of Use</a></li>
+              </ul>
+            </li>
+			<!-- customer portal -->
+		  		  <!-- /customer portal -->	
+          </ul>
+        </nav>
+      </section>
+        <!-- Mobile Menu Ends here -->
+	</header>
+    <!-- /header -->
+	
+	<section class="heading-hero">
+      <div class="row">
+        <div class="small-12 columns text-center">
+          <h1>Column Selector</h1>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="small-12 medium-12 columns">
+          <nav aria-label="You are here:" role="navigation">
+            <ul class="breadcrumbs">
+              <li><a href="/resources/">Resources</a></li> <li><a href="/resources/freeware/">Chemistry Software</a></li> <li><span class="show-for-sr">Current: </span><a href="/resources/freeware/colsel/">ACD/Column Selector</a></li>            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+	<article class="row section-padding">
+      <div class="medium-12 columns">				
+		<h2>Choose the Closest Alternative to a Given Chromatographic Column</h2>
+		
+		<p>The Column Selector application from ACD/Labs helps chromatographers select suitable alternatives to a desired chromatographic column, closely matched for retention and selectivity, based on the Tanaka chromatographic parameters. </p>
+		
+		<p>Simply select your desired column and see a list of ranked results below. Compare two columns with one another, or compare one column to the full list of available columns.</p>
+		
+		<h3>Column Selector Web Tool</h3>
+		
+		<p>Compare a column to the full list of available columns using the below form. You can also compare just two columns (optional).</p>
+		
+		<form id="columns" action="index.php" method="POST">
+			<div class="row">
+				<div class="medium-12 columns">
+										<p><b>Select Column</b>
+					<select name="column"><option value="none"><-- SELECT --></option>
+						<option value='1'>Acclaim 120 C18 3.0 &micro;m</option><option value='2'>Acclaim Mixed mode HILIC 5um</option><option value='3'>Acclaim Mixed mode WAX 5um</option><option value='4'>Acclaim Mixed mode WCX 5um</option><option value='5'>Acclaim PA C16</option><option value='6'>Acclaim PA2 C18 3.0 &micro;m</option><option value='7'>Acclaim RSLC 120 C18 2.2 &micro;m</option><option value='8'>Acclaim RSLC PA2 C18 2.2 &micro;m</option><option value='9'>Accucore C18</option><option value='10'>ACE 3 C18</option><option value='11'>ACE 3 C18-300</option><option value='12'>ACE 3 C18-AR </option><option value='13'>ACE 3 C18HL</option><option value='14'>ACE 3 C18-PFP</option><option value='15'>ACE 3 C4</option><option value='16'>ACE 3 C4-300</option><option value='17'>ACE 3 C8</option><option value='18'>ACE 3 C8-300</option><option value='19'>ACE 3 CN</option><option value='20'>ACE 3 CN-300</option><option value='21'>ACE 3 phenyl</option><option value='22'>ACE 3 Phenyl-300</option><option value='23'>ACE 5 AQ</option><option value='24'>ACE 5 C18</option><option value='25'>ACE 5 C18-300</option><option value='26'>ACE 5 C18-AR</option><option value='27'>ACE 5 C18-AR-300</option><option value='28'>ACE 5 C18-PFP</option><option value='29'>ACE 5 C18-PFP-300</option><option value='30'>ACE 5 C8</option><option value='31'>ACE 5 CN</option><option value='32'>ACE 5 phenyl</option><option value='33'>ACE 5 SuperC18 </option><option value='340'>ACE C18 2um</option><option value='324'>ACE C18-Amide 10 &micro;m</option><option value='323'>ACE C18-Amide 3 &micro;m</option><option value='322'>ACE C18-Amide 5 &micro;m</option><option value='339'>ACE C18-AR 2um</option><option value='338'>ACE C18-PFP 2um</option><option value='337'>ACE CN-ES 2um</option><option value='336'>ACE CN-ES 3um</option><option value='335'>ACE CN-ES 5um</option><option value='334'>ACE Super C18 2um</option><option value='333'>ACE Super C18 3um</option><option value='330'>ACE Ultracore Super phenyl hexyl 2.5um</option><option value='329'>ACE Ultracore Super phenyl hexyl 5um</option><option value='328'>ACE UltraCore SuperC18 2.5um</option><option value='327'>ACE UltraCore SuperC18 5um</option><option value='342'>ACME Amide C18</option><option value='343'>ACME C18 </option><option value='344'>ACME F5/C18</option><option value='345'>ACME IQ C18</option><option value='346'>ACME IQHL C18</option><option value='347'>ACME Plus</option><option value='34'>Acquity BEH C18 1.7 &micro;m</option><option value='35'>Acquity BEH C8</option><option value='36'>Acquity BEH Phenyl  1.7&micro;m</option><option value='37'>Acquity BEH Shield RP18 1.7 &micro;m</option><option value='38'>Acquity CSH C18 1.7um </option><option value='39'>Acquity CSH Fluorophenyl  1.7um</option><option value='40'>Acquity CSH Phenyl hexyl 1.7um</option><option value='41'>Acquity HSS C18 1.8 &micro;m</option><option value='42'>Acquity HSS C18 SB 1.8 &micro;m</option><option value='43'>Acquity HSS T3 1.8 &micro;m</option><option value='44'>Acquity UPLC BEH C18 130 1.7 &micro;m</option><option value='45'>Acquity UPLC BEH C18 300 1.7 &micro;m</option><option value='46'>Aeris PEPTIDE 3.6u XB-C18 </option><option value='47'>Aeris Widepore 3.6 &micro;m C4</option><option value='48'>Aeris Widepore 3.6 &micro;m XB-C18</option><option value='49'>Agilent prep LC C18</option><option value='348'>AIDA C18</option><option value='50'>Alltima HP C18</option><option value='51'>Alltima HP C18 Amide</option><option value='52'>Alltima HP C18 AQ</option><option value='53'>Alltima HP C18 EPS</option><option value='54'>Alltima HP C18 HL</option><option value='55'>Allure biphenyl</option><option value='56'>Allure C18</option><option value='57'>Allure PFP propyl</option><option value='58'>Allure phenyl</option><option value='59'>Aquasil C18</option><option value='60'>Ascentis Amide RP 3um</option><option value='61'>Ascentis Amide RP 5um</option><option value='62'>Ascentis C18</option><option value='63'>Ascentis C8</option><option value='349'>Ascentis Express Biphenyl</option><option value='64'>Ascentis Express C18</option><option value='65'>Ascentis Express C8</option><option value='66'>Ascentis Express PFP</option><option value='67'>Ascentis Express Phenyl hexyl</option><option value='68'>Ascentis Express RP-Amide</option><option value='69'>Ascentis phenyl</option><option value='70'>Astec Polymer C18</option><option value='71'>Atlantis dC18</option><option value='72'>Atlantis T3</option><option value='73'>BetaBasic C18</option><option value='74'>BetaBasic CN</option><option value='75'>BetaBasic phenyl</option><option value='76'>BetaMax Acid</option><option value='77'>BetaMax Basic (CN)</option><option value='78'>BetaMax Neutral C18</option><option value='79'>Betasil  phenyl-hexyl</option><option value='350'>BIOshell Peptide C18</option><option value='80'>Capcell Pak AQ C18</option><option value='81'>Capcell Pak MGII C18</option><option value='82'>Chromolith C18</option><option value='325'>Cortecs C18</option><option value='326'>Cortecs C18+</option><option value='83'>Cosmosil 3 C18-EB</option><option value='84'>Cosmosil 5 PYE 5um</option><option value='85'>Cosmosil cholester 5um</option><option value='86'>Cosmosil p-NAP 5um</option><option value='87'>Curosil PFP</option><option value='88'>Denali C18</option><option value='89'>Develosil ODS-MG-5</option><option value='90'>Discovery C18 </option><option value='91'>Discovery C18 HS</option><option value='92'>Discovery C8</option><option value='93'>Discovery CN</option><option value='94'>Discovery F5 HS</option><option value='95'>Discovery PEG HS</option><option value='96'>Discovery RP-amide C16 </option><option value='97'>EU Column</option><option value='98'>Fluofix (ec) </option><option value='99'>Fluofix (nec)</option><option value='100'>Fluophase PFP</option><option value='101'>Fluophase RP</option><option value='102'>FluoroSep RP Octyl</option><option value='103'>FluoroSep RP Phenyl HS</option><option value='104'>FluoroSep RP Propyl</option><option value='105'>Fortis C18 1.7 &micro;m</option><option value='106'>Fortis C18 5 &micro;m</option><option value='107'>Fortis cyano C18 2.1 &micro;m</option><option value='108'>Fortis cyano C18 5 &micro;m</option><option value='351'>Fortis Diphenyl</option><option value='109'>Fortis H2O</option><option value='110'>Fortis Phenyl</option><option value='111'>Gemini C18</option><option value='112'>Gemini NX C18</option><option value='113'>Gemini phenyl hexyl</option><option value='114'>Genesis AQ</option><option value='115'>Genesis C18</option><option value='116'>Genesis C8</option><option value='117'>Genesis CN</option><option value='118'>GraceSmart RP 18</option><option value='119'>Grom-Sil 100 ODS-2FE </option><option value='120'>Grom-Sil ODS-0 AB </option><option value='121'>Grom-Sil ODS-4 HE</option><option value='122'>Grom-Sil ODS-7 pH </option><option value='123'>HALO C18</option><option value='124'>HALO C18 Peptide (Ascentis Peptide)</option><option value='125'>Halo C8</option><option value='126'>Halo PFP</option><option value='127'>Halo RP amide</option><option value='128'>Helix STS</option><option value='332'>Hichrom C8 3.5um</option><option value='129'>Hichrom RPB</option><option value='130'>HiQ Sil C18</option><option value='131'>Hypersil 100 HS C18</option><option value='132'>Hypersil BDS C18</option><option value='133'>Hypersil BDS phenyl</option><option value='134'>Hypersil Duet Cation</option><option value='135'>Hypersil Elite C18</option><option value='136'>Hypersil GOLD</option><option value='137'>Hypersil GOLD aQ</option><option value='138'>Hypersil GOLD PFP</option><option value='139'>Hypersil Gold PFP 1.9 &micro;m</option><option value='140'>Hypersil Gold PFP 3.0 &micro;m</option><option value='141'>Hypersil GOLD phenyl 3um</option><option value='142'>Hypersil ODS</option><option value='143'>Hypersil phenyl</option><option value='144'>HyPURITY Advance (C8)</option><option value='145'>HyPURITY AQUASTAR</option><option value='146'>HyPURITY C18</option><option value='147'>HyPURITY C4</option><option value='148'>HyPURITY C8</option><option value='149'>HyPURITY CN</option><option value='150'>Inertsil CN3</option><option value='151'>Inertsil ODS</option><option value='152'>Inertsil ODS3</option><option value='153'>Inertsil phenyl</option><option value='154'>InertSustain C18</option><option value='155'>Interchrom RPX 2.2 &micro;m</option><option value='156'>J'Sphere JH ODS</option><option value='157'>Jupiter 3 &micro;m C18 300A</option><option value='158'>Kinetex  C18 1.7 &micro;m</option><option value='352'>Kinetex Biphenyl</option><option value='159'>Kinetex C18 2.6 &micro;m sp</option><option value='353'>Kinetex C8</option><option value='354'>Kinetex EVO C18</option><option value='355'>Kinetex F5</option><option value='160'>Kinetex PFP 2.6 &micro;m sp</option><option value='161'>Knaur Blue Orchid 175 1.8um C18</option><option value='162'>Knaur Blue Orchid 175 1.8um C18A</option><option value='163'>Kromasil C18</option><option value='164'>Kromasil Eternity C18 2.5 &micro;m</option><option value='165'>Kromasil Eternity C18 5.0 &micro;m</option><option value='166'>Kromasil Eternity phenyl hexyl 2.5 &micro;m</option><option value='167'>Kromasil phenyl</option><option value='168'>Lichrospher RP Select B</option><option value='169'>Lichrospher RP18</option><option value='170'>Luna C18 </option><option value='171'>Luna C18 (2)</option><option value='172'>Luna CN</option><option value='173'>Luna NH2 (tests not appropriate)</option><option value='356'>Luna Omega C18</option><option value='357'>Luna Omega Polar C18</option><option value='358'>Luna Omega PS C18</option><option value='174'>Luna PFP</option><option value='175'>Luna Phenyl-Hexyl</option><option value='176'>Magellan C18 </option><option value='177'>MetaSil Basic</option><option value='178'>MonoChrom CN</option><option value='179'>MonoChrom Diol</option><option value='180'>Monochrom MS</option><option value='181'>Novapak C18</option><option value='182'>Novapak phenyl</option><option value='183'>Nucleodur C18 ec</option><option value='184'>Nucleodur C18 Gravity 1.8 &micro;m</option><option value='185'>Nucleodur C18 Gravity 3.0 &micro;m</option><option value='186'>Nucleodur C8 Gravity</option><option value='187'>Nucleodur Isis 1.8 &micro;m</option><option value='188'>Nucleodur Isis 3um</option><option value='189'>Nucleodur Pyramid 1.8 &micro;m</option><option value='190'>Nucleodur Pyramid 3.0 &micro;m</option><option value='191'>Nucleodur Sphinx  3.0 &micro;m</option><option value='192'>Nucleodur Sphinx 1.8 &micro;m</option><option value='193'>Nucleosil 100-5 C18 HD</option><option value='194'>Nucleosil 100-5 C18 Nautilus</option><option value='195'>Nucleosil 100-5 C8 HD</option><option value='196'>Nucleosil 300-5 C18</option><option value='197'>Nucleosil C18</option><option value='198'>Omnisphere C18</option><option value='199'>Optimal ODS-L</option><option value='200'>Optimal-ODS H</option><option value='201'>Phenonemex Aqua</option><option value='202'>pHidelity C18</option><option value='203'>Pinnacle DB PFPP</option><option value='204'>Platinum C18 </option><option value='205'>Platinum C18 EPS</option><option value='206'>Polaris Amide C18</option><option value='207'>Polaris C18 A</option><option value='208'>Polaris C18 Ether</option><option value='209'>Polaris C8 Ether</option><option value='210'>Poroshell 120 EC-C18 2.7 mm</option><option value='211'>Poroshell 120 SB-C18 2.7 &micro;m</option><option value='359'>Poroshell Bonus RP</option><option value='360'>Poroshell HPH C18</option><option value='361'>Poroshell SB-Aq</option><option value='362'>PoroshellPFP</option><option value='363'>PoroshellPhenyl Hexyl</option><option value='212'>Primesep 100</option><option value='213'>Primesep 200</option><option value='214'>Primesep A</option><option value='215'>Primesep B</option><option value='216'>Prism NRP (nec)</option><option value='217'>Prism RP (ec)</option><option value='218'>Prodigy ODS2</option><option value='219'>Prodigy ODS3 </option><option value='220'>Prodigy phenyl</option><option value='221'>Prontosil C18-AQ</option><option value='222'>Purospher RP18</option><option value='223'>Purospher RP18e</option><option value='224'>Purospher STAR RP C18 2 &micro;m</option><option value='225'>Purospher STAR RP18 3 &micro;m</option><option value='226'>Purospher STAR RP18e</option><option value='227'>Pursuit C18</option><option value='228'>Pursuit Diphenyl</option><option value='229'>Pursuit PFP</option><option value='230'>Pursuit XRs C18</option><option value='231'>Pursuit XRs DP</option><option value='232'>QS Strategy C18-2</option><option value='233'>QS Uptisphere 3 HDO</option><option value='234'>QS Uptisphere 3 ODB</option><option value='235'>QS Uptisphere 5 MM1</option><option value='236'>QS Uptisphere 5 PLP</option><option value='237'>QS Uptisphere 5 TF</option><option value='238'>Resolve C18</option><option value='239'>Selectosil C18</option><option value='240'>Shimadzu Pathfinder AP</option><option value='241'>Shimadzu Pathfinder AS</option><option value='242'>Shimadzu Pathfinder MR</option><option value='364'>Shim-pack GISS C18 </option><option value='365'>Shim-pack GIST C18 </option><option value='366'>Shim-pack GIST C18-AQ </option><option value='367'>Shim-pack Scepter C18 </option><option value='368'>Shim-pack Velox C18</option><option value='243'>SMT Total coverage C18</option><option value='244'>Spherisorb A5Y</option><option value='245'>Spherisorb ODS1</option><option value='246'>Spherisorb ODS2</option><option value='247'>Spherisorb ODSB</option><option value='248'>Spherisorb phenyl</option><option value='249'>Stability 100 BS23</option><option value='250'>Summit ODS (W)</option><option value='251'>Sunfire C18 </option><option value='252'>Sunniest C18 5um</option><option value='253'>Sunshell C18 2.6um</option><option value='254'>Sunshell C8 2.6um</option><option value='255'>Sunshell PFP 2.6um</option><option value='256'>Supelcogel TR-100</option><option value='257'>Supelcosil LC18</option><option value='258'>Supelcosil LC18-DB </option><option value='259'>Supelcosil LC-ABZ</option><option value='260'>Superspher RP18e</option><option value='261'>Suplex pkb 100</option><option value='262'>Symmetry C18</option><option value='263'>Symmetry C8</option><option value='264'>Symmetry Shield RP18 </option><option value='265'>Symmetry Shield RP8</option><option value='266'>Synergi Fusion-RP</option><option value='267'>Synergi Max RP</option><option value='268'>Synergi Polar RP</option><option value='269'>Syngeri Hydro-RP</option><option value='270'>Targa C18</option><option value='331'>Titan C18</option><option value='271'>TSKGel super ODS </option><option value='272'>TSKGelODS-80TM </option><option value='273'>TSKGelODS-80TS </option><option value='274'>uBondpak C18</option><option value='275'>Ultra Aqueous C18</option><option value='276'>Ultra IBD</option><option value='277'>Ultra PFP propyl</option><option value='278'>Ultracarb ODS(30) </option><option value='279'>Ultrasphere ODS</option><option value='280'>Vydac C18 multiring </option><option value='281'>XBridge BEH C18 300 3.5 &micro;m</option><option value='282'>XBridge BEH C18 300 5 &micro;m</option><option value='283'>XBridge C18</option><option value='284'>XBridge Phenyl</option><option value='285'>XBridge Shield RP18 3.5 &micro;m</option><option value='286'>XSelect CSH C18</option><option value='287'>XSelect Fluoro phenyl</option><option value='289'>XSelect HSS C18</option><option value='290'>XSelect HSS C18 SB</option><option value='291'>XSelect HSS T3</option><option value='288'>XSelect Phenyl hexyl</option><option value='292'>XTerra MS C18</option><option value='293'>XTerra MS C8</option><option value='294'>XTerra Phenyl</option><option value='295'>XTerra RP18</option><option value='296'>XTerra RP8</option><option value='297'>YMC Basic (C8)</option><option value='298'>YMC Hydrosphere C18</option><option value='299'>YMC Triart C18</option><option value='300'>YMC-Pack ODS-AQ</option><option value='301'>YMC-Pack Pro C18 </option><option value='302'>YMC-Pack Pro C18 RS</option><option value='303'>YMC-Pack Pro C4</option><option value='304'>ZirChrom MS</option><option value='305'>ZirChrom PBD</option><option value='306'>Zorbax 300 diphenyl 1.8um</option><option value='307'>Zorbax 300 SB-C18 1.8um</option><option value='308'>Zorbax 300 SB-C3 1.8um</option><option value='309'>Zorbax Bonus-RP</option><option value='310'>Zorbax Eclipse plus C18 1.8 &micro;m</option><option value='311'>Zorbax Eclipse plus C18 3.5 &micro;m</option><option value='312'>Zorbax Eclipse XB-phenyl</option><option value='313'>Zorbax Eclipse XDB-C18</option><option value='314'>Zorbax Extend C18</option><option value='315'>Zorbax Rx C18</option><option value='316'>Zorbax SB-C18</option><option value='317'>Zorbax SB-C18 300</option><option value='318'>Zorbax SB-C3 </option><option value='319'>Zorbax SB-C8 </option><option value='320'>Zorbax SB-CN </option><option value='321'>Zorbax SB-Phenyl </option><option value='341'>Zorbax-SB Aq</option>					</select></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="medium-12 columns" style="background-color:#BBC0D0">
+				
+				<p>If you wish to compare only <b>two</b> columns to each other, choose the second column here.</p>
+				
+				<p><b>Select Column 2</b>
+				<select name="column2"><option value="none"><-- SELECT --></option>
+					<option value='1'>Acclaim 120 C18 3.0 &micro;m</option><option value='2'>Acclaim Mixed mode HILIC 5um</option><option value='3'>Acclaim Mixed mode WAX 5um</option><option value='4'>Acclaim Mixed mode WCX 5um</option><option value='5'>Acclaim PA C16</option><option value='6'>Acclaim PA2 C18 3.0 &micro;m</option><option value='7'>Acclaim RSLC 120 C18 2.2 &micro;m</option><option value='8'>Acclaim RSLC PA2 C18 2.2 &micro;m</option><option value='9'>Accucore C18</option><option value='10'>ACE 3 C18</option><option value='11'>ACE 3 C18-300</option><option value='12'>ACE 3 C18-AR </option><option value='13'>ACE 3 C18HL</option><option value='14'>ACE 3 C18-PFP</option><option value='15'>ACE 3 C4</option><option value='16'>ACE 3 C4-300</option><option value='17'>ACE 3 C8</option><option value='18'>ACE 3 C8-300</option><option value='19'>ACE 3 CN</option><option value='20'>ACE 3 CN-300</option><option value='21'>ACE 3 phenyl</option><option value='22'>ACE 3 Phenyl-300</option><option value='23'>ACE 5 AQ</option><option value='24'>ACE 5 C18</option><option value='25'>ACE 5 C18-300</option><option value='26'>ACE 5 C18-AR</option><option value='27'>ACE 5 C18-AR-300</option><option value='28'>ACE 5 C18-PFP</option><option value='29'>ACE 5 C18-PFP-300</option><option value='30'>ACE 5 C8</option><option value='31'>ACE 5 CN</option><option value='32'>ACE 5 phenyl</option><option value='33'>ACE 5 SuperC18 </option><option value='340'>ACE C18 2um</option><option value='324'>ACE C18-Amide 10 &micro;m</option><option value='323'>ACE C18-Amide 3 &micro;m</option><option value='322'>ACE C18-Amide 5 &micro;m</option><option value='339'>ACE C18-AR 2um</option><option value='338'>ACE C18-PFP 2um</option><option value='337'>ACE CN-ES 2um</option><option value='336'>ACE CN-ES 3um</option><option value='335'>ACE CN-ES 5um</option><option value='334'>ACE Super C18 2um</option><option value='333'>ACE Super C18 3um</option><option value='330'>ACE Ultracore Super phenyl hexyl 2.5um</option><option value='329'>ACE Ultracore Super phenyl hexyl 5um</option><option value='328'>ACE UltraCore SuperC18 2.5um</option><option value='327'>ACE UltraCore SuperC18 5um</option><option value='342'>ACME Amide C18</option><option value='343'>ACME C18 </option><option value='344'>ACME F5/C18</option><option value='345'>ACME IQ C18</option><option value='346'>ACME IQHL C18</option><option value='347'>ACME Plus</option><option value='34'>Acquity BEH C18 1.7 &micro;m</option><option value='35'>Acquity BEH C8</option><option value='36'>Acquity BEH Phenyl  1.7&micro;m</option><option value='37'>Acquity BEH Shield RP18 1.7 &micro;m</option><option value='38'>Acquity CSH C18 1.7um </option><option value='39'>Acquity CSH Fluorophenyl  1.7um</option><option value='40'>Acquity CSH Phenyl hexyl 1.7um</option><option value='41'>Acquity HSS C18 1.8 &micro;m</option><option value='42'>Acquity HSS C18 SB 1.8 &micro;m</option><option value='43'>Acquity HSS T3 1.8 &micro;m</option><option value='44'>Acquity UPLC BEH C18 130 1.7 &micro;m</option><option value='45'>Acquity UPLC BEH C18 300 1.7 &micro;m</option><option value='46'>Aeris PEPTIDE 3.6u XB-C18 </option><option value='47'>Aeris Widepore 3.6 &micro;m C4</option><option value='48'>Aeris Widepore 3.6 &micro;m XB-C18</option><option value='49'>Agilent prep LC C18</option><option value='348'>AIDA C18</option><option value='50'>Alltima HP C18</option><option value='51'>Alltima HP C18 Amide</option><option value='52'>Alltima HP C18 AQ</option><option value='53'>Alltima HP C18 EPS</option><option value='54'>Alltima HP C18 HL</option><option value='55'>Allure biphenyl</option><option value='56'>Allure C18</option><option value='57'>Allure PFP propyl</option><option value='58'>Allure phenyl</option><option value='59'>Aquasil C18</option><option value='60'>Ascentis Amide RP 3um</option><option value='61'>Ascentis Amide RP 5um</option><option value='62'>Ascentis C18</option><option value='63'>Ascentis C8</option><option value='349'>Ascentis Express Biphenyl</option><option value='64'>Ascentis Express C18</option><option value='65'>Ascentis Express C8</option><option value='66'>Ascentis Express PFP</option><option value='67'>Ascentis Express Phenyl hexyl</option><option value='68'>Ascentis Express RP-Amide</option><option value='69'>Ascentis phenyl</option><option value='70'>Astec Polymer C18</option><option value='71'>Atlantis dC18</option><option value='72'>Atlantis T3</option><option value='73'>BetaBasic C18</option><option value='74'>BetaBasic CN</option><option value='75'>BetaBasic phenyl</option><option value='76'>BetaMax Acid</option><option value='77'>BetaMax Basic (CN)</option><option value='78'>BetaMax Neutral C18</option><option value='79'>Betasil  phenyl-hexyl</option><option value='350'>BIOshell Peptide C18</option><option value='80'>Capcell Pak AQ C18</option><option value='81'>Capcell Pak MGII C18</option><option value='82'>Chromolith C18</option><option value='325'>Cortecs C18</option><option value='326'>Cortecs C18+</option><option value='83'>Cosmosil 3 C18-EB</option><option value='84'>Cosmosil 5 PYE 5um</option><option value='85'>Cosmosil cholester 5um</option><option value='86'>Cosmosil p-NAP 5um</option><option value='87'>Curosil PFP</option><option value='88'>Denali C18</option><option value='89'>Develosil ODS-MG-5</option><option value='90'>Discovery C18 </option><option value='91'>Discovery C18 HS</option><option value='92'>Discovery C8</option><option value='93'>Discovery CN</option><option value='94'>Discovery F5 HS</option><option value='95'>Discovery PEG HS</option><option value='96'>Discovery RP-amide C16 </option><option value='97'>EU Column</option><option value='98'>Fluofix (ec) </option><option value='99'>Fluofix (nec)</option><option value='100'>Fluophase PFP</option><option value='101'>Fluophase RP</option><option value='102'>FluoroSep RP Octyl</option><option value='103'>FluoroSep RP Phenyl HS</option><option value='104'>FluoroSep RP Propyl</option><option value='105'>Fortis C18 1.7 &micro;m</option><option value='106'>Fortis C18 5 &micro;m</option><option value='107'>Fortis cyano C18 2.1 &micro;m</option><option value='108'>Fortis cyano C18 5 &micro;m</option><option value='351'>Fortis Diphenyl</option><option value='109'>Fortis H2O</option><option value='110'>Fortis Phenyl</option><option value='111'>Gemini C18</option><option value='112'>Gemini NX C18</option><option value='113'>Gemini phenyl hexyl</option><option value='114'>Genesis AQ</option><option value='115'>Genesis C18</option><option value='116'>Genesis C8</option><option value='117'>Genesis CN</option><option value='118'>GraceSmart RP 18</option><option value='119'>Grom-Sil 100 ODS-2FE </option><option value='120'>Grom-Sil ODS-0 AB </option><option value='121'>Grom-Sil ODS-4 HE</option><option value='122'>Grom-Sil ODS-7 pH </option><option value='123'>HALO C18</option><option value='124'>HALO C18 Peptide (Ascentis Peptide)</option><option value='125'>Halo C8</option><option value='126'>Halo PFP</option><option value='127'>Halo RP amide</option><option value='128'>Helix STS</option><option value='332'>Hichrom C8 3.5um</option><option value='129'>Hichrom RPB</option><option value='130'>HiQ Sil C18</option><option value='131'>Hypersil 100 HS C18</option><option value='132'>Hypersil BDS C18</option><option value='133'>Hypersil BDS phenyl</option><option value='134'>Hypersil Duet Cation</option><option value='135'>Hypersil Elite C18</option><option value='136'>Hypersil GOLD</option><option value='137'>Hypersil GOLD aQ</option><option value='138'>Hypersil GOLD PFP</option><option value='139'>Hypersil Gold PFP 1.9 &micro;m</option><option value='140'>Hypersil Gold PFP 3.0 &micro;m</option><option value='141'>Hypersil GOLD phenyl 3um</option><option value='142'>Hypersil ODS</option><option value='143'>Hypersil phenyl</option><option value='144'>HyPURITY Advance (C8)</option><option value='145'>HyPURITY AQUASTAR</option><option value='146'>HyPURITY C18</option><option value='147'>HyPURITY C4</option><option value='148'>HyPURITY C8</option><option value='149'>HyPURITY CN</option><option value='150'>Inertsil CN3</option><option value='151'>Inertsil ODS</option><option value='152'>Inertsil ODS3</option><option value='153'>Inertsil phenyl</option><option value='154'>InertSustain C18</option><option value='155'>Interchrom RPX 2.2 &micro;m</option><option value='156'>J'Sphere JH ODS</option><option value='157'>Jupiter 3 &micro;m C18 300A</option><option value='158'>Kinetex  C18 1.7 &micro;m</option><option value='352'>Kinetex Biphenyl</option><option value='159'>Kinetex C18 2.6 &micro;m sp</option><option value='353'>Kinetex C8</option><option value='354'>Kinetex EVO C18</option><option value='355'>Kinetex F5</option><option value='160'>Kinetex PFP 2.6 &micro;m sp</option><option value='161'>Knaur Blue Orchid 175 1.8um C18</option><option value='162'>Knaur Blue Orchid 175 1.8um C18A</option><option value='163'>Kromasil C18</option><option value='164'>Kromasil Eternity C18 2.5 &micro;m</option><option value='165'>Kromasil Eternity C18 5.0 &micro;m</option><option value='166'>Kromasil Eternity phenyl hexyl 2.5 &micro;m</option><option value='167'>Kromasil phenyl</option><option value='168'>Lichrospher RP Select B</option><option value='169'>Lichrospher RP18</option><option value='170'>Luna C18 </option><option value='171'>Luna C18 (2)</option><option value='172'>Luna CN</option><option value='173'>Luna NH2 (tests not appropriate)</option><option value='356'>Luna Omega C18</option><option value='357'>Luna Omega Polar C18</option><option value='358'>Luna Omega PS C18</option><option value='174'>Luna PFP</option><option value='175'>Luna Phenyl-Hexyl</option><option value='176'>Magellan C18 </option><option value='177'>MetaSil Basic</option><option value='178'>MonoChrom CN</option><option value='179'>MonoChrom Diol</option><option value='180'>Monochrom MS</option><option value='181'>Novapak C18</option><option value='182'>Novapak phenyl</option><option value='183'>Nucleodur C18 ec</option><option value='184'>Nucleodur C18 Gravity 1.8 &micro;m</option><option value='185'>Nucleodur C18 Gravity 3.0 &micro;m</option><option value='186'>Nucleodur C8 Gravity</option><option value='187'>Nucleodur Isis 1.8 &micro;m</option><option value='188'>Nucleodur Isis 3um</option><option value='189'>Nucleodur Pyramid 1.8 &micro;m</option><option value='190'>Nucleodur Pyramid 3.0 &micro;m</option><option value='191'>Nucleodur Sphinx  3.0 &micro;m</option><option value='192'>Nucleodur Sphinx 1.8 &micro;m</option><option value='193'>Nucleosil 100-5 C18 HD</option><option value='194'>Nucleosil 100-5 C18 Nautilus</option><option value='195'>Nucleosil 100-5 C8 HD</option><option value='196'>Nucleosil 300-5 C18</option><option value='197'>Nucleosil C18</option><option value='198'>Omnisphere C18</option><option value='199'>Optimal ODS-L</option><option value='200'>Optimal-ODS H</option><option value='201'>Phenonemex Aqua</option><option value='202'>pHidelity C18</option><option value='203'>Pinnacle DB PFPP</option><option value='204'>Platinum C18 </option><option value='205'>Platinum C18 EPS</option><option value='206'>Polaris Amide C18</option><option value='207'>Polaris C18 A</option><option value='208'>Polaris C18 Ether</option><option value='209'>Polaris C8 Ether</option><option value='210'>Poroshell 120 EC-C18 2.7 mm</option><option value='211'>Poroshell 120 SB-C18 2.7 &micro;m</option><option value='359'>Poroshell Bonus RP</option><option value='360'>Poroshell HPH C18</option><option value='361'>Poroshell SB-Aq</option><option value='362'>PoroshellPFP</option><option value='363'>PoroshellPhenyl Hexyl</option><option value='212'>Primesep 100</option><option value='213'>Primesep 200</option><option value='214'>Primesep A</option><option value='215'>Primesep B</option><option value='216'>Prism NRP (nec)</option><option value='217'>Prism RP (ec)</option><option value='218'>Prodigy ODS2</option><option value='219'>Prodigy ODS3 </option><option value='220'>Prodigy phenyl</option><option value='221'>Prontosil C18-AQ</option><option value='222'>Purospher RP18</option><option value='223'>Purospher RP18e</option><option value='224'>Purospher STAR RP C18 2 &micro;m</option><option value='225'>Purospher STAR RP18 3 &micro;m</option><option value='226'>Purospher STAR RP18e</option><option value='227'>Pursuit C18</option><option value='228'>Pursuit Diphenyl</option><option value='229'>Pursuit PFP</option><option value='230'>Pursuit XRs C18</option><option value='231'>Pursuit XRs DP</option><option value='232'>QS Strategy C18-2</option><option value='233'>QS Uptisphere 3 HDO</option><option value='234'>QS Uptisphere 3 ODB</option><option value='235'>QS Uptisphere 5 MM1</option><option value='236'>QS Uptisphere 5 PLP</option><option value='237'>QS Uptisphere 5 TF</option><option value='238'>Resolve C18</option><option value='239'>Selectosil C18</option><option value='240'>Shimadzu Pathfinder AP</option><option value='241'>Shimadzu Pathfinder AS</option><option value='242'>Shimadzu Pathfinder MR</option><option value='364'>Shim-pack GISS C18 </option><option value='365'>Shim-pack GIST C18 </option><option value='366'>Shim-pack GIST C18-AQ </option><option value='367'>Shim-pack Scepter C18 </option><option value='368'>Shim-pack Velox C18</option><option value='243'>SMT Total coverage C18</option><option value='244'>Spherisorb A5Y</option><option value='245'>Spherisorb ODS1</option><option value='246'>Spherisorb ODS2</option><option value='247'>Spherisorb ODSB</option><option value='248'>Spherisorb phenyl</option><option value='249'>Stability 100 BS23</option><option value='250'>Summit ODS (W)</option><option value='251'>Sunfire C18 </option><option value='252'>Sunniest C18 5um</option><option value='253'>Sunshell C18 2.6um</option><option value='254'>Sunshell C8 2.6um</option><option value='255'>Sunshell PFP 2.6um</option><option value='256'>Supelcogel TR-100</option><option value='257'>Supelcosil LC18</option><option value='258'>Supelcosil LC18-DB </option><option value='259'>Supelcosil LC-ABZ</option><option value='260'>Superspher RP18e</option><option value='261'>Suplex pkb 100</option><option value='262'>Symmetry C18</option><option value='263'>Symmetry C8</option><option value='264'>Symmetry Shield RP18 </option><option value='265'>Symmetry Shield RP8</option><option value='266'>Synergi Fusion-RP</option><option value='267'>Synergi Max RP</option><option value='268'>Synergi Polar RP</option><option value='269'>Syngeri Hydro-RP</option><option value='270'>Targa C18</option><option value='331'>Titan C18</option><option value='271'>TSKGel super ODS </option><option value='272'>TSKGelODS-80TM </option><option value='273'>TSKGelODS-80TS </option><option value='274'>uBondpak C18</option><option value='275'>Ultra Aqueous C18</option><option value='276'>Ultra IBD</option><option value='277'>Ultra PFP propyl</option><option value='278'>Ultracarb ODS(30) </option><option value='279'>Ultrasphere ODS</option><option value='280'>Vydac C18 multiring </option><option value='281'>XBridge BEH C18 300 3.5 &micro;m</option><option value='282'>XBridge BEH C18 300 5 &micro;m</option><option value='283'>XBridge C18</option><option value='284'>XBridge Phenyl</option><option value='285'>XBridge Shield RP18 3.5 &micro;m</option><option value='286'>XSelect CSH C18</option><option value='287'>XSelect Fluoro phenyl</option><option value='289'>XSelect HSS C18</option><option value='290'>XSelect HSS C18 SB</option><option value='291'>XSelect HSS T3</option><option value='288'>XSelect Phenyl hexyl</option><option value='292'>XTerra MS C18</option><option value='293'>XTerra MS C8</option><option value='294'>XTerra Phenyl</option><option value='295'>XTerra RP18</option><option value='296'>XTerra RP8</option><option value='297'>YMC Basic (C8)</option><option value='298'>YMC Hydrosphere C18</option><option value='299'>YMC Triart C18</option><option value='300'>YMC-Pack ODS-AQ</option><option value='301'>YMC-Pack Pro C18 </option><option value='302'>YMC-Pack Pro C18 RS</option><option value='303'>YMC-Pack Pro C4</option><option value='304'>ZirChrom MS</option><option value='305'>ZirChrom PBD</option><option value='306'>Zorbax 300 diphenyl 1.8um</option><option value='307'>Zorbax 300 SB-C18 1.8um</option><option value='308'>Zorbax 300 SB-C3 1.8um</option><option value='309'>Zorbax Bonus-RP</option><option value='310'>Zorbax Eclipse plus C18 1.8 &micro;m</option><option value='311'>Zorbax Eclipse plus C18 3.5 &micro;m</option><option value='312'>Zorbax Eclipse XB-phenyl</option><option value='313'>Zorbax Eclipse XDB-C18</option><option value='314'>Zorbax Extend C18</option><option value='315'>Zorbax Rx C18</option><option value='316'>Zorbax SB-C18</option><option value='317'>Zorbax SB-C18 300</option><option value='318'>Zorbax SB-C3 </option><option value='319'>Zorbax SB-C8 </option><option value='320'>Zorbax SB-CN </option><option value='321'>Zorbax SB-Phenyl </option><option value='341'>Zorbax-SB Aq</option>				</select></p>
+				</div>
+			</div>
+			<div class="row text-center">	
+				<p><b>Weight Values<br/>(Tanaka chromatographic parameter descriptions)</b></p>
+				<div class="medium-2 columns"><label>k<sub>PB</sub>: <input type="text" name="kPB_weight" size="5" value="1.00"> </label></div>
+				<div class="medium-2 columns"><label>&alpha;<sub>CH2</sub>: <input type="text" name="aCH2_weight" size="5" value="1.00">  </label></div>
+				<div class="medium-2 columns"><label>&alpha;<sub>T/O</sub>: <input type="text" name="aTO_weight" size="5" value="1.00">  </label></div>
+				<div class="medium-2 columns"><label>&alpha;<sub>C/P</sub>: <input type="text" name="aCP_weight" size="5" value="1.00">  </label></div>
+				<div class="medium-2 columns"><label>&alpha;<sub>B/P</sub> pH 7.6: <input type="text" name="aBP76_weight" size="5" value="1.00">  </label></div>
+				<div class="medium-2 columns"><label>&alpha;<sub>B/P</sub> pH 2.7: <input type="text" name="aBP27_weight" size="5" value="1.00">  </label></div>
+			</div>
+			<div class="text-center"><input type="submit" class="button" /></div>
+		</form>
+	
+		<hr>
+		
+		<h3>Usage Tips</h3>
+		
+		<p>To increase the number of similar columns, set the weight for hydrophobic retention to zero (k<sub>PB</sub> = 0). The proportion of organic modifier in the mobile phase must be adjusted to compensate for differences in retention between the original and the new column. If the chromatography is being performed at low pH it may be appropriate to set the &alpha;<sub>B/P</sub> at pH 7.6 parameter to zero in order to deselect this term.</p>
+		
+		<p>Columns that possess low chromatographic discrimination factors to the original column (i.e. CDF &lt;1) will possess similar chromatographic properties. Whereas, in the method development arena, columns with large CDF values (&gt;1) will possess large differences in selectivity (and/or retention) to the original column.</p>
+		
+		<p><b>Tanaka chromatographic parameter descriptions</b></p>
+		<p><b>k<sub>PB</sub></b> reflects the hydrophobic retention and surface area of the column<br/>
+				<b>&alpha;<sub>CH2</sub></b> reflects the hydrophobicity of the column<br/>
+				<b>&alpha;<sub>T/O</sub></b> reflects steric selectivity (a column with a high value is different from one with a low value however it is not possible to state which will give the largest selectivity between two analytes)<br/>
+				<b>&alpha;<sub>C/P</sub></b> reflects the H-bonding capacity of a column<br/>
+				<b>&alpha;<sub>B/P</sub></b> at pH 7.6 reflects the total number of free silanol groups on the column<br/>
+				<b>&alpha;<sub>B/P</sub></b> at pH 2.7 reflects the number of acidic silanol groups on the column</p>
+				
+				<!--<p>One chromatographic column can be characterized in just one day. Detailed instructions for performing the experiments, with the readily-available samples, 
+		are <a href="/download/docs/colsel_instructions.zip">available for download</a>. When replying, users are invited to use the Excel calculation spreadsheet included with 
+		the package, and e-mail the results to <a href="mailto:columnselector@acdlabs.com?subject=Column%20Selector%20Contribution">columnselector@acdlabs.com</a>.</p>-->
+		
+		<h3>References</h3>
+		
+		<p>
+		<ol>
+			<li>M.R. Euerby and P. Petersson. (<b>2003</b>). Chromatographic classification and comparison of commercially available reversed-phase liquid chromatographic columns using principal component analysis. <i>J. Chromatogr. A, 994</i>, 13-36.</li>
+			<li>M.R. Euerby, A.P. McKeown and P. Petersson. (<b>2003</b>). Chromatographic classification and comparison of commercially available perfluorinated stationary phases for reversed-phase liquid chromatography using principal component analysis. <i>J. Sep. Sci., 26</i>, 295-306.</li>
+			<li>P. Petersson, M.R. Euerby. (<b>2005</b>). An evaluation of the robustness of the Tanaka characterization protocol for reversed-phase liquid chromatography columns. <i>J. Sep. Sci., 28</i>, 2120-2129.</li>
+			<li>M.R. Euerby, P. Petersson. (<b>2005</b>). Chromatographic classification and comparison of commercially available reversed-phase liquid chromatographic columns containing polar embedded groups/amino endcappings using principal component analysis. <i>J. Chromatogr. A, 1088</i>, 1-15.</li>
+			<li>P. Petersson, M.R. Euerby. (<b>2007</b>). Characterisation of RPLC columns packed with porous sub-2 &micro;m particles. <i>J. Sep. Sci., 30,</i> 2012-2024.</li>
+			<li>M.R. Euerby, P. Petersson, W. Campbell, W. Roe. (<b>2007</b>). Chromatographic classification and comparison of commercially available reversed-phase liquid chromatographic columns containing phenyl moieties using principal component analysis. <i>J. Chromatogr. A, 1154</i>, 138-151.</li>
+			<li>C. Markopoulou, T. Tweedlie, D. Watson, G. Skellern, H. Reda, P. Petersson, H. Bradstock, M.R. Euerby. (<b>2009</b>). A Study of the Relative Importance of Lipophilic, pi-pi and Dipole&ndash;Dipole Interactions on Cyanopropyl, Phenyl and Alkyl LC Phases Bonded onto the Same Base Silica. <i>Chromatographia, 70,</i> 705&ndash;715.</li>
+			<li>M.R. Euerby, M. James, B-O. Axelsson, O. Ros&eacute;n, P. Petersson. (<b>2012</b>). Validation of the extended Tanaka column characterization protocol by multivariate analysis of chromatographic retention of low molecular weight analytes on reversed phase columns using methanol and acetonitrile as organic modifiers. <i>J. Sep. Sci., 35</i>, 2592&ndash;2598.</li>
+			<li>M.R. Euerby, M. James, P. Petersson. (<b>2012</b>). Practical Implications of the "Tanaka" Stationary Phase Characterization Methodology using Ultra High Performance Chromatographic Conditions. <i>J. Chromatogr. A, 1228</i>, 165-174.</li>
+		</ol>
+		</p>
+		
+		</div>
+	</article>		
+					
+	<!-- footer -->
+		<!--begin pageFooter-->
+
+<section class="section-padding resources">
+  <div class="row">
+	<div class="medium-12 columns">
+			<div class="text-center">
+				<h2>Additional Resources</h2>
+			</div>
+			<div class="row">
+				<div class="medium-6 columns">
+				  <h3><i class="fa fa-book" aria-hidden="true"></i> Resources</h3>
+				  <ul>
+				  
+					<li>Article: <a href='http://onlinelibrary.wiley.com/doi/10.1002/jssc.201200261/abstract' target='_blank'>Validation of the extended Tanaka column characterization protocol by multivariate analysis...</a>, M R Euerby<i> et al.</i></li><li>Article: <a href='http://www.sciencedirect.com/science/article/pii/S0021967311008016' target='_blank'>Practical implications of the "Tanaka" stationary phase characterization methodology using ultra high performance liquid chromatographic conditions</a>, M R Euerby<i> et al.</i></li><li>Article: <a href='http://link.springer.com/article/10.1365/s10337-009-1224-7' target='_blank'>A Study of the Relative Importance of Lipophilic, pi-pi and Dipole-Dipole Interactions on Cyanopropyl, Phenyl and Alkyl HPLC Phases Bonded onto the same Base Silica</a>,  C. Markopoulou<i> et al.</i></li>					</ul>
+				</div>
+ <!--<div class="medium-4 columns">
+		  <h3><i class="fa fa-calendar" aria-hidden="true"></i> Events</h3>
+		  <ul>
+		  
+		   </ul>
+		</div>-->
+					</ul>
+		</div>
+		
+		
+				<!--<div class="floatRight" style="padding-top:2px;">
+									</div>-->
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--/pageFooter-->
+	
+    <!-- /footer -->
+	
+	<!-- footer -->
+		<!-- 2013-09-23 SM: Remember to comment out Google code on live site -->
+ <footer class="site-footer" role="contentinfo">
+      <section class="footer-block section-padding">
+        <div class="row">
+          <div class="small-12 medium-3 columns">
+            <h5>Platforms and Products</h5>
+            <ul>
+              <li><a href="/products/spectrus/">Spectrus Platform</a></li>
+              <li><a href="/products/percepta/">Percepta Platform</a></li>
+              <li><a href="/products/enterprise/">Data Management and Informatics</a></li>
+            </ul>
+            <h5>Resources</h5>
+            <ul>
+              <li><a href="/resources/knowledgebase/">Resource Library</a></li>
+              <li><a href="/resources/freeware/">Software Downloads</a></li>
+              <li><a href="/resources/ilab">ACD/I-Lab</a></li>
+              <li><a href="/iupac/">IUPAC Nomenclature</a></li>
+            </ul>
+          </div>
+          <div class="small-12 medium-3 columns">
+            <h5>Solutions</h5>
+            <div class="row">
+              <div class="small-12 medium-12 columns">
+                <p class="heading">by Industry</p>
+                <ul>
+                  <li><a href="/solutions/agrochem/">Agrochemical</a></li>
+                  <li><a href="/solutions/chem_mat_sci/">Chemicals and Material Science</a></li>
+                  <li><a href="/solutions/cro/">Contract Research Organizations</a></li>
+                  <li><a href="/solutions/flavors/">Flavors and Fragrances</a></li>
+                  <li><a href="/solutions/food_bev/">Food and Beverages</a></li>
+                  <li><a href="/solutions/forensics/forensictox/">Forensics and Doping Laboratories</a></li>
+                  <li><a href="/solutions/pharma/">Pharmaceutical</a></li>
+                  <li><a href="/solutions/environmental/waterquality/">Water and Environmental</a></li>
+                  <li><a href="/solutions/academia/">Academia</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-12 columns">
+                <p class="heading">by Scientific Activity</p>
+                <ul>
+                  <li><a href="/solutions/dd/">Drug Discovery</a></li>
+                  <li><a href="/solutions/km/">Knowledge Management</a></li>
+                  <li><a href="/solutions/openaccess/">Open Access Laboratory</a></li>
+                  <li><a href="/solutions/analysis/">Quality Assurance and Competitive Analysis</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="small-12 medium-3 columns">
+            <h5>Enterprise Solutions</h5>
+            <ul>
+              <li><a href="/products/spectrus/katalyst/">Katalyst</a></li>
+			  <li><a href="/solutions/luminata/">Luminata</a></li>
+			  <li><a href="/solutions/metasense/">MetaSense</a></li>
+              <li><a href="/solutions/pharma/preformulation/">Decision-Support for Preformulation Studies</a></li>
+            </ul>
+            <h5>Services and Support</h5>
+            <ul>
+              <li><a href="/products/enterprise/">Data Management and Informatics</a></li>
+              <li><a href="/support/version/">Current Software Version</a></li>
+              <li><a href="/support/technicalsupport.php">Technical Support</a></li>
+            </ul>
+          </div>
+          <div class="small-12 medium-3 columns">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="/company/media/">Media Room</a></li>
+              <li><a href="/company/events/">Events and Seminars</a></li>
+              <li><a href="/careers/">Careers</a></li>
+              <li><a href="/company/aboutus/">About Us</a></li>
+              <li><a href="/contact/">Contact Us</a></li>
+            </ul>
+            <h5>ACD/Labs Store</h5>
+            <ul>
+              <li><a href="http://webstore.acdlabs.com/">Buy Online</a></li>
+            </ul>
+            <a href="/account/login.php">
+              <span class="fa-stack">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-sign-in-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
+              </span> Login</a> | <a href="/account/logout.php?redirect=/index.php">Logout</a><br>
+            <a href="/account/register.php">
+              <span class="fa-stack">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-user-plus fa-stack-1x fa-inverse" aria-hidden="true"></i>
+              </span>
+              Register
+            </a>
+            <hr>
+            <!-- Start Social Bar -->
+            <ul class="social-bar">
+              <li>
+                <a href="https://www.facebook.com/acdlabs/" target="_blank">
+                  <span class="fa-stack">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.linkedin.com/company/acdlabs" target="_blank">
+                  <span class="fa-stack">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="http://twitter.com/ACDLabs/" target="_blank">
+                  <span class="fa-stack">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="http://www.youtube.com/user/ACDLabsInc/" target="_blank">
+                  <span class="fa-stack">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.acdlabs.com/" target="_blank">
+                  <span class="fa-stack">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <!-- End Social Bar -->
+          </div>
+        </div>
+      </section>
+      <section class="credits">
+        <div class="row">
+          <div class="small-12 medium-12 columns text-center ">
+            <p>&copy; 1996&ndash;2020 Advanced Chemistry Development | <a href="/company/terms.php">Terms of Use</a> | <a href="/company/privacypolicy.php">Privacy Policy</a></p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script onload="$(document).foundation();" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
+<!-- 2018-06-20: Added Equalizer for equal card height -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.equalizer.min.js"></script>
+<!--end equalizer -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+<!--<script src="/js/jquery.magnific-popup.js"></script>-->
+<script src="/js/toggleDiv.js?v=1.1"></script>
+<script src="/scripts/html5lightbox.js"></script>
+<script src="/scripts/main.js"></script>
+<script src="/js/javascript.js?v=1.3"></script>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','n3i1rasGDnf7xTw9sa9b','2.0.0');
+</script>
+
+<!-- LinkedIn Insight -->
+<script type="text/javascript">
+_linkedin_partner_id = "177465";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=177465&fmt=gif" />
+</noscript>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MW3Z3W2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript">__sf_config = {
+customer_id: 96815,
+host: 'emails.acdlabs.com',
+ip_privacy: 0,
+subsite: '',
+
+__img_path: "/web-next.gif?"
+};
+
+(function() {
+var s = function() {
+var e, t;
+var n = 10;
+var r = 0;
+e = document.createElement("script");
+e.type = "text/javascript";
+e.async = true;
+e.src = "//" + __sf_config.host + "/js/frs-next.js";
+t = document.getElementsByTagName("script")[0];
+t.parentNode.insertBefore(e, t);
+var i = function() {
+if (r < n) {
+r++;
+if (typeof frt !== "undefined") {
+frt(__sf_config);
+} else {
+setTimeout(function() { i(); }, 500);
+}
+}
+};
+i();
+};
+if (window.attachEvent) {
+window.attachEvent("onload", s);
+} else {
+window.addEventListener("load", s, false);
+}
+})();
+</script>
+
+<div style="display:none">
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script></div>	
+    <!-- /footer -->
+	<script type="text/javascript">
+	setStates(document.userInfo.country.options[document.userInfo.country.selectedIndex].value, '');
+</script>
+</body>
+</html>		

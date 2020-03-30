@@ -1,0 +1,81 @@
+<html><head><title>CAPS Database</title><meta name="description" content="CAPS-DB: Database of annotated hot-spot in protein interfaces"/><meta content="CAPS , Narcis Fernandez-Fuentes, University of Leeds, protein complexes, LIMM" name="keywords"/><link type="image/x-icon" href="" rel="shortcut icon"/><link href="/CAPSDB//PANEL/CSS/fonts-min.css" type="text/css" rel="stylesheet"></link>
+<link href="/CAPSDB//PANEL/CSS/container.css" type="text/css" rel="stylesheet"></link>
+<link href="/CAPSDB//PANEL/CSS/resize.css" type="text/css" rel="stylesheet"></link>
+<link href="/CAPSDB//PANEL/CSS/panel.css" type="text/css" rel="stylesheet"></link>
+<script src="/CAPSDB//PANEL/JS/utilities.js" type="text/javascript"></script>
+<script src="/CAPSDB//PANEL/JS/container.js" type="text/javascript"></script>
+<script src="/CAPSDB//PANEL/JS/resize.js" type="text/javascript"></script>
+<script src="/CAPSDB//PANEL/JS/panel.js" type="text/javascript"></script>
+<script src="/CAPSDB//PANEL/JS/panel_contact.js" type="text/javascript"></script>
+<script src="/CAPSDB/JMOL/Jmol.js"></script>
+<script src="/CAPSDB//JS/jmol_functions.js"></script>
+<script src="/CAPSDB//JS/ajaxBrowse.js"></script>
+<script src="/CAPSDB//JS/response.js"></script>
+<script src="/CAPSDB//JS/http_request.js" type="text/javascript"></script>
+<script>
+jmolInitialize("/CAPSDB/JMOL",1);
+jmolCheckBrowser("popup","browsercheck","onClick");
+var pdb_file="";
+var jmol_panel_path="/CAPSDB/JMOL";
+</script>
+<style type="text/css">
+		.bd {
+			overflow:auto;
+			background-color:#fff;
+			padding:10px;
+		}
+		.ft {
+			height:15px;
+			padding:0;
+		}
+		.yui-resize-handle-br {
+			right:0;
+			bottom:0;
+			height: 8px;
+			width: 8px;
+		position:absolute;
+		}
+		.hide-scrollbars .yui-resize .bd {
+			overflow: hidden;
+		}
+
+		.show-scrollbars .yui-resize .bd {
+			overflow: auto;
+		}
+
+		.show-scrollbars .underlay {
+			overflow: visible;
+		}
+</style><link type="text/css" rel="stylesheet" href="/CAPSDB//CSS/response.css"/><script type="text/javascript"></script></head><body ><div class="body_div" ><div class="header_div" ><div class="title_div" ><span class="caps_title" >CAPS</span> <i>Database</i></div><div class="subtitle_div" ><a href="http://www.bioinsilico.org" >@ bioinsilico /dot/ org</a></div></div><div class="response_div" ><form onSubmit="return eval_fields();" name="mf" action="/cgi-bin/CAPSDB/searchCAPS" method="post"><div style="position:relative;" class="can_pathway" ><span class="pathway" ><a href="/cgi-bin/CAPSDB/staticHTML/home" >Home</a></span><span class="pathway" ><a href="/cgi-bin/CAPSDB/staticHTML/browse" >Browse</a></span><span class="pathway" ><a href="/cgi-bin/CAPSDB/staticHTML/query" >Search</a></span><span class="pathway" ><a href="/cgi-bin/CAPSDB/staticHTML/blast_query" >BLAST</a></span><span class="pathway" ><a href="/cgi-bin/CAPSDB/staticHTML/help" >Help</a></span><span class="pathway" ><a href="/cgi-bin/CAPSDB/staticHTML/disclaimer" >Disclaimer</a></span><span style="position:absolute;padding-right:5px;right:0px;" class="pathway" ><input value="Query by PDB code" style="font-size:10px;height:20px;" type="submit"  /><input style="font-size:10px;height:18px;width:45px;" name="pdb" type="text" id="pdb_id"  /></span></div></form><div class="center" ><br/><div class="introduction_div" ><div id="info_home">
+  <h3_main>
+  <br/>
+    Welcome to <b>CAPS</b> - Database (CAPS-DB). CAPS-DB is a structural classification of helix-cappings or caps compiled from protein structures.
+	 Caps extracted from protein structures have been structurally classified based on geometry and conformation and organized in a tree-like hierarchical 
+    classification where the different levels correspond to different properties of the caps. CASP-DB is fully browsable and searchable and is regularly updated.  
+	<br/><br/>
+	More information regarding database contents, functionalities and clustering process is available at the <a href="http://www.bioinsilico.org/cgi-bin/CAPSDB/staticHTML/help">help</a> webpage.
+	If you are a new user please read the <a href="http://www.bioinsilico.org/cgi-bin/CAPSDB/staticHTML/disclaimer">disclaimer</a> before using the database.
+   </h3_main> 
+   <h3_main>
+   <br/>
+	<br/>
+   </h3_main> 
+
+     <div align="right">
+      <div id="info_box">
+       <b>CapsDB v5.0</b><br/> 
+	 <ul>
+	  <li>PDB structures:  7390
+ <a href="http://www.bioinsilico.org/CAPSDB/list_pdbs">(List of PDB codes)</a> </li>
+	  <li>Number of clusters: 1627
+ </li>
+	  <li>Number of caps: 67530
+ </li>
+	 </ul>
+	 <div align="left"><h6><a href="/CAPSDB/OLD_RELEASES" >Download current and old releases</a></h6></div>
+         <div align="right"><h6>(CAPS-DB was last updated on <i><b>December 2014</b></i>)</h6></div>
+      </div>
+     </div>
+	<!-- <a href="/CAPSDB/OLD_RELEASES" >Download full database</a> -->
+
+</div></div></div></div><div class="footer_div" ><hr/><h5 >Finding it useful? Please cite the database<a href="http://www.ncbi.nlm.nih.gov/pubmed/22021380/" ><img src="/CAPSDB//IMG/pubmed.png" height="12" border="0"  /></a></h5></div></div></body></html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title> CAMEO - Continuous Automated Model Evaluation - Welcome </title>
+<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/static/css/vendor/bootstrap/css/bootstrap.css?4.0" />
+<link rel="stylesheet" type="text/css" href="/static/css/vendor/bootstrap/css/bootstrap-theme.css?4.0" />
+<link rel="stylesheet" type="text/css" href="/static/css/print.css?4.0" media="print" />
+<link rel="stylesheet" type="text/css" href="/static/css/vendor/jquery-ui/css/smoothness/jquery-ui.min.css?4.0" />
+<link rel="stylesheet" type="text/css" href="/static/css/vendor/data-tables/datatables.min.css?4.0" media="screen" />
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?4.0" media="screen" />
+
+
+<script type="text/javascript" src="/static/js/vendor/jquery/jquery-2.2.4.min.js?4.0"></script>
+<script type="text/javascript" src="/static/js/vendor/data-tables/datatables.min.js?4.0"></script>
+
+<script type="text/javascript" src="/static/js/script.js?4.0"></script>
+<script type="text/javascript" src="/static/js/plots/server_performance.js?4.0"></script>
+
+
+
+
+
+</head>
+<body id="body">
+<div class="wrapper">
+  <noscript>
+    <div class="alert alert-danger text-center"><strong>Please activate Javascript in your Browser, thank you.</strong></div>
+  </noscript>
+    <header id="header" class="bg-redimg">
+    <div class="hcontent clearfix">
+      <div class="hname"><h1><a href="/">CAMEO<span>Continuous Automated Model EvaluatiOn</span></a></h1></div>
+      <div class="hlogo"><img src="/static/img/logo-pmp.png" width="157" height="60" alt="Logo" /></div>
+    </div>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid bg-nav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!--<div class="navbar-header">-->
+          <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">-->
+            <!--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">-->
+              <!--Menu-->
+            <!--</a>-->
+          <!--</button>-->
+        <!--</div>-->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar">
+              
+              <ul class="nav navbar-nav mt-2 mt-lg-0">
+                
+                
+                <li class=""><a href="/">Home</a></li>
+                
+                <li class="modeling "><a href="/sp/3-months/">3D - Protein Structure</a></li>
+                <li class="quality_estimation "><a href="/quality-estimation/">QE - Model Quality Estimation</a></li>
+                
+                <li class="nav-item dropdown ">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdownCategories" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class=""><a href="/sp/">3D - Protein Structure</a></li>
+                    <li class=""><a href="/quality-estimation/">QE - Model Quality Estimation</a></li>
+                    
+                      <li class=""><a href="http://beta.cameo3d.org/complete_modeling/">CM - Complete Modeling - BETA</a></li>
+                    
+                    <li class=""><a href="/cp/">CP - Contact Prediction - DISCONTINUED</a></li>
+                    <li class=""><a href="/lb/">LB - Ligand Binding - DISCONTINUED</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown ">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                    More
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class=""><a href="/cameong_help/">Help</a></li>
+                    <li class=""><a href="/cameong_registration/">Registration</a></li>
+                    <li class=""><a href="/cameong_servers/home/">Server List</a></li>
+                    <li class=""><a href="/cameong_faq/">FAQ</a></li>
+                    <li class=""><a href="/cameong_contact/">Contact</a></li>
+                    <li class=""><a href="/cameong_terms/">Terms Of Use</a></li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+              <div id="login-slider">
+              
+                <button class="btn btn-login-wrapper btn-small btn-primary">Login <i class="glyphicon glyphicon-plus-sign"></i></button>
+                <div class="login-wrapper">
+                  <div class="login-form">
+                    <div class="crm-login-form">
+                      <div id="msg"></div>
+                      <form accept-charset="utf-8" method="post" action="" class="form-inline login-form validate-form-login">
+                        <input type='hidden' name='csrfmiddlewaretoken' value='rl8qmnBHE6p1Q9u7nh7xdQ4It2fDXsEdLJMFKaYSZzTkfeWV0SVqNyCNuQaafw2c' />
+                        <input id="email" type="email" required="" placeholder="Email" class="form-control email-login input-medium user-error" name="email">
+                        <input id="password" type="password" required="" placeholder="Password" class="form-control password-login input-medium user-error" name="password">
+                        <button style="margin-bottom:0px;" type="submit" class="btn btn-small btn-primary btn-go btn-login" data-url="/cameong_login/" name="login"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                        <p class="error-msg"></p>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid main">
+      
+      
+
+    <h1 class="page_title"> CAMEO <small>continuously evaluate the accuracy and reliability of predictions</small></h1>
+
+    
+
+    <div class="row access-grid">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="text-center clickable thumbnail modeling" onclick="window.location='/sp/3-months/'" style="">
+            <span class="title">3D - Protein Stucture</span>
+            
+             <strong>429</strong> weeks,
+             <strong>7671</strong> targets,
+             <strong>47</strong> predictors.
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="text-center clickable thumbnail quality_estimation" onclick="window.location='/quality-estimation/'">
+            <span class="title">QE - Model Quality Estimation</span>
+            
+            <span><strong>319</strong> weeks,
+            <strong>51328</strong> structural models,
+            <strong>17</strong> predictors.
+            </span>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <p class="info"><i class="glyphicon glyphicon-star"></i> Predictions in all categories are evaluated against reference structures released by the PDB on a weekly basis.</p>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+         <div class="panel-body">
+          <img src="/static/img/icon_earth.png" alt="" align="left">
+          <span class="title" style="margin-left:16px;">&nbsp;CAMEO is a community project</span>
+          <p><i class="glyphicon glyphicon-arrow-right"></i> CAMEO continuously applies quality assessment criteria established by the protein structure prediction community. Since the accuracy requirements for different scientific applications vary, there is no "one fits all" score. CAMEO therefore offers a variety of scores - assessing different aspects of a prediction (coverage, local accuracy, completeness, etc.) to reflect these requirements.</p>
+          <br>
+          <p><i class="glyphicon glyphicon-arrow-right"></i> CAMEO is a community project - please feel free to suggest additional/alternative ways how CAMEO can support users and developers of structure prediction.</p>
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+        <div class="panel-body">
+          <img src="/static/img/icon_check.png" alt="" align="left">
+          <span class="title" style="padding-left:16px;">&nbsp;Join CAMEO today...</span>
+          <p>We invite developers of prediction methods to participate in the continuous evaluation by registering their servers <a href="/cameong_registration/">[REGISTER]</a>. We also invite developers of scoring and evaluation methods to suggest alternative scoring schemes. Please contact us <a href="/cameong_contact/">directly.</a></p>
+          <p>Servers of the following groups are registered so far:<br/><a class="externallink" target="_blank" href="http://salilab.org/index.html">A. Sali</a>, <a class="externallink" target="_blank" href="http://www.reading.ac.uk/biologicalsciences/about/staff/l-j-mcguffin.aspx">L. McGuffin</a>,  <a class="externallink" target="_blank" href="http://schwedelab.org">T. Schwede</a>, <a class="externallink" target="_blank" href="http://www.soeding.genzentrum.lmu.de">J. Soeding</a>, <a class="externallink" target="_blank" href="http://www.bakerlab.org">D. Baker</a>, <a class="externallink" target="_blank" href="http://www.fiserlab.org/">A. Fiser</a>, <a class="externallink" target="_blank" href="http://www3.imperial.ac.uk/people/m.sternberg">M. Sternberg</a>, <a class="externallink" target="_blank" href="http://zhanglab.ccmb.med.umich.edu/">Y. Zhang</a>, <a class="externallink" target="_blank" href="http://www.princeton.edu/cbe/people/faculty/floudas/">C. Floudas</a>, <a class="externallink" target="_blank" href="http://protein.bio.unipd.it/">S. Tosatto</a>, <a class="externallink" target="_blank" href="http://ttic.uchicago.edu/~jinbo/">J. Xu</a>,  <a class="externallink" target="_blank" href="http://www.griffith.edu.au/science-aviation/institute-glycomics/staff/professor-yaoqi-zhou">Y. Zhou</a>, <a class="externallink" target="_blank" href="http://www.robotics.tu-berlin.de/menue/team/oliver_brock/">O. Brock</a>, <a class="externallink" target="_blank" href="http://www.wallnerlab.org/">B. Wallner</a>, <a class="externallink" target="_blank" href="http://bioinfo.se/">A. Eloffson</a>, <a class="externallink" target="_blank" href="http://www.bioforscher.de/bigM/ippb9076rp8sityx/">D. Labudde</a>, <a class="externallink" target="_blank" href="http://www.ibt.lt/en/laboratories/bioinfo_en.html">C. Venclovas</a>, <a class="externallink" target="_blank" href="http://bengal.missouri.edu/~chengji/cheng_students.html">J. Cheng</a>, <a class="externallink" target="_blank" href="https://www.ru.ac.za/bm/people/academicstaff/tastanbishop/">O. Ta&#351;tan Bishop</a>, <a class="externallink" target="_blank" href="http://www.genomics.sinica.edu.tw/index.php/en/yangas">Y. An-Suei</a>, <a class="externallink" target="_blank" href="http://sosnick.uchicago.edu/research.html">T. Sosnick</a>, <a class="externallink" target="_blank" href="https://www.cs.bgu.ac.il/~keasar/">C. Kaesar</a>, <a class="externallink" target="_blank" href="http://proteincoevolution.com/">P. Winn</a>, <a class="externallink" target="_blank" href="http://galaxy.seoklab.org">C. Seok</a>.
+</p>
+        </div>
+       </div>
+      </div>
+    </div>
+    <p>
+      <p class="tt">
+      When publishing any results obtained from the CAMEO server or its data, you agree to cite the appropriate references:
+        <ol>
+          <li class="tt">Haas J., Gumienny R., Barbato A., Ackermann F., Tauriello G., Bertoni M., Studer G., Smolinski A., Schwede T. Introducing "best single template" models as reference baseline for the Continuous Automated Model Evaluation (CAMEO). <it>Proteins.</it> <b>(2019)</b>, 87, 1378-1387. [<a  target="_blank" href="https://dx.doi.org/10.1002/prot.25815">DOI: 10.1002/prot.25815</a>]</li>
+          <li class="tt">Haas J., Barbato A., Behringer D., Studer G., Roth S., Bertoni M., Mostaguir K., Gumienny R., Schwede T. Continuous Automated Model EvaluatiOn (CAMEO)
+complementing the critical assessment of structure prediction in CASP12. <it>Proteins.</it> <b>(2018)</b>, 86, 387-398. [<a  target="_blank" href="https://dx.doi.org/10.1002/prot.25431">DOI: 10.1002/prot.25431</a>]</li>
+          <li class="tt"> Haas J., Roth S., Arnold K., Kiefer F., Schmidt T., Bordoli L. and Schwede T.<b>(2013)</b>. The Protein Model Portal - a comprehensive resource for protein structure and model information. Database [<a href="http://www.ncbi.nlm.nih.gov/pubmed/23624946" target="_blank">PMID: 23624946</a>]. </li>
+        </ol>
+      </p>
+      <p class="tt">Evaluation of “private” or “development” servers is provided exclusively for development purposes. You acknowledge that such results can only be published after marking the complete dataset as “public” on CAMEO. For more information please see our <a href="/cameong_terms/">terms</a>.
+      </p>
+
+      <p class="tt">CAMEO is developed by the
+          <a class="externallink" target="_blank" href="http://www.biozentrum.unibas.ch/schwede/">Computational Structural Biology Group</a> at the
+          <a class="externallink" target="_blank" href="http://www.isb-sib.ch">Swiss Institute of Bioinformatics (SIB)</a> and the
+          <a class="externallink" target="_blank" href="http://www.biozentrum.unibas.ch"> Biozentrum of the University of Basel</a>. CAMEO is partially supported by the SIB Swiss Institute of Bioinformatics and ELIXIR-EXCELERATE funded by the European Commission within the Research Infrastructures programme of Horizon 2020, grant agreement number 676559.</p>
+      <div class="logos" ><a href="https://www.elixir-europe.org/about-us/how-funded/eu-projects/excelerate" target="_blank"><img src="/static/img/excelerate.png" alt=""><img src="/static/img/EU.jpg" alt=""></a>
+        <a href="http://www.isb-sib.ch/" target="_blank"><img src="/static/img/sib.png" alt=""></a>
+      </div>
+
+
+
+
+  </div>
+  <div class="push"></div>
+</div>
+
+<footer class="container-fluid bg-redimg">
+    <div class="row ">
+      <div class="text-center">
+        <p><a href="/cameong_contact/">Contact Us</a> | <a href="/cameong_terms/">Terms of Use</a> <span class="">[4.0 ]</span></p>
+      </div>
+    </div>
+</footer>
+
+
+<!-- GOOGLE ANALYTICS OLD-->
+<!-- <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8667194-7']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> -->
+
+<!-- Google Analytics --><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-8667194-7', 'auto');
+ga('send', 'pageview');
+</script><!-- End Google Analytics -->
+
+
+
+<script type="text/javascript">
+$(function () {
+  // extending the bootstrap popover to be shown on hover
+  var originalLeave = $.fn.popover.Constructor.prototype.leave;
+  $.fn.popover.Constructor.prototype.leave = function(obj){
+    var self = obj instanceof this.constructor ?
+      obj : $(obj.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type)
+    var container, timeout;
+
+    originalLeave.call(this, obj);
+
+    if(obj.currentTarget) {
+      //container = $(obj.currentTarget).siblings('.popover')
+      container = $('.popover')
+      timeout = self.timeout;
+      container.one('mouseenter', function(){
+        //We entered the actual popover – call off the dogs
+        clearTimeout(timeout);
+        //Let's monitor popover content instead
+        container.one('mouseleave', function(){
+          $.fn.popover.Constructor.prototype.leave.call(self, self);
+        });
+      })
+    }
+  };
+  //$('body').popover({ selector: '[data-popover]', trigger: 'click hover', container: 'body', placement: 'auto', delay: {show: 50, hide: 400}});
+  $('body').popover({ selector: '[data-popover]', trigger: 'hover', container: 'body', placement: 'auto', delay: {show: 50, hide: 400}});
+
+});
+</script>
+
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="{% static 'js/vendor/html5shiv/html5.js"></script>
+  <script type="text/javascript" src="{% static 'js/vendor/excanvas/excanvas.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript" src="/static/js/vendor/bootstrap/js/bootstrap.min.js?4.0"></script>
+<script type="text/javascript" src="/static/js/vendor/jquery-validation/jquery.validate.min.js?4.0"></script>
+<script type="text/javascript" src="/static/js/vendor/jquery-ui/js/jquery-ui-1.10.1.custom.min.js?4.0"></script>
+
+</body>
+</html>

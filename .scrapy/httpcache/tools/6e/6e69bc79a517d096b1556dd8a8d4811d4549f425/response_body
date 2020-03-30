@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php header("Expires: Sun, 19 Nov 1978 05:00:00 GMT");
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.tools.min.js"></script>
+	<script src="js/jquery.form.js" type="text/javascript"></script>
+	<script src="lib/jquery.treeview/jquery.treeview.js"></script>
+
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+	<link href="lib/jquery.treeview/jquery.treeview.css" rel="stylesheet" />
+	
+	<title>CRAVAT: Home</title>
+	
+	<script>
+	
+	var serverType = "prod";
+	
+	var tooltipHtmlChasm = '<div class="tooltip"><table><tr><td><i>CHASM (Cancer-specific High-throughput Annotation of <br />Somatic Mutations)</i> is a method that predicts the <br />functional significance of somatic missense variants <br />observed in the genomes of cancer cells, allowing variants <br />to be prioritized in subsequent functional studies, <br />based on the probability that they confer increased <br />fitness to a cancer cell.</td></tr><tr><td><font color="green">For more information, click	<a href="help.jsp?chapter=analysis_tools&amp;article=chasm" target="manual">here</a></font></td></tr></table></div>';
+	var tooltipHtmlSnvget = '<div class="tooltip"><table><tr><td><i>SNVGet</i> retrieves selected predictive features for a variant.<br />Features can be broadly categorized into 3 types:<br /><ul><li>Amino Acid Substitution features<br /></li><li>Protein-based position-specific features<br /></li><li>Exon-specific features<br /></li></ul></td></tr><tr><td><font color="green">For more information, click <a href="help.jsp?chapter=analysis_tools&amp;article=snvget" target="manual">here</a></font></td></tr></table></div>	';
+	var tooltipHtmlVest = '<div class="tooltip"><table><tr><td><i>VEST (Variant Effect Score Toolkit)</i> <br />is a method that predicts the pathogenic effect of a variant.</td></tr><tr><td><font color="green">For more information, click <a href="help.jsp?chapter=analysis_tools&amp;article=vest" target=manual>here</a></font></td></tr></table></div>';
+	var tooltipHtmlGeneAnnot = '<div class="tooltip"><table><tr><td>Check if want GeneCard and PubMed annotation of<br />the genes containing the submitted variants.</td></tr></table></div>';
+	var classifierNames = new Array();
+	
+					classifierNames.push("Bladder");
+	
+					classifierNames.push("Blood-Lymphocyte");
+	
+					classifierNames.push("Blood-Myeloid");
+	
+					classifierNames.push("Brain-Glioblastoma-Multiforme");
+	
+					classifierNames.push("Brain-Lower-Grade-Glioma");
+	
+					classifierNames.push("Breast");
+	
+					classifierNames.push("Cervix");
+	
+					classifierNames.push("Colon");
+	
+					classifierNames.push("GID");
+	
+					classifierNames.push("Head-and-Neck");
+	
+					classifierNames.push("Kidney-Chromophobe");
+	
+					classifierNames.push("Kidney-Clear-Cell");
+	
+					classifierNames.push("Kidney-Papillary-Cell");
+	
+					classifierNames.push("Liver-Nonviral");
+	
+					classifierNames.push("Liver-Viral");
+	
+					classifierNames.push("Lung-Adenocarcinoma");
+	
+					classifierNames.push("Lung-Squamous-Cell");
+	
+					classifierNames.push("Other");
+	
+					classifierNames.push("Ovary");
+	
+					classifierNames.push("Pancreas");
+	
+					classifierNames.push("Prostate-Adenocarcinoma");
+	
+					classifierNames.push("Rectum");
+	
+					classifierNames.push("Skin");
+	
+					classifierNames.push("Stomach");
+	
+					classifierNames.push("Thyroid");
+	
+					classifierNames.push("Uterus");
+	
+	</script>
+	
+	<script type='text/javascript' src='js/cravat_index.js'></script>
+	
+    <script type="text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-33894708-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+	<div id="help-header" style="height:150px; background-image:url('images/Header_RL_Sliver.jpg');">
+    <div id="help-headerinner">
+        <div style="position:absolute; top:30px; left:50%; width:400px; text-align:left;">
+            <span id='site_msg_span' 
+            	style='color: red; font-size: 14px; font-weight: bold;'></span>
+            <br />
+            <div>
+	            <span
+	            	style='font-family: Source Sans Pro; font-size: 13px;'>
+	            	Still using GRCh37/hg19?
+	            </span>
+	        	<img src="images/help_16x16.gif" 
+	                 alt="help" 
+	                 width="12" 
+	                 height="12" 
+	                 id="hg19tooltipicon"></img>
+	           	<div class="tooltip" style='z-index: 1;'>
+	           		<table><tr><td>
+		           		CRAVAT 5 is in GRCh38/hg38. 
+		           		If you need to annotate GRCh37/hg19 variants, 
+		           		check the hg19 box under Input section or use 
+		           		<a href='http://hg19.cravat.us'>CRAVAT 4</a> 
+		           		which is in GRCh37/hg19.
+	           		</td></tr></table>
+	           	</div>
+	        </div>
+           	<script>
+           	$("#hg19tooltipicon").tooltip(
+           			{position: "bottom right", 
+           				effect:"fade", 
+           				relative:true, 
+           				offset:[0,-100], delay:100}
+           			);
+           	</script>
+            <span style='color:red; font-family: Tahoma; font-weight:bold; 
+                         font-size:12px; position: relative; top: 4px;'>
+				<a href="https://twitter.com/OpenCravat" 
+				   class="twitter-follow-button" 
+				   data-show-count="false">Follow @OpenCRAVAT</a>
+				   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </span>
+        </div>
+        <div style="position:absolute; top:128px; left:46%; width:700px">
+            <div align="center" class="manual" style="cursor:pointer; font-size:13px;">
+                <div style='float:left;'><a href="help.jsp" target="_blank">Help</a></div>
+                <div style='float:left;'>&nbsp;&nbsp;|&nbsp;&nbsp;</div> 
+                <div id='releasenotelink' style='float:left;'><a>Release notes</a></div>
+                <div style='float:left;'>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+                <div style='float:left;'><a href="help.jsp#how_to_cite" target="_blank">How to Cite</a></div>
+                <div style='float:left;'>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+                <div id='contactlink' class='menu_link'>Contact</div>
+                <div id="loginlink_divider" class='menu_divider'>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+				<div id="loginlink" class='menu_link'>Log-in<img class='triangle' src='images/triangle-right.png' /></div>
+				<div id='loginformdiv' class='menu_div' style='display:none; width:250px;'>
+					<form method="post" name="loginform" action="rest/service/login">  
+				  	<table>  
+				    	<tr>  
+				      		<td>  
+				        		Username:  
+				      		</td>
+				      		<td>
+				        		<input style="width: 150px;" type="text" name="check_username" id='check_username' />
+				      		</td>
+				    	</tr>
+				    	<tr>
+				      		<td>
+				        		Password:  
+				      		</td>  
+				      		<td>  
+				        		<input style="width: 150px;" type="password" id='check_password' />
+				      		</td>
+				    	</tr>  
+				    	<tr> 
+				      		<td colspan="2" align="right" valign="bottom">  
+				        		<input type="submit" id="submitLogin" value="Login" />
+				        		<br />
+				      		</td>  
+				    	</tr>
+				    	<tr>
+				    		<td colspan="2" align="right">
+				        		<span class='menu_link' id='forgot_username_link'>Forgot username?</span>
+				        	</td>
+				        </tr>
+				        <tr>
+				    		<td colspan="2" align="right">
+				        		<span class='menu_link' id='forgot_password_link'>Forgot password?</span>
+				        	</td>
+				        </tr>
+				        <tr>
+				        	<td colspan="2" align="right">
+				    			<span class='menu_link' id='create_an_account_link'>Create an account</span>
+				    		</td>
+				    	</tr>
+				  	</table>
+				  	<input type='hidden' name='check_md5password' id='check_md5password' />
+				  	</form>
+	    			<div id="loginmsgdiv" style="color:red; font-weight:bold; height: 25px;">&nbsp;</div>
+				</div>
+				<div id="myjoblink_divider" class='menu_divider'>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+               	<div id="myjoblink" class='menu_link'>My Jobs</div>
+               	<div id="myprofilelink_divider" class='menu_divider'>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+               	<div id="myprofilelink" class='menu_link'>My Profile<img class='triangle' src='images/triangle-right.png' /></div>
+               	<div id="myprofilediv" class='menu_div' style='display:none; width:180px;'>
+               		<ul style='padding: 0px;'>
+               			<li class='submenu_link' id='settimezone_link'>Set timezone</li>
+	       				<li class='submenu_link' id='changepassword_link'>Change password</li>
+	       				<li class='submenu_link' id='changepasswordchallenge_link'>Change password challenge</li>
+       				</ul>
+               	</div>
+               	<div id="setuplink_divider" class='menu_divider'>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+               	<div id='setuplink' class='menu_link'>Setup</div>
+               	<div id="serverstatuslink_divider" class='menu_divider'>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+               	<div id="serverstatuslink" class='menu_link'>Server Status</div>
+               	<div id="logoutlink_divider" class='menu_divider'>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+               	<div id="logoutlink" class='menu_link'>Log-out</div>
+               	<div id="welcomediv" style='display:none; float:left; position:absolute; font-size: 11px;'></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="password_change_successful_div" class='menu_div' style='display: none; padding: 20px;'>
+	Password change successful
+	<div id="password_change_successful_div" style='color: #814300; font-weight: bold;'>
+	</div>
+	<img src='images/close.png' class='close' />
+</div>
+
+<div id='forgot_username_div' class='menu_div' style='display: none; padding: 20px;'>
+	<h3>Retrieve Username</h3>
+		<div id="forgot_username_msgdiv" style="color: #814300; font-weight: bold;">
+			Username is your email address.
+		</div>
+	<img src='images/close.png' class='close' />
+</div>
+
+<div id='forgot_password_div' class='menu_div' style='display: none; padding: 20px;'>
+	<h3>Reset Password</h3>
+	<form name='reset_password_form' method='post' action='rest/service/resetpassword'>
+		Username: <input type='text' id='reset_password_username' name="reset_password_username" value='' />
+		<button>Get challenge question</button>
+		<br />
+		Question: <input type='text' id='reset_password_question' name='reset_password_question' size='50' value='' readonly />
+		<br />
+		Answer: <input type='text' id='reset_password_answer' name='reset_password_answer' size='50' value='' />
+		<br />
+		<button>Submit</button>
+	</form>
+	<div id="reset_password_msgdiv" style="color: #ff0000; font-weight: bold;">
+	</div>
+	<img src='images/close.png' class='close' />
+</div>
+
+<div id='change_password_challenge_div' class='menu_div' style='display: none; padding: 20px;'>
+	<h3>Change Password Challenge Question/Answer</h3>
+	<form name='changepasswordchallengeform' method='post' action='rest/service/changepasswordchallenge'>
+		<input type='hidden' name='change_password_challenge_username' id='change_password_challenge_username' value='' />
+		Question:<input type='text' name='change_password_challenge_question' id='change_password_challenge_question' size='50' value='' />
+		<br />
+		Answer:<input type='text' name='change_password_challenge_answer' id='change_password_challenge_answer' size='50' value='' />
+		<br />
+		<button>Submit</button>
+	</form>
+	<div id="change_password_challenge_msgdiv" style="color: #ff0000; font-weight: bold;">
+	</div>
+	<img src='images/close.png' class='close' />
+</div>
+
+<div id='create_an_account_div' class='menu_div' style='display: none; padding: 20px;'>
+	<h3>Create an Account</h3>
+	<form name='create_an_account_form' method='post' action='rest/service/createanaccount'>
+		Your email (will be your username): 
+		<input type='text' 
+			   id='create_an_account_username' 
+			   name='create_an_account_username' 
+			   value='' />
+		<br />
+		Password: 
+		<input type='password' 
+			   id='create_an_account_password' 
+			   name='create_an_account_password' 
+			   value='' />
+		<br />
+		Retype Password: 
+		<input type='password' 
+			   id='create_an_account_retype_password' 
+			   name='create_an_account_retype_password' 
+			   value='' />
+		<br />
+		Password Retrieval Question
+		<input type='text'
+			   id='create_an_account_question'
+			   name='create_an_account_question'
+			   value='' />
+		<br />
+		Answer to Password Retrieval Question
+		<input type='text'
+			   id='create_an_account_answer'
+			   name='create_an_account_answer'
+			   value='' />
+		<br />
+		<button>Submit</button>
+	</form>
+	<div id="create_an_account_msgdiv" style="color: #ff0000; font-weight: bold;">
+	</div>
+	<img src='images/close.png' class='close' />
+</div>
+
+<div id='settimezone_div' class='menu_div' style='display: none; padding: 20px;'>
+	<h3>Set Timezone</h3>
+	<form name='settimezoneform' method='post' action='rest/service/settimezone'>
+		<input type='hidden' id="settimezoneusername" name="username" value="" />
+		Current timezone: <span id='current_timezone_span'></span>
+		<br />
+		Choose timezone:
+		<select id="timezoneselect" name="timezone">
+		</select>
+		<br />
+		<button>Submit</button>
+	</form>
+	<div id="settimezone_msgdiv" style="color: #ff0000; font-weight: bold;">
+	</div>
+	<img src='images/close.png' class='close' />
+</div>
+
+<div id='changepassword_div' class='menu_div' style='display: none; padding: 20px;'>
+	<h3>Change Password</h3>
+	<form name='changepasswordform' method='post' action='rest/service/changepassword'>
+		Username: <span id="changepassword_username_label"></span>
+		<br />
+		<input type="hidden" name="changepassword_username" id="changepassword_username" value="" />
+		Current password: <input type='password' size='20' id='changepassword_password' value='' />
+		<br />
+		New password: <input type='password' size='20' id='changepassword_newpassword' value='' />
+		<br />
+		Retype new password: <input type='password' size='20' id='changepassword_retypenewpassword' value='' />
+		<br />
+		<button>Submit</button>
+		<input type='hidden' name='changepassword_md5password' id='changepassword_md5password' value='' />
+		<input type='hidden' name='changepassword_md5newpassword' id='changepassword_md5newpassword' value='' />
+	</form>
+	<div id="changepassword_msgdiv" style="color: #ff0000; font-weight: bold;">
+	</div>
+	<img src='images/close.png' class='close' />
+</div>
+
+<!-- spacer between the header and the content -->
+<div style="height:150px; width:100%"><table style="height:80px; width:100%;"><tr><td> </td></tr></table></div>
+
+<div id="releasenote" class='menu_div' style='display:none; width: 700px; height: 400px;'>
+    <div style='padding: 20px; overflow-y: scroll; width: 660px; height: 360px;'>
+	    <div class="close"></div>
+	    <strong>CRAVAT v5.2.4</strong><br />
+	    <i>October 29, 2018</i><br />
+		<ul>
+			<li>Added denovo-db annotation to MuPIT Interactive.</li>
+            <li>Improved the layout of CRAVAT Single Variant page.</li>
+            <li>Fixed minor bugs with VCF format input in CRAVAT.</li>
+            <li>Fixed minor bugs with CRAVAT Single Variant page.</li>
+            <li>Fixed minor bugs in CRAVAT and MuPIT Interactive.</li>
+        </ul>
+	    <strong>CRAVAT v5.2.3</strong><br />
+	    <i>June 8, 2018</i><br />
+		<ul>
+            <li>Added homology models for UniProt protein sequences to MuPIT Interactive.</li>
+            <li>Fixed image capture in MuPIT Interactive.</li>
+            <li>Added a homology model of BRCA2 to MuPIT Interactive.</li>
+            <li>Fixed minor bugs.</li>
+        </ul>
+	    <strong>CRAVAT v5.2.2</strong><br />
+	    <i>April 20, 2018</i><br />
+		<ul>
+            <li>Improved setup with checksum and smaller download chunks.</li>
+            <li>Improved the contact form.</li>
+            <li>Implemented approximate matches for indels in 1000 Genomes annotation.</li>
+            <li>Fixed minor bugs.</li>
+        </ul>
+	    <strong>CRAVAT v5.2.1</strong><br />
+	    <i>Febuary 1, 2018</i><br />
+		<ul>
+		    <li>Increased coverage of RefSeq transcripts.</li>
+		    <li>Added a CRAVAT single variant annotation page that can be linked to externally.</li>
+		    <li>Added custom annotations to MuPIT for integration with <a href="http://brcaexchange.org/" target="blank">BRCA Exchange</a>.</li>
+		    <li>Added two BRCA Exchange data tracks to MuPIT: 
+		    	<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3242438/" target="blank">Tavtigian Priors</a> 
+		    	and 
+		    	<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3242438/" target="blank">Multifactorial Model</a>
+		</ul>
+	    <div class="close"></div>
+	    <strong>CRAVAT v5.2.0</strong><br />
+	    <i>January 3, 2018</i><br />
+	    <ul>
+	    	<li>GnomAD replaced ExAC.</li>
+	    	<li>Version numbers are not needed for transcript-coordinate input format.</li>
+	    	<li>Improved performance for GeneCards and PubMed annotation.</li>
+	    </ul>
+	    <strong>CRAVAT v5.1.1</strong><br />
+	    <i>November 28, 2017</i><br />
+	    <ul>
+	    	<li>All mutated genes correctly displayed in NDEx diagrams.</li>
+	    	<li>Variants on gene tab lollipop diagram increase in height based on the number of occurrences of the variant in the submitted cohort.</li>
+	    	<li>Fixed OMIM linkout on gene tab.</li>
+	    </ul>
+	    <strong>CRAVAT v5.1.0</strong><br />
+	    <i>November 2, 2017</i><br />
+	    <ul>
+	    	<li>Added extensive noncoding annotations including:</li>
+	    	<ul>
+	    		<li>UTRs, introns, and upstream/downstream regions of a gene.</li>
+		    	<li>Noncoding RNAs.</li>
+		    	<li>Repetitive sequences.</li>
+		    	<li>Pseudogenes</li>
+		    	<li><a href="http://grasp.nhlbi.nih.gov/Overview.aspx" target="_blank">GRASP-GWAS</a></li>
+	    	</ul>
+	    	<li>Other Bug fixes and improvements</li>
+	    </ul>
+	    <strong>CRAVAT v5.0.2</strong><br />
+	    <i>September 30, 2017</i><br />
+	    <ul>
+	    	<li>Fixed VCF conversion failure.</li>
+			<li>Fixed MuPIT mapping (protein alignment rebuild).</li>
+			<li>Fixed "Hide Synonymous" filter in the Interactive Result Viewer.</li>
+			<li>Fixed issues related to MuPIT pop-up in the Interaction Result Viewer.</li>
+			<li>Improved Help page.</li>
+	    	<li>Other Bug fixes and improvements</li>
+	    </ul>
+	    <strong>CRAVAT v5.0.1</strong><br />
+	    <i>August 30, 2017</i><br />
+	    <ul>
+	    	<li>Minor bug fixes and improvements</li>
+	    </ul>
+	    <strong>CRAVAT v5.0.0</strong><br />
+	    <i>May 17, 2017</i><br />
+	    <ul>
+	    	<li>CRAVAT/MuPIT has been built on <a href="http://www.ncbi.nlm.nih.gov/grc/human" target="_blank">GRCh38</a>.</li>
+	    	<li>&nbsp;&nbsp;- CRAVAT 5</li>
+	    	<li>&nbsp;&nbsp;- MuPIT 5</li>
+	    	<li>&nbsp;&nbsp;- SNVBox 5</li>
+	    	<li><a href='variant.html?chr22_40418496_-_A_G' target='_blank'>Single variant annotation page</a> has been added.</li>
+	    	<li>Load control panel has been added, with which a job with more than 100,000 variants can be trimmed down and examined on CRAVAT Result Viewer.</li>
+	    	<li>VEST null distribution has been improved with Gibbs sampler.</li>
+	    	<li>ExAC database has been updated to v1.0</li>
+	    	<li>ClinVar database has been updated to v1.46</li>
+	    	<li>Cosmic database has been updated to v80.</li>
+	    	<li>dbSNP database has been updated to v147.</li>
+			<li>UniProt database has been update to Release 2017_05.</li>
+	    </ul>
+	    <strong>CRAVAT v4.3</strong><br />
+	    <i>July 5, 2016</i><br />
+	    <ul>
+	    	<li>Released Dockerized CRAVAT (<a href="https://hub.docker.com/r/karchinlab/cravatmupit/" target="_blank">here</a>).
+	    	    <ul>
+	    		    <li>Reduced installation space requirement from 500GB to 200GB</li>
+	    		    <li>Added CRAVAT Setup page.</li>
+	    	    </ul>
+	    	</li>
+	    	<li>Improved Interactive Result Page, which includes:</li>
+	    	<li>&nbsp;&nbsp;- Summary-level result with charts and Circos plot</li>
+	    	<li>&nbsp;&nbsp;- Error tab</li>
+	    	<li>&nbsp;&nbsp;- Variant-level result for transcript-coordinate input</li> 
+	    	<li>Added ClinVar and ClinGen annotation.</li>
+	    	<li>Timezone and security question and answer have been added to user information.</li>
+	    	<li>ESP6500 database has been updated to V2-SSA137.</li>
+	    	<li>Improved UI.</li>
+			<li>Fixed bugs.</li>
+	    </ul>
+	    <strong>CRAVAT v4.2</strong><br />
+	    <i>December 29, 2015</i><br />
+	    <ul>
+	    	<li>Added protein domain annotation from Pfam on the Interactive Result Page.</li>
+	    	<li>Various minor bug fixes</li>
+	    </ul>
+	    <strong>CRAVAT v4.1</strong><br />
+	    <i>December 1, 2015</i><br />
+	    <ul>
+	    	<li>Added <a href='http://www.ncbi.nlm.nih.gov/pubmed/26442818' target='_blank'>VEST-indel for annotating pathogenicity of indels.</a></li>
+	    	<li>Added Interactive Result Page, which includes:</li>
+	    	<li>&nbsp;&nbsp;- Variant- and gene-level results</li>
+	    	<li>&nbsp;&nbsp;- Filtering by CHASM and VEST p-values as well as allele frequency</li>
+	    	<li>&nbsp;&nbsp;- Multiple-column sorting</li>
+	    	<li>&nbsp;&nbsp;- Text search for selected columns</li>
+	    	<li>&nbsp;&nbsp;- Showing/hiding result table columns</li>
+			<li>&nbsp;&nbsp;- Lollipop diagram of input mutations over gene, with protein domain/site and TCGA mutations</li>
+			<li>&nbsp;&nbsp;- Embedded MuPIT Interactive</li>
+	    	<li>Updated Job List Page, which includes:</li>
+	    	<li>&nbsp;&nbsp;- "Explore" button to open Interactive Result Page</li>
+	    	<li>Added gene-level CHASM cancer driver composite p-value and FDR</li>
+	    	<li>Added CHASM and VEST scores and p-values to all the transcripts each input mutation maps to.</li>
+	    	<li>Deleted "Codon Level" tab from the result spreadsheet.</li>
+			<li>Fixed bugs.</li>
+	    </ul>
+	    <strong>CRAVAT v3.2</strong><br />
+	    <i>May 12, 2015</i><br />
+	    <ul>
+	    	<li>Added RESTful API for annotating a single mutation.</li>
+	    	<li>Added analytical p-values for VEST pathogenicity scores for non-silent mutations.</li>
+	    	<li>Added gene-level p-value and FDR for VEST pathogenicity score based on Stouffer's Z-score method</li>
+	    	<li>Added indel scores.</li>
+			<li>Added mutation allele frequencies from <a href="http://exac.broadinstitute.org/" target="_blank">Exome Aggregation Consortium (ExAC)</a> release 0.3.</li>
+			<li>Added input line number to the report.</li>
+			<li>Added a report tab for non-coding mutations.</li>
+			<li>Added a report tab for errorneous input lines.</li>
+			<li>Removed the Codon Level report tab.</li>
+			<li>CRAVAT can now show both driver (CHASM) and pathogenicity (VEST) scores at the same time.</li>
+			<li>Updated VCF support (sequencing quality metrics, zygosity, and pileup coverage and allele frequency).</li>
+			<li>Updated <a href="http://www.1000genomes.org/" target="_blank">1000 genomes</a> annotation with Phase3 sequence freeze 20130502 (Includes chromosome Y variants).</li>
+			<li>Updated <a href='http://evs.gs.washington.edu/EVS/' target='_blank'>ESP6500</a> annotation with version v0.0.30 (Includes chromosome Y variants).</li>
+			<li>Updated <a href="http://www.genecards.org/" target="_blank">GeneCards</a> summary annotation.</li>
+			<li>Updated MuPIT link out according to the new release of <a href="http://mupit.icm.jhu.edu" target="_blank">MuPIT Interactive</a>.</li>
+			<li>Improved report layout.</li>
+			<li>Improved speed with pre-computation of VEST scores for all possible exome mutations.</li>
+			<li>Fixed bugs.</li>
+	    </ul>
+	    <strong>CRAVAT v3.1</strong><br />
+	    <i>July 18, 2014</i><br />
+	    <ul>
+	    	<li>Added <a href='help.jsp?chapter=help_user_account&article=top' target='_blank'>user account feature</a> (login/logout/password retrieval/change password and My Jobs page)</li>
+			<li>Added indel support for <a href='http://www.ncbi.nlm.nih.gov/SNP/' target='_blank'>dbSNP</a> and <a href='http://evs.gs.washington.edu/EVS/' target='_blank'>ESP56500</a> annotation</li>
+			<li>Added <a href='http://mupit.icm.jhu.edu' target='_blank'>MuPIT</a> lookup and link out</li>
+			<li>Added <a href='http://samtools.github.io/hts-specs/VCFv4.2.pdf' target='_blank'>VCF input format</a> support</li>
+			<li>Added a <a href='help.jsp?chapter=how_to_use&article=input' target='_blank'>new, simpler indel input format</a> (no need to figure out the upstream base of an indel. Old format is still supported.)</li>
+			<li>Added <a href='http://www.broadinstitute.org/cancer/cga/target' target='_blank'>TARGET drug association DB</a> annotation</li>
+			<li>Added oncogene/tumor suppressor gene annotation (from the oncogene/TSG list by <a href='http://www.sciencemag.org/content/339/6127/1546' target='_blank'>Vogelstein et al.</a>)</li>
+	    </ul>
+	   	<strong>CRAVAT v3.0</strong><br />
+	   	<i>March 4, 2014</i><br />
+	   	<ul>
+	   		<li>Updated with <a href="http://wiki.chasmsoftware.org/index.php/ReleaseHistory" target="_blank">CHASM-3.0, SNVBox 3.0, and VEST-3.0</a></li>
+	   		<li>Updated with COSMIC v68.</li>
+	   		<li>Added RESTful web service functionality. For more information, see <a href="help.jsp?chapter=how_to_use&article=restful" target="_blank">here</a></li>
+	   		<li>Added <a href="help.jsp?chapter=report_help&article=sequence_ontology" target="_blank">Sequence Ontology annotation.</a></li>
+	   		<li>Added <a href="help.jsp?chapter=report_help&article=mappability" target="_blank">mappability</a> annotation (UCSC 75 mer-alignability and blacklist tables).</li>
+	   		<li>Added indel support (Sequence Ontology and (for genomic-coordinate mutations only) COSMIC annotation).</li>
+	   	</ul>
+	    <strong>CRAVAT v2.0</strong><br />
+	    <i>September 23, 2013</i><br />
+	    <ul>
+	            <li>Updated with CHASM 1.0.8, SNVBox 2.0.0, and VEST 1.1.0</li>
+	            <li>Updated with the classifiers for CHASM analysis</li>
+	    </ul>
+	    <strong>CRAVAT v1.0</strong><br />
+	    <i>November 13, 2012</i><br />
+	    <ul>
+	            <li>Updated with the classifier and null distribution for VEST.</li>
+	    </ul>
+	    <strong>CRAVAT v0.5</strong><br />
+	    <i>August 30, 2012</i><br />
+	    <ul>
+	            <li>Added a queuing system for multiple concurrent jobs.</li>
+	            <li>Added a server status page.</li>
+	            <li>Added ESP6500 allele frequencies.</li>
+	            <li>Added MuPIT Interactive input file preparation option.</li>
+	            <li>Added estimated run-time displayed after submission.</li>
+	            <li>Fixed minor bugs.</li>
+	    </ul>
+    </div>
+</div>
+
+<div id='contactdiv' class='menu_div' style='display:none; width: 500px; height: 400px;'>
+	<div style='padding: 20px; width: 460px; height: 360px;'>
+		<div class='close'></div>
+			Contact us with questions or issues: <a href="mailto:support@cravat.us">support@cravat.us</a>
+		</div>
+	</div>
+</div>
+<div id='overlaybg' style='display:none; position:fixed; top:0px; left:0px; width:100%; height:100%; z-index:3; background-color:#ffffff; opacity:0.8;'></div>
+
+<script src='js/cravat_header.js'></script>
+<script src="js/md5.js"></script>
+
+	
+	<div id='cravat_main_div' style="width:988px; margin:auto;display:none">
+		<p />
+		<form name="mutationinputform" enctype="multipart/form-data" method="post" action="rest/service/submit">
+			<table style="width:988px;">
+				<tr>
+					<td style="width:314px; vertical-align:top;">
+						<table style="background-image:url('images/Input_Background.jpg'); 
+						              background-repeat:no-repeat; 
+						              width:314px; 
+						              height:92px;">
+							<tr>
+								<td>
+									<table style="padding: 0px; 
+												  margin: 0px; 
+												  border-collapse: collapse; 
+												  border-spacing: 0px;">
+										<tr style="height:55px;">
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<td>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						<table style="background-image:url('images/Input_Sliver_314x1.jpg'); 
+									  width:314px; 
+									  height:250px;">
+							<tr>
+								<td class="searchClass">
+									<input class="searchClass" 
+										   type="checkbox" 
+										   name="tryexamplecheckbox_vcf" 
+										   onclick="onClickTryExampleVcf()"></input>
+												<span class="searchClass">Check for VCF-format input example.</span>
+									<br />
+									<input class="searchClass" 
+										   type="checkbox" 
+										   name="tryexamplecheckbox" 
+										   onclick="onClickTryExample()"></input>
+									<span class="searchClass">Check for CRAVAT-format input example.</span>
+									<br />
+									<br />
+									Enter variants below:<img src="images/help_16x16.gif" 
+									                          alt="help" 
+									                          width="12" 
+									                          height="12" 
+									                          id="step1help_inputbox"></img>
+									<div class="tooltip">
+	<table>
+		<tr>
+			<td>
+				Two input formats are supported: CRAVAT format and VCF format.
+				<br />
+				<br />
+				<span style='font-size: 14px;'>VCF format</span>
+				<br />
+				See <a href="http://samtools.github.io/hts-specs/VCFv4.2.pdf" target="_blank">VCF specification</a> for details.
+				<br />
+				<br />
+				<span style='font-size: 14px;'>CRAVAT format</span>
+				<br />
+				See <a href="help.jsp#input" target="manual">input format help</a> for details.
+				<br />
+				<br />
+				<span style='text-decoration: underline;'>Genomic-coordinate input format</span>
+				<br />
+				UID, chromosome, position (1-based),
+				strand, reference base(s), alternate base(s),
+				and (optional) sample ID, separated by a space or tab.
+				UID should not contain commas. For indels, use the following format. "-" means no base. 
+				Examples are below.
+				<br />
+				VAR1 chr22 25115449 + A G Sample1 (substitution)
+				<br />
+				VAR2 chr22 25115449 + - GA Sample2 (insertion)
+				<br />
+				VAR3 chr22 25115449 + GCA - Sample3 (deletion)
+				<br />
+				<br />
+				<span style='text-decoration: underline;'>Transcript-coordinate input format</span>
+				<br />
+				Variant ID, transcript identifier, amino-acid substitution,
+				and (optional) sample ID, separated by a space or tab. An example is below.
+				<br />
+				VAR4 NP_001135977 R641W 1 (substitution)
+			</td>
+		</tr>
+	</table>
+</div>
+
+									<script type="text/javascript">
+										/* <![CDATA[ */
+										$("#step1help_inputbox").tooltip({position: 'bottom right', effect:'fade', relative:true, offset:[-120,+5], delay:100});
+										/* ]]> */
+									</script>
+								</td>
+							</tr>
+							<tr>
+								<td style="vertical-align: top;">
+									<script type="text/javascript">
+										/* <![CDATA[ */
+										document.write('<textarea class="searchClass" name="mutations" cols="35" rows="5" onclick="onClickMutationBox()" onchange="onChangeMutationBox()" onblur="onBlurMutationBox()">'+mutationBoxInitStr+'</textarea>');
+										/* ]]> */
+									</script>
+									<br /><div class="searchClass" style="display:inline">or upload a variant file:<img src="images/help_16x16.gif" alt="help" width="12" height="12" id="step1help_fileupload"></img><div class="tooltip">
+	<table>
+		<tr>
+			<td>
+				Two input formats are supported: CRAVAT format and VCF format.
+				<br />
+				<br />
+				<span style='font-size: 14px;'>VCF format</span>
+				<br />
+				See <a href="http://samtools.github.io/hts-specs/VCFv4.2.pdf" target="_blank">VCF specification</a> for details.
+				<br />
+				<br />
+				<span style='font-size: 14px;'>CRAVAT format</span>
+				<br />
+				See <a href="help.jsp#input" target="manual">input format help</a> for details.
+				<br />
+				<br />
+				<span style='text-decoration: underline;'>Genomic-coordinate input format</span>
+				<br />
+				UID, chromosome, position (1-based),
+				strand, reference base(s), alternate base(s),
+				and (optional) sample ID, separated by a space or tab.
+				UID should not contain commas. For indels, use the following format. "-" means no base. 
+				Examples are below.
+				<br />
+				VAR1 chr22 25115449 + A G Sample1 (substitution)
+				<br />
+				VAR2 chr22 25115449 + - GA Sample2 (insertion)
+				<br />
+				VAR3 chr22 25115449 + GCA - Sample3 (deletion)
+				<br />
+				<br />
+				<span style='text-decoration: underline;'>Transcript-coordinate input format</span>
+				<br />
+				Variant ID, transcript identifier, amino-acid substitution,
+				and (optional) sample ID, separated by a space or tab. An example is below.
+				<br />
+				VAR4 NP_001135977 R641W 1 (substitution)
+			</td>
+		</tr>
+	</table>
+</div>
+</div><br />
+									<script type="text/javascript">
+										/* <![CDATA[ */
+							            $("#step1help_fileupload").tooltip({position: 'bottom right', effect:'fade', relative:true, offset:[-220,+5], delay:100});
+										/* ]]> */
+									</script>
+									<input class="searchClass" 
+									       type="file" 
+									       name="inputfile" 
+									       size="20" 
+									       value="File" 
+									       id="inputfile" 
+									       onchange="onInputFileChange()" />
+									<button type="button" onclick="onClearButton();">Clear</button><br />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="searchClass" type="checkbox" name="hg19" id="hg19"></input>
+										<span class="searchClass">hg19</span>
+										<img src="images/help_16x16.gif" 
+										     alt="help" 
+										     width="12" 
+										     height="12" 
+										     id="step1help_hg19"></img>
+										<div class="tooltip">
+											<table>
+												<tr>
+													<td>
+														If genomic-coordinates are used for variants, <br /> 
+														they are assumed to be in hg38. <br />
+														To use hg19 instead, check this box.
+													</td>
+												</tr>
+											</table>
+										</div>
+										<script type="text/javascript">
+											/* <![CDATA[ */
+											$("#step1help_hg19").tooltip({position: 'bottom right', effect:'fade', relative:true, offset:[-70,0], delay:100});
+											/* ]]> */
+										</script>
+								</td>
+							</tr>
+						</table>
+					</td>
+			<td style="width:314px; vertical-align:top;">
+				<table style="background-image:url('images/Analysis_Background.jpg'); 
+				       width:314px; 
+				       height:92px;">
+					<tr>
+						<td>
+						</td>
+					</tr>
+				</table>
+				<table style="background-image:url('images/Analysis_Sliver_314x1.jpg'); 
+				              width:314px; 
+				              height:250px;">
+					<tr>
+						<td class="searchClassWhite" style="vertical-align: top;">
+							<div id="dbselectdiv"></div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="width:314px; vertical-align:top;">
+				<table style="background-image:url('images/Results_Background.jpg'); width:314px; height:92px;">
+					<tr style="vertical-align:bottom;">
+						<td class="searchClass">
+						</td>
+					</tr>
+				</table>
+				<table style="background-image:url('images/Results_Sliver_314x1.jpg'); width:314px; height:250px;">
+					<tr>
+						<td style="vertical-align: top;">
+							<div class="searchClassWhite" style="display:inline;">Send the analysis report<img src="images/help_16x16.gif" alt="help" width="12" height="12" id="step3help_analysisreport"></img> to:
+							<div class="tooltip">
+<table><tr><td>An excel file where analysis results <br />
+are organized into tabs.</td></tr></table>
+</div>
+ 
+							<script type="text/javascript">
+								/* <![CDATA[ */
+								$("#step3help_analysisreport").tooltip({position: 'bottom right', effect:'fade', relative:true, offset:[-60,0], delay:100});
+								/* ]]> */
+							</script>
+							</div>
+							<script type="text/javascript">
+								/* <![CDATA[ */
+								document.write('<input class="searchClass" type="text" name="email" id="email" value="'+emailBoxInitStr+'" size="30" onclick="onClickEmailBox()" onblur="onBlurEmailBox()" /><br />');
+								/* ]]> */
+							</script>
+							<div class="searchClassWhite" style="display:inline;"><input class="searchClassWhite" type="checkbox" name="tsvreport"/>Include text reports<img src="images/help_16x16.gif" alt="help" width="12" height="12" id="step3help_textreport"></img>
+							<div class="tooltip">
+<table><tr><td>Additional tab-delimited text files for <br />
+easy programmatic processing<br />
+will also be included.</td></tr></table>
+</div>
+ 
+							<script type="text/javascript">
+								/* <![CDATA[ */
+								$("#step3help_textreport").tooltip({position: 'bottom right', effect:'fade', relative:true, offset:[+10,0], delay:100});
+								/* ]]> */
+							</script>
+							</div>
+							<br />
+							<input class="searchClassWhite" type="hidden" name="mupitinput" value="on"></input>
+							<input class="searchClassWhite" type="hidden" name="webservicesubmission" value="off"></input>
+							<input class="searchClassWhite" type="hidden" name="analyses" id="analyses" value=""></input>
+						</td>
+					</tr>
+				</table>
+				<table style="width:314px; ">
+					<tr>
+						<td>
+							<div style="text-align:center; font-family: Trebuchet MS; font-size: 12px;">
+								<input type="image" name="submit_button" id="submit_button" src="images/Submit_Button.jpg" onmousedown="this.src='images/Submit_Button_down.jpg';"></input><br />
+								<a href="help.jsp?chapter=help_report&amp;article=top" target="_blank">What will I get?</a>
+							</div>
+							<div id="submitresultdiv" class="searchClass"></div>
+						</td>
+					</tr>
+				</table>
+			</td></tr></table>
+		</form>
+	</div>
+	
+	<!--
+	<div id='svquerydiv' class='searchClass'>
+		Query a single variant (chr_pos_strand_refbase_altbase):<input type='text' size='10'></input>
+	</div>
+	-->
+	
+	<div id='adminmsgdiv' class='searchClass' style='text-align: center; font-size: 20px; font-weight: bold; background-color: #EFDEDE;'></div>
+
+	<p></p>
+<div id="footer">
+	&copy; 2019 <a href="http://karchinlab.org/" target="_blank">Karchin lab</a>, <a href="http://www.icm.jhu.edu/" target="_blank">Institute for Computational Medicine</a>, <a href="http://www.jhu.edu/" target="_blank">The Johns Hopkins University</a> | Funding: U24CA204817 | 
+	<a href="disclaimer.html" target="_blank">Disclaimer</a> | 
+	<a href="privacyPolicy.html" target="_blank">Privacy Policy</a> | 
+	<a href="licensing.html" target="_blank">Licensing</a>
+</div>
+
+</body>
+
+</html>

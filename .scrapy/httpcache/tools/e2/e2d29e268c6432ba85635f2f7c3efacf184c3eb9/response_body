@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>AnDom-Server</title>
+    <META NAME="keywords" CONTENT="annotation, protein sequence, protein structure, SCOP, domain, PSSM, IMPALA, RPS-BLAST, Web-Server, bioinformatics, biochemistry">
+    <META NAME="description" CONTENT="AnDom - Annotation of protein domains: a web-server to predict structural domains (SCOP) in protein sequences using PSSM profiles with IMPALA or RPS-BLAST(+)">
+    <META NAME="author" CONTENT="Steffen Schmidt, Dominik Schaack">
+
+    <LINK REL="SHORTCUT ICON" HREF="http://andom.bioapps.biozentrum.uni-wuerzburg.de/favicon_new.ico" TYPE="image/ico">
+
+    <link rel="stylesheet" type="text/css" href="andom_new.css">
+
+  </head>
+
+  <body>
+
+    <!-- Header / Left-Bar DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD -->
+    <div id="menu" >
+      <div id="top">
+ 	<img src="images/AnDom_new.gif" alt="AnDom Header with links" usemap="#AnDom_Map" border="0"> 
+ 	  <MAP NAME="AnDom_Map"> 
+ 	    <AREA SHAPE="rect" ALT="Universitaet Wuerzburg" COORDS="0,0,180,83" HREF="http://www.uni-wuerzburg.de">
+ 	    <AREA SHAPE="rect" ALT="Bioinformatik am Biozentrum" COORDS="0,84,180,150" HREF="http://www.bioinfo.biozentrum.uni-wuerzburg.de">
+		<AREA SHAPE="rect" ALT="AnDom Homepage" COORDS="330,25,610,125" HREF="http://andom.bioapps.biozentrum.uni-wuerzburg.de/index_new.html">
+ 	  </MAP> 
+      </div>
+      
+	  <div id="links">
+        Links
+        <div><a href="index_new.html" id="search" >Search</a></div>
+        <div><a href="Usage_new.html" id="usage"  >Usage</a></div>
+        <div><a href="Example_new.html" id="example">Example</a></div>
+        <div><a href="http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;list_uids=11911710&amp;dopt=Abstract" id="cite"   >Citation</a></div>
+        <div>&nbsp;</div>
+      </div>
+
+      <div id="colorcode">
+        SCOP
+	<p><a href="http://scop.mrc-lmb.cam.ac.uk/scop/data/scop.b.b.html"><table><tr><td width="25px">1/a<span>all &alpha;                     </span></td><td bgcolor="#000000" width="14px">&nbsp;</td></tr></table></a></p>
+	<p><a href="http://scop.mrc-lmb.cam.ac.uk/scop/data/scop.b.c.html"><table><tr><td width="25px">2/b<span>all &beta;                      </span></td><td bgcolor="#FF0000" width="14px">&nbsp;</td></tr></table></a></p>
+	<p><a href="http://scop.mrc-lmb.cam.ac.uk/scop/data/scop.b.d.html"><table><tr><td width="25px">3/c<span>&alpha; + &beta;                </span></td><td bgcolor="#00FF00" width="14px">&nbsp;</td></tr></table></a></p>
+	<p><a href="http://scop.mrc-lmb.cam.ac.uk/scop/data/scop.b.e.html"><table><tr><td width="25px">4/d<span>&alpha; / &beta;                </span></td><td bgcolor="#0000FF" width="14px">&nbsp;</td></tr></table></a></p>
+	<p><a href="http://scop.mrc-lmb.cam.ac.uk/scop/data/scop.b.f.html"><table><tr><td width="25px">5/e<span>multidomain                     </span></td><td bgcolor="#FF00FF" width="14px">&nbsp;</td></tr></table></a></p>
+	<p><a href="http://scop.mrc-lmb.cam.ac.uk/scop/data/scop.b.g.html"><table><tr><td width="25px">6/f<span>membrane &amp; cell&nbsp;surface</span></td><td bgcolor="#FFFF00" width="14px">&nbsp;</td></tr></table></a></p>
+	<p><a href="http://scop.mrc-lmb.cam.ac.uk/scop/data/scop.b.h.html"><table><tr><td width="25px">7/g<span>small proteins                  </span></td><td bgcolor="#00FFFF" width="14px">&nbsp;</td></tr></table></a></p>
+      </div>
+
+      <table><tr><td height="20px">&nbsp;</td></tr></table>
+
+     <div id="bottom">&nbsp;</div>
+    </div>
+
+    <div id="alltext"><div id="mainpage">
+    <!-- FORM -->
+    <form action="../cgi-bin/start_impala_new.cgi" method="post">
+      <!-- seqid -->
+      <p>
+	<b><a href="Usage_info_new.html#Identifier">Protein-Identifier:</a></b> 
+      </p>
+      <p>
+	<input type="TEXT" name="seqid" size="24">
+	  <cite>(e.g. KPYK1_ECOLI or P0AD61 or AAB47952)</cite>
+      </p>
+      <!-- seq -->
+      <p>
+	<b><a href="Usage_info_new.html#Sequence">Protein-Sequence:</a></b>
+	<cite>(in FASTA-format or raw sequence  - digits will be ignored)</cite>
+      </p>
+      <p>
+	<textarea cols="80" rows="8" name="seq"></textarea>
+      </p>
+      <!-- Run / Reset -->
+      <p>
+	<input value="Search" type="submit">
+	<input value="Reset" type="reset">
+      </p>
+   
+      <!-- Parameters -->
+      <p>
+	<b><a href="Usage_info_new.html#Parameters">Parameters:</a></b>
+      </p>
+      <table summary="Parameters">
+	<!-- Method -->
+	  <tr><td><a href="Usage_info_new.html#Method">Method:</a></td>
+	    <td><select name="method">
+		<option> IMPALA</option>
+		<option> RPS-BLAST</option>
+		<option selected="selected"> RPS-BLAST-PLUS</option>
+	      </select>
+	    </td>
+ 	    <td></td> 
+	  </tr>
+	<!-- Database -->
+	  <tr><td><a href="Usage_info_new.html#Database">Database:</a></td>
+	    <td><select name="database">
+		<option> SCOP 1.59</option>
+		<option> SCOP 1.63</option>
+		<option> SCOP 1.65</option>
+		<option selected="selected"> SCOP 1.75A</option>
+	      </select>
+	    </td>
+	    <td></td>
+	  </tr>
+	  <!-- Expect -->
+	  <tr><td><a href="Usage_info_new.html#Expect">Expect:</a></td>
+	    <td>
+	      <select name="expect">
+		<option>1e-10</option>
+		<option>1e-6</option>
+		<option>1e-5</option>
+		<option>1e-3</option>
+ 		<option>1e-2</option>
+		<option>1</option>
+		<option selected="selected">10</option>
+	      </select>
+	    </td>
+	  </tr>
+	  <!-- Filter (SEG) -->
+	  <tr><td><a href="Usage_info_new.html#Filter">Filter:</a></td>
+	    <td>
+	      <input checked="checked" value="Y" name="seg" type="checkbox">
+	      Low complexity (SEG)
+	    </td>
+	  </tr>
+
+          <!-- ShowList -->
+          <tr><td><a href="Usage_info_new.html#Show">Show:</a></td>
+            <td>
+              <input checked="checked" value="Y" name="showIndexList" type="checkbox">
+              Index List
+            </td>
+          </tr>
+
+      </table>
+    </form>
+    <br></br><hr size=1 noshade></hr>
+    <address><a href="mailto:d&#111;&#109;&#105;&#110;&#105;&#107;&#046;&#115;&#099;&#104;&#097;&#097;&#099;&#107;&#064;&#117;&#110;&#105;&#045;&#119;&#117;&#101;&#114;&#122;&#098;&#117;&#114;&#103;&#046;&#100;&#101;">D&#111;&#109;&#105;&#110;&#105;&#107;&#032;&#083;&#099;&#104;&#097;&#097;&#099;&#107;</a><td>, </td><a href="mailto:s&#115;&#099;&#104;&#109;&#105;&#100;&#116;&#064;&#114;&#105;&#099;&#115;&#046;&#098;&#119;&#104;&#046;&#104;&#097;&#114;&#118;&#097;&#114;&#100;&#046;&#101;&#100;&#117;">S&#116;&#101;&#102;&#102;&#101;&#110;&#032;S&#099;&#104;&#109;&#105;&#100;&#116;</a></address>
+<!-- Created: Sun Jan 25 18:56:17 EST 2004 -->
+<!-- hhmts start -->
+Last modified: Mon Feb 18 07:12:08 EDT 2013
+<!-- hhmts end -->
+	</div>    </div>
+  </body>
+</html>

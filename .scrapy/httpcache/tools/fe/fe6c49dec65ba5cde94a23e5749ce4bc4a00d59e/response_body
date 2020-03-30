@@ -1,0 +1,295 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <title>COV2HTML - Connexion</title>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+  <meta name="description" content="La description du site" />
+  <meta name="keywords" lang="fr" content="les mots cl�s utilis�s" />
+  <meta name="language" content="fr" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <script type="text/javascript" src="js/script.js"></script> 
+  <script type="text/javascript" src="js/commun.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>  
+  <script type="text/javascript" src="js/jquery.blockUI.js"></script>
+  <script type="text/javascript">
+	defaultButtonId = "";
+	defaultCtrlFocus = "user";
+  	afficheErreur('');
+  	
+</script>
+
+
+
+</head>
+
+<body id="body" onLoad="onBodyLoaded()">
+
+<form id="formulaire" name="formulaire" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="form_hidden_action" value="" />
+	<input type="hidden" name="form_hidden_action_param" value="" />
+	<input type="hidden" name="form_hidden_scrollX" value="" />
+	<input type="hidden" name="form_hidden_scrollY" value="" />
+	<input type="hidden" id="form_hidden_help"  name="form_hidden_help" value="0" />
+	
+	<div align="center">
+		<img src='/COV2HTML/img/COV2HTML_logo.png' />
+	</div>
+
+	<br>	
+
+	<div id="waiting_message" style="display:none;">
+		<span style="text-decoration:blink;" >TEST</span>
+	</div>
+		
+	<br>
+		
+	<div class="table_analysis">
+		<table align="center" border cellpadding="6">
+			<tr class="table_analysis_title">
+				<td colspan=2 align="center">
+					<span style="font-weight:bold;" >ENTER your Analysis (title) : </span>
+<input type="text" id="form_text_title" name="form_text_title" value=""      />
+<a href="connexion.php" id="form_link_https-off" title="" onclick="javascript:return doAction('form_link_https-off', '', 'Click on UNLOCK image to switch to a classic version of the site (http), this action could increase the performance.', null);" style="font-style:italic; margin-left: 30px;" >https</a>
+<a href="http://mmonot.eu/COV2HTML/connexion.php" id="form_link_https-unlock" title="" ><img src="/COV2HTML/img/unlock.png" ></img></a>
+				</td>
+				<td align="center">
+					<span style="font-weight:bold;" >VIEW an Analysis</span>
+				
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<span>Condition A</span>
+					<input type="text" id="form_text_SA" name="form_text_SA" title="LABEL limit 8 characters" value="" size="7" maxlength="8"/>
+				</td>				
+				<td align="center">
+					<span>Condition B</span>
+					<input type="text" id="form_text_SB" name="form_text_SB" title="LABEL limit 8 characters" value="" size="7" maxlength="8"/>
+				</td>
+				<td align="center">
+					<span style="font-style:italic;" >Cookies are mandatory to recover Your Data </span>
+				</td>					
+			</tr>
+			<tr>
+				<td>
+					<span>A1 : </span>
+<input type="file" name="file_result_create_database_A_1"/>				</td>				
+				<td>
+					<span>B1 : </span>
+<input type="file" name="file_result_create_database_B_1"/>				</td>
+				<td align="center">
+					<option value="-1">-------------------- YOUR Analysis ------------------</option>
+</select>
+				</td>					
+			</tr>			
+			<tr>
+				<td>
+					<span>A2 : </span>
+<input type="file" name="file_result_create_database_A_2"/>				</td>				
+				<td>
+					<span>B2 : </span>
+<input type="file" name="file_result_create_database_B_2"/>				</td>
+				<td align="center">
+					<select id="form_select_liste_pub" name="form_select_liste_pub" size="1" onchange="javascript:return doAction('form_select_liste_pub', '', '', null);" >
+<option value="-1">---------------- PUBLISHED Analysis (8) ----------------</option>
+<option value="-40">2017 - C. difficile R20291: effect of tcdR mutation on sporulation</option>
+<option value="-38">2017 - P. aeruginosa P4 Infection (Phage &amp; Host)</option>
+<option value="-20">2016 - C. difficile 630 SNP Influence (CD630 &amp; 630Derm &amp; 630E)</option>
+<option value="-34">2016 - P. aeruginosa P3 Infection (Phage &amp; Host)</option>
+<option value="-17">2015 - C. difficile CRISPR system (CD630 &amp; R20291)</option>
+<option value="-16">2014 - S. typhimurium Expanding the RpoS/sigS-Network</option>
+<option value="-13">2013 - C. difficile Genome-wide Identification of sRNA</option>
+<option value="-14">2013 - C. difficile Genome-wide Identification of Sigma Factor</option>
+</select>
+				</td>					
+			</tr>	
+			<tr>
+				<td>
+					<span>A3 : </span>
+<input type="file" name="file_result_create_database_A_3"/>				</td>				
+				<td>
+					<span>B3 : </span>
+<input type="file" name="file_result_create_database_B_3"/>				</td>
+				<td align="center">
+					<select id="form_select_liste_test" name="form_select_liste_test" size="1" onchange="javascript:return doAction('form_select_liste_test', '', '', null);" >
+<option value="-1">--------------------- TUTORIAL Data --------------------</option>
+<option value="-12">Campylobacter jejuni rpoN/WT (RNA)</option>
+<option value="-11">Sulfolobus solfataricus TSS+ (TSS)</option>
+<option value="-10">Mixed Sulfolobus solfataricus (MIX)</option>
+<option value="-9">Unpublished Data A / Ref (DNA)</option>
+<option value="-2">WorkShop RpoS / WT (RNA)</option>
+</select>
+				</td>					
+			</tr>		
+			<tr>
+				<td>
+					<span>A4 : </span>
+<input type="file" name="file_result_create_database_A_4"/>				</td>				
+				<td>
+					<span>B4 : </span>
+<input type="file" name="file_result_create_database_B_4"/>				</td>
+				<td align="center">
+					<span>Users : 22</span>
+<span>  /  </span>
+<span>Analysis : 107</span>
+<a href="http://mmonot.eu/COV2HTML/statistics.php" id="form_link_statistics" title="" >(details)</a>
+				</td>					
+			</tr>	
+			<tr>
+			<tr>
+				<td align="center">
+					<span>NORM Factors :</span>
+<input type="file" name="file_result_normalisation"/>				</td>
+				<td>
+					<span>STATISTICS : </span>
+<input type="file" name="file_result_statistics"/>				</td>	
+				<td align="center" colspan=1>
+					<option value="-1">-------------------- REMOVE Analysis -------------------</option>
+</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" colspan=2>	
+										
+					<input type="button" id="form_button_createDB" name="form_button_createDB" title="View your results in a graphical interface" onclick="javascript: $.blockUI({ message: '<h1>Please Wait</h1><h2>--- 1 to 5 minutes ---</h2><h3>IF Timeout Issue<br>Check in 5 minutes in YOUR Analysis</h3><img src=\'/COV2HTML/img/COV2HTML_busy.gif\' />'}); setTimeout('doAction(\'form_button_createDB\', \'\', \'\', null);', 500); return false;" value="ENTER ANALYSIS IN DATABASE"/>
+				</td>
+				<td align="center">
+					<input type="button" id="form_button_help" name="form_button_help" title="" onclick="javascript:return doAction('form_button_help', '', '', null);" value="HELP is OFF"/>
+<input type="button" id="form_button_help_sleep" name="form_button_help_sleep" title="" onclick="javascript: $.blockUI({ message: '<h2> Click here to activate help box </h2>'}); return doAction('form_button_help_sleep', '', '', null);" value="?" style="background-color:#00EE00;font-weight:bold;color:black;" />
+				</td>
+				
+			</tr>
+		</table>
+	</div>
+	
+	<br>
+	
+	<div class="table_analysis">
+		<table align="center" border cellpadding="6">
+			<tr class="table_analysis_title" >
+				<td colspan=2 align="center">
+					<span>MAP2COV Converter</span>
+				</td>
+				<td colspan=2 align="center">
+					<span>Graphic Support</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan=2 align="center" width="50%" height="50%">
+					<span style="font-style:italic;" >Convert mapping data to COV2HTML analysis file</span>
+				</td>
+				<td colspan=2 align="center" width="50%" height="50%">
+					<span style="font-style:italic;" >MAP2COV, DNA-, RNA-, ChIP-seq, NORM Factors and Statistics</span>
+				</td>
+			</tr>			
+			<tr>
+				<td align="center" width="25%" height="25%">
+					<span>WINDOWS* (XP, Vista, 7+)</span>
+				</td>
+				<td align="center" width="25%" height="25%">
+					<a href="/COV2HTML/file/MAP2COV_WIN.zip">MAP2COV_WIN.zip</a>				</td>
+				<td align="center" width="25%" height="25%">
+					<a href="/COV2HTML/file/MAP2COV_guide.pdf">MAP2COV</a>				</td>
+				<td align="center" width="25%" height="25%">
+					<a href="/COV2HTML/file/COV2HTML_DNA-guide.pdf">DNA-seq</a>				</td>				
+			</tr>
+			<tr>
+				<td align="center" width="25%" height="25%">
+					<span title="10.6: Snow Leopard and superior version">MAC OS (10.6+)</span>
+				</td>
+				<td align="center" width="25%" height="25%">
+					<a href="/COV2HTML/file/MAP2COV_MAC.zip">MAP2COV_MAC.zip</a>				</td>
+				<td align="center" width="25%" height="25%">
+					<a href="/COV2HTML/file/COV2HTML_RNA-guide.pdf">RNA-seq</a>				</td>
+				<td align="center" width="25%" height="25%">
+					<a href="/COV2HTML/file/COV2HTML_ChIP-guide.pdf">ChIP-seq</a>				</td>				
+			</tr>
+			<tr>
+				<td align="center" width="25%" height="25%">
+					<span>SOURCE Code Files</span>
+				</td>
+				<td align="center" width="25%" height="25%">
+					<a href="/COV2HTML/file/MAP2COV_SRC.zip">MAP2COV_SRC.zip</a>				</td>
+				<td align="center" width="25%" height="25%">
+					<a href="/COV2HTML/file/COV2HTML_NORM-guide.pdf">NORM Factors</a>				</td>
+				<td align="center" width="25%" height="25%">
+					<a href="/COV2HTML/file/COV2HTML_STAT-guide.pdf">STATISTICS</a>				</td>				
+			</tr>
+			<tr>
+				<td colspan=4 align="left" width="100%" height="100%">
+					<I>*Windows pre-requisite software links: <a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi">Python 2.7.3</a></I>				</td>				
+							
+			</tr>				
+		</table>
+		
+	</div>		
+
+	<br>
+
+	<div class="table_analysis">
+		<table align="center" border cellpadding="6">
+			<tr class="table_analysis_title">
+				<td align="center" colspan=5>
+					<a href="https://research.pasteur.fr/en/team/pathogenesis-of-bacterial-anaerobes/" id="form_link_lpba_website" title="" >Pathogenesis of Bacterial Anaerobes</a>
+				</td>
+				<td align="center">
+					<span>Pubmed</span>
+				</td>	
+				<td align="center">
+					<span>Source</span>
+				</td>	
+				<td align="center">
+					<span>Project</span>
+				</td>					
+			</tr>
+			<tr>
+				<td align="center">
+					<span>M. Monot</span>
+				</td>
+				<td align="center">
+					<span>M. Orgeur</span>
+				</td>
+				<td align="center">
+					<span>E. Camiade</span>
+				</td>
+				<td align="center">
+					<span>C. Brehier</span>
+				</td>
+				<td align="center">
+					<span>B. Dupuy</span>
+				</td>
+				<td align="center">
+					<a href="http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=search&db=pubmed&term=24512253[uid]" target="_blank "  >Abstract</a>				</td>
+				<td align="center">
+					<a href="http://sourceforge.net/projects/cov2html" id="form_link_sg_project" title="" >SourceForge</a>
+				</td>
+				<td align="center">
+					<a href="https://research.pasteur.fr/en/software/cov2html/" id="form_link_cov2_website" title="" >Institut Pasteur</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<br>
+	
+	<div class="table_analysis">
+		<table align="center" border cellpadding="6">
+			<tr class="table_analysis_title" >
+				<td align="center">
+					<span style="font-weight:normal;" >The COV2HTML software is composed of 2 parts: MAP2COV to convert to as suitable format alignment of the deep sequencing reads with the reference sequence</span>
+<br>
+<span style="font-weight:normal;" >and this visualization web interface for the coverage of all Next Generation Sequencing (DNA-seq, RNA-seq, ChIP-seq and Transcription Start Site).</span>
+				</td>
+			</tr>
+			
+		</table>
+		
+	</div>
+	
+	
+		
+</form>
+
+</body>
+</html>

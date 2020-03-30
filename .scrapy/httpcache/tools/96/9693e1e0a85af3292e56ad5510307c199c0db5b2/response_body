@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    
+    
+
+    
+    
+
+    
+
+    <link href="/depth/static/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+
+    <link rel='shortcut icon' type='image/x-icon' href='/depth/static/images/Depth_logo.ico'/>
+    <link rel="stylesheet" href="/depth/static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/depth/static/css/template.css">
+    
+    
+    
+    
+    
+
+
+    <script type="text/javascript" src="/depth/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/depth/static/js/depth.js"></script>
+    <script type="text/javascript" src="/depth/static/js/webtour.js"></script>
+    <script type="text/javascript" src="/depth/static/js/bootstrap-tour.min.js"></script>
+
+    
+    
+
+    
+    
+
+    
+    
+
+
+</head>
+
+<body>
+<a id="top"></a>
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+    <a class="navbar-brand" href="/depth/">DEPTH</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/depth/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/depth/search/">Search</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Download</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/depth/references/">References</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false"> Help</a>
+                <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/depth/algorithm/">Algorithm</a>
+                    <a class="dropdown-item" href="/depth/input_output/">Input/Output</a>
+                    <a class="dropdown-item" href="#">F.A.Q</a>
+                    <a class="dropdown-item" href="#">Benchmarking Data</a>
+                    <a class="dropdown-item" href="#">Supplementary data</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/depth/contact/">Contact</a>
+            </li>
+        </ul>
+
+
+    </div>
+</nav>
+
+<div class="row pb-2 mt-4 mb-2 border-bottom text-center">
+    <div class="col">
+        <a href="/depth/"><img src="/depth/static/images/Depth_logo.png" class="img-responsive"
+                                        style="height: 50px;margin: auto;"></a> <br>
+        <p>Server For Computing/Predicting DEPTH, Cavity Sizes, Ligand Binding Sites and pKa</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <div id="wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div id="" class="col-md-3">
+                    <div class="card card-body">
+                        <div class=" custom-fonts">
+
+                            <form action="/depth/upload/" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+
+                                    <p class="fa fa-question-circle"></p>
+                                    <label for="proteinID"
+                                           onclick="showhelp('pdb');" style="font-weight: bold">
+                                        Structure Code
+                                    </label>
+                                    <br>
+                                    
+
+                                    <div class="input-group mb-3" id="pdbhelptour">
+                                        <input type="text" name="proteinID" class="form-control" placeholder="1mvt" id="proteinID" maxlength="40">
+
+                                        <div class="input-group-append">
+                                            
+                                            
+                                            
+                                            <span class="input-group-btn" data-toggle="tooltip" title="Upload file">
+                                                    <input type="hidden" name="csrfmiddlewaretoken" value="gkWAWBkkuLTs4pXub8uSjWZ1Gx2eretu6sOsbQRTpR3jCfLdS55dNdKtgBiWMAQB">
+                                                    <input type="file" name="file" multiple id="pdbupload" onchange="showfile(this.id);" class="far fa-folder-open form-control" style="overflow: hidden;">
+                                            </span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+
+                                    <span class="help-block">Four letter PDB complex code or upload file in PDB format.</span>
+
+                                    <hr>
+
+                                    <!-- OPTION card -->
+                                    <div class="card">
+
+                                        <!-- ############################## -->
+                                        <!--        DEPTH                   -->
+                                        <!-- ############################## -->
+                                        
+
+                                        <div class="card-header">
+                                            <input type="checkbox" name="isDepth" id="depthComp" checked>
+                                            <label for="depthComp"
+                                                   style="font-weight: bold">
+                                                DEPTH Computation
+                                            </label>
+                                            <span class="fa fa-question-circle" id="depth"
+                                                  onclick="showhelp(this.id);"></span>
+                                            <br>
+
+                                            <a id="adepth" role="button" onclick="expand('depth_param');">Parameters</a>
+                                        </div>
+
+                                        <div id="depth_param" class="card-body help">
+                                            
+                                            <label for="id_depthSolvCycle">DEPTH Solvating Cycles:</label>
+                                            <input type="number" name="depthSolvCycle" value="25" class="form-control" min="1" max="150" required id="id_depthSolvCycle">
+                                            <br>
+
+                                            
+                                            <label for="id_depthWaters">Neighbourhood Waters(1-5):</label>
+                                            <input type="number" name="depthWaters" value="2" class="form-control" min="1" max="5" required id="id_depthWaters">
+                                            <br>
+
+                                            
+                                            <label for="id_depthNeighRadi">Solvent Neighbourhood Radius(Å):</label>
+                                            <input type="number" name="depthNeighRadi" value="4.2" class="form-control" min="1.4" max="5.6" step="0.01" required id="id_depthNeighRadi">
+                                            <br>
+
+                                        </div>
+
+                                        <!-- ############################## -->
+                                        <!--              ASA               -->
+                                        <!-- ############################## -->
+                                        
+
+                                        <div class="card-header">
+                                            <label for="ASA" style="font-weight: bold">
+                                                ASA
+                                            </label>
+                                            <span class="fa fa-question-circle" id="asa"
+                                                  onclick="showhelp(this.id);"></span>
+                                            <br>
+
+                                            <a id="aasa" role="button" onclick="expand('asa_param');">Parameters</a>
+                                        </div>
+
+                                        <div id="asa_param" class="card-body help">
+
+                                            <div id="bindingPara">
+                                                
+                                                <label for="id_asaResolution">ASA Resolution:</label>
+                                                <input type="number" name="asaResolution" value="92" class="form-control" min="1" max="100" required id="id_asaResolution">
+                                                <br>
+
+                                                
+                                                <label for="id_asaProbeRadi">ASA Probe Radius:</label>
+                                                <input type="number" name="asaProbeRadi" value="1.4" class="form-control" min="1.4" max="5.6" step="0.01" required id="id_asaProbeRadi">
+                                                <br>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- ############################## -->
+                                        <!--        SITE PREDICTION         -->
+                                        <!-- ############################## -->
+                                        
+
+                                        <div class="card-header">
+
+                                            <input type="checkbox" name="isBindSite" id="bindSiteComp">
+                                            <label for="bindSiteComp"
+                                                   style="font-weight: bold">
+                                                Binding Site Prediction
+                                            </label>
+                                            <span class="fa fa-question-circle"
+                                                  id="bSite"
+                                                  onclick="showhelp(this.id);"></span>
+                                            <br>
+
+                                            <a id="aBSite" role="button" onclick="expand('bSite_param');">Parameters</a>
+                                        </div>
+
+                                        <div id="bSite_param" class="card-body help">
+
+                                            <div id="bindingPara">
+
+                                                <input type="checkbox" name="is_bSiteEvol" id="bSiteEvolu">
+                                                Use Evolutionary Information
+                                                <br>
+                                                <br>
+
+                                                
+                                                <label for="id_blast_iter">Blast Iterations:</label>
+                                                <input type="number" name="blast_iter" value="5" class="form-control" min="1" max="10" required id="id_blast_iter">
+                                                <br>
+
+                                                
+                                                <label for="id_blast_e">Blast e_thr:</label>
+                                                <input type="number" name="blast_e" value="0.0001" class="form-control" required id="id_blast_e">
+                                                <br>
+
+                                                
+                                                <label for="id_blast_maxseq">Blast maxSeq:</label>
+                                                <input type="number" name="blast_maxseq" value="1000" class="form-control" required id="id_blast_maxseq">
+                                                <hr>
+
+                                                
+                                                <label for="id_bSiteDepthSolvCycle">Solvating Cycles:</label>
+                                                <input type="number" name="bSiteDepthSolvCycle" value="25" class="form-control" min="1" max="35" required id="id_bSiteDepthSolvCycle">
+                                                <br>
+
+                                                
+                                                <label for="id_bSiteDepthWater">Neighbourhood Waters(1-5):</label>
+                                                <input type="number" name="bSiteDepthWater" value="4" class="form-control" min="1" max="5" required id="id_bSiteDepthWater">
+                                                <br>
+
+                                                
+                                                <label for="id_bSiteDepthNeighRadi">Solvent Neighbourhood Radius(Å):</label>
+                                                <input type="number" name="bSiteDepthNeighRadi" value="4.2" class="form-control" min="1.4" max="5.6" step="0.01" required id="id_bSiteDepthNeighRadi">
+                                                <br>
+
+                                                
+                                                <label for="id_bSiteProb">Probability Threshold:</label>
+                                                <input type="number" name="bSiteProb" value="0.8" class="form-control" min="0.0" max="1.0" step="0.01" required id="id_bSiteProb">
+
+                                            </div>
+
+                                        </div>
+
+                                        <!-- ############################## -->
+                                        
+                                        <!-- ############################## -->
+                                        
+
+                                        <div class="card-header">
+                                            <input type="checkbox" name="ispKa" id="pKaPred">
+                                            <label for="pKaPred" style="font-weight: bold">
+                                                pKa Prediction
+                                            </label>
+                                            <span class="fa fa-question-circle" id="pKa"
+                                                  onclick="showhelp(this.id);"></span>
+                                            <br>
+
+                                            <a id="a_pKa" role="button" onclick="expand('pKa_param');">Parameters</a>
+                                        </div>
+
+                                        <div id="pKa_param" class="card-body help">
+
+                                            <div id="pKaPara">
+                                                <p>Parameters:</p>
+
+                                                
+                                                <label for="id_pKaWater">Neighbourhood Waters(1-5):</label>
+                                                <input type="number" name="pKaWater" value="2" class="form-control" min="1" max="5" required id="id_pKaWater">
+                                                <br>
+
+                                                
+                                                <label for="id_pKa_depthSolvCycle">Depth Solvating Cycles:</label>
+                                                <input type="number" name="pKa_depthSolvCycle" value="25" class="form-control" min="1" max="35" required id="id_pKa_depthSolvCycle">
+                                                <br>
+
+                                                
+                                                <label for="id_cutoff_EE_distance">Electrostatic Distance:</label>
+                                                <input type="number" name="cutoff_EE_distance" value="12" class="form-control" min="7" max="15" required id="id_cutoff_EE_distance">
+                                                <br>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <button id="depth" type="submit" value="DEPTH"
+                                        class="btn btn-info btn-primary advance-param-button-text">DEPTH
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- --------------- -->
+                <!-- HELP -->
+                <!-- --------------- -->
+                <div id="" class="col-md-8">
+                    <div class="card card-body">
+                        <div class="custom-fonts ">
+                            <label class="help-heading" style="font-weight: bold">Help</label>
+                            <a href="#" id="hidehelp" class="got-it-link" onclick="hidehelp();">
+                                Got It
+                                <span class="fa fa-thumbs-up"></span></a>
+
+                            <br>
+                            <b>Parameters with help content are in bold face. Please click on "?"</b>
+                            <hr>
+
+                            <div id="pdbhelp" class="help param-description">
+                                <div class="card ">
+                                    <div class="card-header">PDB Structure</div>
+                                    <div class="card-body">
+                                        <p>
+                                            The PDB structure is the primary input to the server. The PDB structure can
+                                            be
+                                            specified
+                                            in the following ways:
+                                            <br><br>
+                                            1. By writing the four letter valid PDB complex code
+                                            <br>
+                                            2. By uploading a valid PDB file.
+                                            <br><br>
+                                            Caution: If a wrong PDB code is entered or if the uploaded file is not a
+                                            valid
+                                            PDB file then the job will be rejected by the server and the user will be
+                                            informed
+                                            of the respective error.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DEPTH help -->
+                            <div id="depthHelp" class="help param-description">
+                                <div class="card ">
+                                    <div class="card-header">Number of DEPTH cycles</div>
+                                    <div class="card-body">
+                                        <p>
+                                            The number of cycle to run depth, default is 25.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card ">
+                                    <div class="card-header">Number of Neighbour water molecules</div>
+                                    <div class="card-body">
+                                        <p>
+                                            The number of neighbor water in depth calculation, default is 2.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card ">
+                                    <div class="card-header">Solvent Neighbourhood Radius(&#8491;)</div>
+                                    <div class="card-body">
+                                        <p>
+                                            Solvent Radius, default is 4.2
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- ASA help -->
+                            <div id="asaHelp" class="help param-description">
+                                <div class="card ">
+                                    <div class="card-header">ASA Resolution</div>
+                                    <div class="card-body">
+                                        <p>
+                                            The resolution for solvent accessible surface area calculation,
+                                            default
+                                            is
+                                            92.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card ">
+                                    <div class="card-header">Cutoff distance for Electrostatic calculation</div>
+                                    <div class="card-body">
+                                        <p>
+                                            Probe radius for solvent accessible surface area calculation,
+                                            default is
+                                            1.4.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <!-- bSite help -->
+                            <div id="bSiteHelp" class="help param-description">
+                                <div class="card ">
+                                    <div class="card-header">Evolutionary Information</div>
+                                    <div class="card-body">
+                                        <p>
+                                            Uses Blast
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card ">
+                                    <div class="card-header">Blast Iterations</div>
+                                    <div class="card-body">
+                                        <p>
+                                            Blast Iterations
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card ">
+                                    <div class="card-header">Blast e_thr</div>
+                                    <div class="card-body">
+                                        <p>
+                                            Blast e_thr
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card ">
+                                    <div class="card-header">Blast maxSeq</div>
+                                    <div class="card-body">
+                                        <p>
+                                            Blast maxSeq
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card ">
+                                    <div class="card-header">Neibourhood Waters</div>
+                                    <div class="card-body">
+                                        <p>
+                                            Neighbourhood waters
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card ">
+                                    <div class="card-header">Probability Threshold</div>
+                                    <div class="card-body">
+                                        <p>
+                                            Prob Threshold
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- pKa Help -->
+                            <div id="pKaHelp" class="help param-description">
+                                <div class="card ">
+                                    <div class="card-header">Number of DEPTH cycles</div>
+                                    <div class="card-body">
+                                        <p>
+                                            The number of cycle to run depth, default is 25.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card ">
+                                    <div class="card-header">Number of Neighbour water molecules</div>
+                                    <div class="card-body">
+                                        <p>
+                                            The number of neighbor water in depth calculation, default is 2.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card ">
+                                    <div class="card-header">Solvent Neighbourhood Radius(&#8491;)</div>
+                                    <div class="card-body">
+                                        <p>
+                                            Solvent Radius, default is 4.2
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card ">
+                                    <div class="card-header">Cutoff distance for Electrostatic calculation</div>
+                                    <div class="card-body">
+                                        <p>
+                                            The cut-off distance for electrostatic calculation, default is 12.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div id="jobnamehelp" class="help param-description">
+                                <div class="card ">
+                                    <div class="card-header">JOBNAME</div>
+                                    <div class="card-body">
+                                        The jobname is chosen by the user for the job. Jobname
+                                        is useful when the user wants to distinguish between the different
+                                        submitted
+                                        job(s).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="emailhelp" class="help param-description">
+                                <div class="card ">
+                                    <div class="card-header">EMAIL</div>
+                                    <div class="card-body">
+                                        <p> If the user provide an email address then an email notification will
+                                            be
+                                            sent
+                                            to
+                                            inform the user about the job completion or unexpected termination
+                                            of
+                                            the
+                                            job.
+                                            <br><br>
+                                            It is advised that a valid and active email address must be provided
+                                            to
+                                            receive
+                                            notifications
+                                            about the job status.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+
+    <div class="guide custom-fonts" onclick="webtour();"><p class="fa fa-question-circle showhelp"></p>
+    </div>
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<style>
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+    }
+
+    .footer {
+        z-index: 1001; /* z-index of sidebar in help page is 1000 , so here is 1001 to make it above sidebar*/
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        background-color: #f5f5f5;
+     overflow: hidden;
+    }
+
+    .footer-fonts {
+        font-family: 'Lato', Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        color: #777;
+    }
+
+    .footer-fonts a {
+        text-decoration: none;
+        color: #777;
+    }
+
+    .footer-fonts-contact a {
+     font-size: medium;
+        color: #777;
+        text-decoration: none;
+        font-family: 'Lato', Helvetica, Arial, sans-serif;
+    }
+
+    body > .container {
+        padding: 60px 15px 0;
+    }
+
+</style>
+
+<footer class="footer">
+    <div class="container-fluid">
+        <nav class="nav navbar-nav navbar-left" style="margin-left:2%;">
+            <br>
+            <p class="footer-fonts">
+                <span class="glyphicon glyphicon-copyright-mark"></span> <a href="http://cospi.iiserpune.ac.in"
+                                                                            target="_blank">
+                Computational and Structural Biology at Pune, IISER (cospi)</a>. All rights reserved.
+                <br>
+                The site is mobile <span class="glyphicon glyphicon-phone"></span>friendly.
+            </p>
+        </nav>
+        <nav class="nav navbar-nav navbar-right footer-fonts-contact" style="padding-top:1%; margin-right:2%;">
+            <p>
+                <a href="/contactUs" target="_blank">CONTACT</a>
+            </p>
+        </nav>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="/depth/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/depth/static/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+</body>
+
+</html>

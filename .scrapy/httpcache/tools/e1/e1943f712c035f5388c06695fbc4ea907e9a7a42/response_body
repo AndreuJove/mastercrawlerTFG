@@ -1,0 +1,615 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head profile="http://www.w3.org/1999/xhtml/vocab">
+        <title>D-lnc</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="icon" href="favicon.ico"/>
+        <link type="text/css" rel="stylesheet" href="skin/css/css_index.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="skin/css/bootstrap.min2.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="skin/css/sm2lnc.css" media="all" />
+        <!--<link rel="stylesheet" href="skin/css/autocomplete.css">-->
+        <script src="skin/js/jquery-2.1.3.min.js"></script>
+        <script src="skin/js/jquery.select.js"></script>
+        <!--<script src="skin/js/selectbox.js"></script>-->
+        <script src="skin/js/bootstrap.min.js"></script>
+        <!--<script src="skin/js/autocomplete.js"></script>-->
+        <link rel="stylesheet" href="skin/css/jquery-ui.css">
+        <script>
+            $(function () {
+                $('#myAnalysis').click(function () {
+                    $('#time').toggle();
+                });
+            });
+            $(function () {
+                $('#lncrna_sequence').click(function () {
+                    OpenDialog("lnc_example.jsp", 200, 200);
+                });
+            });
+            $(function () {
+                $('#drug_structure').click(function () {
+                    OpenDialog("drug_example.jsp", 200, 200);
+                });
+            });
+            $(function () {
+                $('#validated_drug').click(function () {
+                    OpenDialog("validated_drug.jsp", 200, 200);
+                });
+            });
+            function OpenDialog(url, w, h) {
+                var iTop2 = (window.screen.availHeight - 20 - h) / 2;
+                var iLeft2 = (window.screen.availWidth - 10 - w) / 2;
+                var params = 'menubar:no;dialogHeight=' + h + 'px;dialogWidth=' + w + 'px;dialogLeft=' + iLeft2 + 'px;dialogTop=' + iTop2 + 'px;resizable=yes;scrollbars=0;resizeable=0;center=yes;location:no;status:no'
+                var addDiv = $("<div id = 'tempDiv' style='left:0px;top:0px;position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.4)!important;filter:alpha(opacity = 40);background:#000;z-index:1000;'></div>");
+                window.open(url, addDiv, params);
+            }
+</script>
+<script>
+$(document).ready(function() {
+	$("#content_sub div").hide(); // Initially hide all content_sub
+	$("#tabs li:first").attr("id","current"); // Activate first tab
+	$("#content_sub div:first").fadeIn(); // Show first tab content_sub
+	
+	
+    $('#tabs a').click(function(e) {
+        e.preventDefault();        
+        $("#content_sub div").hide(); //Hide all content_sub
+        $("#tabs li").attr("id",""); //Reset id's
+        $(this).parent().attr("id","current"); // Activate this
+        $('#' + $(this).attr('title')).fadeIn(); // Show content_sub for current tab
+    });
+})
+</script>
+<style>
+
+#tabs {
+	overflow: hidden;
+	width: 100;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#tabs li {
+	float: left;
+	margin: 0 .5em 0 0;
+}
+#tabs a {
+	position: relative;
+	background: #ddd;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+	background-image: -webkit-linear-gradient(top, #fff, #ddd);
+	background-image: -moz-linear-gradient(top, #fff, #ddd);
+	background-image: -ms-linear-gradient(top, #fff, #ddd);
+	background-image: -o-linear-gradient(top, #fff, #ddd);
+	background-image: linear-gradient(to bottom, #fff, #ddd);
+	padding: .7em 3.5em;
+	float: left;
+	text-decoration: none;
+	color: #444;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+	border-radius: 5px 0 0 0;
+	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+}
+ #tabs a:hover, #tabs a:hover::after, #tabs a:focus, #tabs a:focus::after {
+ background: #fff;
+}#tabs a:focus {
+	outline: 0;
+}
+ #tabs a::after {
+ content_sub:'';
+ position:absolute;
+ z-index: 1;
+ top: 0;
+ right: -.5em;
+ bottom: 0;
+ width: 1em;
+ background: #ddd;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+ background-image: -webkit-linear-gradient(top, #fff, #ddd);
+ background-image: -moz-linear-gradient(top, #fff, #ddd);
+ background-image: -ms-linear-gradient(top, #fff, #ddd);
+ background-image: -o-linear-gradient(top, #fff, #ddd);
+ background-image: linear-gradient(to bottom, #fff, #ddd);
+ -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+ -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+ box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+ -webkit-transform: skew(10deg);
+ -moz-transform: skew(10deg);
+ -ms-transform: skew(10deg);
+ -o-transform: skew(10deg);
+ transform: skew(10deg);
+ -webkit-border-radius: 0 5px 0 0;
+ -moz-border-radius: 0 5px 0 0;
+ border-radius: 0 5px 0 0;
+}
+ #tabs #current a, #tabs #current a::after {
+ background: #fff;
+ z-index: 3;
+}
+</style>
+<style>
+  .ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+  }
+  </style>
+  <script>
+     var drug=[
+     ["All trans retinoic acid (ATRA)","Anti-benzo[a]pyrene-trans-7,8-diol-9,10-epoxide (anti-BPDE)","Arsenic","Artesunate","Benzo[a]pyrene","Bisphenol-A (BPA)","Bleomycin (BLM)","Botulinum Toxin Type A (BoNTA)","Cadmium","Calycosin","Carboplatin","Carboplatin + Docetaxel","Cisplatin","Clopidogrel","Curcumin","Cycloheximide","Dexamethasone","Dextrose, unspecified form","Diamorphine","Diethylstilbestrol (DES)","Dioscin","Docetaxel","Doxorubicin","Fentanyl","Fluorouracil","Fucoxanthin","Fucoxanthin + Palmitic acid","Genistein","Hydrogen peroxide","Imatinib","Isoprenaline","Lipopolysaccharide","Metformin","Methotrexate (MTX)","Methylprednisolone","Oxaliplatin","Paclitaxel (PTX)","Palmitic Acid","Palmitic acid","Panobinostat","Phenformin","Platinum","Propofol","Proteasome inhibitors","Quercetin","Simvastatin","Sorafenib","Tamoxifen","Trichostatin A","beta-Asarone"],
+     ["2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD)","Bisphenol-A (BPA)","Bleomycin (BLM)","Cyclophosphamide","Diethyl 1,4-dihydro-2,4,6,-trimethyl-3,5-pyridinedicarboxylate (DDC)","Folic Acid (FA)","Furan","High glucose (HG)","Ketamine","Metamfetamine","Salvianolic acid B (Sal B)","beta-Asarone"],
+     ["Berberine","Losartan"],
+     ["Berberine","Losartan"],
+     ["beta-diketone antibiotic (DKAs)"],
+     ["Bisphenol-A (BPA)"]
+     ];
+     function getDrug(){
+         //获得物种下拉框的对象
+         var sltSpecies1=document.search1.species1;
+         //获得药物下拉框的对象
+         var sltDrug=document.search1.drug1;
+         //得到对应物种的药物数组
+         var species1Drug=drug[sltSpecies1.selectedIndex - 1];
+         //清空药物下拉框，仅留提示选项
+         sltDrug.length=1;
+ 
+         //将药物数组中的值填充到物种下拉框中
+         for(var i=0;i<species1Drug.length;i++){
+            sltDrug[i+1]=new Option(species1Drug[i],species1Drug[i]);
+         }
+         
+     }
+  </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+      var data1;  
+    //读取本地json 文件  
+      $.ajax({  
+          cache: false,  
+          async: false,// 通过请求 返回函数将得到的data 赋值给外部变量  
+          type: 'post',          
+          url: "json/validated_lnc.json",  
+          success: function (data) {  
+              data1 =eval(data);  
+          }  
+      });
+    $( function () {
+    $.widget( "custom.catcomplete", $.ui.autocomplete, {
+      _create: function() {
+        this._super();
+        this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+      },
+      _renderMenu: function( ul, items ) {
+        var that = this,
+          currentCategory = "";
+        $.each( items, function( index, item ) {
+          var li;
+          if ( item.category != currentCategory ) {
+            ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+            currentCategory = item.category;
+          }
+          li = that._renderItemData( ul, item );
+          if ( item.category ) {
+            li.attr( "aria-label", item.category + " : " + item.label );
+          }
+        });
+      }
+    });
+    $( "#lncrna1" ).catcomplete({
+      delay: 0,
+      source: data1
+    });
+  } );
+  </script>    
+  <script>
+      var data2;  
+    //读取本地json 文件  
+      $.ajax({  
+          cache: false,  
+          async: false,// 通过请求 返回函数将得到的data 赋值给外部变量  
+          type: 'post',          
+          url: "json/cmap.json",  
+          success: function (data) {  
+              data2 =eval(data);  
+          }  
+      });  
+      $.ajax({  
+          cache: false,  
+          async: false,// 通过请求 返回函数将得到的data 赋值给外部变量  
+          type: 'post',          
+          url: "json/geo.json",  
+          success: function (data) {  
+              data3 =eval(data);  
+          }  
+      }); 
+      function show_sub(v){
+        $.widget( "custom.catcomplete", $.ui.autocomplete, {
+      _create: function() {
+        this._super();
+        this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+      },
+      _renderMenu: function( ul, items ) {
+        var that = this,
+          currentCategory = "";
+        $.each( items, function( index, item ) {
+          var li;
+          if ( item.category != currentCategory ) {
+            ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+            currentCategory = item.category;
+          }
+          li = that._renderItemData( ul, item );
+          if ( item.category ) {
+            li.attr( "aria-label", item.category + " : " + item.label );
+          }
+        });
+      }
+    });
+    if(v=="cMap"){
+      $( "#lncrna2" ).catcomplete({
+      delay: 0,
+      source: data2
+    });  
+    }if(v==="GEO"){
+      $( "#lncrna2" ).catcomplete({
+      delay: 0,
+      source: data3
+    });  
+    }
+    }
+  </script>
+    </head>
+    <body class="html front not-logged-in two-sidebars page-node page-node- page-node-543 node-type-page" >
+        <header id="navbar" role="banner" class="navbar container navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="logo navbar-btn pull-left" href="index.jsp" title="Home">
+                        <a class="logo navbar-btn pull-left" href="index.jsp" title="Home">
+                            <img src="images/title.gif" width="120" height="40" alt="Home"/>
+                        </a>
+                </div>
+
+                <div class="navbar-collapse" >
+                    <nav role="navigation">
+                        <ul class="menu nav navbar-nav" >
+                            <li class="first leaf active"><a href="index.jsp" title="" class="active" >Home</a></li>
+                            <li class="expanded dropdown" ><a href="document.jsp">Document</a></li>
+                            <li class="expanded dropdown"><a href="download.jsp">Download</a></li>
+                            <li class="expanded dropdown"><a href="submit.jsp">Submit</a></li>
+                            <li class="expanded dropdown"><a href="help.jsp">Help</a></li>
+                            <li class="last leaf"><a href="contactus.jsp">Contact</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="main-container container">
+            <div class="row">
+
+                <aside class="col-sm-3" role="complementary">
+                    <div class="region region-sidebar-first well">
+                        <section id="block-block-15" class="block block-block clearfix">
+                            <h2 class="block-title">Introduction</h2>
+                            <p  align="justify" class="overlay-modal-background" style="font-size: 13px;padding:5px 0px;">D-lnc provides a comprehensive query and analysis platform to detect the experimentally validated and the computational predicted modification of drugs on lncRNA expression.</p>
+                            <p align="justify" class="overlay-modal-background" style="font-size: 13px;padding:5px 0px;">Validated dataset: We manually curated the effects (up-regulation or down-regulation) of drugs on lncRNA expression from literatures.</p>
+                            <p align="justify" class="overlay-modal-background" style="font-size: 13px;padding:5px 0px;">cMap dataset: We re-annotated the probes in microarray data of Connectivity Map Database (cMap) to obtain the drug-perturbed lncRNA expression profiles. The significantly differentially expressed lncRNAs between drug-treated samples and control samples were considered as drug-affected lncRNAs.</p>
+                            <p align="justify" class="overlay-modal-background" style="font-size: 13px;padding:4.5px 0px;">GEO dataset: We comprehensively searched the Gene Expression Omnibus Database (GEO) to find the microarray data with drug treatment. As described in cMap dataset, probe re-annotation and differential expression analysis were performed on these microarray data.</p>
+                        </section>
+                        <section id="block-block-24" class="block block-block clearfix">
+                            <h2 class="block-title">Links</h2>
+                            <a href="http://www.ncbi.nlm.nih.gov/pubmed/"><img border="0" src="images/pubmed.gif" width="100" height="30"/></a>
+                            <a href="http://www.drugbank.ca/"><img border="0" src="images/drugbank.gif" width="100" height="30"/></a><br>
+                            <a href="http://pubchem.ncbi.nlm.nih.gov/"><img border="0" src="images/pubchem.gif" width="100" height="30"/></a>
+                            <a href="http://asia.ensembl.org/index.html"><img border="0" src="images/ensembl.gif" width="100" height="30"/></a><br>
+                            <a href="https://portals.broadinstitute.org/cmap/"><img border="0" src="images/cmap.gif" width="100" height="30"/></a>
+                            <a href="https://www.ncbi.nlm.nih.gov/geo/"><img border="0" src="images/geo.gif" width="100" height="30"/></a><br>
+                        </section> <!-- /.block -->
+                    </div>
+                </aside>  <!-- /#sidebar-second -->
+                
+                <section class="col-sm-6">
+
+                    <div class="region region-content">
+                        <section id="block-block-22" class="block block-block clearfix">
+	<h2 class="page-header">Search</h2>
+	<div id="search">
+            <ul id="tabs">
+                        <li><a href="#" title="tab1" style="">Search Validated Dataset</a></li>
+			<li><a href="#" title="tab2">Search Predicted Datasets</a></li>
+		</ul>
+		<div id="content_sub">
+			<div id="tab1">
+				<form action="search.do" method="post" name="search1" class="form-wrapper cf" style="margin: 10px 5px 15px;">
+                                    <table style=" width: 470px">
+						<tr>
+                                                    <td style=" width: 130px">
+								<p>Species:</p>
+							</td>
+							<td>
+								<SELECT id="species1" class="form-control" name="species1" onchange="getDrug()">
+                                <option value="">Please select a species</option>
+								<option value="Homo sapiens">Homo sapiens</option>
+								<option value="Mus musculus">Mus musculus</option>
+								<option value="Rattus norvegicus">Rattus norvegicus</option>
+								<option value="Zebrafish">Zebrafish</option>
+								<option value="Chironomus riparius">Chironomus riparius</option>
+								</SELECT>
+							</td>
+						</tr>
+						<tr>
+                                                        <td>
+								<p>Search by Drug:</p>
+							</td>
+							<td>
+                                                                
+<!--                                                               <input id="drug1" class="form-control"  name="drug1" placeholder="Search by small molecule." type="text"/>-->
+                                                                <SELECT id="drug1" class="form-control" name="drug1">
+                                                                    <option value="">Please select a small molecule</option>
+                                                                 </SELECT>
+							</td>
+                                                        
+						</tr>
+						<tr>
+							<td>
+							<p>Search by lncRNA:</p>
+							</td>
+							<td>
+                                                               <input id="lncrna1" class="form-control"  name="lncrna1" placeholder="Search by lncRNA." type="text"/>
+                                                               <input type="hidden" name="operate" value="s_lncrna1">
+							</td>
+						</tr>
+                                                <tr>
+							<td>
+							</td>
+							<td>
+								<button class="btn btn-primary" value="search" style="width:100px; float: right" type="submit" >Search</button>
+							</td>
+						</tr>
+					</table> 
+				</form>
+			</div>
+			<div id="tab2">
+				<form action="search.do" method="post" name="search" class="form-wrapper cf" style="margin: 10px 5px 15px;">
+					<table style=" width: 470px">
+						<tr>
+							<td>
+								<p>Species:</p>
+							</td>
+							<td>
+<!--								<SELECT id="species2" class="form-control" name="species2">
+								<option value="Homo sapiens">Homo sapiens</option>
+								</SELECT>-->
+                                                                <input id="species2" class="form-control" name="species2" type="text" value="Homo sapiens" readonly="readonly">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Source:</p>
+							</td>
+							<td>
+								<SELECT id="source2" class="form-control" name="source2" onchange="show_sub(this.options[this.options.selectedIndex].value)">
+                                                                    <option value="">Please select a dataset source</option>
+									<option value="cMap">cMap</option>
+									<option value="GEO">GEO</option>
+								</SELECT>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Search:</p>
+							</td>
+							<td>
+								<input id="lncrna2" class="form-control" name="lncrna2" placeholder="Search by lncRNA or small molecule." type="text"/>
+								<input type="hidden" name="operate" value="s_lncrna2"> 
+								<font color="#808080" style="font-family:Droid Sans,Arial,sans-serif;line-height: 1.7; font-size: 12px;">e.g. lncRNA <strong>PVT1</strong>, Small Molecule <strong>Imatinib</strong>.</font>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							</td>
+							<td>
+								<button class="btn btn-primary" value="search" style="width:100px; float: right" type="submit" >Search</button>
+							</td>
+						</tr>
+					</table> 
+				</form>
+			</div>
+		</div>
+	</div>
+</section>  
+                        
+<section id="block-block-22" class="block block-block clearfix">
+                            <h2 class="page-header" class="right">Analysis</h2>
+                            <div style="height:230px;">
+                                <form action="analysis.do" method="post" name="analysis" class="form-wrapper cf" style="margin: 10px 5px 15px;" autocomplete="off" >
+                                    <table >
+                                        <tr>
+                                            <td>
+                                                <p>Species:</p>
+                                            </td>
+                                            <td>
+                                                <input id="species" class="form-control" name="species" type="text" value="Homo sapiens" readonly="readonly">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Analysis By:</p>
+                                            </td>
+                                            <td>
+                                                <select id="source" class="form-control" name="source">
+                                                    <option value="lncrna">lncRNA</option>
+                                                    <option value="drug">Small Molecule</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Analysis Content:</p>
+                                            </td>
+                                            <td>
+                                                <textarea id="input" class="form-control" style="width:410px;" rows="5" name="input" placeholder="You can input your lncRNA sequence (FASTA) or small molecular structure (MOL) here..." ></textarea>
+                                                <input type="hidden" name="operate"  value="analysis_content">
+                                                <font color="#808080" style="font-family:Droid Sans,Arial,sans-serif;line-height: 1.7;font-size: 12px;">e.g. lncRNA Sequence (FASTA) <a id="lncrna_sequence"><strong>H19</strong></a>, Drug Structure (MOL) <a id="drug_structure"><strong>Tamoxifen</strong></a>.</font>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                               <div id="time" style="display: none; float: right;" ><img src="images/gif001.gif" width="30px" height="30px"></div>
+                                            <button class="btn btn-primary" value="analysis" style="width:100px; float: right" type="submit" id="myAnalysis" onclick="divShow()">Analysis</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </section> <!-- /.block -->
+
+                        <section id="block-views-recent-news-block" class="block block-views clearfix">
+                            <h2 class="page-header" class="right" style="padding:0 0 25px 0;"></h2>
+                            <div class="view-content">
+                                <div class="views-row views-row-1 views-row-odd views-row-first">
+                                    <div class="views-field views-field-created"> 
+										<span class="views-label views-label-created" style="font-family:times new roman,Lucida Sans, Arial, Helvetica, sans-serif;text-align:justify;text-justify:inter-ideograph;font-size:14px;"> <strong>Citation: Jiang et al. D-lnc: a comprehensive database and analytical platform to dissect the modification of drugs on lncRNA expression. RNA Biology. 2019 Aug 7. 16(11):1586-1591. </strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section> <!-- /.block -->
+
+                    </div>
+</section> 
+                <aside class="col-sm-3" role="complementary">
+                    <div class="region region-sidebar-first well">
+                        <!--         <section id="block-block-21" class="block block-block clearfix">-->
+                        <section id="block-block-3" class="block block-block clearfix">
+                            <h2 class="block-title">Statistics</h2>
+                            <script src="skin/js/highcharts.js"></script>
+                            <script src="skin/js/dark-unica.js"></script>
+                            <script src="skin/js/jquery.min.js"></script>
+                            <script type="text/javascript">
+            var $chart = jQuery.noConflict();
+            $chart(function () {
+                Highcharts.chart('container1', {
+                    chart: {
+                        type: 'bar',
+                        backgroundColor: "#F5F5F5"
+                    },
+                    title: {
+                        text: 'Statistics of D-lnc',
+                    },
+                    xAxis: {
+                        categories: [
+                            'Drugs', 'LncRNAs', 'D-lncs'
+                        ],
+                        showEmpty: false
+
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: 'Numbers of Entries (log2)'
+                        }
+                    },
+                    legend: {
+                        type: 'scroll',
+                        itemHoverStyle: {
+                            color: '#F5F5F5'
+                        },
+                        itemHiddenStyle: {
+                            color: '#606063'
+                        },
+                        symbolRadius: 0,
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'top',
+                        x: 0,
+                        y: 30,
+                        floating: true,
+                        borderWidth: 0,
+                        backgroundColor: '#ffffff',
+                        shadow: true,
+                        reversed: true,
+                        width: 80,
+                        itemWidth: 120,
+                        itemDistance: 5,
+                        itemStyle: {
+                            width: 150,
+                            color: '#7c7c7c',
+                            font: '8pt Trebuchet MS, Verdana, sans-serif',
+                            'word-break': 'break-all'
+                        }
+                    },
+                    plotOptions: {
+                        series: {
+                            stacking: 'normal'
+                        }
+                    },
+                    series: [{
+                            name: 'Validated',
+                            //drug lnc  sm-lnc
+                            data: [5.88264304936184, 12.8801574566018, 12.9338750367073]
+                        }, {
+                            name: 'cMap',
+                            data: [10.3208005488816, 7.01122725542325, 14.2838118348309]
+                        },
+                        {
+                            name: 'GEO',
+                            data: [6.84549005094437, 11.2045711442492, 15.1441005563635]
+                        }
+                    ]
+                });
+            });
+                            </script>
+                            <div id="container1" style="position:relative;left:-19px;top:0px;width:230px; height: 410px;"></div>
+
+                            <td class="test3" align="left" valign="top"height="400">
+                            <dt>Validated:</dt>
+                            Number of lncRNAs: 7538<br> 
+                            Number of small molecules: 59<br>
+                            Number of entries: 7825<br>
+                            <dt>cMap:</dt>
+                            Number of lncRNAs: 129<br> 
+                            Number of small molecules: 1279<br>
+                            Number of entries: 19946<br>
+                            <dt>GEO:</dt>
+                            Number of lncRNAs: 2360<br> 
+                            Number of small molecules: 115<br>
+                            Number of entries: 36210<br>
+							<strong>Created date:</strong> 06/26/2018<br>
+							<strong>Update date:</strong> 07/13/2019							
+                            </td>
+                        </section> 
+                    </div>
+                </aside>
+            
+            </div>
+        </div>
+
+        <footer class="footer container" style="width:100%; text-align:center; padding: 2px 2px 2px 2px; height:70px;">
+			<table align="center" height="100%" width="80%"">
+			<tr>
+			<td align="right" style="width:67.3%; word-break:break-all;height:50%;"><p>College of Automation Engineering, Nanjing University of Aeronautics and Astronautics, China.</p></td>
+			<td align="left" style="width:32.7%; word-break:break-all;height:50%;"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/2.js?i=5n4eaunqvw8&amp;m=0&amp;s=70&amp;c=ff0000&amp;t=1" async="async"></script></td>
+			</tr>
+			</table>
+        </footer>
+
+    </body>
+</html>

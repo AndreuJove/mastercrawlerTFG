@@ -1,0 +1,239 @@
+<html>
+
+<head>
+
+<title>Sherlock Lab : Software</title>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<center>
+
+<table width="650" border="0" align="center">
+
+<tr>
+
+<td>
+
+<img src="header.gif" alt="sherlock lab">
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<hr>
+</td>
+</tr>
+
+<tr valign="top">
+
+<td>
+
+<div align="center">
+
+<a href="index.shtml">Home</a> | 
+<a href="wetlab.shtml">Research</a> | 
+<a href="pubs.shtml">Publications</a> |
+<a href="people.shtml">People</a> |
+<a href="join.shtml">Join Us</a> |
+<a href="funding.shtml">Funding</a> |
+<a href="contact.shtml">Contact</a>
+
+</div>
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+<hr>
+</td>
+</tr>
+
+<tr>
+<td>
+<br>
+</td>
+</tr>
+
+</table>
+
+</center>
+
+
+<center>
+
+<table width="650" border="0">
+
+<tr><td><h2>Software</h2></td></tr>
+
+<tr>
+
+<td>
+
+<ol type="1">
+
+<li><a href="http://search.cpan.org/dist/GO-TermFinder/">GO::TermFinder</a></li>
+
+<p>
+
+GO::TermFinder comprises a set of Object-Oriented Perl modules,
+released under the MIT Open Source license, with a defined API that
+can be used for accessing information in the Gene Ontology and Gene
+Ontology associations files.  In addition, the GO::TermFinder module
+itself can determine whether a set of genes is overrepresented with
+respect to their GO annotations than would be expected by chance if
+they had been drawn at random from a defined population of genes.
+
+<br><br>
+
+<b>Boyle, E.I., Weng, S., Gollub, J., Jin, H., Botstein, D., Cherry,
+J.M. and Sherlock, G. (2004).</b>  GO::TermFinder - open source
+software for accessing Gene Ontology information and finding
+significantly enriched Gene Ontology terms associated with a list of
+genes.  <i>Bioinformatics, </i><b>20</b>, 3710-3715.
+
+<br><a href="http://www.ncbi.nlm.nih.gov/pubmed/15297299"><img alt="PubMed" border="0" src="pubmed.gif"></a>
+
+<a href="pdfs/TERMFINDER_BOYLE_BIOINFORMATICS_2004.pdf"><img alt="pdf" border="0" src="pdf.gif"></a>
+<a href="http://search.cpan.org/dist/GO-TermFinder/"><img src="software.gif" border="0" alt="software"></a>
+<br>
+</p>
+
+
+<li><a href="http://smd.stanford.edu/download/">The Stanford
+Microarray Database (SMD)</a></li>
+
+<p>
+The entire set of code that underlies SMD is available for download
+under the MIT Open Source license.  SMD is a scaleable microarray
+database with support for two-color data (from GenePix, Scanalyze and
+Agilent's FeatureExtraction program), and one color data, from
+Affymetrix GeneChips.  Support also exists for CombiMatrix and
+Nimblegen arrays.
+
+<br><br>
+<b>Hubble, J., Demeter, J., Jin, H., Mao, M., Nitzberg, M., Reddy,
+ T.B., Wymore, F., Zachariah, Z.K., Sherlock, G. and Ball,
+ C.A. (2009)</b>.  Implementation of GenePattern within the Stanford
+ Microarray Database.  <i>Nucleic Acids Res.</i> <b>37</b>, D898-D901.
+
+<br> <a href="http://www.ncbi.nlm.nih.gov/pubmed/18953035"><img alt="PubMed" border="0" src="pubmed.gif"></a>
+<br>
+<b>Demeter, J., Beauheim, C., Gollub, J., Hernandez-Boussard, T., Jin,
+H., Maier, D., Matese, J.C., Nitzberg, M., Wymore, F., Zachariah,
+Z.K., Brown, P.O., Sherlock, G. and Ball, C.A. (2007).</b> The
+Stanford Microarray Database: implementation of new analysis tools and
+open source release of software.  <i>Nucleic Acids Res.</i> <b>35</b>,
+D766-D770.
+
+<br><a href="http://www.ncbi.nlm.nih.gov/pubmed/17182626"><img alt="PubMed" border="0" src="pubmed.gif"></a>
+<a href="http://nar.oxfordjournals.org/cgi/reprint/35/suppl_1/D766.pdf"><img alt="pdf"
+border="0"
+src="pdf.gif"></a>
+<br>
+
+<b>Ball, C.A., Awad, I.A.B, Demeter, J., Gollub, J., Hebert, J.,
+Hernandez-Boussard, T., Jin, H., Matese, J.C., Nitzberg, M., Wymore,
+F., Zachariah, Z., Brown, P.O. and Sherlock, G. (2005).</b>  The Stanford
+Microarray Database accommodates additional microarray platforms and
+data formats.  <i>Nucleic Acids Research</i> <b>33</b>, D580-D582.
+
+<br><a href="http://www.ncbi.nlm.nih.gov/pubmed/15608265"><img alt="PubMed" border="0" src="pubmed.gif"></a>
+
+<a href="http://nar.oxfordjournals.org/cgi/reprint/33/suppl_1/D580.pdf"><img alt="pdf" border="0" src="pdf.gif"></a>
+<a href="http://smd.stanford.edu/"><img src="website.gif" border="0"
+					alt="website"></a>
+<br>
+</p>
+
+
+<li><a href="cluster.html">XCluster</a></li>
+
+<p>
+
+XCluster performs agglomerative hierarchical clustering using centroid
+linkage.  It is a command line application written in C, and readily
+compiles on most Unix systems (including MacOSX).  The main feature of
+XCluster that distinguishes it from some other clustering programs is
+that it is fast, and memory efficient.  XCluster can also do k-means
+clustering and make Self-Organizing Maps.  See the <a
+href="cluster.html">XCluster</a> page for more details.
+
+</p>
+
+<li><a href="http://caryoscope.stanford.edu">Caryoscope</a></li>
+
+<p>
+Caryoscope is a reusable Java UI component -- and a set of parsing
+utilities; command line tools and an application GUI -- for viewing
+gene expression data in a whole-genome context.  Caryoscope is
+released under the MIT Open Source license.
+
+<br><br>
+<b>Awad, I.A.B, Rees, C.A., Hernandez-Boussard, T., Ball, C.A. and
+Sherlock, G. (2004).</b>  Caryoscope: An Open Source Java Application for
+Viewing Microarray Data in a Genomic Context.  <i>BMC
+Bioinformatics</i> <b>5</b>:151.
+
+<br><a href="http://www.ncbi.nlm.nih.gov/pubmed/15488149"><img alt="PubMed" border="0" src="pubmed.gif"></a>
+
+<a href="http://www.biomedcentral.com/content/pdf/1471-2105-5-151.pdf"><img alt="pdf" border="0" src="pdf.gif"></a>
+<a href="http://caryoscope.stanford.edu/"><img src="software.gif" border="0" alt="software"></a>
+
+
+</p>
+
+<li><a href="http://search.cpan.org/dist/Microarray-GeneXplorer/">GeneXplorer</a></li>
+
+<p>
+GeneXplorer is a web application for interactive microarray data
+visualization and analysis in a web environment.  GeneXplorer allows
+users to browse a microarray dataset in an intuitive fashion.  It
+provides simple access to microarray data over the Internet and uses
+only HTML and JavaScript to display graphic and annotation
+information. It provides radar and zoom views of the data, allows
+display of the nearest neighbors to a gene expression vector based on
+their Pearson correlations and provides the ability to search gene
+annotation fields. The software is released under the permissive MIT
+Open Source license.
+
+<br><br>
+
+<b>Rees, C.A., Demeter, J., Matese, J.C., Botstein, D. and Sherlock,
+G. (2004).</b>  GeneXplorer: an interactive web application for microarray
+data visualization and analysis.  <i>BMC Bioinformatics</i>
+<b>5</b>:41.
+
+<br><a href="http://www.ncbi.nlm.nih.gov/pubmed/15458579"><img alt="PubMed" border="0" src="pubmed.gif"></a>
+
+<a href="http://www.biomedcentral.com/content/pdf/1471-2105-5-141.pdf"><img alt="pdf" border="0" src="pdf.gif"></a>
+<a href="http://search.cpan.org/dist/Microarray-GeneXplorer/"><img src="software.gif" border="0" alt="software"></a>
+
+</p>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<hr>
+
+</td>
+
+</tr>
+
+</table>
+
+</center>
+
+</body>
+
+</html>

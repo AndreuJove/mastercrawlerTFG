@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,nofollow">
+
+<title>BIANCA - FslWiki</title>
+<script type="text/javascript" src="/fsl/wiki_static/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/fsl/wiki_static/fsl/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/fsl/wiki_static/fsl/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/fsl/wiki_static/fsl/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/fsl/wiki_static/fsl/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/fsl/wiki_static/fsl/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="FslWiki: BIANCA" href="/fsl/fslwiki/BIANCA?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=BIANCA&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="/fsl/fslwiki/FSL">
+<link rel="Alternate" title="Wiki Markup" href="/fsl/fslwiki/BIANCA?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/fsl/fslwiki/BIANCA?action=print">
+<link rel="Search" href="/fsl/fslwiki/FindPage">
+<link rel="Index" href="/fsl/fslwiki/TitleIndex">
+<link rel="Glossary" href="/fsl/fslwiki/WordIndex">
+<link rel="Help" href="/fsl/fslwiki/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/fsl/fslwiki/FSL"><img src="/fsl/wiki_static/fsl/img/fsl-logo-x2.png" width="108px" height="80px" alt="FSL Logo"></a></div>
+
+<form id="searchform" method="get" action="/fsl/fslwiki/BIANCA">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<!-- <input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles"> -->
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Search" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="/fsl/fslwiki/FslHelpForUsers">Help</a></li><li><a href="/fsl/fslwiki/BIANCA?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+
+
+<ul id="pagelocation">
+<li><a href="/fsl/fslwiki/BIANCA">BIANCA</a></li>
+</ul>
+
+</div>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="FslToolContents">
+<h1>Contents</h1>
+<ol><li>Introduction<div class="contentslist"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Research_overview_-_BIANCA_.28Brain_Intensity_AbNormality_Classification_Algorithm.29">Research overview - BIANCA (Brain Intensity AbNormality Classification Algorithm)</a></li><li>
+<a href="#Referencing">Referencing</a></li></ol></div></div></li><li><a href="/fsl/fslwiki/BIANCA/Userguide">Userguide</a></li></ol></div> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-4"></span>
+<h1 id="Research_overview_-_BIANCA_.28Brain_Intensity_AbNormality_Classification_Algorithm.29">Research overview - BIANCA (Brain Intensity AbNormality Classification Algorithm)</h1>
+<span class="anchor" id="line-5"></span><p class="line874">FMRIB's tool for automated segmentation of white matter hyperintensities <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line874">BIANCA is a fully automated, supervised method for white matter hyperintensities (WMH) detection, based on the k-nearest neighbour (k-NN) algorithm. BIANCA classifies the image’s voxels based on their intensity and spatial features, and the output image represents the probability per voxel of being WMH. BIANCA is very flexible in terms of MRI modalities to use and offers different options for weighting the spatial information, local spatial intensity averaging, and different options for the choice of the number and location of the training points (see user guide for details). <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><div class="caution"><span class="anchor" id="line-1-1"></span><p class="line867"><strong>BETA RELEASE</strong> <span class="anchor" id="line-2-1"></span><span class="anchor" id="line-3-1"></span><p class="line874">BIANCA is currently considered to be in testing, meaning that you will need to inspect its output a bit more carefully to see if you are happy with it. The output will depend critically on the choice of options and the quality of the training data and manual segmentations. Further recommendations and automated tuning methods, will be supported in an upcoming release. </div><span class="anchor" id="line-14"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line867">
+<h1 id="Referencing">Referencing</h1>
+<span class="anchor" id="line-17"></span><p class="line874">If you use BIANCA in your research, please make sure that you reference the following article: <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line867"><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><div class="references"><span class="anchor" id="line-1-2"></span><p class="line867"><a class="http" href="http://dx.doi.org/10.1016/j.neuroimage.2016.07.018">[Griffanti 2016]</a> L. Griffanti, G. Zamboni, A. Khan, L. Li, G. Bonifacio, V. Sundaresan, U. G. Schulz, W. Kuker, M. Battaglini, P. M. Rothwell, M. Jenkinson (2016) BIANCA (Brain Intensity Ab<tt class="backtick"></tt>Normality Classification Algorithm): a new tool for automated segmentation of white matter hyperintensities. Neuroimage. 141:191-205. </div><span class="anchor" id="line-23"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-24"></span><a href="/fsl/fslwiki/CategoryOther">CategoryOther</a> <a class="nonexistent" href="/fsl/fslwiki/CategoryBIANCA">CategoryBIANCA</a> <span class="anchor" id="line-25"></span><span class="anchor" id="bottom"></span></div><div id="contentend">&nbsp;</div>
+<p id="pageinfo" class="info" lang="en" dir="ltr">BIANCA  (last edited 13:38:54 24-03-2017 by <span title="MarkJenkinson @ fmrib-fg70d.fmrib.ox.ac.uk[163.1.84.240]"><a class="nonexistent" href="/fsl/fslwiki/MarkJenkinson" title="MarkJenkinson @ fmrib-fg70d.fmrib.ox.ac.uk[163.1.84.240]">MarkJenkinson</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul id="credits">
+<li><a href="http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

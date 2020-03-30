@@ -1,0 +1,260 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118670826-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-118670826-1');
+  </script>
+
+  <title>AmtDB | About</title>
+
+  <!-- jQuery 3 Compat -->
+  <!--<script type="text/javascript" src="https://code.jquery.com/jquery-compat-3.0.0-alpha1.js"></script>-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  
+
+
+<!-- MAIN -->
+<!-- Bootstrap -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/static_md5/stylesheets/bootstrap.min.css">
+<script type="text/javascript" src="/static_md5/js/lib/bootstrap.min.js"></script>
+
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" href="/static_md5/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/static_md5/stylesheets/application.css">
+
+  <script type="text/javascript" src="/static_md5/js/application.js"></script>
+  <script type="text/javascript" src="/static_md5/js/lib/string-format.js"></script>
+
+  <!-- cookies / https://cookieconsent.insites.com/download/# -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function() {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#0089cf"
+          },
+          "button": {
+            "background": "#f26643",
+            "text": "#ffffff"
+          }
+        }
+      })
+    });
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="container">
+    <div class="header">
+      <a href="/" class="header__title">
+        <span>A</span>mtDB
+      </a>
+
+      <ul class="header__items no-print">
+        <li class="header__item header__item--active">
+          <a href="/">About</a>
+        </li>
+
+        <li class="header__item ">
+          <a href="/records/">Database</a>
+        </li>
+        
+        
+        
+        <li class="header__item ">
+          <a href="/help">FAQ &amp; Help</a>
+        </li>
+
+        <li class="header__item ">
+          <a href="/contact">Contact</a>
+        </li>
+
+        
+      </ul>
+
+      <div class="header__right">
+        <a href="https://www.img.cas.cz/en/" target="_blank">
+          <img src="/static_md5/images/img_logo_small.png" alt="IMG logo" style="max-width: 100px;" />
+        </a>
+
+        <a href="https://www.elixir-czech.cz" target="_blank">
+          <img src="/static_md5/images/elixir_logo_small.png" alt="Elixir Czech logo" />
+        </a>
+
+        <a href="https://bio.tools/AmtDB" target="_blank" style="max-width: 100px;">
+          <img src="/static_md5/images/elixir_biotools_logo_fix.png" alt="Elixir bio.tools logo" />
+        </a>
+
+        <a href="https://omictools.com/amtdb-tool" target="_blank" style="max-width: 100px;">
+          <img src="/static_md5/images/omicx_logo.png" alt="OmicX logo" />
+        </a>
+      </div>
+    </div>
+
+    <div id="main">
+      
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="jumbotron">
+        <h1 class="display-4">Welcome to <b>Ancient mtDNA database</b>!</h1>
+        <p class="lead">
+          This is the place where you can find an updated list of the published mitochondrial sequences
+          coming from the ancient DNA samples (aDNA). The main interest of our database lies in the
+          anatomically modern Homo sapiens samples, ranging from the late Paleolithic to roughly Iron
+          Age times, focusing on an Euroasian geographical area. We provide both the <em>mtDNA
+          sequences</em> (in FASTA format), and the <em>metadata</em> for the samples (ID,
+          date, geolocation, site, culture, mtDNA haplogroup, etc.), available to download in a comma-separated (CSV) text file.
+        </p>
+        
+        <hr class="my-4">
+
+        <div class="row">
+          <div class="col-lg">
+            <div class="alert alert-primary" role="alert">
+              <h5 class="alert-heading alert-heading-about">Quick tour</h5>
+              <hr />
+              <ul class="ul-about">
+                <li>
+                  <a href="/records/"><strong>Search and download</strong></a> the database immediately.
+                </li>
+
+                <li>
+                  Display the selected samples on an interactive
+                  <a href="/records/#div-tab-map"><strong>map</strong></a>.
+                </li>
+
+                <li>Read through the database
+                  <a href="/help#docs"><strong>documentation</strong></a>,
+                  <a href="/help#faq"><strong>FAQs</strong></a> or
+                  <a class="_blank" href="https://doi.org/10.1093/nar/gky843"><strong>paper</strong></a>.
+                </li>
+
+                <li>
+                  Take a look at the list of <a href="/help#references"><strong>references</strong></a>
+                  to studies from which samples in AmtDB come from.
+                </li>
+
+                <li>
+                  Check the <a href="/help#links"><strong>links</strong></a>
+                  to other interesting (ancient) mtDNA tools and databases.
+                </li>
+
+                <li>
+                  <a href="/contact"><strong>Contact</strong></a> the authors
+                  if you have any more questions or want your samples to be included in AmtDB!
+                </li>
+
+                <li>
+                  Check AmtDB in <a href="https://bio.tools/AmtDB" target="_blank"><strong>bio.tools</strong></a> and
+                  <a href="https://omictools.com/amtdb-tool" target="_blank"><strong>omictools.com</strong></a>
+                </li>
+
+                <li>
+                  Read our <a href="/help#tos"><strong>Terms of Service</strong></a>.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg">
+            <div class="alert alert-success" role="alert">
+              <h5 class="alert-heading alert-heading-about">AmtDB content statistics</h5>
+              <hr />
+              <h6 class="alert-heading alert-heading-about">
+                v1.005 <span style="color: #60926b;">|</span> 02/01/2020 <span style="color: #60926b;">|</span>
+                <a href="/help#log">log</a>
+              </h6>
+              <hr />
+              <table id="table-statistics" class="list table-statistics">
+                <tbody>
+                  
+                  <tr>
+                    <th>Samples</th>
+                    <td>1801</td>
+                  </tr>
+                  
+                  <tr>
+                    <th>Continents</th>
+                    <td>3</td>
+                  </tr>
+                  
+                  <tr>
+                    <th>Countries</th>
+                    <td>41</td>
+                  </tr>
+                  
+                  <tr>
+                    <th>Epochs</th>
+                    <td>14</td>
+                  </tr>
+                  
+                  <tr>
+                    <th>Cultures</th>
+                    <td>207</td>
+                  </tr>
+                  
+                  <tr>
+                    <th>Regions</th>
+                    <td>22</td>
+                  </tr>
+                  
+                  <tr>
+                    <th>Sites</th>
+                    <td>578</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <div class="col-lg">
+            <div class="alert alert-secondary" role="alert">
+              <h5 class="alert-heading alert-heading-about">AmtDB in Czech media</h5>
+              <hr />
+              <ul class="ul-about">
+                <li><a href="https://sciencemag.cz/nova-databaze-dna-predstavuje-vzorky-ze-starodavnych-lidskych-populaci/">sciencemag.cz</a></li>
+                <li><a href="https://www.novinky.cz/veda-skoly/500126-akademie-ved-pripravila-databazi-starodavne-dna-obsahuje-az-30-000-let-stare-lidske-vzorky.html">novinky.cz</a></li>
+                <li><a href="https://eurozpravy.cz/veda-a-technika/veda/251814-cesti-vedci-se-pysni-dalsim-uspechem-zpristupnili-databazi-starodavnych-vzorku-dna/">eurozpravy.cz</a></li>
+                <li><a href="http://www.24zpravy.com/tech/cesti-vedci-se-pysni-dalsim-uspechem-zpristupnili-databazi-starodavnych-vzorku-dna/301027-zpravy">24zpravy.com</a></li>
+                <li><a href="https://www.radio.cz/cz/rubrika/zpravy/cesti-vedci-pripravili-databazi-vzorku-dna-starych-az-30000-let">radio.cz</a></li>
+                <li><a href="https://ct24.ceskatelevize.cz/veda/2760377-cesti-vedci-pripravili-databazi-vzorku-dna-starych-az-30-tisic-let-je-pristupna-vsem">ct24.ceskatelevize.cz</a></li>
+                <li><a href="https://vesmir.cz/cz/casopis/archiv-casopisu/2019/cislo-5/databaze-starodavne-mtdna.html">vesmir.cz</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <div id="footer">
+      AmtDB v1.005 (02/01/2020) &copy; <a class="_blank" href="https://www.img.cas.cz/research/cestmir-vlcek/">Laboratory of Genomics and Bioinformatics</a>,
+      Institute of Molecular Genetics of the Czech Academy of Sciences | Licensed under <a class="_blank" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>
+    </div>
+  </div>
+</body>
+
+</html>

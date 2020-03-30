@@ -10,10 +10,10 @@ class MastercrawlerItem(scrapy.Item):
     idTool = scrapy.Field()
     bodyContent = scrapy.Field()
 
-    scriptsTagsText = scrapy.Field()
+    #scriptsTagsText = scrapy.Field()
     lenScriptsTagsText = scrapy.Field()
 
-    nameTool = scrapy.Field()
+    #nameTool = scrapy.Field()
     urlTool = scrapy.Field()
     httpCode = scrapy.Field()
     titleUrl = scrapy.Field()
@@ -29,18 +29,18 @@ class MastercrawlerItem(scrapy.Item):
     
 
     latency = scrapy.Field()
-    errorMessage = scrapy.Field()
+    #errorMessage = scrapy.Field()
 
-    redirectUrls = scrapy.Field()
-    redirect_reasons = scrapy.Field()
+    #redirectUrls = scrapy.Field()
+    #redirect_reasons = scrapy.Field()
 
     
-    responseBody = scrapy.Field()
+    #responseBody = scrapy.Field()
 
     numberRelativeLinks = scrapy.Field()
     numberExternalLinks = scrapy.Field()
-    relativeLinks = scrapy.Field()
-    externalLinks = scrapy.Field()
+    #relativeLinks = scrapy.Field()
+    #externalLinks = scrapy.Field()
 
 
     

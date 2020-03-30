@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Allergome</title>
+<meta name="Author"      content="Panservice info@panservice.it">
+<meta name="Keywords"    content="Allergy, Allergenic, Allergenicity, Allergens, Anaphylaxis, Animal, Animal Models, Asthma, Atopic Dermatitis, Atopy, Biochemistry, Conjunctivitis, Database, Diagnosis, Environment, Epidemiology, Food, Function, Fungi, Genetic, Immunochemistry, Immunology, Immunological, Immunotherapy, Insects, Intolerance, Mites, Molecular Biology, Molecules, Mould, Pollen, Pseudo-Allergic, Rhinitis, Structure, Urticaria">
+<meta name="Description" content="Allergome.org. Archive molecules">
+<meta name="robots"      content="all">
+<meta name="publisher"   content="http://www.allergome.org">
+<meta name="generator"   content="Panservice info@panservice.it">
+<link rel="shortcut icon" href="http://www.allergome.org/favicon.ico">
+<link rel="icon" href="http://www.allergome.org/favicon.gif" type="image/gif" >
+<link rel="STYLESHEET" type="text/css" href="http://www.allergome.org/css/style2.css?t=20150626001">
+<link rel="STYLESHEET" type="text/css" href="http://www.allergome.org/css/jquery.cookiebar.css">
+<script type="text/javascript" src="http://www.allergome.org/js/functions.js"></script>
+<script type="text/javascript" src="http://www.allergome.org/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+   jQuery.noConflict();
+</script>
+</head>
+<body onLoad="MM_preloadImages('http://www.allergome.org/img/tab_link2.gif','http://www.allergome.org/img/tab_help2.gif','http://www.allergome.org/img/tab_about2.gif','http://www.allergome.org/img/button_allergen_on.gif','http://www.allergome.org/img/button_refarray_on.gif','http://www.allergome.org/img/button_history_on.gif','http://www.allergome.org/img/button_tools_on.gif','http://www.allergome.org/img/button_statistics_on.gif')">
+<!--
+<div id="boxInfo" style="position:absolute;top:30%;left:45%; margin:-55px 0 0 -150px; visibility: hidden;">
+   <div style="padding:2px;position:absolute;top1%;right:0px;"><a href="javascript:void(0)" onClick="MM_showHideLayers('boxInfo','','hide')"><img src="http://www.allergome.org/img/button_close.gif" border="0"></a></div>
+   <p>
+      Dear Allergome User,
+      <br><br>
+      Allergome is now accessible without logging in with your personal password.
+      <br><br>
+      Please do not discard your PW anyhow. You will need it for accessing the Allergome-ReTiME module after obtaining the permission.<br>
+      Furthermore, a MyAllergome utility is under development for a personalized use of the Allergome platform. You will have your personal account page to be accessed with your login and PW.
+      <br><br>
+      Thank you.
+      <br><br>
+      The Allergome Team
+      <br><br>
+      August 2010
+   </p>
+</div>
+-->
+<!--
+<div id="boxInfo" style="position:absolute;top:30%;left:45%; margin:-55px 0 0 -150px; visibility: hidden; font-family:georgia; color:#14078F; font-size:11px;">
+   <div style="padding:2px;position:absolute;right:0px;">
+      <a href="javascript:void(0)" onClick="MM_showHideLayers('boxInfo','','hide')"><img src="http://www.allergome.org/img/button_close.gif" border="0" alt=""></a>
+   </div>
+   <p style="padding:6px;">
+      Please help our non-for-profit project in the making.
+      <br><br>
+      Donate to help the Allergome project to be independent and free accessible for the International scientific community.
+      <br><br>
+      Press the "Donate to the Allergome project" button if you are willing to proceed with a free donation.
+      <br><br>
+      We thank you.
+      <br><br>
+      Adriano Mari and the Allergome Team
+      <br><br>f
+      January 2011
+   </p>
+</div>
+-->
+<div id="boxInfoGrande" style="position:absolute;top:180px;left:40%; margin:-55px 0 0 -150px; visibility: hidden; font-family:georgia; color:#14078F; font-size:11px;">
+   <div style="padding:2px;position:absolute;right:4px;top:4px;">
+      <a href="javascript:void(0)" onClick="MM_showHideLayers('boxInfoGrande','','hide')"><img src="http://www.allergome.org/img/button_close.gif" border="0" alt=""></a>
+   </div>
+   <!--
+   <p style="padding:6px;">
+      Dear Allergome User,
+      <br><br>
+      As far as the invitation for an active support done during the Donation Campaign has been received, reached numbers are not high enough to keep the free access to the Allergome platform going ahead.
+      <br><br>
+      We are finally considering giving access to the Allergome platform on a subscription basis.
+      <br>
+      There will be differentiated fees for individual, institutional, and company subscriptions.
+      <br>
+      The change should be set starting mid April 2011.
+      <br>
+      Subscribers will regularly receive the Allergome e-Newsletter and access the most up-to-date data in all Allergome sections excluding the ReTiME module.
+      <br><br>
+      Donors will receive a bonus to access the Allergome as subscribers.
+      <br><br>
+      Non subscribers are going to have access to data available in a two years old version (i.e. till 30 June 2011 to the 2008 version).
+      <br><br>
+      We invite you to express your willingness to subscribe in the next 30 days sending us an email allergome@allergome.org .
+      <br>
+      The Donation Campaign remains alive anyhow!
+      <br><br>
+      We are aware that this decision is violating the original spirit of the Allergome project to give free access to anyone and spread the molecular allergology knowledge to many.  Receiving your support we can continue working for you.
+      <br><br>
+      Adriano Mari and the Allergome Team
+      <br><br>
+      February 2011
+   </p>
+   -->
+   <!--
+   <p style="padding:6px;">
+   	<br>
+      Dear Allergome User,
+      <br><br>
+      We are pleased to announce that the Allergome support issue has been fixed, at least for the short term.
+      <br><br>
+      The very valuable support from sponsors and some Allergome friends let us keeping the Allergome platform open and accessible for free.<br>
+		The need to share knowledge in the molecular allergology field is important for all of us and very critical to create a new generation of molecular allergologists.<br>
+      <br>
+      The Donation campaign remains open for the future, and we warmly invite you to actively support the Allergome project.<br>
+		Institutions and Companies are invited to contact us to evaluate the feasibility of a medium/long term support.<br>
+      <br>
+      We will make all our efforts to keep Allergome the resource for the molecular allergology scientific community worldwide.<br>
+      <br>
+      Kind regards
+      <br><br>
+      Adriano Mari and the Allergome Team
+      <br><br>
+      May 2011
+   </p>
+   -->
+   <!-- <p>
+      <p style="margin:10px">Dear Allergome User,</p>
+      <p style="margin:10px">As you know from our communications the Allergome funding issue has been fixed for the short term. It means that nothing should change in the next few months, hopefully up to the year end.</p>
+      <p style="margin:10px">After saving the free access to the Allergome or even, in the worst case, to get rid of the risk of shutting down the servers, we are now thinking ahead. We will try to keep the current sponsors and increase their number, but we consider very important to create a network of worldwide supporters.</p>
+      <p style="margin:10px">If you considered the willingness to subscribe for the Allergome project either as an individual or as an Institution, we are back to you to invite to consider the same as a yearly support. Some Institutions, Companies and friends already did it. Please have a look on the Allergome home page.</p>
+      <p style="margin:10px">Feel free to ask us about, but please keep in mind that the next few months will be really critical to keep the Allergome as the resource for the scientific community in the field.</p>
+      <p style="margin:10px">What we will certainly consider in the future that a partnership in any new project released within the Allergome platform will be offered to supporters first.</p>
+      <p style="margin:10px">The AllergomeConsumer project, recently presented at the EAACI meeting in Istanbul, could be the first one (<a href="http://www.allergomeconsumer.allergome.org/english" target="_blank">http://www.allergomeconsumer.allergome.org/english</a>).</p>
+      <p style="margin:10px">Thank you for considering to support the Allergome project.</p>
+      <p style="margin:10px">Adriano Mari and the Allergome Team</p>
+      <p style="margin:10px">June 2011</p>
+   </p>-->
+   <p style="margin-top:4px">
+      <img src="img/FABER-Allergome201802.jpg" style="width:486px">
+   </p>
+   <p style="margin-top:40px;position:relative;font-weight:bold;">
+      <a href="javascript:void(0)" onClick="MM_showHideLayers('boxInfoGrande','','hide')" style="position:absolute;left:10px">Close</a>
+      <a href="http://www.allergome.org/shop/" style="position:absolute;left:200px">My Allergome Shop</a>
+      <a href="https://www.caam-allergy.com/en/faber" target="_blank" style="position:absolute;right:10px">Read more</a>
+   </p>
+</div>
+
+<div id="boxLogin" style="position:absolute;top:30%;left:45%; margin:-55px 0 0 -150px; visibility: hidden;">
+   <div style="padding:2px;position:absolute;right:0px;"><a href="javascript:void(0)" onClick="MM_showHideLayers('boxLogin','','hide')"><img src="http://www.allergome.org/img/button_close.gif" border="0" alt=""></a></div>
+   <form name="form_login" action="http://www.allergome.org/index.php" method="POST">
+   <br>
+   <br>
+   <div id="boxForm">
+      <label>User</label><input type="text" name="user" tabindex="1"><br>
+      <label>Password</label><input type="password" name="passwd" tabindex="1" onkeypress="if(event.keyCode==13) { this.form.submit(); }">
+   </div>
+   <img src="http://www.allergome.org/img/trasp.gif" border="0" width="170" height="2" alt=""><input name="imageField" type="image" src="http://www.allergome.org/img/button_login.gif">&nbsp;&nbsp;
+   <input type="hidden" name="page" value="">
+</form>
+</div>
+   <table width="800" border="0" cellspacing="0" cellpadding="0" align="center">
+     <tr>
+       <td id="tdLogo" rowspan="2"><div style="position:absolute;top:85px;"><a href="http://www.allergome.org/script/registrar.php"><img src="http://www.allergome.org/img/tab_register.gif" title="Register for your personal Allergome accont" border="0"></a><a href="http://www.allergome.org/newsletter" target="_blank"><img src="http://www.allergome.org/img/newsletter_button.gif" border="0" width="118" height="14" title="Allergome e-Newsletter" id="Image10" onMouseOver="MM_swapImage('Image10','','http://www.allergome.org/img/newsletter_button_on.gif',1)" onMouseOut="MM_swapImgRestore()" /></a></div><a href="http://www.allergome.org/index.php" tabindex="1" title="Allergome  - The Platform for Allergen Knowledge"><img src="http://www.allergome.org/img/logo.gif" width="540" height="91" title="Allergome - The platform for Allergen Knowledge" border="0" align="baseline" alt=""></a>
+       </td>
+       <td id="tdData"><b>Last update:</b>&nbsp;&nbsp;March 8, 2020<br>12:20&nbsp;+1GMT</td>
+     </tr>
+     <tr>
+       <td id="tdTab"><br><a href="http://www.allergome.org/news/index.php"><img src="http://www.allergome.org/img/tab_link.gif" title="Links to Associations, Journals, Events, Projects, Manufacturers all related to the Allergome project" width="95" height="14" border="0" id="Image1" onMouseOver="MM_swapImage('Image1','','http://www.allergome.org/img/tab_link2.gif',1)" onMouseOut="MM_swapImgRestore()" alt=""></a><a href="http://www.allergome.org/script/help.php"><img src="http://www.allergome.org/img/tab_help.gif" title="Information on the Allergome web site and how to use it" width="71" height="14" border="0" id="Image2" onMouseOver="MM_swapImage('Image2','','http://www.allergome.org/img/tab_help2.gif',1)" onMouseOut="MM_swapImgRestore()" alt=""></a><a href="http://www.allergome.org/script/about.php"><img src="http://www.allergome.org/img/tab_about.gif" title="Information on aims, scope, and mission of the Allergome project" name="Image3" width="72" height="14" border="0" id="Image3" onMouseOver="MM_swapImage('Image3','','http://www.allergome.org/img/tab_about2.gif',1)" onMouseOut="MM_swapImgRestore()" alt=""></a></td>
+     </tr>
+     <tr>
+       <td colspan="2"><img src="http://www.allergome.org/img/righino_blu.gif" alt=""></td>
+     </tr>
+     <tr>
+       <td colspan="2">
+
+
+      <!--Inizio menu Giallo-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+           <tr>
+             <td><img src="http://www.allergome.org/img/yellow_start.gif" alt=""></td>
+             <td style="background-image:url(http://www.allergome.org/img/yellow_background.gif)" width="100%">
+               <div align="center">
+                  
+                     <!-- <a href="javascript:void(0)" onclick="MM_showHideLayers('boxLogin','','show'); document.form_login.page.value='search'; document.form_login.user.focus();"><img src="http://www.allergome.org/img/button_allergen_login.gif" width="106" height="24" hspace="10" border="0" title="Search the Allergome database for molecules and sources" id="Image4" onMouseOver="MM_swapImage('Image4','','http://www.allergome.org/img/button_allergen_login_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a> -->
+                     <a href="http://www.allergome.org/script/search_step1.php?clear=1"><img src="http://www.allergome.org/img/button_allergen.gif" width="106" height="24" hspace="10" border="0" title="Search the Allergome database for allergenic molecules and sources" id="Image4" onMouseOver="MM_swapImage('Image4','','http://www.allergome.org/img/button_allergen_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a>
+                     <a href="javascript:void(0)" onclick="MM_showHideLayers('boxLogin','','show'); document.form_login.page.value='retime'; document.form_login.user.focus();"><img src="http://www.allergome.org/img/button_retime_login.gif" width="106" height="24" hspace="10" border="0" title="Real Time Monitoring of IgE sensitization" id="Image5" onMouseOver="MM_swapImage('Image5','','http://www.allergome.org/img/button_retime_login_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a>
+                     <!-- <a href="javascript:void(0)" onclick="MM_showHideLayers('boxLogin','','show'); document.form_login.page.value='refArray'; document.form_login.user.focus();"><img src="http://www.allergome.org/img/button_refarray_login.gif" width="106" height="24" hspace="10" border="0" title="Search and Retrieve a Cross-sectional view of the Allergome Reference Archive" id="Image6" onMouseOver="MM_swapImage('Image6','','http://www.allergome.org/img/button_refarray_login_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a> -->
+                     <a href="http://www.allergome.org/script/refArray.php"><img src="http://www.allergome.org/img/button_refarray.gif" title="Search and Retrieve a Cross-sectional view of the Allergome Reference" name="Image6" id="Image6" width="106" height="24" hspace="10" border="0" onMouseOver="MM_swapImage('Image6','','http://www.allergome.org/img/button_refarray_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a>
+                     <a href="http://www.allergome.org/script/tools.php"><img src="http://www.allergome.org/img/button_tools.gif" title="Computational tools and free-authorized downloads from Allergome platform archives" name="Image8" id="Image8" width="106" height="24" hspace="10" border="0" onMouseOver="MM_swapImage('Image8','','http://www.allergome.org/img/button_tools_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a>
+                     <!-- <a href="javascript:void(0)" onclick="MM_showHideLayers('boxLogin','','show'); document.form_login.page.value='tools'; document.form_login.user.focus();"><img src="http://www.allergome.org/img/button_tools_login.gif" title="Computational tools and free-authorized downloads from Allergome platform archives" name="Image8" id="Image8" width="106" height="24" hspace="10" border="0" onMouseOver="MM_swapImage('Image8','','http://www.allergome.org/img/button_tools_login_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a> -->
+                     <a href="http://www.allergome.org/script/history.php" target="_blank"><img src="http://www.allergome.org/img/button_history.gif" title="Yearly Saved Copies of the Allergome Database" name="Image7" id="Image7" width="106" height="24" hspace="10" border="0" onMouseOver="MM_swapImage('Image7','','http://www.allergome.org/img/button_history_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a>
+                     <!-- <a href="http://www.allergome.org/script/history.php" target="_blank"><img src="http://www.allergome.org/img/button_history_login.gif" title="Yearly Saved Copies of the Allergome Database" name="Image7" id="Image7" width="106" height="24" hspace="10" border="0" onMouseOver="MM_swapImage('Image7','','http://www.allergome.org/img/button_history_login_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a> -->
+                     <a href="http://www.allergome.org/script/statistic.php"><img src="http://www.allergome.org/img/button_statistics.gif" title="Real Time Status in Graphs and Tables of the Allergome Archives and Data" name="Image9" id="Image9" width="106" height="24" hspace="10" border="0" onMouseOver="MM_swapImage('Image9','','http://www.allergome.org/img/button_statistics_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a>
+                     <!-- <a href="javascript:void(0)" onclick="MM_showHideLayers('boxLogin','','show'); document.form_login.page.value='statistic'; document.form_login.user.focus();"><img src="http://www.allergome.org/img/button_statistics_login.gif" title="Real Time Status in Graphs and Tables of the Allergome Archives and Data" name="Image9" id="Image9" width="106" height="24" hspace="10" border="0" onMouseOver="MM_swapImage('Image9','','http://www.allergome.org/img/button_statistics_login_on.gif',1)" onMouseOut="MM_swapImgRestore()"></a> -->
+                                    </div>
+             </td>
+             <td><img src="http://www.allergome.org/img/yellow_end.gif" alt=""></td>
+           </tr>
+         </table>
+      <!--Fine menu Giallo-->
+
+       </td>
+     </tr>
+   </table>
+  <table border="0" width="800" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+      <td valign="top" width="410">
+         <div align="center">
+            <a href="shop/"><img src="img/button_myshop_home.png" alt="Myshop home button" title="" /></a>
+         </div>
+         <div align="center">
+         <br><br>
+                  <img src="http://www.allergome.org/homepage_image/24.jpg" border="0" title="Allergome - The platform for Allergen Knowledge" alt="Allergome - The platform for Allergen Knowledge">
+      </div>
+      
+      <br />
+      <img src="img/trasp.gif" width="200" height="10" alt=""><br>
+      
+      <!-- <a href="http://www.sci.sld.cu/congress/en/index.html" target="_blank"><img src="img/banner_adjuvant_2.png" border="0" alt="" title="Info: allergome@allergome.org"></a>
+      <br />
+      <img src="img/trasp.gif" width="200" height="10" alt=""><br> -->
+      
+      <!-- <a href="ISMA_2012_Save_the_dates.pdf" target="_blank"><img src="img/banner-isma-2012" border="0" alt="" title="Info: allergome@allergome.org"></a> -->
+      <!-- <a title="EAACI will announce new dates and place soon"><img src="img/banner-isma-2012_cancelled.png" border="0" alt=""></a> -->
+
+      <!-- <img src="img/trasp.gif" width="200" height="30" alt=""><br>
+      <a href="http://www.meetme.net/molecularallergens" target="_blank" class="tooltip"><img src="img/banner_siemens.png" border="0" alt="An educational webinar from our gold sponsor Siemens (click here to know more)" title="An educational webinar from our gold sponsor Siemens (click here to know more)"></a> -->
+      
+      <img src="img/trasp.gif" width="200" height="30" alt=""><br>
+      <div style="text-align:center;">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+             <input type="hidden" name="cmd" value="_s-xclick">
+             <input type="hidden" name="hosted_button_id" value="2HA6LZPAN2PZ2">
+             <input type="image" src="img/btn_donate_LG.png" name="submit" alt="Donate to the Allergome project">
+             <img alt="" border="0" src="img/trasp.gif" width="1" height="1">
+          </form>
+      </div>
+      
+      <!-- <div style="margin-top:30px">
+         <a href="https://www.caam-allergy.com/en/faber" target="_blank"><img src="img/FABER_Allergome_Banner.jpg" width="400" /></a>
+      </div> -->
+      
+      <div style="margin-top:30px">
+         <a href="https://www.caam-allergy.com/en/faber" target="_blank"><img src="img/FABER_Allergome_Banner_01.png" width="400" /></a>
+      </div>
+      
+      <div style="clear:both; margin-top:20px">
+        <a href="http://www.allergome.org/script/about.php#about_2017" style="color:#0068b2;text-decoration:none"><img src="http://www.allergome.org/img/euflag.png" title="European Union's Horizon 2020 research and innovation programme" border="0" alt="E.U." height="50" style="float:left; margin-right:4px;">This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 866356</a></div>
+
+      
+      <!--
+      <div style="margin-top:30px">
+         <a href="http://www.pei.de/SharedDocs/veranstaltungen-events/2017/2017-09-06-ipes-international-paul-ehrlich-seminar.html" target="_blank"><img src="img/banner_pei.png" width="400" /></a>
+      </div>
+      -->
+      
+      <!-- <img src="img/trasp.gif" width="200" height="30" alt=""><br>
+      <a href="http://www.eaaci-isma.org/" target="_blank" class="tooltip"><img src="img/banner_eaac.png" border="0" alt="ISMA 2013 - click here to know more" title="ISMA 2013 - click here to know more"></a> -->
+      
+      <!--
+      <img src="img/trasp.gif" width="200" height="30" alt=""><br>
+      <a href="Allergome_10th_Anniversary_on_the_web.pdf" target="_blank" class="tooltip">
+         <img src="img/banner-anniversario.png" border="0" alt="The Allergome Platform - 10 Years Anniversary" title="The Allergome Platform - 10 Years Anniversary - click here">
+         <span>
+            <img class="callout" src="img/callout.gif" />
+            <img src="img/preview.png" style="width:300px;height:425px;border:0px" />
+         </span>
+      </a>
+      -->
+      
+    </td>
+    <td class="loghiHome">
+      <img src="http://www.allergome.org/img/title_research.gif" vspace="10" border="0" alt=""><br>
+      <ul class="partner">
+         <!-- <li><a href="http://www.immunology.unibe.ch/" target="_blank"><img src="img/logo_iib.gif" border="0" alt=""></a></li> -->
+         <!-- <li><a href="http://www.meduniwien.ac.at/allergens/allfam/" target="_blank"><img src="img/logo_allfam.gif" border="0" style="margin-top:10px;" alt=""></a></li> -->
+         <li><a href="http://www.allergome.org:8080/fast/index.jsp" target="_blank"><img src="img/logo_fast.gif" border="0"  style="margin-top:10px;" alt=""></a></li>
+         <li><a href="http://www.uniprot.org/news/2011/01/11/release" target="_blank"><img src="img/logo_uniprot.png" border="0"  style="margin-top:10px;" alt=""></a></li>
+         <li><a href="http://www.allergomeconsumer.allergome.org/english" target="_blank"><img src="img/Logo-Allergome-Consumer.jpg" border="0"  style="margin-top:10px;" alt="AllergomeConsumer" title="AllergomeConsumer"></a></li>
+         <li style="width:140px;height:42px"><a href="https://www.som.uq.edu.au/research/research-centres/lung-and-allergy-research-centre/about-us/our-people/staff-profiles/dr-janet-davies.aspx" target="_blank"><img src="img/banner_UQ_C_CMYK.png" border="0"  style="margin-top:10px" alt="The University Of Queensland - Australia" title="The University Of Queensland - Australia"></a></li>
+      </ul>
+
+      <img src="http://www.allergome.org/img/title_unrestricted.gif" border="0" alt="" style="margin-top:20px;margin-bottom:4px">
+     	<!-- <img src="img/platinum_sponsors_bar.png" title="Platinum sponsors" style="margin-bottom:4px" /> -->
+     	<!-- <img src="img/platinum_project_partners_bar.png" title="Platinum project partners" style="margin-bottom:4px" /> -->
+     	<span title="Platinum project partners" class="allergome_sponsor_bar allergome_sponsor_bar_platinum">PLATINUM PROJECT PARTNERS</span>
+      
+      <ul class="sponsor_platinum">
+      	 <li><a href="http://www.caam-allergy.com" target="_blank"><img src="http://www.allergome.org/img/logo_caam_home.png" title="CAAM" border="0" align="middle" alt="CAAM" height="50"></a></li>
+         <li><a href="http://www.ibbr.cnr.it/ibbr/" target="_blank"><img src="img/logo_ibbr.png" border="0" alt="Italian National Council of Research Institute of Biosciences and Bioresources" title="Italian National Council of Research Institute of Biosciences and Bioresources" height="50"></a></li>
+         <li><a href="http://www.ifarai.org/index.jsp?flag=e" target="_blank"><img src="img/logo_ifarai_new.png" border="0" alt="IFARAI" title="International Fund for Advanced Research in Allergy and Immunology" height="44"></a></li>
+         <!-- <li><a href="http://www.macroarraydx.com/" target="_blank"><img src="img/logo_MADx.png" border="0" alt="MACROARRAYDX" title="MacroArrayDx" height="50"></a></li> -->
+      </ul>
+      <!--<img src="img/gold_sponsors_bar.png" title="Gold sponsors" style="margin-bottom:4px" />-->
+      <span title="Gold sponsors" class="allergome_sponsor_bar allergome_sponsor_bar_gold">GOLD SPONSORS</span>
+      <ul>
+      	<!--<li><a href="http://www.medical.siemens.com/webapp/wcs/stores/servlet/CategoryDisplay~q_catalogId~e_-111~a_categoryId~e_1026967~a_catTree~e_100001,1022170,1026967~a_langId~e_-111~a_storeId~e_10001.htm" target="_blank"><img src="http://www.allergome.org/img/logo_siemens.jpg" title="Siemens Healthcare Diagnostics" border="0" align="middle" alt="Siemens Healthcare Diagnostics"></a></li>-->
+      	<!-- <li><a href="http://www.stallergenes.it/" target="_blank"><img src="http://www.allergome.org/img/logo_stallergenes_new.jpg" title="Stallergenes Italia" border="0" align="middle" alt="Stallergenes Italia"></a></li> -->
+      </ul>
+      <!-- <img src="img/silver_sponsors_bar.png" title="Silver sponsors" style="margin-bottom:4px" /> -->
+      <span title="Silver sponsors" class="allergome_sponsor_bar allergome_sponsor_bar_silver">SILVER SPONSORS</span>
+      <ul class="silver">
+         <!-- <li><img src="http://www.allergome.org/img/logo_silver_anonymous_01.png" title="Private donor" border="0" align="middle" alt="Anonymous private donor"></li> -->
+         <!-- <li><img src="http://www.allergome.org/img/logo_silver_anonymous_02.png" title="Private donor" border="0" align="middle" alt="Anonymous private donor"></li> -->
+         <!-- <li><a href="http://www.phadia.com/en/Laboratory/Allergy/Products/ImmunoCAP-ISAC/" target="_blank"><img src="http://www.allergome.org/img/logo_pharmacia-diagnostics.gif" title="ImmunoCAP ISAC - Phadia" border="0" align="middle" alt="ImmunoCAP ISAC - Phadia"></a></li> -->
+         
+         <li><a href="http://www.iamconsultingsrl.it/" target="_blank"><img src="http://www.allergome.org/img/logo_iam.jpg" title="IAM" border="0" align="middle" alt="IAM" style="max-width:100px; max-height:30px"></a></li>
+         <li><a href="http://www.crdiagnostics.com/" target="_blank"><img src="http://www.allergome.org/img/logo_crdiagnostic.jpg" title="CRDiagnostic" border="0" align="middle" alt="CRDiagnostic" style="max-width:100px; max-height:30px"></a></li>
+         <li><a href="https://emma-mdt.pl/" target="_blank"><img src="http://www.allergome.org/img/logo_poland_emma.png" title="EMMA" border="0" align="middle" alt="EMMA" style="max-width:100px; max-height:30px"></a></li>
+         <li><a href="http://geno-med.com/" target="_blank"><img src="http://www.allergome.org/img/logo_lebanon_genomed.png" title="GENO-MED" border="0" align="middle" alt="GENO-MED" style="max-width:100px; max-height:30px"></a></li>
+         <li><a href="http://www.chrono-systems.com/" target="_blank"><img src="http://www.allergome.org/img/logo_mexico_chronolab.png" title="CHRONOLAB" border="0" align="middle" alt="CHRONOLAB" style="max-width:100px; max-height:30px"></a></li>
+         <li><a href="http://www.allergytest.gr/" target="_blank"><img src="http://www.allergome.org/img/logo_greece.jpg" title="ABS" border="0" align="middle" alt="ABS" style="max-width:100px; max-height:30px"></a></li>
+         <li><a href="http://www.allergyfarma.ro" target="_blank"><img src="http://www.allergome.org/img/logo_romania.png" title="Allergy Farma S.r.l." border="0" align="middle" alt="Allergy Farma S.r.l." style="max-width:100px; max-height:30px"></a></li>
+         <li><a href="http://gmtmanila.com" target="_blank"><img src="http://www.allergome.org/img/logo_philippines.png" title="Global Medical Technologies Manila" border="0" align="middle" alt="Global Medical Technologies Manila" style="max-width:100px; max-height:30px"></a></li>
+         <li><a href="http://ksena.com.hk" target="_blank"><img src="http://www.allergome.org/img/logo_hongkong_ksena.png" title="Ksena Healthcare Limited" border="0" align="middle" alt="Ksena Healthcare Limited" style="max-width:100px; max-height:30px"></a></li>
+      </ul>
+      <!-- <img src="img/other_sponsors_bar.png" title="Other sponsors" style="margin-top:6px;margin-bottom:4px" />-->
+      <span title="Other sponsors" class="allergome_sponsor_bar allergome_sponsor_bar_bronze">OTHER SPONSORS</span>
+      <ul class="anonymous_sponsors">
+         <li><img src="http://www.allergome.org/img/logo_donor_msszitaly.png" title="Individual donation" border="0" align="middle" alt="Anonymous private donor"></li>
+         <li><img src="http://www.allergome.org/img/logo_donor_caitaly.png" title="Individual donation" border="0" align="middle" alt="Anonymous private donor"></li>
+         <!-- <li><img src="http://www.allergome.org/img/logo_other_anonymous_06.png" title="Company donation" border="0" align="middle" alt="Anonymous private donor"></li> -->
+         <!-- <li><img src="http://www.allergome.org/img/logo_other_anonymous_05.png" title="Private donor" border="0" align="middle" alt="Anonymous private donor"></li> -->
+      	<!-- <li><img src="http://www.allergome.org/img/logo_donor_esitaly.png" title="Individual donor" border="0" align="middle" alt="Anonymous private donor"></li> -->
+      	<li><img src="http://www.allergome.org/img/logo_donor_arm.png" title="Individual donor" border="0" align="middle" alt="Anonymous private donor"></li>
+      	<li><img src="http://www.allergome.org/img/logo_donor_mtmac.png" title="Individual donor" border="0" align="middle" alt="Anonymous private donor"></li>
+         <!-- <li><img src="http://www.allergome.org/img/logo_donor_gmitaly.png" title="Individual donation" border="0" align="middle" alt="Anonymous private donor"></li> -->
+         <!-- <li><img src="http://www.allergome.org/img/logo_donor_jtusa.png" title="Individual donation" border="0" align="middle" alt="Anonymous private donor"></li> -->
+         <!-- <li><img src="http://www.allergome.org/img/logo_donor_fnitaly.png" title="Individual donation" border="0" align="middle" alt="Anonymous private donor"></li> -->
+         <!-- <li><img src="http://www.allergome.org/img/logo_other_anonymous_01.png" title="Private donor" border="0" align="middle" alt="Anonymous private donor"></li> -->
+         <!-- <li><img src="http://www.allergome.org/img/logo_other_anonymous_03.png" title="Private donor" border="0" align="middle" alt="Anonymous private donor"></li> -->
+         <!-- <li><img src="http://www.allergome.org/img/logo_other_anonymous_04.png" title="Private donor" border="0" align="middle" alt="Anonymous private donor"></li> -->
+         <!-- <li><img src="http://www.allergome.org/img/logo_other_anonymous_02.png" title="Private donor" border="0" align="middle" alt="Anonymous private donor"></li> -->
+      </ul>
+
+      <img src="http://www.allergome.org/img/title_istitutions.gif" border="0" alt="" style="margin-top:10px;margin-bottom:4px">
+     	<!-- <img src="img/platinum_sponsors_bar.png" title="Platinum sponsors" style="margin-bottom:4px" /> -->
+     	<span title="Platinum project partners" class="allergome_sponsor_bar allergome_sponsor_bar_platinum">PLATINUM SPONSORS</span>
+      <!-- <img src="img/gold_sponsors_bar.png" title="Gold sponsors" style="margin-bottom:4px" /> -->
+        <div style="clear:both; display: block;">
+        <a href="http://www.allergome.org/script/about.php#about_2017" style="color:#0068b2;text-decoration:none"><img src="http://www.allergome.org/img/euflag.png" title="European Union's Horizon 2020 research and innovation programme" border="0" alt="E.U." height="50" style="float:left; margin-right:4px;">This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 866356</a></div>
+        <div style="clear:both; display: block; height: 6px"></div>
+      <span title="Gold sponsors" class="allergome_sponsor_bar allergome_sponsor_bar_gold">GOLD SPONSORS</span>
+		<!-- <img src="img/silver_sponsors_bar.png" title="Silver sponsors" style="margin-bottom:4px" /> -->
+		<span title="Silver sponsors" class="allergome_sponsor_bar allergome_sponsor_bar_silver">SILVER SPONSORS</span>
+		<!-- <img src="img/other_sponsors_bar.png" title="Other sponsors" style="margin-bottom:4px" /> -->
+		<span title="Other sponsors" class="allergome_sponsor_bar allergome_sponsor_bar_bronze">OTHER SPONSORS</span>
+		<ul class="anonymous_sponsors">
+			<!-- <li><img src="http://www.allergome.org/img/logo_other_university_of_salzburg.png" title="Institutional donor" border="0" align="middle" alt="Institutional donor"></li> -->
+			<!-- <li><img src="http://www.allergome.org/img/logo_other_CRP.png" title="Institutional donor" border="0" align="middle" alt="Institutional donor"></li> -->
+			<!-- <li><img src="http://www.allergome.org/img/logo_other_university_of_nebraska.png" title="Institutional donor" border="0" align="middle" alt="Institutional donor"></li> -->
+		</ul>
+
+   </td>
+  </tr>
+  </table>
+
+  <table border="0" width="800" align="center" cellpadding="0" cellspacing="0">
+     <tr>
+         <td colspan="3"><br></td>
+     </tr>
+     <tr>
+         <td id="footer">
+         Allergome 2003-2015<br><img src="http://www.allergome.org/img/trasp.gif" border="0" width="2" height="2" alt=""><br>
+         <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/deed.en" target="_blank"><img src="http://creativecommons.org/images/public/somerights20.gif" border="0" alt=""></a>
+         </td>
+      <td id="footer" class="mail">
+         <ul>
+            <li>&nbsp;<a href="mailto:your.feedback@allergome.org">Your Feedback</a></li>
+            <li>&nbsp;<a href="mailto:adriano.mari@allergome.org">Administrator</a></li>
+            <li>&nbsp;<a href="mailto:allergy.data.laboratories@allergome.org">Allergy Data Laboratories</a></li>
+      </ul>
+      </td>
+         <td id="footer2">
+            <div align="right"><b>Developed by<br><a href="http://www.panservice.it" target="_blank"><font color="#004080">Panservice</font></a></b></div>
+         </td>
+     </tr>
+  </table>
+
+<script type="text/javascript" src="http://www.allergome.org/js/jquery.cookiebar.js"></script>
+<script type="text/javascript">
+
+   jQuery(document).ready(function(){
+      jQuery.cookieBar({
+         message: 'This site uses some types of Technical & Analytical cookies to gather information about the users browsing experience.<br>By closing this banner or continuing to browse the website, you agree with the use of cookies.',
+         acceptButton: true,
+         acceptText: 'Accept',
+         policyButton: true,
+         policyText: 'Read',
+         policyURL: 'http://www.allergome.org/privacy-policy.php',
+         autoEnable: false,
+         acceptOnContinue: true,
+         acceptOnScroll: false,
+         fixed: true
+      });
+   });
+   
+   if ( jQuery.cookieBar('get-accepted') ){
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   
+      try {
+         var pageTracker = _gat._getTracker("UA-7774027-2");
+         pageTracker._trackPageview();
+      } catch(err) {}
+   }
+   
+   //MM_showHideLayers('boxInfoGrande','','show');
+</script>
+
+
+
+      <script type="text/javascript">
+         try {
+            MM_showHideLayers('boxInfoGrande','','show');
+         } catch(err) {}
+      </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+Content-Type: text/html
+Content-Encoding: gzip
+Last-Modified: Mon, 30 Mar 2020 10:25:53 GMT
+Vary: Accept-Encoding
+Server: nginx
+X-Ms-Request-Id: d25ade9d-701e-0054-77c3-06b7b1000000
+X-Ms-Version: 2009-09-19
+X-Ms-Lease-Status: unlocked
+X-Ms-Blob-Type: BlockBlob
+Access-Control-Allow-Origin: *
+X-Served: Nginx-Proxito-Sendfile
+X-Deity: web01
+Strict-Transport-Security: max-age=31536000;
+X-Rtd-Project: elephant
+X-Rtd-Version: latest
+X-Rtd-Path: /proxito/media/html/elephant/latest/reference/spade.html
+X-Rtd-Domain: elephant.readthedocs.io
+X-Rtd-Version-Method: subdomain
+Date: Mon, 30 Mar 2020 18:45:47 GMT

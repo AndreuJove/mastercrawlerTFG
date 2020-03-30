@@ -1,0 +1,13 @@
+Server: Varnish
+Retry-After: 0
+Location: https://pythonhosted.org/bio-MOSAIC/
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 18:45:08 GMT
+X-Served-By: cache-mad22025-MAD
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1585593909.509753,VS0,VE0
+X-Frame-Options: deny
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none

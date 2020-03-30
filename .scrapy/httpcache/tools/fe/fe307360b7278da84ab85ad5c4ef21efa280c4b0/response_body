@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>DECIPHER - Design Signatures</title>
+
+<link rel="stylesheet" type="text/css" href="theme1.css">
+
+<script type="text/javascript">
+function clearSelect(selbox) {
+	var i;
+	for (i=selbox.options.length - 1; i >= 0; i--) {
+		selbox.options[i].selected = false;
+	}
+}
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-6790591-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</head>
+
+<body id="Body">
+<div id="Header"><a href="/"><img class="header" alt="DECIPHER logo" src="images/DECIPHER2.png"></a><br clear="all"><br>
+<div id="Main">
+<ul id="NavBar">
+
+<li><a href="index.html" class="l1">Home</a></li>
+<li><a href="Alignment.html" class="l1">Alignment<span class="right">&#9656;</span></a></li>
+<li><a href="Classification.html" class="l1">Classification</a></li>
+<li><a href="FindChimeras.html" class="l1">Find Chimeras</a></li>
+<li><a href="OligoDesign.html" class="l1sub">Oligo Design<span class="right">&#9656;</span></a></li>
+<li><a href="DesignSignatures.html" class="l2sel">Design Signatures</a></li>
+<li><a href="DesignPrimers.html" class="l2">Design Primers</a></li>
+<li><a href="DesignProbes.html" class="l2">Design Probes</a></li>
+<li><a href="ProbeMelt.html" class="l2">ProbeMelt</a></li>
+<li><a href="16SOligos.html" class="l2">16S Oligos</a></li>
+<li><a href="Downloads.html" class="l1">Downloads</a></li>
+<li><a href="Tutorials.html" class="l1">Tutorials<span class="right">&#9656;</span></a></li>
+<li><a href="Contact.html" class="l1">Contact</a></li>
+<li><a href="Citation.html" class="l1">Citation</a></li>
+
+</ul>
+</div>
+<div id="ContentFrame">
+<div id="Content">
+
+<p class="c0">Design Signatures</p>
+
+The Design Signatures web tool assists in the design of primers for sequencing, HRM, or FLP analysis with the goal of obtaining diverse amplicon signatures.<br>
+
+<br>
+<a href="DesignSignaturesFAQ.html">F.A.Q.</a>&nbsp;&nbsp;
+&nbsp; &nbsp;&nbsp; <a href="DesignSignaturesInputs.html">Inputs</a>
+&nbsp;&nbsp; &nbsp; &nbsp; <a href="DesignSignaturesOutputs.html">Outputs</a><br>
+<br>
+<form name="designSignatures" method="post" action="/cgi-bin/R.cgi/DesignSignatures.R" enctype="multipart/form-data">
+Experimental application: [<a href="/DesignSignaturesInputs.html">?</a>]<br>
+<input type="radio" name="expt" value="seq" checked="checked" onchange="clearSelect(document.getElementById('select')); document.getElementById('select').disabled = true;"> Sequencing<br>
+<input type="radio" name="expt" value="hrm" onchange="document.getElementById('select').disabled = false;"> High Resolution Melting (HRM) analysis<br>
+<input type="radio" name="expt" value="flp" onchange="document.getElementById('select').disabled = false;"> Fragment Length Polymorphism (FLP) analysis<br>
+<br>
+Primers: [<a href="/DesignSignaturesInputs.html">?</a>] Length <input name="minLength" size="2" maxlength="2" type="text" value="17"> - <input name="maxLength" size="2" maxlength="2" type="text" value="26"> nucleotides with up to <input name="maxPermutations" size="2" maxlength="2" type="text" value="4"> permutation(s)<br>
+<br>
+PCR Product Amplicon: [<a href="/DesignSignaturesInputs.html">?</a>] Length <input name="minProductLength" size="5" maxlength="5" type="text" value="70"> - <input name="maxProductLength" size="5" maxlength="5" type="text" value="700"> base pairs<br>
+<br>
+Reaction Conditions: [<a href="/DesignSignaturesInputs.html">?</a>]<br>
+[Na<sup>+</sup>] = <input name="Na" size="3" maxlength="6" type="text" value="70">mM, &nbsp;[Mg<sup>++</sup>] = <input name="Mg" size="2" maxlength="6" type="text" value="3">mM, &nbsp;[dNTPs] = <input name="dNTP" size="4" maxlength="6" type="text" value="0.8">mM<br>
+Annealing Temperature = <input name="annealingTemp" size="2" maxlength="2" type="text" value="64"> &deg;C, &nbsp;[Primers] = <input name="dNTP" size="3" maxlength="4" type="text" value="400">nM<br>
+<br>
+Restriction enzymes to consider for HRM or FLP analysis (optional): [<a href="/DesignSignaturesInputs.html">?</a>]<br>
+<select multiple size="5" style="width: 10em;" id="select" name="enzymes" disabled>
+<option value="AatII">AatII</option>
+<option value="Acc65I">Acc65I</option>
+<option value="AccI">AccI</option>
+<option value="AciI">AciI</option>
+<option value="AclI">AclI</option>
+<option value="AcuI">AcuI</option>
+<option value="AfeI">AfeI</option>
+<option value="AflII">AflII</option>
+<option value="AflIII">AflIII</option>
+<option value="AgeI">AgeI</option>
+<option value="AhdI">AhdI</option>
+<option value="AleI">AleI</option>
+<option value="AluI">AluI</option>
+<option value="AlwI">AlwI</option>
+<option value="AlwNI">AlwNI</option>
+<option value="ApaI">ApaI</option>
+<option value="ApaLI">ApaLI</option>
+<option value="ApeKI">ApeKI</option>
+<option value="ApoI">ApoI</option>
+<option value="AscI">AscI</option>
+<option value="AseI">AseI</option>
+<option value="AsiSI">AsiSI</option>
+<option value="AvaI">AvaI</option>
+<option value="AvaII">AvaII</option>
+<option value="AvrII">AvrII</option>
+<option value="BaeGI">BaeGI</option>
+<option value="BamHI">BamHI</option>
+<option value="BanI">BanI</option>
+<option value="BanII">BanII</option>
+<option value="BbsI">BbsI</option>
+<option value="BbvCI">BbvCI</option>
+<option value="BbvI">BbvI</option>
+<option value="BccI">BccI</option>
+<option value="BceAI">BceAI</option>
+<option value="BciVI">BciVI</option>
+<option value="BclI">BclI</option>
+<option value="BcoDI">BcoDI</option>
+<option value="BfaI">BfaI</option>
+<option value="BfuAI">BfuAI</option>
+<option value="BfuCI">BfuCI</option>
+<option value="BglI">BglI</option>
+<option value="BglII">BglII</option>
+<option value="BlpI">BlpI</option>
+<option value="BmgBI">BmgBI</option>
+<option value="BmrI">BmrI</option>
+<option value="BmtI">BmtI</option>
+<option value="BpmI">BpmI</option>
+<option value="Bpu10I">Bpu10I</option>
+<option value="BpuEI">BpuEI</option>
+<option value="BsaAI">BsaAI</option>
+<option value="BsaBI">BsaBI</option>
+<option value="BsaHI">BsaHI</option>
+<option value="BsaI">BsaI</option>
+<option value="BsaJI">BsaJI</option>
+<option value="BsaWI">BsaWI</option>
+<option value="BseRI">BseRI</option>
+<option value="BseYI">BseYI</option>
+<option value="BsgI">BsgI</option>
+<option value="BsiEI">BsiEI</option>
+<option value="BsiHKAI">BsiHKAI</option>
+<option value="BsiWI">BsiWI</option>
+<option value="BslI">BslI</option>
+<option value="BsmBI">BsmBI</option>
+<option value="BsmFI">BsmFI</option>
+<option value="BsmI">BsmI</option>
+<option value="Bsp1286I">Bsp1286I</option>
+<option value="BspCNI">BspCNI</option>
+<option value="BspDI">BspDI</option>
+<option value="BspEI">BspEI</option>
+<option value="BspHI">BspHI</option>
+<option value="BspQI">BspQI</option>
+<option value="BsrBI">BsrBI</option>
+<option value="BsrDI">BsrDI</option>
+<option value="BsrFI">BsrFI</option>
+<option value="BsrGI">BsrGI</option>
+<option value="BsrI">BsrI</option>
+<option value="BssHII">BssHII</option>
+<option value="BssKI">BssKI</option>
+<option value="BssSI">BssSI</option>
+<option value="BstAPI">BstAPI</option>
+<option value="BstBI">BstBI</option>
+<option value="BstEII">BstEII</option>
+<option value="BstNI">BstNI</option>
+<option value="BstUI">BstUI</option>
+<option value="BstXI">BstXI</option>
+<option value="BstYI">BstYI</option>
+<option value="BstZ17I">BstZ17I</option>
+<option value="Bsu36I">Bsu36I</option>
+<option value="BtgI">BtgI</option>
+<option value="BtgZI">BtgZI</option>
+<option value="BtsCI">BtsCI</option>
+<option value="BtsI">BtsI</option>
+<option value="BtsIMutI">BtsIMutI</option>
+<option value="Cac8I">Cac8I</option>
+<option value="CviAII">CviAII</option>
+<option value="CviKI-1">CviKI-1</option>
+<option value="CviQI">CviQI</option>
+<option value="DdeI">DdeI</option>
+<option value="DraI">DraI</option>
+<option value="DraIII">DraIII</option>
+<option value="DrdI">DrdI</option>
+<option value="EaeI">EaeI</option>
+<option value="EagI">EagI</option>
+<option value="EarI">EarI</option>
+<option value="EciI">EciI</option>
+<option value="Eco53kI">Eco53kI</option>
+<option value="EcoNI">EcoNI</option>
+<option value="EcoO109I">EcoO109I</option>
+<option value="EcoP15I">EcoP15I</option>
+<option value="EcoRI">EcoRI</option>
+<option value="EcoRV">EcoRV</option>
+<option value="FatI">FatI</option>
+<option value="FauI">FauI</option>
+<option value="Fnu4HI">Fnu4HI</option>
+<option value="FokI">FokI</option>
+<option value="FseI">FseI</option>
+<option value="FspI">FspI</option>
+<option value="HaeII">HaeII</option>
+<option value="HaeIII">HaeIII</option>
+<option value="HgaI">HgaI</option>
+<option value="HhaI">HhaI</option>
+<option value="HincII">HincII</option>
+<option value="HindIII">HindIII</option>
+<option value="HinfI">HinfI</option>
+<option value="HinP1I">HinP1I</option>
+<option value="HpaI">HpaI</option>
+<option value="HphI">HphI</option>
+<option value="Hpy166II">Hpy166II</option>
+<option value="Hpy188I">Hpy188I</option>
+<option value="Hpy188III">Hpy188III</option>
+<option value="Hpy99I">Hpy99I</option>
+<option value="HpyAV">HpyAV</option>
+<option value="HpyCH4III">HpyCH4III</option>
+<option value="HpyCH4IV">HpyCH4IV</option>
+<option value="HpyCH4V">HpyCH4V</option>
+<option value="KasI">KasI</option>
+<option value="KpnI">KpnI</option>
+<option value="MboII">MboII</option>
+<option value="MfeI">MfeI</option>
+<option value="MluCI">MluCI</option>
+<option value="MluI">MluI</option>
+<option value="MlyI">MlyI</option>
+<option value="MmeI">MmeI</option>
+<option value="MnlI">MnlI</option>
+<option value="MscI">MscI</option>
+<option value="MseI">MseI</option>
+<option value="MslI">MslI</option>
+<option value="MspA1I">MspA1I</option>
+<option value="MwoI">MwoI</option>
+<option value="NaeI">NaeI</option>
+<option value="NarI">NarI</option>
+<option value="NciI">NciI</option>
+<option value="NcoI">NcoI</option>
+<option value="NdeI">NdeI</option>
+<option value="NgoMIV">NgoMIV</option>
+<option value="NheI">NheI</option>
+<option value="NlaIII">NlaIII</option>
+<option value="NlaIV">NlaIV</option>
+<option value="NmeAIII">NmeAIII</option>
+<option value="NotI">NotI</option>
+<option value="NruI">NruI</option>
+<option value="NsiI">NsiI</option>
+<option value="NspI">NspI</option>
+<option value="Nt.BstNBI">Nt.BstNBI</option>
+<option value="PacI">PacI</option>
+<option value="PaeR7I">PaeR7I</option>
+<option value="PciI">PciI</option>
+<option value="PflFI">PflFI</option>
+<option value="PflMI">PflMI</option>
+<option value="PluTI">PluTI</option>
+<option value="PmeI">PmeI</option>
+<option value="PmlI">PmlI</option>
+<option value="PpuMI">PpuMI</option>
+<option value="PshAI">PshAI</option>
+<option value="PsiI">PsiI</option>
+<option value="PspGI">PspGI</option>
+<option value="PspOMI">PspOMI</option>
+<option value="PspXI">PspXI</option>
+<option value="PstI">PstI</option>
+<option value="PvuI">PvuI</option>
+<option value="PvuII">PvuII</option>
+<option value="RsaI">RsaI</option>
+<option value="RsrII">RsrII</option>
+<option value="SacI">SacI</option>
+<option value="SacII">SacII</option>
+<option value="SalI">SalI</option>
+<option value="Sau96I">Sau96I</option>
+<option value="SbfI">SbfI</option>
+<option value="ScaI">ScaI</option>
+<option value="ScrFI">ScrFI</option>
+<option value="SexAI">SexAI</option>
+<option value="SfaNI">SfaNI</option>
+<option value="SfcI">SfcI</option>
+<option value="SfiI">SfiI</option>
+<option value="SfoI">SfoI</option>
+<option value="SgrAI">SgrAI</option>
+<option value="SmaI">SmaI</option>
+<option value="SmlI">SmlI</option>
+<option value="SnaBI">SnaBI</option>
+<option value="SpeI">SpeI</option>
+<option value="SphI">SphI</option>
+<option value="SspI">SspI</option>
+<option value="StuI">StuI</option>
+<option value="StyI">StyI</option>
+<option value="SwaI">SwaI</option>
+<option value="TaqaI">TaqaI</option>
+<option value="TfiI">TfiI</option>
+<option value="Tsp45I">Tsp45I</option>
+<option value="TspMI">TspMI</option>
+<option value="TspRI">TspRI</option>
+<option value="XbaI">XbaI</option>
+<option value="XcmI">XcmI</option>
+<option value="XmnI">XmnI</option>
+<option value="ZraI">ZraI</option>
+</select><br>
+<br>
+Choose FASTA file (limit 50 MB): [<a href="/DesignSignaturesInputs.html">?</a>]<br>
+<input name="dataFile" size="30" valign="top" type="file"><br>
+<br>
+<input value="Submit" type="submit"> <input name="R::script" value="submit" type="hidden"></form>
+
+</div>
+</div>
+</div>
+</body></html>

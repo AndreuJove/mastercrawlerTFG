@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title id='title'>ARCH_Pred at bioinsilico \dot\ org</title>
+<link rel="stylesheet" type="text/css" href="/ARCHPRED/CSS/response.css" />
+<script type="text/javascript" src="/ARCHPRED/JS/jmol_functions.js"></script>
+</head>
+
+<body>
+<div class="body_div" >
+<div class="header_div" ><div class="title_div" ><font color="red"><b>ARCH</b></font><font color="blue"><i>_Pred</font> server</i></div>
+<div class="subtitle_div" ><a href="http://www.bioinsilico.org" >@ bioinsilico \dot\ org</a></div></div><div class="response_div" >
+<div style="position:relative;" class="can_pathway" >
+<span class="pathway" ><a href="/ARCHPRED/index.html" >Submit</a></span>
+<span class="pathway" ><a href="/ARCHPRED/help.html" >Help</a></span>
+<span class="pathway" ><a href="/ARCHPRED/disclaimer.html" >Disclaimer</a>
+</span></div>	
+
+<div style="text-align:justify;">
+<h3_main>
+<!-- Start form -->
+<form method="post" name="mf" action="http://www.bioinsilico.org/cgi-bin/ARCHPRED/archpred.cgi" enctype="multipart/form-data">
+
+
+	 <div id="optionstitle"><b>Prediction parameters&nbsp;&nbsp;</b><a href="help.html#form"><img src="/ARCHPRED/IMG/help.png" border="0" width="12" height="12"></a><br></div>
+  	<div id="options">
+		Upload protein coordinates <strong><a href="http://www.rcsb.org" target="_blank">(PDB format)</a></strong>&nbsp;&nbsp;
+    <input type="file" name="fpdb" size="15"> <br />
+		
+		Loop start in residue number <input type="text" name="startpoint" size="5">&nbsp;&nbsp;&nbsp;&nbsp; and chain ID <input type="text" name="chain" size="2"><br />
+		
+    Loop sequence (single letter codes: ACDEFGHIKLMNPQRSTVWY) <br /> 
+		<textarea name="sequence" cols="30" rows="1" ></textarea> <br />
+		Flanking secondary structures
+  		<label>
+     		<select name="flanking" style="">
+   			<option>beta-loop-beta</option>
+   			<option>beta-loop-helix</option>
+   			<option>helix-loop-beta</option>
+   			<option>helix-loop-helix</option>
+     		</select>
+   		</label>
+			<br />
+		# of predictions to include in the output  					
+        <select name="nmodels">
+  						<option value="1">1</option>
+  						<option value="2">2</option>
+  						<option value="3">3</option>
+  						<option value="4">4</option>
+  						<option value="5" selected>5</option>
+  						<option value="6">6</option>
+  						<option value="7">7</option>
+  						<option value="8">8</option>
+  						<option value="9">9</option>
+  						<option value="10">10</option>
+  					</select>&nbsp;&nbsp;&nbsp;&nbsp;
+  					Z-Score Cut-Off&nbsp;&nbsp;
+  					<select name="zcutoff">
+  						<option value="0">0</option>
+  						<option value="1">1</option>
+  						<option value="2">2</option>
+  						<option value="3"selected>3</option>
+  						<option value="4">4</option>
+  						<option value="5">5</option>
+  						<option value="6">6</option>
+  						<option value="7">7</option>
+  						<option value="8">8</option>
+  						<option value="9">9</option>
+  						<option value="10">10</option>
+  					</select>
+   </div> 
+  
+  <div id="optionstitle"><b>Post-prediction optimization&nbsp;&nbsp;</b><a href="help.html#post"><img src="/ARCHPRED/IMG/help.png" border="0" width="12" height="12"></a><br></div>
+		<div id="options">
+      <!--input type="checkbox" name="scrwl" value="yes" >Rebuild side chains using <a href="http://dunbrack.fccc.edu/scwrl4/">Scrwl4</a><br/-->
+			<input type="checkbox" name="minimization" value="yes" >Graft loop in the protein using <a href="http://salilab.org/modeller/">Modeller</a><br/>
+	</div>
+<br />
+		<div id="options2">
+
+				<div>
+					Username:&nbsp;&nbsp;<input type="text" id="username" name="username" size="15" style="background-color: rgb(209, 209, 209);">
+				</div>
+				<div>
+
+					Password:&nbsp;&nbsp;<input type="password" id="password" name="password" size="15" style="background-color: rgb(209, 209, 209);">
+				</div>
+				<div>
+					Need an username and password?&nbsp;&nbsp;<a href="register.html" target="_blank">Click here to register!</a>
+     	</div>
+     </div>
+
+<!-- submission buttons -->    
+<p align="center">
+	<input name="submit_button" type="submit" value="Submit" />
+   	&nbsp;&nbsp;&nbsp;
+	<input name="clear_button" value="Reset" type="reset">
+</p>
+
+<h5>
+  Please have a look at the <a href="help.html">help pages</a> for more information about the server 
+  and the prediction method. Also, please
+  read the <a href="disclaimer.html">disclaimer</a> before using the server. Please note that we have
+  recenlty updated our servers, please <a href="http://www.bioinsilico.org/contact.html">contact us</a> if you experience any problems.
+</h5>
+<h6 align="right">
+Loop library last updated on: <font color="red"><b><i>May 2016</i></b></font><br />
+# of motifs: <font color="red"><b><i>705,318</i></b></font>
+</h6>
+
+</form>  
+
+</h3_main>
+<div class="footer_div" >
+<hr/><h5 >Finding it useful? Please cite the server <a href="http://www.ncbi.nlm.nih.gov/pubmed/16617149" ><img src="/ARCHPRED/IMG/pubmed.png" height="12" border="0"  /></a></h5>
+</div>
+</div>
+
+</body>
+</html>

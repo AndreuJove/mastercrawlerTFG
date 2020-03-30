@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>CEM: Transcriptome Assembly and Isoform Expression Level Estimation from Biased RNA-Seq Reads</title>
+
+<style type="text/css">
+.style1 {
+color: #0000FF;
+}
+.style2 {
+color: #0000FF;
+font-size: large;
+}
+.style4 {
+border-width: 0px;
+}
+.style8 {
+}
+.style9 {
+text-decoration: line-through;
+}
+.style10 {
+color: #C0C0C0;
+}
+.style11 {
+color: #C0C0C0;
+text-decoration: line-through;
+}
+.style12 {
+color: #0000FF;
+font-size: large;
+text-decoration: line-through;
+}
+</style>
+<style type="text/css">
+table.sample{
+text-align: left; margin-left: 63px; width: 1007px; height: 91px; border:1px; cellpadding:4px;
+cellspacing:4px;
+table-layout:fixed
+}
+table.sample th {
+}
+table.sample td {
+vertical-align: top;
+}
+table.sample tr{
+}
+</style></head>
+<body style="background-color: rgb(255, 255, 204);">
+<h1> CEM: Transcriptome Assembly and Isoform Expression Level Estimation from Biased RNA-Seq Reads </h1>
+<h3><a href="#intro">Introduction</a></h3>
+<h3><a href="#download">Download</a></h3>
+<h3><a href="#instruction">Instruction</a></h3>
+<h3><a href="#usage">Usage</a></h3>
+<hr />
+<h2>1. Introduction<a name="intro"></a></h2>
+<p>CEM is an algorithm to assemble transcripts and estimate
+their expression levels from RNA-Seq reads. </p>
+<h2>2. Download<a name="download"></a></h2>
+<p>The latest version of CEM can be downloaded
+<a href="cem.0.9.1.tar.gz">here</a> (Last
+update: 11/17/2012). </p>
+<p><span style="color: rgb(255,0,0);"><big>Note:</big> </span> if you have IsoLasso 2.6.0 or higher versions installed, you don't have to download CEM separately. Just use  the EM options in IsoLasso. Please refer to <a href="isolasso.html">IsoLasso webpage</a> for more details. </p>
+<h2>3. Instruction<a name="instruction"></a></h2>
+<h3>3.1 Overview and Requirement</h3>
+<p>CEM runs on Linux system. It is suggested (but not required) that
+Python 2.7 or higher version is installed. To handle BAM files (which is the default format for many read
+mapping tools), you need to install <a href="http://samtools.sourceforge.net/">SAMTools</a>.</p>
+<h3>3.2 Compilation and Installation</h3>
+<h4>3.2.1 Download and unzip</h4>
+<p>After downloading,  the source code can be extracted using the following command: "tar xvzf cem.0.9.1.tar.gz".</p>
+<h4>3.2.2 Compiling C++ codes</h4>
+<p>The <span class="style1">src </span>folder
+in the source code includes the source codes. Simply run
+Makefile to compile them:</p>
+<p class="style1">make</p>
+<h4>3.2.3 Adding the location of bin directory to your system PATH</h4>
+<p>For your convenience, you may add the location of the bin
+directory to your PATH variable. For example, if your folder of
+CEM is in the path /home/me/cem, then add the following line
+in the .bashrc file of your home folder:</p>
+<p class="style1">export PATH="/home/me/cem/bin:"$PATH</p>
+<h4>3.2.4 Running runcem.py on .sam or .bam file</h4>
+<p>After compiling, you can run CEM using runcem.py on
+your read alignment file (.sam or .bam file). If you are provided with
+the original RNA-Seq reads, you need to first map them to reference
+genome using read mapping tools, like <a href="http://tophat.cbcb.umd.edu/">Tophat</a>.
+<b>Note: make sure your read alignment tool supports the XS:A tag in the BAM file for splicing reads (like Tophat). See <a href="http://cole-trapnell-lab.github.io/cufflinks/cufflinks/index.html#cufflinks-input-files">here</a> for more details.</b>
+</p>
+<p>After that, run "runcem.py sam/bam" to run CEM. For
+example, if your file is test.sam, type</p>
+<p class="style1">runcem.py{options} test.sam&nbsp;</p>
+<p>This command consists two parts, first,
+runcem.py uses&nbsp;<big style="font-weight: bold;">processsam</big>
+program in the to pre-process sam/bam files to generate an instance
+file. Then, runcem.py calls another program,&nbsp;<big style="font-weight: bold;">isolassocem</big> to run this
+instance file and outputs assembled transcripts. You can also
+use&nbsp;</p>
+<p class="style1">runcem.py &nbsp;test.instance</p>
+<p>to run CEM directly on the test.instance file generated
+by processsam.</p>
+<p>Run "runcem.py", "processsam" and "isolassocem" without
+providing any parameters to see their usages.</p>
+<p><strong>Note:</strong> If you want CEM to <strong>only calculate the expression levels of given transcripts </strong> (provided in BED format), use the following command: </p>
+<p class="style1">runcem.py -x &lt;BED&gt; --forceref  &nbsp;test.sam</p>
+<p>&nbsp;</p>
+<h2>4. Usage<a name="usage"></a></h2>
+<h3>4.1 runcem.py</h3>
+<p>Usage: runcem.py&nbsp; {options}&nbsp; &lt;
+in.bam | in.sam | - &gt;</p>
+<p>This is main entry for CEM. It processes sam/bam file or
+.instance file, and outputs the assembled transcripts. This script will
+pass all options to processsam and isolassocem program.</p>
+<br />
+<h3>4.2 processsam</h3>
+<p>Usage: &nbsp;processsam {options} &lt;in.sam|-&gt;
+</p>
+<p>processsam generates the instance file required for CEM.</p>
+<p>Required input:
+A SAM format file containing the read mapping information, or command
+line ('-'). See NOTE for further information. </p>
+<p>Options:</p>
+<table class="sample">
+<col width="315" />
+<col width="672" /><tbody>
+<tr>
+<td class="style2">&nbsp;-n/--isoinfer</td>
+<td>Generate IsoInfer input files
+(.readinfo, .bound and .generange).</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-g/--min-gap-length
+&lt;int&gt; </td>
+<td>The minimum length of the gap between two reads to be
+considered as separate genes. Default 0.</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-c/--min-read-num
+&lt;int&gt;</td>
+<td>The minimum number of clustered reads to
+output. Default 4.</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-k/--max-pe-span
+&lt;int&gt;&nbsp;</td>
+<td class="style8">The maximum pair-end
+spanning. Paired-end reads whose spanning exceeds this number will be
+discarded. Default 700000.</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-x/--annotation
+&lt;string&gt;</td>
+<td>Provide existing gene annotation file (in BED format).
+Adding this parameter will automatically incorporate existing gene
+annotation information into instance file. The bed file should be
+sorted according to the chromosome name and starting position of
+isoforms. This option is mutually exclusive to the -r/--range option.</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-r/--range
+&lt;string&gt;</td>
+<td>Use the provided gene ranges specified by the file (in
+BED format). This option is mutually exclusive to the -x/--annotation
+option.</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-e/--segment-bound
+&lt;string&gt;</td>
+<td>Provide the exon-intron boundary information specified
+by the filename. See NOTE for more information about the file format.</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-s/--max-num-instance</td>
+<td>The maximum number of instances be written to the file.
+Default -1 (no limit)</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-u/--min-cvg-cut
+&lt;0.0-1.0&gt;</td>
+<td>The fraction for coverage cutoff, should be between
+0-1. A higher value will be more sensitive to coverage discrepancies in
+one gene. Default 0.05.</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-b/--single-only</td>
+<td>Treat reads as single-end reads, even if they are
+paired-end reads.</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-j/--min-junc-count
+&lt;int&gt;</td>
+<td>Minimum junction count. Only junctions&nbsp; with
+no less than this number of supporting reads are considered. Default 1.</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-a/--annotation</td>
+<td class="style8">Output annoation files, including
+read coverage (.real.wig), read coverage considering junctions and
+paired-end read spans (.wig), instance range and boundary (.bound.bed),
+junctions (.bed) and&nbsp; junction summary (.junction.bed).</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-v/--no-coverage</td>
+<td class="style8"> Don't output coverage
+information to the instance file.</td>
+</tr>
+<tr>
+<td class="style2">&nbsp;-o/--prefix
+&lt;string&gt;</td>
+<td class="style8"> Specify the prefix of all
+generated files. The default value is the provided file name.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTE</strong>:&nbsp;</p>
+<ol>
+<li>processsam acceptes STDIN input of sam file by using '-' as
+filename. This is especially useful if you have the .bam file (e.g.,
+from Tophat output), or you want to do some read filtering before
+running CEM.&nbsp; For example, if Samtools is installed, then
+use the following command to run processsam on only chromosome 1 reads:</li>
+<p class="style1">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+samtools view accepted_hits.bam chr1 | processsam -a -o accepted_hits -</p>
+
+
+<li> The sam/bam file must be sorted according to the
+chromosome name and
+starting position. The bam file format can be sorted using 'samtools
+sort' command, while for the sam file, you can use the sort command. In
+Unix or Mac systems, use the following command:</li>
+<p class="style1">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sort -k 3,3 -k 4,4n in.sam &gt; in.sorted.sam</p>
+to sort in.sam&nbsp; into in.sorted.sam, or use the pipe:
+<p class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sort -k 3,3 -k 4,4n in.sam | processsam -a -o accepted_hits -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p><li> The exon-intron boundary file (specified by
+-e/--segment-bound
+option) records the exon-intron boundary used by CEM. Each line in
+the file represents one boundary information, and should include
+chromosome name, start position, end position (equal to start position)
+and direction (+/-). These fields should be tab-separated, and only the
+first 4 fields are used. For example,</li>
+<p class="style1">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+chr1&nbsp;&nbsp;&nbsp; 15796&nbsp;&nbsp;
+15796&nbsp;&nbsp; +</p>
+</ol>
+<br />
+<h3>4.3 isolassocem</h3>
+Version: 2.6<br />
+Usage: isolassocem {options} &lt;Instance file&gt;<br />
+<br />
+Input: the instance file generated by processsam.<br />
+<br />
+Options:<br />
+<table class="sample">
+<col width="315" />
+<col width="672" />
+<tbody>
+<tr>
+	<td> Parameters: </td>
+</tr>
+<tr>
+<td class="style2">-p/--pairend &lt;int,int&gt;</td>
+<td>Specify the paired-end read span and standard
+	derivation. Default 200,20. You may use <a href="http://www.cs.ucr.edu/~liw/scripts.html#insertsam">this Python script</a> to estimate both values from a given SAM/BAM file.</td>
+</tr>
+<tr>
+<td class="style2">-c/--min-read-num &lt;int&gt;</td>
+<td>The minimum number of clustered reads to output.
+Default 0.</td>
+</tr>
+<tr>
+	<td> IO Options: </td>
+</tr>
+<tr>
+	<td class="style2">--minexp &lt;float&gt;</td>
+	<td>The minimum expression level threshold cutoff. Default 0.1.</td>
+<tr>
+<tr>
+	<td class="style2">--verbose</td>
+	<td>Enable verbose output.</td>
+<tr>
+<td class="style2">-o/--prefix &lt;string&gt;</td>
+<td>Specify the prefix of the&nbsp; output files. The
+default value is the instance file.</td>
+</tr>
+<tr>
+<td class="style2">--no-filter</td>
+<td>Do not filter isoforms with 0 expression levels. If
+this option is on, the predicted expression levels of some isoforms
+will be 0.</td>
+</tr>
+<tr>
+	<td class="style2">--id &lt;string&gt;</td>
+	<td>Only predict the instance with specified ID.</td>
+<tr>
+<tr>
+	<td> Reference Options: </td>
+</tr>
+<tr>
+<td class="style2">-d/--directref </td>
+<td>Output gene annotation (the Refs field in the instance
+file)&nbsp; directly. All expression levels are assigned 1.</td>
+</tr>
+<tr>
+<td class="style2">--forceref</td>
+<td>Calculate the expression levels of gene annotations
+(the Refs field in the instance file). Using this option will
+automatically turn on the '--no-filter' option.</td>
+</tr>
+<tr>
+<td>CEM Options</td>
+</tr>
+<tr>
+	<td class="style2">--useem</td>
+	<td>Use EM algorithm instead of LASSO algorithm (which is default) to estimate expression levels. <strong>This option is automatically turned on when using runcem.py, but you have to specify it if you use isolassocem by yourself. </strong></td>
+</tr>
+<tr> <td class="style2"> --usebias  </td> <td>Use quasi-multinomial bias correction. </td>
+</tr>
+<tr><td class="style2"> --elim</td><td>Allow CEM to eliminate low probability isoforms during the iteration.</td>
+</tr>
+<tr>	
+	<td class="style2">--correctn  </td> 
+	<td>  Correct the gene read counts according to the quasi-multinomial bias parameter.
+		<p>Warning: this is an experimental option so use it at your own risk. Due to the sample uncertainty, the calculation of the bias parameter may skew the distribution of some of the highly expressed genes.</p>
+	</td>
+</tr>
+<tr>	
+	<td class="style2">	
+		--alpha &lt;float&gt;
+	</td>   
+	<td>        
+		Specify the parameter of the negative Dirichlet prior. Default 5.
+	</td>
+</tr>
+<tr>		
+	<td class="style2">	   
+		--min-frac &lt;float &gt;  
+	</td>  
+	<td> 
+		The minimum fraction of isoforms to be reported. Default 0.01. This option is invalid if --no-filter option is set.
+	</td>
+</tr>
+</tbody>
+</table>
+<h2><br /></h2><h2>5. Update history<a name="history"></a></h2>
+<p><strong>2012.11.17 CEM v 0.9.1</strong></p>
+<p><ol>
+	<li> Fix bugs in the script runcem.py.
+	<li> Fix a bug in the program which eliminates the direction of most transcripts.
+</ol></p>
+<p><strong>2012.07.22 CEM v 0.9</strong></p>
+<hr />
+<p><span lang="zh-cn">by <a href="http://www.cs.ucr.edu/%7Eliw/">Wei Li</a></span></p>
+</body></html>

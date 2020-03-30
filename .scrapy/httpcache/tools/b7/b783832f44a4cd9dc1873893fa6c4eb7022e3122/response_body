@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>
+			Scripps Research
+		</title>
+		    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500|Poppins:300,400,500|Roboto:300,400,500" media="all" rel="stylesheet"/>
+    <link href="_files/css/style.css?v=1.0" media="all" rel="stylesheet"/>
+    <!-- IE template tag polyfill -->
+    
+    <style> template { display: none; } </style>
+    <script> (function () {
+        return (function templatePolyfill () {
+          'use strict'
+          if ('content' in document.createElement('template')) {return false}
+          var templates = document.getElementsByTagName('template')
+          var plateLen = templates.length
+          for (var x = 0; x < plateLen; ++x) {
+            var template = templates[x]
+            var content = template.childNodes
+            var fragment = document.createDocumentFragment()
+            while (content[0]) {fragment.appendChild(content[0])}
+            template.content = fragment
+          }
+        }())
+      }()) </script>
+      
+	</head>
+	<body class="fade-in">
+		<div class="app" id="app" v-cloak="">
+			<!-- vue #app -->
+			
+
+
+<!-- <header> -->
+    
+        <header :style="{height: headerHeight + 'px'}">
+        
+        <data-fetcher
+                api-url="/emergency/emergency-alert.json"
+                retain-content-while-fetching
+                retain-content-while-error
+                :initial-data="{message: '', status: 'off'}">
+                <div slot="fetching"></div>
+                <div slot="error"></div>
+                <announcement
+                    :ms-delay="0"
+                    v-if="props.data.status === 'on'"
+                    slot-scope="props"><div v-html="props.data.message"></div>
+                </announcement>
+            </data-fetcher>   
+        
+        <brand :panel-level="panelLevel" logo="/_files/images/scripps-logo.png"><template slot="nav-links" slot-scope="props"><a href="javascript:void(0);" :class="{'is-active': props.search}" @click.prevent="props.toggleSearch()">Search</a><a href="https://give.scripps.edu/">Give Now</a>
+                        <a href="https://signup.e2ma.net/signup/1879047/1890109/" data-lity>Subscribe</a></template></brand><panels @panel-level-updated="panelLevel = $event" :header-height="headerHeight" :items='
+
+    [
+                   {
+                            "title": "About",
+            "url": "/about/"
+                                                            ,
+            "pages": [
+                        {
+                            "title": "Overview",
+                            "url": "/about/"
+                        },
+                                                            {
+                                                    "title": "Leadership",
+                            "url": "/about/leadership/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "History",
+                            "url": "/about/history/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Facts at a Glance",
+                            "url": "/about/facts-at-a-glance/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Campus Resources",
+                            "url": "/about/campus-resources/"
+                                                                                                                    ,
+                                "pages": [
+                                    {
+                                        "title": "Overview",
+                                        "url": "/about/campus-resources/"
+                                    },
+                                                                                                                        {
+                                                                                            "title": "Career &amp; Postdoctoral Services Office",
+                                                "url": "/about/campus-resources/career-and-postdoctoral-services-office/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Counseling &amp; Psychological Services",
+                                                "url": "/about/campus-resources/counseling-and-psychological-services/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "International Services Office",
+                                                "url": "/about/campus-resources/international-services-office/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Working at Scripps Research",
+                                                "url": "/about/campus-resources/working-at-scripps-research/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Contact Us",
+                                                "url": "/about/campus-resources/contact-us/"
+                                            }                                                                                                                
+                                                                                                    ]
+                                
+                                                                                        
+                            
+                        }                                                    
+                                        ]
+            
+                             
+        
+                },                    {
+                            "title": "Campuses",
+            "url": "/campuses/"
+                                                            ,
+            "pages": [
+                        {
+                            "title": "Overview",
+                            "url": "/campuses/"
+                        },
+                                                            {
+                                                    "title": "California",
+                            "url": "/campuses/california/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Florida",
+                            "url": "/campuses/florida/"
+                                                                                                                
+                            
+                        }                                                    
+                                        ]
+            
+                             
+        
+                },                    {
+                            "title": "Science &amp; Medicine",
+            "url": "/science-and-medicine/"
+                                                            ,
+            "pages": [
+                        {
+                            "title": "Overview",
+                            "url": "/science-and-medicine/"
+                        },
+                                                            {
+                                                    "title": "Research Departments",
+                            "url": "/science-and-medicine/research-departments/"
+                                                                                                                    ,
+                                "pages": [
+                                    {
+                                        "title": "Overview",
+                                        "url": "/science-and-medicine/research-departments/"
+                                    },
+                                                                                                                        {
+                                                                                            "title": "Chemistry",
+                                                "url": "/science-and-medicine/research-departments/chemistry/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Immunology &amp; Microbiology",
+                                                "url": "/science-and-medicine/research-departments/immunology-and-microbiology/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Integrative Structural &amp; Computational Biology",
+                                                "url": "/science-and-medicine/research-departments/integrative-structural-and-computational-biology/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Molecular Medicine",
+                                                "url": "/science-and-medicine/research-departments/molecular-medicine/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Neuroscience",
+                                                "url": "/science-and-medicine/research-departments/neuroscience/"
+                                            }                                                                                                                
+                                                                                                    ]
+                                
+                                                                                        
+                            
+                        },                                                                                {
+                                                    "title": "Disease Areas &amp; Medicines",
+                            "url": "/science-and-medicine/disease-areas-and-medicines/"
+                                                                                                                    ,
+                                "pages": [
+                                    {
+                                        "title": "Overview",
+                                        "url": "/science-and-medicine/disease-areas-and-medicines/"
+                                    },
+                                                                                                                        {
+                                                                                            "title": "Aging &amp; Healthspan",
+                                                "url": "/science-and-medicine/disease-areas-and-medicines/aging-and-healthspan/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Autoimmune Diseases",
+                                                "url": "/science-and-medicine/disease-areas-and-medicines/autoimmune-diseases/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Cancer",
+                                                "url": "/science-and-medicine/disease-areas-and-medicines/cancer/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Diabetes, Obesity and Metabolic Disorders",
+                                                "url": "/science-and-medicine/disease-areas-and-medicines/diabetes-obesity-and-metabolic-disorders/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Heart Disease",
+                                                "url": "/science-and-medicine/disease-areas-and-medicines/heart-disease/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Infectious Diseases",
+                                                "url": "/science-and-medicine/disease-areas-and-medicines/infectious-diseases/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Neurological Disorders",
+                                                "url": "/science-and-medicine/disease-areas-and-medicines/neurological-disorders/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Rare Diseases",
+                                                "url": "/science-and-medicine/disease-areas-and-medicines/rare-diseases/"
+                                            }                                                                                                                
+                                                                                                    ]
+                                
+                                                                                        
+                            
+                        },                                                                                {
+                                                    "title": "Centers &amp; Institutes",
+                            "url": "/science-and-medicine/centers-and-institutes/"
+                                                                                                                    ,
+                                "pages": [
+                                    {
+                                        "title": "Overview",
+                                        "url": "/science-and-medicine/centers-and-institutes/"
+                                    },
+                                                                                                                        {
+                                                                                            "title": "Center for HIV/AIDS Vaccine Immunology &amp; Immunogen Discovery",
+                                                "url": "/science-and-medicine/centers-and-institutes/center-for-hiv-aids-vaccine-immunology-and-immunogen-discovery/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Center for Metabolomics",
+                                                "url": "/science-and-medicine/centers-and-institutes/center-for-metabolomics/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Dorris Neuroscience Center",
+                                                "url": "/science-and-medicine/centers-and-institutes/dorris-neuroscience-center/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "IAVI&apos;s Neutralizing Antibody Center at Scripps Research",
+                                                "url": "/science-and-medicine/centers-and-institutes/iavis-neutralizing-antibody-center/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Pearson Center for Alcoholism and Addiction Research",
+                                                "url": "/science-and-medicine/centers-and-institutes/pearson-center-for-alcohol-and-addiction-research/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Skaggs Institute for Chemical Biology",
+                                                "url": "/science-and-medicine/centers-and-institutes/skaggs-institute-for-chemical-biology/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Worm Institute for Research and Medicine",
+                                                "url": "/science-and-medicine/centers-and-institutes/worm-institute-for-research-and-medicine/"
+                                            }                                                                                                                
+                                                                                                    ]
+                                
+                                                                                        
+                            
+                        },                                                                                {
+                                                    "title": "Cores &amp; Services",
+                            "url": "/science-and-medicine/cores-and-services/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Calibr",
+                            "url": "/science-and-medicine/calibr/"
+                                                                                                                    ,
+                                "pages": [
+                                    {
+                                        "title": "Overview",
+                                        "url": "/science-and-medicine/calibr/"
+                                    },
+                                                                                                                        {
+                                                                                            "title": "About",
+                                                "url": "/science-and-medicine/calibr/about/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Leadership",
+                                                "url": "/science-and-medicine/calibr/leadership/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Major Initiatives",
+                                                "url": "/science-and-medicine/calibr/major-initiatives/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "News &amp; Publications",
+                                                "url": "/science-and-medicine/calibr/news-and-publications/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Careers",
+                                                "url": "/science-and-medicine/calibr/careers/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Contact",
+                                                "url": "/science-and-medicine/calibr/contact/"
+                                            }                                                                                                                
+                                                                                                    ]
+                                
+                                                                                        
+                            
+                        },                                                                                {
+                                                    "title": "Translational Institute",
+                            "url": "/science-and-medicine/translational-institute/"
+                                                                                                                    ,
+                                "pages": [
+                                    {
+                                        "title": "Overview",
+                                        "url": "/science-and-medicine/translational-institute/"
+                                    },
+                                                                                                                        {
+                                                                                            "title": "About",
+                                                "url": "/science-and-medicine/translational-institute/about/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Translational Research",
+                                                "url": "/science-and-medicine/translational-institute/translational-research/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Community Engagement",
+                                                "url": "/science-and-medicine/translational-institute/community-engagement/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Education &amp; Training",
+                                                "url": "/science-and-medicine/translational-institute/education-and-training/"
+                                            }                                                                                                                
+                                                                                                    ]
+                                
+                                                                                        
+                            
+                        }                                                    
+                                        ]
+            
+                             
+        
+                },                    {
+                            "title": "Education &amp; Training",
+            "url": "/education-and-training/"
+                                                            ,
+            "pages": [
+                        {
+                            "title": "Education &amp; Training Website",
+                            "url": "/education-and-training/"
+                        },
+                                                            {
+                                                    "title": "About",
+                            "url": "/education-and-training/about/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Skaggs Graduate School",
+                            "url": "/education-and-training/graduate/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Postdoctoral",
+                            "url": "/education-and-training/postdoctoral/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Undergraduate",
+                            "url": "/education-and-training/undergraduate/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "K-12 Outreach",
+                            "url": "/education-and-training/k-12-outreach/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Alumni",
+                            "url": "/education-and-training/alumni/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Accreditation",
+                            "url": "/education-and-training/accreditation/"
+                                                                                                                
+                            
+                        }                                                    
+                                        ]
+            
+                             
+        
+                },                    {
+                            "title": "Technology Development",
+            "url": "/technology-development/"
+                                                            ,
+            "pages": [
+                        {
+                            "title": "Overview",
+                            "url": "/technology-development/"
+                        },
+                                                            {
+                                                    "title": "About OTD",
+                            "url": "/technology-development/about-otd/"
+                                                                                                                    ,
+                                "pages": [
+                                    {
+                                        "title": "Overview",
+                                        "url": "/technology-development/about-otd/"
+                                    },
+                                                                                                                        {
+                                                                                            "title": "What We Do",
+                                                "url": "/technology-development/about-otd/what-we-do/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Who We Are",
+                                                "url": "/technology-development/about-otd/who-we-are/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Get Involved",
+                                                "url": "/technology-development/about-otd/get-involved/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Contact Us",
+                                                "url": "/technology-development/about-otd/contact-us/"
+                                            }                                                                                                                
+                                                                                                    ]
+                                
+                                                                                        
+                            
+                        },                                                                                {
+                                                    "title": "Technologies",
+                            "url": "/technology-development/technologies/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Initiatives",
+                            "url": "/technology-development/initiatives/"
+                                                                                                                    ,
+                                "pages": [
+                                    {
+                                        "title": "Overview",
+                                        "url": "/technology-development/initiatives/"
+                                    },
+                                                                                                                        {
+                                                                                            "title": "Calibr",
+                                                "url": "/technology-development/initiatives/calibr/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "PRIMER",
+                                                "url": "/technology-development/initiatives/primer/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Alliances &amp; New Ventures",
+                                                "url": "/technology-development/initiatives/alliances-and-new-ventures/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Spin-Off Companies",
+                                                "url": "/technology-development/initiatives/spin-off-companies/"
+                                            }                                                                                                                
+                                                                                                    ]
+                                
+                                                                                        
+                            
+                        },                                                                                {
+                                                    "title": "Inventors",
+                            "url": "/technology-development/inventors/"
+                                                                                                                
+                            
+                        }                                                    
+                                        ]
+            
+                             
+        
+                },                    {
+                            "title": "Faculty",
+            "url": "/faculty/"
+                                 
+        
+                },                    {
+                            "title": "Support Us",
+            "url": "/support-us/"
+                                                            ,
+            "pages": [
+                        {
+                            "title": "Overview",
+                            "url": "/support-us/"
+                        },
+                                                            {
+                                                    "title": "Give Now",
+                            "url": "/support-us/give-now/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Why Give",
+                            "url": "/support-us/why-give/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Giving Opportunities",
+                            "url": "/support-us/giving-opportunities/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Ways To Give",
+                            "url": "/support-us/ways-to-give/"
+                                                                                                                    ,
+                                "pages": [
+                                    {
+                                        "title": "Overview",
+                                        "url": "/support-us/ways-to-give/"
+                                    },
+                                                                                                                        {
+                                                                                            "title": "Gifts That Provide Income",
+                                                "url": "/support-us/ways-to-give/gifts-that-provide-income/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Gifts That Protect Assets",
+                                                "url": "/support-us/ways-to-give/gifts-that-protect-assets/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Gifts That Maximize Your Estate",
+                                                "url": "/support-us/ways-to-give/gifts-that-maximize-your-estate/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Scripps Research Giving Guide",
+                                                "url": "/support-us/ways-to-give/giving-guide/"
+                                            }                                                                                                                
+                                                                                                    ]
+                                
+                                                                                        
+                            
+                        },                                                                                {
+                                                    "title": "Your Impact",
+                            "url": "/support-us/your-impact/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Contact",
+                            "url": "/support-us/contact/"
+                                                                                                                
+                            
+                        }                                                    
+                                        ]
+            
+                             
+        
+                },                    {
+                            "title": "News &amp; Events",
+            "url": "/news-and-events/"
+                                                            ,
+            "pages": [
+                        {
+                            "title": "News",
+                            "url": "/news-and-events/"
+                        },
+                                                            {
+                                                    "title": "Events Calendar",
+                            "url": "/news-and-events/events-calendar/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Blog",
+                            "url": "/news-and-events/blog/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Connect With Us",
+                            "url": "/news-and-events/connect-with-us/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Press Room",
+                            "url": "/news-and-events/press-room/"
+                                                                                                                
+                            
+                        },                                                                                {
+                                                    "title": "Host an Event",
+                            "url": "/news-and-events/host-an-event/"
+                                                                                                                    ,
+                                "pages": [
+                                    {
+                                        "title": "Overview",
+                                        "url": "/news-and-events/host-an-event/"
+                                    },
+                                                                                                                        {
+                                                                                            "title": "Reserving the Auditorium",
+                                                "url": "/news-and-events/host-an-event/reserving-the-auditorium/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Auditorium Rules of Use",
+                                                "url": "/news-and-events/host-an-event/auditorium-rules-of-use/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "FAQs",
+                                                "url": "/news-and-events/host-an-event/frequently-asked-questions/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "A Noted Architectural Complex",
+                                                "url": "/news-and-events/host-an-event/a-noted-architectural-complex/"
+                                            },                                                                                                                                                                {
+                                                                                            "title": "Contact Information",
+                                                "url": "/news-and-events/host-an-event/contact-information/"
+                                            }                                                                                                                
+                                                                                                    ]
+                                
+                                                                                        
+                            
+                        }                                                    
+                                        ]
+            
+                             
+        
+                }        ]
+
+ '></panels></header>
+ 
+    <div class="text-center print-only print-bg print-logo">
+        <img src="/_files/images/scripps-logo_black.png" />
+        <hr />
+    </div>
+    
+    
+<!--
+      move this back to line 5 after demo
+    <announcement slot="announcement"><b>EMERGENCY ALERT:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae ipsum a tortor venenatis vehicula at nec sem</announcement>
+-->
+<!-- </header>  -->
+
+			<section class="page -front-page">
+				
+    <slides :slides='[
+                    {
+                "image": "_files/images/heros/home/homepage-slider-5-lg.jpg"
+                            },                    {
+                "image": "_files/images/heros/home/homepage-slider-1-lg.jpg"
+                            },                    {
+                "image": "_files/images/heros/home/homepage-slider-2-lg.jpg"
+                            },                    {
+                "image": "_files/images/heros/home/homepage-slider-3-lg.jpg"
+                            },                    {
+                "image": "_files/images/heros/home/homepage-slider-4-lg.jpg"
+                            }                ]'></slides>
+
+				<!-- Emergency Alert System -->
+				<span id="emergencyAlertAnnouncement" style="display: none;">
+					<a class="announcement text-center" data-v-fbe2c20e="" href="#" style="cursor: default; background-color: #fa0006;">
+						<span id="emergencyAlertMessage"></span>
+						<button class="close-button" data-v-fbe2c20e="" onclick="hideEmergencyAlert()" type="button">
+							<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-x" data-v-fbe2c20e="" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+								<line data-v-fbe2c20e="" x1="18" x2="6" y1="6" y2="18"/>
+								<line data-v-fbe2c20e="" x1="6" x2="18" y1="6" y2="18"/>
+							</svg>
+						</button>
+					</a>
+				</span>
+				<img class="img-responsive" src="_files/images/spectrum_thin.jpg"/>
+				 
+    <main>
+
+				<div class="container introduction">
+					<div class="text-center" style="margin-top:-1rem; margin-bottom: 1rem;">
+						 <a class="scroll-down" style="height:30px; width:30px;" href="javascript:void(0);" @click.prevent="scroll({ to: 'section.-gray-pattern-2', offset: headerHeight });"><chevron-down-icon></chevron-down-icon></a> 
+					</div>
+					<div class="row">
+						
+<div class="col-md-8">
+    <p>Scripps Research advances scientific understanding, educates the scientists of tomorrow and impacts human health across the globe. We are science changing life.</p>
+</div>
+<div class="col-md-4 text-center">
+    <selectloop :items='[
+                                                                                            { name: "Donate", value: "//give.scripps.edu", target: "_blank" }
+                        ,                                                                                            
+                { name: "Subscribe", value: "https://signup.e2ma.net/signup/1879047/1890109", target: "_blank" }                
+                                    ]'></selectloop>
+</div>
+
+					</div>
+				</div>
+				
+ </main>
+ 
+				<section class="-gray-pattern-2">
+					
+<div class="container introduction">
+   <data-fetcher api-url="_files/json/homepage-query-results.json" :delay="1000" :initial-data="{ featured: [], all: [] }">
+        <cards  slot-scope="props"
+            ref="homePageCards"
+            :filter-overrides="['Education & Training', 'News', 'Research & Discoveries']"
+            :show-filters="!props.fetching && !props.error"
+            show-load-more
+            :max-columns="3"
+            @on-click-filter="$refs.homePageCards.toggleFilter($event);"
+            :mode="mode"
+            :items="props.data"
+            watch-items-for-updates
+            reset-load-count-on-update></cards>
+        </cards>
+    </data-fetcher>
+</div>
+
+				</section>
+			</section>
+			<footer class="no-print">
+				
+				
+<sendmail v-if="globalSendmailModalActive"
+          api-url="_files/web-services/mail_request.php" 
+          :header-height="headerHeight"
+          :recipient="globalSendmailRecipient"
+          :identifier-key="globalSendmailIdentifierKey"
+          :name-key="globalSendmailNameKey"
+          :modal-active.sync="globalSendmailModalActive"></sendmail>
+
+				                
+<subscribe-newsletter v-if="globalNewsletterSubscriptionModalActive"
+                      api-url="_files/web-services/subscription_request.php" 
+                      :header-height="headerHeight"
+                      endeavor-label="Endeavor"
+                      news-and-views-label="Monthly e-newsletter"
+                      for-modal
+                      :modal-active.sync="globalNewsletterSubscriptionModalActive">
+                
+    <div slot="endeavor-description">
+        <p><span>Endeavor, our institute magazine, is published three times a year and shares the stories behind our groundbreaking science. Subscriptions are free.</span></p>
+    </div>
+    <div slot="news-and-views-description">
+        <p><span>Don&#8217;t miss a eureka moment! Get the latest research and event updates in our monthly e-newsletter.</span></p>
+    </div>
+</subscribe-newsletter>
+
+				<div class="container">
+<div class="row">
+<div class="col-md-6">
+<ul class="list list-col-2">
+<li><a href="https://jobs.scripps.edu" rel="noopener" target="_blank">Careers</a></li>
+<li><a href="about/campus-resources/index.html">Campus Resources</a></li>
+<li><a href="campus-safety/index.html">Campus Safety</a></li>
+<li><a href="about/campus-resources/international-services-office/index.html">International Services Office</a></li>
+<li><a href="risk-administration/index.html">Risk Administration</a></li>
+<li><a href="faculty/faculty-recruitment/index.html">Faculty Recruitment</a></li>
+<li><a href="title-IX/index.html">Title IX</a></li>
+<li><a href="contact/index.html">Contact</a></li>
+<li><a href="procurement/index.html">Procurement</a></li>
+<li><a href="/intranet" rel="noopener" target="_blank">Intranet</a></li>
+</ul>
+</div>
+<div class="col-md-6">
+<div class="row">
+<div class="col-xs-6">
+<h6>California</h6>
+<address>10550 North Torrey Pines Road <br/> La Jolla, CA 92037 <br/> (858) 784-1000</address></div>
+<div class="col-xs-6">
+<h6>Florida</h6>
+<address>130 Scripps Way <br/> Jupiter, FL 33458 <br/> (561) 228-2000</address></div>
+</div>
+</div>
+</div>
+<hr/>
+<div class="row">
+<div class="col-sm-4 social-icons">
+            <a href="https://www.facebook.com/ScrippsResearchInstitute" target="_blank"><facebook-icon></facebook-icon></a>
+            <a href="https://twitter.com/scrippsresearch" target="_blank"><twitter-icon></twitter-icon></a>
+            <a href="https://www.linkedin.com/company/the-scripps-research-institute" target="_blank"><linkedin-icon></linkedin-icon></a>
+            <a href="https://www.youtube.com/user/ScrippsResearch" target="_blank"><youtube-icon></youtube-icon></a>
+            <a href="https://www.instagram.com/scrippsresearch/" target="_blank"><instagram-icon></instagram-icon></a></div>
+<div class="col-sm-8 copyright">
+<p>Copyright @ 2020 The Scripps Research Institute. All Rights Reserved. <a href="terms-of-use/index.html">Terms of Use</a></p>
+</div>
+</div>
+</div>
+			</footer>
+		</div>
+		<!-- end vue #app -->
+		<!-- <script async src='//www.google-analytics.com/analytics.js'></script> -->
+
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.findIndex,Array.prototype.includes,Object.values"></script>
+        <script src="_files/js/app.js?v1.3"></script>
+    
+<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PXFLCL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PXFLCL');</script>
+<!-- Google Tag Manager -->
+	</body>
+</html>

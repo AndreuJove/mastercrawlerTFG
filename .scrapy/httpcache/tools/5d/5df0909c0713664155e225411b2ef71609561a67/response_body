@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="it_IT">
+    <meta charset="UTF-8">
+    <title>APTANI</title>
+
+    <!-- jQuery e jQuery UI per semplificare il JavaScript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+
+    <script src="http://malsup.github.com/chili-1.7.pack.js"></script>
+    <script src="http://malsup.github.io/jquery.blockUI.js"></script>
+
+    <!-- Customs Imports -->
+    <script type="text/javascript" src="js/functions.js"></script>
+
+
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/ripples.min.css" rel="stylesheet">
+    <link href="bootstrap/css/material-wfont.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap_material.css" >
+
+</head>
+<body>
+<div class="navbar navbar-primary">
+    <div id="navbar-header">
+    </div>
+                <ul class="nav navbar-nav" style="font-family:arial;">
+            <li class="active"><a href="index.php"><font color="#6f6f6f"><b>HOME</b></font></a></li>
+            <li><a href="downloads.php"><font color="#6f6f6f"><b>DOWNLOADS</b></font></a></li>
+            <li><a href="help.php"><font color="#6f6f6f"><b>APTANI help</b></font></a></li>
+	    <li><a href="help_square.php"><font color="#6f6f6f"><b>APTANI<sup>2</sup> help</b></font></a></li>
+            <li><a href="contacts.php"><font color="#6f6f6f"><b>CONTACT</b></font></a></li>
+        </ul>
+        </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+	<img src="http://www.unimore.it/_img/Sigillo2015.svg" alt="Sigillo di Ateneo" class="fade-in" width="343" height="125" style="padding-top: 10px;">
+        <img src="/BicciatoLab.png" class="fade-in" width="270" height="35" style="padding-left: 20px;">
+    </div>
+</div>
+        <div id="form_content" style="backgroung-color:white;">
+            <div id = "selection_container_long">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title"><strong><font size="5">Computational tools for aptamer selection through sequence-structure analysis</font></strong></h2>
+                    </div>
+                    <div class="panel-body justify">
+                        <h3 "text-primary"><font color="#6f6f6f"><b>Generalities</b></font></h3>
+                        <p align="justify">
+		Aptamers are small, single-stranded DNA or RNA nucleotide sequences (&lt;100 residues) that recognize their ligands with an affinity equal or superior to antibodies. 
+		These small molecules are <i>not immunogenic</i>, have a <i>high capacity to penetrate tissues</i> and can be <i>easily modified to regulate their half-life or conjugated with drugs</i>. 
+		Aptamers are selected in vitro through the Systematic Evolution of Ligands by Exponential Enrichment (SELEX) procedure. 
+		SELEX and HT-SELEX (i.e., SELEX combined with high-throughput sequencing) are iterative processes that enrich DNA and RNA aptamer libraries with sequences characterized by 
+		high affinity and selectivity toward a target ligand. Historically, a SELEX experiment required several rounds of selection (&gt;15) thus increasing a variety of intrinsic pitfalls.
+		In recent years, the advent of high-throughput sequencing technologies revolutionized the SELEX technique, drastically reducing the number of cycles, thus improving performances.</br>
+		Lead aptamers are commonly selected from SELEX data using computational methods that consider the relative sequence abundance (frequency) at the various cycles of the SELEX enrichment. 
+		However, the ability of aptamers to recognize and bind their cognate partners depends not only on their abundance, but also on unique three-dimensional structures 
+		formed by the folding of the aptamer sequences into various secondary structures (as hairpin, loop, bulge, and G-quadruplex). 
+		The structural properties and motifs predicted in these sequences may be exploited in computational tools to select leading aptamers that are more likely to interact with a ligand.</br>
+		Here, we present <b>APTANI</b> and <b>APTANI<sup>2</sup></b>, two methods for selecting potentially relevant aptamers through a sequence-structure analysis. 
+		Both tools contain modules to predict specific secondary structures in each selection round and to rank aptamers by motifs embedded in their predicted structures.
+                        </p>
+                        <div id="columns">
+                                <div class="column left">
+                                    <h3 class="text-primary"><font color="#6f6f6f"><b>APTANI</b></font></h3>
+                                    <p align="justify">
+	<b>APTANI</b> consists of four major steps. The <b>first step</b> calculates the frequencies of the aptamer sequences produced by the SELEX process. 
+	Given the input file, APTANI calculates the frequency of each individual aptamer sequence by dividing the number of occurrences of each sequence by the total number of analyzed sequences. 
+	Frequency counts can be quantified either using the whole aptamer sequence or only its variable region, e.g., to count only those sequences that change during the SELEX process. 
+	Setting a threshold on the frequency counts, the pool of original aptamers can be filtered to select only high frequent aptamers for the further steps. 
+	In the <b>second step</b>, APTANI predicts the secondary structure of each aptamer that passes the frequency filter, and extracts all motifs represented in these structures. 
+	As secondary structures, we consider four loop structures: hairpins, bulge (either right or left) and intra-strands. 
+	By default, this step is performed on the whole aptamer sequence, but the user can choose to investigate only the variable region. 
+	In this case, the variable region will be merged with the flanking constant regions to include motifs that are across that specific portion. 
+	In the <b>third step</b>, we assume that if a motif is shared by a large fraction of the sampled aptamer pool, it is highly probable that it will emerge as highly populated, 
+	even if we do not use the entire pool of aptamer sequences. Thus, a number of aptamers and their secondary structure motifs are randomly picked from the output of 
+	the previous step and their sequences are aligned to each other to obtain a consensus sequence. The step is iteratively repeated for a number of times defined by the user. 
+	In the <b>last step</b>, each consensus sequence generated in the previous step is matched with the relative loop structure pool. 
+	Specifically, each nucleotide of the consensus sequence is matched with the respective nucleotide of the pool sequence to calculate an identity matching score based 
+	on an identity/non-identity scoring system (with a fixed gap penalty of -0.5). Finally, APTANI returns an output table, containing all results of the 
+	various steps and a clustered tree of sequences that passed the frequency filter.</br>
+	</br>
+	<b>Caroli J, Taccioli C, De La Fuente A, Serafini P, Bicciato S.</b> APTANI: a computational tool to select aptamers through sequence-structure motif analysis of HT-SELEX data. 
+	Bioinformatics. 2016 Jan 15;32(2):161-4</br>
+	</br>
+	<a href="downloads.php"><font color="red">APTANI Download</font></a></br>
+	<a href="help.php"><font color="red">APTANI Help and documentation</font></a>
+                                    </p>
+                                </div>
+                                <div class="column right">
+                                    <h3 class="text-primary"><font color="#6f6f6f"><b>APTANI<sup>2</sup></b></font></h3>
+                                    <p align="justofy">
+	<b>APTANI<sup>2</sup></b> builds on the evidence that sequence motifs with a significant binding potential are enriched at a given SELEX cycle and have an intrinsic high stability 
+	across the secondary structures of different aptamers. Therefore, in APTANI<sup>2</sup> potentially relevant aptamers are selected using a scoring function that integrates 
+	the frequency and the stability of each motif retrieved in any aptamer sequence. The core of APTANI<sup>2</sup> consists of three major steps: 
+	<b>step 1)</b> quantification of aptamer frequency; <b>step 2)</b> identification of motifs associated to secondary structures; and <b>step 3)</b> scoring of sequence motifs and aptamers.</br>
+	The <b>first step</b> calculates the relative frequency of each aptamer sequence produced by the SELEX process, as described in the original APTANI. 
+	In the <b>second step</b>, aptamers that pass the frequency filter are processed with RNASubopt to predict all possible secondary structures 
+	within a range of 3 Kcal/mol above the minimum free energy (MFE). 
+	Each predicted secondary structure is then investigated to retrieve all the associated hairpin, intra-strand, bulge (left and right), and G-quadruplex sequence motifs. 
+	In the <b>third step</b>, first each motif is characterized in terms of frequency and structural stability of the related secondary structure through a motif score (<i>MtfScore</i>) 
+	calculated using each motif frequency and relative stability (defined as the ratio between the median energy value of all secondary structures containing a given motif 
+	and the lowest Minimum Free Energy of all predicted secondary structures). Then, the distribution of the <i>MtfScore</i> values is used to define the top scoring motifs 
+	as those motifs with an MtfScore greater than e.g., the 99<sup>th</sup> percentile of the <i>MtfScore</i> distribution. 
+	Finally, each aptamer is ranked according to an aptamer score <i>AptScore</i> that quantifies, in each sequence, 
+	the normalized abundance of top scoring motifs given the total number of retrieved motifs.</br>
+	APTANI<sup>2</sup> comprises three additional post-analysis modules to inspect the evolution of aptamer enrichment along the SELEX process (<i>Evolution Analyzer</i>), 
+	to retrieve motifs in aptamer sequences (<i>Motif Fetcher</i>), and to visualize their predicted folding and motif structure (<i>grAPhTANI</i>). 
+	Outputs are in the form of tables and graphical representations to facilitate the downstream interpretation of results. 
+	In addition to the command line scripts, the tool is accessible through a graphic user interface (GUI) that simplifies the input selection and parameter setting 
+	through pre-compiled fields in a point-and-click environment.</br>
+        <a href="downloads.php"><font color="red">APTANI<sup>2</sup> Download</font></a></br>
+        <a href="help_square.php"><font color="red">APTANI<sup>2</sup> Help and documentation</font></a>
+                                    </p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67990669-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+
+<div id="footer">
+	This site is optimized for a resolution of 1680*1050 or above.
+</div>
+
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/ripples.min.js"></script>
+    <script src="bootstrap/js/material.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $.material.init();
+        });
+
+        $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+    </script>
+</body>
+</html>

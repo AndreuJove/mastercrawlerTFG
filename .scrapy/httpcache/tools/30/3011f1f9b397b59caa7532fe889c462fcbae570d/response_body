@@ -1,0 +1,316 @@
+ 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>APL version 1.1 |
+
+ Hussman Institute for Human Genomics at Miller School of Medicine</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="     
+                   ...
+
+             
+
+" />
+<link rel="shortcut icon" href="/images/favicon.png" /> 
+<link rel="stylesheet" type="text/css"  href="http://identity.med.miami.edu/styles/reset.css" media="screen" />
+<link rel="stylesheet" type="text/css"  href="http://identity.med.miami.edu/styles/styles.css" media="screen" />
+<link rel="stylesheet" type="text/css"  href="http://identity.med.miami.edu/styles/print.css" media="print" />
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css"  href="http://identity.med.miami.edu/styles/lightbox.css" media="screen" />
+<script src="http://identity.med.miami.edu/js/lightbox.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".photo-gallery a").lightBox();					   
+		});
+	</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4955829-25']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- reCaptcha2 script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+
+<body>
+<div id="all-wrapper">
+    
+    <div id="top-wrapper">
+   <div id="header">
+		<div id="top-quicklinks">
+			<ul>
+				<li><a href="http://uhealthsystem.com" target="_blank">UHealth</a></li>
+				<li><a href="http://med.miami.edu" target="_blank">Miller School</a></li>
+			</ul>
+		</div>  <!--end top-quicklinks-->
+		
+	<div id="logo-container">
+	        <a href="http://www.uhealthsystem.com/" title="University of Miami Health System" id="uhealth-logo">University of Miami Health System</a>
+		        <span id="logo-border"></span>
+			<a href="http://med.miami.edu" title="University of Miami Miller School of Medicine" id="miller-logo">University of Miami Miller School of Medicine</a>	
+	</div><!--end logo container-->
+	
+
+
+<div id="department-header">	
+<h1><a href="/" title="Hussman Institute for Human Genomics">Hussman Institute for Human Genomics</a></h1>
+	</div><!--end department-header-->
+
+	<div id="top-bar">
+		<div id="search">
+<form method="get" action="/search/results" id="search_form" name="narrow_search">
+    <input type="hidden" name="start" value="0" />
+    <input type="hidden" name="pagesize" value="10" />
+    <input type="hidden" name="filter" value="only_department" />
+    <input type="hidden" name="searchurl" id="searchurl" value="" />
+			<input maxlength="100" name="query" id="term" size="18" title="Search" value="Search" onclick="this.value=''"  />
+			<input name="image" id="searchbutton" type="image" alt="Go" />
+</form>
+		</div>
+		
+		<ul class="nav">
+                         
+                                   <li><a href="http://hihg.med.miami.edu/contact-us">Contact Us</a></li>
+                         
+                                   <li><a href="/make-a-gift">Make A Gift</a></li>
+                         
+                                   <li><a href="http://www.hihg.med.miami.edu/our-researchers">Faculty</a></li>
+                                                     
+		</ul>
+	</div><!--end top-bar-->
+	
+</div><!--end header-->
+<div id="main-container" style="background:none;">
+<div id="content" style="width:100%;">
+<div id="post-container" style="width:100%;">
+
+
+        <div class="post">
+        
+           <h2>
+
+
+: <a href="http://hihg.med.miami.edu/software-download/apl-version-1.1">APL version 1.1</a>
+
+</h2>
+           <h3>APL version 1.1</h3>
+ 
+        
+            
+
+
+<script language="javascript1.1">
+
+function check_email(e) {
+	ok = "1234567890qwertyuiop[]asdfghjklzxcvbnm.@-_QWERTYUIOPASDFGHJKLZXCVBNM";
+
+	for(i=0; i < e.length ;i++){
+		if(ok.indexOf(e.charAt(i))<0){ 
+			return (false);
+		}	
+	} 
+
+	if (document.images) {
+		re = /(@.*@)|(\.\.)|(^\.)|(^@)|(@$)|(\.$)|(@\.)/;
+		re_two = /^.+\@(\[?)[a-zA-Z0-9\-\.]+\.([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+		if (!e.match(re) && e.match(re_two)) {
+		return (-1);		
+		} 
+	}
+}
+
+function ltrim(str) { 
+	for(var k = 0; k < str.length && isWhitespace(str.charAt(k)); k++);
+	return str.substring(k, str.length);
+}
+function rtrim(str) {
+	for(var j=str.length-1; j>=0 && isWhitespace(str.charAt(j)) ; j--) ;
+	return str.substring(0,j+1);
+}
+function trim(str) {
+	return ltrim(rtrim(str));
+}
+function isWhitespace(charToCheck) {
+	var whitespaceChars = " \t\n\r\f";
+	return (whitespaceChars.indexOf(charToCheck) != -1);
+}
+
+function verify_input(){
+	name = trim(document.forms['download_data'].name.value);
+	email = trim(document.forms['download_data'].email.value);
+	institution = trim(document.forms['download_data'].institution.value);
+	department = trim(document.forms['download_data'].department.value);
+	phone = trim(document.forms['download_data'].phone.value);
+	app = document.forms['download_data'].app.value;
+
+	if (name == ''){
+		alert('Please enter your name');
+		return false;
+	}
+	if (email == ''){
+		alert('Please enter your email');
+		return false;
+	}
+
+	if (!check_email(email)){
+		alert('Your email is not valid');
+		return false;
+	}
+	/*
+	if (institution == ''){
+		alert('Please enter the Company or Institution you belong to');
+		return false;
+	}
+	if (department == ''){
+		alert('Please enter the department you belong to');
+		return false;
+	}
+	if (phone == ''){
+		alert('Please enter your phone number');
+		return false;
+	}
+	*/
+	if (app == ''){
+		alert('You have not selected an application to download, please return to the previous page');
+		return false;
+	}
+	return true;
+}
+</script>
+
+
+
+<P><STRONG>APL version 1.1</STRONG><BR>APL provides a novel test for association in the presence of linkage using general pedigree data. <BR><EM>For single markers: Martin ER, Bass MP, Hauser ER, Kaplan NL. (2003) Accounting for linkage in family-based tests of association with missing parental genotypes. American Journal of Human Genetics.73:1016-1026.<BR><BR>For haplotypes: Chung R-H, Hauser ER, Martin ER. (2006) The APL test: extension to general nuclear families and haplotypes and the examination of its robustness. Human Heredity. 61:189-199.</EM><BR><BR></P>
+<form name="download_data" action="" method="POST" onSubmit="return verify_input();">
+
+<table  border="0" cellpadding="0" cellspacing="4"   align="center" style="width:auto;  ">
+    <tr>
+		<td width="125">
+		   <p align="right"><font face="Verdana, Helvetica" size="2">Name<font color="red">*</font>:</font></p>
+		</td>
+		<td width="175"><input type="text" name="name" size="20" maxlength="75"></td>
+    </tr>
+	<tr>
+		<td width="125">
+		   <p align="right"><font face="Verdana, Helvetica" size="2">Email<font color="red">*</font>:</font></p>
+		</td>
+	<td width="175"><input type="text" name="email" size="20" maxlength="75"></td>
+    </tr>
+
+	<tr>
+		<td width="125">
+			<p align="right"><font face="Verdana, Helvetica" size="2">Company/Institution:</font></p>
+		</td>
+			<td width="175"><input type="text" name="institution" size="20" maxlength="75"></td>
+	</tr>
+
+	<tr>
+		<td width="125">
+			<p align="right"><font face="Verdana, Helvetica" size="2">Department:</font></p>
+		</td>
+			<td width="175"><input type="text" name="department" size="20" maxlength="75"></td>
+	</tr>
+
+	<tr>
+		<td width="125">
+			<p align="right"><font face="Verdana, Helvetica" size="2">Phone:</font></p>
+		</td>
+			<td width="175"><input type="text" name="phone" size="20" maxlength="75"></td>
+	</tr>
+
+	<tr>
+		<td width="125">
+			<p align="right"><font face="Verdana, Helvetica" size="2">Version:</font></p>
+		</td>
+			<td width="175">
+			<SELECT NAME="version">
+				<OPTION VALUE="1">Source Code - APL.tar.gz</option><OPTION VALUE="2">Win32 - apl-windows.zip</option>			</SELECT>			
+			</td>
+	</tr>
+	
+	
+	<tr>
+	<td></td>
+	<td>
+	<input type="hidden" name="app" value="APL">
+	<p class="text"></p>
+	<p class="text" align="left">
+	<input type="submit" name="Submit_It" value="Download" ><br>
+	</td></tr>
+
+	<tr>
+	<td><font color="red">* Required fields</font></td>
+	<td></td>
+	</tr>
+
+</table>
+	</form>
+
+
+            
+        </div>
+
+
+
+</div>
+</div>
+</div><!--end main-container-->
+	    <div class="clear"></div>
+
+	</div><!--end top-wrapper-->
+
+    <div id="bottom-wrapper">
+    
+	    <div id="footer">
+   <span id="bottom-logo"><span></span>University of Miami<br />Health System</span>
+   <div class="block">
+		<h4>University of Miami Health System <span class="invisible">Additional Information</span></h4>
+			<ul class="first">
+				<li><a href="http://www.uhealthsystem.com/about_us.asp" target="_blank">About Us</a></li>
+				<li><a href="http://www.uhealthsystem.com/community.asp" target="_blank">Community</a></li>
+				<li><a href="http://www.uhealthsystem.com/patient_services.asp">Patient Services</a></li>
+				<li><a href="http://twitter.com/umiamimedicine" target="_blank">Twitter</a></li> 
+				<li><a href="http://www.uhealthsystem.com/locations.asp" target="_blank">Locations</a></li>
+				<li><a href="http://www.facebook.com/pages/UMiamiMedicine/110761415623425" target="_blank">Facebook</a></li> 
+				<li><a href="http://www.uhealthsystem.com/careers.asp" target="_blank">Careers</a></li> 
+				<li><a href="http://www.youtube.com/umiamimedicine" target="_blank">YouTube</a></li> 
+			</ul>
+	</div>
+	
+   <div class="block" id="legal">
+	<h4>Legal</h4>
+		<ul>
+			<li><a href="http://www.uhealthsystem.com/miscellaneous/Medical_Disclaimer.asp" target="_blank">Medical Disclaimer</a></li>
+			<li><a href="http://www.uhealthsystem.com/miscellaneous/Terms_of_Use.asp" target="_blank">Terms of Use</a></li> 
+			<li><a href="http://www.uhealthsystem.com/miscellaneous/Privacy_Statment.asp">Privacy Statement</a></li> 
+		</ul>
+		<p><a href="http://www.uhealthsystem.com/copyright.asp">Copyright &#169;  2020<br />
+			University of Miami,<br />
+			All Rights Reserved</a></p>
+    </div> </div>
+        
+    </div><!-- end bottom wrapper-->
+
+
+</div><!--end all wrapper -->
+
+</body>
+</html>
+

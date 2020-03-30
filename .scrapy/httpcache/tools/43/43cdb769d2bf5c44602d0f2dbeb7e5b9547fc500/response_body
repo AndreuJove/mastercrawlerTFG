@@ -1,0 +1,150 @@
+<html>
+<head><base href="http://webs.iiitd.edu.in/raghava/algpred/">
+<title>Algpred: Prediction of Allergenic Proteins and mapping of IgE Epitopes</title>
+<meta name="description" content="Allergenic protein  prediction server.">
+<meta name="keywords" content="Allergens, IgE epitope, AlgPred, genetically engineered foods, WHO, FAO">
+<meta name="author" content="Suipto saha, Research Fellow, BIC, IMTECH; G.P.S Raghava, Coordinator and Scientist, BIC, IMTECH">
+
+</head>
+
+<body bgcolor="#ffffff">
+
+<!------------main table--------------->
+<table  border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table>
+<td width="100%" bgcolor="#99CCFF">
+</td></table>
+</td></tr>
+<tr>
+<!----------left table -------------------->
+<td width="20%" align="left" valign="top">
+<table  border="0" cellpadding="0" cellspacing="0" width="90%">
+<tr>
+<td width="100%"  bgcolor="#99CCFF" valign="top">
+<br>
+		<p><font size="6" color="FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Menu</b></font><br><br>
+					
+                        <a href="index.html"><img border="0" width="102%" src="home.jpg"></a><br><br>
+                        <a href="submission.html"><img border="0" width="102%" src="submission.jpg"></a><br><br>
+                        <a href="help.html"><img border="0" width="102%" src="help.jpg"></a><br><br>
+                        <a href="algo.html"><img border="0" width="102%" src="algo.jpg"></a><br><br>
+                        <a href="suppl.html"><img border="0" width="102%" src="suppl.jpg"></a><br><br>
+                        <a href="links.html"><img border="0" width="102%" src="links.jpg"></font></a><br><br>
+                        <a href="ack.html"><img border="0" width="102%" src="ack.jpg"></font></a><br><br>
+
+                        <a href="devl.html"><img border="0" width="102%" src="devl.jpg"></a><br><br>
+                        <a href="contact.html"><img border="0" width="102%" src="contact.jpg"></a>
+</p><br>
+	</td>
+</tr>
+
+</table>
+
+</td> <!------close for left td-------->
+
+<!-----------centre table-------------------->
+
+<td width="75%" align="center" valign="top">
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tr>
+<td align="center">
+    <img border="0" width="100%" src="fig1.3.jpg">
+</td>
+<td> <p>
+
+</p>
+</td>
+</tr>
+
+
+<!-----------inserting table------------------------------------------>
+
+<TABLE cellSpacing=10 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+<hr>
+
+<p>
+<b>
+
+<h3>Introduction    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <a href="http://bioinformatics.uams.edu/mirror/algpred"><b>Mirror site at UAMS</b></a></h3>
+The prediction of allergenic proteins is becoming very important in present time due to use of modified proteins in foods (genetically modified foods), therapeutics, bio-pharmaceuticals etc. World Health Organization (WHO) and Food and Agriculture Organization (FAO) realize the importance of prediction and proposed guidelines to assess the potential allergenicity of proteins. In past, number of approaches and methods has been developed to predict allergens; each has their own merits and demerits. In AlgPred a systematic attempt has been made to integrate various approaches in order to predict allergenic proteins with high accuracy.
+
+ <br>
+<hr>
+<br>
+
+
+The salient features of AlgPred server are,
+<ul>
+<li>Algpred allows prediction of allergens based on similarity of known epitope with any region of protein. 
+<li>The mapping of IgE epitope(s) feature of server allows user to locate the position of epitope in their protein.
+<li> Server search MEME/MAST allergen motifs using MAST and assign a protein allergen if it have any  motif.
+<li> Allows to predict allergens based on SVM modules using amino acid or dipeptide composition.
+<li>It facilitates BLAST search against 2890 allergen-representative peptides (ARPs) obtained from Bjorklund et al 2005 and assign a protein allergen if it have a BLAST hit..
+<li>Hybrid option of server allows to predict allergen using  combined approach (SVMc + IgE epitope + ARPs BLAST + MAST).
+</ul>
+
+<hr>
+<br>
+World Health Organization (WHO) and Food and Agriculture Organization (FAO) proposed guidelines to assess the potential allergenicity of protein are available from
+<a href="http://www.fao.org/es/ESN/food/pdf/allergygm.pdf."> http://www.fao.org/es/ESN/food/pdf/allergygm.pdf.</a>
+<hr>
+<b>Please cite following paper if you are using Algpred:</b><br>
+<font color='red'>Saha, S. and Raghava, G.P.S. &nbsp; (2006)&nbsp; AlgPred: prediction of allergenic proteins and mapping of IgE epitopes.&nbsp; Nucleic Acids Research, &nbsp;Volume 34,&nbsp;W202-W209. </font><br><br>
+</b>
+<b><font color='black'>Abstract: <br><a href="http://nar.oxfordjournals.org/cgi/content/abstract/34/suppl_2/W202?ijkey=FvK5uzLHi3Xvgdq&keytype=ref ">http://nar.oxfordjournals.org/cgi/content/abstract/34/suppl_2/W202?ijkey=FvK5uzLHi3Xvgdq&keytype=ref </a></b><br>
+</p></font>
+
+
+          </TR></TBODY></TABLE>
+
+
+
+<!---------------------upto this table------------------------------------>
+
+</tr>
+</td>
+</center>
+</div>
+
+
+<!-------------right line------------------------------------------------>
+<td width="5%" align="right" bgcolor="#99CCFF" border="0" cellpadding="0" cellspacing="0">
+
+</table> <!---------------centre table closed>
+</td> <!----------centre td closed--->
+</tr>
+</table> <!-----------main table closed----------->
+
+
+
+<!-- Do not remove this div -->
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="Center" valign="Center">
+<tr bgcolor="#99CCFF" height="40">
+<td><div align=left>&nbsp;<marquee BEHAVIOR=ALTERNATE SCROLLDELAY=500>
+<a href="http://webs.iiitd.edu.in/raghava"><b><font size="4" color="#FFFFFF">G.P.S. Raghava's Home page</a> | </font> 
+<a href="http://webs.iiitd.edu.in/bic"><font size="4" color="FFFFFF"> Bioinformatics Centre</a> | </font>
+<a href="http://webs.iiitd.edu.in"><font size="4" color="FFFFFF">Institute of Microbial Technology,India</a></font></marquee></b></font>
+
+</div><td>
+</tr>
+</table>
+
+
+<!-- End of footer div -->
+</body>
+</html>
+
+
+
+
+
+
+

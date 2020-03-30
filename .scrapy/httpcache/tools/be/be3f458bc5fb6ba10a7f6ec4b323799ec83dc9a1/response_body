@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+
+<html lang="en">
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="/peak-web/css/style.css"/>
+    <title>CisMols</title>
+  </head>
+
+
+  <body bgColor="#FFFFFF" class="plain">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+      <tr>
+<!-- Logo -->
+        <td width="115" height="111"><a href="/peak-web/index.jsp"><img src="/peak-web/images/cismols.jpg" border="0"></a></td>
+<!-- Caption -->
+        <td height="111" class="caption" width="100%"><h1 class="caption" align="center">CisMols</h1></td>
+      </tr>
+      <tr>
+<!-- Navigation -->
+         <td class="navigation" valign="top"><html lang="en">
+
+<body bgColor="#FFFFFF" class="plain">
+        <table border="0" class="navigation">
+          
+            <tr>
+              <td valign="middle" class="navigation"><img src="/peak-web/images/arrow_reversed.gif">&nbsp;<a href="/peak-web/protected/index.jsp">Login</a></td>
+            </tr>
+          
+            <tr>
+              <td valign="middle" class="navigation"><img src="/peak-web/images/arrow_reversed.gif">&nbsp;<a href="/peak-web/index.jsp">Home</a></td>
+            </tr>
+            <tr>
+              <td valign="middle" class="navigation"><img src="/peak-web/images/arrow_reversed.gif">&nbsp;<a href="http://info.cchmc.org/help/cismols/index.html">Help</a></td>
+            </tr>
+            <tr>
+              <td valign="middle" class="navigation"><img src="/peak-web/images/arrow_reversed.gif">&nbsp;<a href="/peak-web/disclaimer.jsp">Disclaimer</a></td>
+            </tr>
+          </table>
+</body>
+</td>
+<!-- Body -->
+        <td valign="top" width="100%">
+
+ 
+
+     <form action="/peak-web/SetDataSource" method="post" name="startForm">
+        <table border="0" cellpadding="10" width="100%">
+          <tr>
+            <td align="center"><h4>View Computationally identified <I>Cis</I>-regulatory modules, called CisMols, </BR>that occur in groups of Coexpressed or Related genes within their ortholog-pair evolutionarily conserved <I>cis</I>-regulatory regions.</h4></td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td align="center"> <U>Choose Data Source</U>:<BR><BR>
+            <input type="radio" name="ds_string" value = "trafac" CHECKED>Pipeline Genes
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="ds_string" value = "trafacProd">Manually Curated Genes
+            </td>
+          </tr>
+        </table>
+
+        <center>
+        <table class='button' border='0'><tr><td class='button'><a href="javascript:document.startForm.submit()">CisMols Analyzer</a></td></tr></table>
+        </center>
+      </form>
+          </td>
+      </tr>
+      <tr>
+        
+<html lang="en">
+
+  <body bgColor="#FFFFFF" class="plain">
+
+        <td class="navigation" valign="bottom" height="100%" align="center"></td>
+        <td valign="bottom" width="100%"><h5 align="left">&nbsp;Cismols 3.1.2.1963
+        <div align="left">&nbsp;Developed by the <a href="http://info.cchmc.org" target=_blank>Division of Pediatric Informatics</a>
+        <div align="left">&nbsp;Copyright &copy; 2002-2005 Cincinnati Children's Hospital Medical Center</div>
+        <div align="left">&nbsp;<a href="#" onClick="window.open('http://info.cchmc.org/terms/index.html','','width=650,height=550,menubar=no,scrollbars=yes,toolbar=no,resizable=no')">Terms of Use</a></div></h5></td>
+
+  </body>
+</html>
+
+      </tr>
+    </table>
+  </body>
+</html>
+
+

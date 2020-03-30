@@ -6,7 +6,7 @@ with open('tools.json', "r") as fp:
 urlToolList, idToolList, nameToolList = ([] for i in range(3))      
            
 tools = jsonData[1]['tools']
-lessTools = tools[:1500]
+lessTools = tools
 
 #print("Less tools has: {}".format(len(lessTools)))
 def getAllFromJson(toolsList):

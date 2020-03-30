@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /admin/exe</title>
+ </head>
+ <body>
+<pre>
+This directory contains Genome Browser and Blat application binaries built for standalone
+command-line use on various supported Linux and UNIX platforms. To determine which set of binaries
+to download, type "uname -a" on the command line to display your machine type. In most cases the
+usage statement for the application can be viewed by running the binary with no arguments.
+
+*Note about 'permission denied' error:
+In order for your computer to run a freshly downloaded utility, you will need to update the file
+system permissions to allow your operating system to run the program.
+To make utilities usable, turn on its 'executable' bit:
+$ chmod +x ./filePath
+$ ./filePath/utility_name
+See also: http://en.wikipedia.org/wiki/Chmod
+
+Some of these applications are able to connect to UCSC's public MySQL server. Such applications
+require an .hg.conf file to be present  in the user's home directory. For more
+information and an example .hg.conf file, see:
+http://genome.ucsc.edu/goldenPath/help/mysql.html
+https://genome-source.gi.ucsc.edu/gitlist/kent.git/blob/master/src/product/minimal.hg.conf
+
+The UCSC Genome Browser and Blat software are free for academic, nonprofit, and personal use. A
+license is required for commercial download and installation of these binaries, with the exception
+of items built from the following source code directories, which are freely available for all uses:
+
+ - kent/src/utils (includes big* tools)
+ - kent/src/lib
+ - kent/src/inc
+ - kent/src/tagStorm
+ - kent/src/parasol
+ - kent/src/htslib
+ - kent/src/hg/autoSql
+ - kent/src/hg/autoXml
+
+For information about commercial licensing of the Genome Browser software, see
+http://genome.ucsc.edu/license/. The Blat and In-Silico PCR software may be commercially
+licensed through Kent Informatics (http://www.kentinformatics.com).
+</pre>
+<pre>      <a href="?C=N;O=D">Name</a>                    <a href="?C=M;O=A">Last modified</a>      <a href="?C=S;O=A">Size</a>  <a href="?C=D;O=A">Description</a><hr>      <a href="/admin/">Parent Directory</a>                             -   
+      <a href="external.i386/">external.i386/</a>          25-May-2017 15:04    -   
+      <a href="external.x86_64/">external.x86_64/</a>        26-May-2017 06:25    -   
+      <a href="linux.x86_64.v369/">linux.x86_64.v369/</a>      01-Feb-2019 18:05    -   
+      <a href="linux.x86_64.v385/">linux.x86_64.v385/</a>      12-Dec-2019 14:06    -   
+      <a href="linux.x86_64/">linux.x86_64/</a>           17-Mar-2020 18:33    -   
+      <a href="macOSX.x86_64/">macOSX.x86_64/</a>          18-Mar-2020 10:30    -   
+      <a href="userApps.archive/">userApps.archive/</a>       26-Feb-2020 10:58    -   
+      <a href="userApps.src.tgz">userApps.src.tgz</a>        17-Mar-2020 19:17   16M  
+      <a href="userApps.v390.src.tgz">userApps.v390.src.tgz</a>   13-Nov-2019 07:23   16M  
+      <a href="userApps.v392.src.tgz">userApps.v392.src.tgz</a>   14-Jan-2020 17:00   16M  
+      <a href="userApps.v393.src.tgz">userApps.v393.src.tgz</a>   05-Feb-2020 09:41   16M  
+      <a href="userApps.v394.src.tgz">userApps.v394.src.tgz</a>   26-Feb-2020 09:19   16M  
+      <a href="userApps.v395.src.tgz">userApps.v395.src.tgz</a>   17-Mar-2020 19:17   16M  
+<hr></pre>
+</body></html>

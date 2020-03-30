@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+<HEAD>
+
+<META name="keywords" content="ChloroP 1.1 Prediction Server">
+<TITLE>ChloroP 1.1 Prediction Server</TITLE>
+<style type="text/css">
+TABLE {font-family: helvetica, verdana, arial, tahoma, sans-serif;font-size : 12px;}
+TD {font-family: helvetica, verdana, arial, tahoma, sans-serif;font-size : 12px;}
+H1 {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif;font-weight: bold;font-size: 20px;}
+H2 {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif;font-weight: bold;font-size: 16px;}
+H3 {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif;font-weight: bold;font-size: 14px;}
+P {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif, sans-serif; font-size: 12px; text-align: justify;}
+ul {font-family: helvetica, verdana, arial, tahoma, sans-serif;font-size : 12px;}
+li {font-family: helvetica, verdana, arial, tahoma, sans-serif;font-size : 12px; text-align: justify;}
+input {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif, sans-serif; font-size: 12px;}
+.bulk {color: #000000; font-family: helvetica, verdana, arial, tahoma, sans-serif;font-size: 12px; text-align: justify; font-weight: normal;}
+.nav {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif, sans-serif;font-size: 10px; font-weight: normal;}
+.search {color: #000000;font-family: helvetica, verdana, arial, tahoma, sans-serif, sans-serif;font-size: 10px;font-weight: normal;}
+a:link{color: #FF3399}
+a:active{color: #FF3399}
+a:visited{color: #FF3399}
+a:hover {color: #000000}
+a.black:link{color: #000000}
+a.black:active{color: #000000}
+a.black:visited{color: #000000}
+a.black:hover {color: #FF3399}
+</style><!-- mouse over -->
+<SCRIPT TYPE="text/javascript">
+
+<!-- Hide from old browsers
+
+
+if (navigator.appVersion.indexOf("2.") != -1){
+        check = false;
+        }
+if ((navigator.appVersion.indexOf("3.") != -1) && (navigator.appName.indexOf("Explorer") != -1)){
+        check = false;
+        }
+else {
+        check = true;
+        }
+        
+
+
+function imageon(name)   {
+        document[name].src = eval(name + "on.src");
+}
+
+
+function imageoff(name)  {
+        document[name].src = eval(name + ".src");
+}
+
+
+function on(name)  {
+        if (check == true){
+           imageon(name);
+        }}
+
+
+function off(name)  {
+        if (check == true){
+           imageoff(name);
+        }}
+// --> END HIDE
+</script>
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34009963-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+<!--<body bgcolor="#f8f8f8" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" BOTTOMMARGIN="0"
+LEFTMARGIN="0" RIGHTMARGIN="0"> -->
+
+<body bgcolor="#f8f8f8">
+<!-- center><b>The CBS web site is under hardware upgrade. Please report broken functionality to
+<a href="mailto:webmaster@cbs.dtu.dk">webmaster@cbs.dtu.dk</a>. For a quick fix, replace 'www'
+with 'genome' in CBS URLs.</b></center -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="30"><img src="/images/spacegif.gif" width="30" height="1" alt="" border="0"></td>
+        <td valign="top">
+            <!-- HEADER - LOGO, MENU, SOEGEFELT -->
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                   <tr>
+                        <td colspan="2" height="6"><img src="/images/spacegif.gif" width="1" height="6" alt="" border="0"></td>
+                   </tr>
+                <tr>
+		
+                    <td width="90"><a href="/index.html"><img src="http://www.bioinformatics.dtu.dk/-/media/DTU_Generelt/Navnetraek/Bioinformatik_UK.ashx?mh=100&mw=600" alt="" border="0"></a></td>
+                    <!--  td bgcolor="#B1B4B8" width="90"><a href="/index.html"><img src="/images/m_logo.gif" width="90" height="90" alt="" border="0"></a></td -->
+                    <td width="9999" valign="top">
+                      <h2>Services are gradually being migrated to <a target="_blank" href="https://services.healthtech.dtu.dk/">https://services.healthtech.dtu.dk/</a>.<br> In the near future, cbs.dtu.dk will be retired. Please try out the new site.</h2>
+                    </td></tr>
+<tr>
+          </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" height="5"><img src="/images/spacegif.gif" width="1" height="5" alt="" border="0"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                               <tr><td align="left" valign="top"><p class="nav"><b>
+			       <a href="/index.html">Home</a></b></p>
+</td>
+<td class="search" align="right" valign="top">
+<!-- form name="test" action="/cgi-bin/search.cgi" method="post" class="search">
+<input type="text" name="Words" size="10" class="search">
+<input type="image" src="/images/search.gif" value="Search" class="search">
+</form -->
+</td>
+</tr>
+<tr><td height="10"><img src="/images/spacegif.gif" width="1" height="10" alt="" border="0"></td></tr>
+</table>
+</td></tr></table>
+<table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>
+<p>
+<!-- START INDHOLD -->
+<h1>ChloroP 1.1 Server</h1>
+
+<!--
+<hr><table border=0 width=100%><tr>
+<td><img src="/services/images/elixir.png" height=50></td> 
+<td width=15%><img src="/services/images/csc.jpg" height=50 align="left"></td>
+<td width=70% align=center><b>
+The computations required by this service are executed on the bioinformatics
+cloud provided by <a href="http://www.csc.fi/english">CSC</a> (IT Center for
+Science Ltd) in Finland. The collaboration is a part of the effort to
+coordinate the activities of the Nordic ELIXIR nodes
+(<a href="../CSC-CBS_collab.php">read more</a>).</b></td>
+<td width=15%><img src="/images/m_logo.gif" height=50 align="right"></td>
+</tr></table><hr>
+-->
+
+<p>The ChloroP server predicts the presence of chloroplast transit peptides
+(cTP) in protein sequences and the location of potential cTP cleavage sites.
+<p>
+A related service <a href="../TargetP/"> TargetP</a> predicts the subcellular
+location of proteins by integrating predictions of chloroplast transit
+peptides, signal peptides and mitochondrial targeting peptides.
+<br><br>
+<table bgcolor="#FF3399" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+    <td bgcolor="#FF3399" width=19% align=center><a href="pages/instr.html" target="_blank"><font color="#ffffff"><b>Instructions</b></font></a></td>
+    
+    <td width="2"><img src="../../images/space_hvid.gif" width="2" height="18"></td>
+    <td bgcolor="#FF3399" width=19% align=center><a href="pages/output-descr.html" target="_blank"><font color="#ffffff"><b>Output format</b></font></a></td>
+    
+    <td width="2"><img src="../../images/space_hvid.gif" width="2" height="18"></td>
+    <td bgcolor="#FF3399" width=19% align=center><a href="pages/datasets.html"><font color="#ffffff"><b>Data sets</b></font></a></td>
+    
+    <td width="2"><img src="../../images/space_hvid.gif" width="2" height="18"></td>
+    <td bgcolor="#FF3399" width=19% align=center><a href="article/abstract.html"><font color="#ffffff"><b>Abstract</b></font></a></td>
+    
+    <td width="2"><img src="../../images/space_hvid.gif" width="2" height="18"></td>
+    <td bgcolor="#FF3399" width=19% align=center><a href="pages/v1.1_updates.html"><font color="#ffffff"><b>Recent changes</b></font></a></td>
+</tr>
+</table>
+<br><br>
+<table width=100%>
+<FORM ENCTYPE="multipart/form-data"
+    ACTION="/cgi-bin/webface2.fcgi"
+    METHOD="POST">
+<INPUT TYPE=HIDDEN
+    NAME=configfile
+    VALUE="/usr/opt/www/pub/CBS/services/ChloroP-1.1/chlorop.cf">
+<tr>
+    <td colspan=2>
+
+      <h3>SUBMISSION</h3>
+       <p><i>Paste a single sequence or several sequences in <a href="/services/fasta.example.html" target="_blank"> FASTA </a>
+      format into the field below:</i>
+      <br>
+      <textarea name="SEQPASTE" rows=3 cols=64></textarea>
+
+      <p><i>Submit a file in <a href="/services/fasta.example.html" target="_blank">FASTA</a>
+      format directly from your local disk:</i>
+      <br>
+      <input name="SEQSUB" size=64 type="file">
+      <p><input name="full" type="checkbox" value="full">
+      <b>Detailed output</b>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Clear fields">
+  </td>
+      
+</tr>
+</table>
+<p>
+</form>
+    <p><b>Restrictions:</b>
+
+    <p><i>At most 50 sequences and 200,000 amino acids per submission;
+      each sequence not more than 4,000 amino acids. </i>
+   <p><b>Confidentiality:</b>
+    <p><i>The sequences are kept confidential and will be deleted after processing.</i>
+      <hr>
+      <h3>CITATIONS</h3>
+      <p>For publication of results, please cite:
+      <p>
+<b>ChloroP, a neural network-based method for predicting chloroplast transit peptides and their cleavage sites</b><br>
+Emanuelsson O, Nielsen H, von Heijne G<br>
+Protein Sci. 8(5):978-84, 1999<br>
+
+      <p>View the <a href="article/abstract.html">abstract</a>.
+      For the errors in the published version of the article click
+      <a href="article/err.html"> here </a>.
+      <hr>
+
+<h3>PORTABLE VERSION</h3>
+<p>Would you prefer to run ChloroP at your own site? ChloroP 1.1 is available
+as a stand-alone software package, with the same functionality as the service
+above. Ready-to-ship packages exist for the most common UNIX platforms. There
+is a
+<a href="/cgi-bin/nph-sw_request?chlorop" target="download">download page</a>
+for academic users; other users are requested to contact CBS Software Package
+Manager at <a href="mailto:software@cbs.dtu.dk">software@cbs.dtu.dk</a>.
+
+<br><br><hr>
+<h3>GETTING HELP</h3>
+<div align='center'>
+Scientific problems: <script type="text/javascript">document.write('<a href="mai' + 'lto:' + 'olofem&#' + (132-68) + ';kth&#46;se">Olof Emanuelsson</a>')</script>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Technical problems: <script type="text/javascript">document.write('<a href="mai' + 'lto:' + 'webmaster&#' + (127-63) + ';cbs&#46;dtu&#46;dk">Support</a>')</script>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </DIV>
+    <BR><HR>
+    </TD>
+    </TR>
+    </TABLE>
+    <TABLE align="center"><TR><TD>
+    <DIV class='nav'><center>This file was last modified  Monday 2nd 2017f January 2017 15:42:26 GMT</center><center></center>    </TD></TR></TABLE>
+    <BR><BR>
+    </TD>
+    <!-- TD align="center" valign="top" width="30">
+    <IMG src="/images/log_txtv.gif" width="30" height="476" alt="" border="0">
+    </TD -->
+    </TR>
+    </TABLE>
+    </BODY>
+    </HTML>

@@ -1,0 +1,9 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:50:10 GMT
+Content-Type: text/html
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, PUT, POST, HEAD, OPTIONS
+Access-Control-Allow-Headers: Authorization,Accept,Origin,Keep-Alive,DNT,X-Mx-ReqToken,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Forwarded-For
+Content-Encoding: gzip

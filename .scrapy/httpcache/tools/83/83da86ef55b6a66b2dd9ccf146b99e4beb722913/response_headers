@@ -1,0 +1,13 @@
+Date: Mon, 30 Mar 2020 18:48:21 GMT
+Server: Apache
+Cache-Control: no-cache
+X-Runtime: 0.009992
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: sameorigin
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Request-Id: 035705dd-aee4-451a-80d2-1afec85e830c
+X-Powered-By: Phusion Passenger 5.0.30
+Location: https://clusteval.sdu.dk/1/mains
+Status: 302 Found
+Content-Type: text/html; charset=utf-8

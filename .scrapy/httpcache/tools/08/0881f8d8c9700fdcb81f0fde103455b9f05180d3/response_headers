@@ -1,0 +1,8 @@
+Content-Type: text/html; charset=UTF-8
+Location: https://www.perkinelmer.com/category/chemdraw
+Server: Microsoft-IIS/8.5
+X-Powered-By: ASP.NET
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: X-fancyBox,X-Requested-With
+Date: Mon, 30 Mar 2020 18:49:01 GMT
+Set-Cookie: BIGipServer~PE-PROD~perkinelmer-com_http=1059543205.20480.0000; path=/; Httponly;SameSite=none;Secure

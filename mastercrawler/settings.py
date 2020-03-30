@@ -20,9 +20,11 @@ SPLASH_URL = 'http://0.0.0.0:8050/'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'mastercrawler (+http://www.yourdomain.com)'
 
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
+HTTPCACHE_ENABLED=True
 #Export as CSV Feed
 
 #FEED_FORMAT = "json"
@@ -40,7 +42,7 @@ ROBOTSTXT_OBEY = False
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = True
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False

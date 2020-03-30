@@ -1,0 +1,762 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  
+    
+    
+    
+    
+
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="generator" content="Plone - http://plone.org" />
+
+    
+      <base href="http://biskit.pasteur.fr/" /><!--[if lt IE 7]></base><![endif]-->
+    
+
+    
+        <meta content="A Python platform for structural bioinformatics" name="DC.description" /><meta content="A Python platform for structural bioinformatics" name="description" /><meta content="text/html" name="DC.format" /><meta content="Page" name="DC.type" /><meta content="2016-06-12T18:38:41+01:00" name="DC.date.modified" /><meta content="2005-10-27T16:25:27+01:00" name="DC.date.created" />
+
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="http://biskit.pasteur.fr/portal_css/Old%20Plone%203%20Custom%20Theme/reset-cachekey-e738ecab3b3d618a19e6af2b9e6ce63d.css" />
+    <style type="text/css" media="screen">@import url(http://biskit.pasteur.fr/portal_css/Old%20Plone%203%20Custom%20Theme/base-cachekey-c75bacdce2882486461d66480f819095.css);</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://biskit.pasteur.fr/portal_css/Old%20Plone%203%20Custom%20Theme/resourcetinymce.stylesheetstinymce-cachekey-24acac4f02c1886389decd71bab31ef8.css" />
+    <style type="text/css">@import url(http://biskit.pasteur.fr/portal_css/Old%20Plone%203%20Custom%20Theme/print-cachekey-8989bf13cbcbc66d5a7071cc4dd87f85.css);</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://biskit.pasteur.fr/portal_css/Old%20Plone%203%20Custom%20Theme/resourceplone.app.discussion.stylesheetsdiscussion-cachekey-dd3ddef879540f018c79556102a93e81.css" />
+    <style type="text/css" media="all">@import url(http://biskit.pasteur.fr/portal_css/Old%20Plone%203%20Custom%20Theme/ploneCustom-cachekey-21a7f81df877f9e262008aaa84b62c34.css);</style>
+
+  
+  
+    <script type="text/javascript" src="http://biskit.pasteur.fr/portal_javascripts/Old%20Plone%203%20Custom%20Theme/resourceplone.app.jquery-cachekey-90c6d7b89376267daafdaf3c9dc84845.js"></script>
+    <script type="text/javascript" src="http://biskit.pasteur.fr/portal_javascripts/Old%20Plone%203%20Custom%20Theme/ie5fixes-cachekey-af2bac2540378a1fc56dc27eb07e240b.js"></script>
+
+
+<title>Welcome to Biskit! &mdash; Biskit: python for structural bioinformatics</title>
+
+        
+    <link rel="canonical" href="http://biskit.pasteur.fr" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="http://biskit.pasteur.fr/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://biskit.pasteur.fr/touch_icon.png" />
+
+
+
+
+
+    <link rel="alternate" href="http://biskit.pasteur.fr/RSS" title="Biskit: python for structural bioinformatics - RSS 1.0" type="application/rss+xml" />
+
+    <link rel="alternate" href="http://biskit.pasteur.fr/rss.xml" title="Biskit: python for structural bioinformatics - RSS 2.0" type="application/rss+xml" />
+
+    <link rel="alternate" href="http://biskit.pasteur.fr/atom.xml" title="Biskit: python for structural bioinformatics - Atom" type="application/rss+xml" />
+
+
+    <link rel="search" href="http://biskit.pasteur.fr/@@search" title="Search this site" />
+
+
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+    
+
+  </head>
+
+  <body class="template-document_view portaltype-document site-biskit section-welcome icons-on userrole-anonymous" dir="ltr">
+    <div id="visual-portal-wrapper">
+
+      <div id="portal-top">
+        <div id="portal-header">
+    <p class="hiddenStructure">
+  <a accesskey="2" href="http://biskit.pasteur.fr/#content">Skip to content.</a> |
+
+  <a accesskey="6" href="http://biskit.pasteur.fr/#portal-globalnav">Skip to navigation</a>
+</p>
+
+<ul id="portal-siteactions">
+
+    <li id="siteaction-sitemap"><a href="http://biskit.pasteur.fr/sitemap" accesskey="3" title="Site Map">Site Map</a></li>
+    <li id="siteaction-accessibility"><a href="http://biskit.pasteur.fr/accessibility-info" accesskey="0" title="Accessibility">Accessibility</a></li>
+    <li id="siteaction-contact"><a href="http://biskit.pasteur.fr/contact-info" accesskey="9" title="Contact">Contact</a></li>
+</ul>
+
+<div id="portal-searchbox">
+
+    <form id="searchGadget_form" action="http://biskit.pasteur.fr/@@search">
+
+        <div class="LSBox">
+        <label class="hiddenStructure" for="searchGadget">Search Site</label>
+
+        <input name="SearchableText" type="text" size="18" title="Search Site" placeholder="Search Site" accesskey="4" class="searchField" id="searchGadget" />
+
+        <input class="searchButton" type="submit" value="Search" />
+
+        <div class="searchSection">
+            <input id="searchbox_currentfolder_only" class="noborder" type="checkbox" name="path" value="/biskit" />
+            <label for="searchbox_currentfolder_only" style="cursor: pointer">
+                only in current section
+            </label>
+        </div>
+
+        <div class="LSResult" id="LSResult"><div class="LSShadow" id="LSShadow"></div></div>
+        </div>
+    </form>
+
+    <div id="portal-advanced-search" class="hiddenStructure">
+        <a href="http://biskit.pasteur.fr/@@search" accesskey="5">
+            Advanced Search&hellip;
+        </a>
+    </div>
+
+</div>
+
+<a id="portal-logo" title="Biskit: python for structural bioinformatics" accesskey="1" href="http://biskit.pasteur.fr">
+    <img src="http://biskit.pasteur.fr/logo.jpg" alt="Biskit: python for structural bioinformatics" title="Biskit: python for structural bioinformatics" height="86" width="548" /></a>
+
+
+    <p class="hiddenStructure">Navigation</p>
+
+    <ul id="portal-globalnav"><li id="portaltab-index_html" class="selected"><a href="http://biskit.pasteur.fr" title="">Home</a></li><li id="portaltab-news" class="plain"><a href="http://biskit.pasteur.fr/news" title="Site News">News</a></li><li id="portaltab-install" class="plain"><a href="http://biskit.pasteur.fr/install" title="This section guides you through the installation of Biskit and its helper applications. ">Installing Biskit</a></li><li id="portaltab-use" class="plain"><a href="http://biskit.pasteur.fr/use" title="a short description of pret-a-porter Biskit programs and application examples">Applications</a></li><li id="portaltab-doc" class="plain"><a href="http://biskit.pasteur.fr/doc" title="documentation for Biskit developers">Documentation</a></li><li id="portaltab-links" class="plain"><a href="http://biskit.pasteur.fr/links" title="Links to related information and projects">Related Links</a></li></ul>
+
+
+</div>
+
+<div id="portal-personaltools-wrapper">
+
+<h5 class="hiddenStructure">Personal tools</h5>
+
+<ul id="portal-personaltools" class="visualInline">
+    
+
+    
+        <li id="personaltools-login">
+            <a href="http://biskit.pasteur.fr/login">Log in</a>
+        </li>
+    
+    
+        <li id="personaltools-join">
+            <a href="http://biskit.pasteur.fr/@@register">Register</a>
+        </li>
+    
+
+</ul>
+</div>
+
+
+
+<div id="portal-breadcrumbs">
+
+    <span id="breadcrumbs-you-are-here">You
+are here:</span>
+    <span id="breadcrumbs-home">
+        <a href="http://biskit.pasteur.fr">Home</a>
+        
+    </span>
+
+</div>
+
+      </div>
+
+      <div class="visualClear" id="clear-space-before-wrapper-table"><!-- --></div>
+
+      <table id="portal-columns">
+        <tbody>
+          <tr>
+            
+                
+                <td id="portal-column-one">
+                  <div class="visualPadding">
+                    
+                      
+<div class="portletWrapper" data-portlethash="706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f6269736b69740a6e617669676174696f6e" id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f6269736b69740a6e617669676174696f6e">
+<dl class="portlet portletNavigationTree">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href="http://biskit.pasteur.fr/sitemap" class="tile">Navigation</a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem lastItem">
+        <ul class="navTree navTreeLevel0">
+            <li class="navTreeItem navTreeTopNode navTreeCurrentNode nav-section-biskit-python-for-structural-bioinformatics">
+                <div>
+                   <a href="http://biskit.pasteur.fr" class="contenttype-plone-site navTreeCurrentItem" title="a python library for structural bioinformatics">
+                   
+                   Home
+                   
+                   </a>
+                </div>
+            </li>
+            
+
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish section-news">
+
+    
+
+
+        <a href="http://biskit.pasteur.fr/news" class="state-published navTreeFolderish contenttype-topic" title="Site News">
+            
+            <span>News</span>
+        </a>
+
+        
+
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish section-install">
+
+    
+
+
+        <a href="http://biskit.pasteur.fr/install" class="state-visible navTreeFolderish contenttype-folder" title="This section guides you through the installation of Biskit and its helper applications. ">
+            
+            <span>Installing Biskit</span>
+        </a>
+
+        
+
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish section-use">
+
+    
+
+
+        <a href="http://biskit.pasteur.fr/use" class="state-visible navTreeFolderish contenttype-folder" title="a short description of pret-a-porter Biskit programs and application examples">
+            
+            <span>Applications</span>
+        </a>
+
+        
+
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish section-doc">
+
+    
+
+
+        <a href="http://biskit.pasteur.fr/doc" class="state-visible navTreeFolderish contenttype-folder" title="documentation for Biskit developers">
+            
+            <span>Documentation</span>
+        </a>
+
+        
+
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish section-links">
+
+    
+
+
+        <a href="http://biskit.pasteur.fr/links" class="state-visible navTreeFolderish contenttype-folder" title="Links to related information and projects">
+            
+            <span>Related Links</span>
+        </a>
+
+        
+
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker section-contributions">
+
+    
+
+
+        <a href="http://biskit.pasteur.fr/contributions" class="state-visible contenttype-document" title="contributions to the Biskit project.">
+            
+            <span>Contributions</span>
+        </a>
+
+        
+
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker section-how-to-contribute">
+
+    
+
+
+        <a href="http://biskit.pasteur.fr/how-to-contribute" class="state-visible contenttype-document" title="">
+            
+            <span>Contribute!</span>
+        </a>
+
+        
+
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker section-contact">
+
+    
+
+
+        <a href="http://biskit.pasteur.fr/contact" class="state-visible contenttype-document" title="">
+            
+            <span>Contact the authors</span>
+        </a>
+
+        
+
+    
+</li>
+
+
+
+
+        </ul>
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+
+</div>
+
+<div class="portletWrapper" data-portlethash="706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f6269736b69740a6c6162656c5f6c6f675f696e" id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f6269736b69740a6c6162656c5f6c6f675f696e">
+
+<dl class="portlet portletLogin">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href="http://biskit.pasteur.fr/login_form" class="tile">Log in</a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem odd">
+        <form action="http://biskit.pasteur.fr/login_form" id="loginform" method="post">
+
+            <div>
+                <input type="hidden" name="form.submitted" value="1" />
+                <input type="hidden" name="came_from" value="http://biskit.pasteur.fr/" />
+                <input type="hidden" name="js_enabled" id="js_enabled" value="0" />
+                <input type="hidden" name="cookies_enabled" id="cookies_enabled" value="" />
+                <input type="hidden" name="login_name" id="login_name" value="" />
+                <input type="hidden" name="pwd_empty" id="pwd_empty" value="0" />
+            </div>
+
+            <div class="field">
+
+              
+                <label for="__ac_name">Login Name</label>
+                <br />
+                <input type="text" size="10" alt="Login Name" name="__ac_name" value="" id="__ac_name" />
+              
+              
+            </div>
+
+            <div class="field">
+                <label for="__ac_password">Password</label>
+                <br />
+                <input type="password" size="10" alt="Password" name="__ac_password" id="__ac_password" />
+            </div>
+
+            <div class="cookiesMessage portalMessage" style="display:none">
+                Cookies are not enabled. You must enable cookies before you
+                can log in.
+            </div>
+
+            <div class="formControls">
+
+                <input class="context" type="submit" name="submit" value="Log in" alt="Log in" />
+            </div>
+        </form>
+    </dd>
+
+    <dd class="portletItem even">
+        <a href="http://biskit.pasteur.fr/mail_password_form" class="tile">
+           <img src="http://biskit.pasteur.fr/info_icon.png" alt="" title="" height="16" width="16" />
+           Forgot your password?
+        </a>
+    </dd>
+
+    
+</dl>
+
+
+
+
+</div>
+
+
+
+
+                    
+                    &nbsp;
+                  </div>
+                </td>
+                
+            
+
+            
+            <td id="portal-column-content">
+
+              <div id="viewlet-above-content"></div>
+
+              
+                <div class="">
+
+                    
+
+                    <span id="contentTopLeft"></span>
+                    <span id="contentTopRight"></span>
+
+                    
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+
+
+                    
+                    <div id="content">
+                      
+                      
+
+                        
+                            
+                            
+                                
+                                
+            
+                <h1 id="parent-fieldname-title" class="documentFirstHeading">
+                    Welcome to Biskit!
+                </h1>
+            
+            
+        
+                            
+                            
+
+
+
+
+                            
+                                
+                                
+            
+                <div id="parent-fieldname-description" class="documentDescription">
+                   A Python platform for structural bioinformatics
+                </div>
+            
+            
+        
+                            
+
+                            
+
+
+                            <div id="content-core">
+                                
+    
+        
+        <div class="" id="parent-fieldname-text-2fb941aeb959bc90753ff7a8dc06f356">
+            <p>Biskit is a modular, object-oriented <a href="http://python.org">Python</a> library for structural bioinformatics research. It facilitates the manipulation and analysis of macromolecular structures, protein complexes, and molecular dynamics trajectories. For efficient number crunching, Biskit objects tightly integrate with <a href="http://www.numpy.org/">numpy (Numeric Python)</a>. Biskit also offers a platform for the rapid integration of external programs and new algorithms into complex workflows. Calculations are thus often delegated to established <a href="http://biskit.pasteur.fr/install/applist" title="Helper applications">programs</a> like <a href="http://nmr.cit.nih.gov/xplor-nih/">Xplor</a>, <a href="http://amber.scripps.edu/">Amber</a>, <a class="external-link" href="http://hex.loria.fr/">Hex</a>, DSSP, <a href="http://foldx.embl.de/">Fold-X</a>, <a href="http://www.tcoffee.org/Projects_home_page/t_coffee_home_page.html">T-Coffee</a>, TMAlign and <a href="http://www.salilab.org/modeller/">Modeller; </a>interfaces to further software can be added easily. Biskit also simplifies the parallelisation of calculations via <a href="http://www.csm.ornl.gov/pvm/">PVM</a> (Parallel Virtual Machine).</p>
+<table align="center" class="plain">
+<tbody>
+<tr class="even">
+<td>
+<div align="center">
+<div align="center">
+<ul>
+<li><strong><a href="http://biskit.pasteur.fr/doc/content" title="Documentation">Library   <br /></a></strong></li>
+</ul>
+</div>
+</div>
+</td>
+<td align="right">
+<div align="center">
+<div align="center">
+<ul>
+<li><strong><a href="http://biskit.pasteur.fr/use/intro" title="Application examples">Applications   <br /></a></strong></li>
+</ul>
+</div>
+</div>
+</td>
+<td align="right">
+<div align="center">
+<div align="center">
+<ul>
+<li><strong><a href="http://bioinformatics.oxfordjournals.org/cgi/reprint/btl655?ijkey=faSZdsFhk3NWqzu&amp;keytype=ref">Article     <br /></a></strong></li>
+</ul>
+</div>
+</div>
+</td>
+<td>
+<div align="center">
+<ul>
+<li><strong><a class="external-link" href="https://github.com/graik/biskit" target="_self" title="Biskit source code on Github">GitHub   </a></strong></li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div align="center"> </div>
+<div align="center"> </div>
+<h2 class="Heading">What can Biskit do for you?</h2>
+<p>Here is an overview over some typical workflows that are realised in Biskit (PDBModel, PDBDope, Trajectory, and ComplexList are prominent classes of the package, the whole library is fully object-oriented):</p>
+<p><img src="http://biskit.pasteur.fr/fig_flow.jpg" alt="Biskit workflow" class="image-inline" title="Biskit workflow" /></p>
+<p>A few examples of what you can do with Biskit:</p>
+<ul type="none">
+<li>analyze molecular structures, complexes and molecular dynamics trajectories</li>
+<li>automated <a href="http://biskit.pasteur.fr/use/workflows/sampling-amber" title="Structure sampling with Amber">conformal sampling</a></li>
+<li>automated <a href="http://biskit.pasteur.fr/use/workflows/homology-modelling" title="Homology modelling">homology modeling</a></li>
+<li>multi-model protein-protein (<a href="http://biskit.pasteur.fr/use/workflows/flexible-docking" title="Flexible docking">cross-</a>)<a href="http://biskit.pasteur.fr/use/workflows/docking" title="Docking">docking</a></li>
+<li>quasiharmonic entropy calculations</li>
+<li>parallelise and automate your own structural bioinformatics workflows</li>
+</ul>
+<blockquote>
+<p>But remember the famous words - <em>Ask not what Biskit can do for you, ask ...</em><br /><a href="http://biskit.pasteur.fr/how-to-contribute" target="_self" title="Contribute!">How to contribute</a></p>
+</blockquote>
+<p> </p>
+<h2>Troubleshooting</h2>
+<p>If something doesn't work according to plan or promise, browse this web site (the search button in the top right corner is very useful) but feel also free to directly contact us!</p>
+<blockquote><a href="http://biskit.pasteur.fr/doc/support/faq/faq1" title="Why is Biskit called Biskit?">FAQ</a>      <a href="http://biskit.pasteur.fr/doc/support/bugs" title="Report a bug">Search &amp; report bugs</a>       <a href="http://biskit.pasteur.fr/doc/support/mailinglist" title="Mailing list">Mailing list</a>      <a href="http://biskit.pasteur.fr/contact" title="Contact">Contact us<br /></a></blockquote>
+<p> </p>
+<h2 class="Heading">Authors</h2>
+<p>Biskit has been jointly developed by Raik Grünberg and Johan Leckner (then at the Pasteur Institute in Paris) with important contributions from Michael Habeck (now Max-Planck-Institut für Entwicklungsbiologie, Tuebingen, Germany), Michael Nilges (Institut Pasteur), Wolfgang Rieping (Institut Pasteur) and others.</p>
+<blockquote><a href="http://biskit.pasteur.fr/contributions" target="_self" title="Contributions">Detailed contributions</a>     <a href="http://biskit.pasteur.fr/how-to-contribute" target="_self" title="Contribute!">How to contribute</a></blockquote>
+<p> </p>
+<h2>License and availability</h2>
+<p style="text-align: left; ">Biskit is freely available under the terms of the GNU General Public <a href="http://www.gnu.org/copyleft/gpl.html" target="_self">License</a> (v. 3). The latest official Biskit release is available from our <a class="external-link" href="https://github.com/graik/biskit" target="_self" title="github project">github project site</a>.  It can be installed with:</p>
+<div align="center">
+<table class="listing" summary="pip install biskit">
+<tbody>
+<tr><th style="text-align: center; ">pip install biskit</th></tr>
+</tbody>
+</table>
+</div>
+<p>A more current (and usually better) snapshot can be fetched from github as described <a href="http://biskit.pasteur.fr/install/short" target="_self" title="Short instruction">here</a>. There are also Debian and RPM packages available with most releases. See <a title="" href="http://biskit.pasteur.fr/install/short" class="internal-link" target="_self">Short Installation Instructions</a>.</p>
+            
+        </div>
+    
+    
+
+                            </div>
+                            
+
+
+
+    <div class="visualClear"><!-- --></div>
+
+    <div class="documentActions">
+        
+
+        
+
+    </div>
+
+
+                        
+
+                      
+                    </div>
+                    
+
+                    
+
+                    <span id="contentBottomLeft"></span>
+                    <span id="contentBottomRight"></span>
+
+                </div>
+              
+
+              <div id="viewlet-below-content">
+
+
+
+</div>
+
+            </td>
+            
+
+            
+                
+                <td id="portal-column-two">
+                  <div class="visualPadding">
+                    
+                      
+<div class="portletWrapper" data-portlethash="706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f6269736b69740a6e657773" id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f6269736b69740a6e657773">
+<dl class="portlet portletNews">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href="http://biskit.pasteur.fr/news" class="tile">News</a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    
+    <dd class="portletItem odd">
+
+        <a href="http://biskit.pasteur.fr/Members/raik/news_20160608" class="tile" title="The Biskit source code repository has been moved to GitHub.">
+            
+            Migration to GitHub
+         </a>
+            <span class="portletItemDetails">2016-06-08</span>
+
+    </dd>
+    
+    
+    <dd class="portletItem even">
+
+        <a href="http://biskit.pasteur.fr/Members/raik/news_20120304" class="tile" title="">
+            
+            Biskit 2.4 released
+         </a>
+            <span class="portletItemDetails">2012-03-04</span>
+
+    </dd>
+    
+    
+    <dd class="portletItem odd">
+
+        <a href="http://biskit.pasteur.fr/Members/raik/20110624_testinghowto" class="tile" title="New Testing HowTo published in Biskit Documentation">
+            
+            Testing Biskit modules
+         </a>
+            <span class="portletItemDetails">2011-06-24</span>
+
+    </dd>
+    
+    
+    <dd class="portletItem even">
+
+        <a href="http://biskit.pasteur.fr/Members/raik/news_20090517" class="tile" title="The new Biskit release simplifies installation and introduces setup packages for Debian, RPM and Windows.">
+            
+            Biskit 2.3.1 released
+         </a>
+            <span class="portletItemDetails">2009-05-17</span>
+
+    </dd>
+    
+    
+    <dd class="portletItem odd">
+
+        <a href="http://biskit.pasteur.fr/Members/raik/news_20090301" class="tile" title="It's been a long time since the last &quot;official&quot; Biskit release which, by now, was lagging far behind the subversion snapshot. A new release can now be downloaded from the sourceforge project web site.">
+            
+            Biskit 2.2 released
+         </a>
+            <span class="portletItemDetails">2009-03-01</span>
+
+    </dd>
+    
+
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <a href="http://biskit.pasteur.fr/news">
+          More news&hellip;
+        </a>
+        <span class="portletBottomRight"></span>
+    </dd>
+    
+</dl>
+
+</div>
+
+
+
+
+                    
+                    &nbsp;
+                  </div>
+                </td>
+                
+            
+          </tr>
+        </tbody>
+      </table>
+      
+
+      <div class="visualClear" id="clear-space-before-footer"><!-- --></div>
+
+      
+
+        <div id="portal-footer">
+          <p>
+               
+               The
+               <a href="http://plone.org">Plone<sup>&reg;</sup> Open Source CMS/WCM</a>
+               is
+               <abbr title="Copyright">&copy;</abbr>
+               2000-2020
+               by the
+               <a href="http://plone.org/foundation">Plone Foundation</a>
+               and friends.
+               
+
+               
+               Distributed under the
+                    <a href="http://creativecommons.org/licenses/GPL/2.0/">GNU GPL license</a>.
+               
+          </p>
+
+</div>
+
+<div id="portal-colophon">
+<div class="colophonWrapper">
+<ul>
+  <li>
+    <a href="http://plone.org" title="This site was built using the Plone Open Source CMS/WCM.">
+      Powered by Plone &amp; Python</a>
+  </li>
+</ul>
+</div>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4739910-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+      
+
+      <div class="visualClear"><!-- --></div>
+    </div>
+</body>
+</html>
+
+

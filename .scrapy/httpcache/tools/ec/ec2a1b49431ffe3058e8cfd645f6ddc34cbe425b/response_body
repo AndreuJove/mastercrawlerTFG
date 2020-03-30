@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+
+	<title>Bpipe</title>
+
+        <link href="./css/bootstrap-3.0.3.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+        <link href="./css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href=".">Bpipe</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li class="active">
+                    <a href=".">Welcome!</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="Overview/Introduction/">Introduction</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Overview/ComparisonToWorkflowTools/">Comparison To Workflow Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Overview/InstallInstructions/">Install Instructions</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="Language/About/">About</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Check/">Check</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Chr/">Chr</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/CleanupStatement/">Cleanup</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Config/">Config</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Debug/">Debug</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Directories/">Directories</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Doc/">Doc</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Exec/">Exec</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Fail/">Fail</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/File/">File</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Filter/">Filter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Forward/">Forward</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/From/">From</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Glob/">Glob</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Grep/">Grep</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Load/">Load</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/MergePoints/">Merge Point Operator</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Multi/">Multi</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Output/">Output</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Options/">Options</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Prefix/">Prefix</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Produce/">Produce</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/R/">R</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Segments/">Segments</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Send/">Send</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Succeed/">Succeed</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Transform/">Transform</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/Using/">Using</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/PreserveInPipeline/">Preserve in pipeline</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/requires/">requires</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/uses/">uses</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Language/var/">var</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Commands <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="Commands/Commands/">Using the bpipe command</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/cleanup/">cleanup</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/execute/">execute</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/history/">history</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/jobs/">jobs</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/log/">log</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/preserve/">preserve</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/query/">query</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/retry/">retry</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/run/">run</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/status/">status</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/stop/">stop</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Commands/test/">test</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="Tutorials/Hello,World/">Hello, World</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Tutorials/ExampleWithInputsAndOutputs/">Example With Inputs And Outputs</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Tutorials/RealPipelineTutorial/">Real Pipeline Tutorial</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="Guides/Variables/">Variables</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/ParallelTasks/">Parallel Tasks</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/BranchVariables/">Branch Variables</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/ExtensionSyntax/">Extension Syntax</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/Logging/">Logging</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/Modules/">Modules</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/Notifications/">Notifications</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/Regions/">Working with Genomic Regions</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/Reports/">Reports</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/ResourceManagers/">Resource Managers</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/ToolVersionDatabase/">Tool Version Database</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/Trash/">Trash</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/DevelopmentSetup/">Development Setup</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/DocumentationStyle/">Documentation Style</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/ImplementingAResourceManager/">Implementing A Resource Manager</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/Troubleshooting/">Troubleshooting</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/PipelineEvents/">Listening for Pipeline Events</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/AdvancedSettings/">Advanced Settings</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/ExtendingClassPath/">Adding to Class Path</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/PreallocatedJobs/">Pre-allocating Resources for Jobs</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/Gitlab/">Integration with Gitlab</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/JMS/">Integration with JMS / Queuing Systems</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/AWS/">Using Bpipe with Amazon Web Services (AWS/EC2)</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Guides/GoogleCloud/">Using Bpipe with Google Cloud (GCS)</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="Examples/PairedEndAlignment/">Paired End Alignment</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Examples/RNASeqCorset/">RNA Seq Corset</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Examples/WGSVariantCalling/">WGS Variant Calling</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Releases <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="Releases/0.9.9.3/">0.9.9.3</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Releases/0.9.9.4/">0.9.9.4</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Releases/0.9.9.5/">0.9.9.5</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Releases/0.9.9.6/">0.9.9.6</a>
+                        </li>
+                    
+                        <li >
+                            <a href="Releases/0.9.9.7/">0.9.9.7</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="disabled">
+                    <a rel="next" >
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="Overview/Introduction/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/ssadedin/bpipe">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#welcome-to-bpipe">Welcome to Bpipe</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-bpipe">Welcome to Bpipe  <a href="https://travis-ci.org/ssadedin/bpipe"><img alt="travis" src="https://travis-ci.org/ssadedin/bpipe.svg?branch=master" /></a></h1>
+<p>Bpipe provides a platform for running big bioinformatics jobs that consist of a series of processing stages - known as 'pipelines'.</p>
+<ul>
+<li>October 17th, 2019 - New! <a href="http://docs.bpipe.org/Releases/0.9.9.8/">Bpipe 0.9.9.8</a> released!</li>
+<li>Download <a href="http://download.bpipe.org/versions/bpipe-0.9.9.7.tar.gz">latest</a>, <a href="http://download.bpipe.org">all</a></li>
+<li><a href="http://docs.bpipe.org">Documentation</a></li>
+<li><a href="https://groups.google.com/forum/#!forum/bpipe-discuss">Mailing List</a> (Google Group)</li>
+</ul>
+<p>Bpipe has been published in <a href="http://bioinformatics.oxfordjournals.org/content/early/2012/04/11/bioinformatics.bts167.abstract">Bioinformatics</a>! If you use Bpipe, please cite:</p>
+<p><em>Sadedin S, Pope B &amp; Oshlack A, Bpipe: A Tool for Running and Managing Bioinformatics Pipelines, Bioinformatics</em></p>
+<p><strong>Why Bpipe?</strong></p>
+<p>Many people working with bioinformatics data end up running jobs as shell
+scripts.  While this makes running them easy it has a lot of limitations.  For
+example, when scripts fail half way through it is often hard to tell where, or
+why they failed, and even harder to restart the job from the point of failure.
+There is no automatic log of the commands executed or automatic capture of
+console output to ensure it is possible to later on see what happened.
+Sometimes jobs fail half way through, leaving half created files that can get
+confused with good files.  Modifying the pipeline is also time consuming and
+error prone - adding or removing a stage causes modifications in multiple
+places, meaning that it is all too easy to have a change of file name cause
+later commands to fail or worse, run on incorrect data.  Bpipe tries to solve
+all these problems (and more!) while departing as little as possible from the
+simplicity of the shell script.  In fact, your Bpipe scripts will often look
+very similar to the original shell scripts you might have started with.</p>
+<p>By turning your shell scripts into Bpipe scripts, here are some of the features
+you can get:</p>
+<ul>
+<li><strong>Simple definition of tasks to run</strong> - Bpipe runs shell commands almost as-is - no programming required.</li>
+<li><strong>Transactional management of tasks</strong> - commands that fail get outputs cleaned up, log files saved and the pipeline cleanly aborted.  No out of control jobs going crazy.</li>
+<li><strong>Automatic Connection of Pipeline Stages</strong> -  Bpipe manages the file names for input and output of each stage in a systematic way so that you don't need to think about it.  Removing or adding new stages "just works" and never breaks the flow of data.</li>
+<li><strong>Easy Restarting of Jobs</strong> - when a job fails cleanly restart from the point of failure.</li>
+<li><strong>Easy Parallelism</strong> - Bpipe makes it simple to split jobs into many pieces and run them all in parallel whether on a cluster or locally on your own machine</li>
+<li><strong>Audit Trail</strong> - Bpipe keeps a journal of exactly which commands executed and what their inputs and outputs were.</li>
+<li><strong>Integration with Cluster Resource Managers</strong> - if you use Torque PBS, Oracle Grid Engine or Platform LSF then Bpipe will make your life easier by allowing pure Bpipe scripts to run on your cluster virtually unchanged from how you run them locally.</li>
+<li><strong>Notifications by Email, Instant Message, Message Queuing Systems</strong> - Bpipe can send you alerts to tell you when your pipeline finishes or even as each stage completes.</li>
+<li>See how Bpipe compares to <a href="http://docs.bpipe.org/Overview/ComparisonToWorkflowTools/">similar tools</a></li>
+</ul>
+<p>Take a look at the <a href="http://docs.bpipe.org/Overview/Introduction/">Overview</a> to
+see Bpipe in action, work through the <a href="http://docs.bpipe.org/Tutorials/Hello%2CWorld/">Basic Tutorial</a> 
+for simple first steps, see a step by step example of a <a href="http://docs.bpipe.org/Tutorials/RealPipelineTutorial/">realistic
+pipeline</a> made using Bpipe, or 
+take a look at the <a href="http://docs.bpipe.org">Reference</a> to see all the documentation.</p></div>
+        </div>
+
+	<footer class="col-md-12">
+		<hr>
+		
+		<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+	</footer>
+
+
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script>
+        <script src="./js/base.js"></script>
+    </body>
+</html>

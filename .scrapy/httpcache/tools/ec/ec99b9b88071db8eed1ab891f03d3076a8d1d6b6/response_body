@@ -1,0 +1,498 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bowhead &#8212; bowhead  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="toctree-wrapper compound">
+</div>
+<div class="section" id="bowhead">
+<h1>Bowhead<a class="headerlink" href="#bowhead" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the homepage of Bowhead, a cell velocity Python package. This
+package provides tools to analyze cell velocity from time series of wound
+healing experiments.</p>
+<p>The accompanying paper is found at <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1005900">PLOS</a>.</p>
+<p>Image data presented in that paper you can download <a class="reference external" href="http://bowhead.lindinglab.science/zone_exclusion.tar.gz">here</a>.</p>
+<p>The source code is available at <a class="reference external" href="https://gitlab.com/engel/bowhead">GitLab</a>.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>The package is installed via pip for python3</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip3 install bowhead
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>First import <code class="docutils literal notranslate"><span class="pre">bowhead</span></code> and <a class="reference external" href="http://pillow.readthedocs.io">Pillow</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">bowhead</span><span class="o">,</span> <span class="nn">PIL</span>
+</pre></div>
+</div>
+<p>To detect the wound on an image file called ‘wound_t08.jpg’
+call <a class="reference internal" href="#bowhead.detect" title="bowhead.detect"><code class="xref py py-func docutils literal notranslate"><span class="pre">bowhead.detect()</span></code></a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">threshold</span> <span class="o">=</span> <span class="o">.</span><span class="mi">25</span>  <span class="c1"># 25% of cell confluency</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_wound</span> <span class="o">=</span> <span class="n">bowhead</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="s1">&#39;img/wound_t08.jpg&#39;</span><span class="p">,</span> <span class="n">thresh</span><span class="o">=</span><span class="n">threshold</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The result is a dictionary with values from the detection such as area
+and perimeter and their variances.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_wound</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span>
+<span class="go">55551.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_wound</span><span class="p">[</span><span class="s1">&#39;area_variance&#39;</span><span class="p">]</span>
+<span class="go">20267858.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_wound</span><span class="p">[</span><span class="s1">&#39;center_of_mass&#39;</span><span class="p">]</span>
+<span class="go">(294.0, 286.0)</span>
+</pre></div>
+</div>
+<p>To visualize the detected wound on the original image use
+<a class="reference external" href="http://matplotlib.org">Matplotlib</a>. The perimeter coordinates are
+saved in the wound dictionary with the keyword ‘edge’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gray</span><span class="p">()</span>  <span class="c1"># keep image plots gray scale</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">imshow</span><span class="p">(</span><span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;img/wound_t08.jpg&#39;</span><span class="p">))</span>
+<span class="go">&lt;matplotlib.image.AxesImage object at ...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">my_wound</span><span class="p">[</span><span class="s1">&#39;edge&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#127ba6&#39;</span><span class="p">)</span>
+<span class="go">[&lt;matplotlib.lines.Line2D object at ...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;round_wound&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/round_wound.png" src="_images/round_wound.png" />
+</div>
+<div class="section" id="time-series">
+<h2>Time Series<a class="headerlink" href="#time-series" title="Permalink to this headline">¶</a></h2>
+<p>In order to analyze a time series experiment with multiple images a
+list of wound detection dictionaries is needed. Call
+<a class="reference internal" href="#bowhead.detect" title="bowhead.detect"><code class="xref py py-func docutils literal notranslate"><span class="pre">bowhead.detect()</span></code></a> with paths and corresponding time points</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">glob</span> <span class="k">import</span> <span class="n">glob</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">paths</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;img/*.png&#39;</span><span class="p">))</span>  <span class="c1"># time sorted images</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">paths</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_series</span> <span class="o">=</span> <span class="n">bowhead</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This call detects wounds on all images and assign an experimental time
+point to each of them. By plotting static frames per time point
+allows for creating a movie of the
+detection (e.g. with <a class="reference external" href="https://imageio.github.io">imageio</a>)</p>
+<img alt="_images/wound.gif" src="_images/wound.gif" />
+<p>The returned list <code class="docutils literal notranslate"><span class="pre">my_series</span></code> can be used to fit
+a velocity model (<a class="reference internal" href="#bowhead.Model" title="bowhead.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bowhead.Model</span></code></a>) with the function
+<a class="reference internal" href="#bowhead.Model.fit" title="bowhead.Model.fit"><code class="xref py py-func docutils literal notranslate"><span class="pre">bowhead.Model.fit()</span></code></a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">bowhead</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">my_series</span><span class="p">)</span>
+<span class="go">&lt;bowhead.velocity.Model object at ...</span>
+</pre></div>
+</div>
+<p>When a model is fitted it can be used to predict cell velocity t
+desired time points with <a class="reference internal" href="#bowhead.Model.predict" title="bowhead.Model.predict"><code class="xref py py-func docutils literal notranslate"><span class="pre">bowhead.Model.predict()</span></code></a>. Note that
+these do not have to be the original data time points</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">velocity</span><span class="p">,</span> <span class="n">std</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">return_std</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When <code class="docutils literal notranslate"><span class="pre">return_std=True</span></code> is passed to <code class="docutils literal notranslate"><span class="pre">predict</span></code>, the
+standard deviation of the velocity is also returned. Velocity
+with errors can be plotted like so</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">errorbar</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;#127ba6&#39;</span><span class="p">)</span>
+<span class="go">&lt;ErrorbarContainer object of ...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;hours&#39;</span><span class="p">)</span>
+<span class="go">Text(0.5, 0, &#39;hours&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;pixels / hours&#39;</span><span class="p">)</span>
+<span class="go">Text(0, 0.5, &#39;pixels / hours&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;velocity&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/velocity.png" src="_images/velocity.png" />
+</div>
+<div class="section" id="different-ways-to-detect-images">
+<h2>Different ways to detect images<a class="headerlink" href="#different-ways-to-detect-images" title="Permalink to this headline">¶</a></h2>
+<p>There are three different ways to give images
+to <a class="reference internal" href="#bowhead.detect" title="bowhead.detect"><code class="xref py py-func docutils literal notranslate"><span class="pre">bowhead.detect()</span></code></a>. Parse a file path to the image</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;img/wound_t08.jpg&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_wound</span> <span class="o">=</span> <span class="n">bowhead</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or a <code class="docutils literal notranslate"><span class="pre">PIL</span></code> image</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">PIL.Image</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pil_image</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_wound</span> <span class="o">=</span> <span class="n">bowhead</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">pil_image</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or even a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array_image</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">pil_image</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_wound</span> <span class="o">=</span> <span class="n">bowhead</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">array_image</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For all of the cases above a single image or a list
+of images can be used as input to <a class="reference internal" href="#bowhead.detect" title="bowhead.detect"><code class="xref py py-func docutils literal notranslate"><span class="pre">bowhead.detect()</span></code></a>.</p>
+</div>
+<div class="section" id="bright-field-and-similar-image-types">
+<h2>Bright-field and similar image types<a class="headerlink" href="#bright-field-and-similar-image-types" title="Permalink to this headline">¶</a></h2>
+<p>Some imaging techniques, such a bright-field or phase contrast,
+violates Bowhead’s assumption that cells are light and wounds are
+dark respectively. To overcome this the image gradient can be used
+instead of pixel intensity directly. Bowhead deploys a Scharr
+edge filter for this purpose. Users can use the utility function
+before analysis</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># sample image from &#39;TScratch&#39; by CSElab</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># www.cse-lab.ethz.ch/images/software/tscratch_sampledata.zip</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bright_path</span> <span class="o">=</span> <span class="s1">&#39;tscratch_example_image.jpg&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bright</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">bright_path</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grad</span> <span class="o">=</span> <span class="n">bowhead</span><span class="o">.</span><span class="n">image_gradient</span><span class="p">(</span><span class="n">bright</span><span class="p">)</span>  <span class="c1"># (or use file path)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">original</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bright</span><span class="p">)</span>  <span class="c1"># bright field image</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gradient</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span>  <span class="c1"># gradient map</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;transformed&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/transformed.png" src="_images/transformed.png" />
+<p>Or, for convenience, an argument can be given directly to
+<a class="reference internal" href="#bowhead.detect" title="bowhead.detect"><code class="xref py py-func docutils literal notranslate"><span class="pre">bowhead.detect()</span></code></a> to achieve the gradient transform indirectly</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_wound</span> <span class="o">=</span> <span class="n">bowhead</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">bright_path</span><span class="p">,</span> <span class="n">use_gradient</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>To see how the detection performs on the bright field image</dt>
+<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">imshow</span><span class="p">(</span><span class="n">bright</span><span class="p">)</span>
+<span class="go">&lt;matplotlib.image.AxesImage object at ...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">my_wound</span><span class="p">[</span><span class="s1">&#39;edge&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#127ba6&#39;</span><span class="p">)</span>
+<span class="go">[&lt;matplotlib.lines.Line2D object at ...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;bright_field_wound&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<img alt="_images/bright_field_wound.png" src="_images/bright_field_wound.png" />
+</div>
+<div class="section" id="contour-tracing-method">
+<h2>Contour tracing method<a class="headerlink" href="#contour-tracing-method" title="Permalink to this headline">¶</a></h2>
+<p>By default Bowhead uses the Marching Squares algorithm with linear
+interpolation to establish the perimeter coordinate chain. This
+gives a perimeter with round corners on the pixel level. As an
+alternative a chain code implementation is available. Chain code
+saves the discrete pixel values and gives a rugged perimeter. Chain
+code runs slightly faster than Marching Squares. The
+perimeter length varies slightly between the two methods.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># use keyword argument to set the method</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;img/wound_t08.jpg&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">marching_wound</span> <span class="o">=</span> <span class="n">bowhead</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;marching&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">chain_wound</span> <span class="o">=</span> <span class="n">bowhead</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;chain&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="package-reference">
+<h1>Package Reference<a class="headerlink" href="#package-reference" title="Permalink to this headline">¶</a></h1>
+<p>Here is a list of the available classes and functions in the
+package. The <a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a> gives an alternative alphabetical
+listing of the package content.</p>
+<span class="target" id="module-bowhead"></span><dl class="class">
+<dt id="bowhead.Model">
+<em class="property">class </em><code class="descclassname">bowhead.</code><code class="descname">Model</code><span class="sig-paren">(</span><em>area_kwargs=None</em>, <em>perimeter_kwargs=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bowhead/velocity.html#Model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bowhead.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wound velocity model.</p>
+<p>The model is based on Gaussian Process Regression (GPR)
+and numerical differentiation. The GPR uses scikit-learn GPR class
+<code class="docutils literal notranslate"><span class="pre">sklearn.gaussian_process.GaussianProcessRegressor</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>area_kwargs</strong> (<em>dictionary</em>) – The keyword arguments to the area GPR model.</li>
+<li><strong>perimeter_kwargs</strong> (<em>dictionary</em>) – The keyword arguments to the perimeter GPR model.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>area</strong> (<em>area model</em>) – Instances of GaussianProcessRegressor from scikit-learn.</li>
+<li><strong>perimeter</strong> (<em>perimeter model</em>) – Instances of GaussianProcessRegressor from scikit-learn.</li>
+<li><strong>time</strong> (<em>sequence</em>) – Sequence of the input time points. Defined when fitted.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The keyword argument <code class="docutils literal notranslate"><span class="pre">kernel</span></code> is specifying the covariance function
+of the GPR models handling the area and perimeter. The default kernel
+is a sum of a linear and squared dotproduct kernel.
+See <a class="reference external" href="http://www.scikit-learn.org/stable/modules/gaussian_process.html">scikit-learn</a>
+for the different kernels that can be used. Note that the kernel
+hyperparameters are optimized during fitting.</p>
+<dl class="method">
+<dt id="bowhead.Model.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>wounds</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bowhead/velocity.html#Model.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bowhead.Model.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fitting the velocity model to wound data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wounds</strong> (<em>sequence of dictionaries</em>) – A sequence of wound dictionaries representing an experimental
+time series of the wound healing assay, as returned
+by <a class="reference internal" href="#bowhead.detect" title="bowhead.detect"><code class="xref py py-func docutils literal notranslate"><span class="pre">detect()</span></code></a>.
+The area, perimeter and time point of each wound is used to
+fit the overall velocity model. All these attributes should
+be positive scalars.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>self</strong> – The velocity model in a fitted state.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#bowhead.Model" title="bowhead.Model">Model</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bowhead.Model.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>time</em>, <em>dt=0.1</em>, <em>return_std=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bowhead/velocity.html#Model.predict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bowhead.Model.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predicting a velocity curve of a wound healing experiment.</p>
+<p>In addition to the mean of the predictive distribution, also its
+standard deviation (return_std=True) can be requested.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time</strong> (<em>sequence</em>) – Desired time points of the velocity prediction. Should be
+positive.</li>
+<li><strong>dt</strong> (<em>scalar</em>) – The time interval for calculating velocity.</li>
+<li><strong>return_std</strong> (<em>bool</em>) – Whether to include the standard deviation of the prediction
+or not.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>velocity, [vel_std]</strong> – Velocity and (optionally) it’s standard deviation.
+Returned either one array or (if return_std=True) as a tuple
+(velocity, vel_std).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">1d arrays</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="bowhead.detect">
+<code class="descclassname">bowhead.</code><code class="descname">detect</code><span class="sig-paren">(</span><em>images</em>, <em>time=None</em>, <em>sigma=25</em>, <em>thresh=0.4</em>, <em>err=0.05</em>, <em>radius=None</em>, <em>use_gradient=False</em>, <em>method='marching'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bowhead/core.html#detect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bowhead.detect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect wound on a image with uncertainty.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>images</strong> (<em>sequence of</em><em> [</em><em>file paths | numpy.ndarray | PIL.Image</em><em>]</em>) – Images to detect wound(s) from. A single image path, array,
+or PIL image can be passed outside a sequence.</li>
+<li><strong>time</strong> (<em>sequence</em>) – The time points of the images (same order as images).</li>
+<li><strong>sigma</strong> (<em>scalar</em>) – The standard deviation of the image smoothing.
+This should be roughly the same as the distance
+(in pixels) between cells at confluency.</li>
+<li><strong>thresh</strong> (<em>scalar</em>) – Threshold factor to calculate wound boundary.
+Between zero and one.</li>
+<li><strong>err</strong> (<em>scalar</em>) – Standard error of the threshold value to calculate uncertainty
+of the detection.</li>
+<li><strong>radius</strong> (<em>scalar</em><em>, </em><em>default is None</em>) – If radius is not None and more than 2 images parsed
+the algorithm uses the mean center of mass of the two first wounds
+to define a circular zone of exclusion with radius <code class="docutils literal notranslate"><span class="pre">radius</span></code>
+in pixels. Subsequent wound candidates have to been
+inside this zone to be considered valid wounds.</li>
+<li><strong>use_gradient</strong> (<em>boolean</em><em>, </em><em>default is False</em>) – Whether to preprocess the images with a Scharr edge filter.
+This is useful to better detect wounds on bright-field images
+and other types where cells appear as a both light and
+dark in the microscope image.</li>
+<li><strong>method</strong> (<em>string</em><em>, </em><em>default is 'marching'</em>) – Which method to use for contour tracing.
+Choose between ‘marching’ for the marching square algorithm
+or ‘chain’ for chain code tracing. Chain code is fastest.
+The perimeter found differs slightly because Marching square
+finds interpolated round edges at pixel corners where chain
+code result in a standard pixel chain.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p><strong>wound(s)</strong> – Returns one dictionary (or a list of several) with the
+detected wound values</p>
+<blockquote>
+<div><ul class="simple">
+<li>area</li>
+<li>perimeter (without parts that touch image border)</li>
+<li>area and perimeter variances</li>
+<li>center of mass</li>
+<li>time</li>
+<li>edge (tuple of wound edge x and y coordinates)</li>
+<li>filename, (image file path if loaded from disk)</li>
+<li>image area</li>
+</ul>
+</div></blockquote>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">None</span></code>, for wounds that can not be detected.</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dictionary or a list of dictionaries</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>All image types and bit depth supported by <a class="reference external" href="http://pillow.readthedocs.io">Pillow</a> can be used as input.
+If the images contain more than one color channel the sum of all
+channels will be used.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="bowhead.sort_and_cutoff">
+<code class="descclassname">bowhead.</code><code class="descname">sort_and_cutoff</code><span class="sig-paren">(</span><em>wounds</em>, <em>min_area=0.05</em>, <em>abs_area=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bowhead/util.html#sort_and_cutoff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bowhead.sort_and_cutoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort by time and cutoff based on minimum area.</p>
+<p>Utillity function to sort wounds by time and filter out
+wounds by minimum area (pixel^2).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>wounds</strong> (<em>sequence of dictionaries</em>) – A sequence of wound dictionaries representing an experimental
+time series of the wound healing assay, as returned
+by <a class="reference internal" href="#bowhead.detect" title="bowhead.detect"><code class="xref py py-func docutils literal notranslate"><span class="pre">detect()</span></code></a>.</li>
+<li><strong>min_area</strong> (<em>float</em>) – Percentage (or absolute) image size to consider a
+closed wound area.
+After this limit is hit the following time points will be excluded
+from the wound list.</li>
+<li><strong>abs_area</strong> (<em>bool</em>) – Wether to use absolute area.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p><strong>wounds</strong> – A wound list sorted by time point of the wounds.
+The following will remove wounds from the returned list:</p>
+<blockquote>
+<div><ul class="simple">
+<li>wound area smaller than <code class="docutils literal notranslate"><span class="pre">min_area*image</span> <span class="pre">area</span></code> or <code class="docutils literal notranslate"><span class="pre">abs_area</span></code></li>
+<li>wounds with later time point than the first removed</li>
+<li>None valued wounds</li>
+</ul>
+</div></blockquote>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list of dictionaries</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="bowhead.image_gradient">
+<code class="descclassname">bowhead.</code><code class="descname">image_gradient</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bowhead/util.html#image_gradient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bowhead.image_gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocess bright-field or similar type images.</p>
+<p>Applys a Scharr filter and normalizes the output gradient image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>image</strong> (<em>[</em><em>file path | numpy.ndarray | PIL.Image</em><em>]</em>) – A color or grayscale image as file path
+numpy array or PIL image.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>image</strong> – A normalized image representing the gradient (edge magnitude)
+of the input image.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">PIL.Image (8 bit image mode ‘L’)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="#">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Bowhead</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li><a class="reference internal" href="#time-series">Time Series</a></li>
+<li><a class="reference internal" href="#different-ways-to-detect-images">Different ways to detect images</a></li>
+<li><a class="reference internal" href="#bright-field-and-similar-image-types">Bright-field and similar image types</a></li>
+<li><a class="reference internal" href="#contour-tracing-method">Contour tracing method</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#package-reference">Package Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Mathias Engel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

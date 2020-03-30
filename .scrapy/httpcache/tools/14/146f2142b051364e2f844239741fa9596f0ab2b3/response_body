@@ -1,0 +1,28 @@
+<html><head><title>BeAtMuSiC v1.0</title>
+<link rel="stylesheet" type="text/css" href="beat.css">
+<script language="JavaScript" src="./checkform.js"></script>
+<script language="JavaScript" src="./double_menu.js"></script>
+<script type="text/javascript">
+<!--var img1 = new Image()
+var img2 = new Image()
+var img3 = new Image()
+var img5 = new Image()
+var img6 = new Image()
+var img7 = new Image()
+-->
+</SCRIPT>
+<script language="javascript" type="text/javascript">
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID).style.display != 'block') {
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script>
+</head><body bgcolor="#FFFFFF" aLink="#8011AA" link="#000080" vLink="#000080">
+
+<center><img border="0" src="./images/beat_title.png" width="650"><br><center><img border="0" src="images/menu_11.png" width="100" height="35">&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><a href="query.php"onMouseOver="img2.src='images/menu_21.png'" onMouseOut="img2.src='images/menu_20.png'"><img name="img2" border="0" src="images/menu_20.png" width="100" height="35"></a></td>&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><a href="results.php"onMouseOver="img3.src='images/menu_31.png'" onMouseOut="img3.src='images/menu_30.png'"><img name="img3" border="0" src="images/menu_30.png" width="100" height="35"></a></td>&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><a href="help.php"onMouseOver="img4.src='images/menu_41.png'" onMouseOut="img4.src='images/menu_40.png'"><img name="img4" border="0" src="images/menu_40.png" width="100" height="35"></a></td>&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><a href="http://babylone.3bio.ulb.ac.be/3bio/softs"  onMouseOver="img5.src='images/menu_51.png'" onMouseOut="img5.src='images/menu_50.png'"><img name="img5" border="0" src="images/menu_50.png" width="100" height="35"></a></td></center><center><table border="0" width="681" height="430" background="images/btab_10.jpg"><tr valign="top"><td><br><center><br><table border="0" width="590" cellpadding="0" cellspacing="0"><tr><td><p align="justify"><font color="#9020aa"><b>The BeAtMuSiC program</b></font> evaluates the change in binding affinity between proteins (or protein chains) caused by single-site mutations in their sequence. The predictions are based on the structure of the protein-protein complex. BeAtMuSiC gives the possibility to perform either manually specified mutations, or a systematic scan of all possible mutations in a protein chain (or group of chains), or at the protein-protein interface.<br><br><ul><li>Press <font color="#9020aa"><b>PLAY</b></font> to submit a query to BeAtMuSiC.<li>Press <font color="#9020aa"><b>LISTEN</b></font> to check on your results.<li>Press <font color="#9020aa"><b>LEARN</b></font> for additional help and information.</p></ul></td></tr><tr><td><br><img border="0" src="images/references.png" width="282"><br><p align="justify"><b>Method & Webserver : </b><a href="http://www.ncbi.nlm.nih.gov/pubmed/23723246" target="blank">Dehouck Y, Kwasigroch JM, Rooman M, Gilis D. BeAtMuSiC: Prediction of changes in protein-protein binding affinity on mutations. <i>Nucleic Acids Research</i> <b>41</b>:W333-W339 (2013)</a>.<br>doi: <a href="http://dx.doi.org/10.1093/nar/gkt450" target="_blank">10.1093/nar/gkt450</a></p><p align="justify"><b>Participation to the CAPRI experiment : </b><a href="http://www.ncbi.nlm.nih.gov/pubmed/23843247" target="blank">Moretti R. <i>et al.</i> Community-wide evaluation of methods for predicting the effect of mutations on protein-protein interactions. <i>Proteins</i> (2013)</a>.<br>doi: <a href="http://dx.doi.org/10.1002/prot.24356" target="_blank">10.1002/prot.24356</a></p></td></tr></table></td></tr></table><br></body></html>

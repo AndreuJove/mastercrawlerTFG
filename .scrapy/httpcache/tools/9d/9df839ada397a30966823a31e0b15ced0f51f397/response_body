@@ -1,0 +1,107 @@
+<html>
+<head><base href="http://webs.iiitd.edu.in/raghava/antigendb/">
+<title>AntigenDB:A Database of Antigens</title>
+
+<META NAME="KEYWORDS" CONTENT="antigen epitope immunoinformatics database pathogen">
+<META NAME="DESCRIPTION" CONTENT="AntigenDB is database of antigens developed by Bioinformatics Center, IMTECH, India.">
+<META NAME="ROBOTS" CONTENT="ALL">
+ 
+<link type='text/css' rel='stylesheet' href="/raghava/antigendb/styles.css">
+
+<script type="text/javascript">
+//Enter domain of site to search.
+var domainroot="webs.iiitd.edu.in/raghava/antigendb"
+
+function Gsitesearch(search){
+search.q.value="site:"+domainroot+" "+search.qfront.value
+}
+
+</script>
+</head>
+
+<body topmargin="0">
+<table border="0" cellpadding="0" cellspacing="0" height="8%" width="100%">
+<tr align="center" bgcolor="#AF8968">
+<td> <img src="images/logo_antigendb.jpg"></td></tr>
+</table>
+
+<!---@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ---->
+
+<table border="0" cellpadding="1" cellspacing="0" height="100%" width="100%">
+<tr>
+        <td  class="left_menu"  bgcolor="#F0F8FF" rowspan="2" width="12%" valign="top">
+
+             <!--------Start Left Menu scripting------------->
+<font class="fleft"> <br><br>
+<br><br><a href="/raghava/antigendb/index.html" onMouseOver="this.className='mover'" onMouseOut="this.className='mout'"> Home </a>
+<br><br><a href="/raghava/antigendb/browse.html" onMouseOver="this.className='mover'" onMouseOut="this.className='mout'"> Browse </a>
+<br><br><a href="/raghava/antigendb/h_info.html" onMouseOver="this.className='mover'" onMouseOut="this.className='mout'">Architecture</a>
+<br><br><a href="/raghava/antigendb/info.html" onMouseOver="this.className='mover'" onMouseOut="this.className='mout'">Information</a>
+<br><br><a href="/raghava/antigendb/tables.html" onMouseOver="this.className='mover'" onMouseOut="this.className='mout'"> Tables </a>
+<br><br><a href="/raghava/antigendb/antigen_str.html" onMouseOver="this.className='mover'" onMouseOut="this.className='mout'">Structures</a>
+<br><br><a href="/raghava/antigendb/links.html" onMouseOver="this.className='mover'" onMouseOut="this.className='mout'">Links</a>
+<br><br><a href="/raghava/antigendb/gloss.html" onMouseOver="this.className='mover'" onMouseOut="this.className='mout'">Glossary</a>
+<br><br><a href="/raghava/antigendb/help_agdb.html" onMouseOver="this.className='mover'" onMouseOut="this.className='mout'">Help</a>
+
+<br><br><br>
+<form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)">
+
+  <h7>Search Website</h7>
+  <input name="q" type="hidden" />
+
+  <input name="qfront" type="text" style="width:110px;"/><br><input style="width:37px; height:28px;"  type="image" src="images/go.gif"  border="0" alt="go" n
+ame="go" /></h3>
+</form>
+
+
+</font>
+            <!-------- End Left Menu scripting------------->
+
+        </td>
+        <td height="3.5%">
+
+          <!--------Start Top Menu scripting------------->
+
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%" align="center">
+<tr  align="center" bgcolor="#DEB887">
+<td style="padding:0 10 0 15;">
+<a href="/raghava/antigendb/keyquery.html"><font class="style1"><b>Keyword Search</b></a></td><td>
+<a href="/raghava/antigendb/epiquery.html"><font class="style1"><b>Epitope Search</b></a></td><td>
+<a href="/raghava/antigendb/peptide_map.html"><font class="style1"><b>Peptide Mapping</b></a></td><td>
+<a href="/raghava/antigendb/antblast.html"><font class="style1"><b>Antigen Blast</b></a></td><td>
+<a href="/raghava/antigendb/sub_primarytab.html"><font class="style1"><b>Data Submission</b></a></td><td>
+</tr>
+        </table>
+         <!-------- End Top Menu scripting------------->
+
+        </td>
+</tr>
+<tr align="center" valign="top">
+
+        <td bgcolor="white">
+
+
+<!----#########  Start Of Working Area ############################# --->
+
+<div align=right> <a href="http://bic.uams.edu/raghava/antigendb/"> Mirror Site at UAMS</a> </div>
+<p align="justify">
+<b>If you are using AntigenDB database, Please cite:</b><br>
+Ansari HR, Flower DR, Raghava GP. AntigenDB: an immunoinformatics database of pathogen antigens.<br>
+Nucleic Acids Res., Jan 2010,D847-53.[PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/19820110">19820110</a>]<br>
+</p>
+<p align="justify">
+<font face="Verdana,arial" size=""><b>&nbsp;&nbsp;&nbsp;&nbsp;
+The field of computer-aided vaccine design faces many challenges. Perhaps the greatest is to identify protective antigens; proteins which can serve as potential vaccine candidates.In the past, attempts have been made to collect and compile known antigenic regions, or epitopes, which may stimulate B and T cell responses (<a href="/raghava/mhcbn">MHCBN</a>, <a href="/raghava/bcipep/">BCIPEP</a>, <a href="http://www.jenner.ac.uk/AntiJen/">AntiJen</a>, <a href="http://www.immuneepitope.org/home.do">IEDB</a>). However, such epitope databases while providing comprehensive information about experimentally validated epitopes within proteins they do not cover a wide range of known antigens. We have developed a database 'AntigenDB' which provides comprehensive information about a wide range of experimentally-validated antigens. The structure of AntigenDB is outlined below:
+</b></p>
+<img align="centre" src="/raghava/antigendb/images/archi_5.gif"><br> 
+<!----#########  End Of Working Area ############################# --->
+
+	</td>
+</tr>
+</table>
+
+<!---@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ---->
+
+</body>
+</html>
+

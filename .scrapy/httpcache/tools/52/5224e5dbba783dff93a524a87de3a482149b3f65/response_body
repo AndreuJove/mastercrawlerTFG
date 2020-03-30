@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<head><base href="http://webs.iiitd.edu.in/raghava/apssp2/">
+<TITLE> APSSP2: Advanced Protein Secondary Structure Prediction Server </TITLE>
+<meta name="description" content="protein secondary structure prediction from Dr G P S Raghava's Group">
+<meta name="keywords" content="Free protein secondary structure prediction web server neural network">
+</HEAD>
+<BODY bgcolor=white fgcolor=black link=blue vlink=navy background="/back/back1.jpg">
+<center>
+
+<h2> APSSP2: Advanced  Protein Secondary Structure Prediction Server </h2>
+<A HREF="http://imtech.res.in/raghava/" </a>Dr. G P S Raghava</a>, Scientist & Head , <A HREF="http://imtech.res.in/bic/" target="_top">Bioinformatics Centre</A><br>
+<A HREF="http://imtech.res.in/" target="_top">Institute of Microbial Technology</A>, Sector 39A, Chandigarh, INDIA
+<HR 20>
+<marquee behavior=alternate scrollamount=1 ><a href="http://osddlinux.osdd.net/">OSDDlinux for Standalone, Galaxy & Local version</a>  </marquee>
+<HR 20>
+</center>
+This server allow to predict the secondary structure of protein's from their
+amino acid sequence. This is an advanced version of our PSSP server, which participated in 
+<A href="http://PredictionCenter.llnl.gov/casp3/">CASP3</A> and in  <A href="http://PredictionCenter.llnl.gov/casp4/">CASP4</A>. PSSP was also part of <A href="http://www.cs.bgu.ac.il/~dfischer/CAFASP2 ">
+CAFASP2</a>. Raghava, G. P. S. (2000) Protein secondary structure prediction using nearest neighbor 
+and neural network approach. CASP4: 75-76. This server is also <a href="http://cubic.bioc.columbia.edu/~eva/sec/res_sec.html">
+participating in world-wide Live-Bench competition EVA</a>, so you can get the perfomance of methods 
+including APSSP2 from EVA Server.  This server is also part of <A href="http://dodo.cpmc.columbia.edu/predictprotein/submit_meta.html">Meta II Prediction</A> server. Please visit, 
+<a href="http://www.expasy.ch/tools/">ExPASy Tools </a>for more protein structure prediction tools.
+<br><br>
+APSSP2 particpated in <a href="http://PredictionCenter.llnl.gov/casp5/">CASP5</a> / <a href="http://www.cs.bgu.ac.il/~dfischer/CAFASP3/">CAFASP3</a> and predicted all CASP5 target proteins with high accoracy (See <a href="http://cubic.bioc.columbia.edu/eva/cafasp/" >CAFASP3 results</a>) . It got <a href="http://cubic.bioc.columbia.edu/eva/cafasp/sechom/common.html">2nd rank with Q3 = 82.5% (slighlty lower to SSPRO(Ist) Q3=82.7%)</a>, and <a href=http://cubic.bioc.columbia.edu/eva/cafasp/secuni/common.html#set1">4th rank Q3=79.0% (Slightly lower than PSIPred, SAM-T02sec and PROFphd)</a> in two categories of CAFASP3.
+The performance of of APSSP2 in EVA was impressive when all proteins were considered, where 
+it perform better than all other methods <a href="http://cubic.bioc.columbia.edu/eva/sec_2002_10/method/">(Q3 = 82.9%)</a>. 
+
+<br><br>
+Please visit<a href="http://www.forcasp.org/modules.php?name=Papers&file=article&sid=1817"><blink> FORCASP </blink>site for more detail about APSSP2</a>.
+
+<FORM METHOD=\"POST\" ACTION="/cgibin/apssp2/apssp.pl">
+<H1>
+<hr>
+<h4>
+<u><br>This web server is based on following publication, please cite if you are using this web server <br></u><br>
+Raghava, G. P. S. (2002) APSSP2 : A combination method for protein secondary structure prediction based on neural network and example based learning. CASP5. A-132.
+</h4>
+<HR NOSHADE WIDTH="100%">
+<center><u>Request Form</u></center><BR>
+<br>
+</h1>
+Target/name of protein (optional): <INPUT Name="target">
+<br>
+Paste your sequence data here:<br>
+<TEXTAREA NAME="seq" ROWS=8 COLS=60 ALIGN=TOP></TEXTAREA><br>
+<br><br>
+Please Select the Format of your Sequence (File or Paste)<br>
+
+<INPUT type=radio name="Input" value="seq1" checked> Single sequence - amino acids only  <br>
+
+Please Enter your Email: <INPUT Name="email">
+<h6> (Please enter your email address if you want to receive your result via email)</h6><br>
+<pre><INPUT TYPE="reset" VALUE="Clear All">                   <INPUT TYPE="submit" VALUE="Run predictions!"></pre>
+
+</FORM>
+
+<HR WIDTH="100%">
+Contact Email Address: <a href="mailto:raghava@iiitd.ac.in">raghava@imtech.ernet.in</a>
+
+</BODY>
+</HTML>
+
+</h4>
+</BODY>
+</HTML>
+
+
+
+
+

@@ -1,0 +1,248 @@
+
+<html>
+<head>
+<meta http-equiv="Cache-control" content="no-cache">
+<title>
+ArchiP homepage
+</title>
+<script language="javascript" src="proton.js">
+</script>
+</head>
+<BODY BGCOLOR=#D1D1FF TEXT=#000040 style="font-size: 20;">
+
+<div style="background: #FFFFCF; position: absolute; top: 10; left: 10; width: 145; border: 2px solid grey;">
+<PRE><B>
+<FONT COLOR=#7F0080> #</FONT>.......<FONT COLOR=#7F0080># </FONT>
+<FONT COLOR=#5F00A0> S</FONT>.......<FONT COLOR=#9F0060>S </FONT>
+<FONT COLOR=#3F0C00>  T</FONT>.....<FONT COLOR=#BF0040>E </FONT>
+<FONT COLOR=#1F00E0>    R</FONT>.<FONT COLOR=#DF0020>Q </FONT>
+<FONT COLOR=#FF0000>     U </FONT>
+<FONT COLOR=#DF0020>    E</FONT>.<FONT COLOR=#1F00E0>C </FONT>
+<FONT COLOR=#BF0040>  N</FONT>.....<FONT COLOR=#3F00C0>T </FONT>
+<FONT COLOR=#9F0060> C</FONT>.......<FONT COLOR=#5F00A0>U </FONT>
+<FONT COLOR=#7F0080> #</FONT>.......<FONT COLOR=#7F0080>R</FONT>
+<FONT COLOR=#5F00A0>  E</FONT>.....<FONT COLOR=#9F0060>E </FONT>
+<FONT COLOR=#3F00C0>    S</FONT>.<FONT COLOR=#BF0040>S </FONT>
+</B>    
+</PRE>
+</div>
+      
+<div style="background: #FFFFCF; position: absolute; top: 375; left: 10; width: 145; border: 2px solid grey;">
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Services:</u><br>
+  &nbsp;&nbsp;<a href="proton.php?subproj=sheep" title="Build sheet maps for PDB structure">SheeP</a><br>
+  &nbsp;&nbsp;<a href="proton.php?subproj=archip" title="Detect contacts, beta-barrels and architectures">ArchiP</a><br>
+  &nbsp;&nbsp;<a href="proton.php?subproj=motan" title="Detect structural motifs">MotAn</a><br>
+  &nbsp;&nbsp;<a href="proton.php?subproj=motis" title="Search for structural motifs">MotiS</a><br>
+  &nbsp;&nbsp;<a href="proton.php?subproj=yadd" title="Detect structural domains">YADD</a><br>                             
+  &nbsp;&nbsp;<a href="proton.php?subproj=proton" title="SheeP, ArchiP and MotAn implemented in a single program">ProtOn</a><br>
+  &nbsp;&nbsp;<a href="proton.php?subproj=protop" title="Alignments of topologies">ProTop</a><br>
+  &nbsp;&nbsp;<a href="proton.php?subproj=mba" title="Align sequences using sheet maps">MBA</a>
+
+  <p>&nbsp;&nbsp;<a href="proton.php?subproj=archip&page=help&data=alldocs" target="_new">Documentation</a>
+  <br>&nbsp;&nbsp;<a href="" onClick="window.open ('proton.php?subproj=archip&page=downloads', '', '');">Download</a>
+  <br>&nbsp;&nbsp;<a href="" onClick="window.open ('proton.php?subproj=archip&page=help&data=readme#lic', '', '');">License</a>
+  <br>&nbsp;&nbsp;<a href="proton.php?subproj=archip&page=help&data=about" target="_new">About</a>
+  
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Planned services:</u><br>
+  &nbsp;&nbsp;<a href="proton.php?subproj=tools" onClick="alert('Comming soon');return false" title="Editing sheet maps and some other tools">Tools</a>
+</div>
+
+<div style="position: relative; top: 10; left: 175; width: 520px;">
+<a style="font-size: 100px"><b>ArchiP</b></a><br>
+<a style="font-size: 30px;">  
+<b>Archi</b>tectures of <b>P</b>roteins (ver. beta.1603061903)</a>
+<font size=3><br>ArchiP detects <a href='proton.php?subproj=archip&page=help&data=def_archip;common_arch' target='_new'>architectures</a> of all-&beta; and &alpha;/&beta;-classes<br>
+Older version of ArchiP is <a href="/~evgeniy/cgi-bin/proton_2011/proton.php?subproj=architector">available</a></font>.
+  <div style="position: absolute; top: 30; left: 550; width: 500px; z-index: 100;">
+    Outline of ArchiP algorithm:
+1. Protein structure in PDB format and
+      <a href='proton.php?subproj=archip&page=help&data=def_sheep' target='_new'>&beta;-sheet maps</a> 
+      and boudaries of &alpha;-helixes are taken as input.2. &beta;-barrels, 
+                  contacts between &beta;-sheets and between &beta;-sheets and layers of &alpha;-helixes 
+                  are detected. 3. <a href='proton.php?subproj=archip&page=help&data=def_archip;common_arch' target='_new'>Architectuires</a> 
+                  are detected as a sets of contacted units (&beta;-sheets, &beta;-barrels and/or layers of &alpha;-helixes).   </div>
+</div>
+
+
+<div style="position: absolute; left: 175; top: 270; width: 100%;">
+
+<script language="JavaScript">
+<!--
+
+InputForms = new Array 
+(
+  "<input type=file id='pdbfile=SUFFIX=' name='pdbfile=SUFFIX='><font size=-1>Not larger than 2M</font>",
+  "<input type=text value='1DFM' id='pdbcode=SUFFIX=' name='pdbcode=SUFFIX='>",
+  "<select name='examplecode=SUFFIX=' id='examplecode=SUFFIX='><option value='1c9o_A.ent'>1C9O, chain A</option><option value='4ix9_A.ent'>4IX9, chain A</option><option value='1p1r_D164-339.ent'>1P1R, chain D, domain 164-339</option><option value='1sw3_A.ent'>1SW3, chain A</option><option value='1thf_D.ent'>1THF, chain D</option><option value='1ijq_A377-642.ent'>1IJQ, chain A, domain 377-642</option><option value='1b2u_E.ent'>1B2U, chain E</option><option value='1bww_A.ent'>1BWW, chain A</option><option value='1uy0_A.ent'>1UY0, chain A</option><option value='1gof_A151-537.ent'>1GOF, chain A, domain 151-537</option><option value='1nlq_A.ent'>1NLQ, chain A</option><option value='1geu_A147-262.ent'>1GEU, chain A, domain 147-262</option><option value='1pkv_A.ent'>1PKV, chain A</option><option value='1luc_A.ent' selected>1LUC, chain A</option><option value='1jqb_A1140-1313.ent'>1JQB, chain A, domain 1140-1313</option><option value='1PF7.pdb'>1PF7</option><option value='1k5c_A.ent'>1K5C, chain A</option><option value='1dfm_A.ent'>1DFM, chain A</option><option value='1msa_A.ent'>1MSA, chain A</option><option value='1a4i_A2-126.ent'>1A4I, chain A, domain 2-126</option><option value='1ok0_A.ent'>1OK0, chain A</option><option value='2h2n_A15-331.ent'>2H2N, chain A, domain 15-331</option><option value='1gxd_A429-631.ent'>1GXD, chain A, domain 429-631</option><option value='1gq1_A134-567.ent'>1GQ1, chain A, domain 134-567</option><option value='1nkg_A251-337.ent'>1NKG, chain A, domain 251-337</option><option value='1mkf_A.ent'>1MKF, chain A</option></select>"
+);
+
+// -->
+</script>
+
+<form name="proton_form" id="proton_form" method="post" action="proton.php" enctype="multipart/form-data" onSubmit="return submitForm ( 'newfile' );">
+<input type=hidden name="MAX_FILE_SIZE" id="MAX_FILE_SIZE" value="2097152">
+<!-- common -->
+
+<a id="commonform">
+<input type=hidden name="subproj" id="subproj" value="archip">
+<input type=hidden name="jobid" id="jobid" value="">
+<input type=hidden name="act" id="act" value="unk">
+<input type=hidden name="showns" id="showns" value="pac">
+<input type=hidden name="showns_prev" id="showns_prev" value="">
+<input type=hidden name="gettingname" id="gettingname" value="">
+<input type=hidden name="gettindata" id="gettingdata" value="">
+<input type=hidden name="tops_generated" id="tops_generated" value="">
+<input type=hidden name="clone_command" id="clone_command" value="">
+</a>
+
+<!--  Тут отображается список контактов, которые мы показываем на картах бета-листов  -->
+<input type=hidden name="hel_count" id="hel_count" value="">
+<input type=hidden name="sht_count" id="sht_count" value="">
+<input type=hidden name="shtcnt_all" id="shtcnt_all" value="">
+<input type=hidden name="localfile" id="localfile" value="">
+
+<p>
+<a style="font-size: 25; text-decoration: underline;" id="start">Start new ArchiP job</a>
+
+<script language="JavaScript">
+<!--
+
+
+  loadxmap = '';
+
+  function SetMapUpload ( sel, suffix )
+  {
+    var a = document.getElementById ('upload_map_input' + suffix);
+    if ( sel.options[5].selected )
+    { a.innerHTML = a.innerHTML.substring (4, a.innerHTML.length-3);
+      if ( loadxmap = '' ) loadxmap = a.innerHTML;
+    } else
+    { a.innerHTML = '<!--' + loadxmap + '-->';
+    }
+  }
+
+
+var BetaDetectorSelect = new Array ();
+    BetaDetectorSelect[""] = "";
+    BetaDetectorSelect["_2"] = "";
+    BetaDetectorForDatabase = " SheeP based on DSSP ";
+
+function SetInput ( suffix, sel )
+{
+  if ( sel.value == "pdb90" )
+  { document.getElementById("input" + suffix).innerHTML = "";
+    document.getElementById("beta_detector" + suffix).innerHTML = BetaDetectorForDatabase;
+    return;
+  }
+
+  document.getElementById("input" + suffix).innerHTML=InputForms[sel.selectedIndex].replace(/=SUFFIX=/g, suffix);
+  document.getElementById("beta_detector" + suffix).innerHTML = BetaDetectorSelect[suffix];
+
+  }
+
+function PrintInputForm ( header, suffix, allow_databases )
+{
+  document.write ("<h2>" + header + "</h2>" );
+  document.write ("<font size=-1><a href='proton.php?subproj=archip&page=help&data=interface_startnewjob' target='_new'>help</a></font>:" );
+  document.write ("<select name='source" + suffix + "' id='source" + suffix + "' onChange='SetInput(\"" + suffix + "\", this);'>");
+  document.write ("  <option " + ( allow_databases ? "" : "selected" ) + " value='uploadfile'>Upload your local file (in PDB format)</option>" );
+  document.write ("  <option value='pdbcode'>Enter PDB code</option>" );                
+  document.write ("  <option value='example'>Use example (select from list)</option>" );
+  if ( allow_databases )
+    document.write ("  <option selected value='pdb90'>Protein Data Bank (set of records with less than 90% identity to each other)</option>" );
+  document.write ("</select>" );
+  document.write ("<a id='input" + suffix + "'>" );
+  if ( ! allow_databases )
+    document.write ( InputForms[0].replace ( /=SUFFIX=/g, suffix ) );
+  document.write ( "</a></p>" );
+
+  
+  document.write ('<a style="font-size: 25; text-decoration: underline;">&beta;-sheets detector:</a>' );
+  document.write ('<a id="beta_detector' + suffix + '">' );
+
+  BetaDetectorSelect[suffix] = '<select name="sse_detect' + suffix + '" onChange="SetMapUpload(this, \'' + suffix + '\');">';
+  BetaDetectorSelect[suffix] += ' <option value="dsspmod">SheeP based on DSSP (recommended)</option>';
+  BetaDetectorSelect[suffix] += ' <option value="stridemod">SheeP based on STRIDE</option>';
+  BetaDetectorSelect[suffix] += ' <option value="dssp">Original DSSP (SheeP will build maps without modifications)</option>';
+  BetaDetectorSelect[suffix] += ' <option value="stride">Original STRIDE (SheeP will build maps without modifications)</option>';
+  BetaDetectorSelect[suffix] += ' <option value="makessp">SheeP based on MakeSSP (recommended for C-alpha only files)</option>';
+
+  BetaDetectorSelect[suffix] += "<option value='upload_map'>Upload your map in XMAP format</option>";  BetaDetectorSelect[suffix] += '</select>';
+
+  if ( ! allow_databases) 
+  { document.write ( BetaDetectorSelect[suffix] );
+  } else
+  { document.write ( BetaDetectorForDatabase );
+  }
+
+  document.write ('</a><font size=-1><a href="proton.php?subproj=archip&page=help&data=interface_makemaps" target="_new">help</a></font>' );
+  document.write ('<p>');
+
+  document.write ('<a id="upload_map_input' + suffix + '"><!--<input type=file name="xmapfile' + suffix + '" id="xmapfile' + suffix + '">--></a>' );
+  
+}
+
+  PrintInputForm ( '', '', false );
+
+//-->
+</script>
+
+  <script language=JavaScript>
+<!--
+  function hideSides ( Visible )
+  {
+  	var r = document.getElementById ('sideradio');  		
+  	if  ( Visible )
+  	{
+  	 	r.style.visibility = "visible"
+  	} else
+  	{
+  	 	r.style.visibility = "hidden"
+  	}
+  }
+// -->
+</script>
+
+<div style="position: relative; height: 150;">
+<a style="font-size: 25; text-decoration: underline;">Output:</a>
+
+
+<div style="position: absolute; top: 0; left: 100 ; width: 300">
+<select name="reports" id="reports" multiple size=7>
+
+  <option value="e">Regions of &beta;-sheets</option>
+  
+  <option value="l">Architectural units</option>
+  
+  <option value="b" selected>&beta;-barrels</option>
+  
+  <option value="c">Contacts between units</option>
+  
+  <option value="a" selected>Architectures</option>
+  
+  <option value="p" selected>Architectural graph</option>
+  </select>
+<font size=-1><a href='proton.php?subproj=archip&page=help&data=interface_reports' target='_new'>help</a></font>
+</div>
+</div>
+<p>
+<input type=button value="Clear form" onClick="window.location.reload(true);">
+<input type=submit value="Start">&nbsp;<!-- input type=reset -->
+
+</form>
+
+<div style="position: relative">
+<hr>
+<div style="position: relative">
+Contact: <a href="mailto:evaksianov@gmail.com">evaksianov@gmail.com</a>
+<br>Please, cite: 
+<a href="http://www.ncbi.nlm.nih.gov/pubmed/22809339">
+Aksianov E., Alexeevski A. SheeP: A Tool for Description of 
+&beta;-Sheets in Protein 3D Structures. <i>J. Bioinform. Comput. Biol.</i> 
+2012. <b>10</b>(2).</a><p>&copy; Evgeniy Aksianov
+<p><small><i>Work on this service is supported by Russian Foundation of Basic Research, grants 13-07-00969 and 14-04-31709_mol_a.</i></small>
+</div>
+</div>
+</div>
+</body>
+</html>

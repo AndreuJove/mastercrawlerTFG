@@ -1,0 +1,90 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>ATR Hunter</title>
+</head>
+
+<body bgcolor="#aeaeae">
+
+<p dir="ltr"><i>
+<font face="Haettenschweiler" style="FONT-SIZE: 56pt" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Haettenschweiler" color="#0000ff" style="FONT-SIZE: 60pt">ATR</font><font style="FONT-SIZE: 56pt; FONT-WEIGHT: 700; LETTER-SPACING: -7pt" face="Shruti" color="#000040">Hunter</font><font face="Haettenschweiler" style="FONT-SIZE: 56pt" color="#0000ff">&nbsp;&nbsp;
+</font><font style="FONT-SIZE: 56pt; FONT-WEIGHT: 700; LETTER-SPACING: -7pt" face="Shruti" color="#000040">
+<IMG align=middle border=0 height=154 src="nwr_DNA.GIF" style       ="LEFT: 306px; POSITION: absolute; TOP: 6px; Z-INDEX: -1" width=286 ></font><font face="Haettenschweiler" style="FONT-SIZE: 56pt" color="#0000ff">&nbsp;&nbsp;&nbsp;
+</font></i></p>
+
+<p dir="ltr">&nbsp;</p>
+
+<p dir="ltr"></p>
+
+<P dir=ltr>&nbsp;</P>
+<table border="0" cellspacing="1" width="100%" id="AutoNumber1" height="621">
+  <tr>
+    <td width="100%" height="6" style="float: left" colspan="2" valign="bottom">
+
+  <font style="font-size: 16pt">ATR</font><font size="4">HUNTER information page</font><a target="_self" href="ATRHunter.htm"><input type="button" value="Homepage"  onClick="location.href='ATRHunter.htm';return false" id=submit1 name=submit1 style="COLOR: mediumblue; float:right"></a></td>
+    </tr>
+  <tr>
+    <td width="100%" height="93" colspan="2" bgcolor="#999999">
+
+<P dir=ltr><font size="4">An approximate tandem repeat (ATR) in a genomic 
+sequence is a string of nucleotides repeated consecutively at least twice with 
+some small differences between the repeated copies. ATR</font>HUNTER<font size="4"> 
+finds and displays approximate tandem repeats in DNA sequences</font></P>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" height="89" colspan="2">
+<p dir="ltr"><FONT color=maroon size=5><STRONG><a name="exe"></a>Executables</STRONG></FONT> </p>
+<P align=left><font size="4">Stand-alone programs:&nbsp;&nbsp;
+<a href="http://www.cs.technion.ac.il/~ywex/atr/atrhunter_wins.zip">Windows</a>,
+<a href="http://www.cs.technion.ac.il/~ywex/atr/atrhunter_unix.zip">Unix 
+(Sun/Solaris)</a>,
+<a href="http://www.cs.technion.ac.il/~ywex/atr/atrhunter_linux.zip">Linux</a>.</font></P>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" height="81" colspan="2" bgcolor="#999999"><FONT color=maroon size=5><STRONG>
+    <a name="results"></a>Experimental 
+Results</STRONG></FONT><b><font size="5" color="#800000"> and counting 
+methods</font></b><br>
+<br>
+<font size="4"><a href="ATRexperiments.htm">A comparison between&nbsp;</a></font><STRONG><FONT color=black size=4><a href="ATRexperiments.htm">ATR<FONT size=3>HUNTER</FONT></a></FONT><font size="3" color="black"><a href="ATRexperiments.htm">
+</a>
+</font></STRONG><font size="4"><a href="ATRexperiments.htm">and TRF, and other 
+experiments.</a></font></td>
+  </tr>
+  <tr>
+    <td width="100%" height="172" colspan="2">
+<p dir="ltr"><FONT color=maroon 
+size=5><STRONG><a name="links"></a>Links to related software</STRONG></FONT></p>
+<p dir="ltr"><FONT color=black><FONT size=4><a href="http://c3.biomath.mssm.edu/trf.html" target="_blank">TRF</a><STRONG>&nbsp;</STRONG>Software 
+for identifying ATRs</FONT>. <b>(by G. Benson)</b></FONT></p>
+<p dir="ltr"><FONT color=black size="4"><a href="http://www.genomes.de" target="_blank">REPuter</a> Software for compute and visualize 
+repeats. </FONT><b><font color="black" size="3">(by S. Kurtz and J.V. Choudhuri)</font></b></p>
+<p dir="ltr"><FONT size=4><a href="http://csweb.cs.haifa.ac.il/library/appro_try1.html" target="_blank">Canonical 
+k-repeat</a>&nbsp;A program for approximate tandem repeats. </FONT><b><font size="3">(by
+G. Landau, J. Schmidt &amp;&nbsp; D. Sokol)</font></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" height="86">
+<IMG align=left border=0 src="cs_title1.GIF" width="475" height="56"></td>
+    <td width="50%" height="86"><font size="-1">Last revised December 18, 2003<br>
+Send any questions, bug reports<br>
+    or comments to:<i>
+    <a href="mailto:ywex@cs.technion.ac.il?subject=ATRHunter's user comments">ywex@cs.technion.ac.il</a></i></font></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

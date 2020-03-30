@@ -1,0 +1,20 @@
+Date: Mon, 30 Mar 2020 18:49:25 GMT
+Content-Type: text/html; charset=UTF-8
+Set-Cookie: __cfduid=d7861d3dacd019498ee402e0972ddb8ea1585594165; expires=Wed, 29-Apr-20 18:49:25 GMT; path=/; domain=.acs.org; HttpOnly; SameSite=Lax
+Set-Cookie: ACSEnt=303014_6105_1585594165534; domain=.acs.org; path=/; secure
+Set-Cookie: JSESSIONID=aaaa3UBCZFvDFgjJHyKex; path=/
+Cf-Ray: 57c402ae0b16ff00-MAD
+Cache-Control: no-cache
+Link: </wro/igez~product.css>; rel=preload; as=style; nopush, </wro/igez~product.js>; rel=preload; as=script; nopush, <https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin
+Strict-Transport-Security: max-age=15552000
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Webstats-Respid: eb25890ec54be48698c4d74e091a707b
+X-Xss-Protection: 1; mode=block
+Vary: Accept-Encoding
+Server: cloudflare
+Content-Encoding: gzip
+Alt-Svc: h3-27=":443"; ma=86400, h3-25=":443"; ma=86400, h3-24=":443"; ma=86400, h3-23=":443"; ma=86400

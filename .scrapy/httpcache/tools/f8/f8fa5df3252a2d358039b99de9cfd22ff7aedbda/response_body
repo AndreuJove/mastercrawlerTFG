@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>CORNET: Predictor of Residue Contacts in Proteins</TITLE>
+</HEAD>
+<BODY TEXT="#000000"  LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER>
+<H1>
+<BR>
+<I><FONT COLOR="#3366FF"><FONT SIZE=+4>
+Prediction of Residue Contacts in Proteins</FONT></FONT></I></H1></CENTER> 
+
+<UL>
+<CENTER><IMG SRC="/oldpredictors/cornet/cornet1.gif" ALT="Predictions of Residue Contacts in Proteins" BORDER=2 ><!/CENTER></CENTER>
+<I><FONT COLOR="#3366FF"><FONT SIZE=+2>
+<BR>
+The method is a neural network based predictor that uses as input  correlated mutations, 
+sequence conservation, predicted secondary structure and 
+evolutionary information. This is an extension of the two previous methods
+</I>
+<BR>
+(Olmea O. and Valencia A. (1997) Fold. Des. 2: S25-32; 
+
+Fariselli P and Casadio R. (1999) Prot. Engng 12:15-21).
+
+</FONT></FONT></H1></CENTER>
+</UL>
+
+<HR><FORM method="post"><B><I><FONT SIZE=+1>
+
+Your e-mail address => <input name="address"><P>
+<p>
+
+Sequence name [Optional] => <input name="seqname"><P>
+<p>
+
+<p><b><i><font size=+1>
+Select your protein database:
+ <select name="db">
+ <option selected>SwissProt
+ <option>NonRedundant
+ </select>
+</font></i></b><P>
+
+
+<CENTER>
+
+Put
+your input sequence</FONT></I></B>
+<BR><TEXTAREA name="text" rows=20 cols=80 ></TEXTAREA>
+
+<BR>
+<B>
+Do you want a filter procedure?: <input type="radio"  name="filter"
+value="YES" > YES 
+<input type="radio" name="filter" value="NO" checked> No filter (default)
+</B>
+<P>
+
+
+<P><FONT SIZE=+1><B><I>Press&nbsp;&nbsp;<INPUT type="submit" value="here"></I></B>
+&nbsp;
+<B><I>to submit your prediction (<FONT COLOR="#009900">and please wait</FONT>)</I></B></FONT></FORM></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</BODY>
+</HTML>

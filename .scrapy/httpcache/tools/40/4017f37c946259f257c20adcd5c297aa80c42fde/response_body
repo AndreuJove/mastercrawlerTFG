@@ -1,0 +1,167 @@
+<html>
+
+<head>
+
+
+<title>CTLPred: A SVM & ANN Based CTL epitope Prediction method</title>
+<link rel="stylesheet" href="exstyle.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<SCRIPT language=JavaScript src="try/menu_array.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript src="try/mmenu.js" 
+type=text/javascript></SCRIPT>
+<form enctype="multipart/form-data" action="/cgibin/ctlpred/ctlpred.pl" method="post">    
+<center><table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="27" height="70">
+  <tr>
+    <td width="101" height="65">
+    <img border="0" src="compu.jpg" width="60" height="65"></td>
+    <td width="366" height="65">
+    <img border="0" src="banner1.jpg" width="620" height="62"></td>
+    <td width="100" height="65">
+    <a href="webs.iiitd.edu.in"> 
+    <img border="0" src="logo3.gif" width="72" height="65"></a></td>
+  </tr>
+  <tr>
+    <td width="640" colspan="3" height="5">  
+    <img border="0" src="lineup.jpg" width="754" height="3"></td>
+  </tr>
+
+</table></center>
+<br><br>
+<HR 20><marquee behavior=alternate scrollamount=1 ><a href="http://osddlinux.osdd.net/">OSDDlinux for Standalone, Galaxy & Local version</a>  </marquee><HR 20><table width=100%>
+
+<tr><td width="10%"></td>
+ 
+<td width="80%" align="center">
+
+<table border="2" cellpadding="0" cellspacing="4" bordercolor="blue" bgcolor="#E0E8F0" width="100%">
+<tr><td colspan=5 align="center"><span class="blacktitle">INTRODUCTION</span><br>
+<a href="http://www.vaxipred.com"><img src="/vaxipred/vaxipredlogo.jpg"></a>
+<p><div align="justify"><span class="mtext">CTLPred is a direct method for prediction of CTL epitopes crucial in subunit vaccine design.In direct methods the information or patterns of T cell epitopes instead of MHC binders were used for the development o
+f methods. The methods is based on elegant machine learning techniques like a<b> Artificial Neural network </b> and <b> support vector machine </b>. The methods also allows the consensus and combined prediction based on these two approaches.</span></div></p></td> 
+</tr>
+
+<tr><td colspan="5" bgcolor="#101870" align="center"><span class="blacktitle3">Prediction Form</span></td></tr>
+
+<tr><td rowspan="4" bgcolor="#80D0F0"><center><b><a href="http://webs.iiitd.edu.in/raghava/ctlpred/help.html#2" class="boldlink" target="top">Protein Sequence</a>
+ </b></center></td>
+<td bgcolor="#E0E8F0" colspan="2" ><span class="ctext">Name of Sequence<sub>[optional]</sub></span></td>
+<td colspan="2"><input type="text" name="anti" size="40">
+</td>
+
+</tr>
+
+
+<tr>
+<td colspan="2" >
+<span class="ctext">Paste your sequence<sub>[single amino acids codes]</sub></span></td>
+<td colspan="2"><textarea name="seq" rows="6"
+ cols="40"></textarea></td>
+                   </tr>
+<tr>
+<td colspan="2" ><span class="ctext"><blink><b>or</b></blink>&nbsp;Upload Sequence</span></td>
+<td colspan="2"><input type="file" name="file"
+size="40"></td></tr>
+
+<tr>
+ <td colspan="2" ><span class="ctext">Input sequence format</span></td>
+                     <td colspan="2">                     
+                    <select name="format" size="2">
+                    <option value="nformat" selected="selected">Amino acids 
+in single letter code (plain text)</option>
+                    <option value="sformat">Standard sequence format (PIR/FASTA/EMBL 
+etc.)</option>
+                    </select>
+                     </td>
+                   </tr>
+
+
+
+
+<tr>
+                     <td bgcolor="#80D0F0" rowspan="5">                     
+                    <center><b><a href="http://webs.iiitd.edu.in/raghava/ctlpred/help.html#5" class="boldlink" target="top">Prediction Approaches</a></b><br> <span class="ctext">[Select one approach]</span></center>
+                     </td>
+<td>
+ <a href="http://imtech.res.in/raghava/ctlpred/algo.html#2" class="txtlink"target="top">Quantitative matrices based</a></td><td><INPUT type=radio name="svm" value="QM" checked>
+                     </td>
+
+                     <td colspan=2 rowspan=5 valign="middle"><a href="http://webs.iiitd.edu.in/raghava/ctlpred/help.html#6" class="txtlink" target="top">QM Cutoff Score<SUB>[2....-2]</SUB></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
+sp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="qmthres" size="4" value="0.00"><br>
+
+<a href="http://webs.iiitd.edu.in/raghava/ctlpred/help.html#6" class="txtlink" target="top">ANN Cutoff Score<SUB>[0....1]</SUB></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="annthres"
+ size="4" value="0.51"><br><a href="http://webs.iiitd.edu.in/raghava/ctlpred/help.html#6" class="txtlink" target="top">SVM Cutoff Score<SUB>[-1.5....1.5]</sub></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="svmthres" size="4" 
+value="0.36">
+  </td>
+                   </tr>
+
+<tr>
+<td>
+ <a href="http://webs.iiitd.edu.in/raghava/ctlpred/algo.html#2" class="txtlink"target="top">Only ANN Based</a></td><td><INPUT type=radio name="svm" value="ANN" checked>
+                     </td></tr>
+<tr>
+<td>
+ <a href="http://webs.iiitd.edu.in/raghava/ctlpred/algo.html#3" class="txtlink"target="top">Only SVM Based</a></td><td><INPUT type=radio name="svm" value="SVM">
+                     </td>
+                    
+                   </tr>
+
+
+<tr>
+<td>
+ <a href="http://webs.iiitd.edu.in/raghava/ctlpred/algo.html#4" class="txtlink"target="top">Consensus Approach</a></td><td><INPUT type=radio name="svm" value="COP">
+                     </td>
+                   
+                   </tr>
+<tr>
+<td>
+ <a href="http://webs.iiitd.edu.in/raghava/ctlpred/algo.html#5" class="txtlink"target="top">Combined Approach</a></td><td><INPUT type=radio name="svm" value="CMP">
+                     </td>
+                    
+                   </tr>
+
+ 
+
+
+
+ <tr>
+                     <td bgcolor="#80D0F0">                     
+                    <center><b><a href="http://webs.iiitd.edu.in/raghava/ctlpred/help.html#7" class="boldlink" target="top">Tabular Result</a></b></center>
+                     </td>
+                     <td colspan="4" ><span class="ctext">Display Top  <input type="text" name="table" size="3" value="3">&nbsp;&nbsp;Peptides</span></td>
+                     
+                   </tr>
+
+<tr><td colspan="5" align="center" bgcolor="#101870">  
+                  
+                    <font color="yellow"><b><center><input value="Run Prediction" type="submit">&nbsp; 
+&nbsp;&nbsp; &nbsp;<input value="Clear" type="reset"></font></b></td></tr>
+
+</table></td>
+
+
+<td width="10%"></td></tr>
+<tr><td width="10%"></td>
+<td><p>If you are using this webserver, please cite:<br>
+<ul><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=15297074">
+Bhasin,M. and
+Raghava, G.P.S. (2004)  Prediction of CTL epitopes using QM, SVM and ANN
+techniques. Vaccine,22,3195-3201. </a> </p></td>
+<td width="10%"></td></tr>
+</table> 
+
+</form>
+</body>
+
+</html>
+
+
+
+
+
+
+

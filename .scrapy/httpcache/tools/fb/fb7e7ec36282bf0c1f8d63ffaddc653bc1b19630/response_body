@@ -1,0 +1,277 @@
+<html>
+
+<head>
+	<title>Source code, data files and other materials for a validation experiment using the ALEXA-Seq approach</title>
+	<meta name="description" content="Provides a description of supplementary materials available for download, including ALEXA source code, raw data files, and other materials relating to validation experiments using the ALEXA approach">
+	<meta name="keywords" content="Source code, raw data, fasta files, annotation databases">
+	<link rel="stylesheet" type="text/css" href="../ALEXA.css">
+</head>
+
+<body>
+<!-- Top bar image table -->
+<table cellpadding="0" cellspacing="0" width="750" class="Top">
+	<tr>
+		<td><img src="images/TopRow.jpg" width="750" height="108" alt="ALEXA logo and images of BC Cancer Agency"></td>
+	</tr>
+</table>
+
+<!-- Button bar table -->
+<table cellpadding="0" cellspacing="0" width="750" class="Middle">
+	<tr>
+		<td><img src="images/ButtonRowLeftSpacer.jpg" width="324" height="32" alt=""></td>
+		<td><a href="index.htm"><img src="images/ButtonHome_black.jpg" border="0" width="54" height="32" alt="Button link to homepage of the ALEXA-Seq website"></a></td>
+		<td><a href="intro.htm"><img src="images/ButtonIntro_black.jpg" border="0" width="55" height="32" alt="Button link to an introduction to the ALEXA-Seq website"></a></td>
+		<td><a href="methods.htm"><img src="images/ButtonMethods_black.jpg" border="0" width="76" height="32" alt="Button link to detailed methods for how ALEXA-Seq is used to study alternative transcript expression"></a></td>
+		<td><a href="results.htm"><img src="images/ButtonResults_black.jpg" border="0" width="68" height="32" alt="Button link to results for a validation experiment using the ALEXA-Seq approach"></a></td>
+		<td><a href="downloads.htm"><img src="images/ButtonDownloads_white.jpg" border="0" width="94" height="32" alt="Button link to the download area for supplementary data and source code"></a></td>
+		<td><img src="images/ButtonRowSpacerRight.jpg" width="79" height="32" alt=""></td>
+	</tr>
+</table>
+
+<!-- Bar under buttons table -->
+<table cellpadding="0" cellspacing="0" width="750" class="Middle">
+	<tr>
+		<td><img src="images/BarUnderButtons.jpg" width="750" height="32" alt=""></td>
+	</tr>
+</table>
+
+<!--- expandable content section -->
+<table cellpadding="0" cellspacing="0" width="752" class="Content">
+	<tr>
+		<td>
+		<br>
+    	<p class="Indented12LR_s16_Bold">Source code</p>
+		<p class="Indented12LR">Current version: 1.17</p>
+		<p class="Indented12LR">User Manual: <a href="source_code/ALEXA-Seq_Manual_v.1.17.pdf">ALEXA-Seq_Manual_v.1.17.pdf</a></p>
+		<p class="Indented12LR">Linux Installation Manual: <a href="source_code/ALEXA-Seq_LinuxInstall_v.1.17.pdf">ALEXA-Seq_LinuxInstall_v.1.17.pdf</a></p>
+		<p class="Indented12LR">Change Log: <a href="source_code/CHANGELOG.txt">CHANGELOG.txt</a></p><br>
+
+		<p class="Indented12LR_bold">Tarball</p>
+		<p class="Indented24LR">Download directly from here: <a href="source_code/ALEXA_Seq_v.1.17.tar.gz">ALEXA_Seq_v.1.17.tar.gz</a></p><br>
+		
+		<p class="Indented12LR_bold">SourceForge</p>
+		<p class="Indented24LR">You can also obtain the current version (as well as old versions) from SourceForge.net: <a href="http://sourceforge.net/projects/alexa-seq/">ALEXA-Seq at SourceForge</a></p><br>
+												
+		<p class="Indented12LR_bold">Subversion</p>
+		<p class="Indented24LR">If you have svn installed, you can checkout the code directly from our subversion repository.  For example:</p>
+		<p class="Indented24LR">cd /home/user/</p>
+		<p class="Indented24LR">svn checkout https://svn.bcgsc.ca/public/ALEXA_Seq/tags/ALEXA_Seq_v.1.17/ alexa_seq</p>
+		<br>
+
+		<p class="Indented12LR_bold">Virtual Machines</p>
+		<p class="Indented24LR">Finally, you can download the code installed into a VMware Virtual Machine (VM).  These VMs include the source code and all dependencies and tools needed for the analysis.
+								The VM can be booted from a Mac, Windows or Linux desktop.  It will run as a self-contained 'guest' operating system within a window 
+								on your 'host' system.  To use the VM you will need to download and install a VMware player.  
+								There are several free options, or you can buy VMWare workstation (for Windows/Linux) or VMware Fusion (for Mac).
+								Using the player, you can configure the number of CPUs and amount of memory used by the Virtual Machine.
+								In addition to the player, the VM will run on the following VMware platforms: ACE, ESX, Fusion, Server, and Workstation.
+								Furthermore, these VMs are compatible with public and private 'Cloud' computing services: 
+								<a href="http://www.vmware.com/products/vcloud/" TARGET="_blank">vCloud</a>, 
+								<a href="http://www.vmware.com/products/vsphere/" TARGET="_blank">vSphere</a>, 
+								<a href="http://www.vmware.com/products/vcenter/" TARGET="_blank">vCenter</a>. 
+								Our VMs were created and tested with VMware Workstation 7.1 on a Windows XP system with 2 CPUs and 4 Gb of memory (2.5 Gb available to the VM).  
+								They can be configured to use up to 8 CPUs/Cores, 32 Gb of memory, and 2 Tb of disk space from the host system.</p><br>
+		<p class="Indented24LR_bold">Virtual Machine Players (links to external websites open in a new window or tab):</p>
+		<p class="Indented24LR">VMware Player (free): <a href="http://downloads.vmware.com/d/info/desktop_downloads/vmware_player/3_0" TARGET="_blank">For Windows</a> | <a href="http://downloads.vmware.com/d/info/desktop_downloads/vmware_player/2_5" TARGET="_blank">For Linux</a></p>
+		<p class="Indented24LR">VMware Fusion (free 30 day trial): <a href="http://vmware.com/download/fusion/" TARGET="_blank">For Mac</a></p>
+		<p class="Indented24LR">VMware Workstation (free 30 day trial): <a href="http://downloads.vmware.com/d/info/desktop_downloads/vmware_workstation/7_0" TARGET="_blank">For Windows or Linux</a></p><br>
+		
+		<p class="Indented24LR_bold">ALEXA-Seq Virtual Machine Downloads:</p>
+		<p class="Indented24LR">For 32-bit Host: <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/ALEXA-Seq_32-bit_v.1.12b.tar.gz">ALEXA-Seq 32-bit v.1.12b.tar.gz</a> (1.8 Gb) | <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/ALEXA-Seq_32-bit_v.1.12b.zip">ALEXA-Seq 32-bit v.1.12b.zip</a> (1.8 Gb)</p>
+		<p class="Indented24LR">For 64-bit Host: <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/ALEXA-Seq_64-bit_v.1.12b.tar.gz">ALEXA-Seq 64-bit v.1.12b.tar.gz</a> (1.9 Gb) | <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/ALEXA-Seq_64-bit_v.1.12b.zip">ALEXA-Seq 64-bit v.1.12b.zip</a> (1.9 Gb)</p>
+		<p class="Indented24LR">Note: This latest version of the VM (v.1.12) incorporates many performance improvements and a more simplified 
+								process for running the demonstration analysis.  It has been tested successfully from start to finish on a Windows XP machine with 2Gb of memory allocated to the VM.</p>
+		<p class="Indented24LR">Note: You must select the version that matches your CPU(s).  Unless your computer is more than 2-3 years old it is very likely to be 64-bit.  If you select
+								the wrong version it may fail to boot properly.</p><br>
+		<p class="Indented24LR">For a brief visual introduction to the VM, check out some <a href="http://www.flickr.com/photos/d4rkst4r7/sets/72157624596260852/" TARGET="_blank">screenshots</a> or the <a href="http://www.flickr.com/photos/d4rkst4r7/sets/72157624596260852/show/" TARGET="_blank">slideshow</a></p><br>
+		<p class="Indented24LR_bold">Step by step instructions:</p>
+		<p class="Indented24LR">1.) Download and install one of the player options described above (the following assumes VMware player)</p>
+		<p class="Indented24LR">2.) Download the ALEXA-Seq virtual machine.  Pick the 32-bit or 64-bit to match your system</p>
+		<p class="Indented24LR">3.) Unpack the archive.  Use 'tar -zxvf ArchiveName.tar.gz' for Linux or Mac and <a href="http://www.7-zip.org/">7-Zip</a> for Windows.</p>
+		<p class="Indented24LR">4.) Start VMware player and select 'Open Virtual Machine' from the 'File' menu.</p>
+		<p class="Indented24LR">5.) Browse to where you unpacked the ALEXA-Seq VM, select 'ALEXA-Seq XX-bit.vmx', and select 'Open'.</p>
+		<p class="Indented24LR">6.) Select 'Edit virtual machine settings' to modify the number of CPUs and amount of memory used.</p>
+		<p class="Indented24LR">7.) When ready, select 'Play virtual machine'.  The system will now boot inside a window.</p>
+		<p class="Indented24LR">8.) To toggle full screen mode press: 'Ctrl+Alt+Enter'.</p>
+		<p class="Indented24LR">9.) See the user manual for username and password: <a href="source_code/ALEXA-Seq_Manual_v.1.17.pdf">ALEXA-Seq_Manual_v.1.17.pdf</a></p>
+		<p class="Indented24LR">10.) If the screen resolution does not seem correct, adjust it: System -> Preferences -> Screen Resolution</p>
+		<p class="Indented24LR">11.) Open the file 'DEMO.txt' on the desktop for a demonstration.</p>
+		<br>
+		<p class="Indented24LR_bold">Virtual Machine Demonstration and System Requirements:</p>
+		<p class="Indented24LR">The demonstration described in DEMO.txt involves analyzing a test dataset of several million paired reads (~4 million 2x42-mers) corresponding to MIP101 and MIP/5FU
+								human colorectal cancer cell lines.  The purpose of this demostration is to illustrate the analysis steps on a small dataset that can be analyzed quickly on a
+								modest system.  The analysis requires alignment to human reference genome sequences and involves the creation of large temporary files.
+								Your system should have 20-30 Gb of free disk space.  Since the VM is self-contained, when you are done testing, simply delete the directory containing the VM to
+								free this disk space.  We tested the VM demonstration on several Windows and Mac computers. Using 2 CPUs and 2 Gb of memory the demonstration analysis should complete 
+								is less than 24 hours.</p><br>
+				
+		<p class="Indented12LR_s16_Bold">Database Schema</p>
+		<p class="Indented24LR">To assist in the identification of alternative expression events by massively parallel RNA sequence data, we developed the 'ALEXA-Seq' annotation database.
+								Briefly, this database defines expression ‘features’ that can be informative of alternative expression events such as exon skipping, alternative exon boundary usage, 
+								inclusion of cryptic exons, intron retention, etc.  For the human genome (build 36 / hg18), 
+								a total of ~3.8 million such features were defined.  Each feature was annotated with information describing its size, repeat content, protein coding content, 
+								mRNA/EST sequence support, cross-species conservation (by examining EST/mRNA alignments from other species), etc. and assigned a descriptive feature name.  A detailed description of the values defined for each feature 
+								can be downloaded: <a href="data/ALEXA_Seq_Schema_Description.htm">ALEXA Seq Schema Description</a>.  For further details refer to <a href="../acknowledge.htm">Griffith et al.</a>.
+								Download a database for your species of interest or request a custom database below.</p><br>
+
+ 	 	<p class="Indented12LR_s16_Bold">ALEXA-Seq annotation databases available for download</p><br>
+		<p class="Indented12LR_bold">ALEXA_dm_54_54b (Fly)</p>
+		<p class="Indented24LR"><a href="http://may2009.archive.ensembl.org/Drosophila_melanogaster/Info/Index" TARGET="_blank"><img src="images/pic_Drosophila_melanogaster.png" width="80" height="80" border="0" align="right" hspace="110" alt="Fly image"></a>
+								Species: <i>Drosophila melanogaster</i><br>Common name: Fruit Fly<br>Source EnsEMBL Database: <a href="http://may2009.archive.ensembl.org/Drosophila_melanogaster/Info/Index" TARGET="_blank">drosophila_melanogaster_core_54_54b</a><br>
+								Total features: 534,061 (23% known, 77% predicted, 20% EST/mRNA supported, 1% conserved)<br>
+								Total sequence bases: 134 million (80% unmasked, 17% coding)<br>
+								Feature statistics: <a href="data/Stats_dm_54_54b.xls">Stats_dm_54_54b.xls</a><br>
+								Download annotation database (146 Mb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/dm_54_54b.tar.gz">dm_54_54b.tar.gz</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_dr_57_8c (ZebraFish)</p>
+		<p class="Indented24LR"><a href="http://mar2010.archive.ensembl.org/Danio_rerio/Info/Index" TARGET="_blank"><img src="images/pic_Danio_rerio.png" width="121" height="50" border="0" align="right" hspace="85" alt="Zebrafish image"></a>
+								Species: <i>Danio rerio</i><br>Common name: Zebrafish<br>Source EnsEMBL Database: <a href="http://mar2010.archive.ensembl.org/Danio_rerio/Info/Index" TARGET="_blank">danio_rerio_core_57_8c</a><br>
+								Total features: 2,827,336 (14% known, 84% predicted, 10% EST/mRNA supported, 5% conserved)<br>
+								Total sequence bases: 1.4 billion (47% unmasked, 2.5% coding)<br>
+								Feature statistics: <a href="data/Stats_dr_57_8c.xls">Stats_dr_57_8c.xls</a><br>
+								Download annotation database (1.1 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/dr_57_8c.tar.gz">dr_57_8c.tar.gz</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_gg_54_2l (Chicken)</p>
+		<p class="Indented24LR"><a href="http://may2009.archive.ensembl.org/Gallus_gallus/Info/Index" TARGET="_blank"><img src="images/pic_Gallus_gallus.png" width="100" height="95" border="0" align="right" hspace="100" alt="Chicken image"></a>
+								Species: <i>Gallus gallus</i><br>Common name: Chicken<br>Source EnsEMBL Database: <a href="http://may2009.archive.ensembl.org/Gallus_gallus/Info/Index" TARGET="_blank">gallus_gallus_core_54_2l</a><br>
+								Total features: 2,392,504 (14% known, 86% predicted, 9% EST/mRNA supported, 6% conserved)<br>
+								Total sequence bases: 1.1 billion (84% unmasked, 2.3% coding)<br>
+								Feature statistics: <a href="data/Stats_gg_54_2l.xls">Stats_gg_54_2l.xls</a><br>
+								Download ALEXA-Seq annotation database (871 Mb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/gg_54_2l.tar.gz">gg_54_2l.tar.gz</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_hs_53_36o (Human - build36/hg18)</p>
+		<p class="Indented24LR"><a href="http://mar2009.archive.ensembl.org/Homo_sapiens/Info/Index" TARGET="_blank"><img src="images/pic_Homo_sapiens.png" width="97" height="100" border="0" align="right" hspace="101" alt="Human image"></a>
+								Species: <i>Homo sapiens</i><br>Common name: Human<br>Source EnsEMBL Database: <a href="http://mar2009.archive.ensembl.org/Homo_sapiens/Info/Index" TARGET="_blank">homo_sapiens_core_53_36o</a><br>
+								Total features: 3,814,043 (14% known, 86% predicted, 16% EST/mRNA supported, 9% conserved)<br>
+								Total sequence bases: 3.0 billion (47% unmasked, 1.2% coding)<br>
+								Feature statistics: <a href="data/Stats_hs_53_36o.xls">Stats_hs_53_36o.xls</a><br>
+								Download annotation database (2.1 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_53_36o.tar.gz">hs_53_36o.tar.gz</a><br>
+								Download additional junction DBs (60mer-150mer): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_53_36o/exonJunctions/">exonJunctions</a> | <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_53_36o/exonBoundaries/">exonBoundaries</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_hs_55_37 (Human - build37/hg19)</p>
+		<p class="Indented24LR"><a href="http://jul2009.archive.ensembl.org/Homo_sapiens/Info/Index" TARGET="_blank"><img src="images/pic_Homo_sapiens.png" width="97" height="100" border="0" align="right" hspace="101" alt="Human image"></a>
+								Species: <i>Homo sapiens</i><br>Common name: Human<br>Source EnsEMBL Database: <a href="http://jul2009.archive.ensembl.org/Homo_sapiens/Info/Index" TARGET="_blank">homo_sapiens_core_55_37</a><br>
+								Total features: 4,639,589 (15% known, 85% predicted, 16% EST/mRNA supported, 8% conserved)<br>
+								Total sequence bases: 4.3 billion (47% unmasked, 0.9% coding)<br>
+								Feature statistics: <a href="data/Stats_hs_55_37.xls">Stats_hs_55_37.xls</a><br>
+								Download annotation database (2.8 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_55_37.tar.gz">hs_55_37.tar.gz</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_hs_57_37b (Human - build37/hg19)</p>
+		<p class="Indented24LR"><a href="http://Mar2010.archive.ensembl.org/Homo_sapiens/Info/Index" TARGET="_blank"><img src="images/pic_Homo_sapiens.png" width="97" height="100" border="0" align="right" hspace="101" alt="Human image"></a>
+								Species: <i>Homo sapiens</i><br>Common name: Human<br>Source EnsEMBL Database: <a href="http://Mar2010.archive.ensembl.org/Homo_sapiens/Info/Index" TARGET="_blank">homo_sapiens_core_57_37b</a><br>
+								Total features: 5,270,148 (14% known, 86% predicted, 16% EST/mRNA supported, 9% conserved)<br>
+								Total sequence bases: 3.0 billion (46% unmasked, 1.2% coding)<br>
+								Feature statistics: <a href="data/Stats_hs_57_37b.xls">Stats_hs_57_37b.xls</a><br>
+								Download annotation database (2.3 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_57_37b.tar.gz">hs_57_37b.tar.gz</a><br>
+								Download additional junction DBs (60mer-150mer): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_57_37b/exonJunctions/">exonJunctions</a> | <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_57_37b/exonBoundaries/">exonBoundaries</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_hs_60_37e (Human - build37/hg19)</p>
+		<p class="Indented24LR"><a href="http://Nov2010.archive.ensembl.org/Homo_sapiens/Info/Index" TARGET="_blank"><img src="images/pic_Homo_sapiens.png" width="97" height="100" border="0" align="right" hspace="101" alt="Human image"></a>
+								Species: <i>Homo sapiens</i><br>Common name: Human<br>Source EnsEMBL Database: <a href="http://Nov2010.archive.ensembl.org/Homo_sapiens/Info/Index" TARGET="_blank">homo_sapiens_core_60_37e</a><br>
+								Total features: 5,692,563 (14% known, 86% predicted, 15% EST/mRNA supported, 8% conserved)<br>
+								Total sequence bases: 3.0 billion (46% unmasked, 1.2% coding)<br>
+								Feature statistics: <a href="data/Stats_hs_60_37e.xls">Stats_hs_60_37e.xls</a><br>
+								Download annotation database (2.3 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_60_37e.tar.gz">hs_60_37e.tar.gz</a><br>
+								Download additional junction DBs (60mer-150mer): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_60_37e/exonJunctions/">exonJunctions</a> | <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_60_37e/exonBoundaries/">exonBoundaries</a></p><br>
+
+                <p class="Indented12LR_bold">ALEXA_hs_65_37j (Human - build37/hg19)</p>
+                <p class="Indented24LR"><a href="http://Dec2011.archive.ensembl.org/Homo_sapiens/Info/Index" TARGET="_blank"><img src="images/pic_Homo_sapiens.png" width="97" height="100" border="0" align="right" hspace="101" alt="Human image"></a>
+                                                                Species: <i>Homo sapiens</i><br>Common name: Human<br>Source EnsEMBL Database: <a href="http://Dec2011.archive.ensembl.org/Homo_sapiens/Info/Index" TARGET="_blank">homo_sapiens_core_65_37j</a><br>
+                                                                Total features: 6,320,728 (14% known, 86% predicted, 15% EST/mRNA supported, 9% conserved)<br>
+                                                                Total sequence bases: 3.1 billion (46% unmasked, 1.2% coding)<br>
+                                                                Feature statistics: <a href="data/Stats_hs_65_37j.xls">Stats_hs_65_37j.xls</a><br>
+                                                                Download annotation database (6.9 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_65_37j.tar.gz">hs_65_37j.tar.gz</a><br>
+                                                                Download additional junction DBs (60mer-150mer): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_65_37j/exonJunctions/">exonJunctions</a> | <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/hs_65_37j/exonBoundaries/">exonBoundaries</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_mm_54_37g (Mouse)</p>
+		<p class="Indented24LR"><a href="http://may2009.archive.ensembl.org/Mus_musculus/Info/Index" TARGET="_blank"><img src="images/pic_Mus_musculus.png" width="130" height="80" border="0" align="right" hspace="85" alt="Mouse image"></a>
+								Species: <i>Mus musculus</i><br>Common name: Mouse<br>Source EnsEMBL Database: <a href="http://may2009.archive.ensembl.org/Mus_musculus/Info/Index" TARGET="_blank">mus_musculus_core_54_37g</a><br>
+								Total features: 3,313,018 (14% known, 86% predicted, 17% EST/mRNA supported, 7.6% conserved)<br>
+								Total sequence bases: 2.6 billion (55% unmasked, 1.4% coding)<br>
+								Feature statistics: <a href="data/Stats_mm_54_37g.xls">Stats_mm_54_37g.xls</a><br>
+								Download annotation database (1.9 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/mm_54_37g.tar.gz">mm_54_37g.tar.gz</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_mm_60_37m (Mouse)</p>
+		<p class="Indented24LR"><a href="http://Nov2010.archive.ensembl.org/Mus_musculus/Info/Index" TARGET="_blank"><img src="images/pic_Mus_musculus.png" width="130" height="80" border="0" align="right" hspace="85" alt="Mouse image"></a>
+								Species: <i>Mus musculus</i><br>Common name: Mouse<br>Source EnsEMBL Database: <a href="http://Nov2010.archive.ensembl.org/Mus_musculus/Info/Index" TARGET="_blank">mus_musculus_core_60_37m</a><br>
+								Total features: 4,076,317 (14% known, 86% predicted, 16% EST/mRNA supported, 7.5% conserved)<br>
+								Total sequence bases: 2.6 billion (55% unmasked, 1.4% coding)<br>
+								Feature statistics: <a href="data/Stats_mm_60_37m.xls">Stats_mm_60_37m.xls</a><br>
+								Download annotation database (1.9 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/mm_60_37m.tar.gz">mm_60_37m.tar.gz</a><br>
+                                                                Download additional junction DBs (60mer-150mer): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/mm_60_37m/exonJunctions/">exonJunctions</a> | <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/mm_60_37m/exonBoundaries/">exonBoundaries</a></p><br>
+
+                <p class="Indented12LR_bold">ALEXA_mm_65_37r (Mouse)</p>
+                <p class="Indented24LR"><a href="http://Dec2011.archive.ensembl.org/Mus_musculus/Info/Index" TARGET="_blank"><img src="images/pic_Mus_musculus.png" width="130" height="80" border="0" align="right" hspace="85" alt="Mouse image"></a>
+                                                                Species: <i>Mus musculus</i><br>Common name: Mouse<br>Source EnsEMBL Database: <a href="http://Dec2011.archive.ensembl.org/Mus_musculus/Info/Index" TARGET="_blank">mus_musculus_core_65_37r</a><br>
+                                                                Total features: 4,076,317 (14% known, 86% predicted, 16% EST/mRNA supported, 7.5% conserved)<br>
+                                                                Total sequence bases: 2.6 billion (55% unmasked, 1.4% coding)<br>
+                                                                Feature statistics: <a href="data/Stats_mm_65_37r.xls">Stats_mm_65_37r.xls</a><br>
+                                                                Download annotation database (1.9 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/mm_65_37r.tar.gz">mm_65_37r.tar.gz</a><br>
+                                                                Download additional junction DBs (60mer-150mer): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/mm_65_37r/exonJunctions/">exonJunctions</a> | <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/mm_65_37r/exonBoundaries/">exonBoundaries</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_pt_54_21k (Chimp)</p>
+		<p class="Indented24LR"><a href="http://may2009.archive.ensembl.org/Pan_troglodytes/Info/Index" TARGET="_blank"><img src="images/pic_Pan_troglodytes.png" width="100" height="126" border="0" align="right" hspace="100" alt="Chimp image"></a>
+								Species: <i>Pan troglodytes</i><br>Common name: Chimp<br>Source EnsEMBL Database: <a href="http://may2009.archive.ensembl.org/Pan_troglodytes/Info/Index" TARGET="_blank">pan_troglodytes_core_54_21k</a><br>
+								Total features: 3,141,903 (14% known, 86% predicted, 15% EST/mRNA supported, 8% conserved)<br>
+								Total sequence bases:  3.1 billion (46% unmasked, 1.0% coding)<br>
+								Statistics: <a href="data/Stats_pt_54_21k.xls">Stats_pt_54_21k.xls</a><br>
+								Download annotation database (2.0 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/pt_54_21k.tar.gz">pt_54_21k.tar.gz</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_rn_54_34v (Rat)</p>
+		<p class="Indented24LR"><a href="http://may2009.archive.ensembl.org/Rattus_norvegicus/Info/Index" TARGET="_blank"><img src="images/pic_Rattus_norvegicus.png" width="140" height="75" border="0" align="right" hspace="80" alt="Rat image"></a>
+								Species: <i>Rattus norvegicus</i><br>Common name: Rat<br>Source EnsEMBL Database: <a href="http://may2009.archive.ensembl.org/Rattus_norvegicus/Info/Index" TARGET="_blank">rattus_norvegicus_core_54_34v</a><br>
+								Total features: 3,203,902 (14% known, 86% predicted, 10% EST/mRNA supported, 10% conserved)<br>
+								Total sequence bases: 2.7 billion (51% unmasked, 1.3% coding)<br>
+								Feature statistics: <a href="data/Stats_rn_54_34v.xls">Stats_rn_54_34v.xls</a><br>
+								Download annotation database (1.8 Gb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/rn_54_34v.tar.gz">rn_54_34v.tar.gz</a></p><br>
+
+		<p class="Indented12LR_bold">ALEXA_sc_54_li (Yeast)</p>
+		<p class="Indented24LR"><a href="http://may2009.archive.ensembl.org/Saccharomyces_cerevisiae/Info/Index" TARGET="_blank"><img src="images/pic_Saccharomyces_cerevisiae.png" width="99" height="71" border="0" align="right" hspace="100" alt="Yeast image"></a>
+								Species: <i>Saccharomyces cerevisiae</i><br>Common name: Baker's yeast<br>Source EnsEMBL Database: <a href="http://may2009.archive.ensembl.org/Saccharomyces_cerevisiae/Info/Index" TARGET="_blank">saccharomyces_cerevisiae_core_54_li</a><br>
+								Total features: 29,361 (26% known, 74% predicted, 0% EST/mRNA supported, 0% conserved)<br>
+								Total sequence bases: 12.3 million (97% unmasked, 73% coding)<br>
+								Feature statistics: <a href="data/Stats_sc_54_li.xls">Stats_sc_54_li.xls</a><br>
+								Download annotation database (15 Mb): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/sc_54_li.tar.gz">sc_54_li.tar.gz</a><br>
+                                                                Download additional junction DBs (60mer-150mer): <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/sc_54_1i/exonJunctions/">exonJunctions</a> | <a href="ftp://ftp03.bcgsc.ca/public/ALEXA/alexa_seq/sc_54_1i/exonBoundaries/">exonBoundaries</a></p><br>
+
+
+		<br>
+		<p class="Indented12LR_s16_Bold">Request an additional species or other custom annotation database</p>
+		<p class="Indented12LR">If you are interested in a particular species that is not included in the list above, you can download the source code and create it yourself. Or you can request the we generate it for your
+								by <a href="../contact.htm">contacting us</a>.  By default we create the exon-exon junction sequences with a length of 62 bases (suitable for 36 mer or greater reads). Before making a request, please
+								first read the database schema description above to determine if the database would be useful for your analysis.  Also, we are limited to species annotated by EnsEMBL 
+								(current list of EnsEMBL species: <a href="http://www.ensembl.org/info/about/species.html" TARGET="_blank">here</a>).</p><br>
+
+    	<p class="Indented12LR_s16_Bold">Acknowledgements</p>
+		<p class="Indented12LR">Each species image above links directly to EnsEMBL.  These images were obtained from <a href="http://www.ensembl.org" TARGET="_blank">www.ensembl.org</a></p><br><br>
+		<br><br>
+		</td>
+	</tr>
+</table>
+
+<!-- Bottom button row -->
+<table cellpadding="0" cellspacing="0" width="750" class="Bottom">
+	<tr>
+		<td><img src="images/BottomRowSpacerLeft.jpg" width="20" height="25" alt=""></td>
+		<td><a href="../index.htm"><img src="images/ButtonAlexaHome_black.jpg" width="110" height="25" border="0" alt="Button link to main ALEXA home page"></a></td>
+		<td><a href="../alexa_arrays/index.htm"><img src="images/ButtonAlexaArrays_black.jpg" width="113" height="25" border="0" alt="Button link to ALEXA-Arrays home page"></a></td>
+		<td><a href="../alexa_seq/index.htm"><img src="images/ButtonAlexaSeq_white.jpg" width="95" height="25" border="0" alt="Button link to ALEXA-Seq home page"></a></td>				
+		<td><a href="../acknowledge.htm"><img src="images/ButtonAcknowledge_black.jpg" width="147" height="25" border="0" alt="Button link to acknowledgements of funding and other support for Malachi Griffith and Marco Marra"></a></td>
+		<td><a href="../contact.htm"><img src="images/ButtonContactUs_black.jpg" width="124" height="25" border="0" alt="Button link to contact information for Malachi Griffith and Marco Marra"></a></td>
+		<td><img src="images/BottomRowSpacerRight.jpg" width="141" height="25" alt=""></td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3266645-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+
+</html>

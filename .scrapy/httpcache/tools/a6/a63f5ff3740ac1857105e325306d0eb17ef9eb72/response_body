@@ -1,0 +1,372 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" class="fontface" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description"
+          content="Chemical Entities of Biological Interest (ChEBI) is a freely available dictionary of molecular entities focused on 'small' chemical compounds."/>
+    <meta name="author" content="EBI Web Team"/>
+    <meta name="keywords"
+          content="chemical compounds, chemical compound, compound, ontology, biology, UniProt, ascii name, names, nomenclature, chemical, formula, IUPAC, IUPAC name, synonyms, chemical ontology, periodic table"/>
+    <meta name="robots" content="index, nofollow" />
+    <meta http-equiv="Content-Language" content="en"/>
+    <meta http-equiv="Window-target" content="_top"/>
+    <meta name="no-email-collection" content="//www.unspam.com/noemailcollection/"/>
+    <meta name="language" content="en"/>
+    <meta name="revisit-after" content="14 days"/>
+    <title>
+
+
+
+
+     
+
+   
+   
+
+
+
+   Chemical Entities of Biological Interest (ChEBI)
+</title>
+    <link rel="search" type="application/opensearchdescription+xml" title="ChEBI" href="/chebi/plugins/openSearch/openSearch.xml;jsessionid=EF4AF0C2A9D12B25393AFE4DFDF76921">
+    <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css" type="text/css">
+    <link rel="stylesheet" href="//ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css">
+    <link rel="stylesheet" href="/chebi/layouts/styles/chebiColorScheme.css;jsessionid=EF4AF0C2A9D12B25393AFE4DFDF76921" type="text/css"/>
+
+    <link rel="SHORTCUT ICON" href="/chebi/images/ChEBI_logo_16.ico;jsessionid=EF4AF0C2A9D12B25393AFE4DFDF76921"/>
+
+    <script type="text/javascript" src="/chebi/javascripts/chebi.js;jsessionid=EF4AF0C2A9D12B25393AFE4DFDF76921"></script>
+    <script type="text/javascript" src="/chebi/javascripts/jquery-1.9.1.min.js;jsessionid=EF4AF0C2A9D12B25393AFE4DFDF76921"></script>
+    <script src="//www.ebi.ac.uk/web_guidelines/js/ebi-global-search-run.js"></script>
+    <script src="//www.ebi.ac.uk/web_guidelines/js/ebi-global-search.js"></script>
+
+    <script type="text/javascript">
+        function showSubMenu(menu) {
+            // First reset - hide all menus..
+            document.getElementById("browse").style.display = "none";
+            document.getElementById("documentation").style.display = "none";
+            document.getElementById("tool").style.display = "none";
+
+            //Then display only the menu you want...
+            $(menu).get(0).style.display = "inline";
+            $(menu).get(0).style.paddingTop = "0px";
+            $(menu).get(0).style.marginTop = "0px";
+        }
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-64963565-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+</head>
+
+
+<body>
+<div id="wrapper" class="container_24">
+    <header>
+        
+        <div id="global-masthead" class="masthead grid_24">
+            <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img
+                    src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png"
+                    alt="EMBL European Bioinformatics Institute"></a>
+            <nav>
+                <ul id="global-nav">                    <!-- set active class as appropriate -->
+                    <li id="services" class=" first active"><a href="//www.ebi.ac.uk/services" title="Services">Services</a>
+                    </li>
+                    <li id="research" class=""><a href="//www.ebi.ac.uk/research" title="Research">Research</a>
+                    </li>
+                    <li id="training" class=""><a href="//www.ebi.ac.uk/training" title="Training">Training</a>
+                    </li>
+                    <li id="industry" class=""><a href="//www.ebi.ac.uk/industry" title="Industry">Industry</a>
+                    </li>
+                    <li id="about" class=" last"><a href="//www.ebi.ac.uk/about" title="About us">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+
+        
+        <div id="local-masthead" class="headerBG masthead grid_24 nomenu">
+
+            <!-- local-title -->
+            <div class="grid_12 alpha logo-title" id="local-title">
+                <a href="init.do" title="Back to ChEBI homepage">
+                    <img src="images/ChEBI_logo.png" alt="ChEBI logo" width="64" height="64" style="margin: 1.7em 0.1em 1.5em 0.7rem !important;"></a>
+                 <span>
+                     <h1><a id="logotitle" href="init.do" title="Back to ChEBI homepage">ChEBI</a></h1>
+                 </span>
+            </div>
+            <!-- /local-title -->
+
+
+            
+
+
+            <!-- local-search -->
+            <div class="grid_12 omega">
+                <form id="local-search"
+                      name="searchFreeText"
+                      action="/chebi/advancedSearchFT.do"
+                      method="post">
+
+                    <fieldset>
+
+                        <div class="left">
+                            <label>
+                                <input type="text" name="searchString" id="local-searchbox">
+                            </label>
+                            <span class="examples">
+                                Examples:
+                                <a href="advancedSearchFT.do?searchString=iron*">iron*</a>,
+                                <a href="advancedSearchFT.do?searchString='InChI=1S/CH4O/c1-2/h2H,1H3'">InChI=1S/CH4O/c1-2/h2H,1H3</a>,
+                                <a href="advancedSearchFT.do?searchString=caffeine">caffeine</a>
+                                <div style="display: inline; float: right; padding-right: 10px">
+                                    <input type="checkbox" name="stars" value="3" id="local-starsbox"/>
+                                    <div id="local-stars" style="display: inline;">
+                                        <img src="images/goldenstar.gif" style="width: 14px;" /><img src="images/goldenstar.gif" style="width: 14px;" /><img src="images/goldenstar.gif" style="width: 14px;" />
+                                    </div>
+                                </div>
+                                <script>
+                                    $('#local-stars').click(function () {
+                                        $("#local-starsbox").prop("checked", !$("#local-starsbox").prop("checked"));
+                                    });
+                                </script>
+                            </span>
+                        </div>
+
+                        <div class="right">
+                            <input type="submit" name="submit" value="Search" class="submit">
+                            <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search, with whatever features you want available -->
+                            <span class="adv"><a href="advancedSearchForward.do" id="adv-search" title="Advanced">Advanced</a></span>
+                        </div>
+
+                    </fieldset>
+
+                </form>
+            </div>
+            <!-- /local-search -->
+
+
+            <!-- local-nav -->
+            <nav>
+                <ul class="grid_24" id="local-nav">
+                    
+                    <li class="first"><a href="init.do">Home</a></li>
+                    <li class=""><a href="advancedSearchForward.do">Advanced Search</a></li>
+                    <li class=""><a href="#" onclick="showSubMenu(browse)">Browse</a></li>
+                    <li class=""><a href="#" onclick="showSubMenu(documentation)">Documentation</a></li>
+                    <li class=""><a href="downloadsForward.do">Download</a></li>
+                    <li class=""><a href="#" onclick="showSubMenu(tool)">Tools</a></li>
+                    <li class="last"><a href="aboutChebiForward.do">About ChEBI</a></li>
+
+                    
+                    <li class="functional last"><a href="/chebi/submission" class="icon icon-common icon-send" target="_blank" title="Click here to add a new entry to ChEBI"> Submit</a></li>
+                    <li class="functional"><a href="emailChebiForward.do" class="icon icon-common icon-envelope"> Contact us</a></li>
+
+                    
+                    <ul id="browse" style="display: none;">
+                        <li><a href="dina.do">DiNA</a></li>
+                        <li><a href="statisticsForward.do">Statistics</a></li>
+                        <li><a href="entityMonthForward.do">Entity of the Month</a></li>
+                        <li><a href="periodicTableMolecularEntitiesForward.do">Periodic Table</a></li>
+                        <li class="last"><a href="/ontology-lookup/browse.do?ontName=CHEBI" class='icon icon-generic' data-icon='x' target="_blank">Ontology</a></li>
+                    </ul>
+                    <ul id="documentation" style="display: none;">
+                        <li><a href="http://www.ebi.ac.uk/training/online/course-list?field_course_subject_area_tid%5B%5D=11" target="_blank">Train online</a></li>
+                        <li><a href="https://docs.google.com/document/d/1_w-DwBdCCOh1gMeeP6yqGzcnkpbHYOa3AGSODe5epcg/" target="_blank">User Manual</a></li>
+                        <li><a href="https://docs.google.com/document/d/1EZHaOEl-iPZPbqD_GRyIetDoA4U8U2SPr9Qk6RKVRc0/" target="_blank">Annotation Manual</a></li>
+                        <li><a href="https://docs.google.com/document/d/11G6SmTtQRQYFT7l9h5K0faUHiAaekcLeOweMOOTIpME/" target="_blank">Developer Manual</a></li>
+                        <li class="last"><a href="https://docs.google.com/document/d/1zftGTqpsyRM2eBFQm6krb6ZmxJo6EYr-nGb7TBLYViU/" target="_blank">FAQ's</a></li>
+                    </ul>
+                    <ul id="tool" style="display: none;">
+                        <li><a href="/chebi/tools/binche/">BiNChE</a></li>
+                        <li><a href="libchebi.do">libChEBI</a></li>
+                        <li class="last"><a href="webServices.do">Web Services</a></li>
+                    </ul>
+                </ul>
+            </nav>
+            <!-- /local-nav -->
+
+        </div>
+        
+
+    </header>
+
+
+<div id="content" role="main" class="grid_24 clearfix">
+
+    <div id = "breadcrumbs">
+        <p> <a href="init.do">ChEBI</a> > Web Services </p>
+    </div>
+    
+
+    
+    
+
+
+<iframe src="/webservices/chebi/2.0/webService.jsp" frameborder="0" height="9000" width="100%" scrolling="no"></iframe>
+
+<script type="text/javascript">
+    $(function () {
+        $(document).scroll(function () {
+            if ($(this).scrollTop() != 0) {
+                $('#toTop').fadeIn();
+            } else {
+                $('#toTop').fadeOut();
+            }
+        });
+
+        $('#toTop').click(function () {
+            $('body,html').animate({scrollTop: 0}, 800);
+        });
+    });
+</script>
+
+<div id="toTop" class="anim">
+    <img src="images/to_top.png" alt="Scroll to top">
+</div>
+    
+
+</div>
+
+
+
+
+
+<div id="footer-elixir">
+    <a href="https://www.elixir-europe.org/platforms/data/core-data-resources" target="_blank" class="elixirUnlink">
+        <div class="elixirLogoWrap">
+            <img class="elixirLogo"
+                 src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/ELIXIR/elixir-cdr.gif"
+                 width="64px" height="64px"/>
+        </div>
+        <div class="elixirDescWrap">
+            <h3 class="elixirTitle">
+                ChEBI is part of the ELIXIR infrastructure
+            </h3>
+            <div class="elixirDesc">
+                <small>
+                    <span class="elixirDescSmall">This service is an Elixir Core Data Resource.</span>
+                    <span class="elixirLink">  Read more ...</span>
+                </small>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<div id="global-footer" class="grid_24 container_24">
+    <nav id="global-nav-expanded">
+        <div class="grid_4 alpha"><a href="http://www.ebi.ac.uk" title="EMBL-EBI"><img
+                src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.png"
+                alt="EMBL European Bioinformatics Institute"></a>
+            <ul>
+                <li class="first"><a href="//www.ebi.ac.uk/about/news">News</a></li>
+                <li><a href="//www.ebi.ac.uk/about/our-impact">Our impact</a></li>
+                <li><a href="//www.ebi.ac.uk/about/contact">Contact us</a></li>
+                <li class="last"><a href="http://intranet.ebi.ac.uk">Intranet</a></li>
+            </ul>
+        </div>
+        <div class="grid_4"><h3 class="services"><a href="//www.ebi.ac.uk/services">Services</a></h3>
+            <ul>
+                <li class="first"><a href="//www.ebi.ac.uk/services">By topic</a></li>
+                <li><a href="//www.ebi.ac.uk/services/all">By name (A-Z)</a></li>
+                <li class="last"><a href="//www.ebi.ac.uk/support">Help &amp; Support</a></li>
+            </ul>
+        </div>
+        <div class="grid_4"><h3 class="research"><a href="//www.ebi.ac.uk/research">Research</a></h3>
+            <ul>
+                <li class="first"><a href="//www.ebi.ac.uk/research">Overview</a></li>
+                <li><a href="//www.ebi.ac.uk/research/publications">Publications</a></li>
+                <li><a href="//www.ebi.ac.uk/research/groups">Research groups</a></li>
+                <li class="last"><a href="//www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a
+                        href="//www.ebi.ac.uk/research/eipp">PhDs</a></li>
+            </ul>
+        </div>
+        <div class="grid_4"><h3 class="training"><a href="//www.ebi.ac.uk/training">Training</a></h3>
+            <ul>
+                <li class="first"><a href="//www.ebi.ac.uk/training">Overview</a></li>
+                <li><a href="//www.ebi.ac.uk/training/handson">Train at EBI</a></li>
+                <li><a href="//www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li>
+                <li><a href="//www.ebi.ac.uk/training/online">Train online</a></li>
+                <li class="last"><a href="//www.ebi.ac.uk/training/contact-us">Contact organisers</a></li>
+            </ul>
+        </div>
+        <div class="grid_4"><h3 class="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></h3>
+            <ul>
+                <li class="first"><a href="//www.ebi.ac.uk/industry">Overview</a></li>
+                <li><a href="//www.ebi.ac.uk/industry/private">Members Area</a></li>
+                <li><a href="//www.ebi.ac.uk/industry/workshops">Workshops</a></li>
+                <li><a href="//www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a>
+                </li>
+                <li class="last"><a href="//www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li>
+            </ul>
+        </div>
+        <div class="grid_4 omega"><h3 class="about"><a href="//www.ebi.ac.uk/about">About us</a></h3>
+            <ul>
+                <li class="first"><a href="//www.ebi.ac.uk/about">Overview</a></li>
+                <li><a href="//www.ebi.ac.uk/about/leadership">Leadership</a></li>
+                <li><a href="//www.ebi.ac.uk/about/funding">Funding</a></li>
+                <li><a href="//www.ebi.ac.uk/about/background">Background</a></li>
+                <li><a href="//www.ebi.ac.uk/about/partnerships">Collaboration</a></li>
+                <li><a href="//www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li>
+                <li><a href="//www.ebi.ac.uk/about/people">People &amp; groups</a></li>
+                <li><a href="//www.ebi.ac.uk/about/news">News</a></li>
+                <li><a href="//www.ebi.ac.uk/about/events">Events</a></li>
+                <li><a href="//www.ebi.ac.uk/about/travel">Visit us</a></li>
+                <li class="last"><a href="//www.ebi.ac.uk/about/contact">Contact us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="ebi-footer-meta"><p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10
+        1SD, UK &nbsp; &nbsp; +44 (0)1223 49 44 44</p>
+        <p>Copyright © EMBL-EBI 2018 | EBI is an outstation of the <a href="http://www.embl.org">European Molecular
+            Biology Laboratory</a> | <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of use</a></p></section>
+
+    <script>
+        var localFrameworkVersion = 'compliance'; // 1.1 or 1.2 or compliance or other
+        // if you select compliance or other we will add some helpful
+        // CSS styling, but you may need to add some CSS yourself
+        var newDataProtectionNotificationBanner = document.createElement('script');
+        newDataProtectionNotificationBanner.src = 'https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js?legacyRequest=' + localFrameworkVersion;
+        document.head.appendChild(newDataProtectionNotificationBanner);
+        newDataProtectionNotificationBanner.onload = function () {
+            ebiFrameworkRunDataProtectionBanner(); // invoke the banner
+        };
+    </script>
+</div>
+<div id="data-protection-message-configuration"
+     data-message="This website requires cookies, and the limited processing of your personal data in order to function. By using the site you are agreeing to this as outlined in our <a target=&quot;_blank&quot; href=&quot;https://www.ebi.ac.uk/data-protection/privacy-notice/chebi&quot; class=&quot;white-color&quot;>Privacy Notice</a> and <a target=&quot;_blank&quot; href=&quot;https://www.ebi.ac.uk/about/terms-of-use&quot; class=&quot;white-color&quot;>Terms of Use</a>."
+     data-service-id="chebi" data-data-protection-version="0.1"></div>
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>
+
+
+
+
+

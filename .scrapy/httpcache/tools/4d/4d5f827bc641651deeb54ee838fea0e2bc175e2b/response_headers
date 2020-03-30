@@ -1,0 +1,15 @@
+Date: Mon, 30 Mar 2020 18:48:10 GMT
+Content-Type: text/html; charset=utf-8
+Set-Cookie: AWSALB=xjLwu6B0EFdp8DUqEIeWO/J/14o/SHIjqkyYowYmoyDEPXYubJ8xuwi2S9t5HRsyIqDRVl8o4DV45gsbuQEMU2jnrCVz2ppPevE+yi9DLGW14vmDWKNRoZuzj3GL; Expires=Mon, 06 Apr 2020 18:48:10 GMT; Path=/
+Set-Cookie: AWSALBCORS=xjLwu6B0EFdp8DUqEIeWO/J/14o/SHIjqkyYowYmoyDEPXYubJ8xuwi2S9t5HRsyIqDRVl8o4DV45gsbuQEMU2jnrCVz2ppPevE+yi9DLGW14vmDWKNRoZuzj3GL; Expires=Mon, 06 Apr 2020 18:48:10 GMT; Path=/; SameSite=None; Secure
+X-Dns-Prefetch-Control: off
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Content-Security-Policy: default-src 'self' fonts.gstatic.com *.youtube.com; font-src 'self' fonts.gstatic.com *.nih.gov; script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.ckeditor.com cdn.jsdelivr.net cdnjs.cloudflare.com *.nih.gov ajax.googleapis.com www.googletagmanager.com www.google-analytics.com; style-src 'self' maxcdn.bootstrapcdn.com fonts.googleapis.com fonts.gstatic.com 'unsafe-inline' *.nih.gov cdn.ckeditor.com; img-src 'self' data: cdn.ckeditor.com *.nih.gov www.google-analytics.com; connect-src *; report-uri https://nlmoccs.report-uri.com/r/d/csp/reportOnly; worker-src *
+Referrer-Policy: same-origin
+Etag: W/"8828c-owlmr5opdP/7bIgDMWXHNk3sfR8"
+Vary: Accept-Encoding
+Content-Encoding: gzip

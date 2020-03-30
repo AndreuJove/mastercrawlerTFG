@@ -1,0 +1,226 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Bioinformatics and Evolutionary Genomics Software Treecon Forcon Adhore Spads Asatura ZT AFLPinSilico" />
+        <meta name="keywords" content="Bioinformatics and Evolutionary Genomics Software Treecon Forcon Adhore Spads Asatura ZT AFLPinSilico" />
+        <meta name="author" content="Kenny Billiau (kenny dot billiau at psb dot ugent dot be)" />
+        <link rel="icon" href="/img/logo.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon" />
+        <title>Software</title>
+	<!--<title>Generation and Analysis of Next Generation (NGS) Data</title>-->
+        <link rel="stylesheet" type="text/css" href="/css/cmijn.css" />        <link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />        <!--[if lt IE 7]>
+        <style type="text/css">
+             h1 div, h2 div {
+                right: 110px;
+            }
+
+        </style>
+        <![endif]-->
+        
+	 
+<link rel="stylesheet" type="text/css" href="/css/jquery-ui.css" /><link rel="stylesheet" type="text/css" href="/css/jquery-ui.structure.css" /><link rel="stylesheet" type="text/css" href="/css/jquery-ui.theme.css" /><script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script><script type="text/javascript" src="/js/jquery-ui.js"></script>
+<script>
+ var $j = jQuery.noConflict();
+</script>
+
+    </head>
+    <body>
+        <div id="header">
+
+            <div class="banner">
+                 <div style="position: relative; top: 0px; left: -70px; margin-left: auto; margin-right: auto; padding-bottom: 5px;">
+                     <a href="/"><div class="beg_cutout">Bioinformatics &amp; Evolutionary Genomics</div></a>
+                </div>
+                <ul class="nav_top" id='menu'>
+                    <li><a href="/people">People</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/research">Research</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/genomes">Genomes</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/publications">Publications</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/software">Software</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/links">Links</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/intranet">Intranet</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/links/press">Press</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+
+        <div id="body">
+            <div id="chest">
+                <table style="border: 0px; background: #eee; padding: 0px; margin: 0px;">
+                    <tr>
+                        <td rowspan="2" style="background-color: #fff; border: 1px #aaa solid; padding: 0px; margin: 0px; width: 630px;">
+                            <h1>Software<div></div></h1>
+                            <div style="padding: 5px;">
+                                 <h2>AFLPinSilico</h2>AFLPinSilico
+performs AFLP simulations with different combinations
+of restriction enzymes or selective nucleotides, on organisms
+or data sets for which DNA sequences are available.
+It allows identification of the fragments and the genes
+they are tagging, sparing the collection and sequencing
+task. Besides data analysis, such simulations can be used
+by experimentalists to efficiently plan and design AFLP
+based experiments, saving time and expensive trials.
+<br />
+<br />
+
+<ul class="inline">
+<li><img src="/img/square2.png" alt="" /></li><a href="http://bioinformatics.psb.ugent.be/webtools/aflpinsilico/">run software</a><li><img src="/img/square2.png" alt="" /></li></ul>
+
+<br />
+<br />
+
+<b>Rombauts,  S.</b>, <b>Van de Peer,  Y.</b>, <b>Rouz&#233;,  P.</b> (2003)
+AFLPInsilico, simulating AFLP fingerprints. Bioinformatics 19(6):776-7.<br />
+<ul class="inline">
+<li><img src="/img/square2.png" alt="" /></li><li><a href="http://bioinformatics.psb.ugent.be/publications/abstract/AFLPInsilico%2C-simulating-AFLP-fingerprints.--15">abstract</a></li><li><img src="/img/square2.png" alt="" /></li><li><a href="http://bioinformatics.psb.ugent.be/pdf/Bioinformatics_19_776_2003.pdf">pdf</a></li><li><img src="/img/square2.png" alt="" /></li><li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=pubmed&amp;dopt=Abstract&amp;list_uids=12691992">PMID</a></li><li><img src="/img/square2.png" alt="" /></li></ul>
+                            </div>
+                        </td>
+                        <td style="padding: 0px; padding-left: 5px; margin: 0px; width: 165px;">
+                            <div id="logo"><a href="/"><img src="/img/logos/beg_logo.png" class="nopadding" style="background-color: #FFF; border: 5px #FFF solid;" alt="" /></a></div>
+
+<br /><br /><br /><br /><h4>Databases</h4><table border="0" cellpadding="0" cellmargin="0" style="border: 0px; margin:0px; margin-left: -2px; padding: 0px; background-color: #eee;">
+    <tr>
+        <td rowspan="2"  style="border: 0px; margin: 0px; padding: 0px;"><a href="/webtools/rRNA/"><img src="/img/buttons/rrna-button.png" class="framed" style="align:left; vertical-align: top;" /></a></td>
+        <td  style="border: 0px; margin: 0px; padding: 0px;"><a href="/webtools/plantcare/html/"><img src="/img/buttons/plantcare-button.png" class="framed" /></a></td>
+    </tr>
+    <tr>
+        <td  style="border: 0px; margin: 0px; padding: 0px;"><a href="/cgi-bin/SPPG/index.htpl"><img src="/img/buttons/sppg-button.png" class="framed" /></a></td>
+    </tr>
+</table>
+<a href="http://bioinformatics.psb.ugent.be/plaza/"><img src="/img/logos/plaza.png" class="framed" /></a>
+<a href="http://bioinformatics.psb.ugent.be/orcae/"><img src="/img/logos/orcae.png" class="framed" style="width: 155px" /></a>
+<a href="http://www.evexdb.org/"><img src="/img/logos/evex_logo_new.png" class="framed" style="width:155px;"/></a>
+
+<br /><br /><h4>Software</h4><a href="http://bioinformatics.psb.ugent.be/software/details/GenomeView"><img src="http://bioinformatics.psb.ugent.be/img/buttons/genomeview.png" class="framed" /></a><a href="http://bioinformatics.psb.ugent.be/software/details/EP3"><img src="http://bioinformatics.psb.ugent.be/img/buttons/ep3-button.png" class="framed" /></a>
+<a href="http://bioinformatics.psb.ugent.be/software/details/HyperGeny"><img src="http://bioinformatics.psb.ugent.be/img/buttons/hypergeny-button.png" class="framed" /></a>
+<a href="http://bioinformatics.psb.ugent.be/software/details/Enigma"><img src="http://bioinformatics.psb.ugent.be/img/buttons/enigma-button.png" class="framed" /></a>
+<a href="http://bioinformatics.psb.ugent.be/software/details/Treecon"><img src="http://bioinformatics.psb.ugent.be/img/buttons/treecon-button.png" class="framed" /></a>
+<a href="http://bioinformatics.psb.ugent.be/software/details/SpliceMachine"><img src="http://bioinformatics.psb.ugent.be/img/buttons/splicemachine-button.png" class="framed" /></a>
+<a href="http://bioinformatics.psb.ugent.be/software/details/StartScan"><img src="http://bioinformatics.psb.ugent.be/img/buttons/startscan-button.png" class="framed" /></a>
+<a href="http://bioinformatics.psb.ugent.be/software/details/LeMoNe"><img src="http://bioinformatics.psb.ugent.be/img/buttons/lemone-button.png" class="framed" /></a>
+<a href="http://bioinformatics.psb.ugent.be/software/details/i--ADHoRe"><img src="http://bioinformatics.psb.ugent.be/img/buttons/iadhore-button.png" class="framed" /></a> 
+<br /><br /><br /><br /><br /><br />                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: bottom; padding: 0px; padding-left: 5px; margin: 0px;">
+                            <div id="credits">
+                                <div style="border: 1px #ccc solid; background-color: #fff; padding: 4px;">
+                                    <a href="http://www.vib.be/" target="_new"><img src="/img/logos/VIB_logo_transp_pos_100px.png" alt="Logo VIB" style="padding: 0px 2px 0px 0px;" /></a>
+                                    <a href="http://www.psb.ugent.be/" target="_new"><img src="/img/logos/psb_logo.png" border="0" alt="Logo PSB" style="padding: 0px 0px 4px 0px;" /></a>
+                                    <a href="http://www.ugent.be/" target="_new"><img src="/img/logos/logo_UGent_EN_RGB_140_color_cropped.png" alt="Logo Ugent" style="padding: 0px;" /></a>
+                                    <div style="text-align: center;"><a href="/links/credits">credits</a></div>
+                                </div>
+                                <br />
+                                <div class="begtinytext">
+                                    <strong>Contact: </strong><br />
+                                    VIB / UGent<br />
+                                    Bioinformatics &amp; Evolutionary Genomics<br />
+                                    Technologiepark 927<br />
+                                    B-9052 Gent<br />
+                                    BELGIUM<br />
+                                    +32 (0) 9 33 13807 (phone)<br />
+                                    +32 (0) 9 33 13809 (fax)<br />
+                                    <span style="white-space: nowrap">
+                                    <script type="text/javascript">
+//<![CDATA[
+<!--
+            var pre = 'yves.vandepeer';
+        var post = 'psb.vib-ugent.be';
+        document.write('<a h' + 'r' + 'e' + 'f' + '=\'m' +  'a' + 'i' + 'l' + 't' + 'o:' + pre + '' + '' + '' + '@'  + '' + '' + '' + post + '\'>');
+        document.write(pre + '' + '@' + '' + post + '</a>');
+//-->
+//]]>
+</script>                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="banner">
+                <ul class="nav_top">
+                    <li><a href="/people">People</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/research">Research</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/genomes">Genomes</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/publications">Publications</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/software">Software</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/links">Links</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/intranet">Intranet</a></li>
+                    <li><img src="/img/square2.png" alt="" /></li>
+                    <li><a href="/links/press">Press</a></li>
+                </ul>
+            </div>
+            <div id="search">
+                <!-- Google CSE Search Box Begins  -->
+                  <form id="searchbox_011301089360580776749:r_af4s3tibs" action="http://www.google.com/cse" style="display: inline;">
+                    <input type="hidden" name="cx" value="011301089360580776749:r_af4s3tibs" />
+                    <input type="hidden" name="cof" value="FORID:0" />
+                    <input name="q" type="text" size="40" />
+                    <input type="submit" name="sa" value="Search this website" />
+                  </form>
+                  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_011301089360580776749%3Ar_af4s3tibs"></script>
+                <!-- Google CSE Search Box Ends -->
+            </div>
+        </div>
+        <hr />
+        <div style="text-align: center; left: -80px; position: relative; padding-bottom:5px">Don't hesitate to contact the <script type="text/javascript">
+//<![CDATA[
+<!--
+            var pre = 'bsb-webmaster';
+        var post = 'psb.ugent.be';
+        document.write('<a h' + 'r' + 'e' + 'f' + '=\'m' +  'a' + 'i' + 'l' + 't' + 'o:' + pre + '' + '' + '' + '@'  + '' + '' + '' + post + '\'>');
+        document.write('webmaster' + '</a>');
+//-->
+//]]>
+</script> in case of problems with the website!</div>
+
+                    <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+            var pageTracker = _gat._getTracker("UA-3992537-1");
+            pageTracker._initData();
+            pageTracker._trackPageview();
+            </script>
+                <!-- Dialog to redirect to new BEG2017 site -->
+        <script type="text/javascript" src="/js/legacy_site.js"></script><div id="legacydialog" title="Go to updated website?">
+  <p>
+  	<span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+  	<p>
+  	  You are visiting an outdated page of the BEG/Van de Peer Lab site.
+  	</p>
+  	<p>
+  	Not all pages have been ported, so these archived pages are still available.<br>
+  	</p>
+  	<p>
+	Redirect to the new website?
+	</p>
+  </p>
+</div>
+    </body>
+</html>

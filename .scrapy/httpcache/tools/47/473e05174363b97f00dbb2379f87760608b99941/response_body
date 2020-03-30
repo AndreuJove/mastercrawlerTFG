@@ -1,0 +1,310 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html XMLNS="https://www.w3.org/1999/xhtml">
+<head>
+  <title>NHGRI: BuddySuite</title>
+  <meta property="og:site_name" content="Online Research Resources Developed at NHGRI" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://research.nhgri.nih.gov/" />
+  <meta property="og:title" content="Online Research Resources Developed at NHGRI" />
+  <meta property="og:description" content="A collection of online resources developed by NHGRI Division of Intramural Research investigators, including specialized genomic databases and novel software tools for use in genomic analysis" />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="pragma" content="nocache">
+  <link rel="stylesheet" type="text/css" media="all" href="/include/genome_public/css/genome.css">
+  <link rel="stylesheet" type="text/css" media="all" href="/include/css/intranet.css">
+  
+  <!--[if IE]>
+  	<link rel="stylesheet" type="text/css" href="/include/css/ie-core.css" />
+  <![endif]-->
+
+  <link rel="P3Pv1" href="https://www.genome.gov/w3c/p3p.xml"/>
+  <script type="text/javascript" src="/include/genome_public/scripts/genome-nav_menu.js"></script>
+  <script type="text/javascript" src="/include/genome_public/scripts/genome-c_smartmenus.js"></script>
+  <script type="text/javascript" src="/include/scripts/nav_highlight-new.js"></script>
+  <script type="text/javascript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+
+MM_reloadPage(true);
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+  </script>
+</head>
+</head>
+<body>
+  <a href="#skip" class="hidden">Skip Navigation</a>
+  <a name="top"></a>
+
+  <div id="header">
+    <a href="https://www.genome.gov/"><img src="https://research.nhgri.nih.gov/include/genome_public/images/logo_nih-nhgri.png" alt="NIH - National Human Genome Research Institute - Advancing human health through genomics research" border="0"  style="padding:25px 0 25px 5px" /></a>
+
+  <form id="globalsearch" name="globalsearch" accept-charset="UTF-8" action="https://search.usa.gov/search" method="get">
+    <input id="affiliate" name="affiliate" type="hidden" value="nhgri" />
+    <input name="query" id="query" type="text" size="30" maxlength="150" placeholder="Search Genome.gov" required="yes" />
+    <input type="image" style="margin:-4px 4px 0 -38px;" src="https://research.nhgri.nih.gov/include/genome_public/images/search.jpg" alt="Search" title="Search" name="search_button" id="search_button" value="submit" align="absmiddle" />
+  </form>
+
+  <div style="display:block; position:absolute; top:0; left:850px;"><img src="https://research.nhgri.nih.gov/include/genome_public/images/logo_nhgrix.png" alt="NHGRI Logo" border="0" /></div>
+
+  <div id="navigation2">	
+    <ul id="dynamic_d" class="DD">
+      <noscript>
+        <style>
+		  #navigation2 ul {margin:0; padding:0}
+		  #navigation2 ul ul { display:none }
+		  #navigation2 ul li { list-style: none; float:left}	
+	    </style>
+      </noscript>
+
+  <li id="der"><a href="https://www.genome.gov/ResearchFunding/" style="width:134px">Research Funding</a>
+    <ul style="border:2px solid #900">
+      <li><a href="https://www.genome.gov/ResearchFunding/" style="background-color:#900; text-decoration:none; color:white">The Extramural Research Program</a></li>
+      <li><a href="https://www.genome.gov/12010633">An Overview</a></li>
+	  <li><a href="https://www.genome.gov/10001735">Bioinformatics</a></li>
+	  <li><a href="https://www.genome.gov/10001799">Current Grants</a></li>  
+	  <li><a href="https://www.genome.gov/10000950">Education and Training Funding</a></li> 
+      <li><a href="https://www.genome.gov/19517564">Extramural Research News Features</a></li>
+	  <li><a href="https://www.genome.gov/27552836">Funding Divisions</a></li> 
+	  <li><a href="https://www.genome.gov/10000884">Funding Opportunities</a></li>
+      <li><a href="https://www.genome.gov/27534285">Funded Programs and Projects</a></li> 
+	  <li><a href="https://www.genome.gov/10000004">Grant Information</a></li>
+	  <li><a href="https://www.genome.gov/13013963">NIH Common Fund</a></li>
+	  <li><a href="https://report.nih.gov" target="_blank">NIH RePORTER <img src="/include/genome_public/images/newwin.gif" border="0" alt="Exit Disclaimer" /></a></li>
+    </ul>
+  </li>
+
+  <li id="dir"><a href="https://www.genome.gov/ResearchAtNHGRI/" style="width:136px" class="selected">Research at NHGRI</a>
+    <ul style="border:2px solid #997B04">
+      <li><a href="https://www.genome.gov/10000608/" style="background-color:#997B04; text-decoration:none; color:white">The Division of Intramural Research (DIR)</a></li>
+      <li><a href="https://www.genome.gov/10001634">An Overview</a></li>
+      <li><a href="https://www.genome.gov/10000010">Branches</a></li>
+      <li><a href="https://www.genome.gov/10000331">Clinical Research</a></li>
+	  <li><a href="https://www.genome.gov/11508889">DIR Calendar</a></li>
+      <li><a href="https://www.genome.gov/19516609">DIR News Features</a></li>
+      <li><a href="https://www.genome.gov/12512879">NHGRI Affiliated Centers</a></li>
+      <li><a href="https://research.nhgri.nih.gov/">Online NHGRI Research Resources</a></li>
+      <li><a href="https://www.genome.gov/12012131">Organizational Chart</a></li>
+	  <li><a href="https://www.genome.gov/12010536">Publications, Books and Resources</a></li>
+      <li><a href="https://www.genome.gov/10000297">Research Investigators</a></li>
+    </ul>
+  </li>
+
+  <li id="health"><a href="https://www.genome.gov/Health/" style="width:62px">Health</a>
+    <ul style="border:2px solid #881374">
+      <li><a href="https://www.genome.gov/19016903" style="background-color:#881374; text-decoration:none; color:white">For Patients and the Public:</a></li>
+	  <li><a href="https://www.genome.gov/27541345">Community Engagement &amp; Community Health Resources</a></li>
+	  <li><a href="https://www.genome.gov/17516481">Family History Initiative</a></li>
+	  <li><a href="https://www.genome.gov/11008303">Finding Reliable Health Information Online</a></li>
+	  <li><a href="https://www.genome.gov/27527653">Genetic &amp; Genomic Science and Research</a></li>
+	  <li><a href="https://www.genome.gov/10000409">Genetic &amp; Rare Diseases Information Center (GARD)</a></li>
+      <li><a href="https://www.genome.gov/27527652">Genetic Disorders, Genomics &amp; Healthcare</a></li>           
+      <li><a href="https://www.genome.gov/27552451">Genomic Medicine</a></li>           
+      <li><a href="https://www.genome.gov/11510197">Online Health Resources</a></li>
+      <li><a href="https://www.genome.gov/27527599" style="background-color:#881374; text-decoration:none; color:white">For Health Professionals:</a></li>
+	  <li><a href="https://www.genome.gov/27527634">Competency &amp; Curricular Resources</a></li>
+	  <li><a href="https://www.genome.gov/27527637">Genetics 101</a></li>
+	  <li><a href="https://www.genome.gov/27527636">New Horizons and Research</a></li>
+      <li><a href="https://www.genome.gov/27527600">Patient Management</a></li>      
+      <li><a href="https://www.genome.gov/27527631">Policy and Ethics Issues</a></li>
+	  <li><a href="https://www.genome.gov/27527639">Quick Links for Patient Care</a></li>
+    </ul>
+  </li>
+
+  <li id="education"><a href="https://www.genome.gov/Education/" style="width:82px">Education</a>
+    <ul style="border:2px solid #1D8246">
+      <li><a href="https://www.genome.gov/10001772">All About the Human Genome Project</a></li>
+      <li><a href="https://www.genome.gov/10000202">Fact Sheets</a></li>
+      <li><a href="https://www.genome.gov/10005911">Genetic Education Modules</a></li>
+      <li><a href="https://www.genome.gov/GenomicCareers">Genomic Careers</a></li>
+      <li><a href="https://www.genome.gov/10506367">National DNA Day</a></li>
+      <li><a href="https://www.genome.gov/25019879">Online Education Kit</a></li>
+      <li><a href="https://www.genome.gov/10000464">Online Genetics Education Resources</a></li>
+	  <li><a href="https://www.genome.gov/Smithsonian">Smithsonian NHGRI Genome Exhibition</a></li>
+      <li><a href="https://www.genome.gov/Glossary">Talking Glossary: English</a></li>
+	  <li><a href="https://www.genome.gov/GlossaryS">Talking Glossary: Espa&ntilde;ol</a></li>
+    </ul>
+  </li>
+
+  <li id="issues"><a href="https://www.genome.gov/Issues/" style="width:132px">Issues in Genetics</a>
+    <ul style="border:2px solid #4D38A3">
+      <li><a href="https://www.genome.gov/19016729">Coverage &amp; Reimbursement of Genetic Tests</a></li>
+      <li><a href="https://www.genome.gov/12510566">Ethics Research at NHGRI</a></li>
+      <li><a href="https://www.genome.gov/10002077">Genetic Discrimination</a></li>
+      <li><a href="https://www.genome.gov/10002335">Regulation of Genetic Tests</a></li>
+      <li><a href="https://www.genome.gov/10001872">Health Issues in Genetics</a></li>
+      <li><a href="https://www.genome.gov/27026588">Informed Consent for Genomics Research</a></li>
+      <li><a href="https://www.genome.gov/19016590">Intellectual Property</a></li>
+      <li><a href="https://www.genome.gov/10001744">Online Bioethics Resources</a></li>
+      <li><a href="https://www.genome.gov/PolicyEthics/LegDatabase/pubsearch.cfm">Statute and Legislation Database</a></li>
+    </ul>
+  </li>
+
+  <li id="newsroom"><a href="https://www.genome.gov/Newsroom/" style="width:84px">Newsroom</a>
+    <ul style="border:2px solid #0B49A7">     
+      <li><a href="https://www.genome.gov/10002215">Calendar of Events</a></li>
+	  <li><a href="https://www.genome.gov/10000475">Current News Releases</a></li>
+      <li><a href="https://www.genome.gov/dmd/">Digital Media Database</a></li>
+ 	  <li><a href="https://www.genome.gov/27552682">GenomeTV</a></li>
+      <li><a href="https://www.genome.gov/10000720">Media Contacts</a></li>
+      <li><a href="https://www.genome.gov/10000741">Media Resources</a></li>
+      <li><a href="https://www.genome.gov/17015314">NHGRI-Related News</a></li>
+      <li><a href="https://www.genome.gov/10506216">Recent Journal Articles from NHGRI</a></li>
+      <li><a href="https://www.genome.gov/27548973">Social Media</a></li>
+    </ul>
+  </li>
+
+  <li id="careers"><a href="https://www.genome.gov/Careers/" style="width:136px">Careers &amp; Training</a>
+    <ul style="border:2px solid #8F421F">
+      <li><a href="https://www.genome.gov/12011083">Educational Programs</a></li>
+      <li><a href="https://www.genome.gov/17517037">Health Professional Education</a></li>
+	  <li><a href="https://www.genome.gov/10005818">Intramural Training Office</a></li>
+      <li><a href="https://www.genome.gov/12012075">Online Careers &amp; Training Resources</a></li>
+      <li><a href="https://www.genome.gov/10000950">Training Programs: Funding</a></li>
+      <li><a href="https://www.genome.gov/10000212">Training Programs: Intramural</a></li>
+      <li><a href="https://www.genome.gov/10000383">Working at NHGRI</a></li>
+    </ul>
+  </li>
+
+  <li id="about"><a href="https://www.genome.gov/About/" style="width:56px">About</a>
+    <ul style="border:2px solid #2F91A6">
+      <li><a href="https://www.genome.gov/27534788">About the Institute</a></li>
+	  <li><a href="https://www.genome.gov/10000008">Budget and Financial Information</a></li>
+	  <li><a href="https://www.genome.gov/27550076">Divisions</a></li>
+      <li><a href="https://www.genome.gov/27527308">Director's Page</a></li>
+      <li><a href="https://www.genome.gov/27557501">Historical Archiving Initiative</a></li>
+	  <li><a href="https://www.genome.gov/10002900">How to Contact Us</a></li>
+      <li><a href="https://www.genome.gov/10000881">Institute Advisors</a></li>     
+      <li><a href="https://www.genome.gov/10001307">Long-Range Planning</a></li>
+      <li><a href="https://www.genome.gov/10001192">Minority and Special Populations</a></li>
+	  <li><a href="https://www.genome.gov/10000974">Office of the Director</a></li>
+	  <li><a href="https://www.genome.gov/10000968">Organization</a></li>
+      <li><a href="https://www.genome.gov/12010618">Reports &amp; Publications</a></li>
+    </ul>
+  </li>
+
+  <li id=""><a href="https://www.genome.gov/27560970" style="width:70px; border:0; color:black">Espa&ntilde;ol</a>
+  </li>
+
+  <li id="fb"><a href="https://goo.gl/WYeMS" style="margin-left:6px; margin-top:4px; border:0; height: 24px;" target="_blank"><img src="/include/genome_public/images/fb_t.png" alt="Facebook" border="0" /></a>
+    <ul>
+      <li><div style="position:absolute; background:#FFF; top:-60px"><a href="https://www.genome.gov/27546927">External link, please review our <u>disclaimer</u></a></div></li>
+    </ul>
+  </li>
+  <li id="fb"><a href="https://goo.gl/ePC3E" style="margin-left:6px; margin-top:4px; border:0; height: 24px;" target="_blank"><img src="/include/genome_public/images/tw_t.png" alt="Twitter" border="0" /></a>
+    <ul>
+      <li><div style="position:absolute; background:#FFF; top:-60px"><a href="https://www.genome.gov/27546927">External link, please review our <u>disclaimer</u></a></div></li>
+    </ul>
+  </li>
+    <li id="fb"><a href="https://goo.gl/BkUVX" style="margin-left:6px; margin-top:4px; border:0; height: 24px;" target="_blank"><img src="/include/genome_public/images/yt_t.png" alt="YouTube" border="0" /></a>
+    <ul>
+      <li><div style="position:absolute; background:#FFF; top:-60px"><a href="https://www.genome.gov/27546927">External link, please review our <u>disclaimer</u></a></div></li>
+    </ul>
+  </li>
+
+      </ul> <!-- Close: dynamic_d -->
+    </div> <!-- Close: Navigation -->
+  </div> <!-- Close: Header -->
+
+  <div id="wrapper_content">
+	<DIV ID="navigation_container">
+                  <DIV CLASS="global_navigation-nhgri_top">
+                    <!-- Content Navigation Start -->
+                        <H1>
+                          NHGRI Division of Intramural Research
+                        </H1>
+                        <UL>
+                          <LI><A HREF="/">Research Home Page</A></LI>
+                        </UL>
+                        <!-- Content Navigation End -->
+                  </DIV>
+
+                  <DIV CLASS="global_navigation" ID="nav">
+                    <!-- Content Navigation Start -->
+                        <h1>BuddySuite</h1>
+                        <ul>
+                          <li><a href="index.shtml">BuddySuite Home Page</a></li>
+                          <li><a href="notice.shtml">Public Domain Notice and Reference</a></li>
+                          <li><a href="contact.shtml">Contact Information</a></li>
+                        </ul>
+                        <!-- Content Navigation End -->
+                  </DIV>
+	</DIV>
+
+		  <div class="global_content">
+		    <!-- Live Content Start -->
+            
+            <h1>BuddySuite</h1>
+            <div class="float_right">
+              <a href="https://github.com/biologyguy/BuddySuite/wiki" target="_blank"><img src="images/logo-buddysuite.jpg" width="350" alt=""></a>
+            </div>
+            <p>The BuddySuite is a collection of four independent, yet interrelated, command line programs that facilitate each step in the workflow of sequence discovery, curation, alignment, and phylogenetic reconstruction. Common sequence, alignment, and tree formats are automatically detected and processed, and many routine manipulations of these files, traditionally performed with an assortment of web tools, bash commands, and/or custom scripts, have been combined into a comprehensive set of toolkits. The suite is written in Python3, is open source, and has been designed for extendability to encourage community involvement with continuing development.</p>
+            <p>To minimize the learning curve when adopting the BuddySuite, positional arguments have been kept to a minimum and every tool has been documented in a <a href="https://github.com/biologyguy/BuddySuite/wiki" target="_blank" class="newwin">wiki on GitHub</a>. Each wiki page provides an explanation for any expected parameters as well as use case examples to demonstrate the tools in action.</p>
+            <p>BuddySuite is available for all major operating systems (Windows Vista+, Mac OS X, Linux), and can be installed from the Python Package Index using 'pip':</p>
+            <pre>
+              $: pip install buddysuite
+              $: buddysuite -setup
+            </pre>
+            <p>Alternatively, the entire project can be cloned directly from its <a href="https://github.com/biologyguy/BuddySuite" target="_blank" class="newwin">GitHub repository</a>.</p>
+            <p>The following manuscript can be cited if you use BuddySuite in your own work:
+              <ul><li>Bond, S.R., Keat, K.E., Barreira, S.N., Baxevanis, A.D. 2017. BuddySuite: Command-Line Toolkits for Manipulating Sequences, Alignments, and Phylogenetic Trees. <em>Mol Biol Evo</em>, 34(6) 1543-1546. [<a href="https://doi.org/10.1093/molbev/msx089" target="_blank" class="newwin">Full Text</a>]</li></ul>
+            </p>
+            
+            <p class="lastmodified">
+              Last Modified: Wednesday, 21-Feb-2018 10:29:11 EST
+            </p>
+		    <!-- Live Content End -->
+		  </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27611436-1', 'auto', 'NHGRIDIR');
+  ga('NHGRIDIR.send', 'pageview');
+
+</script>
+
+
+    <div class="clear"></div>
+  </div> <!-- Close: #wrapper_content -->
+
+  <div id="globalfooter">
+    <div id="logos">
+    <a href="https://www.hhs.gov/"><img src="/include/images/logo_hhs.gif" alt="Department of Health and Human Services" /></a>
+    <a href="https://www.nih.gov/"><img src="/include/images/logo_nih.gif" alt="National Institutes of Health" /></a>
+    <a href="https://www.usa.gov"><img src="/include/images/logo_usagov-color.gif" alt="USA.gov" /></a>
+    </div>
+    <div id="nav">
+     &nbsp;|&nbsp; <a href="https://www.genome.gov/about-nhgri/Policies-Guidance/Privacy">Privacy</a>
+     &nbsp;|&nbsp; <a href="https://www.genome.gov/about-nhgri/Policies-Guidance/Copyright">Copyright</a>
+     &nbsp;|&nbsp; <a href="https://www.genome.gov/about-nhgri/Contact">Contact</a>
+     &nbsp;|&nbsp; <a href="https://www.genome.gov/about-nhgri/Policies-Guidance/Accessibility">Accessibility</a>
+     &nbsp;|&nbsp; <a href="https://www.hhs.gov/plugins.html">Plug-ins</a>
+     &nbsp;|&nbsp; <a href="https://www.genome.gov/about-nhgri/Policies-Guidance/Site-Map">Site Map</a>
+     &nbsp;|&nbsp; <a href="https://www.genome.gov/staff">Staff Directory</a>
+     &nbsp;|&nbsp; <a href="https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office">FOIA</a></div>
+  </div>
+
+</body>
+
+<script type="text/javascript" src="/include/genome_public/scripts/genome-search.js"></script>
+
+</html>

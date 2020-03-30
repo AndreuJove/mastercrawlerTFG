@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=USF-8">
+    <meta name="keywords" content="chromatin interaction, 3C, 4C, 5C, HiC, ChIA-PET, IM-PET">
+    <meta name="description" content="chromatin interaction database">
+    <link type="text/css" rel="stylesheet" href="/css/stylesheet.css"/>
+    <link rel="shortcut icon" href="/image/favicon.ico">
+    <title>4DGenome</title>
+    <script type="text/javascript" src="/js/showTab.js"></script>
+    <script type="text/javascript" src="/js/limitTextarea.js"></script>
+    <script type="text/javascript" src="/js/formValidation2.js"></script>
+    <script type="text/javascript" src="/js/jLibrary_v1.10.2.js"></script>
+    <script type="text/javascript" src="/js/dynamicdropdown.js"></script>
+</head>
+<body onload="init()">
+<div id="header">
+    <script type="text/javascript" src="/js/writeNavbar.js"></script>
+    <!--div id="banner"><img src="/image/banner051514.jpeg" height=100% width=100%></div>
+    <div id="headerbox">
+    <div id="headeremb3">
+    <a class="navtab" href="/"><div style="font-weight:bold;display:inline-block;"><div class="selected">Home</div></div></a>
+    <a class="navtab" href="/About.html"><div><div>About</div></div></a>
+    <a class="navtab" href="/Contribute.html"><div><div>Contribute</div></div></a>
+    <a class="navtab" href="/Download.html"><div><div>Downloads</div></div></a>
+    <a class="navtab" href="/Statistics.html"><div><div>Statistics</div></div></a>
+</div></div-->
+</div>
+<div id="strip1" style="width:1100px;margin:0 auto 0;height:400px; background-color:#0B2338;opacity:.88;">
+    <div id="stripcontent" style="margin:0 auto 0;height:100%;width:1100px;color:white;">
+        <div id="welcomenote" style="width:45%;float:left;margin-left:0;height:100%;">
+            <p style="font-size:24px;font-weight:bold;margin-bottom:2px;padding:0px 10px 2px 30px">Welcome to 4DGenome,
+                a general repository for chromatin interaction data.
+            </p>
+            <p style="margin-top:8px;padding:0px 17px 2px 32px; font-size:19px;font-family:Times New Roman, Georgia,Serif;">
+                Records in 4DGenome are compiled through comprehensive literature curation of experimentally-derived and
+                computationally-predicted interactions. The current release contains 4,433,071 experimentally-derived
+                and 3,605,176 computationally-predicted
+                interactions in 5 organisms. Experimental data cover both high throughput datasets and individiual
+                focused studies.
+                <br><br>
+                All interaction data are freely available in a standardized file format. Records can be queried by
+                genomic regions, gene names, organism, and detection technology.
+                <br><br>
+            </p>
+        </div>
+        <div id="searchbox" style="width:55%;float:right;margin-right:0;height:100%;position:relative;">
+
+            <div class="inner1" style="height:390px;width:600px;float:left;margin-top:10px;margin-left:0px;">
+                <div class="tabContent" id="Search1">
+                    <form enctype="multipart/form-data" action="result7sss.php" onsubmit="return validateForm1s()"
+                          method="post" id="search_form1" target="_blank">
+                        <center style="margin-top:15px;font-size:26px;font-weight:bold;color:white;">Input Genomic
+                            Regions
+                        </center>
+                        <center style="font-size:14px;margin:2px 0 2px;">e.g.:&nbsp chr1:1000-20000 ....</center>
+                        <center><textarea id="textarea1" class="FormElement" rows="3" cols="35" name="m"
+                                          onkeyup="zxcMaxLines(this);" form="search_form1" maxlength=5000
+                                          autofocus></textarea></center>
+                        <center style="font-size:14px;margin:2px 0 2px;">or Upload a file</center>
+                        <center><input type="file" name="queryfile" size="25" form="search_form1"
+                                       style="background-color:#3E3226;padding:initial;border:initial;line-height:initial;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;"
+                                       accept=""/>
+                        </center>
+
+                        <center style="margin:11px 0 5px;">
+                            <div id='dropdown1' style="width:500;border:0"></div><script>$("#dropdown1").load('dropdown1.php');</script>                        </center>
+
+                        <center style="margin:10px 0 4px;">
+                            <input type="radio" name="arule" value="Any" form="search_form1" checked>
+                            <p style="font-size:16px;color:white;display:inline;">Any overlap (Loose)</p>
+                            <input type="radio" name="arule" value="Center" form="search_form1">
+                            <p style="font-size:16px;color:white;display:inline;">Center overlap (Stringent)</p>
+                            &nbsp &nbsp <a id="help1"><u style="font-size:15px;">?</u></a>
+                            <div id="helpinfo">
+                                This option is about how to define associated data records.
+                                <br>
+                                '<b>Any overlap</b>': when an input region shares at least 1bp with either interactors
+                                of a record.
+                                <br>
+                                '<b>Center overlap</b>': when center of an input region falls into either interactor of
+                                a record, or vice versa.
+                            </div>
+                            <br>
+                        </center>
+                        <div class="tips">
+                            <center><a class="disvisited" href="About.html#tips" style="text-decoration:none;">Tips</a>
+                            </center>
+                        </div>
+                        <div class="span6" style="position:absolute;width:220px; right:0;bottom:10px;">
+                            <br>
+                            <button class="btn-success" type="submit" form="search_form1">Submit</button>
+                            <button class="btn-inverse" type="reset" form="search_form1" onclick="cleardropdown1()">
+                                Reset
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="tabContent hide" id="Search2">
+                    <form enctype="multipart/form-data" action="result9sss.php" onsubmit="return validateForm2s()"
+                          method="post" id="search_form2" target="_blank">
+                        <center style="margin-top:15px;font-size:26px;font-weight:bold;color:white;"> Input Genes
+                        </center>
+                        <center style="font-size:16px; margin:2px 0 10px;">(use Refseq gene symbol or Ensembl gene ID)
+                        </center>
+                        <center style="font-size:14px;margin:2px 0 2px;">e.g.:&nbsp ATF* or ENSG00000131591*</center>
+                        <center>
+                            <textarea id="textarea2" class="FormElement" rows="3" cols="35" name="mg"
+                                      onkeyup="zxcMaxLines(this);" form="search_form2" maxlength=5000></textarea>
+                            <br>
+                        </center>
+
+                        <center style="font-size:14px;margin:2px 0 2px;">or Upload a file</center>
+                        <center><input type="file" name="queryfileg" size="25" form="search_form2"
+                                       style="background-color:#3E3226;padding:initial;border:initial;line-height:initial;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;"
+                                       accept=""/>
+                        </center>
+
+                        <center style="margin:11px 0 5px;">
+                            <div id='dropdown2' style="width:500;border:0"></div><script>$("#dropdown2").load('dropdown2.php');</script>                        </center>
+                        <div class="tips">
+                            <center><a class="disvisited" href="About.html#tips" style="text-decoration:none;">Tips</a>
+                            </center>
+                        </div>
+                        <div class="span4" style="position:absolute;width:220px; right:0;bottom:10px;">
+                            <br>
+                            <button class="btn-success" type="submit" form="search_form2">Submit</button>
+                            <button class="btn-inverse" type="reset" form="search_form2" onclick="cleardropdown2()">
+                                Reset
+                            </button>
+                        </div>
+                    </form>
+                </div>  <!-- end of tabContent -->
+            </div>  <!-- end of inner1 -->
+
+            <div id="tabs">
+                <a href="#Search1" style="text-decoration:none;"><div class="mytab" style="position:absolute;top:10px;left:552px;">
+                        <p class="text-rotation">by Regions</p>
+                    </div>
+                </a>
+                <a href="#Search2" style="text-decoration:none;"><div class="mytab" style="position:absolute;top:158px;left:552px;">
+                        <p class="text-rotation">by Genes</p>
+                    </div>
+                </a>
+            </div>
+        </div> <!-- end of searchbox -->
+    </div> <!-- end of stripcontent -->
+</div>  <!-- end of stripone -->
+
+<div id="mainbody" style="margin:0 auto 0;width:1070px;font-size:12px;">
+    <h5 style="padding-left:15px; margin-top:10px; margin-bottom:8px; font-size:1.5em;"> LATEST NEWS </h5>
+    <div class="news">
+        <b>August 15<sup>th</sup></b>,<b> 2014,</b> 4DGenome was launched.
+        Current build of the database contains <b>8,038,247</b> records of chromatin interactions in five species. It
+        covers all major experimental and computational technologies for detecting chromatin interactions including <b>3C</b>,
+        <b>4C</b>, <b>5C</b>, <b>ChIA-PET</b>, <b>Hi-C</b>, <b>Capture-C</b>, and <b>IM-PET</b>.
+
+    </div>
+
+    <div class="news">
+        The 4DGenome web interface was developed on <b>Chrome 37</b>, and tested for <b>Safari 7</b>, <b>Firefox 32</b>
+        and <b>IE 9</b> as of Oct 28th 2014. For best compatibility, we recommend using of Chrome or Safari.
+    </div>
+    <br>
+</div>
+
+<div class="footer" id="thisft"></div>
+<script>
+    $( "#thisft" ).load( "footer.php" );
+</script>
+</body>
+</html>

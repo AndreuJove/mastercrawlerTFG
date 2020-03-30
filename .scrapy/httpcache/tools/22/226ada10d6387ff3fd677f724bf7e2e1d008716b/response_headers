@@ -1,0 +1,13 @@
+Cache-Control: no-cache, must-revalidate
+Content-Type: text/html;charset=UTF-8
+Content-Security-Policy: frame-ancestors 'self'
+Strict-Transport-Security: max-age=0
+Date: Mon, 30 Mar 2020 18:47:39 GMT
+X-Asen: SEN-193206
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=3B7A660C60DB5B85AF114B0E8D5430CE; Path=/seqdb/confluence; HttpOnly
+X-Confluence-Request-Time: 1585594060057
+X-Frame-Options: SAMEORIGIN
+X-Accel-Buffering: no

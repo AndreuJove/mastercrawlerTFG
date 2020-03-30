@@ -1,0 +1,82 @@
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+            <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+        <title>ClusPro 2.0: protein-protein docking</title>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <link rel='stylesheet' type='text/css' href='/css/style.css' />
+      <link rel='stylesheet' type='text/css' href='/css/loginform.css' />
+      <link rel='stylesheet' type='text/css' href='/css/signupform.css' />
+      <link rel='stylesheet' type='text/css' href='/css/contactform.css' />
+      <link rel='stylesheet' type='text/css' href='/css/jobsform.css' />
+      <link rel='stylesheet' type='text/css' href='/css/goodform.css' />
+      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/yui/2.9.0/grids/grids-min.css" />
+      <style type="text/css">#tabLogin { font-weight:bold; }</style>      <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+      <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+      <script type="text/javascript" src="/js/jquery.equalheights.js"></script>
+      
+      
+    </head>
+
+    <body>
+      <div id="doc">
+        <div id="hd">
+          <ul id='tabs-menu'>
+            <li><a id='tabContact' href='/contact.php'>Contact</a></li>
+            <li><a id='tabHelp' href='/help.php'>Help</a></li>
+            <li><a id='tabPapers' href='/publications.php'>Papers</a></li>
+                          <li><a id='tabSignup' href='/signup.php'>Sign Up</a></li>
+              <li><a id='tabLogin' href='/login.php'>Login</a></li>
+                      </ul>
+          <img src='/image/ClusPro1.png' width='750' height='160' alt=''/>
+        </div>
+	<div id="bd">
+	    
+          <h2>Welcome to Cluspro 2.0</h2>
+<p><a href="https://vajdalab.org/news">Recent news</a></p>
+
+<h3>Use Without an Account</h3>
+
+<p><a href="nousername.php">Use the server without the benefits of your own account</a></p>
+
+<p>--or--</p>
+<h3>Login</h3>
+
+
+<form id="loginform" enctype="multipart/form-data" action="login.php" method="post">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" value="" />
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" value="" />
+  </div>
+  <input type="hidden" id="redir" name="redir" value="/home.php" />
+  <div id="submit">
+    <input type="submit" name="action" value="Login" />
+  </div>
+</form>
+
+<p>--or--</p>
+<h3><a href="signup.php">Sign up for an account</a></h3>
+<br /><br />
+Forgot Password?
+<br />
+<a href='forgotpassword.php'>Reset Password</a>
+<br /><br />
+Forgot Username?
+<br />
+<a href='forgotusername.php'>Retrieve Username</a>
+
+        </div>
+        <div id="ft">
+          ClusPro should only be used for noncommercial purposes.
+          <br/>
+          <a href='https://www.vajdalab.org' target='_blank'>Vajda Lab</a> and <a href='http://abcgroup.cluspro.org'>ABC Group</a>
+          <br/>
+          <a href='https://www.bu.edu/'>Boston University</a> and <a href='http://www.stonybrook.edu'>Stony Brook University</a>
+        </div>
+      </div>
+
+    </body>
+  </html>

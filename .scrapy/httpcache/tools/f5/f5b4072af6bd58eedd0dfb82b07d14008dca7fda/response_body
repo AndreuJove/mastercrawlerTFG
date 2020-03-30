@@ -1,0 +1,726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+  <base href="http://sbi.imim.es/web/index.php/research/servers/bips" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="" />
+  <meta name="rights" content="" />
+  <meta name="language" content="en-GB" />
+  <meta name="generator" content="Joomla! 1.6 - Open Source Content Management" />
+  <title>BIPS</title>
+  <link href="/web/templates/sbi_joomla16_server/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <script src="/web/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/web/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/web/media/system/js/caption.js" type="text/javascript"></script>
+
+<!--- This file contains the functions of the template. DO NOT MODIFY IT, otherwise the template will break !---> 
+<link rel="stylesheet" href="/web/templates/sbi_joomla16_server/css/styles.css" type="text/css" />
+
+</head>
+
+<body class="background">
+<div id="main">
+<div id="header-w">
+      <div id="header">
+                  
+              <a href="/web/">
+        <img src="/web/templates/sbi_joomla16_server/images/screen_resized.jpg" border="0" class="logo">
+        </a>
+                <div class="tguser">
+    
+    </div>
+                                     
+    </div>        
+</div>
+  <div id="wrapper">
+    <!-- UP MENU -->
+    <div id="navr">
+      <div id="navl">
+        <div id="nav">
+          <div id="nav-left">
+            
+<ul class="menu">
+<li id="item-101"><a href="/web/" >Home</a></li><li id="item-102" class="active parent"><a href="/web/index.php/research" >Research</a></li><li id="item-103" class="parent"><a href="/web/index.php/members" >Members</a></li><li id="item-104" class="parent"><a href="/web/index.php/courses" >Courses</a></li><li id="item-252"><a href="/web/index.php/grants-and-awards" >Grants and Awards</a></li><li id="item-253"><a href="/web/index.php/jobs" >Jobs and Openings</a></li></ul>
+
+          </div>
+          <div id="nav-right"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- JAVI. MAIN LOGO -->
+    <!--<div id="topimage">
+      <div id="topimage-nf">
+        
+      </div>
+    </div>-->
+    
+    <div id="main-content">
+          <div class="clearpad"></div>
+      <div id="message">
+        
+      </div>
+                  <!--<div id="leftbar-w">
+        <div id="addthis"><!-- AddThis Button BEGIN -->
+      
+      <!--SOCIAL NETWORK BUTTONS -->
+          <!--<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+            <a class="addthis_button_preferred_1"></a>
+            <a class="addthis_button_preferred_2"></a>
+            <a class="addthis_button_preferred_3"></a>
+            <a class="addthis_button_preferred_4"></a>
+            <a class="addthis_button_compact"></a>
+          </div>
+          
+          
+          <script type="text/javascript" src="/web/"></script>-->
+
+          <!-- AddThis Button END --><!--</div>-->
+        
+        <!-- JAVI. LEFT MENU -->
+        <!--<div id="sidebar">
+          	<div class="module">
+        <div class="inner">
+				<div class="h3c"><div class="h3r"><div class="h3l"><h3 class="module-title">Main Menu</h3></div></div></div>
+			    <div class="module-body">
+	        
+<ul class="menu">
+<li id="item-101"><a href="/web/" >Home</a></li><li id="item-102" class="active deeper parent"><a href="/web/index.php/research" >Research</a><ul><li id="item-105"><a href="/web/index.php/research/publications" >Publications</a></li><li id="item-131" class="active parent"><a href="/web/index.php/research/servers" >Servers</a></li><li id="item-132" class="parent"><a href="/web/index.php/research/software" >Software</a></li><li id="item-236" class="parent"><a href="/web/index.php/research/databases" >Databases</a></li><li id="item-240" class="parent"><a href="/web/index.php/research/supplementarymaterials" >Supplementary Materials</a></li></ul></li><li id="item-103" class="parent"><a href="/web/index.php/members" >Members</a></li><li id="item-104" class="parent"><a href="/web/index.php/courses" >Courses</a></li><li id="item-252"><a href="/web/index.php/grants-and-awards" >Grants and Awards</a></li><li id="item-253"><a href="/web/index.php/jobs" >Jobs and Openings</a></li></ul>
+        </div>
+        </div>
+	</div>
+	
+        </div>
+      </div>-->
+                  <div id="centercontent_md">
+        
+        <!-- JAVI. PAGE CONTENT -->
+        <div style="margin: auto;">
+                    
+          
+<script language="javascript" type="text/javascript" src="/BIPS/bips_html_v18/bips.server/webiana_scripts.js"></script>
+<script language="javascript" type="text/javascript" src="/BIPS/bips_html_v18/bips.server/help_script.js"></script>
+<script language="javascript" type="text/javascript" src="/BIPS/bips_html_v18/bips.server/../js/expansions.js"></script>
+
+<script type="text/javascript" src="/BIPS/bips_html_v18/bips.server/../../ajax-autocomplete/jquery.js"></script>
+<script type='text/javascript' src='/BIPS/bips_html_v18/bips.server/../../ajax-autocomplete/jquery.autocomplete.js'></script>
+<link rel="stylesheet" type="text/css" href="/BIPS/bips_html_v18/bips.server/../../ajax-autocomplete/jquery.autocomplete.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="/BIPS/bips_html_v18/bips.server/biana.server2.css" />
+
+<!--<script language="javascript" type="text/javascript" src="/BIPS/bips_html_v18/bips.server/tabbed_pane.js" />-->
+
+<script type="text/javascript">
+
+var current_tab = 0;
+
+var tabs = new Array("bips.submit","bips.results","bips.precomputed_predictions","bips.help");
+//var tabs = new Array("bips.submit","bips.results","bips.help");
+
+function go_to_next_tab(){
+
+        if( current_tab == tabs.length-1 ){
+                return;
+        }
+        current_tab += 1;
+        flip_div_display(tabs[current_tab]);
+        select_tab( tabs[current_tab] );
+}
+
+function go_to_previous_tab(){
+
+        if( current_tab == 0 ){
+                return;
+        }
+        current_tab -= 1;
+        select_tab( tabs[current_tab] );
+}
+
+function select_tab(tab){
+
+        //Remove not tabbed elements
+
+        document.getElementById("form_display_div").style.display = "none";
+        document.getElementById("submitted_experiment_tab").style.display = "none";
+        document.getElementById("additional_content_tab").style.display = "none";
+
+        if( tabs[current_tab] != tab ){
+                for( var i=0; i<tabs.length; i++ ){
+                        if( tabs[i]==tab ){
+                                current_tab = i;
+                        }
+                }
+        }
+
+        replace_class( "selected_tabbed_cell", "tabbed_cell", document.getElementById("tabbed_table") );
+
+        for( var i=0; i<tabs.length; i++ ){
+                document.getElementById(tabs[i]).style.display = "none";
+        }
+
+        if( tab != undefined ){
+                flip_div_display(tab);
+                document.getElementById(tab+'_tab').className = "selected_tabbed_cell";
+        }
+}
+
+function flip_div_display(div_id){
+
+    div = document.getElementById(div_id);
+    if(div.style.display=='none'){
+        div.style.display='block';
+    }
+    else{
+        div.style.display='none';
+    }
+}
+
+function replace_class( old_class, new_class, domNode ){
+
+        if (domNode == null) domNode = document;
+        var el = new Array();
+        var tags = domNode.getElementsByTagName('*');
+        var tcl = " "+old_class+" ";
+        for(i=0,j=0; i<tags.length; i++) {
+                var test = " " + tags[i].className + " ";
+                if (test.indexOf(tcl) != -1)
+                        //el[j++] = tags[i];
+                        tags[i].className = new_class;
+        }
+}
+
+</script>
+
+
+
+<script type="text/javascript">
+$().ready(function() {
+        
+        $("#partner_specie_select").autocomplete("/BIPS/bips_html_v18/bips.server/../../ajax-autocomplete/get_taxid_list.php", {
+                width: 260,
+                matchContains: true,
+                mustMatch: false,
+                //minChars: 0,
+                //multiple: true,
+                //highlight: false,
+                //multipleSeparator: ",",
+                selectFirst: false
+        });
+        
+        $("#partner_specie_select").result(function(event, data, formatted) {
+		//alert(data);
+                $("#partner_specie").val(data[1]);
+        });
+
+
+	//a = document.getElementById("partner_specie_select");
+	//alert(a.onchange);	
+});
+
+$().ready(function() {
+        
+        $("#partner_specie_submit_select").autocomplete("/BIPS/bips_html_v18/bips.server/../../ajax-autocomplete/get_taxid_list.php", {
+                width: 260,
+                matchContains: true,
+                mustMatch: false,
+                //minChars: 0,
+                //multiple: true,
+                //highlight: false,
+                //multipleSeparator: ",",
+                selectFirst: false
+        });
+        
+        $("#partner_specie_submit_select").result(function(event, data, formatted) {
+                $("#partner_specie_submit").val(data[1]);
+        });
+});
+
+$().ready(function() {
+        
+        $("#template_specie_select").autocomplete("/BIPS/bips_html_v18/bips.server/../../ajax-autocomplete/get_taxid_list.php", {
+                width: 260,
+                matchContains: true,
+                mustMatch: false,
+                //minChars: 0,
+                //multiple: true,
+                //highlight: false,
+                //multipleSeparator: ",",
+                selectFirst: false
+        });
+        
+        $("#template_specie_select").result(function(event, data, formatted) {
+                $("#template_specie").val(data[1]);
+        });
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+<h1>BIPS. Biana Interolog Prediction Server</h1>
+
+
+<table cellspacing=1 cellpadding=3 border=1 width="100%"><tr bgcolor=#eeedcd><td>This is the web server <b>BIPS</b> (Biana Interolog Prediction Server). Here, you can predict putative interactions between proteins based on homologs found in Protein-Protein interaction databases. BIPS relies on data integrated in <a href="http://sbi.imim.es/BIANA.php">BIANA</a>.
+You just need to insert your sequences of interest or list of protein identifiers, and BIPS will infer interactions based on homology. Predicted partners can be restricted to proteins added in your list or to the complete BIANA database. If you are unsure on the usage of this web server you can first <a href="javascript:add_bips_sample();" id='href_sample_data' onclick="javascript:add_bips_sample();">try it using sample data</a>. You will also find useful information in the <a href="javascript: select_tab('bips.help');">help section of this server</a>.</td></tr>
+
+
+<tr><td>Cite: <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3394316/" target="blank"><b>BIPS: BIANA Interolog Prediction Server. A tool for protein–protein interaction inference</b></a>. Javier Garcia-Garcia, Sylvia Schleker, Judith Klein-Seetharaman, Baldo Oliva
+Nucleic Acids Res. 2012 July; 40(Web Server issue): W147–W151.  Published online 2012 June 9.</td></tr>
+</table>
+
+
+<div id="message_div" class="message_div"></div>
+
+<div id="error_div" class="error_div"></div>
+
+<hr />
+
+
+<!-- TABBED PANE -->
+
+	<table width="100%" border="0px" cellspacing="0px" cellpadding="0px" margin="0px">
+		<tr>
+			<td>
+				<table align="rigth" id="tabbed_table" border="0px" cellspacing="0px" cellpadding="3px" margin="0px">
+					<tr>
+						<td id="bips.submit_tab" class="selected_tabbed_cell" onclick="select_tab('bips.submit');">Submit a new prediction</td>
+						<td />
+						<td id="bips.results_tab" class="tabbed_cell" onclick="select_tab('bips.results');">Browse results</td>
+						<td />
+						<td width="100%" />
+						<td id="bips.precomputed_predictions_tab" class="tabbed_cell" onclick="select_tab('bips.precomputed_predictions');">Precomputed predictions</td>
+						<!--<td width="100%" /> --><!-- SEPARATOR BETWEEN NEW AND OLD EXPERIMENTS-->
+						<td />
+						<td id="bips.help_tab" class="tabbed_cell" onclick="select_tab('bips.help');">Help</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<!--<div style="display: none">
+					<iframe name="form_display"></iframe>
+				</div>-->
+				<div class="tabbed_table_content">
+
+				
+					<table width="100%">
+						<!--<tr>
+							<td align="right">
+                                                                <img src="/web/data/biana.server/images/previous32.png" style="cursor: pointer;" onclick="javascript:go_to_previous_tab();" />
+                                                                <img src="/web/data/biana.server/images/next32.png" style="cursor: pointer;" onclick="javascript:go_to_next_tab();" />
+                                                        </td>
+						</tr>-->
+						<tr>
+							<td>
+								<div id="bips.submit" class="tabbed_div">
+
+	<form name="new_job_form" action="" method="post" enctype="multipart/form-data" onsubmit="return check_input();">
+		<table>
+			<tr><td>
+					Insert here your protein sequences in FASTA format or in a list of protein identifiers. 
+					<select id="input_type" name="input_type">
+						<option id="fasta_file_option" value="fasta_file" selected>Fasta</option>
+						<option value="uniprotentry">Uniprot Entry list</option>
+						<option value="uniprotaccession">Uniprot Accession list</option>
+						<option value="genesymbol">Gene Symbol</option>
+						<option value="tair">Tair</option>
+						<!--<option value="taxid">Taxonomy ID</option>-->
+						<!--<option value="geneid">GeneID</option>
+						<option value="accessionnumber">NCB Accession</option>-->
+					</select>					
+					<a href="javascript:add_bips_sample();" onclick="javascript:add_bips_sample();">View sample</a>
+			</td></tr>
+			<tr><td>	
+					<textarea id="input_textarea" name="input_textarea" cols="100" rows="10"></textarea>
+			</td></tr>
+			<tr><td>				
+				Or upload a protein FASTA file: <input id="fasta_file" type="file" name="fasta_file" cols="80"></input>
+			</td></tr>
+			<tr><td>Set taxonomy of predicted partner proteins:
+	                        <div id="select_taxid_submit_div">
+                                	<p>
+	                                Taxonomy Name or ID<label>:</label>
+        	                        <input type="text" name="partner_specie_submit_select" id="partner_specie_submit_select" value="human [9606]"/>
+                                	<input type="hidden" name="partner_specie_submit" id="partner_specie_submit" value="9606">(*it can be changed later)
+	                                </p>
+                        	</div>
+                      	<img style="cursor: pointer;" src="/BIPS/bips_html_v18/bips.server/images/help16.png" onclick="show_help(event,'Restrict predicted partners by taxonomy ID (9606)');" /></input>
+                	</td </tr>
+
+			<tr><td align="right">
+				<button type="submit" value="Submit">Submit</button>
+			</td></tr>
+		</table>
+	</form>
+
+</div>
+
+<div id="bips.results" class="tabbed_div">
+
+			<form name="get_job_form" action="">
+				You have still not submitted any work.<br/> 
+				If you want to recover a previous job, please add the job identifier: <input name="jobID" cols="50"/>
+				<button type="submit" value="Submit">Submit</button>
+			</form>		
+				If you want to navigate on a sample output, click <a href="http://sbi.imim.es/web/index.php/research/servers/bips?jobID=acabc8c5334795b3cf31192e31219bfa">here</a>.
+		
+</div>
+<div id="bips.help" class="tabbed_div">
+
+<h3>BIPS help</h3>
+
+<h4>Introduction</h4>
+
+<p>
+Prediction of interactions inferred by homology. The hypothesis of this approach is that two proteins 
+(A and B) interact if it exists a known interaction between two proteins (A' and B') such that A is
+ similar to A' and B similar to B'. The known interactions between A' and B' is called <b>template interaction</b>.
+In BIPS server, protein A is the <b>user query protein</b> and protein B is <b>predicted target protein</b>.
+The basis of the hypothesis is to assume the similar behavior of homolog proteins. 
+The approach uses sequence similarity between proteins based on the sequence alignment. 
+We align the sequences of two proteins to measure their similarity as a function of the 
+percentage of identical residues and the percentage of their sequence being aligned 
+(for example, using 60 % identity and 70 % of the total length of the target protein and 90%
+ of the template). Template sequence coverage is always fixed to 90%.
+</p>
+
+<img src="/BIPS/bips_html_v18/bips.server/images/interolog_base_small.png" />
+
+<p>
+In a second approach we measure the similarity of the target sequences (A and B) with PFAM domains
+ as a function of the e-value calculated with the package <a hrer="http://hmmer.janelia.org/"></a>. 
+ This results in the assignation of one or several PFAM domains to the query and target sequences.
+  Then, we use the database of iPfam and 3DiD to check for domain-domain interactions. 
+ We hypothesize that A interacts with B if a domain A' can be assigned to A and a domain B' to B
+ such that A' and B' are interacting domains in iPfam or 3DiD.
+Furthermore, it has been shown that the specificity of some interactions depends on a set of
+ interacting domains. Therefore, the most restrictive set of predictions will be those for which
+ both criteria of similarity are required, using stringent values of sequence identity, coverage
+  and domain assignation.
+</p>
+
+<h4>Filters</h4>
+
+Predictions can be filtered at different levels:
+
+<h5>Filter template interactions</h5>
+
+<b>Template interaction detection methods</b>
+<ul>
+<li>Use all methods. Apply "matrix" model to co-complex methods</li>
+<li>Use all methods. Apply "spoke" model to co-complex methods</li>
+<li>Exclude co-complex methods as Tandem Affinity Purification</li>
+<li>Use only interactions reported in at least two different experiments</li>
+<li>Use interactions reported in at least two species</li>
+</ul>
+
+<br/>
+<b>Domain interactions.</b>
+We hypothesize that protein A interacts with protein B if a domain A1 can be assigned to A and a domain B1 to B, such that A1 and B1 are interacting domains in iPfam or 3DiD databases. We measure the similarity of the target sequences (A and B) with PFAM domains as a function of the E-value calculated with the package HMMER 3.0. We assign Pfam domains using an E-value cut-off of 10-5 in the Pfam A database.
+
+
+<h5>Filter Homology conditions</h5>
+
+<b>Sequence similarity measure.</b> Sequence similarity between proteins relies on BLAST alignments. Query protein sequences are aligned against all sequences with known interactions stored in the BIANA MySQL database. The alignments provide a similarity measure based on the percentage of identical residues aligned (%id) and the percentage of the sequence length of the queries and templates covered by the alignment (query and template coverage, respectively). We use a threshold of 90% of template coverage to ensure that the prediction is not inferred from local regions of the template interaction. BIPS server uses a local database of similarity-measures to avoid unnecessary repeats of BLAST comparisons. This speeds up the server, allowing users to obtain predictions of interactions of full proteomes in manageable time. In this manner, only entirely new sequences consume extra time, and that only in the first run.
+
+<br/>
+Parameters:
+<ul>
+	<li><b>Blast e-value:</b> E-value in the BLAST alignment between target protein and template interacting protein.</li>
+	<li><b>%identities:</b> Identical residues aligned between target protein and template interacting protein.</li>
+	<li><b>Sequence coverage:</b> Percentage of the sequence length of the target protein aligned with template interacting protein.</li>
+</ul>
+<br/>
+<b>Clusters of orthologous genes.</b> Two proteins are considered orthologous if they are included in the same cluster of orthologous genes (COG). Orthology definitions between proteins are extracted from eggNOG (30) and Ensembl Compara (31) databases. Our predictions can be filtered assuming the traditional definition of interologs: two target proteins are supposed to interact if they are orthologous with two proteins that interact.
+
+<h5>Filter Predicted target proteins by their properties</h5>
+
+Partner proteins can be filtered according to:
+
+<ul>
+	<li>Include or exclude specific keywords in their descriptive attributes.</li>
+	<li>A specific taxon, including the case in which query proteins are from a particular pathogen and the predicted partners can come from selected hosts</li>
+	<li>A subset of proteins uploaded by the user</li>
+	<li>Proteins with transmembrane predicted regions (calculated with TMHMM).</li> 
+</ul>
+
+<h5>Filter predicted interactions by properties of inferred interacting protein pair</h5>
+<ul>
+<li>Interacting proteins likely share biological processes or share similar locations compared to non-interacting proteins. Thus, we can use the number of similar functional annotations between the proteins of a predicted interaction to infer the likelihood of the prediction. BIPS uses GO annotations to select the most probable prediction of a query protein by selecting those partners that share the largest number of similar GO terms. The similarity between GO terms implies that either they are equal or there is a parenthood relationship between them.
+</li>
+</ul>
+</div>
+<div id="bips.precomputed_predictions" class="tabbed_div">
+
+<h3>BIPS predictions for the following species</h3>
+
+Here you can find pre-calculated interactomes predicted for some species. You can submit complete proteomes to the BIPS server. We tried to make it as fast as possible. If you submit several thousands of proteins to the server and you do not get your results in less than an hour, please report it at: javier.garciag@upf.edu and we will try to fix it.
+
+<h4>Human (TaxID: 9606)</h4>
+80% sequence identity, 80% coverage, Joint evalue&lt;1e-80. Exclude Tandem Affinity interactions as templates. <a href="/BIPS/DATA/BIPS_9606_id80_cov80_jevalue80_noTAP_grouped_by_gene.txt" target="_blank">Download</a><br/>
+<!--80% sequence identity, 80% coverage, Joint evalue&lt;1e-80. Exclude Tandem Affinity interactions as templates. Filter to Pfam domain-domain interactions (3DID or iPfam)  and GO filter applied at level 3 (BP, CC or MF). <a href="/BIPS/DATA/" target="_blank">Download</a>-->
+
+<h4>Arabidopsis (TaxID: 3702)</h4>
+80% sequence identity, 80% coverage, Joint evalue&lt;1e-80. Exclude Tandem Affinity interactions as templates. <a href="/BIPS/DATA/BIPS_3702_id80_cov80_jevalue80_noTAP_grouped_by_gene.txt" target="_blank">Download</a><br/>
+80% sequence identity, 80% coverage, Joint evalue&lt;1e-80. Exclude Tandem Affinity interactions as templates. Filter to Pfam domain-domain interactions (3DID or iPfam)  and GO filter applied at level 3 (BP, CC or MF). <a href="/BIPS/DATA/BIPS_3702_id80_cov80_jevalue80_noTAP_grouped_by_gene_pfamOR_goOR.txt  " target="_blank">Download</a>
+
+<h4>Salmonella (TaxID: 90371)</h4>
+80% sequence identity, 80% coverage, Joint evalue&lt;1e-80. Exclude Tandem Affinity interactions as templates. <a href="/BIPS/DATA/BIPS_90371_id80_cov80_jevalue80_noTAP_grouped_by_gene.txt" target="_blank">Download</a><br/>
+80% sequence identity, 80% coverage, Joint evalue&lt;1e-80. Exclude Tandem Affinity interactions as templates. Filter to Pfam domain-domain interactions (3DID or iPfam)  and GO filter applied at level 3 (BP, CC or MF). <a href="/BIPS/DATA/BIPS_90371_id80_cov80_jevalue80_noTAP_grouped_by_gene_pfamOR_goOR.txt" target="_blank">Download</a>
+
+<h4>Crosstalk Salmonella-Arabidopsis (90371:3702)</h4>
+80% sequence identity, 80% coverage, Joint evalue&lt;1e-80. Exclude Tandem Affinity interactions as templates. <a href="/BIPS/DATA/BIPS_90371_3702_id80_cov80_jevalue80_noTAP_grouped_by_gene.txt" target="_blank">Download</a><br/>
+80% sequence identity, 80% coverage, Joint evalue&lt;1e-80. Exclude Tandem Affinity interactions as templates. Filter to Pfam domain-domain interactions (3DID or iPfam)  and GO filter applied at level 3 (BP, CC or MF). <a href="/BIPS/DATA/BIPS_90371_3702_id80_cov80_jevalue80_noTAP_grouped_by_gene_pfamOR_goOR.txt" target="_blank">Download</a>
+
+<h4>Crosstalk Salmonella-Human (90371:9606)</h4>
+80% sequence identity, 80% coverage, Joint evalue&lt;1e-80. Exclude Tandem Affinity interactions as templates. <a href="/BIPS/DATA/BIPS_90371_9606_id80_cov80_jevalue80_noTAP_grouped_by_gene.txt" target="_blank">Download</a><br/>
+80% sequence identity, 80% coverage, Joint evalue&lt;1e-80. Exclude Tandem Affinity interactions as templates. Filter to Pfam domain-domain interactions (3DID or iPfam)  and GO filter applied at level 3 (BP, CC or MF). <a href="/BIPS/DATA/BIPS_90371_9606_id80_cov80_jevalue80_noTAP_grouped_by_gene_pfamOR_goOR.txt" target="_blank">Download</a>
+
+</div>
+<div width="100%" id="submitted_experiment_tab" class="tabbed_div" style="display: none"></div><div width="100%" height="340px" id="form_display_div" style="display: none"><iframe frameborder="0" width="100%" height="300px" name="form_display"></iframe></div><div width="100%" id="additional_content_tab" class="tabbed_div" style="display: none"></div>							</td>
+						</tr>
+					</table>
+
+					<input type="hidden" value="submit" name="form_action"/>
+
+				</div>
+			</td>
+		</tr>
+		
+	</table>
+
+	<div id="server_foot" align="center">
+		<a href="javascript: select_tab();load_on('/BIPS/bips_html_v18/bips.server/terms_and_conditions.php','additional_content_tab');">Terms and conditions</a> - 
+		<a href="javascript: select_tab();load_on('/BIPS/bips_html_v18/bips.server/privacy.php','additional_content_tab');">Privacy</a> - 
+		<a href="javascript: select_tab();load_on('/BIPS/bips_html_v18/bips.server/contact.php','additional_content_tab');">Contact</a> - 
+		Tested on Chrome and Firefox. Requires javascript enabled.
+	</div>	
+	
+
+<script>
+	select_tab('bips.submit');</script>
+
+
+
+          <!--
+<div class="item-page">
+
+
+		<h2 class="item-page-title">
+				
+						BIPS
+				
+		</h2>
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+	
+    
+	/usr/local/apache2/htdocs/BIPS/bips_html_v18/bips.server.php
+
+	
+</div>-->
+                    <!--
+<div class="item-page">
+
+
+		<h2 class="item-page-title">
+				
+						BIPS
+				
+		</h2>
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+	
+    
+	/usr/local/apache2/htdocs/BIPS/bips_html_v18/bips.server.php
+
+	
+</div>-->
+          <!--JDocumentHTML Object
+(
+    [_links] => Array
+        (
+        )
+
+    [_custom] => Array
+        (
+        )
+
+    [template] => sbi_joomla16_server
+    [baseurl] => /web
+    [params] => JRegistry Object
+        (
+            [data:protected] => stdClass Object
+                (
+                )
+
+        )
+
+    [_file] => /usr/local/apache2/htdocs/joomla16/templates/sbi_joomla16_server/index.php
+    [_template:protected] => 
+    [_template_tags:protected] => Array
+        (
+        )
+
+    [_caching:protected] => 
+    [title] => BIPS
+    [description] => 
+    [link] => 
+    [base] => http://sbi.imim.es/web/index.php/research/servers/bips
+    [language] => en-gb
+    [direction] => ltr
+    [_generator] => Joomla! 1.6 - Open Source Content Management
+    [_mdate] => 
+    [_tab] =>   
+    [_lineEnd] => 
+
+    [_charset] => utf-8
+    [_mime] => text/html
+    [_namespace] => 
+    [_profile] => 
+    [_scripts] => Array
+        (
+            [/web/media/system/js/core.js] => Array
+                (
+                    [mime] => text/javascript
+                    [defer] => 
+                    [async] => 
+                )
+
+            [/web/media/system/js/mootools-core.js] => Array
+                (
+                    [mime] => text/javascript
+                    [defer] => 
+                    [async] => 
+                )
+
+            [/web/media/system/js/caption.js] => Array
+                (
+                    [mime] => text/javascript
+                    [defer] => 
+                    [async] => 
+                )
+
+        )
+
+    [_script] => Array
+        (
+        )
+
+    [_styleSheets] => Array
+        (
+        )
+
+    [_style] => Array
+        (
+        )
+
+    [_metaTags] => Array
+        (
+            [http-equiv] => Array
+                (
+                    [content-type] => text/html
+                )
+
+            [standard] => Array
+                (
+                    [robots] => index, follow
+                    [keywords] => 
+                    [rights] => 
+                    [language] => en-GB
+                )
+
+        )
+
+    [_engine] => 
+    [_type] => html
+    [_errors:protected] => Array
+        (
+        )
+
+)
+-->
+        </div>
+    </div>
+
+        
+        <div class="clr"></div>
+    </div>       
+  </div>     
+  </div>
+  </div>
+  
+  
+  
+  <div id="user-bottom">
+            <div class="user1"></div>
+            <div class="user2"></div>
+          </div>
+                    <div id="bottom">
+            <div class="tg">
+              Copyright 2011 BIPS. All Rights Reserved.</div></div><!-- You are not allowed to remove this. Contact us for more info.--><div class="design"><a href="http://www.themegoat.com" title="joomla theme" target="_blank">Joomla theme</a> by <a href="http://www.mdahosting.com/hostgator-coupon/" title="hostgator coupon" target="_blank">hostgator coupon</a></div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32327425-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+

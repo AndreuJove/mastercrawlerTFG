@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>AHTPDB: Anti Hypertensive Inhibiting peptide database</title>
+<meta name="keywords" content="hypetensive,inhibitors, blood pressure, peptide,structure" />
+<meta name="description" content="A database of antihypertenvie peptides" />
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+<script type='text/javascript' src='menu_jquery.js'></script>
+<link href="default.css" rel="stylesheet" type="text/css" />
+<link href="stylelft.css" rel="stylesheet" type="text/css" />
+<link href="stylehor.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="logo">
+      <div id="nav">
+        <ul>
+          <li><a href="index.php">HOME </a></li>
+          <li><a href="info2.php">INFORMATION</a></li>
+          <li><a href="stat.php">STATISTICS</a></li>
+          <li><a href="download.php">DOWNLOAD</a></li>
+          <li><a href="main_help.php">GUIDE TOUR</a></li>
+          <li><a href="team.php">DEVELOPERS</a></li>
+          <li><a href="contact.php">CONTACT</a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+</div>
+<br>
+	<div id="colB">
+<div id='cssmenu'>
+<ul>
+   <li class='active'><a href='index.php'><span>Home</span></a></li>
+   <li class='has-sub'><a href='#'><span>Query</span></a>
+      <ul>
+         <li class='last'><a href='basic2.php'><span>Basic Search</span></a>
+         <li class='last'><a href='cond.php'><span>Advanced Search</span></a></li>
+         <li class='last'><a href='pep.php'><span>Peptide Search</span></a></li>
+         <li class='last'><a href='smiles.php'><span>SMILES Search</span></a></li>
+         <!--li class='last'><a href='iden.php'><span>IDENTICAL RESIDUES</span></a></li-->
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Explore</span></a>
+	<ul>
+         <!--li class='last'><a href='pepbr.php'><span>Peptide Based</span></a-->
+
+         <li class='last'><a href='srcbr.php'><span>Source Based</span></a></li>
+         <li class='last'><a href='lenbr.php'><span>Length Based</span></a></li>
+         <li class='last'><a href='ic50br.php'><span>IC50 Based</span></a></li>
+         <!--li class='last'><a href='bitterbr.php'><span>Bitterness Based</span></a></li-->
+         <li class='last'><a href='physico.php'><span>Physico-chemical properties based</span></a></li>
+         <!--li class='last'><a href='strbr.php'><span>Structure Based</span></a></li-->
+         <!--li class='last'><a href='propbr.php'><span>Property Based</span></a></li-->
+	</ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Facility</span></a>
+        <ul>
+         <!--li class='last'><a href='blast.php'><span>BLAST</span></a-->
+         <li class='last'><a href='sw.php'><span>SMITH-WATERMAN</span></a></li>
+         <li class='last'><a href='align.php'><span>Sequence Alignment</span></a></li>
+         <!--li class='last'><a href='muscle.php'><span>MUSCLE</span></a></li>
+         <li class='last'><a href='helical.php'><span>HELICAL WHEEL</span></a></li-->
+         <li class='last'><a href='pepmapp2.php'><span>PEPTIDE MAPPING</span></a></li>
+         <!--li class='last'><a href='ppv.php'><span>PP VALUES</span></a></li-->
+        </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Property</span></a>
+        <ul>
+         <li class='last'><a href='aaf2.php'><span>AA Frequency</span></a>
+         <li class='last'><a href='aac2.php'><span>AA Composition</span></a></li>
+         <li class='last'><a href='ppf2.php'><span>PP Frequency</span></a></li>
+         <li class='last'><a href='ppc2.php'><span>PP Composition</span></a></li>
+         <!--li class='last'><a href='ppv.php'><span>PP Values</span></a></li-->
+         <!--li class='last'><a href='pepmap.php'><span>PEPTIDE MAPPING</span></a></li-->
+        </ul>
+   </li>   <li class='has-sub'><a href='#'><span>Structure</span></a>
+        <ul>
+         <li class='last'><a href='ssc.php'><span>SS Composition</span></a>
+         <li class='last'><a href='sss.php'><span>SS Search</span></a></li>
+         <li class='last'><a href='str_align.php'><span>Structure Alignment</span></a></li>
+        </ul>
+   </li>
+   <!--li class='has-sub'><a href='#'><span>Matrix</span></a>
+        <ul>
+         <li class='last'><a href='monomat.php'><span>MONOPEP</span></a>
+         <li class='last'><a href='dimat.php'><span>DIPEP</span></a></li>
+         <li class='last'><a href='propmat.php'><span>PROPERTY BASED</span></a></li>
+         <li class='last'><a href='qms.php'><span>QMSCal</span></a></li>
+        </ul>
+   </li--> 
+   <li class='has-sub'><a href='#'><span>Important</span></a>
+	<ul>
+         <li class='last'><a href='submit.php'><span>SUBMISSION</span></a>
+         <li class='last'><a href='pub1.php'><span>PUBLICATIONS</span></a></li>
+         <li class='last'><a href='latest.php'><span>RECENT PAPERS</span></a></li>
+         <li class='last'><a href='links.php'><span>IMPORTANT LINKS</span></a></li>
+        </ul>
+
+   </li>
+</ul>
+</div>
+	</div>
+<div id="content"><div id="colA"> <div id="welcome" class="boxedA">
+<marquee scrollamount="10" width="800"  direction="left" SCROLLDELAY=200><font size="3">
+<h2><a href="http://webs.iiitd.edu.in/raghava/ahtpdb/">Updated version at IIIT Delhi </a></h2>
+If you are using this database, please cite: <b>Kumar et al., (2015) AHTPDB: a comprehensive platform for analysis and presentation of antihypertensive peptides </b><a href="http://www.ncbi.nlm.nih.gov/pubmed/25392419" target=_blank>Nucleic Acids Research 43:D956-65<a/></marquee>
+    <!-- Caption Style -->
+    <style> 
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+        .bricon
+        {
+            background: url(../img/browser-icons.png);
+        }
+    </style>
+    <!-- it works the same with all jquery version from 1.x to 2.x -->
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+    <script type="text/javascript" src="js/jssor.core.js"></script>
+    <script type="text/javascript" src="js/jssor.utils.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script>
+        //Reference http://www.jssor.com/development/tip-make-responsive-slider.html
+
+        var _CaptionTransitions = [];
+        _CaptionTransitions["CLIP|L"] = { $Duration: 1000, $Clip: 1, $Easing: $JssorEasing$.$EaseInOutCubic };
+        _CaptionTransitions["RTT|10"] = { $Duration: 1000, $Zoom: 11, $Rotate: true, $Easing: { $Zoom: $JssorEasing$.$EaseInExpo, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInExpo }, $Opacity: 2, $Round: { $Rotate: 0.8} };
+        _CaptionTransitions["ZMF|10"] = { $Duration: 1000, $Zoom: 11, $Easing: { $Zoom: $JssorEasing$.$EaseInExpo, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 };
+        _CaptionTransitions["FLTTR|R"] = { $Duration: 1000, $FlyDirection: 10, $Easing: { $Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseOutWave, $Opacity: $JssorEasing$.$EaseLinear }, $ScaleHorizontal: 0.2, $ScaleVertical: 0.1, $Opacity: 2, $Round: { $Top: 1.3} };
+    </script> 
+    <script>
+        jQuery(document).ready(function ($) {
+            //Reference http://www.jssor.com/development/tip-make-responsive-slider.html
+
+            var _CaptionTransitions = [];
+            _CaptionTransitions["CLIP|L"] = { $Duration: 1500, $Clip: 1, $Easing: $JssorEasing$.$EaseInOutCubic };
+            _CaptionTransitions["RTT|10"] = { $Duration: 1500, $Zoom: 11, $Rotate: true, $Easing: { $Zoom: $JssorEasing$.$EaseInExpo, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInExpo }, $Opacity: 2, $Round: { $Rotate: 0.8} };
+            _CaptionTransitions["ZMF|10"] = { $Duration: 1500, $Zoom: 11, $Easing: { $Zoom: $JssorEasing$.$EaseInExpo, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 };
+            _CaptionTransitions["FLTTR|R"] = { $Duration: 1500, $FlyDirection: 10, $Easing: { $Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseOutWave, $Opacity: $JssorEasing$.$EaseLinear }, $ScaleHorizontal: 0.2, $ScaleVertical: 0.1, $Opacity: 2, $Round: { $Top: 1.3} };
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0),
+
+                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
+                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+
+                //reserve blank width for margin+padding: margin+padding-left (10) + margin+padding-right (10)
+                var paddingWidth = 20;
+
+                //minimum width should reserve for text
+                var minReserveWidth = 500;
+
+                var parentElement = jssor_slider1.$Elmt.parentNode;
+
+                //evaluate parent container width
+                var parentWidth = parentElement.clientWidth;
+
+                if (parentWidth) {
+
+                    //exclude blank width
+                    var availableWidth = parentWidth - paddingWidth;
+
+                    //calculate slider width as 70% of available width
+                    var sliderWidth = availableWidth * 0.7;
+
+                    //slider width is maximum 600
+                    sliderWidth = Math.min(sliderWidth, 600);
+
+                    //slider width is minimum 200
+                    sliderWidth = Math.max(sliderWidth, 200);
+
+                    //evaluate free width for text, if the width is less than minReserveWidth then fill parent container
+                    if (availableWidth - sliderWidth < minReserveWidth) {
+
+                        //set slider width to available width
+                        sliderWidth = availableWidth;
+
+                        //slider width is minimum 200
+                        sliderWidth = Math.max(sliderWidth, 200);
+                    }
+
+                    jssor_slider1.$SetScaleWidth(sliderWidth);
+                }
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+
+            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+                $(window).bind('resize', ScaleSlider);
+            }
+
+
+            //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
+            //    $(window).bind("orientationchange", ScaleSlider);
+            //}
+            //responsive code end
+        });
+    </script>
+    <!--div style="display: block; margin: 20px auto 0 auto; padding: 10px 5px 5px 10px; width: 96%; max-width:940px; min-width: 240px; border: 1px solid #ccc; background-color: #fff; box-shadow: 2px 2px 10px 2px #dddddd; -webkit-box-shadow: 0px 0px 5px 0px #dddddd; font-size: 1.2em; line-height: 1.5em;"-->
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+        <div id="slider1_container" style="position: relative; margin: 0px 5px 5px 0px; float: left; top: 0px; left: 0px; width: 600px;
+            height: 430px; overflow: hidden;">
+            <!-- Slides Container -->
+            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 430px;
+                overflow: hidden;">
+                <div><div style="position:absolute;top:30px;"><img u="image" src="images/mechanism_ahtpdb.gif" height="400" width="600"/></div>
+
+                    <div u="caption" t="CLIP|L" style="position:absolute;left:30px;top:0px;width:110px;height:40px;font-size:36px;color:#120A4B;line-height:40px;">Blood</div>
+                    <div u="caption" t="CLIP|L" style="position:absolute;left:130px;top:0px;width:220px;height:40px;font-size:36px;color:#120A4B;line-height:40px;">Hypertension</div>
+                    <div u="caption" t="CLIP|L" style="position:absolute;left:350px;top:0px;width:230px;height:40px;font-size:36px;color:#120A4B;line-height:40px;">Physiology</div>
+                </div>
+                <div><div style="position:absolute;top:30px;"><img u="image" src="images/home_fig.jpg" height="400" width="600"/></div>
+                    <div u="caption" t="ZMF|10" style="position:absolute;left:10px;top:0px;width:100px;height:40px;font-size:30px;color:#120A4B;line-height:40px;">Major</div>
+                    <div u="caption" t="ZMF|10" style="position:absolute;left:100px;top:0px;width:120px;height:40px;font-size:30px;color:#120A4B;line-height:40px;">Antihypertensive</div>
+                    <div u="caption" t="ZMF|10" style="position:absolute;left:340px;top:0px;width:100px;height:40px;font-size:30px;color:#120A4B;line-height:40px;">Peptide</div>
+                    <div u="caption" t="ZMF|10" style="position:absolute;left:460px;top:0px;width:110px;height:40px;font-size:30px;color:#120A4B;line-height:40px;">Sources</div>
+                </div>
+                <div><div style="position:absolute;top:33px;"><img u="image" src="images/Source.jpg" height="396" width="600"/></div>
+                    <div u="caption" t="RTT|10" style="position:absolute;left:30px;top:0px;width:110px;height:40px;font-size:36px;color:#120A4B;line-height:40px;">AHTPDB</div>
+                    <div u="caption" t="RTT|10" style="position:absolute;left:220px;top:0px;width:120px;height:40px;font-size:36px;color:#120A4B;line-height:40px;">Sources</div>
+                    <div u="caption" t="RTT|10" style="position:absolute;left:380px;top:0px;width:130px;height:40px;font-size:36px;color:#120A4B;line-height:40px;">Distribution</div>
+                </div>
+            </div>
+        <a style="display: none" href="http://www.jssor.com">javascript</a>
+            <!-- Trigger -->
+        </div>
+        <!-- Jssor Slider End -->
+        </div>
+
+<!--tr><td><a href="#"><img src="images/mechanism_ahtpdb.gif" width="100" height="500" alt="img" /></a></td><td><a href="#"><img src="images/home_fig.jpg" width="100" height="300" alt="img" /></a></td><td><a href="#"><img src="images/Source.jpg" width="100" height="300" alt="img" /></a></td></tr-->
+
+
+<br><br><br><br>
+
+
+<table border=0 width=850px >
+<!--tr><td><img src="images/AHTPDB.jpg" width="470" height="500" alt="img" /></td></tr-->
+
+
+<tr><br><br><br><td>
+<hr><br>
+<H2 align=center> About AHTPDB</H2>  
+<p align =justify><font color="black">It is a manually curated database of experimentally validated Antihypertensive peptides (AHTPs). It contains around <b><font color=blue>6000</font></b> entries of  about <b><font color=blue>1700</font></b> unique peptides. Each entry provides comprehensive information about a peptide that includes its sequence, inhibitory concentration (IC<sub>50</sub>), log value of inhibitory concentration (pIC<sub>50</sub>) and toxicity. These peptides have been collected & complied from published literature and existing databases like <a href="http://www.cftri.com/pepdb/" target="_blank"><b><font color=blue>ACEpepDB</font></b></a>, <a href="http://www.uwm.edu.pl/biochemia/index.php/en/biopep" target="_blank"><b><font color=blue>BIOPEP</font></b></a>  and <a href="http://erop.inbi.ras.ru/" target="_blank"><b><font color=blue>EROP-Moscow database.</font></b></a></font> <br>
+Extended information has been provided in terms of external links as well as mapping of AHTPs on major databases like <a href="http://www.uniprot.org" target=_blank><b><font color=blue>Swiss-Prot</font></b></a>, <a href="http://www.iedb.org" target=_blank><b><font color=blue>IEDB</font></b></a> and <a href="http://www.rcsb.org/pdb/home/home.do" target=_blank><b><font color=blue>PDB</font></b></a>.
+<br></p>
+<table border=0>
+<tr>
+<tr><th colspan=2>SALIENT FEATURES OF AHTPDB:</th></tr>
+<tr><td width=20%><b><font color=blue>SEARCH MODULE:</font></b></td><td>This module facilitates the users in Simple, Advanced seach apart from peptide based seach and SMILES search.</td></tr>
+<tr><td><b><font color=blue>EXPLORE MODULE:</font></b></td><td>Users can explore AHTPDB on the basis of Sources, Length, IC<sub>50</sub> and physicochemical properties.</td></tr>
+<tr><td><b><font color=blue>FACILITY MODULE:</font></b></td><td>Basic sequence alignment in Jalview is incorporated besides Smith-Waterman search and peptide mapping tools.</td></tr>
+<tr><td><b><font color=blue>PROPERTY MODULE:</font></b></td><td>Amino acid (AA) composition, AA frequency and Physicochemical Properties based search is available in this module.</td></tr>
+<tr><td><b><font color=blue>STRUCTURE MODULE:</font></b></td><td>Secondary structure composition based search is available along with Tertiary structure alingment.</td></tr>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+          <!--h2>Statistics</h2>
+          <div class="content1_box2_img"><a href="#"><img src="images/homepage_concept.gif" width="440" height="500" alt="img" /></a></div>
+          <p-->
+</div>
+</div></div>
+
+<br><br>
+<div id="footer">
+<p><a href="/raghava/ahtpdb/" target="_self"> AHTPDB</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="/raghava/" target="_blank"> Raghava's Group</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://webs.iiitd.edu.in/" target="_blank"> IMTECH</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.csir.res.in/" target="_blank"> CSIR</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://webs.iiitd.edu.in/" target="_blank"> CRDD</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="/raghava/gpsr/" target="_blank"> GPSR Package</a></p>   
+</div>
+
+</body>
+</html>

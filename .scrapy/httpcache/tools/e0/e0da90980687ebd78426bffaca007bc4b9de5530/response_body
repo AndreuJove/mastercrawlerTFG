@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>AutoDock Vina - molecular docking and virtual screening program</title>
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <style type="text/css"><!-- body {margin-top: 0px;} --></style>
+<body>
+
+<DIV style="width: 1000px; margin: 0 auto; padding-left: 10px; padding-right: 10px; background-color: #f4f4ff;">
+
+<!-- banner start -->
+<center>
+ <table style="text-align: left; background-color: rgb(51, 102, 204);" border="0" cellpadding="2" cellspacing="0" width="100%">
+
+<tbody><tr>
+<td align="left"><a style="color: rgb(  0,   0,   0); font-weight: bold;" href="index.html">Home</a></td>
+<td align="left"><a style="color: rgb(255, 255, 255); font-weight: bold;" href="manual.html#features">Features</a></td>
+<td align="left"><a style="color: rgb(255, 255, 255); font-weight: bold;" href="download.html">Download</a></td>
+<td align="left"><a style="color: rgb(255, 255, 255); font-weight: bold;" href="tutorial.html">Tutorial</a></td>
+<td align="left"><a style="color: rgb(255, 255, 255); font-weight: bold;" href="manual.html#faq">FAQ</a></td>
+<td align="left"><a style="color: rgb(255, 255, 255); font-weight: bold;" href="manual.html">Manual</a></td>
+<td align="left"><a style="color: rgb(255, 255, 255); font-weight: bold;" href="questions.html">Questions?</a></td>
+</tr></tbody>
+</table>
+</center>
+<br>
+<!-- banner end -->
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+<td style="vertical-align: top;">
+<img src="img/examples.jpg" align="left" alt="examples">
+</td>
+<td width="35"></td>
+<td width="250" style="vertical-align: top;">
+<h1>AutoDock Vina</h1>
+<p>
+AutoDock Vina is an open-source program for doing <a href="http://en.wikipedia.org/wiki/Docking_(molecular)">molecular docking</a>.
+
+It was designed and implemented by <a href="http://olegtrott.com">Dr. Oleg Trott</a> in the
+Molecular Graphics Lab at The Scripps Research Institute.
+
+<p><br><p>
+The image on the left illustrates the results of flexible docking (green) superimposed on the crystal structures of
+(a) indinavir, (b) atorvastatin, (c) imatinib, and (d) oseltamivir bound to their respective targets.
+</td></tr></tbody></table>
+
+<hr>
+
+<h2>Publication</h2>
+
+If you used AutoDock Vina in your work, please cite:
+<p>
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+<td width="50"></td>
+<td width="600" style="vertical-align: top;">
+<a href="http://www3.interscience.wiley.com/journal/122439542/abstract">
+O. Trott, A. J. Olson,
+AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization and multithreading,
+<i>Journal of Computational Chemistry 31 (2010) 455-461</i></a>
+</td></tr></tbody></table>
+
+<hr>
+
+<h2>Features</h2>
+<p>
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+<td width="50%" style="vertical-align: top;">
+<b>Accuracy</b><p>
+
+        AutoDock Vina significantly improves the average accuracy of the binding mode predictions compared to AutoDock 4, judging by our tests on the training set used in AutoDock 4 development.<sup><a href="http://www3.interscience.wiley.com/journal/122439542/abstract">[*]</a></sup>
+<p>
+Additionally and independently, AutoDock Vina has been <a href="https://drugdiscovery.tacc.utexas.edu/pages/faq.html#dud">tested</a> against a virtual screening benchmark called the <a href="http://dud.docking.org">Directory of Useful Decoys</a> by the <a href="http://bmb.utmb.edu/faculty/watowich/">Watowich group</a>, and was found to be
+"a strong competitor against the other programs, and at the top of the pack in many cases". It should be noted that all six of the other
+docking programs, to which it was compared, are distributed commercially.
+    <p><b>AutoDock Tools Compatibility</b><p>
+        For its input and output, Vina uses the same PDBQT molecular structure file format used by <a href="http://autodock.scripps.edu">AutoDock</a>. PDBQT files can be generated (interactively or in batch mode) and viewed using <a href="http://mgltools.scripps.edu">MGLTools</a>.
+	Other files, such as the AutoDock and AutoGrid parameter files (GPF, DPF) and grid map files are not needed.
+
+
+</td>
+
+<td width="10%"></td>
+
+<td width="40%" style="vertical-align: top;">
+<a href="http://www3.interscience.wiley.com/journal/122439542/abstract">
+<img src="img/accuracy.png" align="top" alt="accuracy">
+</a>
+<br>
+Binding mode prediction accuracy on the test set. 
+"AutoDock" refers to AutoDock 4, and "Vina" to AutoDock Vina 1.
+</td>
+</tr></tbody></table>
+
+<p><b>Ease of Use</b><p>
+        Vina's design philosophy is not to require the user to understand its implementation details, tweak obscure search parameters, cluster results or know advanced algebra (quaternions). All that is required is the structures of the molecules being docked and the specification of the search space including the binding site. Calculating grid maps and assigning atom charges is not needed. The usage summary can be printed with "<code>vina --help</code>". The summary automatically remains in sync with the possible usage scenarios.
+
+    <p><b>Implementation Quality</b><p>
+    <ul>
+	<li>By design, the results should not have a statistical bias related to the conformation of the input structure.
+	<li>Attention is paid to checking the syntactic correctness of the input and reporting errors to the user in a lucid manner.
+	<li>The invariance of the covalent bond lengths is automatically verified in the output structures.
+    <li>Vina avoids imposing artificial restrictions, such as the number of atoms in the input, the number of torsions, the size of the search space, the exhaustiveness of the search, etc.
+    </ul>
+
+    <p><b>Flexible Side Chains</b><p>
+        Like in AutoDock 4, some receptor side chains can be chosen to be treated as flexible during docking.
+
+
+<p>
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+<td width="50%" style="vertical-align: top;">
+<b>Speed</b><p>
+AutoDock Vina tends to be faster than AutoDock 4 by <em>orders of magnitude</em>.<sup><a href="http://www3.interscience.wiley.com/journal/122439542/abstract">[*]</a></sup>
+<p><b>Multiple CPUs/Cores</b><p>
+Additionally, Vina can take advantage of multiple CPUs or CPU cores on your system to significantly shorten its running time.
+<p><b>World Community Grid</b><p>
+Qualified projects can run AutoDock Vina calculations for free on the massively parallel 
+<a href="http://www.worldcommunitygrid.org/">World Community Grid</a>.
+Existing projects using AutoDock Vina there include those targeting
+<a href="http://www.worldcommunitygrid.org/research/faah/overview.do">AIDS</a>,
+<a href="http://gofightagainstmalaria.scripps.edu/">Malaria</a>,
+<a href="http://www.worldcommunitygrid.org/research/dsfl/details.do">Leishmaniasis</a> and
+<a href="http://www.worldcommunitygrid.org/research/sn2s/details.do">Schistosomiasis</a>.
+Some of these projects average over 50 years worth of computation <em>per day</em>.
+</td>
+
+<td width="10%"></td>
+
+<td width="40%" style="vertical-align: top;">
+<a href="http://www3.interscience.wiley.com/journal/122439542/abstract">
+<img src="img/speed.png" align="top" alt="speed">
+</a>
+<br>
+Average time per receptor-ligand pair on the test set.
+"AutoDock" refers to AutoDock 4, and "Vina" to AutoDock Vina 1.
+</td>
+</tr></tbody></table>
+
+<hr>
+
+<h2>License</h2>
+AutoDock Vina is released under a very permissive Apache license, with few restrictions on commercial or non-commercial use, or on the derivative works.
+The text of the license can be found <a href="LICENSE">here</a>.
+
+<hr>
+
+
+<h2>Video Tutorial</h2>
+
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+<td style="vertical-align: top;">
+<a href="tutorial.html"><img src="img/vina_tutorial_small.jpg" align="left" alt="screenshot"></a>
+</td>
+<td width="35"></td>
+<td width="250" style="vertical-align: top;">
+<p>
+<a href="tutorial.html">This video tutorial demonstrates molecular docking of imatinib using Vina with AutoDock Tools and PyMOL</a>
+</td></tr></tbody></table>
+
+<hr>
+
+<h2>Questions, problems or suggestions?</h2>
+
+See <a href="questions.html">this site</a>.
+
+<p><br>
+<p><br>
+
+</DIV>
+
+</body>
+</html>

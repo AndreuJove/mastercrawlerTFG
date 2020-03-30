@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BSDD(2.0)</title>
+<!-----
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+----->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style>
+ 
+a:link{ text-decoration: none;
+	color: red;
+}
+	
+a:visited{ text-decoration: none;
+	color: blue;
+	font-family: arial;
+}
+
+a:hover{ text-decoration: none;
+	color: red;
+	font-weight: bolder;
+	letter-spacing: 0px;
+	font-family: arial;
+}
+
+</style>
+</head>
+
+<frameset cols="276,*" border=1>
+  <frame src="/cgi-bin/bsdd/bsdd_optionpage4.pl" name="menu" noresize scrolling="default">
+   
+ <frame src="/cgi-bin/bsdd/Bsdd_main.pl" name="mainpage" scrolling="default">
+</frameset>
+
+</HTML>

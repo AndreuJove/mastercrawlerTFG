@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>
+  <head>
+   <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Anti-Microbial Peptide Editable Database (AMPed) enables researchers to efficiently search, display, manipulate and store data about antimicrobial peptides">
+   <link href="css/main.css" rel="stylesheet">
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+   <title>AMPed Home</title>
+   <!--base href="index.php"-->
+   <script type="text/javascript" src="js/jquery.js"></script>
+  </head>
+  <body>
+    <div style="background-color: #efffef;"><br>   
+   <br>
+</div>
+<div class="header-middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            
+
+
+          </div>
+          <div class="col-sm-8">
+            <div class="shop-menu pull-right">
+              <ul class="nav navbar-nav">
+                <li><a href="/search.php">Search</a></li>
+                <li><a href="/joinus.php">Join Us</a></li>
+                <li><a href="/contribute.php">Contribute</a></li>
+                <li><a href="/aboutus.php">About Us</a></li>
+                <li><a href="/login.php">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+    <div style="background-image: url(images/backg4.png)" ;="">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6"><br>
+            <div style="text-align: center;"><a href="aboutamped.php" title="About AMPed"><img class="img-responsive" src="images/AMPed_Logo_Clear.png"></a><br>
+            </div>
+          </div>
+          <div class="col-sm-6"> <br>
+            <h4>
+              <p style="color: black; text-align: center;"><span style="font-weight: bold;"><span
+                    style="font-weight: normal;">Get Started</span></span></p>
+            </h4>
+            <p style="color: black; font-weight: bold; text-align: center;"><span
+                style="font-weight: normal;">A
+                powerful search tool with extensive antimicrobial</span><br>
+              <span style="font-weight: normal;"> peptides data to support your research
+                needs.<br>
+              </span></p>
+            <div style="text-align: left;">
+              <div style="text-align: center;"><a href="search.php"><img style="width: 148px; height: 34px;"
+                  alt="Search" src="images/SearchButton.png"></a><br>
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;<br>
+    </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">              <br>
+              <h1 style="text-align: left;">AMPed Database</h1>
+              <hr>
+              <h3 style="text-align: left;">Browse our content or perform your own <a href="search.php">search</a>.<br /><br /></h3>
+              </div>
+          </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <h4 style="text-align: center;"><a href="peptide.php"><img style="width: 150px;"
+              alt="" src="images/peptide-150x150.png"></a><br>
+            <br>
+            Peptide database</h4>
+          <p style="text-align: center;"><a href="peptide.php">Our main focus with AMPed is to provide all valuable information about  antimicrobial peptides in one place. Amino acid sequences are the most unambiguous way to characterize peptides with diverse naming conventions.</a></p>
+        </div>
+        <div class="col-sm-4">
+          <h4 style="text-align: center;"><a href="microbe.php"><img style="width: 150px;"
+              alt="" src="images/microbe-150x150.png"></a><br>
+            <br>
+            Microbe database</h4>
+          <p style="text-align: center;"><a href="microbe.php">Peptides that kill microbes are tested by many different methods, such as in vivo, or in broth, or as inhibition zones on plates, and antimicrobial activity concentration units must be clearly defined as moles/L or g/L. Test microbes must be fully characterized by genome and species, which relies heavily on ATCC numbers.</a></p>
+        </div>
+        <div class="col-sm-4">
+          <h4 style="text-align: center;"><a href="structure.php"><img style="width: 150px;"
+              alt="" src="images/protein-structure-150x150.png"></a><br>
+            <br>
+            Structure information</h4>
+          <p style="text-align: center;"><a href="structure.php">Secondary and tertiary structural information is largely derived from the RCSB database and is classified according to the method used, such as X-ray, NMR, and Cryot-TEM methods.</a></p>
+          <br>
+          <br>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <hr>
+          <div style="text-align: center;"><b> Number of Visits:
+                
+          </b></div><hr> 
+        </div>
+      </div>
+    </div>
+    <p><br>
+    </p>
+    <p>&nbsp;</p>
+          <hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="single-widget">
+              <h2><a href="/search.php">Search</a></h2>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="#">Features</a></li>
+                <li><a href="/searchall.php">Databases</a></li>
+                <li><a href="#">Tutorial</a></li>
+                <li><a href="#">Security</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="single-widget">
+              <h2>AMPed Tools</h2>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="/aboutamped.php">About AMPed</a></li>
+                <li><a href="/2toolspage.php">Tools</a></li>
+                <li><a href="#">Usage</a></li>
+                <li><a href="#">Performance</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="single-widget">
+              <h2><a href="/aboutus.php#Top">About Us</a></h2>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="/Mission_Vision.php">Mission and Vision</a></li>
+                <li><a href="/aboutus.php">The Team</a></li>
+                <li><a href="/aboutus.php#location">Our Location</a></li>
+                <li><a href="/aboutus.php">Research Interests</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="single-widget">
+              <h2>Contact Us</h2>
+               <ul class="nav nav-pills nav-stacked">
+                <li><a href="/contactus.php">How can you help us?</a></li>
+				<li><a href="/joinus.php">Join Us</a></li>
+				<li><a href="privacypolicy.php">Privacy Policy</a></li>
+				<li><a href="termsof_use.php">Terms of Use </a></li>
+              </ul>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+      <table style="border-collapse: collapse;" border="0" bordercolor="#111111"
+        cellpadding="0"
+        cellspacing="0"
+        width="100%">
+        <tbody>
+          <tr>
+            <td>
+              <div style="background-color: #efffef;"><small><br>
+                </small>
+                <p style="font-weight: normal; text-align: center;"> <small>
+                Copyright &copy; 2020 University of Rhode Island. All rights reserved. <br>
+                Designed by
+                    <a href="aboutus.php"> URI AMPed Team. </a></small
+                <br>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </body>
+</html>

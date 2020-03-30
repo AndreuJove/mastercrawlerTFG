@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+
+<HEAD>
+<TITLE>Index</TITLE>
+<META http-equiv="Content-Language" content="en-us">
+<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<META name="GENERATOR" content="Microsoft FrontPage 6.0">
+<META name="ProgId" content="FrontPage.Editor.Document">
+<LINK rel="stylesheet" type="text/css" href="style.css">
+</HEAD>
+
+<BODY>
+
+<DIV align="center">
+<TABLE width="750">
+<TR>
+<TD width="30"><IMG border="0" src="images/left1.gif" width="30" height="100"></TD>
+<TD width="200">&nbsp;</TD>
+<TD width="100%" class="headertop">Bayesian Quantification</TD>
+<TD width="30"><IMG border="0" src="images/right1.gif" width="30" height="100"></TD>
+</TR>
+</TABLE>
+<TABLE width="750">
+<TR>
+<TD width="30"><IMG border="0" src="images/left2.gif" width="30" height="30"></TD>
+<TD width="200">&nbsp;</TD>
+<TD width="100%" class="headerbottom">
+<P align="center">Home</P>
+</TD>
+<TD width="30"><IMG border="0" src="images/right2.gif" width="30" height="30"></TD>
+</TR>
+</TABLE>
+<TABLE width="750">
+<TR>
+<TD background="images/left3.gif"><IMG border="0" src="images/left3.gif" width="30" height="70"></TD>
+<TD class="sidebar"><font face="Verdana">
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+<strong>
+<font size="2">
+<span class="Apple-style-span" style="color: rgb(120, 120, 120); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; ">
+<img border="0" src="images/bquant-logo.jpg" width="176" height="149"></span></font></strong></span></font><!--WEBBOT bot="Include" u-include="include_mainnav.htm" tag="BODY" startspan -->
+<DL>
+<DT>Site Menu</DT>
+<DD><a href="index.htm">Home</a></DD>
+<DD><a href="Installation.htm">Installation</a></DD>
+<DD><a href="Application_Notes.htm">Application Notes</a></DD>
+</DL>
+<!--webbot bot="Include" i-checksum="20839" endspan --><p>&nbsp;</TD>
+<TD class="content">
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+<span class="Apple-style-span" style="color: rgb(120, 120, 120); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; ">
+<p style="margin-top: 0px; line-height: 21px; "><font face="Verdana"><strong>
+<font size="2">Bayesian Quantification (BQuant)</font></strong><font size="2"><span class="Apple-converted-space">&nbsp;</span>is 
+an R package </font></font><font size="2" face="Verdana">
+using a probabilistic approach for fully automated database-based identification 
+and quantification of metabolites in local regions of </font>
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+<span class="Apple-style-span" style="color: rgb(120, 120, 120); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; ">
+<font size="2" face="Verdana"> <sup>1</sup>H </font></span></span>
+<font size="2" face="Verdana">
+Nuclear Magnetic Resonance (NMR) spectra. The approach is based on a linear 
+mixed model, which accounts for technological characteristics of NMR spectra, 
+and represents the spectra as mixtures of reference profiles from a database. 
+Identities and abundances of metabolites in the spectra are then inferred by 
+Bayesian model selection, implemented in an efficient Gibbs sampling scheme.</font></p>
+<p style="margin-top: 0px; line-height: 21px; "><font size="2" face="Verdana">
+The package provides an easy specification of a set of local region of NMR 
+spectra and a database of reference spectra as input. It outputs a list of 
+identified metabolites associated with their inclusion probability and their 
+measures of abundances in each spectrum. This package be used by researchers 
+with a limited background in statistics and minimal programming experience.</font></p>
+<p style="margin-top: 0px; line-height: 21px; "><font size="2" face="Verdana">
+The beta version of the package is currently available and can be downloaded 
+from<span class="Apple-converted-space"> <a href="Installation.htm">Installation</a></span>.</font></p>
+<p style="margin-top: 0px; line-height: 21px; "><font face="Verdana"><b><big>
+Authors</big></b></font></p>
+<p style="margin-top: 0px; line-height: 21px; "><font size="2" face="Verdana">
+The methods implemented in the package were jointly developed by:</font></p>
+<ul style="margin-top: 0px; line-height: 21px; ">
+	<li><font size="2" face="Verdana">Cheng Zheng</font></li>
+	<li><font size="2" face="Verdana">Dr. Olga Vitek (Departments of Statistics 
+	and of Computer Science, Purdue University)</font></li>
+</ul>
+<p style="margin-top: 0px; line-height: 21px; "><font face="Verdana">
+<font size="2">The maintainer of the package is<span class="Apple-converted-space"> 
+Cheng Zheng</span>. For comments or suggestions regarding the package, please 
+send an e-mail to Cheng Zheng at</font><span class="Apple-converted-space"><font size="2">&nbsp;</font></span></font></span></span><span style="color: #1757AB"><span class="Apple-style-span" style="text-align: justify"><span class="Apple-style-span" style="border-collapse: separate; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><font size="2" face="Verdana"><a href="mailto:zhengcheng@gmail.com">zhengcheng@gmail.com</a></font></span></span></span><span class="Apple-style-span"><span style="letter-spacing: normal"><font face="Verdana" size="2">
+</font></span></span>
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+<span class="Apple-style-span" style="color: rgb(120, 120, 120); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; ">
+<font size="2" face="Verdana">or Dr. Olga Vitek at
+<a href="mailto:ovitek@purdue.edu">ovitek@purdue.edu.</a></font></span></span><span class="Apple-style-span"><span style="letter-spacing: normal"><font face="Verdana" size="2"><span style="font-weight: 400; color: #000000">
+</span></font></span></span></p>
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+<span class="Apple-style-span" style="color: rgb(120, 120, 120); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; ">
+<p style="margin-top: 0px; line-height: 21px; "><font face="Verdana"><b><big>
+References</big></b></font></p>
+</span></span>
+<p style="margin-top: 0px; line-height: 21px; ">
+C. Zheng, S. Zhang, S. Ragg, D. Raftery, O. Vitek. "Identification and
+quantification of metabolites in 1H NMR spectra by Bayesian model
+selection". Bioinformatics, 27, p. 1637-1644, 2011. [<span
+class="Apple-converted-space"><a href="http://bioinformatics.oxfordjournals.org/content/27/12/1637.abstract">URL</a></span>]
+<TD background="images/right3.gif"><IMG border="0" src="images/right3.gif" width="30" height="70"></TD>
+</TR>
+</TABLE>
+<TABLE width="750">
+<TR>
+<TD width="30"><IMG border="0" src="images/left2.gif" width="30" height="30"></TD>
+<TD width="100%" bgcolor="#BC5525"><IMG border="0" src="images/cell1.gif" width="20" height="30"></TD>
+<TD width="30"><IMG border="0" src="images/right2.gif" width="30" height="30"></TD>
+</TR>
+<TR>
+<TD width="30" background="images/left3.gif"><IMG border="0" src="images/left2.gif" width="30" height="30"></TD>
+<TD width="100%" class="footer">
+<!--WEBBOT bot="Include" u-include="include_footer.htm" tag="BODY" startspan -->© 2008 | <SPAN class="tiny">Design by <A target="_blank" href="http://www.myartsdesire.com/">My Arts Desire</A></SPAN><!--webbot bot="Include" i-checksum="36541" endspan --></TD>
+<TD width="30" background="images/right3.gif"><IMG border="0" src="images/right2.gif" width="30" height="30"></TD>
+</TR>
+</TABLE>
+</DIV>
+
+</BODY>
+
+</HTML>

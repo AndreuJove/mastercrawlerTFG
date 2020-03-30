@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>CRISPR Recognition Tool</title>
+  <meta name="description"
+ content="CRISPR Clustered Regularly Interspaced Palindromic Repeats">
+</head>
+<body>
+<big style="font-family: arial;"><span style="font-weight: bold;">CRISPR
+Recognition Tool</span></big><br style="font-family: arial;">
+<small><br style="font-family: arial;">
+<span style="font-weight: bold; font-family: arial;">Current version</span><span
+ style="font-family: arial;">:&nbsp; 1.1&nbsp; (March 14, 2007)</span></small><small><span
+ style="font-family: arial;"><span style="font-weight: bold;"><br>
+Operating System</span>:&nbsp; Platform independent</span></small><small><span
+ style="font-family: arial;"></span></small><small><span
+ style="font-family: arial;"><span style="font-weight: bold;"><br>
+License</span>:&nbsp; Public domain software</span></small><small><br>
+</small><small><span style="font-family: arial;"><span
+ style="font-weight: bold;">Requirements</span>:&nbsp; Java Runtime
+Environment (JRE), which is probably on your machine.&nbsp; Currently,
+CRT only supports FASTA file format.<br>
+<br>
+</span></small>
+<hr style="width: 100%; height: 2px;"><small><span
+ style="font-family: arial;"><br style="font-family: arial;">
+</span></small><small><span
+ style="font-weight: bold; font-family: arial;">Graphical User
+Interface (GUI)<br>
+<br>
+Instructions</span><span style="font-family: arial;">: <br>
+&nbsp;&nbsp;&nbsp; Download <a href="CRT1.1_exe.zip">CRT1.1_exe.zip</a>
+and unzip the file to a folder.&nbsp; (The extracted file should be
+named CRT1.1_exe.jar)<br>
+&nbsp;&nbsp;&nbsp; Double-click the extracted file.&nbsp; (Or, at the
+command line type:&nbsp; java -jar CRT1.1_exe.jar)<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; Please, click <a href="compile_from_source.html">here</a>
+if the above instructions do not work.</span></small><small><span
+ style="font-family: arial;"></span></small><small
+ style="font-family: arial;"><span
+ style="font-style: italic; font-weight: bold;"><br>
+</span></small>
+<ol style="font-family: arial;">
+  <ol>
+  </ol>
+</ol>
+<small>
+<span style="font-family: arial;"><span style="font-weight: bold;">Source
+Code</span>:&nbsp; <a href="CRT1.1_src.zip">CRT1.1_scr.zip</a></span><br
+ style="font-family: arial;">
+<br>
+</small>
+<hr style="width: 100%; height: 2px;"><small><br>
+</small><small><span style="font-weight: bold; font-family: arial;">Command
+Line Interface (CLI)</span></small><small><span
+ style="font-family: arial;"><span style="font-weight: bold;"><br>
+<span style="color: rgb(255, 0, 0);">Updated (June 12, 2008):</span>&nbsp;
+Uses a more unix-like command line interface; allows reading of files
+from any directory<br>
+<br>
+</span></span></small><small><span
+ style="font-weight: bold; font-family: arial;">Instructions</span><span
+ style="font-family: arial;">: <br>
+&nbsp;&nbsp;&nbsp; Download <a href="CRT1.2-CLI.jar.zip">CRT1.2-CLI.jar.zip</a>
+</span></small><small><span style="font-family: arial;">and unzip the
+file to a folder.&nbsp; (The extracted file should be
+named CRT1.2-CLI.jar)</span></small><br>
+<small><span style="font-family: arial;">&nbsp;&nbsp;&nbsp; At the
+command line type:&nbsp; <span
+ style="font-style: italic; font-weight: bold;">java -cp CRT1.2-CLI.jar
+crt [options] inputFile [outputFile]</span></span></small><br>
+<small><span style="font-family: arial;">&nbsp;&nbsp;&nbsp; </span></small><small><span
+ style="font-family: arial;"></span></small><br>
+<small><span style="font-family: arial;">&nbsp;&nbsp;&nbsp; Please,
+click <a href="cli.html">here</a> for a more detailed description of
+the command line interface.<br>
+</span></small><small><span style="font-family: arial;">&nbsp;&nbsp;&nbsp;
+Please, click <a href="compile_from_source.html">here</a> if the above
+instructions do not work.</span></small><small><span
+ style="font-family: arial;">&nbsp;&nbsp; </span></small><small><span
+ style="font-family: arial;"></span></small><small
+ style="font-style: italic; font-weight: bold;"><span
+ style="font-family: arial;"></span></small><br>
+<small style="font-family: arial;"><br>
+</small><small><span style="font-family: arial;"><span
+ style="font-weight: bold;">Source
+Code</span>:&nbsp; <a href="CRT1.2-CLI_src.zip">CRT1.2-CLI_src.zip</a></span></small><br>
+<small><span style="font-family: arial;"><span
+ style="font-weight: bold;"><br>
+</span></span></small>
+<hr style="width: 100%; height: 2px;"><small><span
+ style="font-family: arial;"><span style="font-weight: bold;"><br>
+Contact/Comments</span></span></small><small><span
+ style="font-family: arial;"><br style="font-family: arial;">
+</span>
+<span style="font-family: arial;">Report any bugs, questions or
+suggestions to:&nbsp; bland.charles&lt;insert at symbol&gt;gmail.com</span><br
+ style="font-family: arial;">
+<span style="font-family: arial;">Also, I would be interested to hear
+about any projects that use CRT.</span></small><br>
+<small><span style="font-family: arial;"><span
+ style="font-weight: bold;"><br>
+</span></span></small><small><span style="font-family: arial;"><span
+ style="font-weight: bold;">Citation</span><span
+ style="font-style: italic;"></span><br>
+Bland C, Ramsey TL, Sabree F, Lowe M, Brown K, Kyrpides NC, Hugenholtz
+P: <br>
+<span style="font-weight: bold;">CRISPR Recognition Tool (CRT): a tool
+for automatic detection of clustered regularly interspaced palindromic
+repeats</span>. <span style="font-style: italic;">BMC Bioinformatics</span>.
+2007 Jun 18;8(1):209<br>
+<br>
+</span><span style="font-family: arial;"></span></small><br>
+<br>
+</body>
+</html>

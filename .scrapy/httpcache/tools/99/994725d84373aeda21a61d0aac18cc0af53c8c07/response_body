@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+        <title>BAT</title>
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="./css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=".">BAT</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href=".">Home</a>
+                    </li>
+                    <li >
+                        <a href="install/">Install & Docker</a>
+                    </li>
+                    <li >
+                        <a href="overview/">Overview</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="mapping/">Mapping</a>
+</li>
+                            
+<li >
+    <a href="calling/">Calling</a>
+</li>
+                            
+<li >
+    <a href="analysis/">Analysis</a>
+</li>
+                            
+<li >
+    <a href="dmrs/">DMRs</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Example <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="example/">Overview</a>
+</li>
+                            
+<li >
+    <a href="example_mapping/">Mapping</a>
+</li>
+                            
+<li >
+    <a href="example_calling/">Calling</a>
+</li>
+                            
+<li >
+    <a href="example_analysis/">Analysis</a>
+</li>
+                            
+<li >
+    <a href="example_dmrs/">DMRs</a>
+</li>
+                        </ul>
+                    </li>
+                    <li >
+                        <a href="download/">Downloads</a>
+                    </li>
+                    <li >
+                        <a href="contact/">Contact</a>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="install/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#bat_-_bisulfite_analysis_toolkit">BAT - Bisulfite Analysis Toolkit</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#modules">Modules</a></li>
+            <li><a href="#example_data">Example data</a></li>
+            <li><a href="#docker">Docker</a></li>
+            <li><a href="#license">License</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="bat_-_bisulfite_analysis_toolkit">BAT - Bisulfite Analysis Toolkit<a class="headerlink" href="#bat_-_bisulfite_analysis_toolkit" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Cytosine DNA methylation is a biochemical process that has been shown
+to play an important roll in gene expression and cell
+differentiation. Recently, a number of whole-genome bisulfite
+sequencing (WGBS) and targeted bisulfite sequencing (i.e., RRBS)
+protocols have made it possible to precisely and accurately capture
+this major epigenetic modification.</p>
+<p>Here, a modular bisulfite analysis toolkit (BAT) is introduced. It
+tackles the major tasks for analyzing bisulfite sequencing data:
+mapping, extraction of the methylation information (referred to as
+methylation calling), and differential methylation analysis as well as
+downstream analyses like integration of the methylation data with
+annotation and gene expression data. Each part of this analysis
+workflow is modular and can easily be customized or extended by other
+bisulfite- or NGS-related tools, but can also be used <em>as is</em> with the
+additional benefit of many automatically generated graphics by the
+modules of BAT.</p>
+<h2 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">&para;</a></h2>
+<p><a href="mapping/"><strong>Mapping</strong></a></p>
+<p>The first module comprises read mapping including pre- and
+postprocessings. This includes conversion to BAM format, mapping 
+statistics and merging of multiple mapping runs.</p>
+<p><a href="calling/"><strong>Calling</strong></a></p>
+<p>The second module covers the extraction of methylation information from 
+the alignments, filtering for positions of interest, e.g. CG context, 
+and conversion of methylation information for visualisation.</p>
+<p><a href="analysis/"><strong>Analysis</strong></a></p>
+<p>In the third module basic analysis of two groups of a single sample or 
+up to multiple samples are performed.</p>
+<p><a href="dmrs/"><strong>DMRs</strong></a></p>
+<p>Finally, the calling of DMRs is coverd by the fourth module. Basic statistics 
+of the DMRs are provided and given expression information of genes, correlating 
+DMRs can be calculated.</p>
+<h2 id="example_data">Example data<a class="headerlink" href="#example_data" title="Permanent link">&para;</a></h2>
+<p>The example data comprise the raw reads of one sample and the already
+called, but not filtered reads of that sample and further 7
+samples. The samples belong to two groups, each of four samples. The
+data are adopted from a recent lymphoma publication
+(<a href="http://www.nature.com/ng/journal/v47/n11/full/ng.3413.html">link</a>). The
+unmapped sample consists of two sequencing runs. These reads can be
+mapped to a reduced genome and merged prior to methylation calling. In
+addition to the raw and called methylation data, a reduced reference
+genome, some gene annotations and gene expression data are
+provided. This will enable you, to run the entire toolkit on a
+small example region.</p>
+<p>In a quite basic version, the tool calls are shown at the <a href="example/">example
+page</a>. There, the tool calls are given, all output 
+files are stated and, if plots are produced, they are presented.</p>
+<p>A <a href="./scripts/v0.1/run_example.sh">run-script</a>,
+running all analysis shown on the example page and the input data can
+be downloaded <a href="./BAT_example_input.tar.gz">here</a> (for futher information see 
+<a href="example/">example page</a>. As the run-script refers to a recommended folder 
+structure, the input data including the folder structure can also be 
+downloaded <a href="./BAT_example_structure.tar.gz">here</a> (985 MB).</p>
+<p>In addition, all BAT scripts can be downloaded one by one <a href="./scripts/v0.1">here</a>.</p>
+<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<p>If you prefer to not install all <a href="install/">dependencies</a>, you can use the <a href="./install.md/#docker">BAT docker image</a>. 
+Dependencies and scripts are installed - simply pull the image. To test it, download 
+the input data including the folder structure <a href="./BAT_example_structure.tar.gz">here</a> 
+(985 MB), run the docker image and the run-script. For a quick start, have a look 
+<a href="./install.md/#docker">here</a></p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p><strong>This software is published under the terms of the MIT License</strong></p>
+<p>Copyright (c) 2016 Helene Kretzmer, Christian Otto, Steve Hoffmann</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+<p><a href="./LICENSE">LICENSE</a></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '.';</script>
+        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
+        <script src="./js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 0.16.1
+Build Date UTC : 2017-07-10 13:18:50
+-->

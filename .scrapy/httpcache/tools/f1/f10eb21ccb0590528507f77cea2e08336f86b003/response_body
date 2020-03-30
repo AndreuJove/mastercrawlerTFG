@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>AAI-profiler</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/style.css">
+<style type='text/css'>
+table,td,th{border-collapse:collapse;padding:2px 10px;}
+th{cursor:n-resize;background-color:lightgrey;}
+</style>  
+    <script> 
+    $(function(){
+      $("#includedContent").load("./AAI_tutorial.html");
+    });
+    </script>
+    <script>
+    $(function(){
+      $("#includedContent2").load("./examples/index.html");
+    });
+    </script>
+    <script>
+    $(function(){
+      $("#includedContent3").load("./download.html");
+    });
+    </script>
+
+
+  <script>
+  $(document).ready(function(){
+     url = "http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/json.cgi"
+     $("#taxonomy").autocomplete({
+         source: url,
+	 minlength: 4
+	 });
+  });
+  </script>
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+<script>
+$("#file").closest('form').trigger('reset');
+</script>
+  <style>
+  #logo {
+ 	 background-color=#000000 ;
+    } 
+  #content {
+      width: 1000px ;
+      margin-left: auto ;
+      margin-right: auto ;
+    }
+    #info {
+      height: 30px;
+      line-height: 30px;
+      background-color:#C8C8CE ;
+      padding-left: 1em ;
+    }
+    #form {
+      float: left;
+      margin-top: 10px ;
+      width: 750px ;
+    }
+    #side {
+      text-align: right;
+      float: left;
+      width: 245px ;
+      margin-top: 10px ;
+    }
+    #flip
+    {
+      padding:3px;
+      text-align:left;
+      border: 0;
+    }
+    </style>
+</head>
+<body>
+<H1>AAI-profiler: fast proteome-wide search reveals taxonomic outliers</H1>
+<div id="tabs">
+
+  <ul>
+    <li><a href="#tabs-0">About</a></li>
+    <li><a href="#tabs-1">Server</a></li>
+    <li><a href="#tabs-2">Tutorial</a></li>
+    <li><a href="#download">Download</a></li>
+    <li><a href="#tabs-4">Examples</a></li>
+    <li><a href="#tabs-5">Citations</a></li>
+</ul>
+  <div id="tabs-0">
+        <div style="margin-left: 0px; position: relative; width: 1000px; z-index: 5; " id="body_layer">
+           <div style="margin-left: 13px; margin-top: 49px; position: relative; width: 754px; z-index: 1; " class="style_SkipStroke_1 shape-with-text flowDefining">
+            <div class="text-content style_External_754_414" style="padding: 0px; ">
+              <div class="style">
+		      <p style="padding-top: 0pt; " class="paragraph_style">
+
+<b>AAI-profiler</b> [1] 
+is a fast homology search tool that
+takes a query proteome (protein sequences in FASTA format) as input and plots the AAI (Average Amino-acid Identity) values of species in the Uniprot database.
+AAI-profiler is powered by SANS [2] and the processing time for a bacterial proteome is a few minutes.
+<p>
+Whole-genome sequencing has propelled the re-evaluation of the taxonomic classification of many bacteria.
+AAI-profiler
+ can be used to select relevant genera for phylogenomic (AAI, ANI) or phylogenetic (16S rRNA, MLSA) <A HREF="https://www.ncbi.nlm.nih.gov/pubmed/24505069">trees</A>.
+
+Figure 1 shows examples of congruent (A) and incongruent (B) genus assignments in the sequence databases.
+
+
+<div>
+<table>
+<tr><td>A. <i>Dickeya dieffenbachia</i>. <A HREF=./examples/dieffenbachia/AAI.html>Live example</A> <img width="100%" src=dieffenbachia.svg> 
+</td><td>B. <i>Proteus sp.</i> HMSC10D02. <A HREF=./examples/HMSC10D02/AAI2.html>Live example</A> <img width="100%" src=proteus.svg>
+</td></tr>
+</table>
+<p> <b>Figure 1.</b> Each data point represents a species in the Uniprot database. AAI is plotted on the horizontal axis. The vertical axis is the fraction of query proteins that have a match in the database. The database contains both completely and partially sequenced species.
+(A) AAI values above 95-97 % correspond to the same species, and other species from the same (monophyletic) genus as the query should have higher AAI than other genera. (B) The sequence databases have tentatively assigned strain HMSC10D02 to <i>Proteus</i>, though its closest sequence neighbors belong to genus <i>Klebsiella</i>.
+
+		      <H3>References</H3>
+	<OL>
+		<LI>Medlar AJ, Toronen P, Holm L (2018) <A HREF=https://academic.oup.com/nar/article-abstract/46/W1/W479/4995691>AAI-profiler: fast proteome-wide exploratory analysis reveals taxonomic identity, misclassification and contamination</A>. <B>Nucleic Acids Research</B>, 46, W479-W485 
+                <LI>Somervuo P, Holm L (2015) SANSparallel: interactive homology search against Uniprot. <B>Nucl. Acids Res.</B> 43, W24-W29
+	</OL>
+		</div>
+            </div>
+          </div>
+             </div>
+          <HR><A HREF="http://ekhidna2.biocenter.helsinki.fi/">
+          <img src="http://ekhidna2.biocenter.helsinki.fi/~patkoski/pannzer/PANNZER/Annotate_files/UH_logo.gif" alt="" style="border: none; height: 90px; " />
+          <img src="http://ekhidna2.biocenter.helsinki.fi/~patkoski/pannzer/PANNZER/Annotate_files/HOLM_logo.gif" alt="" style="border: none; height: 90px; " />
+          <img src="http://ekhidna2.biocenter.helsinki.fi/~patkoski/pannzer/PANNZER/Annotate_files/BF_logo.jpg" alt="" style="border: none; height: 90px; " />
+         </A>
+  </div>
+</div>
+  <div id="tabs-1">
+                Example <A HREF="./examples/thylacine/input.fasta">input</A>
+                <p>Example <A HREF="./examples/thylacine/index.html">output</A>
+
+                  <div id="info">
+                    <p>STEP 1 - Enter your query proteome:</p>
+                  </div>
+       <form name="sanspanz" id="sanspanz" enctype="multipart/form-data" method="post" action="http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/dump_AAI.cgi" style="margin:0px;padding:0px;" target="_blank">
+        <input type="hidden" name="method" value="AAI">
+        <input type="hidden" name="maxquery" value=100000>
+                  <p>Paste proteome in FASTA format (<A HREF=./examples/thylacine/input.fasta target=_blank>example</A>, text area limited to 10M characters):</p> <textarea name="query" maxlength="10000000"
+ rows="8" cols="60"></textarea> <br>
+		  <p>or upload a proteome FASTA file: <INPUT TYPE="file" NAME="file">  
+<!-- whet 1.12 installed; wget < 1.18 are vulnerable to hacking-->
+		  <p>or load proteome FASTA file from URL: <INPUT TYPE="text" NAME="upload_URL" SIZE=60 > (restricted to NCBI genome or EBI database ftp servers)
+
+                  <p>or paste the checksum of a recent job: <INPUT TYPE="text" size=40 NAME="hid"></p>
+
+	           <div id="info">
+                    <p>STEP 2 - Optional inputs:</p>
+                  </div>
+  <p style="font-size: smaller">
+
+		  <p>Project title: <input id="taxonomy" size=60 type="text" name="title"/><p>
+  <p style="font-size: smaller">
+E-mail address for notification: <input id="address" size=30 type="text" name="address"/> <P>
+	  	<div id="info">
+			<p>STEP 3 - Submit your job:</p>
+                  </div><p>
+                  <input type="submit" name="Submit" value="Submit">
+		  <input type="reset" name="reset" id="reset" value="Clear Form" />
+	  </form>
+	  <p>The results will appear in a new window.</p>
+  </div>
+  <div id="tabs-2">
+<!--div id="includedContent"></div-->
+<A HREF=AAI.pdf>Tutorial as PDF.</A>
+<p>
+Youtube <A HREF=https://www.youtube.com/watch?v=OB3p-nbGk9I>video</A> (by Jana Roels)
+  </div>
+  <div id="download">
+	<div id="includedContent3"></div>
+
+  </div>
+  <div id="tabs-4">
+	<div id="includedContent2"></div>
+  </div>
+
+  <div id="tabs-5">
+       	<H2>Genome sequencing projects that used AAI-profiler:</H2>
+	<H4>Archaea</H4>
+        -<i>Halobellus captivus</i> sp. nov. (<A HREF=https://link.springer.com/article/10.1007%2Fs10482-019-01332-1>publication</A>)<br>
+	-<i>Halorubrum amylolyticum</i> sp. nov. (<A HREF=https://link.springer.com/article/10.1007/s10482-019-01313-4>publication</A>)<br>
+        -<i>Haloterrigena salifodinae </i> sp. nov. (<A HREF=https://link.springer.com/article/10.1007%2Fs10482-019-01264-w>publication</A>)<br>
+  	<H4>Bacteria</H4>
+        -<i>Alcaligenaceae</i> sp. Strain 429 (<A HREF=https://mra.asm.org/content/ga/8/19/e00439-19.full.pdf>publication</A>)<br>
+	-<i>Deferribacter autotrophicus</i> (<A HREF=https://www.mdpi.com/2073-4425/10/11/849/htm>publication</A>)<br>
+	-<i>Schlegelella brevitalea</i> sp. nov. (<A HREF=https://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijsem.0.003571>publication</A>)<br>
+	-<i>Vibrio chemaguriensis</i> sp. nov. (<A HREF=https://link.springer.com/article/10.1007/s00284-019-01731-7>publication</A>)<br>
+	<H4>Metagenome assembled genomes</H4>
+	-Dinosaur bone (<A HREF=https://link.springer.com/article/10.1186/s40793-020-00355-w>publication</A>)<br>
+
+  </div>
+
+</div>
+</body>
+</html>
+
+

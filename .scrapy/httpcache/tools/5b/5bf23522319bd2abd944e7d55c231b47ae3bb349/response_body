@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <!-- disable some strange compatibility mode in IE it uses for intranet sites by default -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Chipster</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+ 	<!-- This initializes the navigator.family object -->
+       <!--<script type="text/javascript" src="/products/javawebstart/1.2/docs/xbDetectBrowser.js"></script>-->
+
+       <script type="text/javascript">
+       //<![CDATA[  
+		 var javawsInstalled = 0;
+          isIE = "false";
+
+          if (navigator.mimeTypes && navigator.mimeTypes.length) {
+             x = navigator.mimeTypes['application/x-java-jnlp-file'];
+             if (x) javawsInstalled = 1;
+          } else {
+             isIE = "true";
+          }
+
+          function isJavaOk() {
+          <!-- Developers should be aware that for Gecko-based browsers (NS 6.x) -->
+          <!-- Java Web Start might not be installed -->
+          if (javawsInstalled || navigator.family == 'gecko') {
+                document.write('(<span style="color: green">detected OK</span>)');
+             } else {
+                document.write('(<span style="color: red">NOT DETECTED</span>)');
+             }
+          }
+		//]]>
+      </script>
+
+      <script type="text/vbscript">
+  		//<![CDATA[    
+      on error resume next
+          If isIE = "true" Then
+            If Not(IsObject(CreateObject("JavaWebStart.IsInstalled"))) Then
+                  javawsInstalled = 0
+            Else
+                  javawsInstalled = 1 
+            End If
+          End If
+		//]]>
+      </script> 
+
+	<script type="text/javascript">
+
+  		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-19701638-1']);
+  		_gaq.push(['_trackPageview']);
+
+  		(function() {
+    			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+
+	</script>
+
+</head>
+
+<body>
+
+<div>
+<div id="container">
+
+	<div id="top"></div>
+	<div id="main-left">
+		<ul id="navigation-links">
+		  <li><a href="index.shtml">Home</a></li>
+		  <li><a href="access.shtml">Getting access</a></li>
+		  <li><a href="features.shtml">Analysis tool content</a></li>
+		  <li><a href="screenshots.shtml">Screenshots</a></li>
+		  <li><a href="/manual/">Manual</a></li>
+		  <li><a href="https://www.youtube.com/channel/UCnL-Lx5gGlW01OkskZL7JEQ/playlists">Tutorial videos</a></li>
+		  <li><a href="/manual/courses.html">Course material</a></li>
+		  <li><a href="cite.shtml">Cite</a></li>
+		  <li><a href="troubleshooting.shtml">FAQ</a></li>
+		  <li><a href="contact.shtml">Contact</a></li>
+		  <li style="padding-top : 1em">For developers:</li>
+		  <ul style="padding-left: 10px">
+		    <li><a href="https://chipster.github.io/chipster/">Open source project</a></li>
+		    <li><a href="/tool-editor">Tool editor</a></li>
+		  </ul>
+		</ul>
+	</div>
+	<div id="main-right">
+
+
+<h3 id="getting-started">Welcome to Chipster</h3>
+
+<p>
+  Chipster is a user-friendly software for analyzing high-throughput data such as NGS and microarrays. It contains over 450
+  analysis tools and a large collection of reference genomes. Users can save
+  and share automatic analysis workflows, and visualize data interactively using for example the <a
+												    href="/manual/genomeBrowser.html">built-in genome browser</a>. 
+  Chipster's client software uses Java Web Start to install itself automatically, and it connects to
+  computing servers for the actual analysis. Chipster is open source, and the server environment is available as a <a href="http://chipster.github.io/chipster/">virtual machine image</a> 
+  free of charge. If you would like to use Chipster running on CSC's
+  server, you need a <a href="access.shtml">user account</a>.
+</p>
+
+<p>Up to version 3.x Chipster is a desktop application requiring Java. Chipster v4 is web application which runs on your browser.</p>
+
+<!-- Comment out for service break -->
+
+<div id="launch">
+  <a href="chipster.jnlp"> <img id="launch-button" alt="Launch Chipster" src="images/launch_button-3.png" /></a>
+  <span id="launch-text"> 
+    <a href="https://chipster.csc.fi/chipster.jnlp">Launch Chipster v3.16.3</a>
+    <br /> 
+    <span style="font-size: 60%"> ...or launch with more memory: 
+      <a href="servlet.jnlp?memory=3072">3 GB</a> or 
+      <a href="servlet.jnlp?memory=6144">6 GB</a>
+      </span> 
+    <br /> 
+    <em id="small-launch-note">If you have trouble launching Chipster v3, read 
+      <a href="troubleshooting.shtml">this</a></em> 
+    </span>
+</div>
+
+<div id="launch">
+  <a href="https://chipster.rahtiapp.fi"> <img id="launch-button" alt="Launch Chipster v4" src="images/launch_button-3.png" /></a>
+  <span id="launch-text"> 
+    <a href="https://chipster.rahtiapp.fi">Launch Chipster v4</a>
+    <br /> 
+    <em id="small-launch-note">Chipster web application, no Java needed</em> 
+    </span>
+</div>
+
+
+<!-- Uncomment for service break -->
+
+<!--
+<div id="launch"><img id="launch-button" width="34" height="34" alt="Service break" src="images/cancel.png" /><span id="launch-text">Service break for Chipster 3.x <br /></span></div>
+-->
+
+
+<p>
+  <strong>News and resources:</strong>
+</p>
+<ul>
+  <li>24.1.2020 <a href="/manual/newVersion.html">Version 3.16.3 released</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PLjiXAZO27elC_xnk7gVNM85I2IQl5BEJN">Lecture videos from single cell RNA-seq data analysis course</a></li>
+  <li>RNA-seq resources:</li>
+  <ul>
+    <li><a href="https://www.youtube.com/playlist?list=PLjiXAZO27elBj3KYi7ACscgOxlNkNOxPc">Lecture videos</a></li>
+    <li><a href="/manual/rna-seq-summary.html">Step-by-step instructions for differential expression analysis</a></li>
+    <li><a href="http://www.crcpress.com/product/isbn/9781466595002">RNA-seq data analysis guidebook</a> with Chipster instructions</li>
+    </ul>
+  <li><a href="news_archive.shtml">Archive</a></li>
+</ul>
+
+
+<p>
+  <strong>Training:</strong>
+</p>
+<ul>
+  <li>21.4.2020 <a href="https://www.csc.fi/web/training/-/microbiome-202004">Microbial community analysis of 16S data</a>, CSC</li>
+  <li>05.3.2020 <a href="https://www.csc.fi/web/training/-/rnaseq-202003">RNA-seq data analysis</a>, CSC</li>
+  <li>10.1.2020 Community analysis of amplicon sequencing data, Ruokavirasto</li>
+  <li>24.9.2019 <a href="https://www.csc.fi/web/training/-/single-cell-chipster-2019">Single cell RNA-seq data analysis</a>, CSC</li>
+  <li>11.9.2019 <a href="https://incob2019.org/workshop/">Detecting differentially expressed genes with RNA-seq</a>, InCoB</li>
+</ul>
+
+<!--
+<p>
+<strong>Maintenance:</strong>
+</p>
+<ul>
+  <li></li>
+</ul>
+-->
+
+
+
+
+</div>
+
+</div>
+
+</div>
+<br/>
+</body>
+
+</html>

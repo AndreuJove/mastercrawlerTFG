@@ -1,0 +1,1103 @@
+<html>
+<head>
+<title>BioTapestry</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="description" content="BioTapestry is an interactive tool for building, visualizing, and simulating genetic regulatory networks.">
+<meta name="keywords" content="genetic regulatory networks, network modeling, network visualization, systems biology software, drawing gene networks, layout of gene networks, view from the genome, view from the nucleus">
+
+<style>
+body{
+font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+
+</head>
+<body>
+<center>
+<table>
+<tr>
+<td>
+<a href="http://www.systemsbiology.org">
+<img src="images/logo-isb.png" border="0" alt="ISB Logo"/>
+</a>
+</td>
+<td>
+<a href="http://www.BioTapestry.org">
+
+<img src="images/BigBioTapestryTextWhite33.png" border="0" alt="BioTapestry" hspace="30"/>
+</a>
+</td>
+<td>
+<a href="http://www.caltech.edu">
+<img src="images/caltech-logo.jpg" border="0" alt="Caltech Logo"/>
+</a>
+</td>
+</tr>
+</table>
+</center>
+<hr noshade="true"/>
+<table>
+<tr>
+<td width="150" valign="top">
+<table cols="1">
+<tr><td bgcolor="#E0E0E0"><font size="2"><b>Contents</b></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#downloads"><b>Downloads</b></a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#getStarted"><b>Getting Started</b></a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#grns">Online GRN Repository</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#currentDeploy">BioTapestry in Action</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#description">Description</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#launch">Running BioTapestry Online</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#documentation">Documentation</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#whatsNew">What's New</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#pub">Publications</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#probs">Problems Running It?</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#platforms">Supported Platforms</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#gaggle">BioTapestry for Gaggle</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#developer">Developer's Notes</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#sourcecode">Source Code</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#viewer">BioTapestry Viewer</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#feedback">Send Feedback</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#group">BioTapestry-users Google Group</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#credits">Credits</a></font></td></tr>
+<tr><td bgcolor="#F0FOF0"><font size="2"><a href="#licenseagreement">License and Disclaimer</a></font></td></tr>
+</table>
+</td>
+<td valign="top">
+<center>
+<table width="70%" cols="1">
+<tr><th bgcolor="#E0E0E0"><center>News</center></th></tr>
+<tr><td bgcolor="#FFE0E0"><center><b>September 28, 2019:</b> New Version 7.1.2 has been released. See <a href="#whatsNew">What's New</a>.</center></td></tr>
+</table>
+</center>
+
+<center>
+<p>
+<a href="http://sugp.caltech.edu/endomes/index.html"><img border="0" src="images/ScreenShot.png" width="723" height="481" border="0" alt="Endomesoderm Screenshot"/></a>
+</p>
+<p>
+<h3><i>BioTapestry is an interactive tool for building, visualizing, and sharing gene regulatory network models over the web.</i></h3>
+</p>
+</center>
+
+<a name="downloads"/>
+<h3>Downloads</h3>
+<p>
+The latest version of the BioTapestry Editor is <b>version 7.1.2, released 9/28/19</b>. Download the copy of BioTapestry that is appropriate 
+for your system. In contrast to previous versions, you no longer need to download and install Java first; these downloads now include the required 
+Java files, and so the program is standalone.
+</p>
+<p>
+If you need to use an older version of BioTapestry prior to Version 7.1.2, you can still download older versions of the program 
+from the <a href="docs/archivedExecutables.html">Archived Executables</a> page. Depending on the version and operating system, you may need
+to install Java as well.
+</p>
+
+<ul>
+<li><b>Windows:</b> The Windows version now comes with an installer program that also installs the Java runtime. 
+Zip archive: <a href="executables/BioTapestry7120.zip">BioTapestry7120.zip</a> Download the archive and unzip it as a folder on 
+your desktop. Go into the folder, and double-click the <code>BioTapestryInstaller</code> program. If you want to install BioTapestry 
+in the Windows "Program Files" folder, you will need to run the BioTapestryInstaller as an Admin user. To do that, right-click on 
+the <code>BioTapestryInstaller</code> program and choose "Run as administrator". You will be prompted for the Administrator password. 
+If you are not an Admin, you will need to install it somewhere within your home directory by changing the install location as part of the 
+installation. Once the installation is complete, you can right-click on the BioTapestry program and select "Create shortcut", then 
+e.g. drag it to your desktop. MD5 checksum: <code>MD5 (BioTapestry7120.zip) = 6832eb918ddf8f986fea206fa43a78b6</code>. Note that some anti-virus
+programs may prevent the installer from running with no indications that anything happened. If this occurs, you might need to choose "Run" from the
+Windows menu, type <code>cmd</code> into the <code>Open:</code> text field to launch a command shell, type <code>cd Desktop\BioTapestry7120</code>, 
+and then type <code>BioTapestryInstaller.exe</code>. If an anti-virus program is activated (e.g. Symantec Endpoint Protection), you will then need 
+to allow the installer to run.
+</li><br/>
+
+<li><b>Mac:</b> Disk image: <a href="executables/BioTapestryInstallImage712.dmg">BioTapestryInstallImage712.dmg</a>.  
+Double-click the downloaded <code>dmg</code> disk image file to mount it, and then open a Finder window for the mounted disk. From the Finder window, drag the BioTapestry Editor 
+icon inside onto your desktop (or, if you prefer, into your Applications folder). If Mac Gatekeeper has been set to restrict to only <b>App Store</b>, you 
+will need to launch <b>System Preferences</b>, click on <b>Security &amp; Privacy</b>, and on the <b>General</b> tab, set <b>Allow apps downloaded 
+from: App Store and identified developers</b>. If you take this step, you may wish to reset it back to <b>App Store</b> <i>after</i> starting BioTapestry 
+the first time. MD5 checksum: <code>MD5 (BioTapestryInstallImage712.dmg) = 199443540a6211c77b5764e0fe70ab42</code>. 
+</li><br/>
+
+<li><b>Linux:</b> Compressed tar file: <a href="executables/BioTapestry-7.1.2.0.tgz">BioTapestry-7.1.2.0.tgz</a>. Untar the file, which contains a
+directory <code>BioTapestry</code>. Inside that directory is the the shell script <code>BioTapestry712.sh</code> that launches the program. MD5 checksum: <code>MD5 (BioTapestry-7.1.2.0.tgz) = 3335aa0af0c4118f73bbac87a5930358</code>.
+</li><br/>
+</ul>
+
+<a name="getStarted"/>
+<h3>Getting Started</h3>
+<p>
+If you haven't used BioTapestry before, you can get up to speed on the basics by going through the online 
+<a href="quickStart/QuickStart.html">Quick Start Tutorial</a>.
+</p>
+
+
+<hr noshade="true" width="67%"/>
+
+<a name="grns"/>
+<h3>Online GRN Repository</h3>
+<p>
+We have a hosted online repository of interactive BioTapestry gene regulatory network models at <a href="http://grns.biotapestry.org/index.html">http://grns.biotapestry.org/</a>.
+If you have a published model you would like us to host here at BioTapestry.org, contact us at <code>biotapestry at systemsbiology dot org</code></b>. 
+</p>
+
+<hr noshade="true" width="67%"/>
+<a name="currentDeploy"/>
+<h3>BioTapestry in Action</h3>
+<p>Here are some current uses of BioTapestry:</p>
+<p>
+<h4>Interactive Web Models from the Davidson Lab</h4>
+<ul>
+<li>
+<a href="http://sugp.caltech.edu/endomes/index.html#EndomesNetwork">S. purpuratus endomesoderm</a> at the Davidson Lab at Caltech. <b><i>Uses New Web Viewer!</i></b>
+</li>
+<li>
+<a href="http://sugp.caltech.edu/endomes/index.html#EctodermNetwork">S. purpuratus ectoderm</a> at the Davidson Lab at Caltech. <b><i>Uses New Web Viewer!</i></b>
+</li>
+<li>
+<a href="http://grns.biotapestry.org/PancreasGRN/">Pancreas Genome Regulatory Network</a> from the Davidson Lab at Caltech. <b><i>Uses New Web Viewer!</i></b>
+</li>
+</ul>
+<h4>Other Interactive Web Models</h4>
+<ul>
+<li>
+<a href="http://grns.biotapestry.org/VNT/">Mouse ventral neural tube specification</a> from the McMahon Lab at Harvard (now hosted at <a href="http://grns.biotapestry.org/">grns.biotapestry.org</a>). <b><i>Uses New Web Viewer!</i></b>
+</li>
+<li>
+<a href="http://grns.biotapestry.org/LimbMorph/">Limb morphogenesis network</a> from the Vokes Lab at the University of Texas at Austin (hosted at <a href="http://grns.biotapestry.org/">grns.biotapestry.org</a>). <b><i>Uses New Web Viewer!</i></b>
+</li>
+<li>
+<a href="http://baliga.systemsbiology.net/egrin.php">Environment And Gene Regulatory Influence Network (EGRIN) for Halobacterium salinarum NRC-1</a> at the Baliga Lab at the Institute for Systems Biology. <b><i>Uses New Web Viewer!</i></b>
+</li>
+<li>
+<a href="http://www.its.caltech.edu/~tcellgrn/TCellMap.html">T-cell gene regulatory network (2011 Version)</a>, from the Rothenberg Lab at Caltech. <b><i>Uses New Web Viewer!</i></b>
+</li>
+<li>
+<a href="http://www.its.caltech.edu/~tcellgrn/Oldnetwork.html">T-cell gene regulatory network (2009 Version)</a>, a collaboration between Ellen Rothenberg and Hamid Bolouri at Caltech. <b><i>Uses New Web Viewer!</i></b>
+</li>
+<li>
+<a href="http://grns.biotapestry.org/Zf/">Zebrafish developmental gene regulatory network</a> from the Yuh Lab at the National Health Research Institute, Taiwan (now hosted at <a href="http://grns.biotapestry.org/">grns.biotapestry.org</a>). <b><i>Uses New Web Viewer!</i></b>
+</li>
+<li>
+<a href="http://networks.systemsbiology.net/mtb/content/Environment-Specific-Gene-Regulatory-Networks-MTB">Environment-specific gene regulatory networks for Mycobacterium tuberculosis</a> from the <a href="http://networks.systemsbiology.net/mtb/">MTB Network Portal</a>. <b><i>Uses New Web Viewer!</i></b>
+</li>
+<li>
+<a href=" http://www.phisite.org/main/index.php?nav=search">phiSITE: Database of Gene Regulation in Bacteriophages</a> at the Institute of 
+Molecular Biology of the Slovak Academy of Sciences.  Enter a search term, e.g. "Enterobacteria" or "phage", to see entries with live BioTapestry links.
+</li>
+<li>
+<a href="http://research.nhgri.nih.gov/pigment_cell/templates/files/Diagram.shtml">The Pigment Cell Gene Network</a> at the Pavan Group 
+at The National Human Genome Research Institute.
+</li>
+</ul>
+</p>
+<p>
+<h4>Papers and Books Using BioTapestry</h4>
+<ul>
+<li>
+Xu, H., Chaudhri, V.K., Wu, Z., Biliouris, K., Dienger-Stambaugh, K., Rochman, Y., Singh, H.
+<a href="http://dx.doi.org/10.1038/ni.3287">Regulation of bifurcating B cell trajectories by mutual antagonism between transcription factors IRF4 and IRF8.</a>
+Nature Immunology, published online 05 October 2015. (Supplementary Materials)
+</li>
+<li>
+Martik, M.L., McClay, D.R.
+<a href="http://dx.doi.org/10.7554/eLife.08827">Deployment of a retinal determination gene network drives directed cell migration in the sea urchin embryo.</a>
+eLife 4:e08827, 2015.
+</li>
+<li>
+Bouveret, R., Waardenberg, A.J., Schonrock, N., Ramialison, M., Doan, T., de Jong, D., Bondue, A., Kaur, G., Mohamed, S., Fonoudi, H., Chen, C.M., Wouters, M.A., Bhattacharya, S., Plachta, N., Dunwoodie, S.L., Chapman, G., Blanpain, C., Harvey, R.P.
+<a href="http://dx.doi.org/10.7554/eLife.06942">NKX2-5 mutations causative for congenital heart disease retain functionality and are directed to hundreds of targets.</a>
+eLife 4:e06942, 2015.
+</li>
+<li>
+Massie, C.E., Spiteri, I., Ross-Adams, H., Luxtonm H., Kay, J., Whitaker, H.C., Dunning, M.J., Lamb, A.D., Ramos-Montoya, A., Brewer, D.S., Cooper, C.S., 
+Eeles, R., UK Prostate ICGC Group, Warren, A.Y., Tavaré, S., Neal, D.E., Lynch, A.G.
+<a href="http://dx.doi.org/10.1530/ERC-14-0454">HES5 silencing is an early and recurrent change in prostate tumourigenesis.</a>
+Endocr Relat Cancer. 22(2):131-44, 2015.
+</li>
+<li>
+Andrikou, C., Arnone, M.I.
+<a href="http://dx.doi.org/10.1016/j.jcz.2015.03.005">Too many ways to make a muscle: Evolution of GRNs governing myogenesis.</a>
+Zoologischer Anzeiger - A Journal of Comparative Zoology 256: 2-13, 2015.
+</li>
+<li>
+Simões-Costa, M., Bronner, M.E.
+<a href="http://dx.doi.org/10.1242/dev.105445">Establishing neural crest identity: a gene regulatory recipe.</a>
+Development 142(2): 242-257, 2015.
+</li>
+<li>
+Andrikou, C., Pai, C.-Y., Su, Y.-H., Arnone, M.I.
+<a href="http://dx.doi.org/10.7554/eLife.07343">Logics and properties of a genetic regulatory program that drives embryonic muscle development in an echinoderm.</a>
+eLife 4:e07343, 2015.
+</li>
+<li>
+Peter, I.S., Davidson, E.H., 
+<a href="https://www.elsevier.com/books/genomic-control-process/davidson/978-0-12-404729-7">Genomic Control Process: Development and Evolution</a>, Academic Press, 2015.
+</li>
+<li>
+Barsi, J.C., Li, E., Davidson, E.H.
+<a href="http://dx.doi.org/10.1242/dev.117986">Geometric control of ciliated band regulatory states in the sea urchin embryo.</a>
+Development 142(5): 953-61, 2015.
+</li>
+<li>
+Imam, S., Noguera, D.R., Donohue. T.J.
+<a href="http://dx.doi.org/10.1371/journal.pcbi.1004103">An Integrated Approach to Reconstructing Genome-Scale Transcriptional Regulatory Networks.</a>
+PLoS Comput Biol. 11(2): e1004103, 2015.
+</li>
+<li>
+Tonner, P.D., Pittman, A.M.C., Gulli, J.G., Sharma, K., Schmid, A.K.
+<a href="http://dx.doi.org/10.1371/journal.pgen.1004912">A Regulatory Hierarchy Controls the Dynamic Transcriptional Response to Extreme Oxidative Stress in Archaea.</a>
+PLoS Genet. 11(1): e1004912, 2015.
+</li>
+<li>
+Imam, S., Noguera, D.R., Donohue. T.J.
+<a href="http://dx.doi.org/10.1371/journal.pgen.1004837">Global analysis of photosynthesis transcriptional regulatory networks.</a>
+PLoS Genet. 10(12):e1004837, 2014.
+</li>
+<li>
+Cui, M., Siriwon, N., Li, E., Davidson, E.H., Peter, I.S.
+<a href="http://dx.doi.org/10.1073/pnas.1419141111">Specific functions of the Wnt signaling system in gene regulatory networks throughout the early sea urchin embryo.</a>
+Proc Natl Acad Sci USA 111(47): E5029-38, 2014.
+</li>
+<li>
+Li, E., Cui, M., Peter, I.S., Davidson, E.H.
+<a href="http://dx.doi.org/10.1073/pnas.1323105111">Encoding regulatory state boundaries in the pregastrular oral ectoderm of the sea urchin embryo.</a>
+Proc Natl Acad Sci USA 111(10): E906-13, 2014.
+</li>
+<li>
+Schwendinger-Schreck, J., Kang, Y., Holley, S.A.
+<a href="http://dx.doi.org/10.1534/genetics.114.163642">Modeling the Zebrafish Segmentation Clock’s Gene Regulatory Network Constrained by Expression Data Suggests Evolutionary Transitions Between Oscillating and Nonoscillating Transcription</a>
+Genetics 197(2): 725–738, 2014.
+</li>
+<li>
+Imam, S., Noguera, D.R., Donohue. T.J.
+<a href="http://dx.doi.org/10.1371/journal.pgen.1004837">Global Analysis of Photosynthesis Transcriptional Regulatory Networks.</a>
+PLoS Genet. 10(12): e1004837, 2014.
+</li>
+<li>
+Coleman, D.J., Garcia, G., Hyter, S., Jang, H.S., Chagani, S., Liang, X., Larue, L., Ganguli-Indra, G., Indra, A.K.
+<a href="http://dx.doi.org/10.1371/journal.pgen.1004321">Retinoid-X-Receptors (α/β) in Melanocytes Modulate Innate Immune Responses and Differentially Regulate Cell Survival following UV Irradiation.</a>
+PLoS Genet. 10(5): e1004321, 2014. (<b>NOTE</b>: See Figure S6 in supplemental materials.)
+</li>
+<li>
+Singh, H., Khan, A.A., Dinner, A.R.
+<a href="http://dx.doi.org/10.1016/j.it.2014.03.006">Gene regulatory networks in the immune system.</a>
+Trends in Immunology 35(5): 211-218, 2014.
+</li>
+<li>
+Vander Lugt, B., Khan, A.A., Hackney, J.A., Agrawal, S., Lesch, J., Zhou, M., Lee, W.P., Park, S., Xu, M., DeVoss, J., Spooner, C.J., Chalouni, C., Delamarre, L., Mellman, I., Singh, H.
+<a href="http://dx.doi.org/10.1038/ni.2795">Transcriptional programming of dendritic cells for enhanced MHC class II antigen presentation.</a>
+Nature Immunology 15: 161–167, 2014.
+</li>
+<li>
+Annunziata, R., Arnone, M.I.
+<a href="http://dx.doi.org/10.1242/dev.105775">A dynamic regulatory network explains ParaHox gene control of gut patterning in the sea urchin.</a>
+Development 141: 2462-2472, 2014.
+</li>
+<li>
+Winck, F.V., Arvidsson, S., Riaño-Pachón, D.M., Hempel, S., Koseska, A., Nikoloski, Z., Urbina Gomez, D.A., Rupprecht, J., Mueller-Roeber, B.
+<a href="http://dx.doi.org/10.1371/journal.pone.0079909">Genome-Wide Identification of Regulatory Elements and Reconstruction of Gene Regulatory Networks of the Green Alga Chlamydomonas reinhardtii under Carbon Deprivation.</a>
+PLoS One 8(11): e79909, 2013.
+</li>
+<li>
+Alcasabas, A.A., de Clare, M., Pir, P., Oliver, S.G.
+<a href="http://dx.doi.org/10.1186/1471-2164-14-744">Control analysis of the eukaryotic cell cycle using gene copy-number series in yeast tetraploids.</a>
+BMC Genomics 14: 744, 2013.
+</li>
+<li>
+Streit, A., Tambalo, M., Chen, J., Grocott, T., Anwar, M., Sosinsky, A., Stern, C.D.
+<a href="http://dx.doi.org/10.1002/dvg.22359">Experimental approaches for gene regulatory network construction: the chick as a model system.</a>
+Genesis 51(5): 296–310, 2013.
+</li>
+<li>
+Paul, L., Wang, S.-H., Manivannan, S.N., Bonanno, L., Lewis, S., Austin, C.L.,  Simcox, A.
+<a href="http://dx.doi.org/10.1073/pnas.1217538110">Dpp-induced Egfr signaling triggers postembryonic wing development in Drosophila.</a>
+Proc. Natl. Acad. Sci. USA 110(13): 5058–5063, 2013. (<b>NOTE</b>: See Figure S3 in supplemental materials.)
+</li> 
+<li>
+Hussey, S.G., Mizrachi, E., Creux, N.M., Myburg, A.A.
+<a href="http://dx.doi.org/10.3389/fpls.2013.00325">Navigating the transcriptional roadmap regulating plant secondary cell wall deposition.</a>
+Front Plant Sci. 4:325, 2013.
+</li>
+<li>
+Ciau-Uitz, A., Pinheiro, P., Kirmizitas, A., Zuo, J., Patient, R.
+<a href="http://dx.doi.org/10.1242/dev.090829">VEGFA-dependent and -independent pathways synergise to drive Scl expression and initiate programming of the blood stem cell lineage in Xenopus.</a>
+Development 140: 2632-2642, 2013.
+</li>
+<li>
+Gibb, N.L., Lavery, D.L., Hoppler, S.
+<a href="http://dx.doi.org/10.1242/dev.088047"><i>sfrp1</i> promotes cardiomyocyte differentiation in <i>Xenopus</i> via negative-feedback regulation of Wnt signalling.</a>
+Development 140(7):1537-1549, 2013.
+</li>
+<li>
+Aguilar-Hidalgo, D., Domínguez-Cejudo, M.A., Amore, G., Brockmann, A., Lemos, M.C., Córdoba, A., Casares, F.
+<a href="http://dx.doi.org/10.1242/dev.082172">A Hh-driven gene network controls specification, pattern and size of the Drosophila simple eyes</a>
+Development 140, 82-92, 2013.
+</li>
+<li>
+Herrmann, F., Groß, A., Zhou, D., Kestler, H.A., Kühl, M.
+<a href="http://dx.doi.org/10.1371/journal.pone.0046798">A Boolean Model of the Cardiac Gene Regulatory Network Determining First and Second Heart Field Identity.</a>
+PLoS ONE 7(10): e46798, 2012.
+</li>
+<li>
+Ogino, H., Ochi, H., Reza, H.M., Yasuda, K.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2012.01.006">Transcription factors involved in lens development from the preplacodal ectoderm.</a>
+Dev Biol. 363(2): 333–347, 2012. 
+</li>
+<li>
+Zhang, Y., Yang, Y., Trujillo, C., Zhong, W., Leung, Y.F.
+<a href="http://dx.doi.org/10.1371/journal.pone.0036145">The expression of irx7 in the inner nuclear layer of zebrafish retina is essential for a proper retinal development and lamination.</a>
+PLoS One 7(4):e36145, 2012.
+</li>
+<li>
+Metzakopian, E., Lin, W., Salmon-Divon, M., Dvinge, H., Andersson, E., Ericson, J., Perlmann, T., Whitsett, J.A., Bertone, P., Ang, S.L.
+<a href="http://dx.doi.org/10.1242/dev.081034">Genome-wide characterization of Foxa2 targets reveals upregulation of floor plate genes and repression of ventrolateral genes in midbrain dopaminergic progenitors.</a>
+Development 139(14):2625-34, 2012.
+</li>
+<li>
+Jahangiri, L., Nelson, A.C., Wardle, F.C.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2012.07.002">A cis-regulatory module upstream of deltaC regulated by Ntla and Tbx16 drives expression in the tailbud, presomitic mesoderm and somites.</a>
+Dev Biol. 371(1):110-20, 2012.
+</li>
+<li>
+Luo, Y.J., Su, Y.H.
+<a href="http://dx.doi.org/10.1371/journal.pbio.1001402">Opposing nodal and BMP signals regulate left-right asymmetry in the sea urchin larva.</a>
+PLoS Biol. 10(10):e1001402, 2012.
+</li>
+<li>
+Kueh, H.Y., Rothenberg, E.V.
+<a href="http://dx.doi.org/10.1002/wsbm.162">Regulatory gene network circuits underlying T cell development from multipotent progenitors.</a>
+Wiley Interdiscip Rev Syst Biol Med. 4(1):79-102, 2012.
+</li>
+<li>
+Bessodes, N., Haillot, E., Duboc, V., Röttinger, E., Lahaye, F., Lepage, T.
+<a href="http://dx.doi.org/10.1371/journal.pgen.1003121">Reciprocal signaling between the ectoderm and a mesendodermal left-right organizer directs left-right determination in the sea urchin embryo.</a>
+PLoS Genet. 8(12):e1003121, 2012.
+</li>
+<li>
+Grocott T., Tambalo M., Streit A.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2012.06.028">The peripheral sensory nervous system in the vertebrate head: A gene regulatory perspective.</a>
+Dev Biol. 370(1), 3-23, 2012.
+</li>
+<li>
+Rabinowitz, A.H., Vokes, S.A.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2012.05.035">Integration of the transcriptional networks regulating limb morphogenesis.</a>
+Dev Biol. 368(2), 165–180, 2012.
+</li>
+<li>
+Woznica, A., Haeussler, M., Starobinska, E., Jemmett, J., Li, Y., Mount, D., Davidson, B.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2012.05.002">Initial deployment of the cardiogenic gene regulatory network in the basal chordate, Ciona intestinalis.</a>
+Dev Biol. 368(1), 127–139, 2012.
+</li>
+<li>
+Prasad, M.S., Sauka-Spengler, T., LaBonne, C.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2012.03.014">Induction of the neural crest state: Control of stem cell attributes by gene regulatory, post-transcriptional and epigenetic interactions.</a>
+Dev Biol. 366(1), 10–21, 2012.
+</li>
+<li>
+Peter, I.S., Davidson, E.H.
+<a href="http://dx.doi.org/10.1038/nature10100">A gene regulatory network controlling the embryonic specification of endoderm.</a>
+Nature 474: 635-639, 2011.
+</li>
+<li>
+Marsch-Martínez, N., Wu, W., de Folter, S.
+<a href="http://dx.doi.org/10.3389/fpls.2011.00026">The MADS symphonies of transcriptional regulation.</a>
+Front. Plant Sci. 2:26, 2011.
+</li>
+<li>
+Owraghi, M., Broitman-Maduro, G., Luu, T., Roberson, H., Maduro, MF.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2009.09.042">Roles of the Wnt effector 
+POP-1/TCF in the C. elegans endomesoderm specification gene network.</a>
+Dev Biol. 340(2), 209-221, 2010.
+</li>
+<li>
+Saudemont, A., Haillot, E., Mekpoh, F., Bessodes, N., Quirin, M., Lapraz, F., Duboc, V., Röttinger, E., Range, R., Oisel, A., Besnardeau, L., Wincker, P., Lepage, T.
+<a href="http://dx.doi.org/10.1371/journal.pgen.1001259">Ancestral regulatory circuits governing ectoderm patterning downstream of Nodal and BMP2/4 revealed by gene regulatory network analysis in an echinoderm.</a>
+PLoS Genet. 6(12):e1001259, 2010.
+</li>
+<li>
+Eng, D., Campbell, A., Hilton, T., Leid, M., Gross, M.K., Kioussi, C.
+<a href="http://dx.doi.org/10.1016/j.gene.2010.08.008">Prediction of regulatory networks in mouse abdominal wall.</a>
+Gene 469(1-2):1-8, 2010.
+</li>
+<li>
+Inoue, T., Sternberg, P.W.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2009.12.005">C. elegans BED domain transcription 
+factor BED-3 controls lineage-specific cell proliferation during organogenesis.</a>
+Dev Biol. 338(2), 226-36, 2010.
+</li>
+<li>
+Peter, I.S., Davidson, E.H.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2009.10.037">The endoderm gene regulatory network in sea urchin embryos up to mid-blastula stage.</a>
+Dev Biol. 340(2): 188-199, 2010.
+</li>
+<li>
+Danielli, A.,  Amore, G.,  Scarlato, V. 
+<a href="http://dx.doi.org/10.1371/journal.ppat.1000938">Built Shallow to Maintain Homeostasis and Persistent Infection: 
+Insight into the Transcriptional Regulatory Network of the Gastric Human Pathogen Helicobacter pylori.</a> 
+PLoS Pathog. 6(6), e1000938, 2010. (<b>NOTE</b>: Bundled .btp file provided in supplemental materials.)
+</li>
+<li>
+Baxter, L.L., Moreland, R.T., Nguyen, A.D., Wolfsberg, T.G., Pavan, W.J.
+<a href="http://dx.doi.org/10.1093/database/baq025">A curated online resource for SOX10 and pigment cell 
+molecular genetic pathways.</a> 
+Database (Oxford) (2010), baq025, 2010.
+</li>
+<li>
+Klucar, L., Stano, M., Hajduk, M. 
+<a href="http://dx.doi.org/10.1093/nar/gkp911">phiSITE: database of gene regulation in bacteriophages.</a>
+Nucleic Acids Res. (38), D366-70, 2010.
+</li>
+<li>
+Litvak, V., Ramsey, S.A., Rust, A.G., Zak, D.E., Kennedy, K.A., Lampano, A.E., Nykter, M., Shmulevich, I., Aderem, A.
+<a href="http://dx.doi.org/10.1038/ni.1721">Role of the transcription factor C/EBPδ in a regulatory circuit that discriminates between transient and persistent Toll-like receptor 4-induced signals.</a>
+Nat Immunol. 10(4): 437–443, 2009.
+</li>
+<li>
+Pruszak, J., Isacson, O.
+<a href="http://dx.doi.org/10.1007/978-1-4419-0322-8">Molecular and Cellular Determinants for 
+Generating ES-Cell Derived Dopamine Neurons for Cell Therapy.</a>
+Adv Exp Med Biol. 651, 112-23, 2009.
+</li>
+<li>
+Wahl, M.E., Hahn, J., Gora, K., Davidson, E.H., Oliveri, P.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2009.08.005">The cis-regulatory system of the tbrain gene: Alternative use of multiple modules to 
+promote skeletogenic expression in the sea urchin embryo.</a>
+Dev Biol. 335(2), 428-41, 2009.
+</li>
+<li>
+Kühn, C., Wierling, C., Kühn, A., Klipp, E., Panopoulou, G., Lehrach, H., Poustka, A.J.
+<a href="http://dx.doi.org/10.1186/1752-0509-3-83">Monte Carlo analysis of an ODE Model of the Sea Urchin Endomesoderm Network.</a>
+BMC Syst Biol. 3, 83, 2009.
+</li>
+<li>
+Sansom, S.N., Griffiths, D.S., Faedo, A., Kleinjan, D.-J., Ruan, Y., Smith, J., van Heyningen, V., Rubenstein, J.L., Livesey, F.J. 
+<a href="http://dx.doi.org/10.1371/journal.pgen.1000511">The Level of the Transcription Factor Pax6 Is Essential for Controlling the 
+Balance between Neural Stem Cell Self-Renewal and Neurogenesis.</a> PLoS Genet 5(6), e1000511, 2009.
+</li>
+<li>
+Morohashi, K., Grotewold, E. 
+<a href="http://dx.doi.org/10.1371/journal.pgen.1000396">A systems approach reveals regulatory 
+circuitry for Arabidopsis trichome initiation by the GL3 and GL1 selectors.</a> PLoS Genet 5(2), e1000396, 2009.
+</li>
+<li>
+Su, Y.H., Li, E., Geiss, G.K., Longabaugh, W.J., Krämer, A., Davidson, E.H.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2009.02.029">A perturbation model of the gene regulatory network for oral 
+and aboral ectoderm specification in the sea urchin embryo.</a>
+Dev. Biol. 329(2), 410-421, 2009.
+</li>
+<li>
+Chan, T.-M., Longabaugh, W., Bolouri, H., Chen, H.-L., Tseng, W.-F., Chao, C.-H., Jang, T.-H., Lin, Y.-I., Hung, S.-C., Wang, H.-D., Yuh, C.-H. 
+<a href="http://dx.doi.org/10.1016/j.bbagrm.2008.09.005">Developmental gene regulatory networks in the zebrafish embryo.</a>
+Biochim. Biophys. Acta, 1789(4), 279-98, 2009.
+</li>
+<li>
+Morley, R.H., Lachani, K., Keefe, D., Gilchrist, M.J., Flicek, P., Smith, J.C., Wardle, F.C.
+<a href="http://dx.doi.org/10.1073/pnas.0808382106">A gene regulatory network directed by zebrafish No tail accounts 
+for its roles in mesoderm formation.</a> Proc. Natl. Acad. Sci. USA 106, 3829-3834, 2009.
+</li>
+<li>
+Bolouri, H.,
+<a href="http://www.icpress.co.uk/lifesci/p567.html">Computational Modeling of Gene Regulatory Networks: a Primer,</a> Imperial College Press, 2008.
+</li>
+<li>
+Tamplin, O.J., Kinzel, D., Cox, B.J., Bell, C.E., Rossant, J., Lickert, H.
+<a href="http://dx.doi.org/10.1186/1471-2164-9-511">Microarray analysis of Foxa2 mutant mouse embryos reveals 
+novel gene expression and inductive roles for the gastrula organizer and its derivatives.</a> BMC Genomics 9:511, 2008.
+</li>
+<li>
+Materna, S.C., Oliveri, P.
+<a href="http://dx.doi.org/10.1038/nprot.2008.187">A protocol for unraveling gene regulatory networks.</a> Nature Protocols 3(12), 1876-1887, 2008.
+</li>
+<li>
+Smith, J., Davidson, E.H.
+<a href="http://dx.doi.org/10.1073/pnas.0806442105"> Gene regulatory network subcircuit controlling a dynamic 
+spatial pattern of signaling in the sea urchin embryo.</a> Proc. Natl. Acad. Sci. USA 105, 20089-20094, 2008.
+</li>
+<li>
+Nikitina, N., Sauka-Spengler, T., Bronner-Fraser, M.
+<a href="http://dx.doi.org/doi:10.1073/pnas.0806009105">Dissecting early regulatory relationships in the 
+lamprey neural crest gene network.</a> Proc. Natl. Acad. Sci. USA 105, 20083-20088, 2008.
+</li>
+<li>
+Ririe, T.O., Fernandes, J.S., Sternberg, P.W.
+<a href="http://dx.doi.org/doi:10.1073/pnas.0806377105">The Caenorhabditis elegans vulva: A post-embryonic 
+gene regulatory network controlling organogenesis.</a> Proc. Natl. Acad. Sci. USA 105, 20095-20099, 2008.
+</li>
+<li>
+Georgescu, C., Longabaugh, W.J.R., Scripture-Adams, D.D., David-Fung, E.-S., Yui, M.A., Zarnegar, M.A., Bolouri, H., Rothenberg, E.V.
+<a href="http://dx.doi.org/10.1073/pnas.0806501105">A gene regulatory network armature for T lymphocyte specification.</a> Proc. Natl. Acad. Sci. USA 105, 20100-20105, 2008.
+</li>
+<li>
+Kioussi, C., Gross, M.K. 
+<a href="http://dx.doi.org/10.1371/journal.pone.0002179">How to Build Transcriptional Network Models of Mammalian Pattern Formation.</a> PLoS ONE 3(5), e2179, 2008.
+</li>
+<li>
+Huang, T.S., Hsieh, J.Y., Wu, Y.H., Jen, C.H., Tsuang, Y.H., Chiou, S.H., Partanen, J., Anderson, H., Jaatinen, T., Yu, Y.H., Wang, H.W.
+<a href="http://dx.doi.org/10.1634/stemcells.2007-0821">Functional network reconstruction reveals somatic stemness 
+genetic maps and dedifferentiation-like transcriptome reprogramming induced by GATA2.</a>
+Stem Cells 26(5), 1186-201, 2008.
+</li>
+<li>
+Niessen, K., Karsan, A.
+<a href="http://dx.doi.org/10.1161/CIRCRESAHA.108.174318">Notch Signaling in Cardiac Development.</a> Circulation Research 102, 1169-1181, 2008.
+</li>
+<li>
+Hoffman, B.G., Zavaglia, B., Witzsche, J., Ruiz de Algara, T., Beach, M., Hoodless, P.A., Jones, S.J.M., Marra, M.A., Helgason, C.D.
+<a href="http://dx.doi.org/10.1186/gb-2008-9-6-r99">Identification of transcripts with enriched expression in the developing and adult pancreas.</a> Genome Biology 9(6), R99, 2008.
+</li>
+<li>
+Bonneau, R., Facciotti, M.T., Reiss, D.J., Schmid, A.K., Pan, M., Kaur, A., Thorsson, V., Shannon, P., Johnson, M.H., Bare, J.C., Longabaugh, W., Vuthoori, M., Whitehead, K., 
+Madar, A., Suzuki, L., Mori, T., Chang, D.-E., DiRuggiero, J., Johnson, C.H., Hood, L., Baliga, N.S.
+<a href="http://www.cell.com/content/article/abstract?uid=PIIS009286740701416X">A predictive model for transcriptional 
+control of physiology in a free living cell.</a> Cell 131(7), 1354-65, Dec 28 2007.
+</li>
+<li>
+Vokes, S.A., Ji, H., McCuine, S., Tenzen, T., Giles, S., Zhong, S., Longabaugh, W.J.R., Davidson, E. H., Wong, W.H., McMahon, A.P.
+<a href="http://dx.doi.org/10.1242/dev.001966">Genomic characterization of Gli-activator targets in sonic hedgehog-mediated neural patterning.</a> Development 134, 1977-1989, 2007.
+</li>
+<li>
+Kühn, C., Kühn, A., Poustka, A.J., Klipp, E.
+<a href="http://dx.doi.org/10.1142/9781860949920_0008">Modeling development: spikes of the sea urchin.</a> Genome Inform. 18, 75-84, 2007.
+</li>
+<li>
+Mori, A.D., Zhu, Y., Vahora, I., Nieman, B., Koshiba-Takeuchi, K., Davidson, L., Anne Pizard, A., Seidman, J.G., Seidman, C.E., Chen, X.J., Henkelman, R.M., Bruneau, B.G.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2006.05.023">Tbx5-dependent rheostatic control of cardiac gene expression and morphogenesis.</a> Dev. Biol. 297(2), 566-586, 2006.
+</li>
+<li>
+Wellmer, F., Alves-Ferreira, M., Dubois, A., Riechmann, J.L., Meyerowitz, E.M. 
+<a href="http://dx.doi.org/10.1371/journal.pgen.0020117">Genome-wide analysis of gene expression during early <i>Arabidopsis</i> flower development.</a>   PLoS Genetics 2(7), e117, July 2006.
+</li>
+<li>
+Livi, C.B., Davidson, E.H. 
+<a href="http://dx.doi.org/10.1016/j.modgep.2006.04.009">Regulation of spblimp1/krox1a, an alternatively transcribed isoform expressed in midgut and hindgut of the sea urchin gastrula.</a>
+Gene Expr. Patterns 7(1-2), 1-7, 2007.
+</li>
+<li>
+Livi, C.B., Davidson, E.H. 
+<a href="http://dx.doi.org/10.1016/j.ydbio.2006.02.021">Expression and function of blimp1/krox, an alternatively transcribed regulatory gene of the sea urchin endomesoderm network.</a> Dev. Biol. 293(2), 513-25, 2006.
+</li>
+<li>
+Davidson, E.H., Erwin, D.H.  
+<a href="http://dx.doi.org/10.1126/science.1113832">Gene regulatory networks and the evolution of animal body plans.</a> Science 311 (5762), 796-800, 2006.
+</li>
+<li>
+Davidson, E.H., 
+<a href="http://www.elsevier.com/wps/find/bookdescription.cws_home/706878/description">The Regulatory Genome: Gene Regulatory Networks in Development and Evolution,</a>  Elsevier, 2006.
+</li>
+<li>
+Koshiba-Takeuchi, K., Takeuchi, J.K., Arruda, E.P., Kathiriya, I.S., Mo, R., Hui, C-c., Srivastava, D., Bruneau, B.G.
+<a href="http://dx.doi.org/10.1038/ng1707">Cooperative and antagonistic interactions between Sall4 and Tbx5 pattern the mouse limb and heart.</a> Nature Genetics 38, 175-183, 2005.
+</li>
+<li>
+Levine, M., Davidson, E.H. 
+<a href="http://dx.doi.org/10.1073/pnas.0408031102">Gene regulatory networks for development.</a>  Proc. Natl. Acad. Sci. USA 102, 4936-4942, 2005.
+</li>
+<li> 
+Stathopoulos A., Levine M. 
+<a href="http://dx.doi.org/10.1016/j.devcel.2005.09.005">Genomic regulatory networks and animal development.</a> Dev Cell. 9(4), 449-62, Oct 2005.
+</li>
+</ul>
+</p>
+<p>
+Please let us know if you are using BioTapestry for your research!
+</p>
+
+<hr noshade="true" width="67%"/>
+<a name="description"/>
+<h3>Description</h3>
+<p>
+BioTapestry is designed around the 
+concept of a developmental network model, and is intended to deal 
+with large scale models with consistency and clarity. 
+It is capable of representing systems that exhibit 
+increasing complexity over time, such as the genetic regulatory 
+network controlling endomesoderm development in sea urchin embryos:
+</p>
+<center>
+<a href="http://sugp.caltech.edu/endomes/index.html"><img border="0" src="images/ScreenShot.png" width="723" height="481" border="0" alt="Endomesoderm Screenshot"/></a>
+</center>
+<p>
+Another system that demonstrates BioTapestry's capabilities for representing systems that exhibit 
+increasing complexity over time is the network for mouse ventral neural tube specification (<a href="http://dx.doi.org/10.1242/dev.001966">Vokes et.al., 2007</a>):
+</p>
+<center>
+<a href="http://www.mcb.harvard.edu/McMahon/BioTapestry/index.html"><img src="images/VokesScreenShot.png" width="626" height="451" border="0" alt="Mouse Ventral Neural Tube Screenshot"/></a>
+</center>
+<p>
+Users can annotate network elements with the supporting experimental evidence, as is shown here for the T-cell gene regulatory network 
+(<a href="http://dx.doi.org/10.1073/pnas.0806501105">Georgescu et. al., 2008</a>):
+</p>
+<center>
+<a href="http://www.its.caltech.edu/~tcellgrn/TCellMap.html"><img src="images/TCellEvidenceScaled.png" width="800" height="493" border="0" alt="T-Cell Network with Evidence Screenshot"/></a>
+</center>
+<p>
+
+<p>
+BioTapestry's auto layout templates and resizable workspace make it a good tool for working with much larger networks, such as this network 
+for <i>Halobacterium salinarum</i> (<a href="http://www.cell.com/content/article/abstract?uid=PIIS009286740701416X">Bonneau et.al., 2007</a>):
+</p>
+<center>
+<a href="http://baliga.systemsbiology.net/egrin.php"><img src="images/HaloVFG.png" width="672" height="508" border="0" alt="Halobacterium Network"/></a>
+</center>
+<p>
+BioTapestry's framework for creating sets of submodels is well-suited for organizing such large networks in an understandable way, as this detail from the above
+<i>Halobacterium salinarum</i> network demonstrates:
+</p>
+<center>
+<a href="http://baliga.systemsbiology.net/egrin.php"><img src="images/Halo-Gamma-VFN.png" width="683" height="485" border="0" alt="Halobacterium Network Detail"/></a>
+</center>
+<p>
+Significant features include:
+<ul>
+<li>
+Supporting data resulting from the perturbation of expression of 
+specific genes, measured in any way (QPCR, genetics, etc.), can 
+be easily accessed for each gene or link.  Temporal and spatial
+expression results are also accessible.
+</li>
+<li>
+BioTapestry can portray hourly, localized views of the network 
+during development based on data tables describing the network's
+local and temporal states.
+</li>
+<li>
+BioTapestry can automatically layout the set of network models from
+lists of interactions provided either through interactive dialogs 
+or comma-separated value (CSV) files exported by spreadsheet programs.
+</li>
+</ul>
+</p>
+
+<hr noshade="true" width="67%"/>
+
+
+<a name="launch"/>
+<h3>Running BioTapestry Online Using Java Web Start</h3>
+<p>
+Running BioTapestry as a Java Web Start application is no longer supported; please use the downloadable versions of the program provided above, which
+all include the required Java components needed to run BioTapestry. Our apologies for any inconvenience.
+</p>
+
+
+<hr noshade="true" width="67%"/>
+<a name="documentation"/>
+<h3>Documentation</h3>
+
+<h4>BioTapestry Frequently Asked Questions</h4>
+<p>
+If you have a question about how something works in BioTapestry, consult the online
+<a href="faq/FAQ.html">BioTapestry Frequently Asked Questions</a> list (though be advised it
+has not been updated in quite a while).  If you have a question that isn't covered there, 
+then please let us know so we can add it to the list.
+</p>
+
+<h4>Online Tutorials</h4>
+<p>
+A series of short tutorials that focus on different aspects of the software are available online.
+For example, for newcomers, the <a href="quickStart/QuickStart.html">Quick Start Tutorial</a> covers the
+minimum material you need to get started working with BioTapestry.  There are other tutorials that build
+upon that introductory material and cover more advanced topics.
+</p>
+
+<h4>Current Online Tutorial List</h4>
+<p>
+<a href="quickStart/QuickStart.html">Quick Start Tutorial</a>: This is the best way to learn the basics for 
+using BioTapestry.  It covers the minimum material you need to draw a multi-level hierarchy of network models. 
+If you are a newcomer, this will be the best way to begin.
+</p>
+<center> 
+<table width="700" border="1" cellpadding="3">
+  <tr align="center">
+    <th width="50%">Quick Start Tutorial Resource</th>
+    <th width="50%">File (right-click &amp; use "Save Link As...")</th>
+  </tr>
+  <tr align="center">
+    <td>Completed BioTapestry Model</td><td><a href="docs/QuickStartModel.btp">QuickStartModel.btp</a></td>
+  </tr>
+</table>
+</center>
+<p>
+(The original Revision A of the Quick Start Tutorial is still available <a href="quickStart/QuickStartRevA.html">here</a>
+if you want to learn about how to build networks using the original "top-down" method.)
+</p>
+
+<p>
+<a href="tutorials/dmt/DynamicModelsTutorial.html">Dynamic Submodels Tutorial</a>: This tutorial covers how to create dynamic submodels, 
+where data tables are used to automatically determine the active network elements, and the user can manipulate a time slider to see a 
+dynamic presentation of the network behavior.  This is the approach used for the S. purpuratus endomesoderm model.
+</p>
+<center> 
+<table width="700" border="1" cellpadding="3">
+  <tr align="center">
+    <th width="50%">Dynamic Submodels Tutorial Resource</th> 
+    <th width="50%">File (right-click &amp; use "Save Link As...")</th>
+  </tr>
+  <tr align="center">
+    <td>Starting BioTapestry Model</td><td><a href="docs/TutorialModelV2.btp">TutorialModelV2.btp</a></td>
+  </tr>
+  <tr align="center">
+    <td>Time Course Data File</td><td><a href="docs/TutorialExpressionDataV2.xml">TutorialExpressionDataV2.xml</a></td>
+  </tr>
+  <tr align="center">
+    <td>Temporal Input Data File</td><td><a href="docs/TutorialInputDataV2.xml">TutorialInputDataV2.xml</a></td>
+  </tr>
+  <tr align="center">
+    <td>Completed BioTapestry Model</td><td><a href="docs/TutorialModelV2-Finished.btp">TutorialModelV2-Finished.btp</a></td>
+  </tr>
+</table>
+</center>
+
+<p>
+<a href="tutorials/ddt/DialogDriven.html">Tutorial on Building Networks from Interaction Tables</a>: This tutorial covers 
+how to build and layout networks automatically from lists of interactions, which are specified using interactive dialogs.
+It also covers how to use several tools that can help with common network layout tasks; these are useful even if you are 
+drawing all your networks manually.
+</p>
+
+<center> 
+<table width="700" border="1" cellpadding="3">
+  <tr align="center">
+    <th width="50%">Interaction Tables Tutorial Resource</th>
+    <th width="50%">File (right-click &amp; use "Save Link As...")</th>
+  </tr>
+  <tr align="center">
+    <td>Completed BioTapestry Model</td><td><a href="docs/FromDialogTutorial-Finished.btp">FromDialogTutorial-Finished.btp</a></td>
+  </tr>
+</table>
+</center>
+
+<p>
+<a href="tutorials/csv/CSVTutorial.html">Building Networks from Comma-Separated Value Files</a>: This tutorial covers 
+how to build and layout networks automatically using lists of interaction commands that are created in a spreadsheet 
+program such as Microsoft Excel, and then imported into BioTapestry as a comma-separated value (CSV) file.
+</p>
+
+<center> 
+<table width="700" border="1" cellpadding="3">
+  <tr align="center">
+    <th width="50%">CSV Tutorial Resource</th>
+    <th width="50%">File (right-click &amp; use "Save Link As...")</th>
+  </tr>
+  <tr align="center">
+    <td>First-Pass CSV Input File</td><td><a href="docs/TutorialSpreadsheetVer2.csv">TutorialSpreadsheetVer2.csv</a></td>
+  </tr>
+  <tr align="center">
+    <td>Second-Pass CSV Input File</td><td><a href="docs/TutorialSpreadsheetVer2Pass2.csv">TutorialSpreadsheetVer2Pass2.csv</a></td>
+  </tr>
+  <tr align="center">
+    <td>Completed (First-Pass Only) BioTapestry Model</td><td><a href="docs/CSVTutorialModel-Finished.btp">CSVTutorialModel-Finished.btp</a></td>
+  </tr>
+  <tr align="center">
+    <td>Comma-Separated Value (CSV) Input File Format Description</td><td><a href="docs/CSVGuide.txt">CSVGuide.txt</a></td>
+  </tr>
+</table>
+</center>
+
+<p>
+<a href="tutorials/paths/PathsTutorial.html">Tutorial on Using and Creating Paths</a>: This tutorial covers the 
+feature of BioTapestry that allows you to define named <i>paths</i> through the model hierarchy. You may have 
+situations where you have a complex model hierarchy, and you want to be able to easily progress through a series of closely 
+related submodels that could be widely dispersed across that hierarchy.  Paths allow you to do this.
+</p>
+
+<center> 
+<table width="700" border="1" cellpadding="3">
+  <tr align="center">
+    <th width="50%">Paths Tutorial Resource</th>
+    <th width="50%">File (right-click &amp; use "Save Link As...")</th>
+  </tr>
+  <tr align="center">
+    <td>Starting BioTapestry Model</td><td><a href="docs/PathTutorialInitialModel.btp">PathTutorialInitialModel.btp</a></td>
+  </tr>
+  <tr align="center">
+    <td>Completed BioTapestry Model</td><td><a href="docs/PathTutorialModel-Finished.btp">PathTutorialModel-Finished.btp</a></td>
+  </tr>
+</table>
+</center>
+
+<hr noshade="true" width="67%"/>
+<a name="whatsNew"/>
+<h3>What's New</h3>
+<p>
+Version 7.1.2 was released on 9/28/19, and the only notable differences from the prior release are that: 1) all platforms bundle the
+required Java components; 2) the Windows version is now installed using an install program; and 3) all releases are signed with a current
+(as of 9/28/19) signing certificate verifying that the software originates from the Institute for Systems Biology.
+</p>
+<p>
+Version 7.1.1 was released on 9/24/17, and is a minor bugfix release. The one significant change is that 
+the  version for the Mac is now signed with an Apple Developer Certificate, and also has the Java 
+Runtime embedded in the application; you do not have to download and install Java separately for the Mac.
+</p>
+<p>
+Version 7.1.0 was released on 9/29/16, and is an interim bugfix release. Some useful new features have been added
+as well, which are described in detail in the <a href="docs/V71ReleaseNotes.html">Version 7.1 Release Notes</a>.
+</p>
+<p>
+One set of new features was designed to help clean up some of the unneeded or duplicated elements that can commonly accumulate in 
+the top-level model after the user builds their models at lower levels in the hierarchy. For example, there can be duplicate links or nodes, or
+unused elements, and new tools have been added to track down and eliminate these unnecessary elements:
+</p>
+<center><img src="http://www.BioTapestry.org/images/V71MergeLinks.png" width="980" height="730" border="1" alt="BioTapestry: Merge Links"/></center>
+<p>
+Version 7.1 has also made it much easier to create, edit, and maintain cis-regulatory element definitions for genes. The modules can now be drawn instead of
+specified in an obscure table, and an editing dialog replaces the need to change table entries. One of the most significant improvements is that links are now matched with their target modules, and the system 
+will manage links correctly as cis-reg modules are reordered, resized, and shifted.
+</p>
+<center><img src="http://www.BioTapestry.org/images/V71EditCisReg.png" width="788" height="675" border="1" alt="BioTapestry: Editing Cis-Reg Modules"/></center>
+<p>
+More in-depth discussion of these new features can be found in the <a href="docs/V71ReleaseNotes.html">Version 7.1 Release Notes</a>.
+</p>
+<p>
+Older release notes are also available for <a href="docs/V7ReleaseNotes.html">Version 7</a>,
+                                           <a href="docs/V6ReleaseNotes.html">Version 6</a>, 
+                                           <a href="docs/V5ReleaseNotes.html">Version 5</a>, 
+                                           <a href="docs/V4ReleaseNotes.html">Version 4</a>, 
+                                           <a href="docs/V3ReleaseNotes.html">Version 3</a>, 
+                                           <a href="docs/V2ReleaseNotes.html">Version 2</a> and for even
+                                           <a href="docs/oldReleaseNotes.html">older versions</a>.
+</p>
+<hr noshade="true" width="67%"/>
+<a name="pub"/>
+<h3>Publications</h3>
+<p>
+Please cite BioTapestry using <a href="http://dx.doi.org/10.1016/j.ydbio.2005.04.023">[Longabaugh et.al. 2005]</a>,
+                              <a href="http://dx.doi.org/10.1016/j.bbagrm.2008.07.014">[Longabaugh et.al. 2009]</a>,
+                              and/or <a href="http://dx.doi.org/10.12688/f1000research.7620.1">[Paquette et.al. 2016]</a> if you use BioTapestry in your research.
+</p>
+<p>
+<a href="http://www.sciencedirect.com/science/journal/00121606/283/1">
+<img src="http://ars.els-cdn.com/content/image/1-s2.0-S0012160605X06157-cov150h.gif" width="113" height="150" align="left" border="1" hspace="20" vspace="20" alt="DB Cover Art"/>
+</a>
+<p>
+<ul>
+<li>
+Paquette, S.M., Leinonen, K., Longabaugh, W.J.R.
+<a href="http://dx.doi.org/10.12688/f1000research.7620.1">BioTapestry now provides a web application and improved drawing and layout tools [version 1; referees: 3 approved].</a>
+F1000Research 5:39, 2016.
+</li>
+<li>
+Longabaugh, W.J.R. 
+<a href="http://dx.doi.org/10.1007/978-1-61779-292-2_21">BioTapestry: A Tool to Visualize the Dynamic Properties of Gene Regulatory Networks.</a>
+Methods Mol Biol. 786, 359-94, 2012.
+</li>
+<li>
+Longabaugh, W.J.R., Davidson, E.H., Bolouri, H.
+<a href="http://dx.doi.org/10.1016/j.bbagrm.2008.07.014">Visualization, documentation, analysis, and communication of large-scale gene regulatory networks.</a> 
+Biochim. Biophys. Acta, 1789(4), 363-74, 2009.
+</li>
+<li>
+Longabaugh, W., Bolouri, H.  
+<a href="http://www.bentham.org/cg/contabs/cg7-6.htm#1">Understanding the Dynamic Behavior of Genetic Regulatory Networks by Functional Decomposition.</a> Current Genomics, Volume 7, Number 6, 333-341, 2006.
+</li>
+<li>
+Longabaugh, W.J.R., Davidson, E.H., Bolouri, H.
+<a href="http://dx.doi.org/10.1016/j.ydbio.2005.04.023">Computational representation of developmental genetic regulatory networks.</a>
+Dev. Biol. 283, 1-16, 2005.
+</li>
+</ul>
+</p>
+<br clear="left"/>
+</p>
+
+<hr noshade="true" width="67%"/>
+<a name="probs"/>
+<h3>Problems Running It?</h3>
+<p>
+If you run into any issues with getting BioTapestry to run on your computer that you cannot
+resolve, or have a program crash, <i>please</i> send a report to <code>biotapestry at systemsbiology dot org</code> or post a message 
+on the <a href="http://groups.google.com/group/biotapestry-users">BioTapestry-users</a> Google group
+so we can address your problem.  Browsing the Google group is a good way of finding out about any
+recently identified compatibilty issues and what workarounds have been developed to addess them. 
+</p>
+<p>
+If you have previous BioTapestry files that are not loading into the current version correctly,
+or run into any other show-stopping bugs with the new version, the previous versions (e.g. 7.0.0, 6.0.0) can 
+still be dowloaded from the <a href="docs/archivedExecutables.html">Archived Executables</a> page.
+</p>
+
+<hr noshade="true" width="67%"/>
+<a name="platforms"/>
+<h3>Supported Platforms</h3>
+<p>
+There are BioTapestry downloadable executables for Windows, Mac, and Linux. All three versions require 64-bit versions
+of your operating system. Thus, 32-bit Windows systems are no longer supported. If you have a 32-bit Windows system, you
+will need to download Version 7.1.1 (or older) of BioTapestry from the <a href="docs/archivedExecutables.html">Archived Executables</a> page
+and also install a 32-bit version of Java; see <a href="https://www.java.com/en/download/manual.jsp">here</a>. Note that Oracle
+has recently changed Java licensing, which could be an issue for you, given your particular circumstances.
+</p>
+
+<hr noshade="true" width="67%"/>
+<a name="gaggle"/>
+<h3>BioTapestry for Gaggle</h3>
+<p>
+Beginning with Version 7.1.0, we are no longer providing updates to the Gaggle-enabled BioTapestry Editor. Instructions and the 
+final release Version 7.0.0 Web Start link are provided <a href="docs/BioTapestryWithGaggle.html">here</a>.
+</p>
+
+<hr noshade="true" width="67%"/>
+<a name="developer"/>
+<h3>Developer's Notes</h3>
+<p>
+BioTapestry supports user-written plugins for creating a customized 
+experimental data display.  There are example plugins in the
+source code tree (see below) that can serve as a starting point.
+If you need any guidance on building plugins, feel free to
+contact us.
+</p>
+
+<p>
+BioTapestry can be called in batch mode from within another Java program to 
+generate images from a comma-separated-value specification coming from a 
+provided InputStream.  A small example is provided in the source code tree 
+(see below) in the <code>org.systemsbiology.biotapestry.app.ImageGeneratorAppTestWrapper</code>
+class.
+</p>
+
+<p>
+The BioTapestry Viewer can be embedded as a visualization component inside another Java program.  
+An example of how to do this is shown in the class 
+<code>org.systemsbiology.biotapestry.embedded.EmbeddedViewerPanelTestWrapper</code> in the source code. 
+</p>
+
+<hr noshade="true" width="67%"/>
+<a name="sourcecode"/>
+<h3>Source Code</h3>
+<p>
+Starting with Version 7, BioTapestry source code is now hosted on <a href="https://github.com/BioTapestry">GitHub</a>. There are
+separate repositories; one for the <a href="https://github.com/BioTapestry/Production">Java</a> codebase and another for the 
+new <a href="https://github.com/BioTapestry/WebApplication">browser-based Viewer Web Application</a> code. A snapshot of the code
+for version 7.1.2 is available on the <a href="https://github.com/BioTapestry/Production/releases/tag/release-7.1.2">GitHub 7.1.2 release page</a>.
+</p>
+
+<hr noshade="true" width="67%"/>
+<a name="viewer"/>
+<h3>BioTapestry Viewer</h3>
+<p>
+BioTapestry has always supported the ability to share interactive, read-only GRN models over the web.
+Prior to Version 7, the BioTapestry Viewer used Java Web Start to run on the user's computer. We now support a new way of hosting a 
+Viewer embedded in the web browser that does not require the user to have Java installed on their computer. This change requires that the 
+web server hosting the Viewer supports Java Servlets (e.g. Apache Tomcat Version 6). We provide a page with <a href="/webclient/index.html">detailed instructions</a>
+on how to get a Viewer installation up and running. You can also contact us using the resources listed in the <a href="#feedback">Feedback</a> section
+if you are having problems.
+</p>
+<p>
+If your deployment is on a publically available web site, please let us know
+about it.  We'd like to link to your viewer page off the BioTapestry home page.  
+Even if you prefer not to be linked to, we appreciate being able to keep track of viewer
+deployments.  Thanks!
+</p>
+<hr noshade="true" width="67%"/>
+<a name="feedback"/>
+<h3>Send Feedback</h3>
+We are eager to receive any feedback you wish to send us, such
+as questions, bug reports, feature requests, and usability issues.
+The best place to do this is in the 
+<a href="http://groups.google.com/group/biotapestry-users">BioTapestry-users</a> Google group.
+However, you can also email us privately at:
+<center>
+<blockquote>
+<code>biotapestry at systemsbiology dot org</code>
+</blockquote>
+</center>
+
+<hr noshade="true" width="67%"/>
+<a name="group"/>
+<h3>BioTapestry-users Google Group</h3>
+This group is intended to give BioTapestry users a place to discuss
+the program, get help with questions, ask for program enhancements,
+provide feedback, and share tips with each other on using the
+software.  The group home page is:
+<center>
+<blockquote>
+<a href="http://groups.google.com/group/biotapestry-users"><code>http://groups.google.com/group/biotapestry-users</code></a> 
+</blockquote>
+</center>
+
+<hr noshade="true" width="67%"/>
+<a name="credits"/>
+<h3>Credits</h3>
+BioTapestry began as a joint project of the Institute for Systems Biology (ISB) and the Davidson Lab at Caltech. The orginal contributors were:
+<ul>
+<li>William Longabaugh</li>
+<li>Eric Davidson</li>
+<li>Hamid Bolouri</li>
+</ul>
+Since 2012, all program development is solely based at ISB, under the direction of William Longabaugh. From Autumn 2012 to Spring 2016, 
+the BioTapestry development team at ISB also included:
+<ul>
+<li>Suzanne Paquette</li>
+<li>Kalle Leinonen</li>
+</ul>
+Also:
+<ul>
+<li>Stephen Ramsey, formerly at the Institute for Systems Biology, helped to write the
+SBML output and simulation support</li>
+<li>Dan Tenenbaum, formerly at the Institute for Systems Biology, helped to write the 
+Gaggle 2007-4 support</li>
+</ul>
+<p>
+Windows executable created using the <i>Launch4j Executable Wrapper</i> by Grzegorz Kowal 
+Code is available on <a href="http://sourceforge.net/projects/launch4j/">Sourceforge</a>.
+</p>
+<p>
+Mac executable is bundled with the <i>appbundler</i> code provided by Oracle and Infinite Kind. Code is available
+on <a href="https://bitbucket.org/infinitekind/appbundler/">BitBucket</a>.
+
+<p>
+BioTapestry development was previously supported by the National Institute of General Medical Sciences under Award 
+Number R01GM061005, and the Eunice Kennedy Shriver National Institute Of Child Health & Human Development of the 
+National Institutes of Health under Award Number R01HD073113.  The content of this web site is 
+solely the responsibility of the authors and does not necessarily represent the official views of the National 
+Institutes of Health.
+</p>
+
+<hr noshade="true" width="67%"/>
+<a name="licenseagreement"/>
+<h3>License and Disclaimer</h3>
+<p>
+BioTapestry is Copyright (C) 2003-2019, Institute for Systems Biology.
+</p>
+
+<p>
+This software is licensed under the <a href="docs/License.html">GNU Lesser General Public License (LGPL)</a>, which is a standard "free software"
+and "open source" license.
+</p>
+<p>
+Some of the toolbar icon images in this package are covered by a <a href="docs/LICENSE-SUN.txt">free distribution license</a> from Sun Microsystems.
+</p>
+<p>
+The downloadable Windows executable is wrapped in code that is made available by Grzegorz Kowal under 
+<a href="docs/launch4j-head-LICENSE.html">an MIT License</a>.
+</p>
+<p>
+The Windows installer uses the Nullsoft Scriptable Install System (NSIS), distributed under <a href="docs/NSIS-COPYING.txt">this license</a>.
+</p>
+<p>
+The downloadable Mac executable is bundled with the <i>appbundler</i> code that is copyright Oracle, and is licensed under the
+<a href="/docs/LICENSE-APPBUNDLER.txt">GNU General Public License version 2 with "Classpath" exception</a>. Additional code in that 
+bundle is copyright Infinite Kind, and is also licensed under the same GNU General Public License version 2 with "Classpath" exception. 
+</p>
+<p>
+Executables for all platforms include a Java Runtime Environment built from the OpenJDK by Oracle, which is covered by the 
+<a href="docs/LICENSE-JDK.txt">GNU General Public License Version 2 with "Classpath" exception</a>. Some parts of the OpenJDK are 
+also subject to terms described in <a href="docs/ADDITIONAL_LICENSE_INFO.txt">Additional License Info</a> and 
+<a href="docs/ASSEMBLY_EXCEPTION.txt">Assembly Exception</a>. Specific license terms for those parts are included in the legal folder 
+of each bundled Java runtime.
+</p>
+
+<p>
+Despite our best efforts, there are bugs in BioTapestry.  Please be advised that, as stated in the 
+license agreement, the Institute for Systems Biology and the authors disclaim any 
+liability stemming from the use of this software.
+</p>
+</td>
+</tr>
+</table>
+<hr noshade="true"/>
+<p>
+<b>Last updated: September 28, 2019</b>
+</p>
+<p>
+<b><code>biotapestry at systemsbiology dot org</code></b>
+</p>
+</body>
+</html>

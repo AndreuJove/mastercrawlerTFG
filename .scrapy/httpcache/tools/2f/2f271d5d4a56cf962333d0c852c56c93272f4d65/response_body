@@ -1,0 +1,894 @@
+
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+    
+    
+    
+    
+    
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+        <base href="https://www.ccpn.ac.uk/v3-software/" /><!--[if lt IE 7]></base><![endif]-->
+    
+
+    
+        <meta content="Downloads and documentation for V3 CCPN Software" name="description" />
+<link rel="kss-base-url" href="https://www.ccpn.ac.uk/v3-software/" />
+
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/base.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/public.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/columns.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/authoring.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/portlets.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/controlpanel.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/deprecated.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/navtree.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/invisibles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/forms.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/++resource++plone.app.discussion.stylesheets/discussion.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/ploneKss.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/++resource++tinymce.stylesheets/tinymce.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/print.css" />
+    <link rel="stylesheet" type="text/css" media="handheld, screen and (max-device-width: 480px)" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/mobile.css" />
+        <!--[if lt IE 8]>    
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/IEFixes.css" />
+        <![endif]-->
+    
+    <link rel="stylesheet" type="text/css" media="all" href="https://www.ccpn.ac.uk/portal_css/Sunburst%20Theme/ploneCustom.css" />
+
+  
+    <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="https://www.ccpn.ac.uk/portal_kss/Sunburst%20Theme/at.kss" />
+    <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="https://www.ccpn.ac.uk/portal_kss/Sunburst%20Theme/plone.kss" />
+    <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="https://www.ccpn.ac.uk/portal_kss/Sunburst%20Theme/++resource++plone.app.form.kss" />
+    <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="https://www.ccpn.ac.uk/portal_kss/Sunburst%20Theme/++resource++plone.app.z3cform" />
+  
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/jquery.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/jquery-integration.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/++resource++plone.app.jquerytools.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/++resource++plone.app.jquerytools.overlayhelpers.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/++resource++plone.app.jquerytools.form.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/register_function.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/plone_javascript_variables.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/nodeutilities.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/cookie_functions.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/livesearch.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/select_all.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/dragdropreorder.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/mark_special_links.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/collapsiblesections.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/form_tabbing.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/popupforms.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/input-label.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/jquery.highlightsearchterms.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/first_input_focus.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/accessibility.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/styleswitcher.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/toc.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/collapsibleformfields.js"></script>
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/++resource++plone.app.discussion.javascripts/comments.js"></script>
+       <!--[if lt IE 8]>
+     
+    <script type="text/javascript" src="https://www.ccpn.ac.uk/portal_javascripts/Sunburst%20Theme/iefixes.js"></script>
+       <![endif]-->
+     
+
+
+<title>V3 Software &mdash; Collaborative Computational Project for NMR</title>
+        
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.ccpn.ac.uk/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://www.ccpn.ac.uk/touch_icon.png" />
+
+
+
+    <link rel="home" href="https://www.ccpn.ac.uk" title="Front page" />
+
+    <link rel="contents" href="https://www.ccpn.ac.uk/sitemap" title="Site Map" />
+
+
+
+
+
+
+    <link rel="search" href="https://www.ccpn.ac.uk/search_form" title="Search this site" />
+
+
+
+        
+        
+        
+        
+        
+
+        <meta name="viewport" content="width=device-width; initial-scale=0.6666; maximum-scale=1.0; minimum-scale=0.6666" />
+        <meta name="generator" content="Plone - http://plone.org" />
+    
+</head>
+
+<body class="template-folder_listing portaltype-folder site-CCPN section-v3-software icons-on" dir="ltr">
+
+<div id="visual-portal-wrapper">
+
+        <div id="portal-top" class="row">
+<div class="cell width-full position-0">
+            <div id="portal-header">
+    <p class="hiddenStructure">
+  <a accesskey="2" href="https://www.ccpn.ac.uk/v3-software#content">Skip to content.</a> |
+
+  <a accesskey="6" href="https://www.ccpn.ac.uk/v3-software#portal-globalnav">Skip to navigation</a>
+</p>
+
+<div id="portal-personaltools-wrapper">
+
+<h5 class="hiddenStructure">Personal tools</h5>
+
+
+
+<dl class="actionMenu deactivated" id="portal-personaltools">
+  <dt id="anon-personalbar">
+    
+        <a href="https://www.ccpn.ac.uk/login" id="personaltools-login">Log in</a>
+    
+  </dt>
+</dl>
+
+</div>
+
+
+
+<div id="portal-searchbox">
+    <form name="searchform" id="searchGadget_form" action="https://www.ccpn.ac.uk/search">
+
+        <div class="LSBox">
+        <label class="hiddenStructure" for="searchGadget">Search Site</label>
+
+        <input name="SearchableText" type="text" size="18" title="Search Site" accesskey="4" class="searchField inputLabel" id="searchGadget" />
+
+        <input class="searchButton" type="submit" value="Search" />
+
+        <div class="searchSection">
+            <input id="searchbox_currentfolder_only" class="noborder" type="checkbox" name="path" value="/CCPN/v3-software" />
+            <label for="searchbox_currentfolder_only" style="cursor: pointer">
+                only in current section
+            </label>
+        </div>
+
+        <div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
+        </div>
+    </form>
+
+    <div id="portal-advanced-search" class="hiddenStructure">
+        <a href="https://www.ccpn.ac.uk/search_form" accesskey="5">
+            Advanced Search&hellip;
+        </a>
+    </div>
+
+</div>
+
+<a id="portal-logo" title="Collaborative Computational Project for NMR" accesskey="1" href="https://www.ccpn.ac.uk">
+    <img src="https://www.ccpn.ac.uk/logo.png" alt="Collaborative Computational Project for NMR" title="Collaborative Computational Project for NMR" height="75" width="170" /></a>
+
+
+    <h5 class="hiddenStructure">Sections</h5>
+
+    <ul id="portal-globalnav"><li id="portaltab-index_html" class="plain"><a href="https://www.ccpn.ac.uk" title="">Home</a></li><li id="portaltab-about" class="plain"><a href="https://www.ccpn.ac.uk/about" title="">About</a></li><li id="portaltab-v2-software" class="plain"><a href="https://www.ccpn.ac.uk/v2-software" title="Downloads and documentation for V2 of CCPN Software, including prototypes for V3 Software">V2 Software</a></li><li id="portaltab-v3-software" class="selected"><a href="https://www.ccpn.ac.uk/v3-software" title="Downloads and documentation for V3 CCPN Software">V3 Software</a></li><li id="portaltab-meetings" class="plain"><a href="https://www.ccpn.ac.uk/meetings" title="CCPN meetings">Meetings</a></li><li id="portaltab-industry" class="plain"><a href="https://www.ccpn.ac.uk/industry" title="">Industry</a></li><li id="portaltab-documents" class="plain"><a href="https://www.ccpn.ac.uk/documents" title="Miscellaneous documents">Documents</a></li><li id="portaltab-news" class="plain"><a
+    href="https://www.ccpn.ac.uk/news" title="Site News">News</a></li><li id="portaltab-events" class="plain"><a href="https://www.ccpn.ac.uk/events" title="Site Events">Events</a></li><li id="portaltab-Members" class="plain"><a href="https://www.ccpn.ac.uk/Members" title="Site Users">Users</a></li></ul>
+
+</div>
+
+</div>
+        </div>
+    <div id="portal-columns" class="row">
+
+        <div id="portal-column-content" class="cell width-1:2 position-1:4">
+
+            <div id="viewlet-above-content"><div id="portal-breadcrumbs">
+
+    <span id="breadcrumbs-you-are-here">You
+are here:</span>
+    <span id="breadcrumbs-home">
+        <a href="https://www.ccpn.ac.uk">Home</a>
+        <span class="breadcrumbSeparator">
+            &rsaquo;
+            
+        </span>
+    </span>
+    <span id="breadcrumbs-1" dir="ltr">
+        
+            
+            
+            <span id="breadcrumbs-current">V3 Software</span>
+         
+    </span>
+
+</div>
+</div>
+
+            
+                <div class="">
+
+                    
+
+                    
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+
+
+                    
+                        <div id="content">
+
+                            
+
+                            
+
+                             <div id="viewlet-above-content-title"></div>
+                             
+                                 
+                                 
+            
+                <h1 id="parent-fieldname-title" class="documentFirstHeading">
+                    V3 Software
+                </h1>
+            
+            
+        
+                             
+                             <div id="viewlet-below-content-title">
+</div>
+
+                             
+                                 
+                                 
+            
+                <div id="parent-fieldname-description" class="documentDescription">
+                   Downloads and documentation for V3 CCPN Software
+                </div>
+            
+            
+        
+                             
+
+                             <div id="viewlet-above-content-body"></div>
+                             <div id="content-core">
+                                 
+
+
+    
+
+    
+    
+    
+
+        <dl>
+            
+            
+                
+                <dt class="">
+
+                    <span class="summary">
+                        
+                        <a href="https://www.ccpn.ac.uk/v3-software/about" class="contenttype-document state-published url">About</a>
+                    </span>
+
+                    <span class="documentByLine">
+                        
+                        
+                        
+                         
+                        
+                    </span>
+
+                </dt>
+
+                <dd>
+                    <span class="description">Information about CcpNmr Analysis V3</span>
+                </dd>
+            
+            
+            
+            
+            
+                
+                <dt class="">
+
+                    <span class="summary">
+                        
+                        <a href="https://www.ccpn.ac.uk/v3-software/downloads" class="contenttype-folder state-published url">Downloads</a>
+                    </span>
+
+                    <span class="documentByLine">
+                        
+                        
+                        
+                         
+                        
+                    </span>
+
+                </dt>
+
+                <dd>
+                    <span class="description">Downloads for V3 CCPN software</span>
+                </dd>
+            
+            
+            
+            
+            
+                
+                <dt class="">
+
+                    <span class="summary">
+                        
+                        <a href="https://www.ccpn.ac.uk/v3-software/licences" class="contenttype-folder state-published url">Licences</a>
+                    </span>
+
+                    <span class="documentByLine">
+                        
+                        
+                        
+                         
+                        
+                    </span>
+
+                </dt>
+
+                
+            
+            
+            
+            
+            
+                
+                <dt class="">
+
+                    <span class="summary">
+                        
+                        <a href="https://www.ccpn.ac.uk/v3-software/tutorials" class="contenttype-folder state-published url">Tutorials</a>
+                    </span>
+
+                    <span class="documentByLine">
+                        
+                        
+                        
+                         
+                        
+                    </span>
+
+                </dt>
+
+                <dd>
+                    <span class="description">Latest tutorials for CcpNmr Analysis V3</span>
+                </dd>
+            
+            
+            
+            
+            
+                
+                <dt class="">
+
+                    <span class="summary">
+                        
+                        <a href="https://www.ccpn.ac.uk/v3-software/documentation" class="contenttype-folder state-published url">Documentation</a>
+                    </span>
+
+                    <span class="documentByLine">
+                        
+                        
+                        
+                         
+                        
+                    </span>
+
+                </dt>
+
+                <dd>
+                    <span class="description">Documentation for V3 of CCPN software</span>
+                </dd>
+            
+            
+            
+            
+            
+                
+                <dt class="">
+
+                    <span class="summary">
+                        
+                        <a href="https://www.ccpn.ac.uk/v3-software/v3-forum" class="contenttype-link state-published url">V3 Forum</a>
+                    </span>
+
+                    <span class="documentByLine">
+                        
+                        
+                        
+                         
+                        
+                    </span>
+
+                </dt>
+
+                <dd>
+                    <span class="description">A forum where you can ask questions about CcpNmr Analysis V3 and report bugs</span>
+                </dd>
+            
+            
+            
+            
+            
+                
+                <dt class="">
+
+                    <span class="summary">
+                        
+                        <a href="https://www.ccpn.ac.uk/v3-software/v3-video-tutorials" class="contenttype-link state-published url">V3 Video Tutorials</a>
+                    </span>
+
+                    <span class="documentByLine">
+                        
+                        
+                        
+                         
+                        
+                    </span>
+
+                </dt>
+
+                <dd>
+                    <span class="description">A series of video tutorials and guidance on how to use CcpNmr Analysis V3</span>
+                </dd>
+            
+            
+            
+            
+            
+                
+                <dt class="">
+
+                    <span class="summary">
+                        
+                        <a href="https://www.ccpn.ac.uk/v3-software/v3%20repository-on-sourceforge" class="contenttype-link state-published url">V3 repository on SourceForge</a>
+                    </span>
+
+                    <span class="documentByLine">
+                        
+                        
+                        
+                         
+                        
+                    </span>
+
+                </dt>
+
+                <dd>
+                    <span class="description">The beta repository on SourceForge. </span>
+                </dd>
+            
+            
+            
+            
+            
+                
+                <dt class="">
+
+                    <span class="summary">
+                        
+                        <a href="https://www.ccpn.ac.uk/v3-software/chembuild" class="contenttype-document state-published url">CcpNmr ChemBuild</a>
+                    </span>
+
+                    <span class="documentByLine">
+                        
+                        
+                        
+                         
+                        
+                    </span>
+
+                </dt>
+
+                <dd>
+                    <span class="description">About ChemBuild</span>
+                </dd>
+            
+            
+            
+        </dl>
+
+        
+
+    
+    
+        
+    
+
+    
+    
+
+
+
+                             </div>
+                             <div id="viewlet-below-content-body">
+
+
+
+    <div class="visualClear"><!-- --></div>
+
+    <div class="documentActions">
+        
+
+        
+
+    </div>
+</div>
+
+                            
+                        </div>
+                    
+
+                    
+                </div>
+            
+
+            <div id="viewlet-below-content">
+
+
+
+
+
+</div>
+        </div>
+
+        
+        <div id="portal-column-one" class="cell width-1:4 position-0">
+            
+                
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f4343504e0a6e617669676174696f6e" class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f4343504e0a6e617669676174696f6e">
+<dl class="portlet portletNavigationTree">
+
+    <dt class="portletHeader hiddenStructure">
+        <span class="portletTopLeft"></span>
+        <a href="https://www.ccpn.ac.uk/v3-software/sitemap" class="tile">Navigation</a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem lastItem">
+        <ul class="navTree navTreeLevel0">
+            
+            
+
+
+
+<li class="navTreeItem visualNoMarker section-about">
+
+    
+
+
+        <a href="https://www.ccpn.ac.uk/v3-software/about" class="state-published contenttype-document" title="Information about CcpNmr Analysis V3">
+            
+            <span>About</span>
+        </a>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish section-downloads">
+
+    
+
+
+        <a href="https://www.ccpn.ac.uk/v3-software/downloads" class="state-published navTreeFolderish contenttype-folder" title="Downloads for V3 CCPN software">
+            
+            <span>Downloads</span>
+        </a>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish section-licences">
+
+    
+
+
+        <a href="https://www.ccpn.ac.uk/v3-software/licences" class="state-published navTreeFolderish contenttype-folder" title="">
+            
+            <span>Licences</span>
+        </a>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish section-tutorials">
+
+    
+
+
+        <a href="https://www.ccpn.ac.uk/v3-software/tutorials" class="state-published navTreeFolderish contenttype-folder" title="Latest tutorials for CcpNmr Analysis V3">
+            
+            <span>Tutorials</span>
+        </a>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish section-documentation">
+
+    
+
+
+        <a href="https://www.ccpn.ac.uk/v3-software/documentation" class="state-published navTreeFolderish contenttype-folder" title="Documentation for V3 of CCPN software">
+            
+            <span>Documentation</span>
+        </a>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker section-v3-forum">
+
+    
+
+
+        <a href="https://www.ccpn.ac.uk/forums/" class="state-published contenttype-link" title="A forum where you can ask questions about CcpNmr Analysis V3 and report bugs">
+            
+            <span>V3 Forum</span>
+        </a>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker section-v3-video-tutorials">
+
+    
+
+
+        <a href="https://www.ccpn.ac.uk/forums/misc.php?action=help" class="state-published contenttype-link" title="A series of video tutorials and guidance on how to use CcpNmr Analysis V3">
+            
+            <span>V3 Video Tutorials</span>
+        </a>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker section-v3-repository-on-sourceforge">
+
+    
+
+
+        <a href="https://sourceforge.net/projects/ccpn/" class="state-published contenttype-link" title="The beta repository on SourceForge. ">
+            
+            <span>V3 repository on SourceForge</span>
+        </a>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker section-chembuild">
+
+    
+
+
+        <a href="https://www.ccpn.ac.uk/v3-software/chembuild" class="state-published contenttype-document" title="About ChemBuild">
+            
+            <span>CcpNmr ChemBuild</span>
+        </a>
+
+    
+    
+</li>
+
+
+
+
+        </ul>
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+
+</div>
+
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f4343504e0a6f70656e69642d6c6f67696e" class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f4343504e0a6f70656e69642d6c6f67696e">
+
+  <dl class="portlet portletOpenIdLogin">
+    <dt class="portletHeader">
+      <span class="portletTopLeft"></span>
+      <a href="https://www.ccpn.ac.uk/login_form" class="tile">OpenID Login</a>
+      <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem odd">
+      <form method="post" class="openidLoginForm" action="https://www.ccpn.ac.uk/login_form">
+
+        <input type="hidden" name="form.submitted" value="1" />
+        <input type="hidden" name="came_from" value="https://www.ccpn.ac.uk/v3-software" />
+
+        <div class="field">
+          <label for="__ac_identity_url">OpenID URL</label>
+          <br />
+
+          <input type="text" size="13" name="__ac_identity_url" style="background: url(https://www.ccpn.ac.uk/openid-icon.gif) no-repeat; padding-left: 16px" id="__ac_identity_url" />
+         </div>
+
+         <div class="formControls">
+           <input class="context" type="submit" name="openid_submit" value="Log in" />
+
+          </div>
+       </form>
+    </dd>
+  </dl>
+
+</div>
+
+
+
+
+            
+        </div>
+
+        <div id="portal-column-two" class="cell width-1:4 position-3:4">
+            
+                
+<div id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f4343504e0a6e657773" class="portletWrapper kssattr-portlethash-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f4343504e0a6e657773">
+<dl class="portlet portletNews">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href="https://www.ccpn.ac.uk/news" class="tile">News</a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    
+    <dd class="portletItem odd">
+
+        <a href="https://www.ccpn.ac.uk/news/new-3.0.0-licence-file-available-for-download" class="tile" title="">
+            
+            New 3.0.0 licence file available for download
+         </a>
+            <span class="portletItemDetails">Mar 04, 2020</span>
+        
+    </dd>
+    
+    
+    <dd class="portletItem even">
+
+        <a href="https://www.ccpn.ac.uk/news/ccpn-conference-dates-2020" class="tile" title="The next CCPN conference will be from 16-18 July 2020 in Ambleside.">
+            
+            CCPN Conference Dates 2020
+         </a>
+            <span class="portletItemDetails">Dec 11, 2019</span>
+        
+    </dd>
+    
+    
+    <dd class="portletItem odd">
+
+        <a href="https://www.ccpn.ac.uk/news/version-3.0.0-release" class="tile" title="We are pleased to announce the release of version 3.0 of the CcpNmr Analysis software suite.">
+            
+            Version 3.0.0 release
+         </a>
+            <span class="portletItemDetails">Oct 24, 2019</span>
+        
+    </dd>
+    
+    
+    <dd class="portletItem even">
+
+        <a href="https://www.ccpn.ac.uk/news/ccpn-conference-2019" class="tile" title="4-6 September, University of Leicester">
+            
+            CCPN Conference 2019
+         </a>
+            <span class="portletItemDetails">Apr 18, 2019</span>
+        
+    </dd>
+    
+
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <a href="https://www.ccpn.ac.uk/news">
+          More news&hellip;
+        </a>
+        <span class="portletBottomRight"></span>
+    </dd>
+    
+</dl>
+
+</div>
+
+
+
+
+            
+        </div>
+        
+    </div>
+
+
+    <div class="row">
+        <div class="row">
+    <div class="cell width-full position-0">
+
+        <div id="portal-footer">
+            <p>
+                
+                The
+                <a href="http://plone.org">Plone<sup>&reg;</sup> Open Source CMS/WCM</a>
+                is
+                <acronym title="Copyright">&copy;</acronym>
+                2000-2020
+                by the
+                <a href="http://plone.org/foundation">Plone Foundation</a>
+                and friends.
+                
+
+                
+                Distributed under the
+                    <a href="http://creativecommons.org/licenses/GPL/2.0/">GNU GPL license</a>.
+                
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<div id="portal-colophon">
+
+<div class="colophonWrapper">
+<ul>
+  <li>
+    <a href="http://plone.org" title="This site was built using the Plone Open Source CMS/WCM.">
+      Powered by Plone &amp; Python</a>
+  </li>
+</ul>
+</div>
+</div>
+
+<ul id="portal-siteactions">
+
+    <li id="siteaction-sitemap"><a href="https://www.ccpn.ac.uk/sitemap" accesskey="3" title="Site Map">Site Map</a></li>
+    <li id="siteaction-accessibility"><a href="https://www.ccpn.ac.uk/accessibility-info" accesskey="0" title="Accessibility">Accessibility</a></li>
+    <li id="siteaction-contact"><a href="https://www.ccpn.ac.uk/contact-info" accesskey="9" title="Contact">Contact</a></li>
+</ul>
+
+
+        <div id="kss-spinner">
+            <img alt="" src="https://www.ccpn.ac.uk/spinner.gif" />
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+

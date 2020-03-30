@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<title>BASys: Bacterial Annotation System</title>
+<meta name="keywords" content="BASys" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="../include/stylesheet.css" type="text/css" />
+<script type="text/javascript" src="../include/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+</head>
+<body>
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+
+<table class="main" width="750" border="0" cellspacing="0" cellpadding="2"> <!-- START MAIN TABLE -->
+<tbody>
+
+<tr> <!-- MAIN TABLE HEADER ROW -->
+<td class="header_title" valign="middle">
+<img style="border:0;width:600px;height:121px" src="../include/logo.png" alt="BASys logo" height="121" width="600" />
+</td>
+</tr>
+
+<tr align="center">
+<td  valign="middle" align="center" >
+</td>
+</tr>
+
+<tr><td> </td></tr>
+
+<tr><td> </td></tr>
+
+<tr>
+<td class="content" align="left" valign="top">  <!-- MAIN TABLE MAIN COLUMN -->
+BASys (Bacterial Annotation System) is a web server that performs automated, in-depth annotation of bacterial genomic (chromosomal and plasmid) sequences.  It accepts raw DNA sequence data and an optional list of gene identification information and provides extensive textual and hyperlinked image output.  BASys uses more than 30 programs to determine nearly 60 annotation subfields for each gene, including gene/protein name, GO function, COG function, possible paralogues and orthologues, molecular weight, isoelectric point, operon structure, subcellular localization, signal peptides, transmembrane regions, reactions, and pathways.  The textual annotations and images that are provided by BASys can be generated in approximately 16 hours for an average bacterial chromosome (5 Megabases. 5000 genes), or approximately 350 coding regions per hour.<br/>
+<br>
+Please cite: <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1160269">Van Domselaar GH, Stothard P, Shrivastava S, Cruz JA, Guo A, Dong X, Lu P, Szafron D, Greiner R, Wishart DS.BASys: a web server for automated bacterial genome annotation. Nucleic Acids Res. 2005 Jul 1;33(Web Server issue):W455-9.</a>
+<br><br>
+<h4>
+NOTICE: The BASys bacterial genome annotation service has suspended operations while we prepare to transition to our new bacterial genome annotation system, Proksee.ca (<a href="http://proksee.ca"">http://proksee.ca</a>). Job submissions are no longer available, however, prior annotations jobs will be available for viewing and downloading until March 31, 2020. We thank the BASys community for using BASys for your support and understanding while we undergo this transition.
+</h4>
+<p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<tr><td>
+</td></tr>
+<tr><td>
+<tr><td><a href="https://www.basys.ca/server1">BASys Server 1</a>:</td><td>75 submissions in queue</td></tr>
+<tr><td><a href="https://www.basys.ca/server2">BASys Server 2</a>:</td><td>74 submissions in queue</td></tr>
+<tr><td><a href="https://www.basys.ca/server3">BASys Server 3</a>:</td><td>65 submissions in queue</td></tr>
+<tr><td><a href="https://www.basys.ca/server4">BASys Server 4</a>:</td><td>74 submissions in queue</td></tr>
+<tr><td><a href="https://www.basys.ca/server5">BASys Server 5</a>:</td><td>78 submissions in queue</td></tr>
+
+</td></tr>
+</table>
+
+<br>
+<p class=back>
+Questions and comments are welcome. Please contact: 
+<br>
+Gary Van Domselaar: gary.vandomselaar [at] gmail.com
+</p>

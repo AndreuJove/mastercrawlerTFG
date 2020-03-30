@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="lt-lt" lang="lt-lt" dir="ltr">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>404 - Puslapis nerastas</title>
+	<link rel="stylesheet" href="/templates/vu/css/template.css" type="text/css" media="all" charset="utf-8" />
+	<link rel="stylesheet" href="/media/com_finder/css/finder.css" type="text/css">
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="/templates/vu/css/ie7.css" type="text/css" media="screen" charset="utf-8"></link>
+	<![endif]-->
+	<!--[if lt IE 7]>
+		<link rel="stylesheet" href="/templates/vu/css/ie6.css" type="text/css" media="screen" charset="utf-8" />
+	<![endif]-->
+	<script src="/templates/vu/js/fullscript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+	<script src="/media/com_finder/js/autocompleter.js" type="text/javascript"></script>
+
+    <!-- email protector palaikymas-->
+    <style>
+        .cloaked_email span:before {
+            content: attr(data-ep-a);
+        }
+        .cloaked_email span:after {
+            content: attr(data-ep-b);
+        }
+    </style>
+    <script type="text/javascript">
+        var emailProtector = emailProtector || {};
+        emailProtector.addCloakedMailto = function(g, l) {
+            var h = document.querySelectorAll("." + g);
+            for (i = 0; i < h.length; i++) {
+                var b = h[i],
+                    k = b.getElementsByTagName("span"),
+                    e = "",
+                    c = "";
+                b.className = b.className.replace(" " + g, "");
+
+                for (var f = 0; f < k.length; f++){
+                    for (var d = k[f].attributes, a = 0; a < d.length; a++){
+
+                        var node = d[a].nodeName;
+                        if( ( 0 === d[a].nodeName.toLowerCase().indexOf("data-ep-a") ) || (d[a].nodeName.toLowerCase() == "data-ep-a") ) e += d[a].value;
+                        if( 0 === d[a].nodeName.toLowerCase().indexOf("data-ep-b")  || (d[a].nodeName.toLowerCase() == "data-ep-b") ) c = d[a].value + c;
+
+                    }
+                }
+
+                if (!c) break;
+                b.innerHTML = e + c;
+
+                if (!l) break;
+                b.parentNode.href = "mailto:" + e + c
+            }
+        };
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div id="header">
+    <div id="header-left">
+        			<a class="vulogo" href="http://www.vu.lt/lt" title="Vilniaus universitetas" target="_blank">
+            	<img border="0" src="/images/logotipai/vu_logo.jpg" alt="Vilniaus universitetas" title="Vilniaus universitetas">
+        	</a>
+			<a class="padalinio-logo" href="/lt" title="Biotechnologijos institutas"><img border="0" src="/dokumentai/nuotraukos/nuotraukos/logo/bti.png" title="Biotechnologijos institutas"></a>
+			<div id="vutitle"><a href="http://www.vu.lt/lt" title="Vilniaus universitetas" target="_blank">Vilniaus universitetas</a></div>
+			<br />
+			<h1><a href="/lt" title="Biotechnologijos institutas">Biotechnologijos institutas</a></h1>
+		    </div>
+    <div id="header-right">
+    	<div class="itp-gs">
+			<form action="/paieska" onsubmit="return validateSearchForm()" 
+				method="get" accept-charset="utf-8">
+		        <input name="q" type="text" id="mod-finder-searchword" class="inputbox" 
+		        	value="Ieškoti..." />		       
+		        <input type="submit" class="button" value="Ieškoti" />		 
+		    </form>
+		</div>
+		    <div class="group"></div>
+	</div>
+	</div><!-- //header -->
+
+    <div id="navigation">
+        <ul class="nav menu mod-list" id="main-nav">
+<li class="item-101 default current active"><a href="/" >Pradžia</a></li><li class="item-103 divider deeper parent"><span class="separator ">Apie institutą</span>
+<ul class="nav-child unstyled small"><li class="item-496"><a href="/apie-instituta/darbuotoju-sarasas" >Darbuotojų sąrašas</a></li><li class="item-809"><a href="/apie-instituta/administracija" >Administracija</a></li><li class="item-1518"><a href="/apie-instituta/instituto-istorija" >Instituto istorija</a></li></ul></li><li class="item-915 divider deeper parent"><span class="separator ">Skyriai</span>
+<ul class="nav-child unstyled small"><li class="item-917 deeper parent"><a href="/skyriai/baltymu-nukleorugsciu-saveikos-tyrimu-skyrius" >Baltymų-nukleorūgščių sąveikos tyrimų skyrius</a><ul class="nav-child unstyled small"><li class="item-1516"><a href="/skyriai/baltymu-nukleorugsciu-saveikos-tyrimu-skyrius/publikacijos-2017-2018" >Publikacijos 2017 – 2018</a></li><li class="item-1311"><a href="/skyriai/baltymu-nukleorugsciu-saveikos-tyrimu-skyrius/publikacijos-2011-2016" >Publikacijos 2011 – 2016</a></li><li class="item-1320 parent"><a href="/skyriai/baltymu-nukleorugsciu-saveikos-tyrimu-skyrius/projektai" >Projektai</a></li></ul></li><li class="item-918 deeper parent"><a href="/skyriai/bioinformatikos-skyrius" >Bioinformatikos skyrius</a><ul class="nav-child unstyled small"><li class="item-1360 parent"><a href="/skyriai/bioinformatikos-skyrius/programine-iranga" >Programinė įranga</a></li><li class="item-1361"><a href="/skyriai/bioinformatikos-skyrius/publikacijos" >Publikacijos</a></li><li class="item-1362"><a href="/skyriai/bioinformatikos-skyrius/modeliai" >Modeliai</a></li></ul></li><li class="item-919 deeper parent"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius" >Biotermodinamikos ir vaistų tyrimų skyrius</a><ul class="nav-child unstyled small"><li class="item-1170"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/projektai" >Projektai</a></li><li class="item-1174"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/darbo-grupes" >Darbo grupės</a></li><li class="item-1175"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/mokslo-publikacijos" >Mokslo publikacijos</a></li><li class="item-1176"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/mokslo-populiarinimo-publikacijos" >Mokslo populiarinimo publikacijos</a></li><li class="item-1422"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/grantai-2" >Seminarai</a></li><li class="item-1177"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/patentai" >Patentai</a></li><li class="item-1171"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/mokymas" >Mokymas</a></li><li class="item-1178"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/grantai" >Grantai</a></li><li class="item-1179 parent"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/podoktoranturos-stazuotes" >Podoktorantūros stažuotės</a></li><li class="item-1180"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/kontaktai" >Kontaktai</a></li><li class="item-1226 parent"><a href="/skyriai/biotermodinamikos-ir-vaistu-tyrimu-skyrius/amiloidu-tyrimo-grupe" >Amiloidų tyrimo grupė</a></li></ul></li><li class="item-916"><a href="/skyriai/dnr-modifikacijos-tyrimu-skyrius" >DNR modifikacijos tyrimų skyrius</a></li><li class="item-920"><a href="/skyriai/eukariotu-genu-inzinerijos-skyrius" >Eukariotų genų inžinerijos skyrius</a></li><li class="item-921"><a href="/skyriai/imunologijos-ir-lasteles-biologijos-skyrius" >Imunologijos ir ląstelės biologijos skyrius</a></li><li class="item-922"><a href="/skyriai/mikrotechnologiju-sektorius" >Mikrotechnologijų sektorius</a></li><li class="item-1224"><a href="/skyriai/taikomosios-biokatalizes-sektorius" >Taikomosios biokatalizės sektorius</a></li></ul></li><li class="item-923"><a href="/2014-01-29-14-08-35" >Sekvenavimo centras</a></li></ul>
+    <div class="group"></div>
+    </div>
+	<div id="content">
+		<div id="main-page">
+        		        	<div id="page-content" style="width: 980px; margin-top: 20px;">
+					<div style="float: left; margin-right: 40px;">
+						<h1 class="error">404</h1>
+						<h2 class="error">Puslapis nerastas</h2>
+					</div>
+					<div style="float: left; width: 640px;">
+						<h2><strong>Atrodo, kad jūsų ieškomo puslapio nebėra</strong></h2>
+						<p>Taip galėjo nutikti todėl, kad puslapis buvo pašalintas, pakeistas jo pavadinimas arba jis tiesiog laikinai neprieinamas.</p>
+						<h3><strong>Ką tokiu atveju daryti?</strong></h3>
+						<ul>
+						<li>Jei patys surinkote adresą į įvedimo laukelį, patikrinkite, ar nepadarėte klaidos.</li>
+						<li>Eikite į <a href="http://www.bti.vu.lt/lt">pradinį puslapį</a> ir pabandykite ten rasti jums reikiamą informaciją.</li>
+						<li>Pasinaudokite viršuje esančia paieškos forma ir raskite tai, ko ieškote.</li>
+						<li>Susisiekite su mumis   tel. <strong>(8 5) 2602103</strong>                            arba el. p. <a href="javascript:/* &Scaron;is el. pa&scaron;to adresas yra apsaugotas nuo &scaron;lam&scaron;to*/"><span class="cloaked_email ep_a503ecec"><span data-ep-a="o&#102;f" data-ep-b="t"><span data-ep-b="&#117;&#46;&#108;" data-ep-a="&#105;&#99;&#101;"><span data-ep-a="&#64;b&#116;" data-ep-b="i&#46;&#118;"></span></span></span></span><span class="cloaked_email ep_c93ddc0b" style="display:none;"><span data-ep-b="&#116;" data-ep-a="&#111;&#102;&#102;"><span data-ep-b="&#117;&#46;&#108;" data-ep-a="&#105;&#99;&#101;"><span data-ep-a="&#64;&#98;t" data-ep-b="&#105;&#46;v"></span></span></span></span></a><script type="text/javascript">emailProtector.addCloakedMailto("ep_c93ddc0b", 1);</script></li>
+						</ul>
+					</div>
+				</div>
+				<p>&nbsp;</p>
+			            <div class="clear"></div>
+        </div>
+        <div class="group"></div> 
+	</div><!-- //content -->
+
+	<div id="footer">
+		<div id="footer-left">
+			<p><a href="http://www.vu.lt/" target="_blank">Vilniaus universitetas</a> Biotechnologijos institutas | Saulėtekio al. 7, LT-10257 Vilnius</p>
+<p>Tel. (8 5) 2234365 | El. p. <a href="javascript:/* &Scaron;is el. pa&scaron;to adresas yra apsaugotas nuo &scaron;lam&scaron;to*/"><span class="cloaked_email ep_e712d2e0"><span data-ep-a="&#111;&#102;&#102;" data-ep-b="t"><span data-ep-b="&#117;&#46;&#108;" data-ep-a="&#105;&#99;&#101;"><span data-ep-a="&#64;&#98;&#116;" data-ep-b="&#105;.&#118;"></span></span></span></span><span class="cloaked_email ep_0891a7e9" style="display:none;"><span data-ep-a="o&#102;&#102;" data-ep-b="&#116;"><span data-ep-b="u.&#108;" data-ep-a="&#105;&#99;e"><span data-ep-b="&#105;&#46;&#118;" data-ep-a="&#64;&#98;t"></span></span></span></span></a><script type="text/javascript">emailProtector.addCloakedMailto("ep_0891a7e9", 1);</script></p>		</div>
+				           <div id="footer-right" > 
+	               <p>                           <a href="javascript:/* &Scaron;is el. pa&scaron;to adresas yra apsaugotas nuo &scaron;lam&scaron;to*/">Tinklalapio administratorius<span class="cloaked_email ep_7ece96fb" style="display:none;"><span data-ep-b="" data-ep-a="&#119;&#101;&#98;&#109;"><span data-ep-b="&#46;&#108;&#116;" data-ep-a="&#97;&#115;&#116;&#101;"><span data-ep-b="&#105;.&#118;&#117;" data-ep-a="&#114;&#64;&#98;&#116;"></span></span></span></span></a><script type="text/javascript">emailProtector.addCloakedMailto("ep_7ece96fb", 1);</script><br/>                       	               </p>
+	            </div>
+            		<div class="group"></div>
+	</div><!-- //footer -->
+</div>
+<script type="text/javascript">
+	//<![CDATA[
+	function validateSearchForm(){
+		if(document.id('mod-finder-searchword').getProperty('value') == 'Ieškoti...' ||
+		 document.id('mod-finder-searchword').getProperty('value') =='')
+			return false;
+		else
+			return true;
+	}
+	window.addEvent('domready', function(){
+		var value;
+		// Set the input value if not already set.
+		if (!document.id('mod-finder-searchword').getProperty('value')) {
+			document.id('mod-finder-searchword').setProperty('value', 'Ieškoti...');
+		}
+		// Get the current value.
+		value = document.id('mod-finder-searchword').getProperty('value');
+		// If the current value equals the default value, clear it.
+		document.id('mod-finder-searchword').addEvent('focus', function() {
+			if (this.getProperty('value') == 'Ieškoti...') {
+				this.setProperty('value', '');
+			}
+		});
+		// If the current value is empty, set the previous value.
+		document.id('mod-finder-searchword').addEvent('blur', function() {
+			if (!this.getProperty('value')) {
+				this.setProperty('value', value);
+			}
+		});
+	});
+//]]>
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16186274-1', 'vu.lt');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

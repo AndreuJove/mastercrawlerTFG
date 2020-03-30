@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>National Centre for Text Mining &mdash; NaCTeM &mdash; ACELA</title>
+<meta name="copyright" content="&copy; National Centre for Text Mining" />
+<meta name="keywords" content="Text Mining, Data Mining, University of Manchester, University of Liverpool, Machine Readable, Machine Understandable, Visual Text Mining" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" /> 
+<meta name="DC.title" content="National Centre for Text Mining &mdash; NaCTEM" />
+<meta name="DC.creator" content="Louise M. Heatley" /> 
+<meta name="DC.publisher" content="NaCTeM" />
+<meta name="DC.type" content="XHTML" />
+<meta name="DC.format" content="text/html;charset=iso-8859-1" />
+<meta name="DC.language" scheme="DCTERMS.URI" content="English" /> 
+
+<!-- JC 26/04/16 - Removed due to issue with $style -->
+<link rel="stylesheet" href="/css/nactem.css" type="text/css" /> 
+
+<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="NaCTeM News &amp; Events (RSS)" />
+<link rel="up" href="/" title="Up" />
+<meta name="DC.subject" lang="English" content="ACELA at The National Centre for Text Mining." />
+<meta name="DC.description" lang="English" content="Accelerated Annotation of Named Entities" />
+<link rel="up" href="/" title="Up" />
+</head>
+ 
+<body>
+
+<!-- PAGE CONTAINER -->
+<div id="container">
+<div id="frameleft"></div>
+<div id="frameright"></div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	
+	
+<div id="logobanner">
+  <a href="/index.php"><img src="/images/nactemlogo.gif" alt="NaCTeM" title="Welcome to the National Centre for Text Mining" width="262" height="73" /></a> </div>
+
+	
+
+	<div id="pagecontent">
+		<div id="breadcrumbtrail">
+  			You are in: <a href="../index.php">Home</a> | Tools | ACELA	</div>
+		<div id="subcontent">
+		
+			<div id="subcontentleft">
+				<!-- content to appear in the left column -->
+				<div id="subcontentleftnav">
+				  
+<p><a href="/index.php">Home</a>
+<a href="/aims.php">Aims &amp; Objectives</a>
+
+<a href="/services.php">NaCTeM Services</a>
+
+<a href="/software.php">Text Mining Tools</a>
+
+	<!-- a href="/software.php" class="submenu">Standalone Tools</a -->
+      <a href="/uima.php">Text Mining Infrastructures</a>
+       <a href="http://www.nactem.ac.uk/biodiversity">Text Mining for Biodiversity</a>
+      <!--a href="/u-compare.php" class="subsubmenu">U-Compare</a -->
+      <!-- a href="/Argo/" class="subsubmenu">Argo</a -->
+      <!-- a href="/external.php" class="submenu">External</a -->
+
+<a href="/resources.php">Resources</a>
+
+<a href="/terms_conditions.php">Terms &amp; Conditions</a>
+
+<a href="/faq.php">FAQ</a>
+
+
+<a href="/news.php">News &amp; Events</a>
+<a href="/people.php">People</a>
+ 
+
+
+<a href="/research.php">Projects</a>
+<a href="/aigaion2/index.php?/publications">Publications</a>
+
+<a href="/community.php">Community</a>
+
+<a href="/external_collaboration.php">External Collaboration</a>
+
+
+
+<a href="/vacancies.php">Vacancies</a>
+
+<a href="/teaching">Teaching &amp; Tutorials</a>
+
+<a href="/feedback.php">Feedback</a>
+<a href="/directions.php">How to find us</a>
+
+<!--a href="/sitemap.php">Site Map</a>
+
+<a href="/search.php">Search</a-->
+</p>
+
+
+				</div>
+				
+				<div id="subcontentleftcontent">
+				
+				
+				<h1>ACELA</h1>
+
+<p>
+The ACELA (ACcElerated Annotation) tool aims to reduce the human effort required to produce a gold standard corpus of named entity (NE) annotations. The process of annotation is similar to active leaning, in that it is performed as an iterative and interactive process between the human annotator and a machine-learned NE tagger. This is illustrated in Figure 1. 
+<img src="images/ACELA-fig1.JPG" width="500"/>
+<center><b>Figure 1: The ACELA annotation process</b></center>
+</p>
+
+<p>
+The aim of the tool is to ensure that <i>all</i> NEs of a given type are annotated in a given corpus with minimum effort from the human annotator. Only those sentences that are most likely to contain NEs of the target type (according to the predictions of the tagger) are displayed for the human to annotate, which means that it is not necessary to read through all sentences in the corpus that do contain relevant entities.
+</p>  
+<p>
+At each iteration of the process, the NE tagger is re-trained on all available sentences that have been human anntated, meaning that it makes increasingly accurate predictions about which sentences contain named entities. The tool also makes estimates about the number of entities in the corpus that have been annotated by the human (coverage), and the annotation process stops when the figure is close to 100%. 
+</p>
+<p>
+Figure 2 illustrates the efficiency of the tool for annotating NEs of type DNA in the GENIA corpus. Using manual annotation alone, it can be expected that after manually annotating 10,000 sentences in a sequential fashion, only about half the entities in the corpus will have been annotated. However, using the ACELA tool to predict the sentences most likly to contain the relevant NEs, annotating the same number of sentences acheives almost 100% coverage of all DNA entities in the corpus.
+<img src="images/ACELA-fig2.JPG" width="500"/>
+<center><b>Figure 2: Efficiency of ACELA annotation</b></center>
+</p>
+<p>
+ACELA provides a web-based user interface, part of which is illustrated in Figure 3. The process begin with the user providing a number of example entitites of the target category ("seeds"), which the algorithm uses to start making predictions.
+<img src="images/ACELA-fig3.JPG" width="500"/>
+<center><b>Figure 3: ACELA web interface</b></center>
+</p>
+<p>
+The main annotation screen of the ACELA interface is shown in Figure 4. For each sentence predicted to contain NES, the tool makes a number of alternative suggestions about the correct NEs in the sentence. The task of the annotator is to select the correct prediction for each sentence.
+<img src="images/ACELA-fig4.JPG" width="500"/>
+<center><b>Figure 4: Annotation in ACELA</b></center>
+</p>
+<p>Further details about the annotation framework used by ACELA are aviable in the following paper:<br/><br/>
+Yoshimasa Tsuruoka, Jun'ichi Tsujii and Sophia Ananiadou. 2008. <a href="http://www.biomedcentral.com/1471-2105/9/S11/S8">Accelerating the annotation of sparse named entities by dynamic sentence selection</a>, BMC Bioinformatics, 9(Suppl 11):S8.
+</p>
+<p>If you interested in using ACELA, please <a href="mailto:NACTEM-SERVICES@listserv.manchester.ac.uk">contact us</a>
+</p>
+  
+				</div>
+			</div>
+			
+			
+				
+				
+				
+			<div id="subcontentright">
+				<!-- content to appear in the right column -->
+
+				<!-- h2>News &amp; Events</h2 -->
+
+<!-- <p>
+<font color="blue"><i>A member of META-NET</i></font></p>
+<p>
+<a href="http://www.meta-net.eu/"><img src="/images/META.png" alt="METANET" width="125" height="31"/></a></p>
+<p><font color="blue"><i>A Network of Excellence forging the Multilingual Europe Technology Alliance</i></font></p> -->
+
+
+     <h2>Featured News</h2><ul><li><strong><a href="/newsitem.php?item=410">Two Research Fellows in Natural Language Processing</a></strong></li><li><strong><a href="/newsitem.php?item=408">Prof. Sophia Ananiadou awarded honorary doctorate</a></strong></li><li><strong><a href="/newsitem.php?item=409">NaCTeM to work on new EU project to reduce the burden of disease caused by working-life exposures</a></strong></li><li><strong><a href="/newsitem.php?item=406">Prof Tsujii attends dinner with Presdent Macron at Global Forum on AI for Humanity</a></strong></li><li><strong><a href="/newsitem.php?item=405">Panel chair at Global Forum on AI for Humanity</a></strong></li><li><strong><a href="/newsitem.php?item=402">Prof Jun'ichi Tsujii meets with Japanese Prime Minister Shinzo Abe</a></strong></li></ul><p><a href="/rss_featured.php"><img src="/images/rss.gif" alt="rss" width="16" height="16" /></a>Featured News Feed</p><h2>Other News &amp; Events</h2><ul><li><strong><a href="/newsitem.php?item=407">Talk at Digital Trust and Security Workshop Series</a></strong></li><li><strong><a href="/newsitem.php?item=404">Keynote Talk at SIMBig 2019</a></strong></li><li><strong><a href="/newsitem.php?item=403">Two papers from NaCTeM accepted at EMNLP 2019</a></strong></li><li><strong><a href="/newsitem.php?item=401">NaCTeM announced as the winners of NLP challenge on scholarly discourse and summarisation</a></strong></li><li><strong><a href="/newsitem.php?item=400">NaCTeM mentioned in <i>Nature</i> news article </a></strong></li></ul>  <p><a href="/rss_other.php"><img src="/images/rss.gif" alt="rss" width="16" height="16" /></a>Other News Feed</p>
+ <!-- <p><a href="http://u-compare.org"><img src="/images/u-compare.png" alt="u-compare"/></a></p> -->
+
+
+			</div>
+			
+			<div id="footer">
+				
+<div>
+<p>
+	<a href="http://www.manchester.ac.uk/" style="vertical-align:middle;"><img src="/images/manchesterlogo.jpg" alt="University of Manchester" width="159" height="70"  style="vertical-align:middle" /></a>
+	<a href="http://www.jisc.ac.uk"><img src="/images/jisc.gif" alt="JISC" width="81" height="50" style="vertical-align:middle" /></a> 
+	<a href="http://www.bbsrc.ac.uk/"><img src="/images/new-bbsrc-colour.gif" alt="BBSRC" width="150" height="66" style="vertical-align:middle" /></a>
+	<a href="http://www.nih.gov/"><img src="/images/NIH_logo.gif" alt="NIH" width="100" height="100" style="vertical-align:middle" /></a>
+	<a href="http://europa.eu/index_en.htm"><img src="/images/euflag.gif" alt="EU" width="85" height="56" style="vertical-align:middle" /></a>
+</p>
+<p>
+	<a href="http://www.mrc.ac.uk"><img src="/images/MRC.jpg" alt="MRC" width="125" style="vertical-align:middle;padding:7px;" /></a> 
+	<a href="http://www.wellcome.ac.uk/" style="vertical-align:middle;"><img src="/images/wellcome_trust.jpg" alt="Wellcome Trust" width="125" style="vertical-align:middle;padding:5px;" /></a> 
+	<a href="http://europepmc.org/"><img src="/images/EuropePMC.png" alt="EuropePMC" width="125" style="vertical-align:middle" /></a> 
+        <a href="http://www.esrc.ac.uk/"><img src="/images/ESRC.jpg" alt="ESRC" width="125" style="vertical-align:middle" /></a> 
+ 	<!-- <a href="http://www.epsrc.ac.uk/"><img src="/images/epsrc.gif" alt="EPSRC" width="117" height="50"  style="vertical-align:middle" /></a> -->
+</p>
+
+
+<br />
+  Content copyright &copy; 2019, The National Centre for Text Mining &mdash; University of Manchester<br />
+  <span class="smallprint">Site maintained
+by  <a href="/feedback.php">Paul Thompson</a>. Last updated: 22nd May 2019 </span>
+</div>
+			</div>
+	
+		</div>
+		
+		
+		
+	</div>
+
+
+<!-- END MAIN CONTENT -->
+</div>
+</div>
+<div id="framebottom"></div>
+
+<!-- END PAGE CONTAINER -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1973559-2";
+urchinTracker();
+</script></body>
+</html>

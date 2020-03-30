@@ -1,0 +1,16 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:46:23 GMT
+Content-Type: text/html; charset=UTF-8
+Vary: Accept-Encoding
+Link: <https://research.pasteur.fr/en/wp-json/>; rel="https://api.w.org/"
+Link: <https://research.pasteur.fr/en/b/ASf>; rel=shortlink
+X-Powered-By: WordOps
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+X-Download-Options: noopen
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Srcache-Fetch-Status: HIT
+X-Srcache-Store-Status: BYPASS
+Content-Encoding: gzip

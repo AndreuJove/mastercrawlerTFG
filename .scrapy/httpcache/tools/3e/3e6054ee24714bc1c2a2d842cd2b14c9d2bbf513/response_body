@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>UCSF-Genentech Bioinformatics Collaboration: Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Refresh" content="10; URL=http://research-public.gene.com">
+<style type="text/css">
+<!--
+.section {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #999999;
+}
+.description {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #999999;
+}
+a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFCC66;
+	text-decoration: none;
+}
+hr {
+	color: #660000;
+}
+a:hover {
+	color: #FFCC66;
+	text-decoration: underline;
+}
+-->
+</style>
+</head>
+<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<br>
+<table width="582" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="3"><img src="/images/genentech/top.gif" width="582" height="133"></td>
+  </tr>
+  <tr>
+    <td class="description" align="left" valign="top">
+      <img src="/images/genentech/left.gif" width="264" height="330">
+    </td>
+    <td width="293" align="left" valign="top" class="section"> 
+      <table width="290" border="0" cellspacing="0" cellpadding="3">
+        <tr> 
+          <td class="section">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="2" class="section"><hr size="1" noshade></td>
+        </tr>
+        <tr> 
+	  <td><image src="/icons/goback.gif"></td>
+          <td><p><span class="description">
+	      This site has moved to <a href="http://research-public.gene.com">
+	      http://research-public.gene.com</a>.  Please update your bookmarks.
+              </span></p>
+	      <p><span class="description">
+	      Your browser will be redirected to the new site in 10 seconds.
+              </span></p>
+	  </td>
+        </tr>
+        <tr> 
+          <td class="section"></td>
+        </tr>
+        <tr> 
+          <td colspan="2"><hr size="1" noshade></td>
+        </tr>
+      </table>
+    </td>
+    <td align="right"><img src="/images/genentech/right.gif" width="25" height="330"> 
+  </tr>
+  <tr>
+    <td colspan="3"> <img src="/images/genentech/bottom.gif" width="582" height="24"></td>
+  </tr>
+</table>
+<p align="center" class="description">Last updated: February 17, 2012</p>
+</body>
+</html>

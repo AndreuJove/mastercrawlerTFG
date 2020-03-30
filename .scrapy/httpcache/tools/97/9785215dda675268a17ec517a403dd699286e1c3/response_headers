@@ -1,0 +1,20 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 18:50:29 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Cache-Control: max-age=0, private, must-revalidate
+Etag: W/"29150ad1f77820627681da5af19d22c6"
+Referrer-Policy: strict-origin-when-cross-origin
+Referrer-Policy: strict-origin-when-cross-origin
+Set-Cookie: experimentation_subject_id=IjdiOWZjZWIyLTAyNWEtNDQxYS1hYTZiLTc0MDBkODVmNzk2NiI%3D--9d473a3d1c7a58a5b92796862e9986efe7ad6316; domain=.ox.ac.uk; path=/; expires=Fri, 30 Mar 2040 18:50:29 -0000; secure; HttpOnly
+Set-Cookie: _gitlab_session=9c089625f17916468f79d9b07639119c; path=/; expires=Mon, 30 Mar 2020 20:50:29 -0000; secure; HttpOnly
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: DENY
+X-Permitted-Cross-Domain-Policies: none
+X-Request-Id: w6Dt9hzLwk5
+X-Runtime: 0.027973
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000
+Content-Encoding: gzip

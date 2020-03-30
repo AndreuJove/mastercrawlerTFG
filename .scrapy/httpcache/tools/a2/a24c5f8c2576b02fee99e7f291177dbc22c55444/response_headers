@@ -1,0 +1,10 @@
+Server: nginx/1.14.0 (Ubuntu)
+Date: Mon, 30 Mar 2020 18:47:22 GMT
+Content-Type: text/html; charset=utf-8
+Pragma: no-cache
+Cache-Control: no-cache
+Set-Cookie: _session_id=521d18df94a9aae6bc5712c8b849e067b46f6aa9035b60c403921e672fa623ea9fcc9cb5031130af; Path=/
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Content-Encoding: gzip

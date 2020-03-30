@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Dali server</title>
+  <link rel="stylesheet" href="/css/jquery-ui.css">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/jquery-ui.js"></script>
+  <!--link rel="stylesheet" href="/css/style.css"-->
+<style type='text/css'>
+table,td,th{border-collapse:collapse;padding:2px 10px;}
+th{cursor:n-resize;background-color:lightgrey;}
+</style>  
+<script>
+  $(document).ready(function(){
+     url = "http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/json.cgi?db=PDB&"
+     $("#taxonomy").autocomplete({
+         source: url,
+         minlength: 4
+         });
+  });
+  </script>
+    <script> 
+    $(function(){
+      $("#includedContentPDBstats").load("../barcosel/tmp/pdbstat.html"); // no cross-domain links
+      $("#includedContentStats").load("../barcosel/tmp/stat.html"); 
+    });
+    </script> 
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+<script>
+$("#file").closest('form').trigger('reset');
+</script>
+  <style>
+  #logo {
+ 	 background-color:#000000 ;
+    } 
+  #content {
+      width: 1000px ;
+      margin-left: auto ;
+      margin-right: auto ;
+    }
+    #info {
+      height: 30px;
+      line-height: 30px;
+      background-color:#C8C8CE ;
+      padding-left: 1em ;
+    }
+    #form {
+      float: left;
+      margin-top: 10px ;
+      width: 750px ;
+    }
+    #side {
+      text-align: right;
+      float: left;
+      width: 245px ;
+      margin-top: 10px ;
+    }
+    #flip
+    {
+      padding:3px;
+      text-align:left;
+      border: 0;
+    }
+    </style>
+</head>
+<body>
+<div id="logo"><img src="/images/DaliLogo.png"></div> 
+
+<div id="tabs">
+
+  <ul>
+    <li><a href="#tabs-0">About</a></li>
+    <li><a href="#tabs-1">PDB search </a></li>
+    <li><a href="#pdb25">PDB25 </a></li>
+    <li><a href="#tabs-2">Pairwise </a></li>
+    <li><a href="#tabs-3">All against all </a></li>
+    <li><a href="#tabs-4">Gallery</a></li>
+    <li><a href="#tabs-5">References</a></li>
+    <li><a href="#tabs-6">Statistics</a></li>
+    <li><a href="#tabs-7">Tutorial</a></li>
+    <li><a href="#download">Download</a></li>
+
+  </ul>
+  <!-- ============================================ About ===================================================================================== -->
+
+  <div id="tabs-0">
+        <div style="margin-left: 0px; position: relative; width: 1000px; z-index: 5; " id="body_layer">
+           <div style="margin-left: 13px; margin-top: 0px; position: relative; width: 754px; z-index: 1; " class="style_SkipStroke_1 shape-with-text flowDefining">
+            <div class="text-content style_External_754_414" style="padding: 0px; ">
+              <div class="style">
+		      <p style="padding-top: 0pt; " class="paragraph_style"><br>The Dali server is a network service for comparing protein structures in 3D. You submit the coordinates of a query protein structure and Dali compares them against those in the Protein Data Bank (PDB). In favourable cases, comparing 3D structures may reveal biologically interesting similarities that are not detectable by comparing sequences. <br /></p>
+</p>
+<!--p style="color:red">
+5 February 2020: Slower than usual service due to an unexpected surge in demand.
+</p-->
+		      <p>You can perform four types of structure comparisons:</p>
+		      <UL>
+			      <LI>Heuristic <A HREF="index.html#tabs-1"><B>PDB search</B></A> - compares one query structure against those in the Protein Data Bank  
+                              <LI>Exhaustive <A HREF="index.html#pdb25"><B>PDB25</B></A> search - compares one query structure against a representative subset of the Protein Data Bank
+			      <LI><A HREF="index.html#tabs-2"><B>Pairwise</B></A> structure comparison - compares one query structure against those specified by the user
+			      <LI><A HREF="index.html#tabs-3"><B>All against all</B></A> structure comparison - returns a structural similarity dendrogram for a set of structures specified by the user
+		      </UL>
+		      <P>
+	<p>Citation:</p>
+	<OL>
+		<LI>Holm L (2019) <A HREF=https://doi.org/10.1093/bioinformatics/btz536>Benchmarking fold detection by DaliLite v.5.</A> Bioinformatics 35, 5326-5327. 
+	</OL>
+              </div>
+            </div>
+          </div>
+             </div>
+	  <HR><A HREF="http://ekhidna2.biocenter.helsinki.fi/">
+	  <img src="http://ekhidna2.biocenter.helsinki.fi/~patkoski/pannzer/PANNZER/Annotate_files/UH_logo.gif" alt="" style="border: none; height: 90px; " />
+	  <img src="http://ekhidna2.biocenter.helsinki.fi/~patkoski/pannzer/PANNZER/Annotate_files/HOLM_logo.gif" alt="" style="border: none; height: 90px; " />
+          <img src="http://ekhidna2.biocenter.helsinki.fi/~patkoski/pannzer/PANNZER/Annotate_files/BF_logo.jpg" alt="" style="border: none; height: 90px; " />
+         </A>
+  </div>
+  <!-- ============================================ PDB search submission form ===================================================================================== -->
+  
+  <div id="tabs-1">
+              <div class="style">
+		      <H1>PDB search</H1>
+			Compare query structure against Protein Data Bank.
+		      <!--Example: PDB search result for 1xxxX-->
+ <form name="dalisearch" action="http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/dump.cgi" method="post" enctype="multipart/form-data">
+                 <div id="info">
+                    <p>STEP 1 - Enter your query protein structure</p>
+	    </div><br>Structures may be specified by concatenating the PDB identifier (4 characters) and a chain identifier (1 character) or, alternatively,  you may upload a PDB file.
+	    <br><br>
+    <input id="taxonomy" type="text" placeholder="PDB identifier + chain identifier" name="cd1" size=30>
+    OR upload file <input type="file" name="file1" />
+    <!--input type="text" placeholder="Label to use in results" name="label1"--> 
+                  <br>
+                  <div id="info">
+                    <p>STEP 2 - Optional data</p>
+                  </div>
+<br>You may leave an e-mail address for notification when the job has finished. The job title is used as subject heading in the e-mail.
+
+<P><BR>
+<input type="text" name="title" placeholder="Job title" size=80>
+<br>
+<input type="text" name="address" placeholder="E-mail" size=80>
+<P><BR>
+                  <div id="info">
+                    <p>STEP 3 - Submit your job</p>
+                  </div><br>
+
+<div>
+	<input type="hidden" name="method" value="search">
+	<input value="Submit" name="submit" type="submit" >
+	<input value="Clear" name="reset" type="reset">
+</div>
+</form><br>
+If the same structure has been submitted recently, you will be redirected to the result page of the previous instance.
+  </div>  
+</div>
+ <!-- ============================================ PDB25 submission form ===================================================================================== -->
+  <div id="pdb25">
+              <div class="style">
+                      <H1>PDB25 comparison</H1>
+                        Do exhaustive pairwise comparisons of query structure against PDB25 subset Protein Data Bank. 
+The query structure must have at least three secondary structure elements.
+                      <!--Example: PDB search result for 1xxxX-->
+ <form name="pdb25" action="http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/dump.cgi" method="post" enctype="multipart/form-data">
+                 <div id="info">
+                    <p>STEP 1 - Enter your query protein structure</p>
+            </div><br>Structures may be specified by concatenating the PDB identifier (4 characters) and a chain identifier (1 character) or, alternatively,  you may upload a PDB file.
+            <br><br>
+    <input id="taxonomy" type="text" placeholder="PDB identifier + chain identifier" name="cd1" size=30>
+    OR upload file <input type="file" name="file1" />
+    <!--input type="text" placeholder="Label to use in results" name="label1"-->
+                  <br>
+                  <div id="info">
+                    <p>STEP 2 - Optional data</p>
+                  </div>
+<br>You may leave an e-mail address for notification when the job has finished. The job title is used as subject heading in the e-mail.
+
+<P><BR>
+<input type="text" name="title" placeholder="Job title" size=80>
+<br>
+<input type="text" name="address" placeholder="E-mail" size=80>
+<P><BR>
+                  <div id="info">
+                    <p>STEP 3 - Submit your job</p>
+                  </div><br>
+
+<div>
+        <input type="hidden" name="method" value="pdb25">
+        <input value="Submit" name="submit" type="submit" >
+        <input value="Clear" name="reset" type="reset">
+</div>
+</form><br>
+If the same structure has been submitted recently, you will be redirected to the result page of the previous instance.
+  </div>
+</div>
+
+
+ <!-- ============================================ Pairwise comparison submission form ===================================================================================== -->
+   <div id="tabs-2">
+              <div class="style">
+		      <H1>Pairwise structure comparison</H1>
+			Compare first structure against second structure.
+		      <!--Example: PDB search result for 1xxxX and 1yyyY-->
+ <form name="pairwise" action="http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/dump.cgi" method="post" enctype="multipart/form-data">
+                 <div id="info">
+                    <p>STEP 1 - Enter your first protein structure</p>
+	    </div>
+	    <br>Structures may be specified by concatenating the PDB identifier (4 characters) and a chain identifier (1 character) or, alternatively,  you may upload a PDB file.
+	    <br><br>
+    <input id="taxonomy-1" type="text" placeholder="PDB identifier + chain identifier" name="cd1" size=30>
+    OR upload file <input type="file" name="file1" multiple="true"/>
+    <!--input type="text" placeholder="Label to use in results" name="label1"--> 
+    <br>
+                 <div id="info">
+                    <p>STEP 2 - Enter your second protein structures</p>
+	    </div>
+	    <br>Use the +/- buttons to create input fields.
+	The maximum number of input structures is 10.
+	<br><br>
+	<div class="hidden">
+  <div class="example-template2">
+    <input type="text" placeholder="PDB identifier + chain identifier" name="cd2" size=30>
+    OR upload file <input type="file" name="file2" multiple="true"/>
+    <!--input type="text" placeholder="Label to use in results" name="label"--> <button class="del">-</button>
+  </div>
+</div>
+	<div class="edit-area2">
+  <div class="controls">
+    <input type="button" class="add" value=" + ">
+    <input type="button" class="rem" value=" - ">
+  </div>
+<P><BR>
+
+</div>
+
+                  <div id="info">
+                    <p>STEP 3 - Optional data</p>
+                  </div><br>
+<P>
+<input type="text" name="title" placeholder="Job title" size=80>
+<br>
+
+
+                  <div id="info">
+                    <p>STEP 4 - Submit your job</p>
+                  </div><br>
+<div>
+	<input type="hidden" name="method" value="pairwise">
+	<input value="Submit" name="submit" type="submit" >
+	<input value="Clear" name="reset" type="reset">
+</div>
+    <script type="text/javascript">
+       (function($) {
+  "use strict";
+  
+  var itemTemplate = $('.example-template2').detach(),
+      editArea = $('.edit-area2'), 
+      firstItem = 1,
+      itemNumber = firstItem, 
+      maxItems = 10;
+  
+  $(document).on('click', '.edit-area2 .add', function(event) {
+    var item = itemTemplate.clone();
+    item.find('[name]').attr('name', function() {
+//      return $(this).attr('name') + '_' + itemNumber;
+      return $(this).attr('name');
+      });
+    if(itemNumber <= maxItems) {
+    	++itemNumber;
+    	item.appendTo(editArea);
+	} else {
+		alert("Maximum number of rows is 10");
+    }
+  });
+  
+  $(document).on('click', '.edit-area2 .rem', function(event) {
+	  editArea.children('.example-template2').last().remove();
+	  if(itemNumber > firstItem) { 
+	  	--itemNumber;
+	}
+  });
+  
+  $(document).on('click', '.edit-area2 .del', function(event) {
+    var target = $(event.target),
+        row = target.closest('.example-template2');
+	row.remove();
+	  if(itemNumber > firstItem) { 
+	  	--itemNumber;
+	}
+
+  });
+}(jQuery));
+    </script></form><br>
+ 
+  </div>
+</div>	
+  <!-- ================================== Dali matrix submission form =============================================================================================== -->
+  <div id="tabs-3">
+              <div class="style">
+<H1>All against all structure comparison</H1>
+	<!--Example: PDB search result for 1xxxX, 1yyyY and 1zzzZ.<-->
+                 <div id="info">
+                    <p>STEP 1 - Enter your input protein structures</p>
+                  </div>
+           <div>
+<br>             Use the +/- buttons to create input fields. Structures may be specified by concatenating the PDB identifier (4 characters) and a chain identifier (1 character) or, alternatively,  you may upload a PDB file. PDB files should be entered before PDB identifiers.
+The maximum number of input structures is 64. If your input set consists only of structures in the PDB, you can use <A HREF=submitmatrix.html>this</A> alternative submission form.
+<br><br>
+	</div>
+<div class="hidden">
+  <div class="example-template">
+    <input type="text" placeholder="PDB identifier + chain identifier" name="cd1" size=30>
+    OR upload file <input type="file" name="file1" multiple="true"/>
+    <input type="text" placeholder="Label to use in results" name="label" > <button class="del">-</button>
+  </div>
+</div>
+<form name="gosolvx" action="http://ekhidna2.biocenter.helsinki.fi/cgi-bin/sans/dump.cgi" method="post" enctype="multipart/form-data">
+	<div class="edit-area">
+  <div class="controls">
+    <input type="button" class="add" value=" + ">
+    <input type="button" class="rem" value=" - ">
+  </div>
+<P><BR>
+
+</div>
+<BR>
+                  <div id="info">
+                    <p>STEP 2 - Optional data</p>
+                  </div>
+<br>You may leave an e-mail address for notification when the job has finished. The job title is used as subject heading in the e-mail.
+
+<P><BR>
+<input type="text" name="title" placeholder="Job title" size=80>
+<br>
+<input type="text" name="address" placeholder="E-mail" size=80>
+<P><BR>
+
+                  <div id="info">
+                    <p>STEP 3 - Submit your job</p>
+                  </div>
+
+<BR>
+
+<div>
+	<input type="hidden" name="method" value="matrix">
+	<input value="Submit" name="submit" type="submit" onclick="myFunction()">
+	<input value="Clear" name="reset" type="reset">
+
+    <script type="text/javascript">
+        (function($) {
+  "use strict";
+  
+  var itemTemplate = $('.example-template').detach(),
+      editArea = $('.edit-area'), 
+      firstItem = 1,
+      itemNumber = firstItem, 
+      maxItems = 64;
+  
+  $(document).on('click', '.edit-area .add', function(event) {
+    var item = itemTemplate.clone();
+    item.find('[name]').attr('name', function() {
+//      return $(this).attr('name') + '_' + itemNumber;
+      return $(this).attr('name');
+      });
+    if(itemNumber <= maxItems) {
+    	++itemNumber;
+    	item.appendTo(editArea);
+	} else {
+		alert("Maximum number of rows is 64");
+    }
+  });
+  
+  $(document).on('click', '.edit-area .rem', function(event) {
+	  editArea.children('.example-template').last().remove();
+	  if(itemNumber > firstItem) { 
+	  	--itemNumber;
+	}
+  });
+  
+  $(document).on('click', '.edit-area .del', function(event) {
+    var target = $(event.target),
+        row = target.closest('.example-template');
+	row.remove();
+	  if(itemNumber > firstItem) { 
+	  	--itemNumber;
+	}
+
+  });
+}(jQuery));
+    </script>
+</div>
+</form>
+     </div>
+  </div>
+  <!-- ================================== Gallery =============================================================================================== -->
+ 
+<div id="tabs-4">
+              <div class="style">
+
+		      <H1>You can ...</H1>
+		      <TABLE>
+			      	<TR><TD><TABLE><TR>
+				      <TD><h2>... generate structural trees</h2><br><img src=Slide1.PNG height=400px></TD>
+				      <TD><h2>... perform all against all structure comparisons of up to 64 proteins</h2><br><img src=Slide3.PNG height=400px></TD>
+      				</TR></TABLE></TD></TR>
+			      	<TR><TD><TABLE><TR>
+				      <TD><h2>... project high-dimensional structure space to a plane</h2><br><img src=Slide2.PNG height=400px></TD>
+				      <TD><h2>... map structural and sequence variation to 3D structures</h2><br><img src=Slide4.PNG height=400px></TD>
+      				</TR></TABLE></TD></TR>
+			      <TR>
+				      <TD><h2>... compare structurally aligned sequence logos</h2><br><img src=Slide5.PNG width=1200px></TD>
+			      </TR>
+		      </TABLE>
+The images above show an analysis of protein structures representing the amidohydrolase and PHP superfamilies (<A HREF="/daliviewer/matrix_EXAMPLE/">live example</A>).
+ 
+ </div>
+</div>
+  <!-- ===================================== References tab ============================================================================================ -->
+<div id="tabs-5">
+     <div class="style">
+	<p>Reviews:</p>
+	<OL>
+                <LI>Holm L (2020) DALI and the Persistence of Protein Shape. Protein Science 29, 128-140.
+                <LI>Hasegawa H, Holm L (2009) Advances and pitfalls of protein structural alignment. Curr. Opin. Struct. Biol. 19, 381-389.
+                <LI>Holm L, Sander C (1996) Mapping the protein universe. Science 273, 595-603
+		<LI>Holm L, Sander C (1995) Dali: a network tool for protein structure comparison. TiBS 20:478-480
+</OL>	<p>Methods:</p>
+	  <OL>
+                <LI>Holm L (2020) Using Dali for Protein Structure Comparison. Mehthods in Molecular Biology, Vol. 2112, pp. 29-42
+                <LI>Holm L, Laakso LM (2016) Dali server update. Nucleic acids research 44 (W1), W351-W355.
+                <LI>Holm L, Rosenström P (2010) Dali server: conservation mapping in 3D. Nucl. Acids Res. 38, W545-549.
+                <LI>Holm L, Kääriäinen S, Rosenström P, Schenkel A (2008) Searching protein structure databases with DaliLite v.3. Bioinformatics 24, 2780-2781.
+                <LI>Holm L, Park J (2000) DaliLite workbench for protein structure comparison. Bioinformatics 16, 566-567
+                <LI>Holm L, Sander C (1998) Dictionary of recurrent domains in protein structures. Proteins  33, 88-96
+                <LI>Holm L, Sander C (1996) Alignment of three-dimensional protein structures: network server for database searching. Meth Enz. 266:653-662
+                <LI>Holm L, Sander C (1995) Fast protein structure database searches at 90 % reliability. ISMB 3, 179-187
+                <LI>Holm L, Sander C (1994) Parser for protein folding units. Proteins 19, 256-268
+                <LI>Holm L, Sander C (1993) Protein structure comparison by alignment of distance matrices. J. Mol. Biol. 233, 123-138
+		<LI>Holm L, Ouzounis C, Sander C, Tuparev G, Vriend G (1992) A database of protein structure families with similar folding motifs. Protein Science 1:1691-1698
+	</OL>
+
+	<p>Classification:</p>
+	<OL>
+                <LI>Holm L (2019) Benchmarking fold detection by DaliLite v.5. Bioinformatics 35, 5326-5327.
+                <LI>Dietmann S, Park J, Notredame C, Heger A, Lappe M, Holm L  (2001) A fully automatic evolutionary classification of protein folds: Dali Domain Dictionary version 3. Nucl Acids Res 29, 55-57
+                <LI>Dietmann S, Holm L (2001) Identification of homology in protein structure classification. Nature Structural Biology 8, 953-957
+                <LI>Holm L, Sander C (1999) Protein folds and families: sequence and structure alignments. Nucl Acids Res 27, 244-247
+                <LI>Holm L, Sander C (1998) Touring protein fold space with Dali/FSSP. Nucl Acids Res 26, 316-319
+                <LI>Holm L, Sander C (1997) Decision support system for the evolutionary classification of protein structures. ISMB 5, 140-146
+                <LI>Holm L, Sander C (1997) New structure--novel fold? Structure 5, 165-171
+                <LI>Holm L, Sander C (1997) Dali/FSSP classification of three-dimensional protein folds. Nucl Acids Res 25, 231-234
+                <LI>Holm L, Sander C (1996) The FSSP database: fold classification based on structure-structure alignment of proteins. Nucl Acids Res 24, 206-209
+		<LI>Holm L, Sander C (1994) The FSSP database of structurally aligned protein fold families. Nucl. Acids Res. 22, 3600-3609
+	</OL>
+<p>Discoveries:</p>
+<OL>
+        <LI>Holm L, Sander C (1997) Enzyme HIT. Trends Biochem 22, 116-117
+        <LI>Holm L, Sander C (1997) An evolutionary treasure: unification of a broad set of amidohydrolases related to urease. Proteins  28, 72-82
+        <LI>Holm L, Sander C (1995) DNA polymerase beta belongs to an ancient nucleotidyltransferase superfamily. Trends Biochem 20:345-347
+        <LI>Holm L, Sander C (1995) Evolutionary link between glycogen phosphorylase and a DNA modifying enzyme. EMBO J. 14, 1287-1293
+        <LI>Holm L, Sander C, Ruterjans H, Schnarr M, Fogh R, Boelens R, Kaptein R (1994) LexA repressor and iron-uptake regulator from E. coli: new members of the CAP-like DNA-binding domain superfamily. Prot. Engin. 7, 1449-1453
+        <LI>Holm L, Murzin A, Sander C (1994) Three sisters, different names: 3alpha,20beta-hydroxysteroid dehydrogenase, dihydropteridine reductase and UDP-galactose 4-epimerase. Nature Structural Biology 1, 146-147
+        <LI>Holm L, Sander C (1994) Structural similarity between plant endochitinase and lysozymes from animals and phage: an evolutionary connection. FEBS Lett. 340, 129-132
+	<LI>Holm L, Sander C (1993) Globin fold in a bacterial toxin. Nature 361, 309
+</OL>
+</div>
+</div>
+<!-- ============================== Statistics tab =================================================================================================== -->
+<div id="tabs-6">
+  <div id="includedContentStats"></div>
+  <div id="includedContentPDBstats"></div>
+</div>
+  <!-- =============================== Tutorial tab ================================================================================================== -->
+  <div id="tabs-7">
+	  <div><A HREF="./DaliTutorial.pdf" target=_blank>Tutorial</A></div>
+  </div>
+  <div id="download">
+          <div><A HREF="./README.v5.html" target=_blank>DaliLite.v5</A> (updated 3 October 2019)</div>
+          <div><A HREF="./README.html" target=_blank>DaliLite.v4</A></div>
+	  <div><A HREF=DaliLite_3.3.tar.gz>DaliLite.v3.3</A> (obsolete)</div>
+
+  </div>
+  <!-- ================================================================================================================================= -->
+  <!-- ================================================================================================================================= -->
+</div>
+</body>
+</html>
+
+
+
+

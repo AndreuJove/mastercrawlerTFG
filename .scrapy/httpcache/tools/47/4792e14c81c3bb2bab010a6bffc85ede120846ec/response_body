@@ -1,0 +1,288 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+    <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-49953125-6"></script>
+        <script>
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-49953125-6');
+
+        </script>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Bio-Formats is the software solution for reading proprietary microscopy image data and metadata." />
+        <meta property="og:image" content="/img/logos/ome-logo_fb.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="The Open Microscopy Environment" />
+        <meta property="og:description" content="A consortium of universities, research labs, industry and developers producing open-source software and format standards for microscopy data." />
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="The Open Microscopy Environment">
+        <meta name="twitter:image" content="https://www.openmicroscopy.org/img/logos/ome-logomark_twitter.png">
+        <title>Bio-Formats | Open Microscopy Environment (OME)</title>
+        <link rel="shortcut icon" type="image/x-icon"
+              href="/img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,600italic,700italic">
+        <link rel="stylesheet" type="text/css" media="all" href="//fonts.googleapis.com/css?family=Montserrat:400,500">
+        <link rel="stylesheet" type="text/css" media="all" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="/css/foundation.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="/css/responsive-tables.css">
+        <link rel="stylesheet" type="text/css" media="all" href="/css/openmicroscopy.css">
+
+    </head>
+
+    <body>
+
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title"></div>
+        </div>
+        
+        <!--<div data-sticky-container>
+        <div class="main-nav-bar top-bar" id="main-menu" data-sticky data-options="marginTop:0;">-->
+        <div class="main-nav-bar top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="vertical medium-horizontal dropdown menu" data-responsive-menu="accordion medium-dropdown">
+                    <li class="hide-for-small-only"><a class="logo" href="/index.html"><img src="/img/logos/ome-main-nav.svg" alt="OME logo" /></a></li>
+                    <li class="show-for-small-only"><a href="/index.html"><img src="/img/logos/ome-logomark.svg" alt="OME logo" style="height:32px; width:32px;"/></a></li>
+                    <li class="has-submenu"><a href="/about/">About Us</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="/about/">Overview</a></li>
+                            <li><a href="/teams/">OME Teams</a></li>
+                            <li><a href="/contributors/">Contributors</a></li>
+                            <li><a href="/commercial-partners/">Commercial Partners</a></li>
+                            <li><a href="/licensing/">Licensing</a></li>
+                            <li><a href="/citing-ome/">Citing OME</a></li>
+                            <li><a href="/artwork/">Artwork</a></li>
+                            <li><a href="/training/">Training</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu"><a href="/news/">News</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="/news/">Overview</a></li>
+                            <li><a href="/announcements/">Announcements</a></li>
+                            <li><a href="/events/">Events</a></li>
+                            <li><a href="/security/">Security</a></li>
+                            <li><a href="/careers/">Careers</a></li>
+                            <li><a href="https://blog.openmicroscopy.org/">Blog</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="vertical medium-horizontal dropdown menu" data-responsive-menu="accordion medium-dropdown">
+                    <li class="has-submenu"><a href="/products/">Products</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="/products/">Overview</a></li>
+                            <li><a href="/omero/">OMERO</a></li>
+                            <li><a href="/bio-formats/">Bio-Formats</a></li>
+                            <li><a href="/ome-files/">OME Files</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu"><a href="/support/">Support</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="/support/">Overview</a></li>
+                            <li><a href="/training/">Training</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/docs/">Docs</a></li>
+                    <li class="hide-for-small-only"><a href="/explore/" class="button btn-indigo" style="color: #eceff1; margin-left: 10px;">Explore</a></li>
+                    <li class="show-for-small-only"><a href="/explore/">Explore</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--</div> make header sticky? -->
+<a name="top-of-page"></a>
+
+
+        <header class="marketing-hero" id="bg-image-bio-formats">
+            <div class="row homepage text-center bg-image-text-container">
+                <div class="small-12 columns">
+                    <h1 class="hero-main-header"><img src="/img/logos/bio-formats-white.svg" alt="Bio-Formats logo" class="logo-hero" /></h1>
+                    <p class="hero-subheader small-12">The solution for reading proprietary microscopy image data and metadata</p>
+                    <br>
+                    <a href="/bio-formats/downloads/" class="large button sites-button btn-red">Download Version 6.4.0</a>
+                    <a href="https://docs.openmicroscopy.org/bio-formats/6.4.0/" target="_blank" class="hero-link">Read the Docs</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- begin -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>What is Bio-Formats?</h2>
+        </div>
+        <hr>
+        <div class="row column text-center">
+            <p>Bio-Formats is a software tool for reading and writing image data using standardized, open formats. Bio-Formats is a community driven project with a standardized application interface that supports open source analysis programs like <a href="https://imagej.net/" target="_blank">ImageJ</a>, <a href="http://www.cellprofiler.org/" target="_blank">CellProfiler</a> and <a href="http://icy.bioimageanalysis.org/" target="_blank">Icy</a>, informatics solutions like <a href="/omero/">OMERO</a> and the <a href="http://jcb-dataviewer.rupress.org/" target="_blank">JCB DataViewer</a>, and commercial programs like <a href="http://www.mathworks.com/products/matlab/" target="_blank">Matlab</a>.</p>
+            <p>Bio-Formats documentation includes a complete version history, guides for using Bio-Formats as a plugin for ImageJ/Fiji, extensive information on which formats are supported and the level of that support, and also information for developers wanting to extend Bio-Formats or use it in their own software.</p>
+            <p><a class="small button sites-button btn-blue" href="https://docs.openmicroscopy.org/bio-formats/6.4.0/" target="_blank">Read the Docs <i class="fa fa-long-arrow-right"></i></a></p>
+        </div>
+        <!-- end -->
+
+        <!-- begin -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Development and Licensing</h2>
+        </div>
+        <hr>
+        <div class="row column text-center">
+            <p>Bio-Formats is developed by the Open Microscopy Environment consortium, including development teams at <a href="https://loci.wisc.edu/" target="_blank">LOCI at the University of Wisconsin-Madison</a>, <a href="/teams/index.html#swedlow-lab">University of Dundee</a> and <a href="https://www.glencoesoftware.com" target="_blank">Glencoe Software</a>. Licensing and citing information is on the <a href="/licensing/">OME licensing page</a>.</p>
+        </div>
+        <!-- end -->
+
+        <!-- begin -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>File Formats</h2>
+        </div>
+        <hr>
+        <div class="row column text-center">
+            <p>Bio-Formats 5 improves support for High Content Screening, time lapse imaging, digital pathology and other complex multidimensional image formats, reading over <a href="https://docs.openmicroscopy.org/bio-formats/6.4.0/supported-formats.html">150 file formats</a> and their metadata to the <a href="https://docs.openmicroscopy.org/ome-model/6.0.0">OME data model</a> standard. </p>
+        </div>
+        <!-- end -->
+
+        <!-- begin -->
+        <hr class="whitespace">
+        <div class="row column text-center">
+            <h2>Our Community</h2>
+        </div>
+        <hr>
+        <div class="row column text-center">
+            <p>Bio-Formats is a community project and we welcome <a href="/contributors/">your input</a>. You can find guidance on <a href="https://docs.openmicroscopy.org/bio-formats/6.4.0/about/bug-reporting.html" target="_blank">reporting a bug</a>, upload files to our <a href="http://qa.openmicroscopy.org.uk/qa/upload/" target="_blank">QA system</a> for testing, and contact us via our mailing lists or forums. Further information about how the OME team works and how you can contribute to our projects is in the <a href="https://docs.openmicroscopy.org/contributing/" target="_blank">Contributing Developer Documentation</a>.</p>
+        </div>
+        <!-- end -->
+
+        <hr class="whitespace">
+                <!-- begin anchor -->
+        <div class="text-center">
+            <a id="back-to-top" href="#top-of-page"><i class="fa fa-arrow-up"></i> back to top</a>
+        </div>
+        <!-- end anchor -->
+
+        <!-- begin CTA -->
+        <hr class="whitespace">
+        <header class="marketing-hero" style="background-image: url('/img/bg/bio-formats.jpg');">
+            <div class="row">
+                <div class="small-12 columns bg-image-text-container-cta text-center">
+                    <p class="hero-subheader">Get started working with your images now</p>
+                    <a href="/bio-formats/downloads/" class="large btn-red button sites-button" style="text-shadow: none;">Download Bio-Formats</a>
+                </div>
+            </div>
+        </header>
+        <!-- end CTA -->
+
+
+        <div id="footer" class="callout large secondary">
+            <div class="row">
+                <div class="small-12 medium-4 columns">
+                    <div class="medium-4"><a href="/index.html"><img class="footer-logo" src="/img/logos/ome-main-nav.svg" alt="OME logo" /></a></div>
+                    <p>&copy; 2005-2020 University of Dundee &amp; Open Microscopy Environment. <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a></p>
+                    <p>OME source code is available under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General public license</a> or more permissive open source licenses, or through commercial license from <a href="https://www.glencoesoftware.com" target="_blank">Glencoe Software</a>.</p>
+                    <p class="tiny-print" style="float:left;">[ <a href="/site-map/">Site Map</a> ]</p>
+                    <p class="tiny-print" style="float:right;">Version: 2020.03.25</p>
+                </div>
+                <div class="medium-2 columns">
+                    <h6>Learn About Us</h6>
+                    <ul class="menu vertical">
+                        <li><a href="/about/">Who We Are</a></li>
+                        <li><a href="/teams/">Our Team</a></li>
+                        <li><a href="/explore/">What We Can Do</a></li>
+                        <li><a href="/news/">What We’re Up To</a></li>
+                        <li class="hide-for-large-only">&nbsp;</li>
+                    </ul>
+                </div>
+                <div class="medium-2 columns">
+                    <h6>Try Our Products</h6>
+                    <ul class="menu vertical">
+                        <li><a href="/omero/downloads/">OMERO <span class="badge">Download</span></a></li>
+                        <li><a href="/bio-formats/downloads">Bio-Formats <span class="badge">Download</span></a></li>
+                        <li><a href="/ome-files/downloads">OME Files <span class="badge">Download</span></a></li>
+                        <li class="hide-for-large-only">&nbsp;</li>
+                    </ul>
+                </div>
+                <div class="medium-2 columns">
+                    <h6>Knowledge Base</h6>
+                    <ul class="menu vertical">
+                        <li><a href="/support/">Support</a></li>
+                        <li><a href="/docs/">Documentation</a></li>
+                        <li><a href="https://help.openmicroscopy.org/">Help</a></li>
+                        <li><a href="https://www.openmicroscopy.org/community/">Forum</a></li>
+                        <li class="hide-for-large-only">&nbsp;</li>
+                    </ul>
+                </div>
+                <div class="medium-2 columns end">
+                    <h6>OME Public</h6>
+                    <ul class="menu vertical">
+                        <li><a href="https://twitter.com/openmicroscopy" target="_blank"><i class="fa fa-fw fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/company/ome---open-microscopy-environment" target="_blank"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://www.facebook.com/openmicroscopy" target="_blank"><i class="fa fa-fw fa-facebook"></i> Facebook</a></li>
+                        <li><a href="http://webchat.freenode.net/?channels=%23ome&amp;uio=d4" target="_blank"><i class="fa fa-fw fa-comments"></i> IRC</a></li>
+                        <li><a href="/on-the-web/" target="_blank"><i class="fa fa-globe"></i> On the Web</a></li>
+                        <li class="hide-for-large-only">&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/what-input.js"></script>
+    <script src="/js/vendor/foundation.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/responsive-tables.js"></script>
+    <script>
+        $(document).foundation();
+        try {
+             // helper function to filter out empty paths (trailing slash)
+            var omitEmpty = function(el) { return el.trim() !== ''};
+            
+            // extract last path bit from url
+            var paths = document.location.pathname.split('/').filter(omitEmpty);
+            var path = paths[paths.length-1];
+            
+            // helper function to find and set active option
+            var setActiveNavOption = function(el) {
+                var subPaths = el.href.split('/').filter(omitEmpty);
+                var subPath = subPaths[subPaths.length-1];
+                if (subPath === path) {
+                    $(el).addClass('is-active');
+                    return true
+                }
+                return false;
+            }
+            
+            // check if we have a .header-subnav match?
+            var hasSubMenu = false;
+            $(".header-subnav li a").each(function(i, el) {
+                var isMatch = setActiveNavOption(el);
+                if (isMatch) {
+                    hasSubMenu = true;
+                    return false;
+                }
+            });
+            
+            // find corresponding path bit for .menu-subnav option
+            if (hasSubMenu && paths.length > 1) {
+                var parentPath = paths[paths.length-2];
+                if (parentPath !== 'omero') path = parentPath;
+            }
+            
+            // set .menu-subnav option
+            $(".menu-subnav li a").each(function(i, el) {
+                if (setActiveNavOption(el)) return false;
+            });
+        } catch(ignored) {}
+    </script>
+
+    
+    </body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="community credits martservice">
+    <head>
+        <!-- meta information -->
+        <meta charset="utf-8" />
+        <meta name="author"
+              content="BioMart" />
+        <meta name="description"
+              content="The BioMart project provides free software and data services to the international scientific community in order to foster scientific collaboration and facilitate the scientific discovery process. The project adheres to the open source philosophy that promotes collaboration and code reuse." />
+        <meta name="robots"
+              content="index,follow" />
+        <meta name="revisit-after"
+              content="14 days" />
+        <meta name="country"
+              content="UK" />
+        <meta name="language"
+              content="en-GB" />
+
+        <!-- Who worked on this? -->
+        <link type="text/plain" rel="author" href="/humans.txt" />
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1">
+
+        <!-- Styling for all devices -->
+        <link rel="stylesheet" media="screen" href="assets/css/styles.css" />
+
+        <!-- Favicons [ See: http://www.jonathantneal.com/blog/understand-the-favicon/ ]
+             TL;DR: put a 32x32 favicon.ico file in root for IE, everything else uses the PNGs declared here -->
+        <!-- Favicon for Apple -->
+        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+        <!-- Win8 tiles -->
+        <meta name="msapplication-TileColor" content="#fff" />
+        <meta name="msapplication-TileImage" content="/assets/images/ms-tileicon.png" />
+        <!-- Favicon for everything else -->
+        <link rel="icon" href="/assets/images/favicon.png" />
+
+        <!-- The Adaptive-Images JavaScript
+             NOTE:      Used to automatically provide re-scaled images appropriate to the visitors device
+             REFERENCE: http://adaptive-images.com -->
+        <script>document.cookie = 'resolution=' + Math.max(screen.width, screen.height) + '; path=/';</script>
+
+        <!-- google analytics
+             NOTE:      This goes in the head because it's the asynchronous loader, read more here:
+             REFERENCE: http://code.google.com/apis/analytics/docs/tracking/asyncTracking.html -->
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30592404-1']);
+  _gaq.push(['_setDomainName', 'biomart.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+        <!-- Modernizr also goes in the head, to allow the HTML5 shiv to work for IE, and prevent FOUC.
+             REFERENCE: http://www.modernizr.com/docs/#installing -->
+
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/modernizr.custom.js"></script>
+        <script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script src="assets/js/menu.js"></script>
+        <script>
+            $(window).load(function() {
+                $('html').addClass('load');
+
+                $('.site_context .menu li.selected > a').click();
+
+                setTimeout(function() {
+                    $('.uk').addClass('selected');
+
+                    $('.country:not(.uk)').hover(function() {
+                        $('.uk').removeClass('selected');
+                        $('.country').unbind('mouseenter mouseleave');
+                    });
+                }, 3000);
+
+            });
+
+            $(document).ready(function() {
+                $(document).scroll(function() {
+
+                    var top = $(document).scrollTop();
+                    if (top <= 10)
+                        $('.header, .site_context').removeClass('shrink');
+                    if (top > 10)
+                        $('.header, .site_context').addClass('shrink');
+
+
+
+                });
+            });
+        </script>
+
+        <title>BioMart</title>
+
+    </head>
+    <body>
+        <div class="site_context">
+            <div class="main_nav">
+                <h2>Navigation</h2>
+                <ul class="menu collapsible">
+                    <li class="">
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Tools</a>
+                        <ul class="acitem">
+                            <li>
+                                <a href="/notice.html">browse data</a>
+                            </li>
+                            <li>
+                                <a href="/notice.html">id conversion</a>
+                            </li>
+                            <li>
+                                <a href="/notice.html">sequence retrieval</a>
+                            </li>
+                            <li>
+                                <a href="/notice.html">enrichment analysis</a>
+                            </li>
+                        </ul>
+                    </li>                     
+                    <li class="selected">
+                        <a href="/martservice_9.html">Web Service</a>
+                    </li>
+                    <li>
+                        <a href="/community.html">Community</a>
+                    </li>
+                    <li>
+                        <a href="/publications.html">Publications</a>
+                    </li>
+                    <li>
+                        <a href="/news.html">News</a>
+                    </li>               
+                    <li class="credits">
+                        <a href="/credits.html">Credits</a>                       
+                    </li>
+                    <li>
+                        <a target="_blank" href="/other/biomart_0.9_0_documentation.pdf">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#">version 0.7</a>
+                        <ul class="acitem">
+                            <li>
+                                <a href="/notice.html">Portal</a>
+                            </li>
+                            <li>
+                                <a href="/other/install-overview.html">Quick Install</a>
+                            </li>
+                            <li>
+                                <a href="/other/user-docs.pdf">Complete Docs</a>
+                            </li>
+                            <!--<li>
+                                <a href="/martservice.html">MartService Docs</a>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="acitem">
+                            <li>
+                                <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-users">Users Mailing List</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-announce">Announce Mailing List</a>
+                            </li>
+                            <!--<li>
+                                <p>If you have any inquiries regarding our software or services please post it to the <a target="_blank" href="https://groups.google.com/forum/?fromgroups#!forum/biomart-users">Users mailing list</a></p>
+                                <p>For any other inquiries please email <a href="mailto:arek.kasprzyk@gmail.com?Subject=General%20query">Arek Kasprzyk</a></p>
+                            </li>-->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="publications">
+                <span class="read-more">read more</span>
+                <a target="_blank" href="http://oxfordjournals-marketing.oup.com/q/1MozDkVONg1Q1p/wv" class="database">
+                    <img src="assets/images/pub-db.png" />
+                    <span>special issue<br/>dedicated to BioMart</span>
+                </a>
+                <a target="_blank" href="http://www.nature.com/nmeth/journal/v9/n1/full/nmeth.1815.html" class="nature">
+                    <img src="assets/images/pub-nature.png" />
+                    <span>BioMart in<br/>nature methods</span>
+                </a>
+            </div>
+        </div>
+        <div class="header section">
+            <a href="/" class="logo">BioMart</a>
+            <a href="/download.html" class="download">Download<span>v 0.9</span></a>
+            <a href="/news.html" class="latest-news"><span>[4th January 2016] OASIS in Nature Methods</span></a>            
+        </div>
+        <div class="main-content section">
+            <div class="intro">                
+                <h1><span>MartService</span></h1>
+                <h2><span>Quick start guide for versions 0.9 and 0.7</span></h2>
+
+                <div style="background: white; padding: 10px 20px; border: 5px solid #ffcc00; font-size: 17px; margin-top: 50px;">
+                <p style="font-size:17px;">Please note the Biomart Community Portal is temporarily unavailable, and therefore the links shown below will not work. However, you can still access BioMart services at any of the BioMart community servers. For more details please <a href="/notice.html"><strong>click here</strong></a>.</p>
+                </div>
+
+                <!--<div class="left sub-section">
+                    <p>The BioMart project provides free software and data services to the international scientific community in order to foster scientific collaboration and facilitate the scientific discovery process. The project adheres to the open source philosophy that promotes collaboration and code reuse.</p>                    
+                </div>
+                <div class="right sub-section">
+                    <div class="join-community">
+                        <h3>Join our community</h3>
+                        <div>
+                            <span>download our software to join</span>
+                            <a href="/download.html">download now</a>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="left sub-section">
+                    <p>The following instructions cover REST and SOAP access for both version 0.7 and 0.9.</p>
+                    <p>Any syntax differences between v0.7 and v0.9 will be highlighted below.</p>                         
+                </div>-->
+            </div>
+            <div class="community-table by-team">    
+                              
+                <!--<h3><span>RESTful Access</span></h3>    -->
+
+             
+
+            
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h3>Quick Start</h3>                                
+                                <div class="content">
+                                    <h4><span>Example Query</span></h4>
+                                    <p>Save our query example below as query.xml</p>
+                                    <div class="command">&lt;!DOCTYPE Query>&lt;Query client="true" processor="TSV" limit="-1" header="1">&lt;Dataset name="hsapiens_gene_ensembl" config="gene_ensembl_config">&lt;Filter name="chromosome_name" value="1" filter_list=""/>&lt;Attribute name="ensembl_gene_id"/>&lt;Attribute name="ensembl_transcript_id"/>&lt;/Dataset>&lt;/Query></div>
+                                    <h4><span>Run Query</span></h4>
+                                     <p>Next, run the command respective of your Biomart service version:</p>
+                                    <p><b>v0.9 service</b></p>
+                                    <div class="command">curl --data-urlencode query@query.xml http://central.biomart.org/martservice/results</div>
+                                    <p><b>v0.7 service</b></p>
+                                    <div class="command">curl --data-urlencode query@query.xml http://www.biomart.org/biomart/martservice?query=</div>
+                                </div>
+                            </td>
+                             <td>
+                                <h3>Creating Alternative Queries</h3>
+                                
+                                <div class="content">
+                                    <p>Now that you're up and running you might like to try out different queries.</p>
+                                    <p>There are 2 ways to do this, you can use our GUI or access our meta data programmatically. We've outlined both methods below:</p>
+                                    <h4><span>GUI</span></h4>
+                                    <p>You can compile different queries using our <a target="_blank" href="/notice.html">web GUI</a></p>
+                                    <p>Follow the steps outlined by the GUI. After clicking the 'results' button, click the REST/SOAP button and save the query as query.xml. Finally run the query as explained in the Quick Start block, substituting the example query for your new query.xml.</p>
+
+                                    <h4><span>Programmatic Access</span></h4>
+                                    <p>If you need programmatic access to all the datasets, fitlers and attributes follow this link links below, respective of your Biomart service version.</p>
+                                    <p>For more information please refer to our <a href="/other/biomart_0.9_0_documentation.pdf" target="_blank">documentation</a></p>
+                                    <p><b>v0.9 service:</b></p>
+                                    
+                                        <ul>
+                                        <li>registry information:<br/><a href="http://central.biomart.org/martservice/portal" target="_blank" class="no-bg">http://central.biomart.org/martservice/portal</a></li>
+                                        <li>available marts:<br/><a href="http://central.biomart.org/martservice/marts" target="_blank" class="no-bg">http://central.biomart.org/martservice/marts</a></li>
+                                        <li>datasets available for a config:<br/><a href="http://central.biomart.org/martservice/datasets?config=snp_config" target="_blank" class="no-bg">http://central.biomart.org/martservice/datasets?config=snp_config</a></li>
+                                        <li>attributes available for a dataset:<br/><a href="http://central.biomart.org/martservice/attributes?datasets=btaurus_snp&config=snp_config" target="_blank" class="no-bg">http://central.biomart.org/martservice/attributes?datasets=btaurus_snp&config=snp_config</a></li>
+                                        <li>filters available for a dataset:<br/><a href="http://central.biomart.org/martservice/filters?datasets=btaurus_snp&config=snp_config" target="_blank" class="no-bg">http://central.biomart.org/martservice/filters?datasets=btaurus_snp&config=snp_config</a></li>                                        
+                                    </ul>
+                                    
+                                    <p><b>v0.7 service:</b></p>
+                                    <ul>
+                                        <li>registry information:<br/><a href="http://www.biomart.org/biomart/martservice?type=registry" target="_blank" class="no-bg">http://www.biomart.org/biomart/martservice?type=registry</a></li>
+                                        <li>datasets available for a mart:<br/><a href="http://www.biomart.org/biomart/martservice?type=datasets&mart=ensembl" target="_blank" class="no-bg">http://www.biomart.org/biomart/martservice?type=datasets&mart=ensembl</a></li>
+                                        <li>attributes available for a dataset:<br/><a href="http://www.biomart.org/biomart/martservice?type=attributes&dataset=oanatinus_gene_ensembl" target="_blank" class="no-bg">http://www.biomart.org/biomart/martservice?type=attributes&dataset=oanatinus_gene_ensembl</a></li>
+                                        <li>filters available for a dataset:<br/><a href="http://www.biomart.org/biomart/martservice?type=filters&dataset=oanatinus_gene_ensembl" target="_blank" class="no-bg">http://www.biomart.org/biomart/martservice?type=filters&dataset=oanatinus_gene_ensembl</a></li>
+                                        <li>configuration for a dataset:<br/><a href="http://www.biomart.org/biomart/martservice?type=configuration&dataset=oanatinus_gene_ensembl" target="_blank" class="no-bg">http://www.biomart.org/biomart/martservice?type=configuration&dataset=oanatinus_gene_ensembl</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

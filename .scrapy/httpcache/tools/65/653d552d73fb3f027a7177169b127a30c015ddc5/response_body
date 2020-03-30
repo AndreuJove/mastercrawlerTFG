@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Liang Chen's Laboratory</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Liang Chen, Computational Biology, High throughput Sequencing, RNA-seq, Alternative Splicing, GWAS"/>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+<!--
+.style2 {
+	font-size: 14px;
+	color: #000000;
+}
+.style4 {
+	color: #FFFFCC;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style5 {font-family: Arial, Helvetica, sans-serif; font-size: 16px;}
+.style6 {color: #000000}
+-->
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+      <h1><img src="images/Untitled-1.jpg" width="1000" height="190" /></h1>
+      <ul class="lowright" id="nav">
+          <li class="b"><a href="./index.html" class="style8">Home</a></li>
+          <li class="a"><a href="./research.html" class="style8">Research</a></li>
+          <li class="d"><a href="./publications.html" class="style8">Publications</a></li>
+          <li class="d"><a href="./software.html" class="style8">Software</a></li>
+		  <li class="d"><a href="./people.html" class="style8">People</a></li>
+		  <li class="a"><a href="./positions.html" class="style8">Positions</a></li>
+    </ul>
+      <div id="body">
+          <div><div><div><div class="inner">
+            <h2><img src="images/software.gif" width="250" height="30" align="middle" /></h2>
+              <div class="indent style2">
+              
+              
+               <p class="style5"> &nbsp;</p>
+                  <p class="style5"> <strong>eQTL mapping with quantile regression</strong></p>
+                  <p class="style5"> See details in: Sun B. and Chen L: Quantile regression for challenging cases of eQTL mapping. Briefings in Bioinformatics (in press).
+                  </p> 
+                   <p class="style5"><a href="https://github.com/bsun0802/eQTL-mapping"> QR_eQTL </a> </p>
+             
+              
+              
+               <p class="style5"> &nbsp;</p>
+                  <p class="style5"> <strong>BCSeq</strong></p>
+                  <p class="style5"> This is a software tool to quantify gene expression from scRNA-seq. See details in: Chen L. and Zheng S., BCseq: accurate single cell RNA-seq quantification with bias
+correction.  Nucleic Acids Research 2018.
+                  </p> 
+                   <p class="style5"><a href="research/BCseq/BCseq.zip"> BCseq </a> </p>
+             
+             
+              <p class="style5"> &nbsp;</p>
+                  <p class="style5"> <strong>ELTSeq</strong></p>
+                  <p class="style5"> This is a software tool to detect DE genes for RNA-seq data with high level of hetergeniety such as cancer RNA-seq data. See details in: Xu,M., L.Chen, An empirical likelihood ratio test robust to individual heterogeneity for differential expression analysis of RNA-seq.  Briefings in Bioinformatics, 2018.
+                  </p> 
+                   <p class="style5"><a href="research/eltseq/ELTSeq.zip"> ETLSeq </a> </p>
+                 
+              
+              
+              <p class="style5"> &nbsp;</p>
+                  <p class="style5"> <strong>WemIQ</strong></p>
+                  <p class="style5"> This is a software tool to quantify isoform expression and exon splicing ratios from RNA-seq data accurately and robustly. See details in: Zhang, J., C.C. Kuo, and L. Chen, WemIQ: an accurate and robust isoform quantification method for RNA-seq data. Bioinformatics, 2015. 31(6):878-85.
+                  </p> 
+                   <p class="style5"><a href="research/wemiq/WemIQ.tar.gz"> WemIQ </a> </p>
+                    
+              
+              
+              <p class="style5"> &nbsp;</p>
+                  <p class="style5"> <strong>GPSeq</strong></p>
+                  <p class="style5"> This is a software tool to analyze RNA-seq data to estimate gene and exon expression, identify differentially
+                  	expressed genes, and differentially spliced exons. See details in: Srivastava, S. and L. Chen, A two-parameter generalized Poisson model to improve the analysis of RNA-seq data. Nucleic Acids Research, 2010 Jul 29. [Epub ahead of print].
+                  </p> 
+                   <p class="style5"><a href="research/gpseq/R_pack/R_pkgs_07_11.zip"> R package (updated on 07/05/2011, also can be found at CRAN) </a> </p>
+                   <p class="style5"><a href="research/gpseq/C_binaries/final_070411.tar.gz"> C binaries (updated on 07/05/2011) </a> </p>
+                   
+                   We also prepared perl scripts to generate the required input files for GPSeq. Users need to provide their own alignment files in .SAM format and gene annotation files. More details can be found in README.
+                   <p class="style5"><a href="research/gpseq/script_files_07_11.tar.gz"> Perl scripts (updated on 07/05/2011) </a> </p>
+                   
+                   <p class="style5"> <span style="background-color:yellow"> Important updates on 07/05/2011 </span>: For those genes/exons without GP estimates due to extremely low coverage, we use Poisson estimates and report the log likelihood ratio test statistics for differential expression analysis. </p>
+               <p class="style5"> &nbsp;</p>
+                  <p class="style5"> <strong>Transcriptome comparsion between nucleus and cytosol</strong></p>
+                  <p class="style5"> The datasets are results for the transcriptome comparison between nucleus and cytosol. See details in:
+                    "Global comparative analysis between nuclear and cytosolic transcriptomes reveals differential compartmentalization of alternative transcript isoforms" </A> 
+                   </p>
+                                    <p class="style5"><a href="research/cyto-nuc/isoform.zip">Cytosolic and Nuclear isoforms in HepG2 and HeLa</a> </p>
+                                    
+                  <p class="style5"> &nbsp;</p>
+                  <p class="style5"> <strong>BASIS</strong></p>
+                  <p class="style5"> This is a software tool to identify differentially expressed transcript isoforms from 
+                  high-throughput RNA-seq data or high-density tiling arrays. See details in:
+                   <A HREF="http://nar.oxfordjournals.org/cgi/content/full/gkp282v1" target="_blank"> "A hierarchical Bayesian model for comparing transcriptomes at the individual transcript isoform level" </A> <i>Nucleic Acids Research </i> 37(10):e75 (2009) 
+                   </p>
+                                    <p class="style5"><a href="research/basis/BASIS_v1.rar">Download here</a> </p>
+                                    <p class="style5"><a href="research/basis/simu_data.rar">Simulation data for the comparison between BASIS and SPACE</a> </p>
+                                    
+                  <p class="style5"> &nbsp;</p>
+                  <p class="style5"> <strong>pCastNet</strong></p>
+                  <p class="style5"> This is a database for the reconstructed GG, EG, and EE networks based on exon arrays in mouse, rat, and human. See details in:
+                   <A HREF="http://genomebiology.com/2009/10/1/R3" target="_blank"> "Studying alternative splicing regulatory networks through partial correlation analysis" </A> <i>Genome Biology</i> 10(1): R3(2009) 
+                   </p>
+                                    <p class="style5"><a href="http://lianglab.usc.edu/pcastnet/login.jsp">Database link</a> </p>
+                  
+                  <p class="style5"> &nbsp;</p>
+                  <p class="style5"> <strong>Prediction of alternative exons using Random Forests </strong></p>
+                  <p class="style5"> This is a database for the predicted alternative exons in human. See details in:
+                   <A HREF="http://www.plosone.org/article/info:doi/10.1371/journal.pone.0002806" target="_blank"> "Identify alternative splicing events based on position-specific evolutionary conservation" </A> <i>PLoS ONE</i> 3(7): e2806 (2008)
+                   </p>
+                                    <p class="style5"><a href="http://lianglab.usc.edu/prediction/geneSearchHome.jsp">Database link</a> </p>
+                                
+                         
+                                  </blockquote>
+                                </blockquote>
+                              </blockquote>
+                            </blockquote>
+                          </blockquote>
+                        </blockquote>
+                      </blockquote>
+                    </blockquote>
+                  </blockquote>
+                  <p class="style5">&nbsp;</p>
+          <!--        <p class="style5"><strong>Software2:</strong></p>
+                  <p class="style5">&lt;description&gt; about the software</p>
+                  <p class="style5"><strong>Software3:</strong></p>
+                  <p class="style5">&lt;description&gt; about the software</p>
+                  <p class="style5"><strong>Software4:</strong></p>
+                  <p class="style5">&lt;description&gt; about the software</p>
+           -->       <p class="style5"><br />
+                  </p>
+              </div>
+              
+
+              
+              
+                 
+   
+                      <!-- end right -->
+                      <div class="clear"></div>
+                  </div></div>
+              
+          </div></div></div></div><!-- end .inner -->
+      </div><!-- end body -->
+      <div id="footer">
+	  	<!-- Do not remove -->
+
+		<!-- Do not remove End -->
+      </div><!-- end footer -->
+  </div><!-- end wrapper -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Content-Md5: CWRwhJFDktl7UgV2grQ4bQ==
+Last-Modified: Mon, 14 Oct 2019 17:52:47 GMT
+Vary: Accept-Encoding
+Server: nginx
+X-Ms-Request-Id: 477b3ff6-501e-0084-04c3-060b13000000
+X-Ms-Version: 2009-09-19
+X-Ms-Meta-Mtime: 2018-12-13T14:48:11.902430137Z
+X-Ms-Lease-Status: unlocked
+X-Ms-Blob-Type: BlockBlob
+Access-Control-Allow-Origin: *
+X-Served: Nginx-Proxito-Sendfile
+X-Deity: web04
+Strict-Transport-Security: max-age=31536000;
+X-Rtd-Project: atropos
+X-Rtd-Version: 1.1
+X-Rtd-Path: /proxito/media/html/atropos/1.1/index.html
+X-Rtd-Domain: atropos.readthedocs.io
+X-Rtd-Version-Method: subdomain
+Date: Mon, 30 Mar 2020 18:44:00 GMT

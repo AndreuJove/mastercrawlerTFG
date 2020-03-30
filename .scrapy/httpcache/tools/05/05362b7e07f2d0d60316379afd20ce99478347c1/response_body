@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <title>Datasets2Tools</title> -->
+    <link rel="icon" type="image/ico" href="/datasets2tools/static/icons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/datasets2tools/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/datasets2tools/static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/datasets2tools/static/css/base-style.css">
+    <link rel="stylesheet" type="text/css" href="/datasets2tools/static/css/macros-style.css">
+    <link rel="stylesheet" type="text/css" href="/datasets2tools/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300" rel="stylesheet">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-6277639-30', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+
+    <link rel="stylesheet" type="text/css" href="/datasets2tools/static/css/chosen.css">
+    <link rel="stylesheet" type="text/css" href="/datasets2tools/static/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="/datasets2tools/static/css/slick-theme.css">
+	
+	<title>Datasets2Tools | Bioinformatics Index</title>
+
+
+</head>
+<body style="background-image: url(/datasets2tools/static/images/background/background.png)">
+
+    <nav id="navbar" class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+      <div class="container">
+
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation.">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <a class="navbar-brand" href="/datasets2tools/">
+            <img id="d2t-logo" src="/datasets2tools/static/icons/datasets2tools.png">
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbar-links">
+              <form id="search-form" class="form-inline" action="/datasets2tools/search">
+                  <input type="hidden" name="object_type" value="canned_analysis">
+                  <input class="form-control" type="text" name="q" placeholder="Search Datasets2Tools...">
+                  <button class="btn" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+              </form>
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="/datasets2tools/contribute">Contribute</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="https://chrome.google.com/webstore/detail/datasets2tools/fbamphimpljabaailcaidmeegpcpkdel" target="_blank">Chrome Extension</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/datasets2tools/api">API</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/datasets2tools/help">Help</a>
+                  </li>
+                  <li class="nav-item">
+
+                    
+
+                      <button id="sign-in" type="button" class="btn" data-toggle="modal" data-target="#login-modal">
+                          Sign In
+                      </button>
+
+                    
+
+                  </li>
+              </ul>
+          </div>
+
+        </div>
+    </nav> <!-- #navbar -->
+
+    <div id="login-modal" class="modal user-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title user-modal-label">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body user-modal-body">
+                  <form id="login-form" action="/datasets2tools/login" method="post">
+                      <div class="form-group">
+                          <input type="email" class="form-control" name="email" placeholder="&#xf0e0;&nbsp;&nbsp;&nbsp;Email">
+                      </div>
+                      <div class="form-group">
+                          <input type="password" class="form-control" name="password" placeholder="&#xf084;&nbsp;&nbsp;&nbsp;Password">
+                      </div>
+                      <input id="signin-button" type="submit" value="Sign In" class="btn btn-primary account-button">
+                    </form>
+                    <div class="error-message">
+                      
+                        
+                      
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div id="signup-question" class="col-6">New? <a href="#" data-toggle="modal" data-target="#signup-modal">Sign up</a></div>
+                        <div id="forgot-password-question" class="col-6 text-right"><a href="#">Forgot password?</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- #login-modal -->
+
+    <div id="signup-modal" class="modal user-modal" tabindex="-1" role="dialog" aria-labelledby="signup-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title user-modal-label">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body user-modal-body">
+                  <form id="signup-form" action="/datasets2tools/signup" method="post">
+                      <div class="form-group">
+                          <input type="text" class="form-control" name="username" placeholder="&#xf2c0;&nbsp;&nbsp;&nbsp;Username" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="email" class="form-control" name="email" placeholder="&#xf0e0;&nbsp;&nbsp;&nbsp;Email" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="password" class="form-control" name="password" placeholder="&#xf084;&nbsp;&nbsp;&nbsp;Password" required>
+                      </div>
+                      <input id="signup-button" type="submit" value="Create Account" class="btn btn-primary account-button">
+                  </form>
+                  <div class="error-message">
+                  
+                    
+                  
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- #signup-modal -->
+
+    <div id="content" class="container-fluid">
+        
+	<div id="homepage-container" class="container-fluid text-center">
+		<div id="homepage-header-row" class="row" style="background-image: url(/datasets2tools/static/images/header-background.png)">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div id="d2t-title">
+							<img id="d2t-logo-large" src="/datasets2tools/static/icons/datasets2tools-blue.png">
+							<div>
+								<span>Datasets2Tools</span>
+								<hr width="100%" class="my-1">
+								<div id="d2t-subtitle">Bioinformatics Index</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="homepage-search" class="container">
+					<div class="row">
+						<div class="col-12">
+							<form class="form-inline" action="/datasets2tools/search">
+								<input class="form-control" type="text" placeholder="Search for genes, diseases, technologies..." name="q">
+								<button class="btn" type="submit">
+									<i class="fa fa-search"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+					<div id="search-example-row" class="row">
+						<div class="col-12">
+							<div>Example: <a href="/datasets2tools/search?object_type=canned_analysis&amp;tool_name=GeneMANIA&amp;geneset=upregulated">networks of genes upregulated in prostate cancer</a>, <a href="/datasets2tools/search?q=diabetes&amp;object_type=dataset">diabetes datasets</a>, <a href="/datasets2tools/search?q=enrichment&amp;object_type=tool&amp;geneset=upregulated">enrichment analysis tools</a></div>
+						</div>
+					</div>
+					<div id="homepage-info-row" class="row">
+						<div class="col-4">
+							<a href="/datasets2tools/search?object_type=canned_analysis"><i class="fa fa-pie-chart info-row-icon"></i></a>
+							<div class="info-row-title"><span class="info-row-number">31500</span>+<br>Analyses</div>
+							<div class="info-row-text">Find enrichment analyses, small molecule queries, interactive heatmaps, and many others</div>
+						</div>
+						<div class="col-4">
+							<a href="/datasets2tools/search?object_type=dataset"><i class="fa fa-database info-row-icon"></i></a>
+							<div class="info-row-title"><span class="info-row-number">6800</span>+<br>Datasets</div>
+							<div class="info-row-text">Find microarray, RNA-seq and proteomics datasets from major biomedical repositories</div>
+						</div>
+						<div class="col-4">
+							<a href="/datasets2tools/search?object_type=tool"><i class="fa fa-cogs info-row-icon" style="padding-left: 25px;"></i></a>
+							<div class="info-row-title"><span class="info-row-number">4900</span>+<br>Tools</div>
+							<div class="info-row-text">Find computational tools and databases spanning multiple technologies and disciplines</div>
+						</div>
+					</div>
+					<div id="citation">
+						 Please acknowledge Datasets2Tools in your publications by citing the following reference:
+						 <a href="https://doi.org/10.1038/sdata.2018.23" id="citation-link" class="d-block pt-2" target="_blank">
+							 Torre D, Krawczuk P, Jagodnik KM, Lachmann A, Wang Z, Wang L, Kuleshov MV, Ma'ayan A. Datasets2Tools, repository and search engine for bioinformatics datasets, tools and canned analyses. Sci Data. 2018 Feb 27;5:180023
+						 </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    </div> <!-- #content -->
+
+    <div id="footer" class="bg-inverse">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h6>Affiliations</h6>
+                    <ul>
+                        <li><a href="http://icahn.mssm.edu/research/labs/maayan-laboratory" target="_blank">The Ma'ayan
+                            Lab</a></li>
+                        <li><a href="http://www.lincs-dcic.org/" target="_blank">BD2K-LINCS Data Coordination and
+                            Integration Center (DCIC)</a></li>
+                        <li><a href="http://www.lincsproject.org/">NIH LINCS program</a></li>
+                        <li><a href="http://bd2k.nih.gov/" target="_blank">NIH Big Data to Knowledge (BD2K)</a></li>
+                        <li><a href="http://icahn.mssm.edu/" target="_blank">Icahn School of Medicine at Mount Sinai</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <h6>License</h6>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">All contents on this site are covered </span> by the <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                </div>
+            </div>
+        </div> <!-- .container -->
+
+        <div id="js">
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+            <script src="/datasets2tools/static/js/tether.min.js"></script>
+            <script src="/datasets2tools/static/js/bootstrap.min.js"></script>
+            <script src="/datasets2tools/static/js/scripts.js"></script>
+            <script src="/datasets2tools/static/js/embed.js"></script> <!-- Altmetric -->
+            <script src="/datasets2tools/static/js/widget-popup.js"></script> <!-- PlumX -->
+            <script src="/datasets2tools/static/js/base-scripts.js"></script>
+            
+	<script type="text/javascript">
+		$('.info-row-number').each(function () {
+			$(this).prop('Counter',0).animate({
+				Counter: $(this).text()
+			}, {
+				duration: 2000,
+				easing: 'swing',
+				step: function (now) {
+					$(this).text(Math.ceil(now));
+				}
+			});
+		});
+	</script>
+
+        </div> <!-- #js -->
+    </div> <!-- #footer -->
+
+</body>
+</html>

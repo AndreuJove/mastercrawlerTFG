@@ -1,0 +1,12 @@
+Server: nginx/1.14.0 (Ubuntu)
+Date: Mon, 30 Mar 2020 18:44:14 GMT
+Content-Type: text/html; charset=UTF-8
+Pragma: no-cache
+Cache-Control: no-cache
+X-Ua-Compatible: IE=edge,chrome=1
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: upgrade-insecure-requests
+Set-Cookie: VISITOR=ae657bd5-2fbb-4863-a58b-c749fe7d45ea; Max-Age=315360000; Path=/; expires=Thu, 28-Mar-2030 18:44:14 GMT; HttpOnly
+Location: https://sourceforge.net/projects/bbmap/
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000

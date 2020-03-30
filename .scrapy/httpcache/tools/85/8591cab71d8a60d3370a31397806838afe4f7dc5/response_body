@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BEST: Biomedical Entity Search Tool</title>
+<link rel="shortcut icon" href="./img/favicon_b2.ico"/>
+<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+
+<!-- Google Analytics - Donghyeon Kim (krth32@gmail.com) 2018.8.16 -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124027376-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124027376-1');
+</script>
+
+<script async type="text/javascript" src="js/dmisutils/utils.js"></script>
+<script async type="text/javascript" src="/js/lib/jquery-1.7.2.min.js"></script>
+<script async type="text/javascript" src="/collection1/admin/file?file=/velocity/jquery.autocomplete.js&amp;contentType=text/javascript"></script>
+<link rel="stylesheet" href="/collection1/admin/file?file=/velocity/jquery.autocomplete.css&amp;contentType=text/css" type="text/css" />
+  
+
+    <script>
+    $(document).ready(function(){
+      $("#querytxt").autocomplete('/collection1/terms', {             extraParams:{
+             'terms.prefix': function() { return $("#querytxt").val();},
+             'terms.sort': 'count',
+             'terms.fl': 'text',
+             'wt': 'velocity',
+             'v.template': 'sgst'
+           }
+         }
+      ).keydown(function(e){
+        if (e.keyCode === 13){
+          $("#search").trigger('submit');
+        }
+      });
+
+      // http://localhost:8983/solr/collection1/terms?terms.fl=name&terms.prefix=i&terms.sort=count&wt=velocity&v.template=suggest
+    });
+
+    </script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<h1>
+				<a href="./">BEST: Biomedical Entity Search Tool</a>
+			</h1>
+		</div>
+		<div id="content">
+			<br /> 
+			<div class="main_center">
+				<!-- <a href="http://best2.korea.ac.kr"><h1>Click here to use BEST 2.0</h1></a> <br><br> -->
+				<img src="./img/bm1.jpg" alt="BEST"/>
+				<br />
+				<br />
+				<form name="search" id="search" action="./s?" method="get" style="height: 25px; width: 600px; display:inline;">
+					<select id="dropdown_otype" name="otype" style="margin:0;height: 25px; width:150px" >
+						<option value="">All Entity Types</option>
+						<option value="8">Gene</option>
+						<option value="5">Drug</option>
+						<option value="3">Chemical Compound</option>
+						<option value="14">Target</option>
+						<option value="4">Disease</option>
+						<option value="15">Toxin</option>
+						<option value="16">Transcription Factor</option>
+						<option value="10">miRNA</option>
+						<option value="12">Pathway</option>
+<!-- 						<option value="1">Body Parts</option> -->
+<!-- 						<option value="2">Cell</option> -->
+<!-- 						<option value="6">Food</option> -->
+<!-- 						<option value="7">Function</option> -->
+<!-- 						<option value="9">GOTerm</option> -->
+<!-- 						<option value="11">Organism</option> -->
+<!-- 						<option value="13">Symptom</option> -->
+						<option value="17">Mutation</option>
+						<option value="20">Fusion Gene</option>
+<!--						<option value="18">Cell Line</option> -->
+					</select>
+					<input type="text" name="q" id="querytxt" size="50" style="height: 25px; padding:0px 5px; font-size:17px;" onclick="this.setSelectionRange(0, 9999)" autofocus /> 
+<!-- 					<input type="hidden" name="d" value="30" /> -->
+					<input type="hidden" name="t" value="l" />
+<!-- 					<input type="hidden" name="defType" value="edismax"/> -->
+					<input type="hidden" name="wt" value="xslt" />
+					<input type="hidden" name="tr" value="l.xsl"/>
+<!-- 					<input type="hidden" name="rows" value="10"/> -->
+					<input type="submit" value="Search" style="color:#fff; background-color:rgb(27, 104, 148); border-color:#46b8da; padding:6px 12px; border:1px solid transparent; border-radius:6px; cursor:pointer; font-weight: bold;" onclick="if(queryPreprocess('querytxt','sq') == false) { return false;}" />
+				</form>
+<!--				&nbsp;&nbsp;<a href="./help/A%20GUIDE%20TO%20BOSS%202.pdf" target="_blank" style="font-size: 15px;">Help</a> -->
+<input type="button" onclick="location.href='/advsearch.html';" value="Advanced search" style="color:#fff; background-color:rgb(27, 104, 148); border-color:#46b8da; padding:6px 12px; border:1px solid transparent; border-radius:6px; cursor:pointer; font-weight: bold;"/>
+				&nbsp;&nbsp;<a href="./help/BEST_Guide.pdf" target="_blank" style="font-size: 15px;">Read Me</a>
+				<br/>
+				<br/>
+<!-- 				<font size="3">Examples: <a id="ex1" href="./s?q=abl1+bcr&amp;t=l&amp;defType=edismax&amp;wt=xslt&amp;tr=l.xsl">abl1 bcr</a>; <a id="ex1" href="./s?q=egfr&amp;t=l&amp;defType=edismax&amp;wt=xslt&amp;tr=l.xsl">egfr</a>; <a id="ex2" href="./s?q=brca1&amp;t=l&amp;defType=edismax&amp;wt=xslt&amp;tr=l.xsl">brca1</a> -->
+				<div class="examples">
+				<p>Examples: <a id="ex1" href="./s?q=chronic+myeloid+leukemia&amp;t=l&amp;wt=xslt&amp;tr=l.xsl">chronic myeloid leukemia</a>; <a id="ex2" href="./s?otype=17&amp;q=(chronic+myeloid+leukemia)+AND+imatinib+AND+resistance&amp;t=l&amp;wt=xslt&amp;tr=l.xsl">(chronic myeloid leukemia) AND imatinib AND resistance</a><!--; <a id="ex3" href="./s?q=lung+cancer&amp;t=l&amp;wt=xslt&amp;tr=l.xsl">lung cancer</a>; <a id="ex4" href="./s?q=melanoma&amp;t=l&amp;wt=xslt&amp;tr=l.xsl">melanoma</a>; <a id="ex5" href="./s?q=tyrosine+kinase+inhibitor&amp;t=l&amp;wt=xslt&amp;tr=l.xsl">tyrosine kinase inhibitor</a>-->
+</p>
+				</div>
+				
+				<div style="color:#acacac">*Best viewed in the latest version of Chrome, Safari, IE (w/ compatibility option turned off), Opera and Firefox.</div>
+				<div style="color:#acacac">*BEST indexes PubMed abstracts daily.</div>
+<div style="color:#acacac"> Powered by Korea University </div>
+<br/>				
+<div align="left">
+Please cite <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0164680">this paper</a> if you use BEST on your work.
+<br/>
+<br/>
+<pre style="white-space: pre-wrap;">
+@article{lee2016best,
+  title={BEST: Next-Generation Biomedical Entity Search Tool for Knowledge Discovery from Biomedical Literature},
+  author={Lee, Sunwon and Kim, Donghyeon and Lee, Kyubum and Choi, Jaehoon and Kim, Seongsoon and Jeon, Minji and Lim, Sangrak and Choi, Donghee and Kim, Sunkyu and Tan, Aik-Choon and Kang, Jaewoo},
+  journal={PLoS ONE},
+  volume={11},
+  number={10},
+  pages={e0164680},
+  year={2016},
+  publisher={Public Library of Science}
+}
+</pre>
+</div>
+			</div>
+		</div>
+		<div id="footer">
+		</div>
+	</div>
+</body>
+</html>

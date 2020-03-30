@@ -1,0 +1,13 @@
+<html>
+<title>AGE download page</title>
+<body>
+By downloading AGE software you agree to the terms of <a href="http://creativecommons.org/licenses/by-nc/2.5/legalcode">Creative Commons license (Attribution-NonCommerical)</a>.<br><br>
+
+Download:
+<ul>
+  <li><a href="AGE_v0.4.zip">AGE v0.4</a>; September 12, 2011 <i>Added functionality to align sequences with inversions or tandem duplications. Improved search for alternative alignments.</i></li>
+  <li><a href="AGE_v0.2.zip">AGE v0.2</a></li>
+  <li><a href="AGE_v0.1.zip">AGE v0.1</a></li>
+<ul>
+</body>
+</html>

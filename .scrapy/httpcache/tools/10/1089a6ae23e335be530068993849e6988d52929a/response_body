@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="no-js">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://insysbio.com/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="http://insysbio.com/en/software/db-solve-optimum" />
+<link rel="shortlink" href="http://insysbio.com/en/node/57" />
+<meta property="og:site_name" content="InSysBio" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://insysbio.com/en/software/db-solve-optimum" />
+<meta property="og:title" content="DBSolveOptimum" />
+<meta property="og:updated_time" content="2013-09-04T02:28:02+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="http://insysbio.com/en/software/db-solve-optimum" />
+<meta name="twitter:title" content="DBSolveOptimum" />
+<meta property="article:published_time" content="2013-08-11T23:47:16+03:00" />
+<meta property="article:modified_time" content="2013-09-04T02:28:02+03:00" />
+  <title>DBSolveOptimum | InSysBio</title>
+  <script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script><!-- TODO ?: move to $scripts -->
+  
+  <style type="text/css" media="all">
+@import url("http://insysbio.com/modules/system/system.base.css?ozarln");
+@import url("http://insysbio.com/modules/system/system.menus.css?ozarln");
+@import url("http://insysbio.com/modules/system/system.messages.css?ozarln");
+@import url("http://insysbio.com/modules/system/system.theme.css?ozarln");
+</style>
+<style type="text/css" media="all">
+@import url("http://insysbio.com/modules/comment/comment.css?ozarln");
+@import url("http://insysbio.com/modules/field/theme/field.css?ozarln");
+@import url("http://insysbio.com/modules/node/node.css?ozarln");
+@import url("http://insysbio.com/modules/search/search.css?ozarln");
+@import url("http://insysbio.com/modules/user/user.css?ozarln");
+@import url("http://insysbio.com/modules/forum/forum.css?ozarln");
+@import url("http://insysbio.com/sites/all/modules/views/css/views.css?ozarln");
+</style>
+<style type="text/css" media="all">
+@import url("http://insysbio.com/sites/all/modules/ctools/css/ctools.css?ozarln");
+@import url("http://insysbio.com/modules/locale/locale.css?ozarln");
+</style>
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+#page,#container{width:960px;}#wrapper{float:left;width:100%;}#primary{margin-left:244px;}#secondary{float:left;width:244px;margin-left:-960px;}#tertiary{width:0px;margin-left:-960px;float:left;}
+
+/*]]>*/-->
+</style>
+<style type="text/css" media="all">
+@import url("http://insysbio.com/sites/all/themes/layoutstudio/css/defaults.css?ozarln");
+</style>
+
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/css/defaults_ie.css?ozarln" media="all" />
+<![endif]-->
+<style type="text/css" media="screen, projection">
+@import url("http://insysbio.com/sites/all/themes/insysbio/css/fonts.css?ozarln");
+@import url("http://insysbio.com/sites/all/themes/insysbio/css/screen.css?ozarln");
+</style>
+
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="http://insysbio.com/sites/all/themes/insysbio/css/ie/fix-ie6.css?ozarln" media="all" />
+<![endif]-->
+
+<!--[if IE 7]>
+<link type="text/css" rel="stylesheet" href="http://insysbio.com/sites/all/themes/insysbio/css/ie/fix-ie7.css?ozarln" media="all" />
+<![endif]-->
+  <script type="text/javascript" src="http://insysbio.com/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://insysbio.com/misc/jquery-extend-3.4.0.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://insysbio.com/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://insysbio.com/misc/drupal.js?ozarln"></script>
+<script type="text/javascript" src="http://insysbio.com/sites/all/themes/insysbio/scripts/modernizr-1.7.min.js?ozarln"></script>
+<script type="text/javascript" src="http://insysbio.com/sites/all/themes/insysbio/scripts/twitter.js?ozarln"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"insysbio","theme_token":"VP2i5YFq931ZHrWW_EcnMbaZQzj8TviKRCVB5DYY-Yg","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/insysbio\/scripts\/modernizr-1.7.min.js":1,"sites\/all\/themes\/insysbio\/scripts\/twitter.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"modules\/locale\/locale.css":1,"0":1,"sites\/all\/themes\/layoutstudio\/css\/defaults.css":1,"\/css\/defaults_ie.css":1,"sites\/all\/themes\/insysbio\/css\/fonts.css":1,"sites\/all\/themes\/insysbio\/css\/screen.css":1,"sites\/all\/themes\/insysbio\/css\/ie\/fix-ie6.css":1,"sites\/all\/themes\/insysbio\/css\/ie\/fix-ie7.css":1}},"urlIsAjaxTrusted":{"\/en\/software\/db-solve-optimum":true}});
+//--><!]]>
+</script>
+  
+<!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter5483335 = new Ya.Metrika({
+                    id:5483335,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<!-- /Yandex.Metrika counter -->
+
+<!-- MathJax support -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!-- /MathJax support -->
+  
+    <link charset="utf-8" type="text/css" href="/sites/all/themes/insysbio/css/screen_inside.css" rel="stylesheet">
+  </head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-57 node-type-page i18n-en menu-item-dbsolveoptimum regions-all no-preface no-postscript section-node sub-section-57 role-anonymous-user" >
+    
+
+<div id="page">
+	<div id="header" class="clearfix">
+		<div class="inside">
+			
+			
+						
+				
+			  <div class="region region-header">
+    <div id="block-locale-language" class="block block-locale odd region-count-1 clearfix">
+
+    
+  <div class="content">
+    <ul class="language-switcher-locale-url"><li class="en first active"><a href="/en/software/db-solve-optimum" class="language-link active" xml:lang="en" title="DBSolveOptimum"><img class="language-icon" typeof="foaf:Image" src="http://insysbio.com/sites/all/modules/languageicons/flags/en.png" width="16" height="12" alt="In English" title="In English" /></a></li>
+<li class="ru last"><a href="/ru/software/db-solve-optimum" class="language-link" xml:lang="ru" title="DBSolveOptimum"><img class="language-icon" typeof="foaf:Image" src="http://insysbio.com/sites/all/modules/languageicons/flags/ru.png" width="16" height="12" alt="На русском" title="На русском" /></a></li>
+</ul>  </div>
+</div>
+<div id="block-block-6" class="block block-block even region-count-2 clearfix">
+
+    
+  <div class="content">
+    <a href="/en"><img src="/sites/default/files/design/logo-spaces-70.png" alt="" /></a> <a href="https://mailchi.mp/45ab853683a7/insysbionewsletter"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/sites/default/files/styles/page_width/public/field/image/subscribe_button1.png?itok=Hp98NDTe" width="46%"></a>  </div>
+</div>
+<div id="block-search-form" class="block block-search odd region-count-3 clearfix">
+
+    
+  <div class="content">
+    <form action="/en/software/db-solve-optimum" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-qeDZfeXrmB9yt20by4NYAoY5ZiThB7cCXz7J7sZ1Muk" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+  </div>
+		
+		</div><!-- CLASS inside -->
+	</div><!-- ID header -->
+
+	<div id="container" class="clearfix">
+
+
+			
+		<div id="wrapper">
+			<div id="primary">
+	      <div class="inside" class="clearfix">
+
+					<a id="content-area"></a>
+					
+			    								    <div class="messages error">
+<h2 class="element-invisible">Error message</h2>
+<em class="placeholder">User warning</em>: The following theme is missing from the file system: <em class="placeholder">WORKING_COPY</em>. For information about how to fix this, see <a href="https://www.drupal.org/node/2487215">the documentation page</a>. in <em class="placeholder">_drupal_trigger_error_with_delayed_logging()</em> (line <em class="placeholder">1156</em> of <em class="placeholder">/home/insysbi8/insysbio.com/docs/includes/bootstrap.inc</em>).</div>
+			          			
+		      		      		        <h1 class="title" id="page-title">
+		          DBSolveOptimum		        </h1>
+		      		      
+		      		        <div class="tabs">
+		          		        </div>
+		      		      
+		      
+		        <div class="region region-content">
+    <div id="block-system-main" class="block block-system odd region-count-1 clearfix">
+
+    
+  <div class="content">
+    <div id="node-57" class="node node-page user-1 node-full node-page-full odd count-1 clearfix role-authenticated-user role-administrator " about="/en/software/db-solve-optimum" typeof="foaf:Document">
+
+      <span property="dc:title" content="DBSolveOptimum" class="rdf-meta element-hidden"></span>
+    
+
+    
+		<div class="content content-node clearfix">
+  		<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><img src="/sites/default/files/pictures/db-solve-screen-1.png" alt="Интерфейс окон программы" width="330" height="253" style="float: right; margin-left: 15px;"></p><p>DBSolveOptimum is a stand-alone software tool for construction and analysis of mathematical models of biological systems. It is a succession and extension of DBSolve 5 and DBSolve 7, which were popular tools for systems biology. In addition to the capabilities of these software packages, DBSolveOptimum is implemented with new tools for extended data analysis and multiple simulations, which are important for simulation of virtual clinical trials and application of modern modeling techniques, like quantitative systems pharmacology, to problems arising in drug research and development. By this time, DBSolveOptimum has been successfully tested and applied for the development and analysis of both systems pharmacology and conventional PK/PD models of drugs. It is free for academic and industrial use.</p><h4>Basic features:</h4><p></p><ul><li>Automatic generation of structural kinetic models on the basis of stoichiometric matrices or reaction lists;</li><li>SBML import/export (including L2V4);</li><li>Flexible capabilities for working on rate and conservation laws;</li><li>Numerical parameter optimization on the basis of experimental data (including global fitting);</li><li>Singular points and bifurcation analysis;</li><li>Analysis of variability in parameter values;</li><li>Identifiability analysis and confidence intervals/regions estimation;</li><li>Extended static and dynamic visualization tools;</li><li>Integration with third-part visualization and statistical tools.</li></ul><h4>Publications:</h4><p>Nail M Gizzatkulov, Igor I Goryanin, Eugeny A Metelkin, Ekaterina A Mogilevskaya, Kirill V Peskov, and Oleg V Demin. <strong>DBSolve Optimum: a software package for kinetic modeling which allows dynamic visualization of simulation results.</strong> BMC Systems Biology, 2010, 4 (109): 1—11.</p><p>Igor I Goryanin, Oleg V Demin, and Frank Tobin. Applications of whole cell and large pathway mathematical models in the pharmaceutical industry. IN: <strong>Metabolic Engineering in the Post Genomic Era,</strong> 2004, p. 321—356.</p><h4>Download:</h4><p><strong><a href="http://sourceforge.net/projects/dbsolve/" target="_blank">http://sourceforge.net/projects/dbsolve/</a></strong></p><p></p></div></div></div>	  </div>
+
+    
+  
+   
+  
+    
+</div>  </div>
+</div>
+  </div>
+
+		      			
+
+	      </div><!-- CLASS inside -->
+			</div><!-- ID primary -->
+		</div><!-- ID wrapper -->
+		
+					<div id="secondary">
+		      <div class="region region-secondary-first">
+    <div id="block-menu-menu-insidemenu" class="block block-menu odd region-count-1 clearfix">
+
+    
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="/en/news" title="">News&amp;Events</a></li>
+<li class="collapsed"><a href="/en/services">Services</a></li>
+<li class="expanded active-trail"><a href="/en/tools" class="active-trail">Tools&amp;Apps</a><ul class="menu"><li class="first leaf"><a href="http://irt.insysbio.com" title="">IRT-demo</a></li>
+<li class="leaf"><a href="http://sv.insysbio.com" title="">SbmlViewer</a></li>
+<li class="leaf active-trail"><a href="/en/software/db-solve-optimum" title="" class="active-trail active">DBSolveOptimum</a></li>
+<li class="last leaf"><a href="/en/software/circulator" title="">Circulator</a></li>
+</ul></li>
+<li class="leaf"><a href="/en/node/65" title="">Publications</a></li>
+<li class="leaf"><a href="/en/about">About</a></li>
+<li class="last leaf"><a href="/en/careers">Careers</a></li>
+</ul>  </div>
+</div>
+  </div>
+      	      				</div><!-- ID secondary -->
+			
+					<div id="tertiary">
+      	  <div class="region region-tertiary-first">
+    <div id="block-block-11" class="block block-block odd region-count-1 clearfix">
+
+    
+  <div class="content">
+    <p></p>
+  </div>
+</div>
+  </div>
+      	      				</div><!-- ID tertiary -->
+		
+				
+		
+	</div><!-- ID container -->
+
+	<div id="footer" class="clearfix">
+		<div class="inside">
+			  <div class="region region-footer">
+    <div id="block-block-5" class="block block-block odd region-count-1 clearfix">
+
+    
+  <div class="content">
+    <div style="padding: 9px 0 45px; width: 100%;">
+<table style="width: 100%;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr valign="top">
+<td class="downtable-left" style="padding-left: 0px; width: 441px;" width="465">
+<div class="downtown"><strong>© 2004—2020, INSYSBIO LLC</strong><br>
+<a href=privacy-policy>Privacy Policy</a></div>
+</td>
+
+<td class="downtown downtown-link downtable-middle" style="padding-left: 0px; width: 252px;" width="250">
+<div class="downpin" style="display: block; height: 67px; width: 18px; border: 0px none; float: left; padding-right: 7px; padding-left: 10px; background: url('/sites/default/files/pin.png') no-repeat scroll 10px 0px transparent;">&nbsp;</div>
+<a class="down" href="/contacts">Сontact information <br /> and our location map</a></td>
+<td class="downtown downtable-right" style="padding-right: 0px; padding-left: 25px;"><strong>Phone:</strong> +7&nbsp;(499)&nbsp;645–53–36<br /> <strong>E-mail:</strong> insysbio@insysbio.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+  </div>
+</div>
+  </div>
+		</div>
+	</div><!-- ID footer -->
+	
+</div><!-- ID page -->
+  </body>
+</html>

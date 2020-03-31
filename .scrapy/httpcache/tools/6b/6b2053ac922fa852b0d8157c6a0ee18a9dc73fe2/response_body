@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>BSA4Yeast</title>
+
+<!-- Bootstrap core CSS-->
+	<link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom fonts for this template-->
+	<link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- Page level plugin CSS-->
+	<link href="/static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+<!-- Custom styles for this template-->
+	<link href="/static/css/sb-admin.css" rel="stylesheet">
+<!--	<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+<!--	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>-->
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>-->
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>-->
+	<link rel="shortcut icon" href="/static/DNA5.png" type="image/x-icon">
+	<link rel="icon" href="/static/DNA5.png" type="image/x-icon">
+	<link href="/static/css/checkbox.css" rel="stylesheet">
+<!--	<link href="/static/dist/basic.css" rel="stylesheet">-->
+<!--	<link href="/static/dist/dropzone.css" rel="stylesheet">-->
+    
+    
+    <script src="/static/webuploader/webuploader.min.js"></script>
+    <link href="/static/webuploader/webuploader.css" rel="stylesheet">
+<!--    <link rel="stylesheet" type="text/css" href="/static/webuploader/webuploader.css">  -->
+      	
+<!-- copy from uni.lu -->	
+	<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "b6440423-62e0-4f3b-ae7f-0cb76754d552", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+</head>
+<body class="fixed-nav sticky-footer bg-blue" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav"> <a class="navbar-brand" href="">
+<ul>
+<h2><img src="/static/DNA5.png" width="30" height="30" class="d-inline-block align-top" alt="">BSA4Yeast<h2>
+</ul>
+
+</a> <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    
+	<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+	    <h4><li>&nbsp</li></h4>
+	    <h4><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/upload_accept"> <i class="fa fa-fw fa-upload"></i> <span class="nav-link-text"> Upload </span> </a> </li></h4>
+	    <h4><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/analysis1"> <i class="fa fa-fw fa-spinner"></i> <span class="nav-link-text"> Analysis </span> </a> </li></h4>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Uploaded Files"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/show_upload"> <i class="fa fa-fw fa-file-text"></i> <span class="nav-link-text"> Uploaded Files <span id='badge1_anony' class="badge badge-success"> </span></span> </a> </li></h4>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Result Files"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/show_result"> <i class="fa fa-fw fa-file-text-o"></i> <span class="nav-link-text"> Result Files <span id='badge2_anony' class="badge badge-success"> </span></span> </a> </li></h4>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Genomes"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/Genome"> <i class="fa fa-fw fa-database"></i> <span class="nav-link-text"> Genomes <span id='badge3_anony' class="badge badge-success"> 1</span></span> </a> </li></h4>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Job Status"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/show_job"> <i class="fa fa-fw fa-info-circle"></i> <span class="nav-link-text"> Job Status <div class="text-right"><span id='badge4_anony' class="badge badge-warning"> </span>&nbsp<span id='badge5_anony' class="badge badge-success"> </span>&nbsp<span id='badge8_anony' class="badge badge-danger"> </span></div></span> </a> </li></h4>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Job Status"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/view_free_upload"> <i class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text"> Upload  Space <span id='badge6_anony'><span  class="badge badge-success"> </span></span></span> </a> </li></h4>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Job Status"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/view_free_result"> <i class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text"> Result Space <span id='badge7_anony'><span  class="badge badge-success"> </span></span></span> </a> </li></h4>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="right" title="Job Status"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/Example"> <i class="fa fa-fw fa-tags"></i> <span class="nav-link-text"> Examples </span> </a> </li></h4>
+		</ul>
+	<ul class="navbar-nav sidenav-toggler">
+		<li class="nav-item"> <a class="nav-link text-center" id="sidenavToggler"> <i class="fa fa-fw fa-angle-left"></i> </a> </li>
+	</ul>
+	
+	
+	<ul class="nav navbar-nav">
+	    <a href="https://wwwen.uni.lu" target="_blank"><img src="/static/UL_logo2.png" width="70" height="70" class="d-inline-block align-center" alt=""></a>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Home"> <a class="nav-link" href="/?anony_id=876fb9e4-df0a-48ea-b692-18254dbc7854"> <i class="fa fa-fw fa-home"></i> <span class="nav-link-text">Home</span> </a> </li></h4>
+
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Usage & formats"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/Use"> <i class="fa fa-fw fa-table"></i> <span class="nav-link-text">Usage & formats</span> </a> </li></h4>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="References & links"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/Reference"> <i class="fa fa-fw fa-pencil"></i> <span class="nav-link-text">References & links</span> </a> </li></h4>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Contact"> <a class="nav-link" href="/876fb9e4-df0a-48ea-b692-18254dbc7854/Contact"> <i class="fa fa-fw fa-envelope-o"></i> <span class="nav-link-text">Contact</span> </a> </li></h4>
+		<h4><li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Glaab Lab"> <a class="nav-link" target="_blank" href="https://wwwen.uni.lu/lcsb/research/biomedical_data_science"> <i class="fa fa-fw fa-laptop"></i> <span class="nav-link-text">Glaab Lab</span> </a> </li></h4>
+		
+<!--		<img src="/static/LCSB_logo2.png" width="60" height="60" class="d-inline-block align-bottom" alt="">-->
+	</ul>
+	
+	<ul class="navbar-nav ml-auto">
+	   
+		<h4><a class="nav-link mr-lg-2" href="/auth/register"><i class="fa fa-fw fa-sign-in"></i>   Register</a></h4>
+		<h4><a class="nav-link mr-lg-2" href="/auth/login"><i class="fa fa-fw fa-sign-in"></i>   Log In</a></h4>
+		
+	</ul>
+</div>
+</nav> 
+<div class="content-wrapper">
+	<div class="container-fluid">
+	
+		
+<div class="page-header">
+<p></p><p></p>
+<div class="row">
+		<div class="col-lg-12">
+			<div class="card mb-3">
+				<div class="card-header  text-info">
+					<h2><i class="fa fa-fw fa-check-square-o"></i> <b>About BSA4Yeast </b> <h2>
+				</div>
+				<div class="card-body text-justify alert alert-success">
+<h5>
+BSA4Yeast is a comprehensive web application that performs QTL 
+(Quantitative Trait Loci) mapping using bulk segregant analysis 
+(BSA) of yeast sequencing data. It has the following main 
+advantages and features: 
+<!--BSA4Yeast is a comprehensive web application that performs QTL -->
+<!--(Quantitative Trait Loci) mapping by bulk segregant analysis (BSA) -->
+<!--of yeast sequencing data. The software combines NGS (Next Generation-->
+<!-- Sequencing) data analysis with QTL mapping, providing automatically -->
+<!-- optimized data processing, functional annotations, and an interactive -->
+<!-- web interface to explore the identified QTLs. Compared with previous -->
+<!-- QTL analysis software packages or web-based tools, BSA4Yeast has the -->
+<!-- following main advantages and features: -->
+ <br></br>
+ 
+<!-- <h3><span class="badge badge-primary">fully automated</span>-->
+<!-- -->
+<!-- <span class="badge badge-secondary">multiple input file types</span>-->
+<!-- -->
+<!--  <span class="badge badge-success">private storage space</span>-->
+<!-- -->
+<!-- <span class="badge badge-warning">comprehensive annotations</span>-->
+<!-- -->
+<!-- <span class="badge badge-info">web-based exploration</span>-->
+<!-- </h3>-->
+<li>fully automated</li>
+<li>multiple input file types</li>
+<li>private storage space</li>
+<li>comprehensive annotations</li>
+<li>web-based exploration</li>
+ <br>
+ A step-by-step description of the software is 
+ provided in the <a href = "/876fb9e4-df0a-48ea-b692-18254dbc7854/Use">
+ Use</a> tab to facilitate QTL analyses.
+</h4>
+<img src="/static/yeast3.png">
+				</div>
+<!--				<div class="card-footer small text-muted">-->
+<!--					Updated yesterday at 11:59 PM -->
+<!--				</div>-->
+			</div>
+		</div>
+	</div>
+
+<div class="row">
+		<div class="col-lg-12">
+			<div class="card mb-3">
+				<div class="card-header  text-info">
+					<h4><i class="fa fa-fw fa-check-square-o"></i> <b>Yeast (<i>S. cerevisiae</i>) genomics </b> <h4>
+				</div>
+				<div class="card-body text-justify alert alert-success">
+				<img src="/static/yeast1.png">
+				<br></br>
+				<h5><a name="bulk"></a>
+				The baker's yeast (<i>Saccharomyces cerevisiae</i>) has been used 
+				since decades in research studies on genetics, 
+				cell biology and more recently genomics. It is a 
+				model organism for population genomics than can help to 
+				gain a better understanding of genotype-phenotype relationships. 
+				Trait profiling and genome analyses show a broad phenotypic 
+				and genetic variability in this organism. Thus, it is 
+				suitable for deciphering the genetic architecture of simple 
+				and complex traits.
+				
+				
+<!--				Indeed, it is the first eukaryotic organism -->
+<!--				whose genome has been sequenced and annotated in 1996. Various -->
+<!--				genetic tools have been developed through the knowledge of -->
+<!--				its genome such as systematic gene deletion collections, -->
+<!--				synthetic gene array or yeast double-hybrid. It is also -->
+<!--				a pioneer organism in the population genomics area that aimed -->
+<!--				at gaining a better understanding of genotype-phenotype relationship.-->
+<!--				 Although <i>S. cerevisiae</i> is used in many industries since centuries -->
+<!--				 (baking, brewing, wine making…), this organism is also found in-->
+<!--				  the nature in diverse ecological and geographical niches. -->
+<!--				  Trait profiling and genome analysis show a broad phenotypic -->
+<!--				  and genetic variability in this organism and is thus suitable -->
+<!--				  for deciphering the genetic architecture of simple and complex -->
+<!--				  traits.				-->
+				</h5>
+<!--				<li>	Yeast can be used as a model organism for functional genomics. -->
+<!--Yeast is the simplest eukaryotic organism, but, due to its ease of manipulation and amenability to genetic modifications, -->
+<!--has proven invaluable in the elucidation of conserved molecular mechanisms underlying important cell functions -->
+<!--such as mitochondrial biogenesis, cell division, and cell death. Many human disease genes have counterparts in yeast, -->
+<!--which can therefore also be used for the dissection of molecular mechanisms of disease and for drug screens. -->
+<!--Yeast-specific metabolite and RNA extraction protocols for subsequent metabolomics and transcriptomics analyses, -->
+<!--and high-throughput phenotypic screens and lifespan assays are currently being set up to allow detailed functional analyses of -->
+<!--genes of interest and to assist metabolic modelling efforts. A collection of gene deletion mutants in Saccharomyces cerevisiae -->
+<!--for all non-essential genes is available for the platform. -->
+<!--Deletion mutants in other genetic backgrounds, double mutants, and overexpressor strains can also be created. -->
+<!--Finally, protocols for the production of recombinant proteins of interest by overexpression in yeast are being set up.</p>-->
+<!-- </li>-->
+				</div>
+<!--				<div class="card-footer small text-muted">-->
+<!--					Updated yesterday at 11:59 PM -->
+<!--				</div>-->
+			</div>
+		</div>
+		
+	</div>
+
+<a name="bulk"></a>
+<div class="row">
+		<div class="col-lg-12">
+			<div class="card mb-3">
+				<div class="card-header  text-info">
+					<h4><i class="fa fa-fw fa-check-square-o"></i> <b>QTL analysis (Quantitative Trait Locus analysis) </b> <h4>
+				</div>
+				<div class="card-body text-justify  alert alert-success">
+				<img src="/static/yeast2.png">
+				<br></br>
+				<h5>
+				Linkage mapping is a statistical approach to decipher the genetic 
+				architecture of simple and complex traits. 
+				It relies on the investigation of a progeny obtained by 
+				crossing two distinct individuals. In Bulk Segregant Analysis (BSA) 
+				based QTL mapping, deep sequencing genotyping, using next generation 
+				sequencing technologies, and mapping against genetic markers determined
+				 for the parental individuals enables the identification of genes 
+				 associated with a phenotype of interest. <b>One- or two-tailed bulk design</b> 
+				 can be applied: A one-tailed bulk design compares of samples from one extreme phenotype 
+				 (e.g. short lifespan) vs. the entire distribution of phenotypes; a two-tailed bulk design compares samples from two extreme phenotypes against each other (e.g. short lifespan vs. long lifespan).
+				
+				
+				
+<!--				Linkage mapping is a statistical method aiming at -->
+<!--				deciphering the genetic architecture of simple and -->
+<!--				complex traits and is used in many fields, notably -->
+<!--				in agriculture.-->
+<!--				In contrast to Genome Wide Association -->
+<!--				Studies (GWAS) that investigate all individuals in a -->
+<!--				given population, linkage mapping relies on the investigation -->
+<!--				of a progeny obtained by crossing two distinct individuals. -->
+<!--				Two main QTL mapping exist: Individual Segregant Analysis -->
+<!--				(ISA) and Bulk Segregant Analysis (BSA). ISA lies on the-->
+<!--				 genotyping and phenotyping of each offspring whereas BSA -->
+<!--				 relies on pooling progeny stains showing extreme phenotype. -->
+<!--				 In the latter, deep sequencing genotyping (using Next-->
+<!--				  Generation Sequencing technologies) and mapping against-->
+<!--				   genetic markers determined for the parental individuals -->
+<!--				   allows for identifying genes involved in a phenotype of -->
+<!--				   interest.				-->
+				   </h5>
+<!--				<li>	Quantitative trait locus (QTL) analysis is a statistical method that links two types of information—phenotypic data -->
+<!--(trait measurements) and genotypic data (usually molecular markers)—in an attempt to explain the genetic basis of variation -->
+<!--in complex traits (Falconer & Mackay, 1996; Kearsey, 1998; Lynch & Walsh, 1998). QTL analysis allows researchers in fields as -->
+<!--diverse as agriculture, evolution, and medicine to link certain complex phenotypes to specific regions of chromosomes. -->
+<!--The goal of this process is to identify the action, interaction, number, and precise location of these regions.</p>-->
+<!--</li>-->
+				</div>
+<!--				<div class="card-footer small text-muted">-->
+<!--					Updated yesterday at 11:59 PM -->
+<!--				</div>-->
+			</div>
+		</div>
+	</div>
+
+<div class="row">
+		<div class="col-lg-12">
+			<div class="card mb-3">
+				<div class="card-header  text-info">
+					<h4><i class="fa fa-fw fa-check-square-o"></i> <b>NGS (Next Generation Sequencing) </b> <h4>
+				</div>
+				<div class="card-body text-justify alert alert-success">
+				<img src="/static/yeast5.png">
+				<br></br>
+	<h5>				
+	NGS (Next Generation Sequencing) is a new nucleic acid sequencing approaches 
+	emerged allowing to obtain fast and reliable data in a 
+	cost-efficient manner. Since 2000, the compact yeast genomes (~12Mb) 
+	serve as milestone for comparative genomics and recently for 
+	investigating intraspecies variation and the genotype-phenotype
+	 relationship combining both NGS and powerful statistical methods.
+	 
+<!--	DNA sequencing is the process of determining -->
+<!--	the precise order of nucleotides within a DNA molecule. -->
+<!--	Knowledge of genomes has become indispensable for basic -->
+<!--	biological research, and in numerous applied fields such -->
+<!--	as medical diagnosis, forensic biology, biotechnology, -->
+<!--	virology or systems biology. Since Shotgun sequencing by -->
+<!--	the Sanger method, new nucleic acid sequencing approaches -->
+<!--	emerged allowing to obtain fast and reliable data in a -->
+<!--	cost-efficient manner. Since 2000, the compact yeast genomes (~12Mb) -->
+<!--	serve as milestone for comparative genomics and recently for -->
+<!--	investigating intraspecies variation and the genotype-phenotype-->
+<!--	 relationship combining both NGS and powerful statistical methods.-->
+</h5>				</div>
+<!--				<div class="card-footer small text-muted">-->
+<!--					Updated yesterday at 11:59 PM -->
+<!--				</div>-->
+			</div>
+		</div>
+	</div>
+<div class="row">
+		<div class="col-lg-12">
+			<div class="card mb-3">
+				<div class="card-header  text-info">
+					<h4><i class="fa fa-fw fa-check-square-o"></i> <b>G&#39; statistics </b> <h4>
+				</div>
+				<div class="card-body text-justify alert alert-success">
+				<img src="/static/yeast4.png">
+				<br></br>
+<h5>
+The standard approach for QTL mapping investigates the allele 
+frequency distribution across the chromosomes. The new G-statistic 
+has several advantages over classical allele frequency analyses: (i) 
+G is expected to decrease more rapidly around the causal site, 
+providing narrow QTL candidate intervals; (ii) G takes into 
+account the strength of evidence, as determined by 
+the sample size. However, some features of the G-statistic 
+can also complicate analyses, since the variance in read depth 
+contributes to the variance in G over relatively small spatial scales. 
+The G'-statistic, a smooth version of the G-statistic, developed by 
+Paul Magwene (see <a href = "/876fb9e4-df0a-48ea-b692-18254dbc7854/Reference">
+Magwene et al., 2011</a>), 
+provides a straightforward framework 
+to analyze BSA sequencing data. It has for example been employed successfully 
+to identify genes involved in yeast biofilm formation or chronological aging 
+(<a href = "/876fb9e4-df0a-48ea-b692-18254dbc7854/Reference">Granek et al., 2013; Jung et al., 2018</a>).		
+
+<!--The G&#39; statistics is developed by Dr. Paul M. Magwene (see <a href = "/auth/Reference">Reference</a>). The use of a test based on -->
+<!--the G-statistic provides a straightforward framework for analyzing BSA-sequencing data. The G-statistic has several -->
+<!--advantages over the use of allele frequency differences as the basis for QTL estimation. For example, as shown in the -->
+<!--supporting information, G is expected to decrease much more rapidly around the causal site than bias in allele frequencies, -->
+<!--implying narrower intervals of support around QTLs. Also in contrast to statistics based on the divergence of allele frequencies, -->
+<!--G takes into account the strength of evidence related to sample size. This feature of the G-statistic can also potentially -->
+<!--complicate analyses, as variance in read depth contributes to variance in G over relatively small spatial scales. -->
+<!--However, as we show above, weighted averaging of G effectively smooths out ‘high frequency’ noise associated with sequencing -->
+<!--variation.-->
+</h5>				</div>
+<!--				<div class="card-footer small text-muted">-->
+<!--					Updated yesterday at 11:59 PM -->
+<!--				</div>-->
+			</div>
+		</div>
+	</div>
+<!--<div class="row">-->
+<!--		<div class="col-lg-12">-->
+<!--			<div class="card mb-3">-->
+<!--				<div class="card-header  text-info">-->
+<!--					<h4><i class="fa fa-fw fa-check-square-o"></i> <b>Map files </b> <h4>-->
+<!--				</div>-->
+<!--				<div class="card-body text-justify alert alert-success">-->
+<!--<h5>-->
+<!--The Map file is the input file format of BSA G' calculation. The format of Map file is the following: the 1st column is the name of chromosome,-->
+<!--the 2nd column is the coordinate of genetic marker, the 3rd column is the number of alleles which come from one of parent line,-->
+<!--the 4th column is the number of alleles which come from another of parent line. Here is an example:-->
+<!--<br></br>-->
+<!--<img src="/static/yeast6.png">-->
+<!--</h5>				</div>-->
+<!--				<div class="card-footer small text-muted">-->
+<!--					Updated yesterday at 11:59 PM -->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+
+</div>
+<a name="bottom"></a>
+ 
+<!-- /.container-fluid-->
+<!-- /.content-wrapper-->
+		<footer class="sticky-footer">
+			<div class="container">
+				<div class="text-left">
+<small>&nbsp;&nbsp;Copyright &copy; <a href="http://www.uni.lu" target="_blank">Université du Luxembourg</a> 2018. All rights reserved. &nbsp;&nbsp;<span> <a href="https://wwwen.uni.lu/lcsb" target="_blank"><img src="/static/LCSB_logo2.png" width="40" height="40" class="d-inline-block align-center" alt=""></a></span>&nbsp;&nbsp;<span  class='st_facebook_hcount' displayText='Facebook'></span><span class='st_twitter_hcount' displayText='Tweet'></span><span  class='st_linkedin_hcount' displayText='LinkedIn'></span><span  class='st_googleplus_hcount' displayText='Google +'></span><small>
+
+				</div>
+			</div>
+		</footer>
+
+<!-- Scroll to Top Button-->
+		<a class="scroll-to-top rounded" href="#page-top"> <i class="fa fa-angle-up"></i> </a> 
+<!-- Logout Modal-->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							Ready to Leave?
+						</h5>
+						<button class="close" type="button" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button> 
+					</div>
+					<div class="modal-body">
+						Select "Logout" below if you are ready to end your current session.
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button> <a class="btn btn-primary" href="login.html">Logout</a> 
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- Bootstrap core JavaScript-->
+		<script src="/static/vendor/jquery/jquery.min.js">
+		</script>
+		<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js">
+		</script>
+<!-- Core plugin JavaScript-->
+		<script src="/static/vendor/jquery-easing/jquery.easing.min.js">
+		</script>
+<!-- Page level plugin JavaScript-->
+<!--		<script src="/static/vendor/chart.js/Chart.min.js">-->
+<!--		</script>-->
+		<script src="/static/vendor/datatables/jquery.dataTables.js">
+		</script>
+		<script src="/static/vendor/datatables/dataTables.bootstrap4.js">
+		</script>
+<!-- Custom scripts for all pages-->
+		<script src="/static/js/sb-admin.min.js">
+		</script>
+<!-- Custom scripts for this page-->
+		<script src="/static/js/sb-admin-datatables.min.js">
+		</script>
+<!--		<script src="/static/dist/dropzone.js"></script>-->
+<!--		<script src="/static/dist/dropzone-amd-module.js"></script>-->
+<!--		<script src="/static/js/sb-admin-charts.min.js">-->
+<!--		</script>-->
+<!-- Custom scripts for footer time-->
+
+
+<script>
+$(document).ready(function(){  
+  htmlobj=$.ajax({url:"/876fb9e4-df0a-48ea-b692-18254dbc7854/count_upload",async:false});
+  $("#badge1_anony").html(htmlobj.responseText);  
+});
+
+$(document).ready(function(){  
+  htmlobj=$.ajax({url:"/876fb9e4-df0a-48ea-b692-18254dbc7854/count_result",async:false});
+  $("#badge2_anony").html(htmlobj.responseText);  
+});
+
+$(document).ready(function(){  
+  htmlobj=$.ajax({url:"/876fb9e4-df0a-48ea-b692-18254dbc7854/count_job_running",async:false});
+  $("#badge4_anony").html(htmlobj.responseText);  
+});
+
+$(document).ready(function(){  
+  htmlobj=$.ajax({url:"/876fb9e4-df0a-48ea-b692-18254dbc7854/count_job_done",async:false});
+  $("#badge5_anony").html(htmlobj.responseText);  
+});
+
+$(document).ready(function(){  
+  htmlobj=$.ajax({url:"/876fb9e4-df0a-48ea-b692-18254dbc7854/count_job_failed",async:false});
+  $("#badge8_anony").html(htmlobj.responseText);  
+});
+
+$(document).ready(function(){  
+  htmlobj=$.ajax({url:"/876fb9e4-df0a-48ea-b692-18254dbc7854/count_free_upload",async:false});
+  $("#badge6_anony").html(htmlobj.responseText);  
+});
+
+$(document).ready(function(){  
+  htmlobj=$.ajax({url:"/876fb9e4-df0a-48ea-b692-18254dbc7854/count_free_result",async:false});
+  $("#badge7_anony").html(htmlobj.responseText);  
+});
+</script>
+
+	</div>
+</body>
+</html>

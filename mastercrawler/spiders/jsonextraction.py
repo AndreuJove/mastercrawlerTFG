@@ -6,7 +6,10 @@ with open('tools.json', "r") as fp:
 urlToolList, idToolList, nameToolList = ([] for i in range(3))      
            
 tools = jsonData[1]['tools']
+
 lessTools = tools
+
+#print(len(tools))
 
 #print("Less tools has: {}".format(len(lessTools)))
 def getAllFromJson(toolsList):
@@ -19,7 +22,7 @@ def getAllFromJson(toolsList):
             urlTool = tool["web"]["homepage"]
             if urlTool not in urlToolList and not urlTool.endswith((".zip", ".pdf", ".de")) and not urlTool.startswith("ftp://"):
                 dict_tool['name'] = tool["name"]
-                dict_tool['url'] = tool["web"]["homepage"]
+                dict_tool['url'] = str(tool["web"]["homepage"])
                 dict_tool['id'] = tool["@id"]
                 toolsListOut.append(dict_tool)         
     return toolsListOut            
@@ -31,6 +34,13 @@ def getAllFromJson(toolsList):
 #     return toolUrlList
 
 toolsListOut = getAllFromJson(lessTools)
+
+listUrl = []
+for tool in toolsListOut:
+        listUrl.append(tool['url'])
+    
+# print(len(listUrl))
+#print(len(toolsListOut))
 #toolUrlList = getUrlListFromTools(toolsListOut)
 
 # print(toolUrlList)

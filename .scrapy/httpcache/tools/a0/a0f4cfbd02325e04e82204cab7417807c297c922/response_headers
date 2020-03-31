@@ -1,0 +1,10 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 23:13:59 GMT
+Content-Type: text/plain; charset=utf-8
+X-Robots-Tag: noindex, follow
+Link: <http://www.bcplatforms.com/wp-json/>; rel="https://api.w.org/"
+X-Powered-By: WP Engine
+X-Cacheable: CacheAlways: forever
+Cache-Control: max-age=14400, must-revalidate
+X-Cache: HIT: 1
+Accept-Ranges: bytes

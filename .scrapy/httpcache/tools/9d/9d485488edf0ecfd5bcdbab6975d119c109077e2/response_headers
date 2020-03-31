@@ -1,0 +1,13 @@
+Date: Tue, 31 Mar 2020 00:04:27 GMT
+Content-Type: text/html; charset=iso-8859-1
+Server: Apache/2.4.6 (CentOS) PHP/7.3.14
+Location: https://biotech.unl.edu/robots.txt
+Cache-Control: max-age=1209600
+Expires: Mon, 13 Apr 2020 18:49:37 GMT
+Via: apache 10.172.22.197, varnish 10.172.25.172
+Via: 1.1 varnish (Varnish/6.0)
+X-Cacheable: Yes
+Content-Encoding: gzip
+X-Varnish: 49698961 50237589
+Age: 18890
+Vary: , Accept-Encoding

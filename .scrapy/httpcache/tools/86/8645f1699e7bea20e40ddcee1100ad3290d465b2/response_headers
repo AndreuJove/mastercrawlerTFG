@@ -1,0 +1,9 @@
+Date: Tue, 31 Mar 2020 00:03:50 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+X-Hosted-By: Protein Information Resource
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: origin, x-requested-with, content-type, X-Total-Results, X-UniProt-Release
+X-Uniprot-Release: 2020_01
+Content-Type: text/plain;charset=UTF-8
+Strict-Transport-Security: max-age=31536000

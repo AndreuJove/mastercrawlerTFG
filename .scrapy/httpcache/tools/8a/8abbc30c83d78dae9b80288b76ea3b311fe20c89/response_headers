@@ -1,0 +1,8 @@
+Cache-Control: no-cache="set-cookie"
+Content-Type: text/html; charset=iso-8859-1
+Date: Mon, 30 Mar 2020 23:13:43 GMT
+Location: http://www1.udel.edu/robots.txt
+Server: Apache
+Set-Cookie: AWSELB=794345511E26A9E4A2A3A6DD78055521ACE4E86950F37338182A21630BB429317710B38F97278011D9F37B3F1EF72689A53872914133B7D57F9ABC39A99A692F0F8CDD9C56;PATH=/;MAX-AGE=900
+X-Dispatcher: dispatcher2useast1
+X-Vhost: publish

@@ -1,0 +1,19 @@
+Content-Type: text/plain
+Content-Encoding: gzip
+Last-Modified: Thu, 05 Mar 2020 17:48:43 GMT
+Accept-Ranges: bytes
+Etag: "c0144a5016f3d51:0"
+Vary: Accept-Encoding
+Server: Microsoft-IIS/8.5
+X-Sharepointhealthscore: 0
+Sprequestguid: 2a01449f-2516-f0b9-e490-ca6f13bafec1
+Request-Id: 2a01449f-2516-f0b9-e490-ca6f13bafec1
+X-Frame-Options: SAMEORIGIN
+Sprequestduration: 2
+Spiislatency: 0
+X-Powered-By: ASP.NET
+Microsoftsharepointteamservices: 15.0.0.5153
+X-Content-Type-Options: nosniff
+X-Ms-Invokeapp: 1; RequireReadOnly
+Date: Tue, 31 Mar 2020 00:02:45 GMT
+Set-Cookie: NSC_JOGPTXFCQ.VDTE.FEV-TOJ-WT=ffffffff09c48f2245525d5f4f58455e445a4a42378b;Version=1;Max-Age=120;path=/;secure;httponly

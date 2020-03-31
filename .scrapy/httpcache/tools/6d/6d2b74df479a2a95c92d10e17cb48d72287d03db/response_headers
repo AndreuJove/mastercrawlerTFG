@@ -1,0 +1,8 @@
+Date: Mon, 30 Mar 2020 23:48:48 GMT
+Content-Type: text/html; charset=iso-8859-1
+Strict-Transport-Security: max-age=31536000; preload
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: report-uri csp.hpc.ut.ee; form-action 'self';
+Set-Cookie: SERVERID=web2; path=/; HttpOnly; Secure

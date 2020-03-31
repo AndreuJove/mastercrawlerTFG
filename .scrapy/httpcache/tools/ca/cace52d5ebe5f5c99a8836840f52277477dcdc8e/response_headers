@@ -1,0 +1,9 @@
+Server: openresty
+Date: Tue, 31 Mar 2020 00:03:18 GMT
+Content-Type: text/plain; charset=utf-8
+Last-Modified: Mon, 30 Mar 2020 23:15:43 GMT
+Cache-Control: max-age=745, must-revalidate
+Vary: Cookie
+Link: <https://sites.psu.edu/wp-json/>; rel="https://api.w.org/"
+Set-Cookie: xid=rB4IYV6CiMZDfwCcA4QFAg==; expires=Thu, 30-Apr-20 00:03:18 GMT; path=/
+Content-Encoding: gzip

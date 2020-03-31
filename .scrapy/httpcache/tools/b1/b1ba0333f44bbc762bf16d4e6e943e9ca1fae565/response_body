@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bologna Annotation Resource 3.0</title>
+<meta name="generator" content="Bluefish 2.2.7" >
+<meta name="author" content="Giuseppe Profiti" >
+<meta name="date" content="2017-02-02T11:38:57+0100" >
+<meta name="copyright" content="">
+<meta name="keywords" content="protein function prediction, electronic annotation">
+<meta name="description" content="">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <meta http-equiv="content-style-type" content="text/css"> -->
+<meta http-equiv="expires" content="0">
+<link rel="icon" href="/bar3/favicon.png" type="image/png" />
+<style type="text/css">
+	@import url(/bar3/style.css);
+</style>
+<script type="text/javascript" src="/bar3/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body style="width: 80%; ">
+<header>
+<div class="page-header">
+		<h1 id="title">BAR 3.0 Bologna Annotation Resource</h1>
+		<h2 id="subtitle">Protein functional and structural annotation</h2>
+		</div>
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">BAR 3.0</a>
+    </div>
+    <ul class="nav navbar-nav">
+			<li><a href="/bar3">Home</a></li>
+			<li><a href="/bar3/help.html">Help</a></li>
+			<li><a href="/bar3/tutorial.html">Tutorial</a></li>
+			<li><a href="/bar3/statistics.html">Statistics</a></li>
+                        <li><a href="/bar3/references.html">References</a></li>
+                        <li><a href="/mg/">BAR-hMG</a></li>
+                        <li><a href="/pig/">SUS-BAR</a></li>
+			<li><a href="http://www.biocomp.unibo.it">About</a></li>
+		</ul>
+		</div>
+	</nav>
+</header>
+<h2>Something went wrong. Please try refreshing this page.</h2>
+<h3>If the error persists, please contact the authors.
+Thank you for your patience.</h3>
+<footer class="panel panel-default">
+<div class="panel-body">
+<p id="help">For further information and bug report please contact: <a href="mailto:giuseppe.profiti2@unibo.it">the authors</a></p>
+<p id="cookies">
+<span class="bg-warning">!!! WARNING !!! In this web site we make use of "Technical Cookies".</span>
+<p>
+The technical Cookies are needed to show our web page, make it work
+correctly.
+These technical cookies are necessary for our web page to function properly.
+</p>
+<p>
+For more information please see: <a href="http://www.unibo.it/it/cookies/">UniBo policies</a>
+or
+<a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm">European Commission</a>
+</p>
+</p>
+</div>
+</footer>
+</body>
+</html>

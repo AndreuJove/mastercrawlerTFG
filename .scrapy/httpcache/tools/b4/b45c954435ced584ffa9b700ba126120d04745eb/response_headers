@@ -1,0 +1,10 @@
+Date: Mon, 30 Mar 2020 23:20:47 GMT
+Strict-Transport-Security: max-age=63072000; includeSubdomains;
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Referrer-Policy: origin-when-cross-origin
+Content-Type: text/html;charset=utf-8
+Content-Language: en
+Set-Cookie: X-LABKEY-CSRF=90869be4824a01d343ae6cf1182a96e5; Path=/
+Set-Cookie: JSESSIONID=B59EFB97A7CA36487DCEF951F582FF55; Path=/; HttpOnly

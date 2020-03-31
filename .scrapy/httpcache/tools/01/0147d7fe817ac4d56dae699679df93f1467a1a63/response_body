@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>
+        Page Not Found
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/x-ico" href="/assets/favicon-57b1e6a4764c8db7681ec85dd514701b.ico"/>
+
+    <link rel="stylesheet" href="/assets/application-0934768ff52e92e0ddeea4a70a48658e.css"/>
+
+    
+        
+        <meta name="layout" content="main">
+        
+    
+</head>
+<body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/#">
+		    <img src="/assets/grails-cda5b2716e249b1f09558c5c3aa79ddb.svg" alt="Grails Logo"/>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+        <ul class="errors">
+            <li>Error: Page Not Found (404)</li>
+            <li>Path: /robots.txt</li>
+        </ul>
+    
+
+    <div class="footer" role="contentinfo"></div>
+
+    <div id="spinner" class="spinner" style="display:none;">
+        Loading&hellip;
+    </div>
+
+    <script type="text/javascript" src="/assets/application.js" ></script>
+
+</body>
+</html>

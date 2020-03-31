@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-content/
+Disallow: /wp-login.php
+Sitemap: http://www.interactive-biosoftware.com/i18n-index-sitemap.xml
+Sitemap: http://www.interactive-biosoftware.com/fr/i18n-index-sitemap.xml
+Sitemap: http://www.interactive-biosoftware.com/es/i18n-index-sitemap.xml
+Sitemap: http://www.interactive-biosoftware.com/jp/i18n-index-sitemap.xml

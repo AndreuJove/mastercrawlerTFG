@@ -1,0 +1,15 @@
+Date: Mon, 30 Mar 2020 23:55:54 GMT
+Server: Apache
+Vary: Accept-Encoding
+X-Dns-Prefetch-Control: on
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15811200
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, must-revalidate
+X-Robots-Tag: noindex, follow
+Link: <https://amolf.nl/wp-json/>; rel="https://api.w.org/"
+Content-Type: text/plain; charset=utf-8
+X-Cache: MISS from prx01-prd.amolf.nl
+X-Cache-Lookup: MISS from prx01-prd.amolf.nl:443
+Via: 1.1 prx01-prd.amolf.nl (squid/3.5.20)

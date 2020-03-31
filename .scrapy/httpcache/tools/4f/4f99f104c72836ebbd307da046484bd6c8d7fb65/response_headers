@@ -1,0 +1,18 @@
+Server: GitHub.com
+Date: Mon, 30 Mar 2020 23:55:37 GMT
+Content-Type: text/html; charset=utf-8
+Status: 404 Not Found
+Vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With
+Cache-Control: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Expect-Ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+Content-Security-Policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com wss://live.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com
+Content-Encoding: gzip
+Set-Cookie: _gh_sess=oKL2JAEGST0T4h24N%2FKisorNHqbtYG6wi2IOC%2BwSKfjNRU%2BmVE%2F%2FvN%2F8WxQD8TAjvfjAeB7%2F7pWFhLNB8X1%2F75Fkm%2BJmfx%2Fovs9GACxaq0Kus9mAjyzSazj%2FDdxuF0xSFHUt7ONU9Q9%2FY6w6d%2BKyuG9mByYwKkTgpzuO9KHzvwNQmk6EhVUbkceXaD5CIOUohHYYiar4onck7dxGO6lC3VkvEfs89tYlZ3IizwFbsf5%2BkCLUW5wvZCMBi318fnM9BVMSX0COFMMxCgpxQlUSlQ%3D%3D--pwqMW4Dl7HDavHnw--sMYFezwlzAqMWQJB%2BfdYrg%3D%3D; Path=/; HttpOnly; Secure
+Set-Cookie: _octo=GH1.1.1753508260.1585612537; Path=/; Domain=github.com; Expires=Tue, 30 Mar 2021 23:55:37 GMT; Secure
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Tue, 30 Mar 2021 23:55:37 GMT; HttpOnly; Secure
+X-Github-Request-Id: BBE4:716D:11D535:1B43F1:5E8286F9

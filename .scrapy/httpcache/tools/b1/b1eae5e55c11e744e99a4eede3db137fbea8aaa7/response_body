@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><title></title><link rel="shortcut icon" href="/static/favicon.ico"><link href="/static/css/bootstrap.min.css" rel="stylesheet"><link href="/static/css/bootstrap-slider.min.css" rel="stylesheet"><link href="/static/css/jquery.qtip.min.css" rel="stylesheet"><link href="/static/css/font-awesome.min.css" rel="stylesheet"><link href="/static/css/typeahead.css" rel="stylesheet"><link href="/static/css/tabbed_panel.css" rel="stylesheet"><link href="/static/css/phyd3.min.css" rel="stylesheet"><link href="/static/css/main.css" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-159172834-1"></script><script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-159172834-1');
+		</script><link rel="stylesheet" type="text/css" href="/static/css/cookieconsent.min.css"><script src="/static/js/cookieconsent.min.js"></script><script>
+        window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#000"
+            },
+            "button": {
+              "background": "#f1d600"
+            }
+          },
+          "position": "bottom-right"
+        })});
+        </script></head> <body data-spy="scroll" data-target="#navbar-side" data-offset="55"> <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"> <div class="container clearfix"> <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand hidden-xs" href="/"><img src="/static/img/icon-48x48.png" style="max-width:100px;margin-left:-7px;margin-top: -13px;float:left;margin-right:5px;" width="48px"></a> <a class="navbar-brand visible-xs" href="/"><img src="/static/img/icon-32x32.png" style="max-width:100px; margin-top: -7px;" width="32px"></a> </div> <div id="navbar" class="navbar-collapse collapse"> <ul class="nav navbar-nav navbar-left"> <li><a href="/species/">Species</a></li> <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a> <ul class="dropdown-menu"> <li class="dropdown-header">Expression Profiles</li> <li><a href="/profile_comparison/">Compare profiles</a></li> <li><a href="/heatmap/">Create heatmap</a></li> <li><a href="/profile/export/species">Export expression levels</a></li> <li class="divider"></li> <li class="dropdown-header">Expression Specificity</li> <li><a href="/specificity_comparison/">Compare specificities</a></li> <li><a href="/search/specific/profiles">Find specific profiles</a></li> <li class="divider"></li> <li class="dropdown-header">Co-expression Networks</li> <li><a href="/custom_network/">Create custom network</a></li> <li><a href="/search/enriched/clusters">Find enriched clusters</a></li> </ul> </li> <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search <span class="caret"></span></a> <ul class="dropdown-menu"> <li><a href="/search/advanced">Search <span class="text-muted">(advanced)</span></a></li> <li class="divider"></li> <li><a href="/blast/">BLAST</a></li> </ul> </li> </ul> <ul class="nav navbar-nav navbar-right"> <li> <form class="navbar-form" role="search" method="post" id="search-form" name="search-form" action="/search/"> <input id="csrf_token" name="csrf_token" type="hidden" value="IjMzM2M1NWIwNDQyNjhlNTQ1MTRkNGIxNWM2Yjk2OTliZjlhMzNhYWUi.EWQaFg.H7mbU4LRVDbGlUuXmppU6o2zOI0"> <div class="form-group input-group"> <input class="form-control" id="terms" name="terms" placeholder="Search" required type="text" value> <div class="input-group-btn"><button type="submit" class="btn btn-primary" value="Search" data-toggle="modal" data-target="#loaderModal"><i class="fa fa-search"></i></button></div> </div> </form> </li> <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a> <ul class="dropdown-menu"> <li><a href="https://github.com/sepro/CoNekT/blob/master/docs/tutorials/overview.md">Tutorial <span class="text-muted"></span></a></li> <li><a href="/contact">Contact</a></li> </li> </ul> </li> <li class="dropdown"> </li> </ul> </div> </div> </div> <div class="container"> </div> <div class="container"> <div class="text-center"> <h1>404: Not Found</h1> </div> </div> <footer class="footer" id="footer"> <div class="container"> <div class="row"> <div class="col-xs-2"><strong class="text-muted"><a href="/features" class="text-muted">CoNekT</a></strong></div> <div class="col-xs-2"><a href="/about" class="text-muted">About</a></div> <div class="col-xs-2"><a href="/contact" class="text-muted">Contact</a></div> <div class="col-xs-2"><a href="/disclaimer" class="text-muted">Disclaimer</a></div> <div class="col-xs-2"><a href="/privacy" class="text-muted">Privacy policy</a></div> </div> </div> </footer> <div class="modal" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"> <div class="modal-dialog" role="document" style="width:1000px;height:800px;"> <div class="modal-content"> </div> </div> </div> <div class="modal" id="loaderModal" tabindex="-1" role="dialog" aria-labelledby="loaderModalLabel"> <div class="modal-dialog" role="document" style="width:1000px;height:800px;"> <div class="modal-content"> <div class="modal-body"> <div id="leafy_loader"></div> <p class="text-center text-muted" id="leafy_loader_text">Loading ... please wait ... </p> <p class="text-center" id="leafy_loader_close_btn" style="display:none"><button type="button" class="btn btn-primary" data-dismiss="modal" style>Close</button></p> </div> </div> </div> </div> <script src="/static/js/jquery.min.js"></script> <script src="/static/js/bootstrap.min.js"></script> <script src="/static/js/stupidtable.min.js"></script> <script src="/static/js/TweenMax.min.js"></script> <script src="/static/js/jquery.qtip.min.js"></script> <script src="/static/js/planet_loader.js"></script> <script>
+        function init_qtip() {
+                   $('.qtip_tooltip').each(function() {
+                     $(this).qtip({
+                        content: {
+                            text: function(event, api) {
+                                $.ajax({
+                                    url: api.elements.target.attr('qtip_href')
+                                })
+                                .then(function(content) {
+                                    // Set the tooltip content upon successful retrieval
+                                    api.set('content.text', content);
+                                }, function(xhr, status, error) {
+                                    // Upon failure... set the tooltip content to error
+                                    api.set('content.text', status + ': ' + error);
+                                });
+
+                                return 'Loading...'; // Set some initial text
+                            }
+                        },
+                        show: {
+                            effect: function() {
+                                $(this).fadeTo(500, 1);
+                            }
+                        },
+                        hide: {
+                            effect: function() {
+                                $(this).fadeTo(500, 0);
+                            }
+                        },
+                        position: {
+                            viewport: $(window)
+                        },
+                        style: 'qtip-bootstrap'
+                     });
+                 });
+        }
+
+          $(function () {
+              init_qtip();
+
+              $("#leafy_loader").html(get_loader_svg('loader_leafy'));
+              init_planet_loader('loader_leafy');
+
+              $('[data-toggle="popover"]').popover({container: 'body'});
+
+              $('a[data-target=#helpModal], abbr[data-target=#helpModal]').click(function(ev) {
+                ev.preventDefault();
+                var target = $(this).attr("href");
+
+                // load the url and show modal on success
+                $("#helpModal .modal-content").load(target, function() {
+                     $("#helpModal").modal("show");
+                });
+              });
+            });
+        </script> <script src="/static/js/planet_pagination.js"></script> <script src="/static/js/planet_ajax_table.js"></script> <script type="text/javascript">
+            var csrf_token = "IjMzM2M1NWIwNDQyNjhlNTQ1MTRkNGIxNWM2Yjk2OTliZjlhMzNhYWUi.EWQaFg.H7mbU4LRVDbGlUuXmppU6o2zOI0";
+
+            $.ajaxSetup({
+                beforeSend: function(xhr, settings) {
+                    if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrf_token);
+                    }
+                }
+            });
+        </script> </body> </html>

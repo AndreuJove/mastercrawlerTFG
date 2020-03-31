@@ -1,0 +1,17 @@
+<html>
+<head>
+<base href="http://cpdb.molgen.mpg.de/CPDB/" />
+
+<title>ConsensusPathDB</title>
+<link rel="icon" href="images/favicon.gif" type="image/gif">
+</head>
+<frameset cols="230,*" frameborder="0" framespacing="0" border="0">
+  <frame name="llFrame" src="llFrame" scrolling="auto" noresize>
+  <frame name="rlFrame" id="rlFrame" src="rlFrame" noresize>
+</frameset>
+<noframes>
+Please use a frames-capable browser.
+</noframes>
+<body>
+</body>
+</html>

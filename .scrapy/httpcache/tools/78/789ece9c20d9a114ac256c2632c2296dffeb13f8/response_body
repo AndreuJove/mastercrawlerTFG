@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /superlink-online/
+Disallow: /pedtool2/
+Disallow: /pedtool/
+Disallow: /superlink2/
+Disallow: /CGI/
+Disallow: /pedtool1/
+Disallow: /superlink-online/base64-1.3/cgi-bin/
+Disallow: /superlink-online/cgi-bin/
+Disallow: /superlink-online/prog/htmldoc-1.8.23/cgi-bin/
+Disallow: /simtree/back_250504/cgi-bin/
+Disallow: /simtree/cgi-bin/

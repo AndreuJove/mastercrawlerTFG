@@ -1,0 +1,18 @@
+Server: Cowboy
+X-Dns-Prefetch-Control: off
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Content-Security-Policy: connect-src 'self' api.catalysis-hub.org catapp-staging.herokuapp.com ichemlabs.cloud.chemdoodle.com localhost:5000 slack.com www.google-analytics.com catappdatabase2-pr-63.herokuapp.com slac-suncat.slack.com newt.nersc.gov; font-src 'self' fonts.googleapis.com data: fonts.gstatic.com; script-src 'unsafe-eval' 'unsafe-inline' 'self' api.catalysis-hub.org www.google-analytics.com code.jquery.com; style-src 'unsafe-inline' 'self' fonts.googleapis.com www.stanford.edu; frame-src 'self' api.catalysis-hub.org goo.gl docs.google.com www.cryst.ehu.es slac-suncat.slack.com slack.com github.com localhost:5000; frame-ancestors 'self' github.com; default-src 'self' api.catalysis-hub.org; img-src 'self' data: api.catalysis-hub.org www.google-analytics.com lh1.googleusercontent.com lh2.googleusercontent.com lh3.googleusercontent.com lh4.googleusercontent.com lh5.googleusercontent.com secure.gravatar.com
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Origin: https://api.catalysis-hub.org, https://newt.nersc.gov
+Access-Control-Allow-Headers: Origin, X-Requested-With, X-Pingother, Content-Type, Accept
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Mon, 26 Aug 2019 20:22:08 GMT
+Etag: W/"8a9-16ccf97cd80"
+Content-Type: text/html; charset=UTF-8
+Content-Encoding: gzip
+Date: Mon, 30 Mar 2020 23:46:05 GMT
+Via: 1.1 vegur

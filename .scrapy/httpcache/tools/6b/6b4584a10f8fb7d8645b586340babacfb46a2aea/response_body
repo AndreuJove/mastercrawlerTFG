@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+  <meta charset="utf-8">
+  <title>bioinf.org.uk - Prof. Andrew C.R. Martin's group at UCL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prof. Andrew C.R. Martin's bioinformatics group at UCL" />
+  <meta name="author" content="Prof. Andrew C.R. Martin" />
+
+  <!-- css -->
+<!--
+  <link href="https://fonts.googleapis.com/css?family=Handlee|Open+Sans:300,400,600,700,800" rel="stylesheet">
+-->
+  <link href="/css/bootstrap.css" rel="stylesheet" />
+  <link href="/css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="/css/flexslider.css" rel="stylesheet" />
+  <link href="/css/prettyPhoto.css" rel="stylesheet" />
+  <link href="/css/camera.css" rel="stylesheet" />
+  <link href="/css/jquery.bxslider.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
+
+  <!-- Theme skin -->
+  <link href="/color/default.css" rel="stylesheet" />
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="/ico/favicon.png" />
+
+  <style type='text/css'>
+    .top .container { background: #545454;
+          margin: 0px;
+          padding: 4px 0px 0px 8px;
+          height: 60px;
+          font: bold 14px Verdana, Helvetica, sans-serif; 
+          color: #ffffff;
+          background-image: url(/ucl.gif);
+          background-repeat: no-repeat;
+          background-position: bottom right;
+          width: 100%;
+    }
+
+    @media (max-width: 480px) {
+        .top .container {
+            background-image: url(/ucl_small.gif);
+        }
+    }
+
+    header .top {
+    padding: 0pt;
+    }
+    .topcontact {
+    padding: 8pt 0pt 0pt 8pt;
+    }
+    .topcontact a {
+    color: #e8e8e8;
+    }
+    a {
+    color: inherit;
+    font-weight: bold;  /* ACRM 18.11.19 */
+    }
+
+    a.nodecoration {
+        font-weight: normal;
+    }
+
+    .btn {
+        margin: 2px 0px;
+    }
+    
+    /*** Warnings ***/
+    .warning {
+        padding: 0px;
+        margin: 1px 2px 20px 2px;
+        background-color: #F8F8F8;
+        border: 1px solid #d5d5d5;
+        color: #656565
+    }
+    
+    .warning p, .warning li {
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        font-size: 10pt;
+    }
+    .warning ul, .warning ol {
+        margin: 0px 0px 0px 14px;
+        padding: 4px 4px;
+    }
+    .warning p {
+        padding: 4px;
+    }
+    .warning h1 {
+        background-color: #e96b56;
+        margin: 0px;
+        padding: 2px 4px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 10pt;
+    }
+    
+    /*** News items ***/
+    .news {
+        padding: 0px;
+        margin: 1px 2px 20px 2px;
+        background-color: #F8F8F8;
+        border: 1px solid #d5d5d5;
+        color: #656565
+    }
+    
+    .news p, .news li {
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        font-size: 10pt;
+    }
+    .news ul, .news ol {
+        margin: 0px 0px 0px 14px;
+        padding: 4px 4px;
+    }
+    .news p {
+        padding: 4px;
+    }
+    .news h1 {
+        background-color: #6f9b63;
+        margin: 0px;
+        padding: 2px 4px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 10pt;
+    }
+    
+    /* Just makes simple news items as normal inline text - used to demote
+       a 'news' item
+   */
+    .plainnews { }
+    .plainnews h1 {
+        font: 12pt;
+        padding: 8px 0px 0px 0px;
+        margin: 0px;
+    }
+    .plainnews p {
+        padding: 0px 0px 0px 0px;
+        margin: 0px;
+    }
+    
+    /*** Announcements ***/
+    .announce {
+        padding: 0px;
+        margin: 1px 2px 20px 2px;
+        background-color: #F8F8F8;
+        border: 1px solid #d5d5d5;
+        color: #656565
+    }
+    
+    .announce p, .announce li {
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        font-size: 10pt;
+    }
+    .announce ul, .announce ol {
+        margin: 0px 0px 0px 14px;
+        padding: 4px 4px;
+    }
+    .announce p {
+        padding: 4px;
+    }
+    .announce h1 {
+        background-color: #6b8eaf;
+        margin: 0px;
+        padding: 2px 4px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 10pt;
+    }
+
+    /*** Commercial use box ***/
+    .commercial {
+        background: #222222;
+        padding: 2em;
+        margin: 0 0 2em 0;
+    }
+    .commercial h4 {
+        color: #eeeeee;
+    }
+    .commercial p {
+        padding: 0.5em 0;
+    }
+    
+    /*** Used for publications page ***/
+    .pubtypeindex {
+        margin: 5px 0px -20px 0px;
+        text-align: center;
+    }
+
+    .pubtypeindex p {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .bibtoc {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .bibtocsection {
+        margin: 10pt 0 0 0;
+    }
+    .bibtochead {
+        display: block;
+        font-size: 14pt;
+    }
+
+    /* Boxed forms */
+    .myform {
+        background: #eeeeee;
+        border: 1pt solid #dddddd;
+        padding: 1em;
+        margin: 1em 0 1em 1em;
+        border-radius: 0.5em;
+    }
+    .myform form {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Fix problems with textarea width */
+    textarea {
+        width: auto; 
+    }
+    
+  </style>
+  
+  <!-- =======================================================
+    Theme Name: Eterna
+    Theme URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <!-- start header -->
+    <header>
+      <div class="top">
+        <div class="container">
+          <div class="row">
+            <div class="span2">
+              <p class="topcontact"><a href='/'>www.bioinf.org.uk</a></p>
+            </div>
+
+<!--
+            <div class="span2">
+              <ul class="social-network" style='margin: 10pt 0 0 0;'>
+                <li><a href="http://www.twitter.com/PrfAndrewMartin/"
+                       data-placement="bottom"
+                       title="Twitter"><i class="icon-twitter
+                                                 icon-white"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/andrew-martin-5155391/"
+                       data-placement="bottom"
+                       title="Linkedin"><i class="icon-linkedin
+                                                  icon-white"></i></a>
+                </li> 
+
+                <li><a href="#" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-white"></i></a></li>
+                <li><a href="#" data-placement="bottom" title="Pinterest"><i class="icon-pinterest  icon-white"></i></a></li>
+                <li><a href="#" data-placement="bottom" title="Google +"><i class="icon-google-plus icon-white"></i></a></li>
+                <li><a href="#" data-placement="bottom" title="Dribbble"><i class="icon-dribbble icon-white"></i></a></li>
+
+                
+              </ul>
+            </div>
+-->
+
+            
+
+<!--
+            <div class="span2">
+              <p class="topcontact">UCL</p>
+            </div>
+-->
+          </div>
+        </div>
+      </div>  <!-- top -->
+
+      <div class="container">
+
+
+        <div class="row nomargin">
+          <div class="span3">
+            <div class="logo">
+              <a href="/"><b>Prof Andrew C R Martin's Group</b></a><br />
+            </div>
+          </div>
+          <div class="span9">
+            <div class="navbar navbar-static-top">
+              <div class="navigation">
+                <nav>
+                  <ul class="nav topnav">
+
+                    <li class="dropdown active">
+                      <a href="/"><i class="icon-home"></i> Home <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/welcome.html">Welcome!</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/teaching/">Teaching</a></li>
+                        <li><a href="/news.html">News &amp; Media</a></li>
+                        <li><a href="/publications/">Publications</a></li>
+                        <li><a href="/group/">Group</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown ">
+                      <a href="/abs/">Antibodies <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/abs/">About</a></li>
+                        <li><a href="/abs/info.html">Information</a></li>
+                        <li><a href="http://www.abysis.org/">abYsis</a></li>
+                        <li><a href="http://abymod.abysis.org/">abYmod</a></li>
+                        <li><a href="http://www.abybank.org">abYbank</a></li>
+                        <li class='dropdown'><a href="#">Antibody Servers<i class='icon-angle-right'></i></a>
+                          <ul class='dropdown-menu sub-menu-level1'>
+                            <li><a href="/abs/abnum/">AbNum</a></li>
+                            <li><a href="/abs/chothia.html">Canonicals</a></li>
+                            <li><a href="/abs/shab/">Humanness (HScore)</a></li>
+                            <li><a href="/abs/gscore/">Humanness (GScore)</a></li>
+                            <li><a href="/abs/hsubgroup.html">Subgroups</a></li>
+                            <li><a href="/abs/simkab.html">KabatMan</a></li>
+                            <li><a href="/abs/paps/">VH/VL Packing</a></li>
+                            <li><a href="/abs/seqtest.html">AbCheck</a></li>
+                          </ul>
+                        </li>
+                        <li class='dropdown'><a href="#">AbyBank<i class='icon-angle-right'></i></a>
+                          <ul class='dropdown-menu sub-menu-level1'>
+                            <li><a href="http://www.abybank.org/sacs/">SACS</a></li>
+                            <li><a href="http://www.abybank.org/abdb/">AbDb</a></li>
+                            <li><a href="http://www.abybank.org/emblig/">EMBLIG</a></li>
+                            <li><a href="http://www.abybank.org/kabat/">Kabat</a></li>
+                            <li><a href="http://www.abybank.org/abpdbseq/">AbPDBSeq</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="/abs/patents/">Patents</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown ">
+                      <a href="/mutations/">Mutations <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/mutations/">About</a></li>
+                        <li><a href="/mutations/saapdap/">SAAPdap/SAAPpred</a></li>
+                        <li><a href="/mutations/saapdb/">SAAPdb</a></li>
+                        <li><a href="/mutations/g6pd/">G6PD</a></li>
+                        <li><a href="/mutations/p53/">p53</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown ">
+                      <a href="/servers/">Other servers <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/servers/">About</a></li>
+                        <li><a href="/servers/pdbsws/">PDBSWS</a></li>
+                        <li><a href="http://zincbind.bioinf.org.uk/">ZincBind</a></li>
+                        <li><a href="/servers/hbonds/">CheckHBond</a></li>
+                        <li><a href="/servers/fosta/">Fosta</a></li>
+                        <li><a href="/servers/profit/">ProFit</a></li>
+                        <li><a href="/servers/impact/">Impact</a></li>
+                        <li><a href="/servers/omim/">OMIM</a></li>
+                        <li><a href="/servers/pubmed/">Pubmed</a></li>
+                        <li><a href="/servers/pdbsprotec/">PDBSprotEC</a></li>
+                        <li><a href="/servers/topscan/">Topscan</a></li>
+                      </ul>
+                    </li>
+
+
+
+
+
+                    
+                    <li class="dropdown ">
+                      <a href="/software/">Software <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/software/">About</a></li>
+                        
+                        <li class='dropdown'><a href="#">Bioinformatics<i class='icon-angle-right'></i></a>
+                          <ul class='dropdown-menu sub-menu-level1'>
+                            <li><a href="/software/profit/">ProFit</a></li>
+                            <li><a href="/software/bioptools/">BiopTools</a></li>
+                            <li><a href="/software/nw/">NW</a></li>
+                            <li><a href="/software/avp/">AVP</a></li>
+                            <li><a href="/software/qtree/">QTree</a></li>
+                            <li><a href="/software/mint/">MINT</a></li>
+                            <li><a href="/software/torsions/">Torsions</a></li>
+                            <li><a href="/software/saptf/">SAPTF</a></li>
+                            <li><a href="/software/prodoric/">Prodoric</a></li>
+                            <li><a href="/software/apat/">APAT</a></li>
+                          </ul>
+                        </li>
+
+                        <li class='dropdown'><a href="#">Libraries<i class='icon-angle-right'></i></a>
+                          <ul class='dropdown-menu sub-menu-level1'>
+                            <li><a href="/software/bioplib/">BiopLib</a>
+                            <li><a href="http://atomium.bioinf.org.uk/">Atomium</a>
+                          </ul>
+                        </li>
+
+                        <li class='dropdown'><a href="#">JavaScript<i class='icon-angle-right'></i></a>
+                          <ul class='dropdown-menu sub-menu-level1'>
+                            <li><a href="/software/jsav/">JSAV</a></li>
+                            <li><a href="/software/js/buttons.txt">buttons.js</a></li>
+                            <li><a href="/software/js/lastmodified.txt">lastmodified.js</a></li>
+                          </ul>
+                        </li>
+
+
+                        <li class='dropdown'><a href="#">Utilities<i class='icon-angle-right'></i></a>
+                          <ul class='dropdown-menu sub-menu-level1'>
+                            <li><a href="/software/qlite/">QLite</a></li>
+                            <li><a href="/software/cdoc/">CDoc</a></li>
+                            <li><a href="/software/cluster/">Cluster</a></li>
+                          </ul>
+                        </li>
+
+
+                        <li class='dropdown'><a href="#">Patches<i class='icon-angle-right'></i></a>
+                          <ul class='dropdown-menu sub-menu-level1'>
+                            <li><a href="/software/mirror/">Mirror</a></li>
+                            <li><a href="/software/wdiff/">WDiff</a></li>
+                          </ul>
+                        </li>
+
+                      </ul>
+                    </li>
+
+                    <li class="dropdown ">
+                      <a href="#">Information <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/tandc.html">Terms &amp; Conditions</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/casp2/">CASP2</a></li>
+                        <li><a href="/jobs/">Opportunities</a></li>
+                        <li><a href="http://www.abyinformatics.com/">Consultancy</a></li>
+                      </ul>
+                    </li>
+                    
+                  </ul>
+                </nav>
+              </div>
+              <!-- end navigation -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+
+<section id="inner-headline">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="inner-heading">
+          <ul class="breadcrumb">
+            <li><a href="index.html">Home</a> <i class="icon-angle-right"></i></li>
+            <li class="active">Error 404</li>
+          </ul>
+          <h2>404</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="content">
+  <div class="container">
+    
+    <div class="row">
+      <div class="span12">
+        <div class="aligncenter">
+          <i class="icon-circled icon-bgwarning icon-remove icon-4x"></i>
+        </div>
+        <div class="blankline30"></div>
+        <h3 class="aligncenter">Sorry requested page not found</h3>
+        
+        <p class="aligncenter">
+          If you continue to have problems, please email Andrew Martin
+          since the web site has recently been reorganized.
+        </p>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+
+   <footer>
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <div class="widget">
+              <h5 class="widgetheading">Browse pages</h5>
+              <ul class="link-list">
+                <li><a href="http://www.ucl.ac.uk">UCL</a></li>
+                <li><a href="https://www.ucl.ac.uk/biosciences/departments/structural-and-molecular-biology">Structural and Molecular Biology</a></li>
+                <li><a href="http://www.ismb.lon.ac.uk/">ISMB</a></li>
+              </ul>
+
+              <div class='blankline20'></div>
+
+              <h5 class="widgetheading">Information</h5>
+              <ul class="link-list">
+                <li><a href="/tandc.html">Terms &amp; Conditions</a></li>
+              </ul>
+
+            </div>
+          </div>
+          <div class="span4">
+            <div class="widget">
+              <h5 class="widgetheading">Get in touch</h5>
+
+              <!-- Address start -->
+              <address>
+                <strong>Prof Andrew C R Martin</strong><br>
+                Institute of Structural and Molecular Biology<br />
+                Division of Biosciences, UCL<br />
+                Darwin Building<br />
+                Gower Street, London WC1E 6BT
+              </address>
+              <p>
+                <i class="icon-phone"></i> &nbsp;&nbsp;+44 207 679 7034 <br />
+                <i class="icon-envelope-alt"></i> &nbsp;&nbsp;andrew@bioinf.org.uk / andrew.martin@ucl.ac.uk <br />
+                <a href="http://www.twitter.com/PrfAndrewMartin/" data-placement="bottom" title="Twitter">
+                   <i class="icon-twitter icon-grey"></i> &nbsp;&nbsp;@PrfAndrewMartin
+                </a><br />
+                <a href="https://www.linkedin.com/in/AndrewCRMartin/" data-placement="bottom" title="Linkedin">
+                   <i class="icon-linkedin icon-grey"></i> &nbsp;&nbsp;AndrewCRMartin
+                </a>
+              </p>
+
+              <!-- Address end -->
+
+            </div>     
+          </div>
+
+          <!-- Twitter feed -->
+          <div class="span4">
+            <div class="widget">
+              <a class="twitter-timeline" data-height="275" data-theme="dark"
+              href="https://twitter.com/PrfAndrewMartin?ref_src=twsrc%5Etfw">Tweets
+                by PrfAndrewMartin</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+            </div>
+          </div>
+          <!-- End twitter -->
+
+        </div>
+      </div>
+      <div id="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <div class="copyright">
+                <p><span>&copy; Andrew C.R. Martin, UCL. All rights reserved</span></p>
+              </div>
+
+            </div>
+
+            <div class="span6">
+              <div class="credits">
+                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Eterna
+                -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bglight icon-2x active"></i></a>
+
+  <!-- javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/js/jquery.js"></script>
+  <script src="/js/jquery.easing.1.3.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <script src="/js/modernizr.custom.js"></script>
+  <script src="/js/toucheffects.js"></script>
+  <script src="/js/google-code-prettify/prettify.js"></script>
+  <script src="/js/jquery.bxslider.min.js"></script>
+  <script src="/js/camera/camera.js"></script>
+  <script src="/js/camera/setting.js"></script>
+
+  <script src="/js/jquery.prettyPhoto.js"></script>
+  <script src="/js/portfolio/jquery.quicksand.js"></script>
+  <script src="/js/portfolio/setting.js"></script>
+
+  <script src="/js/jquery.flexslider.js"></script>
+  <script src="/js/animate.js"></script>
+  <script src="/js/inview.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="/contactform/contactform.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="/js/custom.js"></script>
+
+</body>
+
+</html>
+

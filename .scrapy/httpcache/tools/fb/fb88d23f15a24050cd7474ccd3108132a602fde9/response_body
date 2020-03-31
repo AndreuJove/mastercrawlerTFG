@@ -1,0 +1,12 @@
+### WOF-Settings (BV) ###
+user-agent: AhrefsBot
+disallow: /
+
+### Settings von HF   ###
+# Das alte Kworkquark f|r alle Robots sperren
+
+User-agent: *
+Disallow: /v2/
+Disallow: /pr-info/Kworkquark/
+Disallow: cgi
+Disallow: images

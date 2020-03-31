@@ -1,0 +1,15 @@
+Cache-Control: max-age=172800
+Content-Type: text/plain
+Last-Modified: Thu, 26 Mar 2020 07:47:56 GMT
+Accept-Ranges: bytes
+Etag: "a164cdd423d61:0"
+Server: Microsoft-IIS/8.5
+Set-Cookie: Country=USA; domain=perkinelmer.com; path=/;SameSite=None; secure
+Set-Cookie: CountryName=USA; domain=perkinelmer.com; path=/;SameSite=None; secure
+Set-Cookie: Country=USA; domain=perkinelmer.com; path=/;SameSite=None; secure
+Set-Cookie: CountryName=USA; domain=perkinelmer.com; path=/;SameSite=None; secure
+Set-Cookie: BIGipServer~PE-PROD~perkinelmer-com_https=1076320421.47873.0000; path=/; Httponly; Secure;SameSite=none
+X-Powered-By: ASP.NET
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: X-fancyBox,X-Requested-With
+Date: Mon, 30 Mar 2020 23:55:43 GMT

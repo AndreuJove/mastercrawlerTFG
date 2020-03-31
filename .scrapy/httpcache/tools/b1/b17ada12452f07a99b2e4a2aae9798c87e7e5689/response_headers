@@ -1,0 +1,12 @@
+Server: nginx
+Date: Thu, 26 Mar 2020 11:02:00 GMT
+Content-Type: text/html; charset=iso-8859-1
+X-Content-Type-Options: nosniff
+Location: https://health.uchicago.edu/robots.txt
+Cache-Control: max-age=1209600
+Expires: Thu, 09 Apr 2020 11:02:00 GMT
+X-Request-Id: v-375c3242-6f51-11ea-8331-0b190642e4ca
+Age: 390960
+Via: varnish
+X-Cache: HIT
+X-Cache-Hits: 129

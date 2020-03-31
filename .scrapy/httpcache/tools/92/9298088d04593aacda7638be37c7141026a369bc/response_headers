@@ -1,0 +1,15 @@
+Server: Microsoft-IIS/8.5
+X-Pc-Cs-Wsvc: default
+Content-Type: text/plain
+X-Bwcc: pub
+Date: Mon, 30 Mar 2020 23:55:40 GMT
+X-Orig-Host: chemspider.com
+Accept-Ranges: bytes
+Etag: "0e8e7fcf1ebd51:0"
+X-Orig-Path: /robots.txt
+Set-Cookie: X-Mapping-kckcchol=31B80B8C430F3CFD459702BE367D5804; path=/
+Last-Modified: Tue, 25 Feb 2020 15:41:04 GMT
+X-Powered-By: ASP.NET
+Correctip: true
+X-Sfbi: Run
+X-Sfbi: 79.152.50.41

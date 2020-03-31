@@ -1,0 +1,11 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 23:13:47 GMT
+Content-Type: text/plain; charset=utf-8
+Last-Modified: Mon, 21 Oct 2013 14:04:51 GMT
+Vary: Accept-Encoding
+Expires: Mon, 06 Apr 2020 23:13:47 GMT
+Cache-Control: max-age=604800
+Cache-Control: public, must-revalidate, proxy-revalidate
+Access-Control-Allow-Origin: *
+Pragma: public
+Content-Encoding: gzip

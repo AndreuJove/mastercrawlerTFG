@@ -1,0 +1,15 @@
+Vary: Accept-Encoding
+Content-Type: text/plain
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=31536000
+Date: Mon, 30 Mar 2020 23:49:06 GMT
+X-Xss-Protection: 1; mode=block
+X-Olaf: ⛄
+Accept-Ranges: bytes
+X-Content-Type-Options: nosniff
+Public-Key-Pins-Report-Only: pin-sha256="MAvrW46Pk2CL6OQ5fVttumEDiYjT+yWzuzGh4i9nbx0="; pin-sha256="OZPOHEJlvNwhOtrspxw0DF3diTXo+DhEJWbF6hMfjxE="; pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="; pin-sha256="cVfulXVlwi6guqLq1tTO+IKZtCg/ddJRJ6jr0iV1S9Q="; pin-sha256="tUCfNBuWZglja0nFPXKOLLy2zQ95PbXRN/NMLhgRbNk="; max-age=5184000; report-uri="https://report-uri.sanger.ac.uk/report-uri"
+Last-Modified: Wed, 15 May 2019 10:45:39 GMT
+X-Frame-Options: ALLOW-FROM http://insidebwhpath.partners.org
+X-Ua-Compatible: IE=edge
+Referrer-Policy: strict-origin-when-cross-origin
+X-Clacks-Overhead: GNU Terry Pratchett

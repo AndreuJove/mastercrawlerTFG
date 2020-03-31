@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<!-- Site Title   -->
+<title>RxnFinder</title>
+<!-- Fav Icons   -->
+<link rel="icon" href="/static/rxnfinder_homepage/images/favicon.png" type="image/x-icon">
+<!-- Bootstrap -->
+<link href="/static/rxnfinder_homepage/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/rxnfinder_homepage/css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+<!-- Fonts Awesome -->
+<link href="/static/rxnfinder_homepage/css/font-awesome.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,200,300,100,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
+<!-- animate Effect -->
+<link href="/static/rxnfinder_homepage/css/animate.css" rel="stylesheet">
+<!-- Main CSS -->
+<link href="/static/rxnfinder_homepage/css/style.css" rel="stylesheet">
+<!-- Responsive CSS -->
+<link href="/static/rxnfinder_homepage/css/responsive.css" rel="stylesheet">
+</head>
+<body>
+<header id="header" class="head">
+  <div class="top-header">
+     <div class="container">
+       <div class="row ">
+         <ul class="contact-detail2 col-md-12 pull-left">
+           <li> <a href="#"><i class="fa fa-mobile"></i>+86-15522581689 (Jenny Chen);&ensp;&ensp;<i class="fa fa-mobile"></i>+86-18071732104 (Alex Li);&ensp;&ensp;<i class="fa fa-mobile"></i>+1-626-831-8997 (David Chen)</a> </li>
+           <li> <a href="mailto:service@esynbio.com" target="_blank"><i class="fa fa-envelope-o"></i>service@esynbio.com</a></li>
+         </ul>
+         <!--<div class="social-links col-md-6 pull-right">-->
+           <!--<ul class="social-icons pull-right">-->
+             <!--&lt;!&ndash;<li> <a href="#" target="_blank"><i class="fa fa-facebook"></i></a> </li>&ndash;&gt;-->
+             <!--&lt;!&ndash;<li> <a href="#" target="_blank"><i class="fa fa-twitter"></i></a> </li>&ndash;&gt;-->
+             <!--&lt;!&ndash;<li> <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a> </li>&ndash;&gt;-->
+             <!--&lt;!&ndash;<li> <a href="#" target="_blank"><i class="fa fa-skype"></i></a> </li>&ndash;&gt;-->
+             <!--&lt;!&ndash;<li> <a href="#" target="_blank"><i class="fa fa-dribbble"></i></a> </li>&ndash;&gt;-->
+           <!--</ul>-->
+         <!--</div>-->
+       </div>
+     </div>
+    </div>
+    <nav class="navbar navbar-default navbar-menu">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <div class="logo-text"><span><samp>R</samp>RxnFin</span>der<p style="font-size: 50%; padding-left: 0px">the choice for biosynthetic research</p></div>
+
+            <!-- <img src="images/logo.png" alt="logo"> -->
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about/">About us </a></li>
+            <li><a href="/services/">Services </a></li>
+            <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools<strong class="caret"></strong></a>
+                    <ul class="dropdown-menu">
+                        <li><a target="_blank" href="http://hulab.rxnfinder.org/media/jme/index.html">Molecule Input</a></li>
+                        <li><a target="_blank" href="http://hulab.rxnfinder.org/media/jme/rxnindex.html">Reaction Input</a></li>
+                        <li class="divider"></li>
+                        <li><a target="_blank" href="http://hulab.rxnfinder.org/convertformats/">Convert Formats</a></li>
+                        <li><a target="_blank" href="http://hulab.rxnfinder.org/smi2img/">Smiles To Images</a></li>
+                        <li><a target="_blank" href="http://hulab.rxnfinder.org/name2img/">Name To Images</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact/">Contact us</a></li>
+
+              <div class="form-group navbar-form navbar-right">
+                   <!-- Profile -->
+                  <a class="btn btn-success btn" href="/accounts/register/?next=/accounts/login/">Register</a>
+                  <a class="btn btn-info" href="/accounts/login/">Log in</a>
+                  
+                  <a class="btn btn-primary" href="/contribute/">Contribute</a>
+                </div>
+
+
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+</header>
+
+            
+<div class="row"  style="min-height: 400px; margin-left: 10%; margin-right: 10%">
+    <div class="col-md-12">
+    <h1>Sorry, Page Not Found!</h1>
+    <div>Sorry, but the page you were trying to view does not exist.</div>
+</div>
+</div>
+
+
+
+<section id="footer-top" class="footer-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-lg-3">
+        <div class="footer-top-box">
+          <h4>About Us</h4>
+          <p>Produced by Wuhan LifeSynther Co. Ltd. Founded in 2011 at Wuhan Eastlake High-tech Zone, RxnFinder is a world leading biosynthetic big data, AI-aided biosynthetic design, and one-stop biosynthetic service provider. </p>
+        </div>
+        <!--<div class="footer-top-box">-->
+          <!--<h4>Office Hour</h4>-->
+          <!--<b>Mon-Fri :</b> 09am to 06pm<br/>-->
+          <!--<b>Tues-Wed :</b> Special Appointment-->
+        <!--</div>-->
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <div class="footer-top-box">
+          <h4>Latest Posts</h4>
+          <ul>
+            <li>
+              <div class="recent-post-widget">
+                <a href="#" class="widget-img-thumb">
+                  <img src="/static/rxnfinder_homepage/images/post-1.jpg" class="img-responsive">
+                </a>
+                <div class="widget-content">
+                  <h5><a href="#" class="sidebar-item-title">AlphaCellFactory contest will be held at 4-5 July, 2019.</a></h5>
+                  <a href="#">
+<!--                    <p class="widget-date">Posted: 3 day ago</p>-->
+                  </a>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </li>
+            <li>
+              <div class="recent-post-widget">
+                <a href="#" class="widget-img-thumb">
+                  <img src="/static/rxnfinder_homepage/images/post-2.jpg" class="img-responsive">
+                </a>
+                <div class="widget-content">
+                  <h5><a href="#" class="sidebar-item-title">SynBioDesign Training Course will open at 4-5 July, 2019.</a></h5>
+                  <a href="#">
+<!--                    <p class="widget-date">Posted: 3 day ago</p>-->
+                  </a>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <div class="footer-top-box">
+          <h4>Tags</h4>
+          <div class="tag"><a href="#">Biosynthesis</a></div>
+          <div class="tag"><a href="#">Cell factory</a></div>
+          <div class="tag"><a href="#">Intelligent manufacturing</a></div>
+          <div class="tag"><a href="#">Synthetic biology</a></div>
+          <div class="tag"><a href="#">Metabolic engineering</a></div>
+          <div class="tag"><a href="#">Industrial greening</a></div>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <div class="footer-top-box">
+          <h4>Contact us</h4>
+          <p><b>Location : 70</b> Guanggu Road, WH<br/>
+            <b>Mob: </b> <a href="#" style="color: deepskyblue">+86-15522581689 (Jenny Chen)</a><br/>
+            <b>Mob: </b> <a href="#" style="color: deepskyblue">+86-18071732104 (Alex Li)</a><br/>
+            <b>Mob: </b> <a href="#" style="color: deepskyblue">+1-626-831-8997 (David Chen)</a><br/>
+            <b>Mail: </b> <a href="mailto:service@esynbio.com" style="color: deepskyblue">service@esynbio.com</a></p>
+        </div>
+        <div class="footer-top-box">
+          <h4>Subscribe</h4>
+          <div class="cs-form">
+
+            <form >
+              <!--action="#" method="post"-->
+              <div class="input-holder">
+                <input type="email" placeholder="Enter Valid Email Address">
+                <label> <i class="fa fa-location-arrow fa-2x"></i>
+                  <input class="submit-bgcolor" type="submit" value="submit">
+                </label>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="footer-bottom" class="footer-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-lg-9">
+        <div class="copyright">Copyright &copy; 2020.RxnFinder All rights reserved. &nbsp;&nbsp;<a href="http://www.beian.miit.gov.cn" style="color: #0c7cb5;">鄂ICP备15006608号-2</a></div>
+      </div>
+      <div class="col-lg-3">
+        <ul class="list-inline social-buttons">
+          <!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+          <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+          <!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+          <!--<li><a href="#"><i class="fa fa-youtube"></i></a></li>-->
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="/static/rxnfinder_homepage/js/jquery.min.js"></script>
+<script src="/static/rxnfinder_homepage/js/bootstrap.min.js"></script>
+<script src="/static/rxnfinder_homepage/js/jquery.plugin.min.js"></script>
+<script src="/static/rxnfinder_homepage/js/jquery.isotope.min.js"></script>
+<script src="/static/rxnfinder_homepage/js/jquery.magnific-popup.min.js"></script>
+<script src="/static/rxnfinder_homepage/js/bootstrap-dropdownhover.min.js"></script>
+<script src="/static/rxnfinder_homepage/js/wow.min.js"></script>
+<script src="/static/rxnfinder_homepage/js/waypoints.min.js"></script>
+<script src="/static/rxnfinder_homepage/js/jquery.counterup.min.js"></script>
+<script src="/static/rxnfinder_homepage/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Server: GitHub.com
+Content-Type: text/html
+Location: https://bioinformatics.sph.harvard.edu/robots.txt
+X-Github-Request-Id: 682E:5D0C:67FC7C:81DE3A:5E827D56
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 23:14:30 GMT
+Via: 1.1 varnish
+Age: 0
+X-Served-By: cache-mad22020-MAD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1585610070.345653,VS0,VE122
+Vary: Accept-Encoding
+X-Fastly-Request-Id: ac351b86c3cac822f40f18a4e1390f394b42db9c

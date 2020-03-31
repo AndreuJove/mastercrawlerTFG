@@ -1,0 +1,18 @@
+Date: Mon, 30 Mar 2020 23:12:31 GMT
+Server: Apache
+Last-Modified: Wed, 18 Dec 2019 09:07:46 GMT
+Etag: "88d-599f6c72a5c80"
+Content-Type: text/plain; charset=UTF-8
+X-Backend-Response: pan_multi2
+X-Varnish: 15674659 15575153
+Age: 496
+Via: 1.1 varnish-v4
+X-Backend-Deliver: pan_multi2
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+Set-Cookie: sticky=58.082;   Expires=Tue, 31 Mar 2020 00:20:47 GMT; Path=/ ; Secure
+X-Cache: HIT
+Cache-Control: public, no-cache, max-age: 7200, s-maxage: 7200, must-revalidate
+Expires: Tue, 31 Mar 2020 00:20:47 GMT
+Accept-Ranges: bytes

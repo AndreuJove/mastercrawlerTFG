@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /boardList
+Disallow: /quickBoard
+Disallow: /help
+Disallow: /login
+Disallow: /searchSettings

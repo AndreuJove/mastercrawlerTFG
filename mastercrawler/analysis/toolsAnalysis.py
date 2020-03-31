@@ -1,18 +1,18 @@
-import pandas as pd
-import seaborn as sns
+# import pandas as pd
+# import seaborn as sns
 
 
-df = pd.read_csv('20noJS.csv')
+# df = pd.read_csv('20noJS.csv')
 
 
-df = df.loc[df['bodyContent']!=0]
+# df = df.loc[df['bodyContent']!=0]
 
 
-nullTitles = (df['titleUrl'].isnull()).sum()
+# nullTitles = (df['titleUrl'].isnull()).sum()
 
 
 
-print(df)
+# print(df)
 
 
 

@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html style="background-attachment: scroll;">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<title>Norwegian bioinformatics platform</title>
+<link rel="alternate" type="application/rss+xml"
+TITLE="Bioinfo RSS Feed" HREF="http://www.bioinfo.no/rss"><link href="bioinfo.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+ function MM_openBrWindow(theURL,winName,features) { //v2.0
+ window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="950" border="0" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#004F72"> 
+    <td colspan="2" class="table-tlr"><br>
+      <img src="images/bioinfo_header.png" alt="FUGE bioinformatics platform" width="950" height="61" border="0" usemap="#Map">
+	  <map name="Map">
+  		<area shape="rect" coords="25,6,70,52" href="http://www.fuge.no" alt="FUGE">
+	  </map>
+	</td>
+  </tr>
+  <tr bgcolor="#004F72"> 
+    <td valign="top" class="table-l">&nbsp; </td>
+    <td class="table-rb">
+      <!-- navigation bar here -->
+      <table border="0" cellpadding="0" cellspacing="0" bgcolor="#001672" class="table-tlr">
+  <tr> 
+    <td bgcolor ="#007BB2" width="100" style="cursor:hand" onClick="window.location.href='http://services.cbu.uib.no/'" onMouseover="this.style.backgroundColor='#CCCCCC'" onMouseout="this.style.backgroundColor=''" class="table-r"><div align="center"><a href="http://services.cbu.uib.no/" class="menubar">home</a></div></td>
+    <td width="100" style="cursor:hand" onClick="window.location.href='http://services.cbu.uib.no/tools/'" onMouseover="this.style.backgroundColor='#CCCCCC'" onMouseout="this.style.backgroundColor=''" class="table-r"><div align="center"><a href="http://services.cbu.uib.no/tools/" class="menubar">tools</a></div></td>
+    <td width="100" style="cursor:hand" onClick="window.location.href='http://services.cbu.uib.no/courses/'" onMouseover="this.style.backgroundColor='#CCCCCC'" onMouseout="this.style.backgroundColor=''" class="table-r"><div align="center"><a href="http://services.cbu.uib.no/courses/" class="menubar">courses</a>&nbsp;</div></td>
+
+    <td width="100" style="cursor:hand" onClick="window.location.href='http://services.cbu.uib.no/links/'" onMouseover="this.style.backgroundColor='#CCCCCC'" onMouseout="this.style.backgroundColor=''" class="table-r"><div align="center"><a href="http://services.cbu.uib.no/links/" class="menubar">links</a></div></td>
+    <td width="100" style="cursor:hand" onClick="window.location.href='http://services.cbu.uib.no/services/'" onMouseover="this.style.backgroundColor='#CCCCCC'" onMouseout="this.style.backgroundColor=''"class="table-r"><div align="center"><a href="http://services.cbu.uib.no/services/" class="menubar">services</a></div></td> 
+    <td width="100" style="cursor:hand" onClick="window.location.href='http://services.cbu.uib.no/about/'" onMouseover="this.style.backgroundColor='#CCCCCC'" onMouseout="this.style.backgroundColor=''" ><div align="center"><a href="http://services.cbu.uib.no/about/" class="menubar">about</a></div></td>
+ </tr>
+</table>
+
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="180" bgcolor="#004F72" class="table-lr">
+      <!--left menu here -->
+      <table width="100%%" border="0" cellspacing="5" cellpadding="5">
+
+  <tr> 
+    <td class="lm">Platform partners:</td>
+  </tr>  
+
+  <tr> 
+    <td class="lm">
+    <img src="images/b_14_b.gif" alt="" border="0"><a href=http://services.cbu.uib.no/bergen target="_parent" class="lm">  UiB</a><br>
+    <img src="images/o_14_b.gif" alt="" border="0"><a href=http://services.cbu.uib.no/oslo target="_parent" class="lm">  UiO</a><br>
+    <img src="images/t_14_b.gif" alt="" border="0"><a href=http://services.cbu.uib.no/trondheim target="_parent" class="lm">  NTNU</a><br>
+
+    </td>
+  </tr>
+
+  <tr> 
+    <td class="lm">Research:</td>
+  </tr>  
+
+  <tr> 
+    <td class="lm">
+    <a href=http://services.cbu.uib.no/about/publications target="_parent" class="lm">Recent publications</a><br>
+
+    </td>
+  </tr>
+
+  <tr> 
+    <td class="lm">Online tools:</td>
+  </tr>
+  <tr> 
+    <td class="lm">
+
+        <img src="images/b_14_b.gif" alt="" border="0"><a href="/tools/bomp" target="_parent" class="lm">BOMP</a><br>            
+   
+	<img src="images/b_14_b.gif" alt="" border="0"><a href="http://elm.eu.org/" target="_parent" class="lm">ELM</a><br>
+        <img src="images/b_14_b.gif" alt="" border="0"><a href="/tools/kaks" target="_parent" class="lm">Ka/Ks calculation</a><br>
+	<img src="images/b_14_b.gif" alt="" border="0"><a href="/tools/lipo" target="_parent" class="lm">LIPO</a><br>
+        <img src="images/b_14_b.gif" alt="" border="0"><a href="/tools/pratt" target="_parent" class="lm">Pratt</a><br>
+        <img src="images/b_14_b.gif" alt="" border="0"><a href="/tools/regexpmaker" target="_parent" class="lm">RegExpMaker</a><br>
+        <img src="images/b_14_b.gif" alt="" border="0"><a href="/tools/spratt" target="_parent" class="lm">Spratt</a><br>   
+        <img src="images/b_14_b.gif" alt="" border="0"><a href="/tools/normalmodes" target="_parent" class="lm">WEBnm@</a><br>
+        <img src="images/b_14_b.gif" alt="" border="0"><a href="/tools/tmma" target="_parent" class="lm">TMM@</a><br>
+        <img src="images/b_14_b.gif" alt="" border="0"><a href="/tools/xhm" target="_parent" class="lm">XHM</a><br>
+
+
+        <img src="images/o_14_b.gif" alt="" border="0"><a href="http://www.paralign.org/" target="_parent" class="lm">ParAlign</a><br>	
+	<img src="images/o_14_b.gif" alt="" border="0"><a href="http://stitchprofiles.uio.no/" target="_parent" class="lm">Stitchprofiles</a><br>
+		<img src="images/t_14_b.gif" alt="" border="0"><a href="http://www.genetools.no" target="_parent" class="lm">Genetools</a><br> 
+	 <img src="images/t_14_b.gif" alt="" border="0"><a href="http://www.interagon.com/demo/" target="_parent" class="lm">siRNA</a><br>
+	 
+	  <img src="images/t_14_b.gif" alt="" border="0"><a href="https://demo1.interagon.com/demo" target="_parent" class="lm">TargetBoost</a><br>
+	
+	 <img src="images/sgp_14_b.gif" alt="" border="0"><a href="http://www.salmongenome.no/cgi-bin/blast.cgi?userName=" target="_parent" class="lm">BLAST</a><br>
+	 <img src="images/sgp_14_b.gif" alt="" border="0"><a href="http://www.salmongenome.no/cgi-bin/preAss.cgi?userName=" target="_parent" class="lm">preAssemble</a><br>
+         <br /><img src="images/o_14_b.gif" alt="" border="0" /><a href="http://www.bioportal.uio.no/" target="_parent" class="lm">bioportal.uio.no</a><br />
+    </td>
+  </tr>
+
+
+  <tr> 
+    <td class="lm">Databases:</td>
+  </tr>
+  <tr>
+  <td class="lm">
+    <img src="images/b_14_b.gif" alt="CHRAB" border="0"><a href="/tools/CHRAB" target="_parent" class="lm">CHRAB</a><br>
+    <img src="images/b_14_b.gif" alt="TAED" border="0"><a href="/tools/TAED" target="_parent" class="lm">TAED</a><br>
+    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tools/TAED/TAED_Chordata" target="_parent" class="lm">Chordates</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tools/TAED/TAED_Embryophyta" target="_parent" class="lm">Plants</a><br> -->
+    <img src="images/o_14_b.gif" alt="PubGene" border="0"><a href="http://www.pubgene.org" target="_parent" class="lm">Pubgene</a><br>
+    <img src="images/o_14_b.gif" alt="repairGenes" border="0"><a href="http://www.repairgenes.org" target="_parent" class="lm">repairGenes</a><br>
+  </td>
+  </tr>
+
+  <tr> 
+    <td class="lm">Software:</td>
+  </tr>  
+
+  <tr> 
+    <td class="lm">
+    <img src="images/b_14_b.gif" alt="" border="0"><a href="http://www.molmine.com" class="lm" target="_parent">J-Express</a><br>
+    <img src="images/b_14_b.gif" alt="" border="0"><a href="http://services.cbu.uib.no/software/phyrex" class="lm" target="_parent">Phyrex</a><br>
+    <img src="images/t_14_b.gif" alt="" border="0"><a href="http://www.scicraft.org" class="lm" target="_parent">SciCraft</a><br>
+    <img src="images/b_14_b.gif" alt="" border="0"><a href="http://www.cbu.uib.no/~steffpar/softparsmap/" class="lm" target="_parent">Softparsmap</a><br>
+    <img src="images/b_14_b.gif" alt="" border="0"><a href="http://services.cbu.uib.no/software/massSorter" class="lm" target="_parent">MassSorter</a><br>
+    <img src="images/b_14_b.gif" alt="" border="0"><a href="http://www.ii.uib.no/~ketil/bioinformatics/tools.html" class="lm" target="_parent">RBR and xsact</a><br>
+    </td>
+  </tr>
+
+  <tr> 
+    <td class="lm">Widget Toolbox:</td>
+  </tr>  
+
+  <tr> 
+    <td class="lm">
+       <img src="images/b_14_b.gif" alt="" border="0"><a href="http://www.ii.uib.no/~matthewb/tools/align_convert_in.cgi" class="lm" target="new">Alignment Conversion</a><br>
+       <img src="images/b_14_b.gif" alt="" border="0"><a href="http://www.ii.uib.no/~matthewb/tools/seq_convert_in.cgi" class="lm" target="new">Sequence Conversion</a><br>
+       <img src="images/b_14_b.gif" alt="" border="0"><a href="http://www.ii.uib.no/~matthewb/tools/tree_convert_in.cgi" class="lm" target="new">Tree Conversion</a><br>
+       <img src="images/b_14_b.gif" alt="" border="0"><a href="http://www.ii.uib.no/~matthewb/tools/aa2na_aln_in.cgi" class="lm" target="new">Alignment to coding</a><br>
+  
+  <tr><td>
+  <!--a href="mailto:webmaster@bioinfo.no" target="_parent" class="lm">Webmaster</a><br -->
+  <a href="/about/sitemap" target="_parent" class="lm">Site map</a><br>
+  </td></tr>  
+
+  
+
+</table>
+
+    </td>
+    <td width="770" rowspan="2" valign="top" class="table-rb" bgcolor="#ffffff">
+       <table border="0" cellspacing="0" cellpadding="10" width="100%">
+         <tr>
+           <td>
+        <!--content here -->
+
+   <h2>Site Error</h2>
+  <p>An error was encountered while publishing this resource.
+  </p>
+  <p><strong>Resource not found</strong></p>
+
+  Sorry, the requested resource does not exist.<p>Check the URL and try again.</p><p><b>Resource:</b> http://services.cbu.uib.no/robots.txt</p>
+  <hr noshade="noshade"/>
+
+  <p>Troubleshooting Suggestions</p>
+
+  <ul>
+  <li>The URL may be incorrect.</li>
+  <li>The parameters passed to this resource may be incorrect.</li>
+  <li>A resource that this resource relies on may be
+      encountering an error.</li>
+  </ul>
+
+  <p>For more detailed information about the error, please
+  refer to the error log.
+  </p>
+
+  <p>If the error persists please contact the site maintainer.
+  Thank you for your patience.
+  </p>
+
+</td>
+</tr>
+</table>
+      </td>
+  </tr>
+  <tr> 
+    <td valign="bottom" bgcolor="#004F72"><img src="images/leftmenu_bg.png" width="180" height="440" class="table-lrb"></td>
+
+
+  </tr>
+</table>
+</body>
+</html>
+

@@ -1,0 +1,1782 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!DOCTYPE html>
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+	
+	
+	
+	
+	
+		
+		
+		
+	
+	
+		
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="ltr" dir="ltr" lang="en-US">
+
+<head>
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<title>Status - Recas Science Gateway</title>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+<link href="https://recasgateway.ba.infn.it/recas-theme/images/favicon.ico" rel="Shortcut Icon" />
+
+
+
+
+
+	<link href="https&#x3a;&#x2f;&#x2f;localhost" rel="canonical" />
+
+	
+
+	
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;ar" hreflang="ar-SA" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;eu" hreflang="eu-ES" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;bg" hreflang="bg-BG" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;ca" hreflang="ca-AD" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;ca_ES" hreflang="ca-ES" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;zh" hreflang="zh-CN" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;zh_TW" hreflang="zh-TW" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;hr" hreflang="hr-HR" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;cs" hreflang="cs-CZ" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;da" hreflang="da-DK" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;nl" hreflang="nl-NL" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;nl_BE" hreflang="nl-BE" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;en_GB" hreflang="en-GB" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;et" hreflang="et-EE" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;fi" hreflang="fi-FI" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;fr" hreflang="fr-FR" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;gl" hreflang="gl-ES" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;de" hreflang="de-DE" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;el" hreflang="el-GR" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;iw" hreflang="iw-IL" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;hi" hreflang="hi-IN" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;hu" hreflang="hu-HU" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;in" hreflang="in-ID" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;it" hreflang="it-IT" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;ja" hreflang="ja-JP" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;ko" hreflang="ko-KR" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;lo" hreflang="lo-LA" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;nb" hreflang="nb-NO" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;fa" hreflang="fa-IR" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;pl" hreflang="pl-PL" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;pt" hreflang="pt-BR" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;pt_PT" hreflang="pt-PT" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;ro" hreflang="ro-RO" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;ru" hreflang="ru-RU" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;sr" hreflang="sr-RS" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;sr_RS_latin" hreflang="sr-RS-latin" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;sl" hreflang="sl-SI" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;sk" hreflang="sk-SK" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;es" hreflang="es-ES" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;sv" hreflang="sv-SE" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;tr" hreflang="tr-TR" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;uk" hreflang="uk-UA" rel="alternate" />
+
+		
+
+						<link href="https&#x3a;&#x2f;&#x2f;localhost&#x2f;vi" hreflang="vi-VN" rel="alternate" />
+
+		
+
+	
+
+
+
+
+
+<link href="&#x2f;html&#x2f;css&#x2f;main&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;recas_WAR_recastheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;en_US&#x26;b&#x3d;6101&#x26;t&#x3d;1423579480000" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+
+	
+
+				<link href="/Recas_sciencegateway_home/css/recasgw.css?browserId=other&amp;themeId=recas_WAR_recastheme&amp;minifierType=css&amp;languageId=en_US&amp;b=6101&amp;t=1461146330000" rel="stylesheet" type="text/css" />
+
+	
+
+
+
+
+
+
+
+<script type="text/javascript">
+	// <![CDATA[
+		var Liferay = {
+			Browser: {
+				acceptsGzip: function() {
+					return true;
+				},
+				getMajorVersion: function() {
+					return 80.0;
+				},
+				getRevision: function() {
+					return "537.36";
+				},
+				getVersion: function() {
+					return "80.0.3987.149";
+				},
+				isAir: function() {
+					return false;
+				},
+				isChrome: function() {
+					return true;
+				},
+				isFirefox: function() {
+					return false;
+				},
+				isGecko: function() {
+					return true;
+				},
+				isIe: function() {
+					return false;
+				},
+				isIphone: function() {
+					return false;
+				},
+				isLinux: function() {
+					return true;
+				},
+				isMac: function() {
+					return false;
+				},
+				isMobile: function() {
+					return false;
+				},
+				isMozilla: function() {
+					return false;
+				},
+				isOpera: function() {
+					return false;
+				},
+				isRtf: function() {
+					return true;
+				},
+				isSafari: function() {
+					return true;
+				},
+				isSun: function() {
+					return false;
+				},
+				isWap: function() {
+					return false;
+				},
+				isWapXhtml: function() {
+					return false;
+				},
+				isWebKit: function() {
+					return true;
+				},
+				isWindows: function() {
+					return false;
+				},
+				isWml: function() {
+					return false;
+				}
+			},
+
+			Data: {
+				isCustomizationView: function() {
+					return false;
+				},
+
+				notices: [
+					null
+
+					
+
+					
+				]
+			},
+
+			ThemeDisplay: {
+				getCDNDynamicResourcesHost: function() {
+					return "";
+				},
+				getCDNHost: function() {
+					return "";
+				},
+				getCompanyId: function() {
+					return "10154";
+				},
+				getCompanyGroupId: function() {
+					return "10192";
+				},
+				getUserId: function() {
+					return "10158";
+				},
+
+				
+
+				getDoAsUserIdEncoded: function() {
+					return "";
+				},
+				getPlid: function() {
+					return "10183";
+				},
+
+				
+					getLayoutId: function() {
+						return "1";
+					},
+					getLayoutURL: function() {
+						return "/web/guest/home";
+					},
+					isPrivateLayout: function() {
+						return "false";
+					},
+					getParentLayoutId: function() {
+						return "0";
+					},
+				
+
+				getScopeGroupId: function() {
+					return "10180";
+				},
+				getScopeGroupIdOrLiveGroupId: function() {
+					return "10180";
+				},
+				getParentGroupId: function() {
+					return "10180";
+				},
+				isImpersonated: function() {
+					return false;
+				},
+				isSignedIn: function() {
+					return false;
+				},
+				getDefaultLanguageId: function() {
+					return "en_US";
+				},
+				getLanguageId: function() {
+					return "en_US";
+				},
+				isAddSessionIdToURL: function() {
+					return false;
+				},
+				isFreeformLayout: function() {
+					return false;
+				},
+				isStateExclusive: function() {
+					return false;
+				},
+				isStateMaximized: function() {
+					return false;
+				},
+				isStatePopUp: function() {
+					return false;
+				},
+				getPathContext: function() {
+					return "";
+				},
+				getPathImage: function() {
+					return "/image";
+				},
+				getPathJavaScript: function() {
+					return "/html/js";
+				},
+				getPathMain: function() {
+					return "/c";
+				},
+				getPathThemeImages: function() {
+					return "https://recasgateway.ba.infn.it/recas-theme/images";
+				},
+				getPathThemeRoot: function() {
+					return "/recas-theme/";
+				},
+				getURLControlPanel: function() {
+					return "/group/control_panel?doAsGroupId=10180&refererPlid=10183";
+				},
+				getURLHome: function() {
+					return "https://recasgateway.ba.infn.it/web/guest";
+				},
+				getSessionId: function() {
+					
+						
+						
+							return "";
+						
+					
+				},
+				getPortletSetupShowBordersDefault: function() {
+					return true;
+				}
+			},
+
+			PropsValues: {
+				NTLM_AUTH_ENABLED: false
+			}
+		};
+
+		var themeDisplay = Liferay.ThemeDisplay;
+
+		
+
+		Liferay.AUI = {
+			getBaseURL: function() {
+				return 'https://recasgateway.ba.infn.it/html/js/aui/';
+			},
+			getCombine: function() {
+				return true;
+			},
+			getComboPath: function() {
+				return '/combo/?browserId=other&minifierType=&languageId=en_US&b=6101&t=1423579481000&p=/html/js&';
+			},
+			getFilter: function() {
+				
+					
+						return {
+							replaceStr: function(match, fragment, string) {
+								return fragment + 'm=' + (match.split('/html/js')[1] || '');
+							},
+							searchExp: '(\\?|&)/([^&]+)'
+						};
+					
+					
+					
+				
+			},
+			getJavaScriptRootPath: function() {
+				return '/html/js';
+			},
+			getLangPath: function () {
+				return 'aui_lang.jsp?browserId=other&themeId=recas_WAR_recastheme&colorSchemeId=01&minifierType=js&languageId=en_US&b=6101&t=1423579481000';
+			},
+			getRootPath: function() {
+				return '/html/js/aui/';
+			}
+		};
+
+		window.YUI_config = {
+			base: Liferay.AUI.getBaseURL(),
+			comboBase: Liferay.AUI.getComboPath(),
+			fetchCSS: true,
+			filter: Liferay.AUI.getFilter(),
+			root: Liferay.AUI.getRootPath(),
+			useBrowserConsole: false
+		};
+
+		Liferay.authToken = 'V05UjYsE';
+
+		
+
+		Liferay.currentURL = '\x2frobots\x2etxt';
+		Liferay.currentURLEncoded = '%2Frobots.txt';
+	// ]]>
+</script>
+
+
+	
+		
+			
+				<script src="/html/js/barebone.jsp?browserId=other&amp;themeId=recas_WAR_recastheme&amp;colorSchemeId=01&amp;minifierType=js&amp;minifierBundleId=javascript.barebone.files&amp;languageId=en_US&amp;b=6101&amp;t=1423579481000" type="text/javascript"></script>
+			
+			
+		
+	
+	
+
+
+
+
+<script type="text/javascript">
+	// <![CDATA[
+		
+
+			
+
+			
+				Liferay.Portlet.list = ['SlideShow_WAR_SlideShowportlet','RecasScienceGatewayHome_WAR_Recas_sciencegateway_home'];
+			
+		
+
+		
+
+		
+	// ]]>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				<script src="/SlideShow-portlet/js/jquery-1.6.4.min.js?browserId=other&amp;minifierType=js&amp;languageId=en_US&amp;b=6101&amp;t=1460709218000" type="text/javascript"></script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+<link class="lfr-css-file" href="https&#x3a;&#x2f;&#x2f;recasgateway&#x2e;ba&#x2e;infn&#x2e;it&#x2f;recas-theme&#x2f;css&#x2f;main&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;recas_WAR_recastheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;en_US&#x26;b&#x3d;6101&#x26;t&#x3d;1424365888000" rel="stylesheet" type="text/css" />
+
+
+
+
+	<style type="text/css">
+		.v-app {
+ 	background: none !important;
+ 
+ }
+	</style>
+
+
+
+
+
+	<style type="text/css">
+
+		
+
+			
+
+				
+
+					
+
+#p_p_id_SlideShow_WAR_SlideShowportlet_ {
+padding-top: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+padding-left: 27px
+}
+
+
+
+
+				
+
+			
+
+		
+
+			
+
+				
+
+					
+
+#p_p_id_RecasScienceGatewayHome_WAR_Recas_sciencegateway_home_ {
+padding-top: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+padding-left: 17px
+}
+
+
+
+
+				
+
+			
+
+		
+
+	</style>
+
+
+
+	
+	
+	<script id="" src="/recas-theme/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+	
+	
+	<script id="" src="/recas-theme/js/jqxcore.js" type="text/javascript"></script>
+	
+	
+	<script id="" src="/recas-theme/js/jqxmenu.js" type="text/javascript"></script>
+	
+	
+	<script id="" src="/recas-theme/js/jqxcheckbox.js" type="text/javascript"></script>
+	
+	
+	<script id="" src="/recas-theme/js/menu.js" type="text/javascript"></script>
+
+</head>
+
+<body class=" yui3-skin-sam controls-visible guest-site signed-out public-page site">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="wrapper">
+	<div id="innerdiv">
+	<a href="#main-content" id="skip-to-content">Skip to Content</a>
+	<header id="banner" role="banner">
+		
+			                        <div id="download">
+				<img name="boxlogin" src="/recas-theme/images/theme/box-login.png" width="159" height="100" border="0" id="boxlogin" usemap="#m_boxlogin" alt="" /><map name="m_boxlogin" id="m_boxlogin">
+					<area shape="rect" coords="89,32,144,50" href="https://recasgateway.cloud.ba.infn.it/c/portal/login" alt="" />
+				</map>
+			</div>
+									<div class="reg"><img src="/recas-theme/images/theme/logorecas.png"></div>
+
+			<div class="nav" >
+			        	<div id='jqxMenu'>
+        <ul>
+                                    <li><a href="https://recasgateway.ba.infn.it/web/guest/home" ><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Welcome</span></a>
+                                            </li>
+                                    <li><a href="https://recasgateway.ba.infn.it/web/guest/applications" ><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Applications</span></a>
+                                                   <ul style='width: 190px;'>
+                                                                        <li><a href="https://recasgateway.ba.infn.it/web/guest/medical-physics" >Medical Physics</a>
+										</li>
+                                                                        <li><a href="https://recasgateway.ba.infn.it/web/guest/biomas" >BioMaS</a>
+										</li>
+                                                                        <li><a href="https://recasgateway.ba.infn.it/web/guest/msa-pad" >MSA-PAD 2.0</a>
+										</li>
+                                                          </ul>
+                                            </li>
+                                    <li><a href="https://recasgateway.ba.infn.it/web/guest/help" ><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ HELP</span></a>
+                                                   <ul style='width: 190px;'>
+                                                                        <li><a href="https://recasgateway.ba.infn.it/web/guest/medical-physics1" >Medical Physics</a>
+										</li>
+                                                                        <li><a href="https://recasgateway.ba.infn.it/web/guest/biomas1" >BioMaS</a>
+										</li>
+                                                                        <li><a href="https://recasgateway.ba.infn.it/web/guest/msa-pad1" >MSA-PAD 2.0</a>
+										</li>
+                                                          </ul>
+                                            </li>
+                                    <li><a href="https://recasgateway.ba.infn.it/web/guest/contact-and-feedback" ><span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Contact and feedback</span></a>
+                                            </li>
+                        </ul>
+</div>
+					</div>
+	</header>
+	<div id="content">
+		<nav class="site-breadcrumbs" id="breadcrumbs">
+			<h1>
+				<span>Breadcrumbs</span>
+			</h1>
+
+			
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="breadcrumbs breadcrumbs-horizontal lfr-component">
+	<li class="first"><span><a href="/web/guest">Recas Science Gateway</a></span></li><li class="last"><span><a href="https://recasgateway.ba.infn.it/web/guest/home" >Welcome</a></span></li>
+</ul>
+
+		</nav>
+
+					
+
+			
+
+			<div class="column-1" id="main-content" role="main">
+
+<section class="portlet" id="portlet_status">
+	<header class="portlet-topper">
+		<h1 class="portlet-title">
+			 <span class="portlet-title-text">Status</span>
+		</h1>
+
+		<menu class="portlet-topper-toolbar" id="portlet-topper-toolbar_status" type="toolbar">
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+				
+				
+				
+					</menu>
+	</header>
+
+	<div class="portlet-content">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+		<h3 class="portlet-msg-error">
+			Not Found
+		</h3>
+
+		The requested resource was not found.
+
+		<br /><br />
+
+		<code>https://recasgateway.ba.infn.it/robots.txt</code>
+	
+	
+
+
+<div class="separator"><!-- --></div>
+
+<a href="javascript:history.go(-1);">&laquo; Back</a>
+
+
+	</div>
+</section></div>
+			</div>
+
+	<footer> <!-- footer start -->
+	   <article>
+		<ul>
+	            <li><a href="mailto:grid-prod@ba.infn.it">Contact Us</a></li>
+		    <li><a href="/policy/">Privacy Policy</a></li>
+		    <li><a href="/terms-of-use">Terms of Use</a></li>
+		    <li><a href="http://www.liferay.com">Powered by Liferay</a></li>			 
+                    <li><a href="http://www.catania-science-gateways.it" target="_blank">Implemeted with Catania SG Framework</a></li>
+                    <li><a href="http://www.ba.infn.it" target="_blank">Developed by INFN Bari-Catania</a></li>		   
+		</ul>
+	</article>
+
+	<article>
+
+		<ul>
+		<li><img src="/recas-theme/images/theme/BannerGatewayBari.gif" target="_blank" width="650px" style="margin-top:20px; margin-left:0px"></li>
+		<li style="padding-left:0px;text-align:center;">This is a Service Provider of:<br>
+			<img src="/recas-theme/images/theme/logo-IDP.png"> 
+			<img src="/recas-theme/images/theme/idem_logo_small.png" align="center"> 
+			<img src="/recas-theme/images/theme/edugain.jpg" align="center"></li>
+		</ul>
+	</article>
+	 </footer> <!-- footer end -->
+ </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+				<script src="/SlideShow-portlet/js/jquery.cycle.all.js?browserId=other&amp;minifierType=js&amp;languageId=en_US&amp;b=6101&amp;t=1460709218000" type="text/javascript"></script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+// <![CDATA[
+
+	Liferay.Util.addInputFocus();
+
+	
+
+	
+
+	
+		
+		
+
+			
+
+			
+		
+	
+
+// ]]>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+// <![CDATA[
+AUI().use('aui-base', 'liferay-menu', 'liferay-notice', 'liferay-poller', function(A) {(function() {
+	Liferay.Util.addInputType();
+
+	Liferay.Portlet.ready(
+		function(portletId, node) {
+			Liferay.Util.addInputType(node);
+		}
+	);
+})();(function() {
+	new Liferay.Menu();
+
+	var liferayNotices = Liferay.Data.notices;
+
+	for (var i = 1; i < liferayNotices.length; i++) {
+		new Liferay.Notice(liferayNotices[i]);
+	}
+
+	
+})();});
+// ]]>
+</script>
+
+
+
+
+
+
+
+
+
+<script src="https://recasgateway.ba.infn.it/recas-theme/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=en_US&amp;b=6101&amp;t=1424365888000" type="text/javascript"></script>
+
+
+
+	
+
+	
+
+	<script type="text/javascript">
+		// <![CDATA[
+			
+
+			
+		// ]]>
+	</script>
+
+
+
+
+
+
+</html>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>GlassFish Server Open Source Edition 3.1 - Error report</title><style type="text/css"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 500 - </h1><hr/><p><b>type</b> Status report</p><p><b>message</b></p><p><b>description</b>The server encountered an internal error () that prevented it from fulfilling this request.</p><hr/><h3>GlassFish Server Open Source Edition 3.1</h3></body></html>

@@ -1,0 +1,14 @@
+Server: GitHub.com
+Content-Type: text/html
+Location: https://js.cytoscape.org/robots.txt
+X-Github-Request-Id: E700:112A:254B4:2F9DB:5E8286FA
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 23:55:38 GMT
+Via: 1.1 varnish
+Age: 0
+X-Served-By: cache-mad22030-MAD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1585612538.295296,VS0,VE113
+Vary: Accept-Encoding
+X-Fastly-Request-Id: 8e25a1bc5a5ed9ed2fda7c7747f8025e373b720b

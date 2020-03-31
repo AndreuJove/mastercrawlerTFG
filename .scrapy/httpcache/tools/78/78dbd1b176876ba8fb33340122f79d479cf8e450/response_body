@@ -1,0 +1,28 @@
+User-agent: googlebot
+User-agent: google
+User-agent: bingbot
+User-agent: bing
+
+Disallow: /images/
+Disallow: /include/
+Disallow: /mutation_images/
+Disallow: /bic/Member/
+Disallow: /nhgri/
+Disallow: /microarray/
+Disallow: /ma/
+Disallow: /projects/Retreat/
+Disallow: /Retreat/
+Disallow: /apply/
+Disallow: /soop/
+Disallow: /tma/
+Disallow: /DIR/LCG/
+Disallow: /cgi-bin/
+Disallow: /alps/
+Disallow: /chr7/
+Disallow: /MCS/
+Disallow: /histones/
+
+Crawl-delay: 10
+
+User-agent: *
+Disallow: /

@@ -1,0 +1,5 @@
+Server: openresty/1.13.6.1
+Date: Tue, 31 Mar 2020 00:04:38 GMT
+Content-Type: text/html
+Location: http://cran.rproject.org/robots.txt
+Set-Cookie: mtmssl=1;Domain=cran.rproject.org;Path=/;Max-Age=120

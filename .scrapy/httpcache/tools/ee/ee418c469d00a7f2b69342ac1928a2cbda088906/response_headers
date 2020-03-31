@@ -1,0 +1,5 @@
+Server: nginx/1.14.0 (Ubuntu)
+Date: Mon, 30 Mar 2020 23:33:34 GMT
+Content-Type: text/html; charset=utf-8
+Strict-Transport-Security: max-age=63072000; includeSubdomains;
+Content-Encoding: gzip

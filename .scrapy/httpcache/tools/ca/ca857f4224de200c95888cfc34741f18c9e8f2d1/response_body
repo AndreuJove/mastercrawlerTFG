@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /version/
+Disallow: /graphics/
+Disallow: /download/
+Disallow: /cgi-bin/

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /newccmb/staffresindex.html
+Disallow: /newccmb/jrf.html
+Disallow: /jobs/advt_9_2009.html
+Disallow: /staff/webres/amitresgrp.html
+Disallow: /indous/index.html
+Disallow: /positions/regular/scientific/shortlisted-advt_2_2013.pdf?
+Disallow: /positions/regular/scientific/selected_2_2013.pdf

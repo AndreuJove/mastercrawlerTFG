@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /r-chie/files/
+Disallow: /biq/

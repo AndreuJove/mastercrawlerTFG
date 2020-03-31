@@ -1,0 +1,10 @@
+# robots.txt
+
+User-agent: *
+Crawl-delay: 10
+# Directories
+Disallow: /
+Allow: /$
+Allow: /publications.php
+Allow: /help.php
+Allow: /contact.php

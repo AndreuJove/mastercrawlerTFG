@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /~josephs/gallery/rss.php
+Disallow: /~josephs/gallery/
+Disallow: /josephs/gallery/rss.php
+Disallow: /josephs/gallery/
+Disallow: /
+

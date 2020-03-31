@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /apps/grs-2.3/
+Disallow: /apps/grs-2.3_myzus/
+Disallow: /apps/grs-2.3_sfru/
+Disallow: /apps/grs-2.3_cotesia/
+Disallow: /apps/grs-2.3_lepidopriv/
+Disallow: /sp/*/feature/

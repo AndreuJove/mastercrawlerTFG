@@ -1,0 +1,57 @@
+<html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Error 404: Document Not Found</title>
+
+
+	<link rel="stylesheet" type="text/css" href="http://web.njit.edu/errordocument.files/cstyleinfo.css">
+	<link rel="stylesheet" type="text/css" href="http://web.njit.edu/errordocument.files/ostyleinfo.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
+
+<body background="http://web.njit.edu/errordocument.files/bg_leftredstripe.gif" bgcolor="#ffffff">
+&nbsp;<table class="bodytxt" border="0" width="100%">
+  <tbody><tr>
+    <td width="4%"><img src="http://web.njit.edu/errordocument.files/spacer.gif" alt="" height="10" width="30"></td>
+    <td width="96%"> <table id="AutoNumber2" border="0" cellspacing="1">
+        <tbody><tr>
+          <td>
+<a href="http://web.njit.edu/"><img src="http://web.njit.edu/errordocument.files/sub_logo.gif" alt="NJIT Logo" border="0" height="97" width="169"></a>&nbsp; </td>
+          <td> <p align="center"><font face="Arial" size="5">Error 404: Document Not Found</font></p></td>
+        </tr>
+      </tbody></table>
+      <table id="AutoNumber1" border="0" cellspacing="1" width="100%">
+        <tbody><tr>
+          <td width="100%"> <hr width="80%"></td>
+        </tr>
+      </tbody></table>
+      <br> <div align="center">
+        <table border="0" cellspacing="0" width="80%">
+          <tbody><tr>
+            <td align="center" valign="top" width="15%">&nbsp;</td>
+            <td class="bodytxt" align="center" valign="top" width="71%"> <div align="left">
+
+				<p>
+				
+<!-- TEXT IN -->
+<strong>Sorry, the document you are looking for could not be found.</strong>
+<p>
+It is possible the content has been moved, archived,
+or you entered the URL incorrectly.
+<p>
+Otherwise we suggest starting your search again at
+<a href="http://web.njit.edu/">http://web.njit.edu/</a>
+<p>
+If you believe you have reached this page in error, please contact
+<a href="http://help.njit.edu/">IST HelpDesk</a>
+<!-- TEXT OUT -->
+
+
+              </div></td>
+            <td align="center" valign="top" width="14%">&nbsp;</td>
+          </tr>
+        </tbody></table>
+      </div></td>
+  </tr>
+</tbody></table>
+</body></html>

@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /annotate
+Disallow: /clip
+Disallow: /css
+Disallow: /Cytoscape_v2.6.3
+Disallow: /dbadmin
+Disallow: /Highcharts-2.0.4
+Disallow: /jqtouch
+Disallow: /jqzoom_ev1.0.1
+Disallow: /js
+Disallow: /labwiki
+Disallow: /main
+Disallow: /tmp
+Disallow: /presto/distribution
+Disallow: /presto/examples
+Disallow: /changeo/distribution
+Disallow: /changeo/manuals
+

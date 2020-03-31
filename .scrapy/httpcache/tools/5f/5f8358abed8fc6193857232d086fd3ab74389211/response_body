@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>DBETH</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type="text/javascript" src="js/organictabs.jquery.js"></script>
+    <script type='text/javascript'>
+        $(function() {
+	
+	    $("#example-first").organicTabs();
+    
+            $("#example-one").organicTabs();
+	    $("#example-three").organicTabs();
+            $("#example-two").organicTabs({
+                "speed": 200
+            });
+    
+        });
+    </script>
+
+		<div id="image2" style="position:absolute; overflow:hidden; left:180px; top:2px;"><center><img src="dbeth.jpg" alt="vman" border=0 width=550 height=170></center></div><div id="image3" style="position:absolute; overflow:hidden; left:30px; top:2px;"><center><img src="vm3.jpg" alt="vman" border=0 width=150 height=150></center></div> 	
+</head>
+
+<body>
+
+	<div id="page-wrap">
+
+        <div id="example-one" >
+        			
+        	<ul class="nav">
+		<li class="nav-one"><a href="#featured1" class="current">Browse DBETH</a></li>
+                <li class="nav-one"><a href="#featured">Browse by Pathogens</a></li>
+		<li class="nav-two"><a href="#core1">Browse Toxin</a></li>
+                <li class="nav-three"><a href="#jquerytuts">DBETH Server</a></li>
+                <li class="nav-four "><a href="#classics">Download</a></li>
+		<li class="nav-five "><a href="#classics-seven">Search</a></li>
+		<li class="nav-five "><a href="#classics-five">Contact</a></li>
+		<li class="nav-five "><a href="#classics-six">Help</a></li>
+            </ul>
+		<div id="example-one_1" >
+		<div class="list-wrap1" class="hide">
+                <ul id="core1" class="hide">
+                <ul class="nav">
+                <li class="nav-two"><a href="#core">By Toxin Mechanism</a></li>
+                <li class="nav-two"><a href="#core2">By Toxin Activity</a></li>
+                </ul>
+                </ul>
+		</div>
+        	<div class="list-wrap" class="hide">
+			<ul id="featured1">
+				<li><a href="index.html"><b></b></a></li>
+			</ul>	
+        		<ul id="featured" class="hide">
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Aeromonas"><b>Aeromonas</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Actinobacillus"><b>Actinobacillus</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Arcanobacterium"><b>Arcanobacterium</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Bacillus"><b>Bacillus</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Bordetella"><b>Bordetella</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Campylobacter"><b>Campylobacter</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Clostridium"><b>Clostridium</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Corynebacterium"><b>Corynebacterium</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Escherichia"><b>Escherichia</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Gardnerella"><b>Gardnerella</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Helicobacter"><b>Helicobacter</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Kingella"><b>Kingella</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Legionella"><b>Legionella</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Listeria"><b>Listeria</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Mycobacterium"><b>Mycobacterium</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Neisseria"><b>Neisseria</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Paenibacillus"><b>Paenibacillus</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Pasteurella"><b>Pasteurella</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Pseudomonas"><b>Pseudomonas</b></a></li>
+					<li><a href="./cgi-bin2/new-introduction.cgi?name=Rickettsia"><b>Rickettsia</b></a></li>
+                                	<li><a href="./cgi-bin2/new-introduction.cgi?name=Salmonella"><b>Salmonella</b></a></li>
+                                	<li><a href="./cgi-bin2/new-introduction.cgi?name=Shigella"><b>Shigella</b></a></li>
+                                	<li><a href="./cgi-bin2/new-introduction.cgi?name=Staphylococcus"><b>Staphylococcus</b></a></li>
+                                	<li><a href="./cgi-bin2/new-introduction.cgi?name=Streptococcus"><b>Streptococcus</b></a></li>
+                                	<li><a href="./cgi-bin2/new-introduction.cgi?name=Vibrio"><b>Vibrio</b></a></li>
+                                	<li><a href="./cgi-bin2/new-introduction.cgi?name=Yersinia"><b>Yersinia</b></a></li>
+        		 </ul>
+        		 
+        		 <ul id="core" class="hide">
+                    		<li><a href="./cgi-bin2/toxinintroduction.cgi?name=Binding-Membrane-components"><b>Binding Membrane Components</b></a></li>
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=Cytolysins"><b>Cytolysin</b></a></li>
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=Cytotoxins"><b>Cytotoxins</b></a></li>	
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=Cytoskeletal-rearrangement"><b>Cytoskeletal rearrangement</b></a></li>
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=DNA-damaging"><b>DNA damaging</b></a></li>
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=Hemolysins"><b>Hemolysin</b></a></li>
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=Membrane-permealization-damaging"><b>Membrane Permeabilization and Damaging</b></a></li>
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=Metal-binding"><b>Metal Binding<b></a></li>
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=Monoglycosylation"><b>Monoglucosylation</b></a></li>
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=Proteolysis"><b>Proteolysis</b></a></li>
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=RTX-Toxin"><b>RTX toxin</b></a></li>
+				<li><a href="./cgi-bin2/toxinintroduction.cgi?name=Superantigen"><b>Superantigen</b></a></li>
+        		 </ul>
+        		 <ul id="core2" class="hide">
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=Adenyl-cyclase"><b>Adenyl cyclase</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=ADP-ribosylase"><b>ADP Ribosylation</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=AMPylation"><b>AMPylation</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=Deamidase"><b>Deamidase</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=Glucosyl-transferases"><b>Glucosyl transferases</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=Lipase"><b>Lipase</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=Nuclease"><b>Nuclease</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=Phosphatase"><b>Phosphatase</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=Protease"><b>Protease</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=Protein-kinase"><b>Protein kinase</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=RNA_N-glycosidase"><b>RNA N-glycosidase</b></a></li>
+				<li><a href="./cgi-bin2/toxin-enzyme-activityintroduction.cgi?name=Miscellaneous"><b>Miscellaneous</b></a></li>
+			 </ul>
+        		 <ul id="jquerytuts" class="hide">
+        		    <li><a href="./cgi-bin2/analysis-hmm.cgi?name=hmm"><b>Search Toxin Domains</b></a></li>
+        		    <li><a href="./cgi-bin2/analysis-blast.cgi?name=blast"><b>Search Toxin Sequences</b></a></li>
+			    <li><a href="./cgi-bin2/analysis-pdbstructure.cgi?name=pdb"><b>Search Toxin Structures</b></a></li>
+				<li><a href="./cgi-bin2/svm.cgi?name=svm"><b>Toxin Prediction</b></a></li>
+        		 </ul>
+        		 
+        		 <ul id="classics" class="hide">
+                    <li><a href="./cgi-bin2/download-list.cgi?name=download">Links to Downloads</a></li>
+        		 </ul>
+		     	 <ul id="classics-five" class="hide">
+                    <li><a href="./cgi-bin2/contact.cgi?name=contact">Contact Details</a></li>
+                         </ul>
+			 <ul id="classics-seven" class="hide">
+                    <li><a href="./cgi-bin2/search.cgi?name=search">Click to Search</a></li>
+			 </ul>
+			<ul id="classics-six" class="hide">
+		    <li><a href="About_DBETH.html">About DBETH</a></li>
+                    <li><a href="Faq.html">FAQs</a></li>
+                         </ul>
+
+        		 
+        	 </div> <!-- END List Wrap -->
+         
+         </div> <!-- END Organic Tabs (Example One) -->
+	<div id="image1" style="position:absolute; overflow:hidden; left:662px; top:150px;">
+<font color="white">change</font> 
+	</div>
+	<div id="exp1" style="position:absolute;width:800px;left:340px;top:180px;z-index:18">
+	<p align="justify"><font size=4 color="black">
+	Database of Bacterial ExoToxins for Human is a database of sequences, structures, interaction networks and analytical results for 229 exotoxins, from 26 different human pathogenic bacterial genus. All toxins are classified into 24 different Toxin classes. The aim of DBETH is to provide a comprehensive database for human pathogenic bacterial exotoxins.</font></p>
+	</div>
+	<div id="exp1" style="position:absolute;width:800px;left:340px;top:760px;z-index:18">
+        <p align="justify">
+	<font size=4 color="black">
+	DBETH also provides a platform to its users to identify potential exotoxin like sequences through Homology based as well as Non-homology based methods. In homology based approach the users can identify potential exotoxin like sequences either running BLASTp against the toxin sequences or by running HMMER against toxin domains identified by DBETH from human pathogenic bacterial exotoxins. In Non-homology based part DBETH uses a machine learning approach to identify potential exotoxins (Toxin Prediction by Support Vector Machine based approach).   
+	</font>
+	</p>
+	</div>
+	<div id="image2" style="position:absolute; overflow:hidden; left:500px; top:300px;">
+        <center><img src="vm3.jpg" alt="vman" border=0 width=450 height=450></center>
+	</div>
+</body>
+
+</html>

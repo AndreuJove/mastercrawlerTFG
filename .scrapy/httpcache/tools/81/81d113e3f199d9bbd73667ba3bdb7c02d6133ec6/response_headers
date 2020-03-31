@@ -1,0 +1,11 @@
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Type: text/plain
+Date: Mon, 30 Mar 2020 23:13:47 GMT
+Expires: Tue, 31 Mar 2020 00:03:47 GMT
+Cache-Control: public, max-age=3000
+Last-Modified: Tue, 03 Mar 2020 20:15:00 GMT
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Server: sffe
+X-Xss-Protection: 0

@@ -1,0 +1,5 @@
+Server: nginx/1.17.9
+Date: Mon, 30 Mar 2020 23:30:24 GMT
+Content-Type: text/html
+Location: https://binfalse.de/robots.txt
+Strict-Transport-Security: max-age=31536000

@@ -1,0 +1,13 @@
+Content-Type: text/plain
+Date: Mon, 30 Mar 2020 23:27:23 GMT
+Server: gunicorn/19.6.0
+Vary: Cookie
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=604800;
+Expires: Mon, 30 Mar 2020 23:27:23 GMT
+Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+Content-Security-Policy-Report-Only: default-src 'unsafe-inline' 'unsafe-eval' * data: blob:; report-uri https://sentry.io/api/1312882/security/?sentry_key=9e854fd5af164d1e98cee1bedb942a22
+X-Cache: Miss from cloudfront
+Via: 1.1 e39311b8bbf120eef85be5222b7fadac.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: MAD50-C1
+X-Amz-Cf-Id: l-kh9OxwA6OgYc6o1BQUfVpAtoICzKXCDXTIrAMj8sFKKiZp2fEAwA==

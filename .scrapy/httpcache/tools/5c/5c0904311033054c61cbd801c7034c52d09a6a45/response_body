@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /human_gpdb/modules
+Disallow: /human_gpdb/
+Disallow: /old_human_gpdb/

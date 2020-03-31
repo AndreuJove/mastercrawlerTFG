@@ -1,0 +1,12 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 23:13:47 GMT
+Content-Type: text/html
+Location: https://www.ijm.fr/robots.txt
+X-Powered-By: PleskLin
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Expect-Ct: enforce; max-age=300
+Feature-Policy: midi 'none';microphone 'none';camera 'none';magnetometer 'none';gyroscope 'none';speaker 'self';fullscreen 'self';payment 'none';
+Referrer-Policy: no-referrer-when-downgrade
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: master-only
+X-Xss-Protection: 1; mode=block

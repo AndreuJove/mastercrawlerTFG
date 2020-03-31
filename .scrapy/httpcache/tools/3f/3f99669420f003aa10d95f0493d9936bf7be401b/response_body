@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /quality/src/
+Disallow: /results/
+Disallow: /pssm/results/

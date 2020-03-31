@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /jobs/scriptsStats
+Disallow: /jobs/downloadfile
+Disallow: /photos/showimage

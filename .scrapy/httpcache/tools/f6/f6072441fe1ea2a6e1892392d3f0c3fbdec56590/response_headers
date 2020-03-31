@@ -1,0 +1,11 @@
+Date: Mon, 30 Mar 2020 23:27:09 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Content-Security-Policy: frame-ancestors 'none'
+Last-Modified: Sun, 05 May 2019 09:28:05 GMT
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/plain

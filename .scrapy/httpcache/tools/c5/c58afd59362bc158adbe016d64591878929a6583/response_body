@@ -1,0 +1,5 @@
+User-agent: *
+#Disallow: /goldenPath/
+Disallow: /cgi-bin/
+#Disallow: /admin/
+Disallow: //cgi-bin/

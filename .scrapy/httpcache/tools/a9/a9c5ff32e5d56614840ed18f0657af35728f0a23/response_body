@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /gbrowse2
+Disallow: /GBrowse
+Disallow: /gbrowse
+Disallow: /cgi-bin/gbrowse

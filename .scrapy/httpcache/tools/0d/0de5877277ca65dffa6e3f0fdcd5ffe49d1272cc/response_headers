@@ -1,0 +1,17 @@
+Date: Mon, 30 Mar 2020 23:33:36 GMT
+Server: Apache/2.4.6 (Red Hat Enterprise Linux) mod_jk/1.2.41
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+Access-Control-Max-Age: 1000
+Access-Control-Allow-Headers: x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+X-Frame-Options: SAMEORIGIN
+Last-Modified: Mon, 23 Dec 2019 21:04:29 GMT
+Etag: "57-59a655f992c1d"
+Accept-Ranges: bytes
+Cteonnt-Length: 87
+Content-Type: text/plain; charset=UTF-8
+Access-Control-Allow-Origin: *
+Set-Cookie: NSC_ESNS=010bef68-81d0-1e82-9678-00e0ed8310a0_0363805314_2380267621_00000000000016651070; Path=/; Expires=Mon, 30-Mar-2020 23:33:51 GMT
+Set-Cookie: NSC_MC_WT_XXX=5ccba3d8f4d24955d5062aa44600833d9f100b79371a04c8f8ff12f89858917ee1002db2;path=/;secure;httponly
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Cache-Control: private
+Content-Encoding: gzip

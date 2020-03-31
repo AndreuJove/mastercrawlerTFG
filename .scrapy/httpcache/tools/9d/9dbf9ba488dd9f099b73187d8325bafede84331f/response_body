@@ -1,0 +1,66 @@
+
+<html>
+
+<head>
+<title>▒▒▒ 요청하신 페이지를 찾을수 없습니다. ▒▒▒</title>
+<link rel='stylesheet' href='/_ezaid/css/style.css'>
+</head>
+
+<body topmargin='120' leftmargin='0' marginwidth='0' marginheight='0' bgcolor='#F7F7F7'>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'>
+<tr>
+	<td>
+		<table border='0' cellpadding='0' cellspacing='0' align='center'>
+		<tr>
+			<td colspan='3'>
+				<img src='/_images/_common/dir_top_text.gif' align='absmiddle'><br>
+				<img src='/_images/_common/dir_top_bar.gif' align='absmiddle'>
+			</td>
+		</tr>
+		<tr>
+			<td width='32' background='/_images/_common/dir_bg_left.gif'>
+				&nbsp;
+			</td>
+			<td width='572'>
+				<table border='0' cellpadding='0' cellspacing='0' width='100%' align='center'>
+				<tr height='100' bgcolor='#F4F4F4'>
+					<td style='line-height:24px; padding:5 0 0 40;' colspan='2' valign='top'>
+						요청하신 주소의 페이지를 찾을 수 없습니다. <font color='#FF6000'><b>(에러 메세지 : 404 - 파일을 찾을 수 없음)</b></font><br>
+						해당 페이지는 경로가 변경되었거나, 서버에 존재하지 않습니다.<br>
+						파일의 경로가 정확한지 URL 주소를 바르게 입력했는지 확인하세요.
+					</td>
+				</tr>
+				<tr bgcolor='#F97B00'>
+					<td>
+						<img src='/_images/_common/dir_close.gif' align='absmiddle' border='0' onClick='javascript:window.close()' alt='창 닫기' style='cursor:hand'><img src='/_images/_common/dir_bar_left.gif' align='absmiddle'>
+					</td>
+					<td align='right'>
+						<font color='#FFFFFF'>▒▒ 다좋은 사람 다좋은 기술 다존기술(주) ▒▒</font>
+						<img src='/_images/_common/dir_bar_right.gif' align='absmiddle'>
+					</td>
+				</tr>
+				<tr height='70' bgcolor='#FFFFFF'>
+					<td align='right' valign='bottom' colspan='2'>
+						<img src='/_images/_common/dir_logo.gif' align='absmiddle'>
+					</td>
+				</tr>
+				</table>
+			</td>
+			<td width='32' background='/_images/_common/dir_bg_right.gif'>
+				&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td colspan='3'>
+				<img src='/_images/_common/dir_bottom.gif' align='absmiddle'>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+
+</html>

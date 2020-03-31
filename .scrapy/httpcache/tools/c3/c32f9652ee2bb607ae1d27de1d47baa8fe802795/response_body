@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: cybase_old/
+Disallow: etc/
+Disallow: extprog/
+Disallow: images/
+Disallow: includes/
+Disallow: pages/
+Disallow: pdb/
+Disallow: programs/
+Disallow: sql/
+Disallow: tmp/
+Disallow: uploads/

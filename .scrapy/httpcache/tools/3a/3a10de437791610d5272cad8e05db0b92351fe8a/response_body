@@ -1,0 +1,5 @@
+<link rel="icon" href="http://www.juit.ac.in/logos/favico.jpg" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.juit.ac.in/logos/favico.jpg" type="image/x-icon" />
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php

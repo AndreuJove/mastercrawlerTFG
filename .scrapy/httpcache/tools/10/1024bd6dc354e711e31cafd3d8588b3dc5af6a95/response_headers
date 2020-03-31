@@ -1,0 +1,12 @@
+Date: Mon, 30 Mar 2020 23:31:03 GMT
+Content-Type: text/plain; charset=utf-8
+Set-Cookie: __cfduid=d2fe54934d9f6e7164e112244fd1f559d1585611063; expires=Wed, 29-Apr-20 23:31:03 GMT; path=/; domain=.www.ansible.com; HttpOnly; SameSite=Lax
+Set-Cookie: __cfruid=1ce8ed76780dfc0a9e1cab92e47a45b31b8e9174-1585611063; path=/; domain=.www.ansible.com; HttpOnly; Secure; SameSite=None
+Cf-Ray: 57c59f37cda52f7b-MAD
+Vary: Accept-Encoding
+Cf-Cache-Status: EXPIRED
+Access-Control-Allow-Credentials: false
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+X-Trace: 2BC28AE36F514DE90E91ADFC6CCDF95FCFBE8E7268000000000000000000
+Server: cloudflare
+Content-Encoding: gzip

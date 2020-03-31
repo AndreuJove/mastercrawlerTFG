@@ -1,0 +1,19 @@
+# robots.txt
+# @url: http://www-math-new.u-strasbg.fr
+# @generator: SPIP 3.0.24 [23212]
+# @template: squelettes-dist/robots.txt.html
+
+User-agent: *
+Allow:    /local/cache-css/
+Allow:    /local/cache-js/
+Disallow: /local/
+Disallow: /ecrire/
+Disallow: /plugins-dist/
+Disallow: /lib/
+Disallow: /plugins/
+Disallow: /prive/
+Disallow: /squelettes-dist/
+Disallow: /squelettes/
+Crawl-delay: 1
+
+Sitemap: http://www-math-new.u-strasbg.fr/sitemap.xml

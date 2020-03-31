@@ -1,0 +1,12 @@
+Content-Type: text/plain
+Content-Encoding: gzip
+Content-Language: en
+Vary: Accept-Language, Cookie,Accept-Encoding
+Server: nginx
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+X-Served: Django-Proxito
+X-Deity: web03
+Strict-Transport-Security: max-age=31536000;
+Date: Mon, 30 Mar 2020 23:13:33 GMT

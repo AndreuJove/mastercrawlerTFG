@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="">
+		<meta name="description" content="CADD - Combined Annotation Dependent Depletion">
+		<title>CADD - Combined Annotation Dependent Depletion</title>
+		<link rel="icon" href="/static/icon.png">
+		<link rel="stylesheet" href="/static/milligram.min.css">
+	</head>
+	<body>
+
+		<main class="wrapper">
+
+			<nav class="navigation">
+				<section class="container">
+					<a class="navigation-title" href="/">
+						<img src="/static/icon.png" width=40 height=40 align=top>
+						<h1 class="title">CADD - Combined Annotation Dependent Depletion</h1>
+					</a>
+					<ul class="navigation-list float-right">
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="/news" title="Recent updates">News</a>
+						</li>
+						<li class="navigation-item">
+                            <a class="navigation-link" href="/score" title="Upload a vcf file for variant scoring">Score</a>
+						</li>
+						<li class="navigation-item">
+							<a class="navigation-link" href="#popover-snv" data-popover>SNV</a>
+							<div class="popover" id="popover-snv">
+								<ul class="popover-list">
+									<li class="popover-item"><a class="popover-link" href="/snv" title="Lookup for single SNV">Single</a></li>
+									<li class="popover-item"><a class="popover-link" href="/snv-range" title="SNV range lookup">Range</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-item">
+                            <a class="navigation-link" href="/download" title="Data downloads for offline scoring">Downloads</a>
+						</li>
+						<li class="navigation-item">
+							<a class="navigation-link" href="#popover-about" data-popover>About</a>
+							<div class="popover" id="popover-about">
+								<ul class="popover-list">
+									<li class="popover-item"><a class="popover-link" href="/info" title="About CADD">Information</a></li>
+									<li class="popover-item"><a class="popover-link" href="/api" title="Information about the CADD API">API</a></li>
+									<li class="popover-item"><a class="popover-link" href="/genome-browser" title="Information about displaying CADD scores in UCSC Genome Browser">Genome Browser</a></li>
+									<li class="popover-item"><a class="popover-link" href="/links" title="Links to CADD related resources">Links</a></li>
+									<li class="popover-item"><a class="popover-link" href="/contact" title="Contact">Contact</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</nav>
+
+			<section class="container">
+			<div id="content">
+
+<!--<p><font color="darkblue"><strong><i>Note:</i> We started reprocessing some file that were interrupted by a power outage around ~6:22pm PST on Dec 14. Files should be available shorty. Sorry for the delay.</strong></font></p>-->
+
+<!--<p><font color="darkblue"><strong><i>Note:</i> We are expecting small delays and possibly incomplete files around President's Day (Feb 15, 2016) due to a network file system move. We will keep the webserver running anyways and check for incomplete and missing files after the move is complete on Tuesday (Feb 16). We will automatically re-initiate scoring of those sets. If you believe your download has been incomplete, just download again on Tuesday afternoon (PST).</strong></font></p>-->
+
+
+<!-- <p><font color="red"><strong>The CADD webserver and variant scoring will be offline Oct 5-6, 2019 due to an IT infrastructure maintenance. Due to time scheduling limits on our cluster, jobs will starting to be queued (without any processing) on Fri Oct 4. Our services will come back online in the morning (PST) of Mon Oct 7. You might be able to submit your data during this outage, but it will not be processed until all systems are back online. Please come again soon. Sorry for the inconvenience.</strong></font></p> -->
+
+<!--<p><font color="darkblue"><strong>The CADD webserver currently works through a long queue of submitted variants. About 36 million variants in more than 380 submission were uploaded since Dec 9 and we are providing limited computational resources to the processing (at most 25 submissions are processed in parallel). Your results will get available eventually and will be available for six weeks after submission. If you are interested in many variants, please consider downloading the pre-calculated files rather than submitting many large requests to the webserver. If you have questions about retrieving large sets of variants without using the webform, please contact us. </strong></font></p>-->
+
+<!-- <p><font color="#ff9900"><strong>IT is working on some network file system issues. It seems that some submissions were not processed because of that (empty output file). We restarted jobs that were clearly incomplete and will monitor processing more closely over the next days. If you encounter unexpected behavior, please send an email to mkircher [at] uw.edu with the submission identifier (name of the link provided after upload/filename of the download).</strong></font></p> -->
+
+<!-- <p><font color="#ff9900"><strong>We are currently updating the CADD webserver. If you encounter unexpected behavior, please be patient and try again. If your problems persist, please send an email to mkircher [at] uw.edu</strong></font></p> -->
+
+<!-- <p><font color="#ff9900"><strong>The CADD webserver has moved to new hardware. Due to some issues with getting everything going on the new hardware, we are watching the server closely right now. If you encounter unexpected behavior, please send an email to mkircher [at] uw.edu</strong></font></p> -->
+
+<!-- <p><font color="red"><strong>The scoring form of the CADD webserver is currently offline as required file shares are currently offline. You can submit your data but it will not be processed until all systems are back online. We were able to establish a workaround for CADD v1.3. Scoring for older releases will only be possible once all systems are back online. Please come again soon. Please also consider using the single variant lookup as well as our files available in the download section. Sorry for the inconvenience. </strong></font></p> -->
+
+<!-- <p><font color="darkblue"><strong>The CADD webserver has a long queue of submitted variants. More than 10 million variants in more than 400 submission were uploaded over the last hours and we are providing limited computational resources to the processing (at most 25 submissions are processed in parallel). Your results will get available eventually and will be available for six weeks after submission. If you are interested in many variants, please consider downloading the pre-calculated files rather than submitting many large requests to the webserver. If you have questions about retrieving large sets of variants without using the webform, please contact us. We would like to find an alternative solution with you.</strong></font> -->
+
+<!--
+<p><font color="red"><strong>The CADD webserver is currently offline. You can submit your data but it will not be processed until a filesystem move finishes around 10:00AM PST on July 23 2014. Please come again soon. Sorry for the inconvenience. </strong></font></p>
+
+<p><font color="red">If you uploaded a variant set to our webserver from July 9 2014 13:00 PST to July 10 2014 14:00 PST, your result files were probably empty or at least incomplete. The problem has been fixed. Please download your result file again. You can simply upload the original query file if you no longer have the download link. Sorry for the inconvenience.</font></p>
+
+<p><font color="red">If you uploaded a variant set that included InDels to our webserver from May 11 2014 23:00 PST to May 12 2014 9:00 PST, your result files did not contain the complete set of InDels. The problem has been fixed. Please download your result file again. You can simply upload the original query file if you no longer have the download link. Sorry for the inconvenience.</font></p>
+
+<p><font color="red">Due to a file system outage in the Department of Genome Sciences, it is currently not possible to retrieve variants using our webserver. Please come back soon. If you retrieved variant sets that included InDels in the last hours ( May 28 2014 1:00 AM PST to May 28 2014 10:00 AM PST ), your result files might be incomplete or incorrect. Please score them again once the servers are up again. Sorry for the inconvenience. </font></p>
+
+<p><font color="darkblue"><strong>The CADD webserver is back online in an intermediate set-up. Due to a file system outage in the Department of Genome Sciences our system was offline for a little more than a day. If you retrieved variant sets that included InDels between May 28 2014 1:00 AM PST to May 28 2014 10:00 AM PST, your result files might be incomplete or incorrect. Please download them again. Sorry for the inconvenience. </strong></font></p> -->
+
+
+  <h1>The site requested does not exist!</h1>
+
+
+</div>
+</section>
+
+			<footer class="footer">
+				<section class="container">
+                    
+                    <p align="center">&copy; University of Washington, Hudson-Alpha Institute for Biotechnology and Berlin Institute of Health 2013-2019. All rights reserved.</p>
+                    <p align="center"><a href="http://www.washington.edu/online/terms/">Terms and Conditions</a> and the <a href="http://www.washington.edu/online/privacy/">Online Privacy Statement</a> of the University of Washington apply. </p>
+				</section>
+			</footer>
+
+		</main>
+	</body>
+	<script>
+        "use strict";
+        !function() {
+            function e(e) {
+                for(r=0;
+                    r<n.length;
+                r++)n[r].classList.remove("popover-open")
+            }
+            function t(t) {
+                t.preventDefault(),
+                document.querySelector(this.getAttribute("href")).classList.contains("popover-open")?document.querySelector(this.getAttribute("href")).classList.remove("popover-open"): (e(), document.querySelector(this.getAttribute("href")).classList.add("popover-open")), t.stopImmediatePropagation()
+            }
+            var o=document.querySelectorAll("[data-popover]"),
+            n=document.querySelectorAll(".popover"),
+            r=void 0;
+            for(r=0;
+                r<o.length;
+            r++)o[r].addEventListener("click", t);
+            document.addEventListener("click", e)
+        }(),
+        function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-4137655-2', 'washington.edu');
+  ga('send', 'pageview');
+    </script>
+</html>

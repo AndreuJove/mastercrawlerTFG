@@ -1,0 +1,6 @@
+Server: nginx/1.9.3
+Date: Mon, 30 Mar 2020 23:21:04 GMT
+Set-Cookie: sid=e961b2c0-b429-4807-ae72-12fc940c14dd; Path=/; HttpOnly
+Location: http://erp.novelbio.com/login;JSESSIONID=e961b2c0-b429-4807-ae72-12fc940c14dd
+Expires: Tue, 14 Apr 2020 23:21:04 GMT
+Cache-Control: max-age=1296000

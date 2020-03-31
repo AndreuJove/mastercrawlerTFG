@@ -1,0 +1,18 @@
+Date: Tue, 31 Mar 2020 00:04:55 GMT
+Content-Type: text/plain; charset=UTF-8
+Set-Cookie: __cfduid=dcbbc3f35bf6eb0748ff31babe18f44be1585613095; expires=Thu, 30-Apr-20 00:04:55 GMT; path=/; domain=.dl.acm.org; HttpOnly; SameSite=Lax; Secure
+Cf-Ray: 57c5d0d82ac8c67f-MAD
+Cache-Control: no-cache
+Link: </wro/ilu2~product.css>; rel=preload; as=style; nopush, </wro/ilu2~product.js>; rel=preload; as=script; nopush, <https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin
+Strict-Transport-Security: max-age=15552000
+Vary: Accept-Encoding
+Cf-Cache-Status: MISS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Pragma: no-cache
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Webstats-Respid: 3fbe03017934ddffdb9806a2f7d5270d
+X-Xss-Protection: 1; mode=block
+Server: cloudflare
+Content-Encoding: gzip
+Alt-Svc: h3-27=":443"; ma=86400, h3-25=":443"; ma=86400, h3-24=":443"; ma=86400, h3-23=":443"; ma=86400

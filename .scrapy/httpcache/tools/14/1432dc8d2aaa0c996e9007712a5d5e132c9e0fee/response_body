@@ -1,0 +1,39 @@
+# robots.txt     Zhiliang Hu Wed Dec 16 21:34:01 CST 1998
+#                    Updated Sun Mar 19 10:13:14 CST 2000
+#                    Updated Sun Jun 23 11:29:42 CST 2007
+#                    Updated Mon Jan 07 15:12:42 CST 2008
+#                    Updated Mon Aug 31 14:02:51 CST 2017
+
+User-agent: *                      # All other spiders should avoid:
+Disallow: /cgi-bin/                # cgi programs
+Disallow: /icons/                  # image files
+Disallow: /tmp/                    # floating contents
+Disallow: /QTLdb/tmp/              # floating contents
+Disallow: /share/                  # tmp misc., not worth it
+allow: /
+allow: /cgi-bin/QTLdb/             # tests
+allow: /aquaculture/
+allow: /bioinfo/
+allow: /cattle/
+allow: /horse/
+allow: /pigs/
+allow: /poultry/
+allow: /sheep/
+allow: /community/
+allow: /repository/
+allow: /QTLdb/
+allow: /QTLdb/cattle/
+allow: /QTLdb/horse/
+allow: /QTLdb/pig/
+allow: /QTLdb/chicken/
+allow: /QTLdb/catfish/
+allow: /QTLdb/rainbow_trout/
+allow: /QTLdb/sheep/
+allow: /QTLdb/faq/
+allow: /QTLdb/app/
+allow: /CorrDB/
+allow: /CorrDB/faq/
+allow: /CorrDB/release/
+allow: /edu/
+allow: /SmartList/
+Sitemap: https://www.animalgenome.org/sitemap.xml.gz

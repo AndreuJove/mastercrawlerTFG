@@ -1,0 +1,7 @@
+# robots.txt file for Colorado State University CS Department
+# Tells robot search engines (Lycos, Web Crawler, etc.) what they cannot access
+User-agent: *
+Disallow: /cgi-bin
+Disallow: /~sgcraw/BG/
+User-agent: HTTrack
+Disallow: /

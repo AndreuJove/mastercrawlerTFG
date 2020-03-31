@@ -1,0 +1,17 @@
+Date: Mon, 30 Mar 2020 23:55:32 GMT
+Server: Apache
+Strict-Transport-Security: max-age=31536000
+Last-Modified: Mon, 13 Jan 2020 15:04:23 GMT
+Etag: "227-59c06ca666bc0-gzip"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Cache-Control: max-age=86400
+Expires: Tue, 31 Mar 2020 23:55:32 GMT
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: default-src 'self' *.uspto.gov 'unsafe-eval' 'unsafe-inline' gateway.foresee.com/sites/uspto-gov/production/config.json https: data:;  frame-ancestors 'self' *.youtube.com *.ytimg.com; img-src 'self' *.uspto.gov jwpltx.com data: public.govdelivery.com stats.search.usa.gov *.google-analytics.com *.gstatic.com *.youtube.com *.ytimg.com; script-src 'self' *.jwpcdn.com *.uspto.gov *.bootstrapcdn.com *.googletagmanager.com *.google-analytics.com *.google.com *.googleapis.com *.gstatic.com *.youtube.com *.ytimg.com 'unsafe-inline' 'unsafe-eval'
+X-Content-Type-Options: nosniff
+P3P: policyref="http://www.uspto.gov/w3c/p3p.xml"
+Source: prod-web-4
+Content-Type: text/plain; charset=UTF-8
+Set-Cookie: WWWBsession=622856714.20480.0000; path=/; Httponly; Secure

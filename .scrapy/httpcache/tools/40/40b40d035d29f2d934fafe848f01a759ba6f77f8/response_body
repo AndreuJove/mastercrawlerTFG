@@ -1,0 +1,11 @@
+# Installed 9/10/12
+
+# Don't want robots hitting my executables:
+
+User-agent: *
+Disallow: /webStart/
+Disallow: /obsoleteWebStart/
+Disallow: /executables/
+
+
+

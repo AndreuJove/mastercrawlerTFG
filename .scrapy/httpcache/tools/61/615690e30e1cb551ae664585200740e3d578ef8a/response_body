@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /php/ 
+Disallow: /h3k4me/cgi-bin/
+1

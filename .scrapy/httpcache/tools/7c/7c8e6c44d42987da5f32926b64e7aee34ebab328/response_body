@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /search.php
+Disallow: /downloadgenerator.php
+Disallow: /admin/
+Crawl-delay: 1
+
+Sitemap: https://thebiogrid.org/sitemaps/sitemapIndex.xml
+Sitemap: https://wiki.thebiogrid.org/sitemap.xml.gz

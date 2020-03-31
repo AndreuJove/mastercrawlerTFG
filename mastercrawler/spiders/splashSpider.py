@@ -11,8 +11,8 @@ from scrapy_splash import SplashRequest
 class SplashspiderSpider(CrawlSpider):
     name = 'splashSpider'
     #allowed_domains = ['example.com']
-    start_urls = toolsListOut
-    print(len(start_urls))
+    #start_urls = toolsListOut
+    #print(len(start_urls))
     # rules = (
     #     Rule(LinkExtractor(allow=r'Items/'), callback='parse_item', follow=True),
     # )
@@ -40,7 +40,7 @@ class SplashspiderSpider(CrawlSpider):
     #         assert(splash:wait(1))
     # splash:set_viewport_full()
     def start_requests(self):
-        for url in self.start_urls:
+        for url in toolsListOut:
             yield scrapy.Request(url = url['url'], callback=self.parse, meta={'dont retry': False, 'handle_httpstatus_all' : False, 'dont_redirect': True, 'id' : url['id'], 'name' : url['name'], 
                 'splash' : { 
                     'args' : {

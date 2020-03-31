@@ -1,0 +1,132 @@
+#
+# robots.txt
+#
+# This file is to prevent the crawling and indexing of certain parts
+# of your site by web crawlers and spiders run by sites like Yahoo!
+# and Google. By telling these "robots" where not to go on your site,
+# you save bandwidth and server resources.
+#
+# This file will be ignored unless it is at the root of your host:
+# Used:    http://example.com/robots.txt
+# Ignored: http://example.com/site/robots.txt
+#
+# For more information about the robots.txt standard, see:
+# http://www.robotstxt.org/wc/robots.html
+#
+# For syntax checking, see:
+# http://www.sxw.org.uk/computing/robots/check.html
+
+User-agent: *
+Crawl-delay: 10
+# Directories
+Disallow: /includes/
+Disallow: /misc/
+Disallow: /modules/
+Disallow: /profiles/
+Disallow: /scripts/
+Disallow: /themes/
+# Files
+Disallow: /CHANGELOG.txt
+Disallow: /cron.php
+Disallow: /INSTALL.mysql.txt
+Disallow: /INSTALL.pgsql.txt
+Disallow: /install.php
+Disallow: /INSTALL.txt
+Disallow: /LICENSE.txt
+Disallow: /MAINTAINERS.txt
+Disallow: /update.php
+Disallow: /UPGRADE.txt
+Disallow: /xmlrpc.php
+# Paths (clean URLs)
+Disallow: /cgi-bin/
+Disallow: /cgi-test/
+Disallow: /cgi-bin/gbrowse/
+Disallow: /gbrowse/tmp/
+Disallow: /drupal/gbrowse/
+Disallow: /drupal/cgi-bin/
+Disallow: /admin/
+Disallow: /comment/reply/
+Disallow: /filter/tips/
+Disallow: /logout/
+Disallow: /node/add/
+Disallow: /search/
+Disallow: /user/register/
+Disallow: /user/password/
+Disallow: /user/login/
+Disallow: /cgi-bin/gbrowse/aapis_genome/
+Disallow: /cgi-bin/gbrowse/acep_10/
+Disallow: /cgi-bin/gbrowse/acephalotes_1/
+Disallow: /cgi-bin/gbrowse/aech_20/
+Disallow: /cgi-bin/gbrowse/aflo_v1_0_v1/
+Disallow: /cgi-bin/gbrowse/bacmap/
+Disallow: /cgi-bin/gbrowse/bee_chromosome11_superscaffold/
+Disallow: /cgi-bin/gbrowse/bee_chromosome12_superscaffold/
+Disallow: /cgi-bin/gbrowse/bee_chromosome13_superscaffold/
+Disallow: /cgi-bin/gbrowse/bee_chromosome14_superscaffold/
+Disallow: /cgi-bin/gbrowse/bee_chromosome15_superscaffold/
+Disallow: /cgi-bin/gbrowse/bee_chromosome16_superscaffold/
+Disallow: /cgi-bin/gbrowse/bee_chromosome7_superscaffold/
+Disallow: /cgi-bin/gbrowse/bee_chromosome8_superscaffold/
+Disallow: /cgi-bin/gbrowse/bee_chromosome9_superscaffold/
+Disallow: /cgi-bin/gbrowse/bee_genome2/
+Disallow: /cgi-bin/gbrowse/bee_genome2_chromo/
+Disallow: /cgi-bin/gbrowse/bee_genome3_chromo/
+Disallow: /cgi-bin/gbrowse/bee_genome3_superscaffolds/
+Disallow: /cgi-bin/gbrowse/bee_genome4/
+Disallow: /cgi-bin/gbrowse/bee_genome45/
+Disallow: /cgi-bin/gbrowse/bee_genome4_chromo/
+Disallow: /cgi-bin/gbrowse/bimp_v1_0_v1/
+Disallow: /cgi-bin/gbrowse/bimp_v2_0_v1/
+Disallow: /cgi-bin/gbrowse/bosmap2/
+Disallow: /cgi-bin/gbrowse/bovine2/
+Disallow: /cgi-bin/gbrowse/bovine31/
+Disallow: /cgi-bin/gbrowse/bovine31_scaffold/
+Disallow: /cgi-bin/gbrowse/bovine31_scaffold_v2/
+Disallow: /cgi-bin/gbrowse/bovine31_v2/
+Disallow: /cgi-bin/gbrowse/bovine40_chromosome/
+Disallow: /cgi-bin/gbrowse/bovine40_chromosome_v2/
+Disallow: /cgi-bin/gbrowse/bovine40_scaffold/
+Disallow: /cgi-bin/gbrowse/bovine40_scaffold_chromosome/
+Disallow: /cgi-bin/gbrowse/bovine40_scaffold_v2/
+Disallow: /cgi-bin/gbrowse/bovine42_chromosome/
+Disallow: /cgi-bin/gbrowse/bovine_UMD31/
+Disallow: /cgi-bin/gbrowse/bovine_UMD31_test/
+Disallow: /cgi-bin/gbrowse/Btau_4_6/
+Disallow: /cgi-bin/gbrowse/Btau_4_6_test/
+Disallow: /cgi-bin/gbrowse/Btau_4_6_v2/
+Disallow: /cgi-bin/gbrowse/bter_v1_0_v1/
+Disallow: /cgi-bin/gbrowse/cattle_est_cluster/
+Disallow: /cgi-bin/gbrowse/cflo_33/
+Disallow: /cgi-bin/gbrowse/cfloridanus_1/
+Disallow: /cgi-bin/gbrowse/hsal_33/
+Disallow: /cgi-bin/gbrowse/hsaltator_1/
+Disallow: /cgi-bin/gbrowse/lhum_10/
+Disallow: /cgi-bin/gbrowse/lhumile_1/
+Disallow: /cgi-bin/gbrowse/mondom_5/
+Disallow: /cgi-bin/gbrowse/nasonia_1/
+Disallow: /cgi-bin/gbrowse/nasonia10_scaffold/
+Disallow: /cgi-bin/gbrowse/nceranae_genome/
+Disallow: /cgi-bin/gbrowse/pbar_10/
+Disallow: /cgi-bin/gbrowse/pbarbatus_1/
+Disallow: /cgi-bin/gbrowse/pig_ests/
+Disallow: /cgi-bin/gbrowse/plarvae_genome/
+Disallow: /cgi-bin/gbrowse/sdal_1/
+Disallow: /cgi-bin/gbrowse/sinv_10/
+Disallow: /cgi-bin/gbrowse/sinvicta_1/
+Disallow: /cgi-bin/gb2/
+Disallow: /cgi-bin/gb2/gbrowse/
+# Paths (no clean URLs)
+Disallow: /?q=admin/
+Disallow: /?q=comment/reply/
+Disallow: /?q=filter/tips/
+Disallow: /?q=logout/
+Disallow: /?q=node/add/
+Disallow: /?q=search/
+Disallow: /?q=user/password/
+Disallow: /?q=user/register/
+Disallow: /?q=user/login/
+# mines
+Disallow: /bovinemine
+Disallow: /hymenopteramine
+Disallow: /bovinemine-dev
+Disallow: /hymenopteramine-dev

@@ -1,0 +1,34 @@
+# Robots.txt file for http://www.perkinelmer.com
+#
+
+#User-agent: rogerbot
+#Disallow: /
+
+User-agent: *  
+Disallow: /ScriptResource.axd  
+Disallow: /WebResource.axd 
+Disallow: /*.axd$
+Disallow: /UserControls/
+Disallow: /search/
+Disallow: /CountrySelection/
+Disallow: /settings/
+Disallow: /saptemplates/
+Disallow: /ReferrenceDlls/
+Disallow: /category/reagents
+Disallow: /category/instruments
+Disallow: /category/accessories
+Disallow: /category/services
+Disallow: /category/software
+Disallow: /category/cell-imaging-analysis
+Disallow: /category/dna-rna-isolation-analysis-detection
+Disallow: /category/digital-pathology
+Disallow: /category/elemental-analysis
+Disallow: /category/protein-analysis-detection
+Disallow: /category/environmental-monitoring
+Disallow: /category/food-agriculture
+Disallow: /category/forensics
+Disallow: /category/targets
+Disallow: /category/therapeutic-areas
+Disallow: /category/translational-research
+
+Sitemap: https://www.perkinelmer.com/sitemap/sitemap.xml

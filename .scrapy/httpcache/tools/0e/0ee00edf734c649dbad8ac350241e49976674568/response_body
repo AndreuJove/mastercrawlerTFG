@@ -1,0 +1,14 @@
+User-Agent:*
+Disallow:/geno/usr/miyajima/
+Disallow:/cgi-bin/
+Disallow:/gs2-cgi/
+Disallow:/tech-cgi/
+Disallow:/cgi-1/
+Disallow:/cgi-2/
+Disallow:/cgi-3/
+Disallow:/cgi-4/
+Disallow:/uni-cgi/
+Disallow:/vts-cgi/
+Disallow:/gene-s2/cgi-bin/
+Disallow:/Trash/
+Disallow:/Trash_2000/

@@ -1,0 +1,6 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 23:13:16 GMT
+Content-Type: text/html; charset=iso-8859-1
+Location: https://infinityfree.net/errors/404/
+Cache-Control: max-age=2592000
+Expires: Wed, 29 Apr 2020 23:13:16 GMT

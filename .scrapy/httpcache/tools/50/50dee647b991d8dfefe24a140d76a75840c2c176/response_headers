@@ -1,0 +1,15 @@
+Content-Type: text/plain; charset=UTF-8
+Date: Mon, 30 Mar 2020 23:20:54 GMT
+Server: nginx/1.17.5
+Last-Modified: Mon, 23 Mar 2020 15:06:37 GMT
+Etag: "63a-5a186fb475940-gzip"
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Cache-Control: public,max-age=0,s-maxage=0
+X-Varnish: 767767325 760425451
+Via: 1.1 varnish (Varnish/6.0), 1.1 77fcce204f96e329df7227f192690939.cloudfront.net (CloudFront)
+Accept-Ranges: bytes
+X-Cache: Miss from cloudfront
+X-Amz-Cf-Pop: MAD50-C1
+X-Amz-Cf-Id: nsLsSjjScDauLWozAy9GegkQ7JhGhxCVPciA8cp30vGVfWOZ00hCPw==
+Age: 252

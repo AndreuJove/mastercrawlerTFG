@@ -1,0 +1,11 @@
+Date: Mon, 30 Mar 2020 23:20:39 GMT
+Server: Apache/2.4.41 (centos) OpenSSL/1.0.2k-fips PHP/7.3.10 mod_auth_tkt/2.3.99b1 mod_perl/2.0.10 Perl/v5.16.3
+Last-Modified: Thu, 07 Nov 2019 20:01:56 GMT
+Etag: "63a-596c7232ab9e5-gzip"
+Accept-Ranges: bytes
+Vary: Accept-Encoding,User-Agent
+Content-Encoding: gzip
+Content-Type: text/plain; charset=UTF-8
+X-Cache: MISS from proxy08.dmz.bcgsc.ca
+X-Cache-Lookup: MISS from proxy08.dmz.bcgsc.ca:80
+Via: 1.1 proxy08.dmz.bcgsc.ca (squid/3.5.20)

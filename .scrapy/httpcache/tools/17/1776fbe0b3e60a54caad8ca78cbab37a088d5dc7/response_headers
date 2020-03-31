@@ -1,0 +1,16 @@
+Server: GitHub.com
+Content-Type: text/html; charset=utf-8
+Etag: W/"5cb0f185-239b"
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
+Content-Encoding: gzip
+X-Github-Request-Id: 9B18:25C8:4651A:5907B:5E82855B
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 23:48:43 GMT
+Via: 1.1 varnish
+Age: 0
+X-Served-By: cache-mad22028-MAD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1585612123.343726,VS0,VE124
+Vary: Accept-Encoding
+X-Fastly-Request-Id: 057e9832cd39674780984273734df0b20595f68f

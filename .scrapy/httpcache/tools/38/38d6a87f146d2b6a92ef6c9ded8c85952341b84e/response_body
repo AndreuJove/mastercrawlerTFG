@@ -1,0 +1,6 @@
+# robots.txt for faculty.virginia.edu
+# __NOSCAN__ (Please don't edit or delete this line)
+#
+
+User-agent: *
+Disallow: /analog/

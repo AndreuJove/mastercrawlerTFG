@@ -1,0 +1,74 @@
+<!-- doctype -->
+<!doctype html>
+
+<!-- html -->
+<html lang="en">
+
+<!-- head -->
+
+<head>
+
+  <!-- meta -->
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+  <!-- title -->
+  <title>TB DEPOT</title>
+
+  <!-- base -->
+  <base href="/">
+
+  <!-- viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- cache-control -->
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+
+  <!-- pragma -->
+  <meta http-equiv="Pragma" content="no-cache">
+
+  <!-- font -->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.png" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css" />
+
+<link rel="stylesheet" href="styles.1648bd9579253d86aafe.css"></head>
+<!-- e head -->
+
+<!-- body -->
+
+<body>
+
+  <!-- root -->
+  <app-root></app-root>
+
+  <!-- Highcharts Highstock -->
+  <script type="text/javascript" src="https://code.highcharts.com/stock/highstock.js"></script>
+
+  <!-- Highcharts Heatmap -->
+  <script type="text/javascript" src="https://code.highcharts.com/modules/heatmap.js"></script>
+
+  <!-- Highcharts No Data to Display -->
+  <script type="text/javascript" src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+
+  <!-- Highcharts Treemap -->
+  <script type="text/javascript" src="https://code.highcharts.com/modules/treemap.js"></script>
+
+  <!-- Higcharts Histogram -->
+  <script type="text/javascript" src="https://code.highcharts.com/modules/histogram-bellcurve.js"></script>
+
+  <!-- Highcharts Box Plot -->
+  <script type="text/javascript" src="https://code.highcharts.com/highcharts-more.js"></script>
+  
+  <!-- Highcharts Boost -->
+  <script type="text/javascript" src="https://code.highcharts.com/modules/boost.js"></script>
+
+<script type="text/javascript" src="runtime.7bbfc3bb4fe010517e61.js"></script><script type="text/javascript" src="polyfills.6c0615649e07852f523a.js"></script><script type="text/javascript" src="scripts.8bbf92cbf9dca4d6149f.js"></script><script type="text/javascript" src="main.3c4e12f216b17b1f0691.js"></script></body>
+<!-- e body -->
+
+</html>
+<!-- e html -->

@@ -1,0 +1,13 @@
+##ACAP version=1.0
+
+User-agent: *
+Disallow: /~ruiabreu/
+Disallow: /~testes/
+
+ACAP-crawler: *
+# User-agent: *
+ACAP-disallow-crawl: /~ruiabreu/
+# Disallow: /~ruiabreu/
+ACAP-disallow-crawl: /~testes/
+# Disallow: /~testes/
+

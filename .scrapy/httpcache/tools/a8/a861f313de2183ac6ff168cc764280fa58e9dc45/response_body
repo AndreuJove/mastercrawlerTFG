@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /setups/
+Disallow: /ccp4bin/
+Disallow: /setup/
+Disallow: /cvs/
+Disallow: /buildbot/
+
+#Baiduspider
+User-agent: Baiduspider
+Disallow: /
+
+#Yandex
+User-agent: Yandex
+Disallow: /

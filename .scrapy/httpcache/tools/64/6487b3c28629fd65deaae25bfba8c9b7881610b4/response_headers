@@ -1,0 +1,14 @@
+Server: GitHub.com
+Content-Type: text/html
+Location: https://bioperl.org/robots.txt
+X-Github-Request-Id: 6194:7E83:1233E3:187AFA:5E828212
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 23:34:44 GMT
+Via: 1.1 varnish
+Age: 0
+X-Served-By: cache-mad22033-MAD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1585611284.218482,VS0,VE128
+Vary: Accept-Encoding
+X-Fastly-Request-Id: de9ac4d207303f1aeed9646a2072614888cc7726

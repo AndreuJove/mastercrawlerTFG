@@ -1,0 +1,16 @@
+Server: Apache
+Strict-Transport-Security: max-age=31536000
+Last-Modified: Wed, 04 May 2016 04:34:27 GMT
+Etag: "819-gzip"
+Content-Type: text/plain; charset=UTF-8
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Cache-Control: public, max-age=120
+X-Webroute-Cache-Ttl: 120.000
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 23:42:04 GMT
+X-Varnish: 786792737
+Age: 0
+Via: 1.1 varnish
+X-Webroute-Cache: MISS
+Set-Cookie: BIGipServer~Production~wrouteprd-80_pool=444663050.20480.0000; path=/; Httponly; Secure

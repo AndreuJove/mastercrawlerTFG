@@ -1,0 +1,12 @@
+User-agent: *           # directed to all spiders, not just Scooter
+Disallow: /admin/
+Disallow: /internt/
+Disallow: /larare/internt/
+Disallow: /test/
+Disallow: /RCS/
+Disallow: /kth/
+Disallow: /bin/
+Disallow: /forskning/cb/publist/divapublications.php
+Disallow: /bokning
+Disallow: /bokning-matematik
+Disallow: /bokning-student

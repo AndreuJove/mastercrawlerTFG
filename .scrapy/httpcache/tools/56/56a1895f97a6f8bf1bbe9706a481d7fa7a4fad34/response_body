@@ -1,0 +1,6 @@
+User-agent: *
+#Disallow: /*cHash*
+Disallow: /*?id=*
+Disallow: /de/
+Disallow: /fileadmin/42010000/app-60a
+Disallow: /fileadmin/11010300/

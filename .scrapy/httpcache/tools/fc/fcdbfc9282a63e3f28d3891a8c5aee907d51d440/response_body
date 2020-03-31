@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /altsite
+Disallow: /cgi-bin
+Disallow: /computing
+Disallow: /mailman
+Disallow: /squirrelmail
+Disallow: /surveys
+Disallow: /wp
+
+User-agent: Slurp
+Disallow: /
+Crawl-delay: 5

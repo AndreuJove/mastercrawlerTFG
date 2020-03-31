@@ -24,14 +24,14 @@ USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Ge
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
-HTTPCACHE_ENABLED=True
+HTTPCACHE_ENABLED=False
 #Export as CSV Feed
 
 #FEED_FORMAT = "json"
 #FEED_URI = "toolsinformation.json"
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 12
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -42,7 +42,7 @@ HTTPCACHE_ENABLED=True
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = False
+COOKIES_ENABLED = True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -60,6 +60,7 @@ COOKIES_ENABLED = False
 # }
 
 SPIDER_MIDDLEWARES = {
+    'mastercrawler.middlewares.MastercrawlerSpiderMiddleware': 543,
     'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
 }
 # Enable or disable downloader middlewares
@@ -68,6 +69,7 @@ SPIDER_MIDDLEWARES = {
 #     'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': 300,
 # }
 DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': 300,
     'scrapy_splash.SplashCookiesMiddleware': 723,
     'scrapy_splash.SplashMiddleware': 725,
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,

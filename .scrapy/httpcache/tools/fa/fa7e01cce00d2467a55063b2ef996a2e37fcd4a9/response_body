@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://appris-tools.org/sitemap.xml
+

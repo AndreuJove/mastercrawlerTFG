@@ -1,0 +1,9 @@
+Date: Mon, 30 Mar 2020 23:31:02 GMT
+Set-Cookie: __cfduid=db0def93344c48daf243b721388e7f8a51585611062; expires=Wed, 29-Apr-20 23:31:02 GMT; path=/; domain=.www.ansible.com; HttpOnly; SameSite=Lax
+Set-Cookie: __cfruid=9dfbac0ce0a044a4bade985d349edf65de76df6d-1585611062; path=/; domain=.www.ansible.com; HttpOnly
+Location: https://www.ansible.com/robots.txt
+Cache-Control: s-maxage=3600,max-age=120
+X-Hs-Https-Only: worker
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 57c59f3738e55454-MAD

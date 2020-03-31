@@ -1,0 +1,8 @@
+# Piotr Rotkiewicz's Homepage ROBOTS file
+
+User-agent: Mediapartners-Google*
+Disallow:
+
+User-agent: *
+Disallow: cgi-bin
+Disallow: data

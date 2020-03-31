@@ -1,0 +1,14 @@
+Accept-Ranges: bytes
+Age: 235765
+Cache-Control: max-age=1209600
+Content-Type: text/plain
+Date: Mon, 30 Mar 2020 23:20:51 GMT
+Expires: Sat, 11 Apr 2020 05:51:26 GMT
+Last-Modified: Sat, 28 Sep 2019 05:58:40 GMT
+Server: nginx
+Via: varnish
+X-Ah-Environment: prod
+X-Cache: HIT
+X-Cache-Hits: 249
+X-Content-Type-Options: nosniff
+X-Request-Id: v-2a0909a4-70b8-11ea-b0fb-139dcf4ef2e6

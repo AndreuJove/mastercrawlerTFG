@@ -1,0 +1,17 @@
+Content-Type: text/plain
+Content-Encoding: gzip
+Content-Md5: TphXw/W/1A+asKE1MtFBAg==
+Last-Modified: Wed, 13 Jun 2018 20:51:10 GMT
+Etag: 0x8D5D16F6494A004
+Vary: Accept-Encoding
+Server: Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0
+X-Ms-Request-Id: 29f90270-b01e-0066-60ec-06c0b5000000
+X-Ms-Version: 2009-09-19
+X-Ms-Lease-Status: unlocked
+X-Ms-Blob-Type: BlockBlob
+Access-Control-Allow-Origin: *
+X-Powered-By: ARR/3.0
+X-Powered-By: ASP.NET
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+Date: Mon, 30 Mar 2020 23:36:56 GMT

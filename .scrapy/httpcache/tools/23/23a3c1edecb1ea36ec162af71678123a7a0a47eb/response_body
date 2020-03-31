@@ -1,0 +1,279 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+                <!-- HTTP 1.1 -->
+        <meta http-equiv="Cache-Control" content="no-store"/>
+        <!-- HTTP 1.0 -->
+        <meta http-equiv="Pragma" content="no-cache"/>
+        <!-- Prevents caching at the Proxy Server -->
+        <meta http-equiv="Expires" content="0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="generator" content="AppFuse 2.0" /> <!-- leave this for stats please -->
+        <link rel="icon" href="/images/icon-fang2.ico"/>
+        <title>Page Not Found | ArachnoServer</title>
+        <link rel="stylesheet" type="text/css" media="all" href="/styles/arachnoserver/theme.css;jsessionid=E31DF7F20EE6F07D38297BA612FBA809" />
+        <link rel="stylesheet" type="text/css" media="print" href="/styles/arachnoserver/print.css;jsessionid=E31DF7F20EE6F07D38297BA612FBA809" />
+        <script type="text/javascript" src="/scripts/prototype.js;jsessionid=E31DF7F20EE6F07D38297BA612FBA809" charset="utf-8"></script>
+        <script type="text/javascript" src="/scripts/scriptaculous.js;jsessionid=E31DF7F20EE6F07D38297BA612FBA809" charset="utf-8"></script>
+        <script type="text/javascript" src="/scripts/global.js;jsessionid=E31DF7F20EE6F07D38297BA612FBA809" charset="utf-8"></script>
+        <script type='text/javascript' src="/dwr/engine.js;jsessionid=E31DF7F20EE6F07D38297BA612FBA809" charset="utf-8"> </script>
+        <script type='text/javascript' src="/dwr/util.js;jsessionid=E31DF7F20EE6F07D38297BA612FBA809" charset="utf-8"> </script>
+        
+    </head>
+<body  onload="">
+    <div id="page">
+        <div id="header" class="clearfix">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+<!--
+.style1 {color: #666666}
+-->
+</style>
+
+
+<!-- Put constants into request scope -->
+
+<a name="top"></a> 
+        </div>
+        <div id="content" class="clearfix">
+            <div id="main">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h1></h1>
+                <script type="text/javascript" src="/scripts/menu/MM.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form method="post" action="/basicsearch.html">
+<table width="950" border="0" cellspacing="0" cellpadding="0" >
+  <tr>
+    <td height="122" valign="top" id="header">
+    	<table width="950" border="0" cellspacing="0" cellpadding="0" >
+      		<tr>
+        		<td height="122" align="center" valign="bottom">
+        			<table width="480" height="22" border="0" cellspacing="0" cellpadding="0" id="navBox2">
+          				<tr>
+				            <td width="120" align="center" valign="bottom"><a href="/mainMenu.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('home','','/images/nav/home-over.jpg',1)"><img src="/images/nav/home.jpg" alt="home" name="home" width="120" height="22" border="0" id="home" /></a></td>
+ 				            <td width="120" align="center" valign="bottom"><a href="/advancedsearch.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('search','','/images/nav/search-over.jpg',1)"><img src="/images/nav/search.jpg" alt="search" name="search" width="120" height="22" border="0" id="search" /></a></td>
+ 				            <td width="120" align="center" valign="bottom"><a href="/browse.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('browse','','/images/nav/browse-over.jpg',1)"><img src="/images/nav/browse.jpg" alt="browse the database" name="browse" width="120" height="22" border="0" id="browse" /></a></td>
+  				            <td width="120" align="center" valign="bottom"><a href="/blastForm.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('blast','','/images/nav/blast-over.jpg',1)"><img src="/images/nav/blast.jpg" alt="blast" name="blast" width="120" height="22" border="0" id="blast" /></a></td>
+  				            <td width="120" align="center" valign="bottom"><a href="/spiderP.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('spiderp','','/images/nav/spiderp-over.jpg',1)"><img src="/images/nav/spiderp.jpg" alt="spiderp" name="spiderP" width="120" height="22" border="0" id="spiderp" /></a></td>
+  				            <td width="120" align="center" valign="bottom"><a href="/toxNoteMainMenu.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('toxnote','','/images/nav/toxnote-over.jpg',1)"><img src="/images/nav/toxnote.jpg" alt="toxnote" name="toxnote" width="120" height="22" border="0" id="toxnote" /></a></td>
+          				</tr>
+        			</table>
+        		</td>
+        		
+        		<td width="200" align="left" valign="middle" id="searchBox">
+        			<table border="0">
+        				<tr>
+        					<td width="280" valign="bottom" height="80" id="searchBox">
+        					
+ 		            <input type="text" name="keywords" id="searchField" style="width:162px"/>
+          			<br />
+          			<input type="submit" id="search2" value="search" style="margin:3px 0 0 0"/> 
+          			&nbsp;&nbsp;<a href="/advancedsearch.html" style="color:#FF0">advanced search</a>
+							</td>
+						</tr>
+						<tr>
+							<td width="200" height="20" valign="bottom" align="left" >
+								<!--  
+								
+								<div style="color:#F9F9F9"> 
+									<a href="/login.jsp" style="color:yellow">log in</a>
+								</div>
+								-->
+								<div style="color:#F9F9F9"> 
+									<a href="/docs/ArachnoServerUserManual.pdf" style="color:yellow">user manual</a>
+								</div>
+							</td>
+						</tr>
+					</table>
+
+      			</td>
+      		</tr>
+    	</table>
+    </td>
+  </tr>
+</table>
+</form>
+
+<table width="950" height="750" border="0" cellspacing="0" cellpadding="0" id="mainBox" >
+	<tr>
+		<td width="17" align="left" valign="top"><img
+			src="/images/round-topleft.jpg" width="17" height="17" /></td>
+		<td></td>
+		<td width="17" align="right" valign="top"><img
+			src="/images/round-topright.jpg" width="17" height="17" /></td>
+	</tr>
+	<tr>
+		<td width="17"></td>
+		<td valign="top" id="content" align="left" style="height:100%">
+<p>
+    The page you requested was not found.  You might try returning to the <a href="/mainMenu.html;jsessionid=E31DF7F20EE6F07D38297BA612FBA809">Main Menu</a>.
+</p>
+<p style="text-align: center; margin-top: 20px"></p>
+            </div>
+
+            
+        </div>
+
+
+	
+        <div id="footer" class="clearfix">
+            
+  
+ </td>
+<td width="17">&nbsp;</td>
+</tr>
+<tr><td colspan="3" valign="bottom" align="center">
+<div class="logos" style="overflow:hidden;">
+
+    <div class="leftfooter" style="width:300px; margin:0; padding-left:20px; float:left">
+    <a href="http://www.qfab.org"  style="color:#F9F9F9 " title="Queensland Facility for Advanced Bioinformatics">  <img src="/images/QFAB_Logo_Webheader_v2.png;jsessionid=E31DF7F20EE6F07D38297BA612FBA809"  alt="QFAB Logo" /></a>
+    </div>
+    
+    <div class="centerfooter" style="width:300px; margin:0; float:left"   >
+
+    <a href="http://www.emblaustralia.org/"  style="color:#F9F9F9 " title="EMBL">  <img src="/images/EMBL_logo_260.png;jsessionid=E31DF7F20EE6F07D38297BA612FBA809"  alt="EMBL Logo" /></a>
+    </div>
+   
+    <div class="rightfooter" style="width:300px; margin:0; padding-left:20px; float:left" >
+    <a href="http://www.imb.uq.edu.au/" style="color:#F9F9F9" title="University Of Queensland"> <img src="/images/IMB_logo_250.png;jsessionid=E31DF7F20EE6F07D38297BA612FBA809" alt="UQ Logo"  /></a>
+    </div>
+  </div></td></tr>
+  <tr>
+    <td width="17" align="left" valign="bottom"><img src="/images/round-baseleft.jpg" width="17" height="17" /></td>
+    <td>&nbsp;</td>
+    <td width="17" align="right" valign="bottom"><img src="/images/round-baseright.jpg" width="17" height="17" /></td>
+
+</tr>
+<tr>
+<td colspan="3" style="background-color:black">
+<div id="baseLinks">
+	&copy;2010 <a href="http://www.qfab.org" style="color:yellow">Queensland Facility for Advanced Bioinformatics</a> 
+	(Version 3.0)
+    <br>We greatly appreciate your <a href="mailto:support@arachnoserver.org" style="color:yellow">feedback, comments or questions</a>
+ 	<br>
+								
+								<div style="color:#F9F9F9"> 
+									Internal: <a href="/login.jsp" style="color:yellow">log in</a>
+								</div>
+	
+</div>
+</td>
+</tr>
+  
+
+</table>
+<!-- <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>-->
+<script type="text/javascript"> 
+try {
+var pageTracker = _gat._getTracker("UA-7103739-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+        </div>
+	
+	
+
+    </div>
+</body>
+</html>

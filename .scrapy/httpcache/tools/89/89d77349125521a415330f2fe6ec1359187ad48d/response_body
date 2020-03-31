@@ -1,0 +1,341 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Page not found at /robots.txt/</title>
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; background:#eee; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 span { font-size:60%; color:#666; font-weight:normal; }
+    table { border:none; border-collapse: collapse; width:100%; }
+    td, th { vertical-align:top; padding:2px 3px; }
+    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #info { background:#f6f6f6; }
+    #info ol { margin: 0.5em 4em; }
+    #info ol li { font-family: monospace; }
+    #summary { background: #ffc; }
+    #explanation { background:#eee; border-bottom: 0px none; }
+  </style>
+</head>
+<body>
+  <div id="summary">
+    <h1>Page not found <span>(404)</span></h1>
+    <table class="meta">
+      <tr>
+        <th>Request Method:</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>Request URL:</th>
+      <td>http://raptorx2.uchicago.edu/robots.txt/</td>
+      </tr>
+    </table>
+  </div>
+  <div id="info">
+    
+      <p>
+      Using the URLconf defined in <code>urls</code>,
+      Django tried these URL patterns, in this order:
+      </p>
+      <ol>
+        
+          <li>^admin/</li>
+        
+          <li>^pdblist/$</li>
+        
+          <li>^myjobs/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^goAway/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^myjobs/(?P&lt;id&gt;\d+)/(?P&lt;name&gt;.*)/$</li>
+        
+          <li>^joblog/(?P&lt;mail&gt;.*)/$</li>
+        
+          <li>^myjobs/$</li>
+        
+          <li>^documentation/$</li>
+        
+          <li>^contact/$</li>
+        
+          <li>^tempmap/$</li>
+        
+          <li>^download/$</li>
+        
+          <li>^download/(?P&lt;mail&gt;.*)/(?P&lt;downname&gt;.*)/$</li>
+        
+          <li>^download/(?P&lt;mail&gt;.*)/$</li>
+        
+          <li>^accounts/login/$</li>
+        
+          <li>^accounts/logout/$</li>
+        
+          <li>^accounts/login/$</li>
+        
+          <li>^BindingSite/documentation/$</li>
+        
+          <li>^BindingSite/about/$</li>
+        
+          <li>^BindingSite/myjobs/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^BindingSite/myjobs/(?P&lt;id&gt;\d+)_(?P&lt;seqid&gt;\d+)/$</li>
+        
+          <li>^BindingSite/myjobs/(?P&lt;id&gt;\d+)/(?P&lt;name&gt;.*)/$</li>
+        
+          <li>^BindingSite/status/$</li>
+        
+          <li>^BindingSite/status/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^BindingSite/myjobs/(?P&lt;id&gt;\d+)summary_data/$</li>
+        
+          <li>^BindingSite/missing/$</li>
+        
+          <li>^BindingSite/myjobs/(?P&lt;id&gt;\d+)_(?P&lt;domainId&gt;\d+)/domain$</li>
+        
+          <li>^BindingSite/myjobs/(?P&lt;id&gt;\d+)/cameo$</li>
+        
+          <li>^BindingSite/myjobs/all/download/(?P&lt;bid&gt;\d+)_(?P&lt;name&gt;.*)$</li>
+        
+          <li>^ContactMap/documentation/$</li>
+        
+          <li>^ContactMap/about/$</li>
+        
+          <li>^ContactMap/myjobs/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^ContactMap/myjobs/(?P&lt;id&gt;\d+)_(?P&lt;seqid&gt;\d+)/$</li>
+        
+          <li>^ContactMap/myjobs/(?P&lt;id&gt;\d+)/(?P&lt;name&gt;.*)/$</li>
+        
+          <li>^ContactMap/status/$</li>
+        
+          <li>^ContactMap/status/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^ContactMap/myjobs/(?P&lt;id&gt;\d+)summary_data/(?P&lt;attach&gt;.*)/$</li>
+        
+          <li>^ContactMap/missing/$</li>
+        
+          <li>^ContactMap/myjobs/all/download/(?P&lt;bid&gt;\d+)_(?P&lt;name&gt;.*)$</li>
+        
+          <li>^ContactMap/myjobs/(?P&lt;jobid&gt;\d+)/labeling$</li>
+        
+          <li>^StructurePrediction/documentation/$</li>
+        
+          <li>^StructurePrediction/missing/$</li>
+        
+          <li>^StructurePrediction/about/$</li>
+        
+          <li>^StructurePrediction/myjobs/(?P&lt;id&gt;\d+)_(?P&lt;seqid&gt;\d+)/(?P&lt;name&gt;.*)/$</li>
+        
+          <li>^StructurePrediction/status/$</li>
+        
+          <li>^StructurePrediction/status/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^StructurePrediction/myjobs/(?P&lt;id&gt;\d+)_(?P&lt;seqid&gt;\d+)/$</li>
+        
+          <li>^StructurePrediction/goAway/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^StructurePrediction/joblog/(?P&lt;mail&gt;.*)/$</li>
+        
+          <li>^StructurePrediction/predict/(?P&lt;type&gt;.*)/$</li>
+        
+          <li>^StructurePrediction/predict/$</li>
+        
+          <li>^StructurePrediction/curl/$</li>
+        
+          <li>^StructurePrediction/myjobs/(?P&lt;id&gt;\d+)summary_data/$</li>
+        
+          <li>^StructurePrediction/myjobs/(?P&lt;id&gt;\d+)summary_pdb_image/$</li>
+        
+          <li>^StructurePrediction/myjobs/(?P&lt;jobid&gt;\d+)/labeling$</li>
+        
+          <li>^StructurePrediction/myjobs/all/download/(?P&lt;bid&gt;\d+)_(?P&lt;name&gt;.*)$</li>
+        
+          <li>^StructPredV2/documentation/$</li>
+        
+          <li>^StructPredV2/missing/$</li>
+        
+          <li>^StructPredV2/about/$</li>
+        
+          <li>^StructPredV2/myjobs/(?P&lt;id&gt;\d+)_(?P&lt;seqid&gt;\d+)/(?P&lt;name&gt;.*)/$</li>
+        
+          <li>^StructPredV2/status/$</li>
+        
+          <li>^StructPredV2/status/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^StructPredV2/myjobs/(?P&lt;id&gt;\d+)_(?P&lt;seqid&gt;\d+)/$</li>
+        
+          <li>^StructPredV2/goAway/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^StructPredV2/joblog/(?P&lt;mail&gt;.*)/$</li>
+        
+          <li>^StructPredV2/predict/(?P&lt;type&gt;.*)/$</li>
+        
+          <li>^StructPredV2/predict/$</li>
+        
+          <li>^StructPredV2/curl/$</li>
+        
+          <li>^StructPredV2/myjobs/(?P&lt;id&gt;\d+)summary_data/$</li>
+        
+          <li>^StructPredV2/myjobs/(?P&lt;id&gt;\d+)summary_pdb_image/$</li>
+        
+          <li>^StructPredV2/myjobs/(?P&lt;jobid&gt;\d+)/labeling$</li>
+        
+          <li>^StructPredV2/myjobs/all/download/(?P&lt;bid&gt;\d+)_(?P&lt;name&gt;.*)$</li>
+        
+          <li>^StructurePropertyPred/documentation/$</li>
+        
+          <li>^StructurePropertyPred/missing/$</li>
+        
+          <li>^StructurePropertyPred/about/$</li>
+        
+          <li>^StructurePropertyPred/status/$</li>
+        
+          <li>^StructurePropertyPred/status/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^StructurePropertyPred/myjobs/(?P&lt;id&gt;\d+)_(?P&lt;seqid&gt;\d+)/$</li>
+        
+          <li>^StructurePropertyPred/goAway/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^StructurePropertyPred/joblog/(?P&lt;mail&gt;.*)/$</li>
+        
+          <li>^StructurePropertyPred/predict/(?P&lt;type&gt;.*)/$</li>
+        
+          <li>^StructurePropertyPred/predict/$</li>
+        
+          <li>^StructurePropertyPred/curl/$</li>
+        
+          <li>^StructurePropertyPred/myjobs/(?P&lt;id&gt;\d+)summary_data/$</li>
+        
+          <li>^StructurePropertyPred/myjobs/(?P&lt;jobid&gt;\d+)/labeling$</li>
+        
+          <li>^StructurePropertyPred/myjobs/all/download/(?P&lt;bid&gt;\d+)_(?P&lt;name&gt;.*)$</li>
+        
+          <li>^DeepAlign/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^DeepAlign/submit/$</li>
+        
+          <li>^DeepAlign/check$</li>
+        
+          <li>^DeepAlign/runDeepAlign/(?P&lt;id&gt;\d+)$</li>
+        
+          <li>^DeepAlign/(?P&lt;id&gt;\d+)download/$</li>
+        
+          <li>^DeepAlign/documentation/$</li>
+        
+          <li>^DeepAlign/about/$</li>
+        
+          <li>^DeepAlign/missing/$</li>
+        
+          <li>^DeepAlign/status/$</li>
+        
+          <li>^site_media/(?P&lt;path&gt;.*)$</li>
+        
+          <li>^BindingSite/$</li>
+        
+          <li>^BindingSite/curl/$</li>
+        
+          <li>^ContactMap/$</li>
+        
+          <li>^ContactMap/curl/$</li>
+        
+          <li>^StructurePrediction/$</li>
+        
+          <li>^StructPredV2/$</li>
+        
+          <li>^StructurePropertyPred/$</li>
+        
+          <li>^$</li>
+        
+          <li>^ComplexContact/$</li>
+        
+          <li>^ComplexContact/documentation/$</li>
+        
+          <li>^ComplexContact/about/$</li>
+        
+          <li>^ComplexContact/myjobs/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^ComplexContact/myjobs/(?P&lt;id&gt;\d+)_(?P&lt;seqid&gt;\d+)/$</li>
+        
+          <li>^ComplexContact/myjobs/(?P&lt;id&gt;\d+)/(?P&lt;name&gt;.*)/$</li>
+        
+          <li>^ComplexContact/status/$</li>
+        
+          <li>^ComplexContact/status/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^ComplexContact/myjobs/(?P&lt;id&gt;\d+)summary_data/(?P&lt;attach&gt;.*)/$</li>
+        
+          <li>^ComplexContact/missing/$</li>
+        
+          <li>^ComplexContact/myjobs/all/download/(?P&lt;bid&gt;\d+)_(?P&lt;name&gt;.*)$</li>
+        
+          <li>^ComplexContact/curl/$</li>
+        
+          <li>^AbInitioFolding/$</li>
+        
+          <li>^AbInitioFolding/curl/$</li>
+        
+          <li>^AbInitioFolding/documentation/$</li>
+        
+          <li>^AbInitioFolding/about/$</li>
+        
+          <li>^AbInitioFolding/myjobs/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^AbInitioFolding/myjobs/(?P&lt;id&gt;\d+)_(?P&lt;seqid&gt;\d+)/$</li>
+        
+          <li>^AbInitioFolding/myjobs/(?P&lt;id&gt;\d+)/(?P&lt;name&gt;.*)/$</li>
+        
+          <li>^AbInitioFolding/status/$</li>
+        
+          <li>^AbInitioFolding/status/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^AbInitioFolding/myjobs/(?P&lt;id&gt;\d+)summary_data/(?P&lt;attach&gt;.*)/$</li>
+        
+          <li>^AbInitioFolding/missing/$</li>
+        
+          <li>^AbInitioFolding/myjobs/all/download/(?P&lt;bid&gt;\d+)_(?P&lt;name&gt;.*)$</li>
+        
+          <li>^AbInitioFolding/myjobs/(?P&lt;jobid&gt;\d+)/labeling$</li>
+        
+          <li>^deepalign_v2/submit</li>
+        
+          <li>^deepalign_v2/result/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>^deepalign_v2/retrieve/(?P&lt;id&gt;\d+)/$</li>
+        
+          <li>deepalign_v2/retrieve/download/</li>
+        
+          <li>deepalign_v2/status/(?P&lt;id&gt;\d+)$</li>
+        
+          <li>deepalign_v2/missing/$</li>
+        
+          <li>deepalign_v2/status/</li>
+        
+          <li>deepalign_v2/exectue_align/(?P&lt;id&gt;\d+)</li>
+        
+          <li>deepalign_v2/search_protein/(?P&lt;id&gt;\d+)</li>
+        
+          <li>^deepalign_v2/documentation/$</li>
+        
+          <li>^deepalign_v2/about/$</li>
+        
+          <li>deepalign_v2/result/download</li>
+        
+      </ol>
+      <p>The current URL, <code>robots.txt/</code>, didn't match any of these.</p>
+    
+  </div>
+
+  <div id="explanation">
+    <p>
+      You're seeing this error because you have <code>DEBUG = True</code> in
+      your Django settings file. Change that to <code>False</code>, and Django
+      will display a standard 404 page.
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /~evgeniy/cgi-bin/proton/
+Disallow: /~evgeniy/cgi-bin/proton_2011/

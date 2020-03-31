@@ -1,0 +1,6 @@
+Server: nginx
+Date: Mon, 30 Mar 2020 23:56:17 GMT
+Content-Type: text/plain; charset=utf-8
+X-Powered-By: PHP/7.2.10
+Link: <https://datasus.saude.gov.br/wp-json/>; rel="https://api.w.org/"
+Set-Cookie: BIGipServerphp_72_prod_https=3540000172.47873.0000; path=/; Httponly; Secure

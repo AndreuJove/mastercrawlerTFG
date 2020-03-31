@@ -1,0 +1,14 @@
+Server: GitHub.com
+Content-Type: text/html
+Location: http://caleydo.org/robots.txt
+X-Github-Request-Id: 5292:2CCD:48342:5B493:5E828557
+Accept-Ranges: bytes
+Date: Mon, 30 Mar 2020 23:48:40 GMT
+Via: 1.1 varnish
+Age: 0
+X-Served-By: cache-mad22036-MAD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1585612120.041959,VS0,VE111
+Vary: Accept-Encoding
+X-Fastly-Request-Id: da867feb6e5a45af8ea2017b0602b6d3efc5d4b2

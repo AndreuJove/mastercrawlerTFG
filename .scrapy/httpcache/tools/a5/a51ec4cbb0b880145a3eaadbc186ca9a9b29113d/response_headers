@@ -1,0 +1,11 @@
+Server: nginx
+Cache-Control: max-age=900
+Content-Type: text/plain
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Date: Mon, 30 Mar 2020 23:04:15 GMT
+Expires: Tue, 31 Mar 2020 23:04:15 GMT
+Accept-Ranges: bytes
+Etag: "5e82281d-366"
+X-Content-Type-Options: nosniff
+Last-Modified: Mon, 30 Mar 2020 17:10:53 GMT
+X-Cache-Info: cached

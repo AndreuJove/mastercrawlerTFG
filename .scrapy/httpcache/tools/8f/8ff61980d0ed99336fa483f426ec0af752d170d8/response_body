@@ -1,0 +1,8 @@
+# 2019-04-09::XB::Discourage crawling of certain test or supporting folders
+
+User-agent: * 
+Disallow: /_files/json/
+Disallow: /_files/maintenance/
+Disallow: /_files/php/
+Disallow: /_files/web-services/
+Disallow: /test/

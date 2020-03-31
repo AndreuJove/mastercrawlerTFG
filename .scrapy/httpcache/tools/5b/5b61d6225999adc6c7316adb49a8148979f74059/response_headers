@@ -1,0 +1,8 @@
+Server: nginx
+Date: Tue, 31 Mar 2020 00:01:49 GMT
+Content-Type: text/html
+Location: https://www.e-rna.org/robots.txt
+Strict-Transport-Security: max-age=31536000; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block

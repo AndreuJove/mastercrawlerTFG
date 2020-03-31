@@ -1,8 +1,0 @@
-Server: nginx/1.16.1
-Date: Mon, 30 Mar 2020 18:45:30 GMT
-Content-Type: text/html; charset=utf-8
-X-Frame-Options: SAMEORIGIN
-X-Frame-Options: SAMEORIGIN
-Vary: Cookie
-Strict-Transport-Security: max-age=63072000; includeSubdomains
-X-Content-Type-Options: nosniff

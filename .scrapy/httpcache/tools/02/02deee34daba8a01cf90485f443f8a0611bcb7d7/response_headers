@@ -1,6 +1,0 @@
-Server: nginx/1.17.3
-Date: Mon, 30 Mar 2020 18:50:25 GMT
-Content-Type: text/html; charset=utf-8
-Location: /index/#/Predict
-X-Frame-Options: SAMEORIGIN
-Vary: Origin

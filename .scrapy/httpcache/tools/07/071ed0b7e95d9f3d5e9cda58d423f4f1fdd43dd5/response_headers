@@ -1,8 +1,0 @@
-Content-Type: text/html; charset=utf-8
-Server: Microsoft-IIS/10.0
-Set-Cookie: researchweb#lang=en; path=/
-Set-Cookie: ARRAffinity=e7dd92c280a57ca2b26fc9e84af0ae152e7311cf93bcab13a49d541c8bdac88b;Path=/;HttpOnly;Domain=www.mayo.edu
-Set-Cookie: ApplicationGatewayAffinity=59eee80334fb3f5bcf14d4d2138390fa901ba98788ff036a636e71820759d479;Path=/;Domain=www.mayo.edu
-Set-Cookie: ApplicationGatewayAffinityCORS=59eee80334fb3f5bcf14d4d2138390fa901ba98788ff036a636e71820759d479;Path=/;Domain=www.mayo.edu;SameSite=None;Secure
-X-Frame-Options: SAMEORIGIN
-Date: Mon, 30 Mar 2020 18:44:47 GMT

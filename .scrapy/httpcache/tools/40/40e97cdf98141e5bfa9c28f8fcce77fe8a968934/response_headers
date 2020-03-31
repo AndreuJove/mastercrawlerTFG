@@ -1,7 +1,0 @@
-Server: nginx/1.12.2
-Date: Mon, 30 Mar 2020 18:44:07 GMT
-Content-Type: text/html; charset=UTF-8
-Vary: Accept-Encoding
-Set-Cookie: galaxysession=11ac94870d0bb33a085845a8a07b6e6efcc46295d7c5c71d872f5799cd9558334ad7a5d87602257a; expires=Sun, 28-Jun-2020 20:44:07 GMT; httponly; Max-Age=7776000; Path=/; secure; Version=1
-X-Content-Type-Options: nosniff
-Content-Encoding: gzip

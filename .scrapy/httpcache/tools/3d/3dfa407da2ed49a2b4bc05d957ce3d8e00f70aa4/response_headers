@@ -1,5 +1,0 @@
-Server: nginx/1.12.2
-Date: Mon, 30 Mar 2020 18:48:58 GMT
-Content-Type: text/html
-Location: https://genome.crg.cat/services/compmerge/
-Strict-Transport-Security: max-age=31536000; includeSubdomains

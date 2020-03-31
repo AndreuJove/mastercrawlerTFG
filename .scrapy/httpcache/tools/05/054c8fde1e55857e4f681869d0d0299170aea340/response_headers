@@ -1,7 +1,0 @@
-Server: nginx/1.10.3
-Content-Type: text/html; charset=UTF-8
-Cache-Control: no-cache, private
-Date: Mon, 30 Mar 2020 18:47:22 GMT
-Set-Cookie: XSRF-TOKEN=eyJpdiI6IkhTMklYRmpEUExKWGtoejdBV3F4bWc9PSIsInZhbHVlIjoidTU5S0tGcGMySEY4ZzRNQXhzNDBYV09kQU51WGFub1BwWWVqM3YzdGxPR3N6aThHU1pRXC9sZStcL1wvUmhtaVwvXC9yIiwibWFjIjoiYmVjNDExMWVhZGEzMTllOWM1MjM4M2FiNWZiYWNiNmVjMzE4OGMxMGFiYjEyZjlkMTAzNGJhN2Q1MGM2NWEzYyJ9; expires=Mon, 30-Mar-2020 20:47:22 GMT; Max-Age=7200; path=/
-Set-Cookie: laravel_session=eyJpdiI6IklhYUtVbHdpTGpDRUhmM3R4WnpFSGc9PSIsInZhbHVlIjoicThheGs0elNQNk9ha2ZQZ3FWVkt5aGY5c0JBYklnK1NXTXdudFhTRTBnSHk5anlZVDF1Z3NPWGU2VG5NUkh1ZCIsIm1hYyI6IjJmZTIzNDZlZWQyMjRiOTc5YWNlOTJhZDE1ODY2ZWY1ZmJmYjRjY2MwZTczNTlmMTIwMWZkMmFmOTQ1YTM3NjAifQ%3D%3D; expires=Mon, 30-Mar-2020 20:47:22 GMT; Max-Age=7200; path=/; httponly
-Content-Encoding: gzip

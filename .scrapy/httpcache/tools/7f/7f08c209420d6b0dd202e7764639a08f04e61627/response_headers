@@ -1,8 +1,0 @@
-Date: Mon, 30 Mar 2020 18:49:56 GMT
-Server: PasteWSGIServer/0.5 Python/2.7.11
-X-Frame-Options: SAMEORIGIN
-Content-Type: text/html; charset=UTF-8
-Set-Cookie: galaxysession=3ce3e2281e4506fb5b61d80bd1344cd414c897ea94b8cf516f75cbc6d05628dea84ec20cfcd781cf; expires=Sun, 28-Jun-2020 20:49:55 GMT; httponly; Max-Age=7776000; Path=/; secure; Version=1
-Vary: Accept-Encoding
-Content-Encoding: gzip
-Strict-Transport-Security: max-age=15768000; includeSubDomains

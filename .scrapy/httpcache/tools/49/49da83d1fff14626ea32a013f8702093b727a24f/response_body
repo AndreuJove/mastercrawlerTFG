@@ -1,4 +1,0 @@
-# robots.txt generated to prevent error "File does not exist: /home/hj/immunet/www/robots.txt" 
-User-agent: *
-Disallow: 
-Disallow: /cgi-bin/

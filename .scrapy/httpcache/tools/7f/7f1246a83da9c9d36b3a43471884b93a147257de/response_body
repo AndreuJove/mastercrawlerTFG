@@ -1,6 +1,0 @@
-Disallow: /_webdav/ 
-Disallow: *precursorAllChromatogramsChart.view?* 
-Disallow: *precursorChromatogramChart.view?* 
-Disallow: *moleculePrecursorAllChromatogramsChart.view?* 
-Disallow: *generalMoleculeChromatogramChart.view?* 
-Disallow: *runGCTReportApi.view?*

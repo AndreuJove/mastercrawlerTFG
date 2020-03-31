@@ -20,13 +20,21 @@ def getAllFromJson(toolsList):
         numberOfDashes = idTool.count('/')
         if numberOfDashes <= 5:
             urlTool = tool["web"]["homepage"]
-            if urlTool not in urlToolList and not urlTool.endswith((".zip", ".pdf", ".de")) and not urlTool.startswith("ftp://"):
+            
+            if urlTool not in urlToolList and not urlTool.endswith((".zip", "pdf", ".de", ".mp4")) and not urlTool.startswith("ftp://") and len(urlTool)>7:
+                if not urlTool.startswith("http"):
+                    urlTool = "https://www." + urlTool
                 dict_tool['name'] = tool["name"]
-                dict_tool['url'] = str(tool["web"]["homepage"])
-                dict_tool['id'] = tool["@id"]
+                dict_tool['url'] = urlTool
+                dict_tool['id'] = idTool
                 toolsListOut.append(dict_tool)         
     return toolsListOut            
 
+
+
+#http://
+#dfam.org
+#https://www.dfam.org
 # def getUrlListFromTools(toolsListOut):
 #     toolUrlList = []
 #     for tool in toolsListOut:
@@ -35,9 +43,9 @@ def getAllFromJson(toolsList):
 
 toolsListOut = getAllFromJson(lessTools)
 
-listUrl = []
-for tool in toolsListOut:
-        listUrl.append(tool['url'])
+# listUrl = []
+# for tool in toolsListOut:
+#         listUrl.append(tool['url'])
     
 # print(len(listUrl))
 #print(len(toolsListOut))

@@ -1,9 +1,0 @@
-Date: Mon, 30 Mar 2020 18:48:27 GMT
-Server: PasteWSGIServer/0.5 Python/2.7.11
-X-Frame-Options: SAMEORIGIN
-Content-Type: text/html; charset=UTF-8
-Location: /root?tool_id=toolshed.pasteur.fr%2Frepos%2Ffmareuil%2Furgi_tools%2FcolorGff%2F1.0.0
-Set-Cookie: galaxysession=3ce3e2281e4506fbf053f9cf835899fdfa2a65140429e6b8586e7950a000dbdd04d3ab49dffa60a3; expires=Sun, 28-Jun-2020 20:48:27 GMT; httponly; Max-Age=7776000; Path=/; secure; Version=1
-Vary: Accept-Encoding
-Content-Encoding: gzip
-Strict-Transport-Security: max-age=15768000; includeSubDomains

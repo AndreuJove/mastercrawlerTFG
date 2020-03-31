@@ -1,7 +1,0 @@
-Server: nginx/1.14.0 (Ubuntu)
-Date: Mon, 30 Mar 2020 23:49:00 GMT
-Content-Type: text/html; charset=iso-8859-1
-Location: https://colordecontmas.sourceforge.io/robots.txt
-Cache-Control: max-age=600
-Expires: Mon, 30 Mar 2020 23:59:00 GMT
-Vary: Accept-Encoding

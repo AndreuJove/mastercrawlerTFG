@@ -1,8 +1,0 @@
-Server: nginx/1.14.0 (Ubuntu)
-Date: Mon, 30 Mar 2020 18:48:29 GMT
-Content-Type: text/html; charset=UTF-8
-Vary: Host,X-Forwarded-Proto
-Vary: Accept-Encoding
-Location: https://sourceforge.net/projects/colordecontmas/
-X-From: sfp-ioweb-2
-Strict-Transport-Security: max-age=31536000

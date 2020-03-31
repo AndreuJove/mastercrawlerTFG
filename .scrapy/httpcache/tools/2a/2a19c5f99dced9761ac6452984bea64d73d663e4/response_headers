@@ -1,8 +1,0 @@
-Server: nginx/1.16.1
-Date: Mon, 30 Mar 2020 18:47:06 GMT
-Content-Type: text/html; charset=UTF-8
-Vary: Accept-Encoding,Cookie,User-Agent
-Cache-Control: max-age=3, must-revalidate
-Content-Encoding: gzip
-X-Server-Cache: true
-X-Proxy-Cache: MISS

@@ -1,9 +1,0 @@
-X-Ua-Compatible: IE=edge,chrome=1
-Content-Type: text/html; charset=UTF-8
-Date: Mon, 30 Mar 2020 18:48:27 GMT
-Strict-Transport-Security: max-age=31536000; preload
-X-Content-Type-Options: nosniff
-X-Xss-Protection: 1; mode=block
-Referrer-Policy: no-referrer-when-downgrade
-Content-Security-Policy: report-uri csp.hpc.ut.ee; form-action 'self';
-Set-Cookie: SRVNAME=clustvis19; path=/

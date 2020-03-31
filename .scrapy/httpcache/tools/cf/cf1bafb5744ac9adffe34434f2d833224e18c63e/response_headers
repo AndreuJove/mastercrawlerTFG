@@ -1,8 +1,0 @@
-Server: nginx/1.14.0 (Ubuntu)
-Date: Mon, 30 Mar 2020 23:49:13 GMT
-Content-Type: text/html; charset=UTF-8
-Vary: Accept-Encoding
-Vary: Host,X-Forwarded-Proto
-X-From: sfp-ioweb-2
-Strict-Transport-Security: max-age=31536000
-Content-Encoding: gzip

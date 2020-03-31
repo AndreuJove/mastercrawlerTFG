@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: 
-
-User-agent: Googlebot
-Disallow: chemistry-news/wp-content/
-Disallow: chemistry-news/wp-admin/
-Disallow: chemistry-news/wp-includes/
-Disallow: chemistry-news/wp-

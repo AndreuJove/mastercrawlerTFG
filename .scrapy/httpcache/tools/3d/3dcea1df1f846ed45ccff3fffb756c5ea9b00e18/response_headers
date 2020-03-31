@@ -1,8 +1,0 @@
-Date: Mon, 30 Mar 2020 23:57:33 GMT
-Server: Apache/2.4.10 (Debian)
-Vary: Host
-Last-Modified: Thu, 12 Sep 2013 10:20:20 GMT
-Etag: "20-4e62d15ca020b"
-Accept-Ranges: bytes
-Content-Security-Policy: frame-ancestors 'self' gforge.inria.fr *.gforge.inria.fr forge-qualif.inria.fr *.forge-qualif.inria.fr ;
-Content-Type: text/plain

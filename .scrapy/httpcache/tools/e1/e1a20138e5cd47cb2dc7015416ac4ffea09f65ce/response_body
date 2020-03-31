@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /cgi-bin/npsa_automat.pl
-Allow: /cgi-bin/npsa_automat.pl?page=/NPSA/npsa_server.html
-Disallow: /cgi-bin/
-Disallow: /images/
-Disallow: /tmp/

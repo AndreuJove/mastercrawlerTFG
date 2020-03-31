@@ -1,5 +1,0 @@
-Server: nginx
-Date: Mon, 30 Mar 2020 18:50:17 GMT
-Content-Type: text/html
-Location: https://pythonhosted.org/DendroPy/
-Strict-Transport-Security: max-age=315360000; includeSubDomains; preload

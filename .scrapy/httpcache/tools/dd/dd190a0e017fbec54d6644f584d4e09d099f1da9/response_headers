@@ -1,5 +1,0 @@
-Server: nginx
-Date: Mon, 30 Mar 2020 23:37:48 GMT
-Content-Type: text/html
-Location: https://www.itb.cnr.it/robots.txt
-Strict-Transport-Security: max-age=31536000; includeSubdomains;

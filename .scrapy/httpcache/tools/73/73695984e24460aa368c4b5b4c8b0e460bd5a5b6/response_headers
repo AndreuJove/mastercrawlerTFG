@@ -1,9 +1,0 @@
-Date: Mon, 30 Mar 2020 18:44:47 GMT
-Server: PasteWSGIServer/0.5 Python/2.7.11
-X-Frame-Options: SAMEORIGIN
-Content-Type: text/html; charset=UTF-8
-Location: /root?tool_id=toolshed.pasteur.fr%2Frepos%2Ffmareuil%2Fbedtools_pasteur%2Fbedtools_intersectbed_bam%2F0.1.0
-Set-Cookie: galaxysession=3ce3e2281e4506fb5193e3c6c9edec2010a3bc59acfc974cfa50a4b4b6eaafdf92598b33458eb569; expires=Sun, 28-Jun-2020 20:44:47 GMT; httponly; Max-Age=7776000; Path=/; secure; Version=1
-Vary: Accept-Encoding
-Content-Encoding: gzip
-Strict-Transport-Security: max-age=15768000; includeSubDomains

@@ -1,8 +1,0 @@
-Server: gunicorn/19.9.0
-Date: Mon, 30 Mar 2020 18:45:12 GMT
-Content-Type: text/html; charset=utf-8
-Last-Modified: Fri, 28 Dec 2018 01:19:18 GMT
-Cache-Control: public, max-age=43200
-Expires: Tue, 31 Mar 2020 06:45:12 GMT
-Etag: "1545959958.0-222-1058934697"
-Accept-Ranges: bytes

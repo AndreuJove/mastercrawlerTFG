@@ -1,9 +1,0 @@
-Server: nginx
-Date: Mon, 30 Mar 2020 18:48:25 GMT
-Content-Type: text/html; charset=UTF-8
-Vary: Accept-Encoding
-X-Powered-By: PHP/7.3.14
-X-Cache-Handler: wp
-Last-Modified: Mon, 30 Mar 2020 17:11:01 GMT
-Strict-Transport-Security: max-age=15552001; includeSubdomains; preload
-Content-Encoding: gzip

@@ -1,7 +1,0 @@
-Server: nginx/1.14.0 (Ubuntu)
-Date: Mon, 30 Mar 2020 18:45:25 GMT
-Content-Type: text/html; charset=iso-8859-1
-Location: http://ambit.sourceforge.net/smirks.html
-Cache-Control: max-age=600
-Expires: Mon, 30 Mar 2020 18:55:25 GMT
-Vary: Accept-Encoding

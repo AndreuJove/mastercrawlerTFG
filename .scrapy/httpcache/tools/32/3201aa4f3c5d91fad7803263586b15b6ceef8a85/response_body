@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /prodom/2004.1/cgi-bin/
-Disallow: /prodom/2005.1/cgi-bin/
-Disallow: /prodom/current/cgi-bin/
-

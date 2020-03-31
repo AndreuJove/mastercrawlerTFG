@@ -1,8 +1,0 @@
-Server: CloudFront
-Date: Mon, 30 Mar 2020 23:21:20 GMT
-Content-Type: text/html
-Location: https://www.haplotype.org/robots.txt
-X-Cache: Redirect from cloudfront
-Via: 1.1 58b3f95ba15f0e866891905b1de9d2c7.cloudfront.net (CloudFront)
-X-Amz-Cf-Pop: MAD50-C1
-X-Amz-Cf-Id: 3igXZsJpq8X2M7g-iiqzY9RWCPEnWaLcdfrnWokas1A-OUlnbXq0Vw==

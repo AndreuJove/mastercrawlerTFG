@@ -1,9 +1,0 @@
-User-agent: *
-Disallow: /PathwaysBrowser/
-Disallow: /PathwaysWeb/
-Disallow: /transvar/
-Disallow: /transvar_dyce/
-Disallow: /Supplements/ReproRsch-Breast
-Disallow: /Supplements/ReproRsch-Chemo2
-Disallow: /Supplements/MPI
-Sitemap: http://bioinformatics.mdanderson.org/sitemap.xml

@@ -1,7 +1,0 @@
-Server: Apache-Coyote/1.1
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST, GET, DELETE, PUT
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: x-requested-with, origin, content-type, accept
-Content-Type: text/html;charset=UTF-8
-Date: Mon, 30 Mar 2020 18:49:16 GMT

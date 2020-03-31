@@ -1,356 +1,0 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns='http://www.w3.org/1999/xhtml' xml:lang="en">
-<head>
-<meta http-equiv='content-type' content='text/html; charset=utf-8' />
-<meta http-equiv='content-style-type' content='text/css' />
-<meta http-equiv='content-language' content='en' />
-<title>AmyPDB - Amyloid Protein Database</title>
-<!-- *JS* -->
-<script type='text/javascript' src='/e107_files/e107.js'></script>
-<script type='text/javascript' src='/e107_themes/amypdb_2013_2/theme.js'></script>
-<!-- *CSS* -->
-<!-- Theme css -->
-<link rel='stylesheet' href='/e107_themes/amypdb_2013_2/style.css' type='text/css' media='all' />
-<!-- *META* -->
-<!-- log meta -->
-<script type='text/javascript'>
-			//<![CDATA[
-function rstr2b64(input)
-{
-	var b64pad  = "="; /* base-64 pad character. "=" for strict RFC compliance   */
-	var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-	var output = "";
-	var len = input.length;
-	for(var i = 0; i < len; i += 3)
-	{
-		var triplet = (input.charCodeAt(i) << 16)
-                | (i + 1 < len ? input.charCodeAt(i+1) << 8 : 0)
-                | (i + 2 < len ? input.charCodeAt(i+2)      : 0);
-		for(var j = 0; j < 4; j++)
-		{
-			if(i * 8 + j * 6 > input.length * 8) output += b64pad;
-			else output += tab.charAt((triplet >>> 6*(3-j)) & 0x3F);
-		}
-	}
-	return output;
-}
-var logString = 'referer=' + ref + '&colour=' + colord + '&eself=' + eself + '&res=' + res + '';
-logString = rstr2b64(logString);
-document.write('<link rel="stylesheet" type="text/css" href="/e107_plugins/log/log.php?lv='+logString + '">' );
-//]]>
-</script>
-
-<!-- Core Meta Tags -->
-
-<!-- *FAV-ICONS* -->
-<link rel='icon' href='http://amypdb.genouest.org/favicon.ico' type='image/x-icon' />
-<link rel='shortcut icon' href='http://amypdb.genouest.org/favicon.ico' type='image/xicon' />
-
-<!-- *PRELOAD* -->
-<script type='text/javascript'>
-<!--
-ejs_preload('/e107_themes/amypdb_2013_2/images/','logo_5.png,back_3.png,01_linkbg1.png,01_item1.gif,01_s_search.gif,logo_4.png,logo_3.png,01_s_latestcomment.gif,logo_2.png,01_s_login_old.gif,logo_8.png,01_linkbg2_old.gif,01_footer_old.jpg,01_item3.gif,01_header02.jpg,01_s_links.gif,01_s_chatbox.gif,01_quote.gif,01_font3.gif,01_linkbg1_old.gif,01_s_default.gif,02_linkbg2.png,01_s_online.gif,logo_6.png,01_bodybg.jpg,01_item2.gif,logo_7.png,01_bg_old.gif,bullet2.gif,01_m_comment.gif,01_logo.gif,01_mountaintop2_old.gif,logo.png,01_font2.gif,01_m_news.gif,01_header01.jpg,01_hdot.gif,01_m_default.gif,01_font1.gif,01_header04.jpg,back.png,back_2.png,01_header03.jpg,logo_9.png,01_s_about.gif,01_s_categories.gif');
-// -->
-</script>
-</head>
-<body onload="externalLinks();">
-<div id='page'><div id='header'><!--Start Header--><div id='logo'></div>    <div id='navigation'>    <h2 class='hidden'>Navigation</h3>    <ul><li class='nav1_onpage'><a title='add a text description to this link'  class='_onpage'  href='../../e107_plugins/amypdb_project/project.php' accesskey='1' >HOME</a></li><li class='nav2'><a title='add a text description to this link'  href='../../e107_plugins/amypdb_db/db_search.php' accesskey='2' >SEARCH</a></li><li class='nav3'><a title='add a text description to this link'  href='../../e107_plugins/amypdb_db/db_tools.php' accesskey='3' >TOOLS</a></li><li class='nav4'><a title='add a text description to this link'  href='../../e107_plugins/amypdb_project/help.php' accesskey='4' >HELP</a></li></ul>
-  </div>  </div><!-- Close Header--><div id='wrapper'><div id='multisearch'>                                    </div><!-- Close multisearch --> <div id='sidebar'>                        
-
-    <div class='sidebarbody'><h3 class='default'>Database</h3><div class='sidebarin'><div class='defaultform'>
-<form action='../../e107_plugins/amypdb_db/db_listfam.php' method='post' id='listfam' >
-<input type='hidden' id='cat' name='cat' value='bla' />
-</form><li><a href='../../e107_plugins/amypdb_project/protamyl.php'>Amyloid Proteins</a></li><br /><li><a href='../../e107_plugins/amypdb_db/db_family.php'>AmyPDB data content</a></li><br /><li><a href='javascript:void(0);', onclick='expandit("grpamyl")' title='Amyloid Precursors'>Amyloid Precursors (33)</a></li><ul style='display:none;' id='grpamyl' class='seclist'><a href='../../e107_plugins/amypdb_db/db_listfam.php?cat=amyloid'>Description</a><li><a href='javascript:void(0);', onclick='expandit("amy2")' title='(Apo)-Serum amyloid A'>(Apo)-Serum amyloid A</a></li><ul style='display:none;' id='amy2' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=2&fami=2'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=2&fami=2'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=2&fami=2'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=2&fami=2'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=2&fami=2'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy4")' title='(Pro)-Calcitonin'>(Pro)-Calcitonin</a></li><ul style='display:none;' id='amy4' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=4&fami=4'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=4&fami=4'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=4&fami=4'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=4&fami=4'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=4&fami=4'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy18")' title='A-beta protein precursor'>A-beta protein precursor</a></li><ul style='display:none;' id='amy18' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=18&fami=18'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=18&fami=18'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=18&fami=18'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=18&fami=18'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=18&fami=18'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy54")' title='A-S2C casein'>A-S2C casein</a></li><ul style='display:none;' id='amy54' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=54&fami=54'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=54&fami=54'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=54&fami=54'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=54&fami=54'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=54&fami=54'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy1")' title='ABriPP/ADanPP'>ABriPP/ADanPP</a></li><ul style='display:none;' id='amy1' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=1&fami=1'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=1&fami=1'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=1&fami=1'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=1&fami=1'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=1&fami=1'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy22")' title='Alpha Synuclein'>Alpha Synuclein</a></li><ul style='display:none;' id='amy22' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=22&fami=22'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=22&fami=22'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=22&fami=22'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=22&fami=22'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=22&fami=22'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy3")' title='Apolipoprotein A I'>Apolipoprotein A I</a></li><ul style='display:none;' id='amy3' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=3&fami=3'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=3&fami=3'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=3&fami=3'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=3&fami=3'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=3&fami=3'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy44")' title='Apolipoprotein A II'>Apolipoprotein A II</a></li><ul style='display:none;' id='amy44' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=44&fami=44'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=44&fami=44'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=44&fami=44'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=44&fami=44'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=44&fami=44'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy45")' title='Apolipoprotein A IV'>Apolipoprotein A IV</a></li><ul style='display:none;' id='amy45' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=45&fami=45'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=45&fami=45'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=45&fami=45'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=45&fami=45'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=45&fami=45'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy6")' title='Atrial natriuretic factor'>Atrial natriuretic factor</a></li><ul style='display:none;' id='amy6' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=6&fami=6'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=6&fami=6'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=6&fami=6'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=6&fami=6'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=6&fami=6'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy16")' title='Beta 2 Microglobulin'>Beta 2 Microglobulin</a></li><ul style='display:none;' id='amy16' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=16&fami=16'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=16&fami=16'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=16&fami=16'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=16&fami=16'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=16&fami=16'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy50")' title='Corneodesmin'>Corneodesmin</a></li><ul style='display:none;' id='amy50' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=50&fami=50'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=50&fami=50'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=50&fami=50'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=50&fami=50'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=50&fami=50'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy5")' title='Cystatin C'>Cystatin C</a></li><ul style='display:none;' id='amy5' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=5&fami=5'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=5&fami=5'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=5&fami=5'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=5&fami=5'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=5&fami=5'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy7")' title='Fibrinogen alpha'>Fibrinogen alpha</a></li><ul style='display:none;' id='amy7' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=7&fami=7'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=7&fami=7'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=7&fami=7'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=7&fami=7'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=7&fami=7'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy49")' title='Galectin'>Galectin</a></li><ul style='display:none;' id='amy49' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=49&fami=49'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=49&fami=49'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=49&fami=49'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=49&fami=49'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=49&fami=49'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy8")' title='Gelsolin'>Gelsolin</a></li><ul style='display:none;' id='amy8' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=8&fami=8'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=8&fami=8'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=8&fami=8'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=8&fami=8'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=8&fami=8'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy9")' title='Huntingtin'>Huntingtin</a></li><ul style='display:none;' id='amy9' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=9&fami=9'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=9&fami=9'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=9&fami=9'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=9&fami=9'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=9&fami=9'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy42")' title='Immunoglobulin heavy chain'>Immunoglobulin heavy chain</a></li><ul style='display:none;' id='amy42' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=42&fami=42'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=42&fami=42'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=42&fami=42'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=42&fami=42'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=42&fami=42'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy10")' title='Immunoglobulin light chain'>Immunoglobulin light chain</a></li><ul style='display:none;' id='amy10' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=10&fami=10'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=10&fami=10'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=10&fami=10'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=10&fami=10'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=10&fami=10'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy11")' title='Insulin'>Insulin</a></li><ul style='display:none;' id='amy11' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=11&fami=11'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=11&fami=11'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=11&fami=11'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=11&fami=11'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=11&fami=11'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy12")' title='Islet amyloid polypeptide'>Islet amyloid polypeptide</a></li><ul style='display:none;' id='amy12' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=12&fami=12'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=12&fami=12'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=12&fami=12'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=12&fami=12'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=12&fami=12'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy51")' title='Kerato-epithelin'>Kerato-epithelin</a></li><ul style='display:none;' id='amy51' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=51&fami=51'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=51&fami=51'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=51&fami=51'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=51&fami=51'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=51&fami=51'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy13")' title='Lactadherin'>Lactadherin</a></li><ul style='display:none;' id='amy13' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=13&fami=13'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=13&fami=13'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=13&fami=13'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=13&fami=13'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=13&fami=13'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy14")' title='Lactoferrin'>Lactoferrin</a></li><ul style='display:none;' id='amy14' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=14&fami=14'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=14&fami=14'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=14&fami=14'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=14&fami=14'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=14&fami=14'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy46")' title='Leukocyte chemotactic factor-2'>Leukocyte chemotactic factor-2</a></li><ul style='display:none;' id='amy46' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=46&fami=46'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=46&fami=46'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=46&fami=46'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=46&fami=46'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=46&fami=46'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy20")' title='Lung surfactant protein'>Lung surfactant protein</a></li><ul style='display:none;' id='amy20' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=20&fami=20'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=20&fami=20'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=20&fami=20'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=20&fami=20'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=20&fami=20'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy15")' title='Lysozyme'>Lysozyme</a></li><ul style='display:none;' id='amy15' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=15&fami=15'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=15&fami=15'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=15&fami=15'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=15&fami=15'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=15&fami=15'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy52")' title='Odontogenic ameloblast-associated protein'>Odontogenic ameloblast-associated protein</a></li><ul style='display:none;' id='amy52' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=52&fami=52'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=52&fami=52'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=52&fami=52'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=52&fami=52'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=52&fami=52'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy34")' title='Prion Protein'>Prion Protein</a></li><ul style='display:none;' id='amy34' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=34&fami=34'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=34&fami=34'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=34&fami=34'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=34&fami=34'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=34&fami=34'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy19")' title='Prolactin'>Prolactin</a></li><ul style='display:none;' id='amy19' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=19&fami=19'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=19&fami=19'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=19&fami=19'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=19&fami=19'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=19&fami=19'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy53")' title='Semenogelin 1'>Semenogelin 1</a></li><ul style='display:none;' id='amy53' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=53&fami=53'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=53&fami=53'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=53&fami=53'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=53&fami=53'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=53&fami=53'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy23")' title='Tau'>Tau</a></li><ul style='display:none;' id='amy23' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=23&fami=23'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=23&fami=23'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=23&fami=23'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=23&fami=23'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=23&fami=23'>Bibliography</a></li></ul><li><a href='javascript:void(0);', onclick='expandit("amy24")' title='Transthyretin'>Transthyretin</a></li><ul style='display:none;' id='amy24' class='seclist'>
-					<li><a href='../../e107_plugins/amypdb_db/db_fam.php?famac=24&fami=24'>Description</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_prot.php?famac=24&fami=24'>Proteins</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_patterns.php?famac=24&fami=24'>Patterns</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_3dstruct.php?famac=24&fami=24'>3D Structures</a></li>
-					<li><a href='../../e107_plugins/amypdb_db/db_biblio.php?famac=24&fami=24'>Bibliography</a></li></ul></ul></ul><br/></div></div>
-</div>
-<div class='sidebarbody'><h3 class='login'>My AMYPdb</h3><div class='sidebarin'><div class='defaultform'><form method="post" action="http://amypdb.genouest.org/e107_plugins/amypdb_project/project.php"><div style="text-align: center;">
-Username: <br />
-
-	<input class='tbox login user' type='text' name='username' size='15' value='' maxlength='30' />
-
-	<br />
-Password: 
-<br />
-
-	<input class='tbox login pass' type='password' name='userpass' size='15' value='' maxlength='20' />
-
-<br />
-
-	<input type="hidden" name="rand_num" value="1585592489066763100" />
-		<img src='/e107_handlers/secure_img_render.php?1585592489066763100' alt='' />
-		<input type='text' id='email2' name='email2' value='' style='display:none' />
-		<br /><input class="tbox login verify" type="text" name="code_verify" size="15" maxlength="20" /><br /><input class="button" type="submit" name="userlogin" value="Login" />
-	<br />
-	<input type="checkbox" name="autologin" value="1" />Remember me<br /><br />[ <a href="../../signup.php">Signup</a> ]<br />[ <a href="../../fpw.php">Forgot password?</a> ]</div></form></div></div>
-</div>
-                                    </div><!-- Close sidebar -->   <div id='content'><!--Start Content-->                               <h3>Introducing AmyPDB, the amyloid protein database</h3>
-		<div class='contentbody'>
-	
-	<!-- <p align='middle' style='float:right;'>
-		<img src='../../amypdb.png'> 
-	</p> -->
-
-	<p align='justify' style='float:right;' >
-		<h2>AMYPdb access in 2018</h2>
-		<p align='justify'>
-		<h2>Anonymous access to the database and associated tools is limited. Registration is free and is a quick process using the [Signup] link from the "My AMYPdb" menu. Members have access to additional data and tools as MetAmyl, a software dedicated to the prediction of aggregation-prone segments in proteins, associated with other predictors and graphical methods. Members can also manage their own working sets of protein sequences and patterns.
-		AMYPdb and server is restricted to academic and non-profit users. Commercial users must obtain a license. Please contact us for more information.</h2>	
-		</p>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-	</p>
-	
-	<p align='justify' style='float:right;' >
-		<h2>What are amyloid proteins?</h2>
-		<p align='justify'>
-			<span align='justify' style='float:right; margin-left:15px;' >
-				<A href='http://en.wikipedia.org/wiki/Amyloid' TARGET='WIKIPEDIA' TITLE="Click to read Wikipedia 'Amyloid' article"><IMG SRC='wiki-en.png' align='top' border='0' height='77'></A>
-			</span>
-			Proteins or fragments of them that, in special circumstances, become misfolded and auto-aggregate into fibrils exhibiting a typical cross-beta structure. Amyloid proteins are involved in many but unrelated diseases such as systemic amyloidoses, Alzheimer's, Parkinson's, Huntington's, prion's diseases and medullary carcinoma of the thyroid or type 2 diabetes mellitus.
-		</p>
-	</p>
-	
-	<p align='justify' style='float:right;' >
-		<h2>Our bioinformatic approach</h2>
-		<p align='justify'>
-			In the case of amyloid proteins, bioinformatic methods are particularly
-			advisable because insoluble aggregates formed by those proteins are resistant to many
-			biochemical and structural conditions. Moreover, putative amyloid proteins exist in
-			numerous organisms, from yeasts to humans, including fishes or reptiles. An exhaustive
-			knowledge of amyloid proteins is therefore nearly impossible using only biological
-			techniques.
-		</p>
-	</p>
-
-	<p align='justify' style='float:right;' >
-		<h2>The Amyloid Protein DataBase</h2>
-		<p align='justify'>
-			AMYPdb is an online database dedicated to amyloid precursor families and to their amino
-			acid sequence signatures.
-			<BR>
-			This is a beta version of the new website for AMYPdb.
-			The protein files are from UniProtKB 2015 release.
-		</p>
-	</p>
-
-	<p align='justify' style='float:right;' >
-		<h2>Expert contribution</h2>
-		<p align='justify'>
-			We encourage experts to participate to the AMYPdb project. Members can obtain an
-			expert account by sending an email to <A href='mailto:christian.delamarche@univ-rennes1.fr'>christian.delamarche@univ-rennes1.fr</A>, or by using
-			links available in the database. A wiki system allows contributors to add accurate
-			biological data to protein and families description. 
-			<!-- One example is making changes in the
-			assignment of a protein to the amyloid classification. In  AMYPdb there are 5 levels for
-			this classification, associated with a quality rank (yellow stars):
-			As an example, contributor can annotated proteins with the AMYPdb amyloid classification,
-			associated with a quality rank (yellow stars): -->
-			<BR>
-			<BR>
-			<!--
-			<ul style='margin-top:-20px;'>
-				<li>Amyloid in vivo (the protein or a fragment forms fibrils in human, animals, or is a yeast prion)</li>
-				<li>Amyloid in vitro (the polypeptide forms fibrils under experimental conditions)</li>
-				<li>Amyloid in silico (the polypeptide forms fibrils using computational techniques)</li>
-				<li>Putative amyloid protein (member of an amyloid family, but amyloid properties not confirmed experimentally)</li>
-				<li>Unclassified protein (the family do not fulfill the definition of amyloid, but sparse data show that at least one member of the family shares some amyloid properties).</li>
-			</ul>
-			-->
-		</p>
-	</p>
-
-	<p align='justify' style='float:right;' >
-		<h2>Citation</h2>
-		<p align='justify'>
-			This site is a beta version of the new database. For your work, please cite our first paper :
-			Pawlicki, S., Le Bechec, A. and <A href='mailto:christian.delamarche@univ-rennes1.fr'>Delamarche, C.,</A> (2008) AMYPdb: a database
-			dedicated to amyloid precursor proteins, BMC bioinformatics, 9, 273-284.		</p>
-	</p>
-	<p align='justify'>
-			S. Pawlicki, A. Le Bechec, A. Talvas and C. Bloquet participated in the developpement of the interface and programmed some parts of the pipeline for protein classification and aggregation.
-	</p>
-	
-	<p align='justify' >
-		<CENTER>
-			<A href='http://www.univ-rennes1.fr'><IMG SRC='ur1.jpg' height='80' border='0'></A>
-			&nbsp;&nbsp;&nbsp;
-			<A href='http://www.region-bretagne.fr/'><IMG SRC='RegionBretagne.png' height='80' border='0'></A>
-			&nbsp;&nbsp;&nbsp;
-			<A href='http://www.cnrs.fr'><IMG SRC='CNRS.png' height='80' border='0'></A>
-			&nbsp;&nbsp;&nbsp;
-			<A href='http://www.critt-sante.fr/'><IMG SRC='CrittSante.png' height='80' border='0'></A>
-		</CENTER>
-	</p>
-	
-	</DIV>
-	</div>        </div> <!--Close Content-->                 <div class='clearing'>&nbsp;</div><div id='footer'><div id='credits'><br /><br /><i></i></div><!--End notes/Credits--></div></div> <!--End Page--><!--Close the tags like a good code monkey ;)--><script type='text/javascript'>
-SyncWithServerTime('1585592489','genouest.org');
-       </script>
-</body></html>

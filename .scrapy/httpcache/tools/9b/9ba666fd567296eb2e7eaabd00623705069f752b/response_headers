@@ -1,7 +1,0 @@
-Vary: User-Agent
-X-Hosted-By: European Bioinformatics Institute
-Date: Mon, 30 Mar 2020 18:50:11 GMT
-X-Uniprot-Release: 2020_01
-Location: /align/
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Headers: origin, x-requested-with, content-type, X-Total-Results, X-UniProt-Release

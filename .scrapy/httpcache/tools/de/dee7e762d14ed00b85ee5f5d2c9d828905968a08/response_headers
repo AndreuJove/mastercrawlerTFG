@@ -1,9 +1,0 @@
-Server: squid/3.5.20
-Mime-Version: 1.0
-Date: Mon, 30 Mar 2020 23:55:53 GMT
-Content-Type: text/html;charset=utf-8
-Location: http://amolf.nl/robots.txt
-X-Squid-Error: 403 Access Denied
-X-Cache: MISS from prx01-prd.amolf.nl
-X-Cache-Lookup: NONE from prx01-prd.amolf.nl:443
-Via: 1.1 prx01-prd.amolf.nl (squid/3.5.20)

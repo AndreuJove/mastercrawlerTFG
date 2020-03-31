@@ -1,9 +1,0 @@
-Date: Mon, 30 Mar 2020 18:49:23 GMT
-Server: PasteWSGIServer/0.5 Python/2.7.11
-X-Frame-Options: SAMEORIGIN
-Content-Type: text/html; charset=UTF-8
-Location: /root?tool_id=toolshed.pasteur.fr%2Frepos%2Ffmareuil%2Furgi_tools%2FCompareOverlappingSmallQuery%2F1.0.0
-Set-Cookie: galaxysession=3ce3e2281e4506fb8c6f46ac27acf3ffbe9922527bee8d74ec6c350e17e919d8b93cc53601ca8a79; expires=Sun, 28-Jun-2020 20:49:23 GMT; httponly; Max-Age=7776000; Path=/; secure; Version=1
-Vary: Accept-Encoding
-Content-Encoding: gzip
-Strict-Transport-Security: max-age=15768000; includeSubDomains

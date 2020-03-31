@@ -1,4 +1,0 @@
-# /robots.txt file for senescence.info/genomics/
-
-User-agent: *
-Disallow: /cgi-bin/

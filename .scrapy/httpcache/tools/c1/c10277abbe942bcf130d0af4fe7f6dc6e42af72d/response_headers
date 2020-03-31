@@ -1,9 +1,0 @@
-Server: Apache/2.4.6 (Red Hat Enterprise Linux) OpenSSL/1.0.2k-fips mod_fcgid/2.3.9 mod_wsgi/3.4 Python/2.7.5
-Last-Modified: Thu, 12 Sep 2019 15:09:03 GMT
-Etag: "10a-5925c849bc1c0-gzip"
-Accept-Ranges: bytes
-Content-Encoding: gzip
-Access-Control-Allow-Origin: *
-Content-Type: text/plain; charset=UTF-8
-Date: Mon, 30 Mar 2020 23:47:32 GMT
-Vary: Accept-Encoding

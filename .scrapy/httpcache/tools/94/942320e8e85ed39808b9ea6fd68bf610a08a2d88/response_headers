@@ -1,9 +1,0 @@
-Date: Mon, 30 Mar 2020 18:49:36 GMT
-Server: PasteWSGIServer/0.5 Python/2.7.11
-X-Frame-Options: SAMEORIGIN
-Content-Type: text/html; charset=UTF-8
-Location: /root?tool_id=CONVERTER_genbank_to_fasta
-Set-Cookie: galaxysession=3ce3e2281e4506fb34b57baf47dce1b69a6762f6eb67da616dcadbdcd06e0e46df181fb3b85e1cbd; expires=Sun, 28-Jun-2020 20:49:36 GMT; httponly; Max-Age=7776000; Path=/; secure; Version=1
-Vary: Accept-Encoding
-Content-Encoding: gzip
-Strict-Transport-Security: max-age=15768000; includeSubDomains

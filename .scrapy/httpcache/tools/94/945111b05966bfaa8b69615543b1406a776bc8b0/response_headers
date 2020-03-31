@@ -1,6 +1,0 @@
-Server: nginx
-Date: Tue, 31 Mar 2020 00:03:56 GMT
-Content-Type: text/html
-Location: https://cluspro.bu.edu/robots.txt
-X-Frame-Options: SAMEORIGIN
-Strict-Transport-Security: max-age=15768000

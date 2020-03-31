@@ -1,6 +1,0 @@
-User-agent: *
-Disallow:
-
-Host: portal.brain-map.org
-Sitemap: https://portal.brain-map.org/sitemap.xml
-

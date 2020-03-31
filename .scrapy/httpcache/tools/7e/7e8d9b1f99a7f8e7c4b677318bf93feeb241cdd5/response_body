@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /index.html
-Allow: /About.html
-Allow: /Statistics.html
-Allow: /Download.html
-Disallow: / 

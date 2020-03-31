@@ -1,9 +1,0 @@
-User-agent: Slackbot
-Disallow:
-
-User-agent: *
-Disallow: /redmine/activity
-Disallow: /redmine/login
-Disallow: /java-bin/login.jsp
-Disallow: /java-bin/workbench.jsp
-

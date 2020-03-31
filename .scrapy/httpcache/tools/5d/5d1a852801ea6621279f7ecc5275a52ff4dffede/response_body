@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /search
-Sitemap: http://www.alliancegenome.org/sitemap.xml
-Sitemap: http://www.alliancegenome.org/api/sitemap.xml

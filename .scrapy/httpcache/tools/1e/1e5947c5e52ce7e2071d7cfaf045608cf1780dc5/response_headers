@@ -1,8 +1,0 @@
-Cache-Control: public, max-age=0, must-revalidate
-Content-Type: text/plain
-Date: Sun, 29 Mar 2020 21:17:58 GMT
-Location: https://www.bionode.io/robots.txt
-Strict-Transport-Security: max-age=31536000
-Age: 94606
-Server: Netlify
-X-Nf-Request-Id: aba33066-8717-4abb-ae24-cf26e780fa68-15254178

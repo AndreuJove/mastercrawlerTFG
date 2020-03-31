@@ -1,5 +1,0 @@
-# robots.txt for http://massenspektrometrie.biologie.uni-osnabrueck.de/ - used by crawlers
-# Initial: 2013-10-08:11-03 [Uni-OS: RZ] 
-
-User-agent: *
-Disallow:

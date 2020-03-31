@@ -1,7 +1,0 @@
-Server: Apache-Coyote/1.1
-Content-Type: text/html;charset=UTF-8
-Strict-Transport-Security: max-age=0
-Date: Mon, 30 Mar 2020 18:48:52 GMT
-Set-Cookie: JSESSIONID=F428BD5EBEA7C631B746DB95897B8D19; Path=/chebi/
-Set-Cookie: chebi_view=""; Expires=Sat, 17-Apr-2088 22:03:00 GMT; Path=/chebi/
-Set-Cookie: chebi_view=locale_en_imageViewer_image_treeViewer_false_advancedSearchApplet_false_; Expires=Sat, 17-Apr-2088 22:03:00 GMT; Path=/chebi/

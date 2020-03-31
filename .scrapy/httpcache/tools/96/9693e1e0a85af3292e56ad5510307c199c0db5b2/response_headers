@@ -1,6 +1,0 @@
-Date: Mon, 30 Mar 2020 20:13:10 GMT
-Server: Apache/2.4.6 (CentOS) mod_wsgi/4.6.4 Python/3.6 mod_jk/1.2.42
-X-Frame-Options: SAMEORIGIN
-Vary: Cookie
-Set-Cookie: csrftoken=JDXv6tgO35tzpiiSVYqRU0llOhJShwn5zLPnlINnYbDqX86BCV1coh6NolZACSKc; expires=Mon, 29 Mar 2021 20:13:10 GMT; Max-Age=31449600; Path=/; SameSite=Lax
-Content-Type: text/html; charset=utf-8

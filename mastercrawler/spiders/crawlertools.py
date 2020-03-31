@@ -1,7 +1,7 @@
 import scrapy, json
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-from mastercrawler.spiders.jsonextraction import *
+from mastercrawler.spiders.jsonextraction import toolsListOut
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.web._newclient import ResponseFailed, ResponseNeverReceived
 from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupError, ConnectError, ConnectionRefusedError
@@ -18,8 +18,12 @@ class ToolsSpider(CrawlSpider):
     # print(start_urls)
     #user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
     
+    
     def start_requests(self):
+        self.counter = 0
         for url in toolsListOut:
+            self.counter +=1
+            print(f"{self.counter} -- {url['url']}")
             req = scrapy.Request(url['url'], callback = self.parse_httpbin, meta = {'dont_retry' : True,  'download_timeout' : 10, 'id' : url['id'], 'name' : url['name'], 'dont_redirect' : False }, errback=self.errback_httpbin, dont_filter=True)
             yield req
 
@@ -107,7 +111,9 @@ class ToolsSpider(CrawlSpider):
     
     def errback_httpbin(self, failure):
         url = failure.request.url
-        print("Entered in errback_httpin: " + url)
+        #print("Entered in errback_httpin: " + url)
+        errbackUrls = []
+        errbackUrls.append(url)
         toolItem = MastercrawlerItem()
         nameTool = failure.request.meta.get('name') 
         idUrl = failure.request.meta.get('id') 
@@ -189,5 +195,5 @@ class ToolsSpider(CrawlSpider):
             yield (toolItem)
 
         
-
+    
     #print(len(start_urls))

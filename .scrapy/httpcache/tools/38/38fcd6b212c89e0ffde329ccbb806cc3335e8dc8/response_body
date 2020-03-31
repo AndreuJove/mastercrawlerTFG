@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /svn
-Disallow: /log
-Disallow: /changeset
-Disallow: /browser
-Disallow: /query
-Disallow: /trac

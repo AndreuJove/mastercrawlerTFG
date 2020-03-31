@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /scm/viewvc.php
-Disallow: /frs/download.php/zip/
-Disallow: /frs/download.php/latestzip/
-Disallow: /softwaremap/
-Crawl-delay: 10

@@ -1,9 +1,0 @@
-Server: openresty
-Date: Mon, 30 Mar 2020 18:49:59 GMT
-Content-Type: text/html; charset=UTF-8
-Set-Cookie: PHPSESSID=c80499d0a2707b4718345b1cb39abceb; path=/
-Pragma: no-cache
-Expires: Mon, 30 Mar 2020 19:49:59 GMT
-Cache-Control: max-age=3600
-X-Redirect-By: redirection
-Location: /products-overview/discovery-insights-portfolio/analysis-and-visualization/qiagen-clc-main-workbench/

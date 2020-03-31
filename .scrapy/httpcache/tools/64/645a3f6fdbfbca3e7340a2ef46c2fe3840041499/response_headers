@@ -1,8 +1,0 @@
-Date: Tue, 31 Mar 2020 00:02:59 GMT
-Server: Apache/2.4.25 (Debian)
-Location: http://services.nbic.nl/copub/portal/robots.txt
-Content-Type: text/html; charset=iso-8859-1
-X-Varnish-Host: ip-172-16-1-50
-X-Varnish: 103109
-Age: 0
-Via: 1.1 varnish (Varnish/5.0)

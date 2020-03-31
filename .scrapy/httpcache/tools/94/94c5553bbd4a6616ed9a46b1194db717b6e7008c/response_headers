@@ -1,8 +1,0 @@
-Server: CloudFront
-Date: Mon, 30 Mar 2020 23:13:54 GMT
-Content-Type: text/html
-Location: https://aws.amazon.com/robots.txt
-X-Cache: Redirect from cloudfront
-Via: 1.1 d8c266ed74a4ecc05eeffe79fa473f7e.cloudfront.net (CloudFront)
-X-Amz-Cf-Pop: MAD50-C1
-X-Amz-Cf-Id: KxJEQvn9-XNNC9XzgpgUOHy3JWiBylXofAJeoZ_jXODNH6EjtvTWcA==

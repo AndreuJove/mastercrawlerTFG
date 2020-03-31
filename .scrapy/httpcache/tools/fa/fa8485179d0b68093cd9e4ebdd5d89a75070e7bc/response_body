@@ -1,9 +1,0 @@
-User-agent: *
-Disallow: /dashboard$
-Disallow: /portal
-Disallow: /v1/algorithm/
-Disallow: /v2/algorithm/
-Disallow: /test/embedding-options.html
-Disallow: /recent-capsules
-
-Sitemap: https://codeocean.com/sitemap.xml

@@ -1,7 +1,0 @@
-Server: openresty
-Date: Tue, 31 Mar 2020 00:03:17 GMT
-Content-Type: text/html; charset=utf-8
-Vary: Cookie
-X-Redirect-By: WordPress
-Location: https://sites.psu.edu/robots.txt
-Set-Cookie: xid=rB4HdF6CiMWEMQBPA3TeAg==; expires=Thu, 30-Apr-20 00:03:17 GMT; path=/

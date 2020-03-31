@@ -1,9 +1,0 @@
-Server: nginx/1.15.3
-Date: Mon, 30 Mar 2020 23:41:41 GMT
-X-Dns-Prefetch-Control: off
-X-Frame-Options: SAMEORIGIN
-Strict-Transport-Security: max-age=15552000; includeSubDomains
-X-Download-Options: noopen
-X-Content-Type-Options: nosniff
-X-Xss-Protection: 1; mode=block
-Set-Cookie: connect.sid=s%3AcR-3dScTK_Frxi-eyVeBc3KAb8GndnFx.510c%2Bwglr7FntEUhSebIngVoRCS0p18I8CgcYlF59eo; Path=/; Expires=Tue, 31 Mar 2020 23:41:41 GMT; HttpOnly

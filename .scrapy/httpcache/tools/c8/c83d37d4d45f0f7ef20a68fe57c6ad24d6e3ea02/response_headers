@@ -1,7 +1,0 @@
-Date: Mon, 30 Mar 2020 21:19:31 GMT
-Server: Zope/(Zope 2.10.4-final, python 2.4.4, linux2) ZServer/1.1
-Bobo-Exception-Line: 672
-Bobo-Exception-Value: See the server error log for details
-Content-Type: text/html; charset=iso-8859-15
-Bobo-Exception-Type: NotFound
-Bobo-Exception-File: HTTPResponse.py

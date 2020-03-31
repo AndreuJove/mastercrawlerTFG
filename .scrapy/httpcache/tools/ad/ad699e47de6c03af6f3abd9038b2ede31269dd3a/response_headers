@@ -1,9 +1,0 @@
-Date: Tue, 31 Mar 2020 02:25:47 GMT
-Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
-Access-Control-Allow-Headers: 'Accept,Cache-Control,Content-Type,Depth,If-Modified-Since,NCBI-PHID,Origin,User-Agent,X-File-Name,X-File-Size,X-Prototype-Version,X-Requested-With
-Access-Control-Allow-Methods: GET,POST,OPTIONS
-Access-Control-Allow-Origin: *
-Content-Encoding: gzip
-Content-Type: text/html; charset=utf-8
-Version: Mamba server (1.0)
-Set-Cookie: blackmamba_UUID=2AD0D4A4-72E6-11EA-BA0B-9457A555A7D4; expires=Tue, 19-Mar-2030 02:25:47 UTC

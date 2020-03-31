@@ -1,7 +1,0 @@
-Server: nginx
-Date: Mon, 30 Mar 2020 18:49:51 GMT
-Content-Type: text/html; charset=utf-8
-Cache-Control: private, max-age=90
-Location: https://cytolab.000webhostapp.com/
-Set-Cookie: _bit=k2uiNP-ca160031dc032f79f5-00T; Domain=bit.ly; Expires=Sat, 26 Sep 2020 18:49:51 GMT
-Via: 1.1 google

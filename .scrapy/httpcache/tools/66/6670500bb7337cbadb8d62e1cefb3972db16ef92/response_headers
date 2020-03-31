@@ -1,9 +1,0 @@
-Server: nginx
-Date: Mon, 30 Mar 2020 18:44:22 GMT
-Content-Type: text/html;charset=utf-8
-Vary: Accept-Encoding
-Set-Cookie: JSESSIONID=E03AD995CA180830BEAFE9A312DA1608; Path=/; Secure; HttpOnly
-X-Cocoon-Version: 2.2.0
-Content-Language: en
-X-Content-Class: default
-Content-Encoding: gzip

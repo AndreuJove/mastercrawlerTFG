@@ -1,5 +1,0 @@
-Sitemap: http://gwyndafevans.co.uk/sitemap.xml
-Sitemap: http://gwyndafevans.co.uk/news-sitemap.xml
-User-agent: *
-Disallow: /wp-admin/
-Allow: /wp-admin/admin-ajax.php

@@ -1,9 +1,0 @@
-User-agent: * 
-Disallow: /cancer/
-Disallow: /cancerv2/
-User-agent: Googlebot 
-Allow: /robots.txt
-Allow: /cancer/index.html
-Disallow: /
-Disallow: /cancer/
-Disallow: /cancerv2/

@@ -1,7 +1,0 @@
-Date: Mon, 30 Mar 2020 23:55:21 GMT
-Server: nginx/1.12.2
-Content-Type: text/html; charset=UTF-8
-Location: http://www.crg.eu/programmes/programmes-groups/bioinformatics-and-genomics
-X-Xss-Protection: 1; mode=block
-Strict-Transport-Security: max-age=31536000; preload
-X-Content-Type-Options: nosniff

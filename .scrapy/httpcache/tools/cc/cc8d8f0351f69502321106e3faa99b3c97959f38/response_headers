@@ -1,9 +1,0 @@
-Server: Apache-Coyote/1.1
-Cache-Control: no-cache
-Cache-Control: must-revalidate
-Content-Type: text/html;charset=UTF-8
-Strict-Transport-Security: max-age=0
-Date: Mon, 30 Mar 2020 18:45:59 GMT
-Expires: Fri, 16 May 2008 10:00:00 GMT
-Pragma: no-cache
-Set-Cookie: AeLoggedUser=""; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/

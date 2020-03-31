@@ -1,9 +1,0 @@
-Date: Mon, 30 Mar 2020 18:46:04 GMT
-Server: PasteWSGIServer/0.5 Python/2.7.11
-X-Frame-Options: SAMEORIGIN
-Content-Type: text/html; charset=UTF-8
-Location: /root?tool_id=toolshed.pasteur.fr%2Frepos%2Ffmareuil%2Fannovar_summarize%2Fannovar_summarize%2F1.0.0
-Set-Cookie: galaxysession=3ce3e2281e4506fb466a94059b47cbe93cdf472b4a1d11a582db52a27f9e67368e73cd06e05ec63a; expires=Sun, 28-Jun-2020 20:46:04 GMT; httponly; Max-Age=7776000; Path=/; secure; Version=1
-Vary: Accept-Encoding
-Content-Encoding: gzip
-Strict-Transport-Security: max-age=15768000; includeSubDomains

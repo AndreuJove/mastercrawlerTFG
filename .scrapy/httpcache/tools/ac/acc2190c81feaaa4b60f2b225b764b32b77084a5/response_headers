@@ -1,9 +1,0 @@
-Date: Mon, 30 Mar 2020 18:47:12 GMT
-Server: PasteWSGIServer/0.5 Python/2.7.11
-X-Frame-Options: SAMEORIGIN
-Content-Type: text/html; charset=UTF-8
-Location: /root?tool_id=toolshed.pasteur.fr%2Frepos%2Fodoppelt%2Fpgp_tools%2Fblast_best_score%2F0.0.1
-Set-Cookie: galaxysession=3ce3e2281e4506fb5b6485f833cdeffde1a2a488fddd57c98d8c1a0eac5304a7e6da668a9fd7dca8; expires=Sun, 28-Jun-2020 20:47:12 GMT; httponly; Max-Age=7776000; Path=/; secure; Version=1
-Vary: Accept-Encoding
-Content-Encoding: gzip
-Strict-Transport-Security: max-age=15768000; includeSubDomains

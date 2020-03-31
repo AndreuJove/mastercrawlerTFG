@@ -1,9 +1,0 @@
-Server: nginx
-Date: Mon, 30 Mar 2020 18:50:05 GMT
-Content-Type: text/html
-X-Powered-By: PHP/5.5.9-1ubuntu4.29
-X-Drupal-Cache: MISS
-Expires: Sun, 19 Nov 1978 05:00:00 GMT
-Cache-Control: no-cache, must-revalidate
-X-Content-Type-Options: nosniff
-Location: https://abrf.org/

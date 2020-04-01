@@ -1,17 +1,16 @@
 import json 
 
-with open('tools.json', "r") as fp:
+with open('generictool.json', "r") as fp:
     jsonData = json.load(fp)
     
 urlToolList, idToolList, nameToolList = ([] for i in range(3))      
            
 tools = jsonData[1]['tools']
 
-lessTools = tools
+print(len(jsonData))
 
-#print(len(tools))
+lessTools = jsonData[:20]
 
-#print("Less tools has: {}".format(len(lessTools)))
 def getAllFromJson(toolsList):
     toolsListOut = []
     for tool in toolsList:
@@ -20,7 +19,6 @@ def getAllFromJson(toolsList):
         numberOfDashes = idTool.count('/')
         if numberOfDashes <= 5:
             urlTool = tool["web"]["homepage"]
-            
             if urlTool not in urlToolList and not urlTool.endswith((".zip", "pdf", ".de", ".mp4")) and not urlTool.startswith("ftp://") and len(urlTool)>7:
                 if not urlTool.startswith("http"):
                     urlTool = "https://www." + urlTool
@@ -32,9 +30,6 @@ def getAllFromJson(toolsList):
 
 
 
-#http://
-#dfam.org
-#https://www.dfam.org
 # def getUrlListFromTools(toolsListOut):
 #     toolUrlList = []
 #     for tool in toolsListOut:
@@ -43,6 +38,7 @@ def getAllFromJson(toolsList):
 
 toolsListOut = getAllFromJson(lessTools)
 
+# print(len(toolsListOut))
 # listUrl = []
 # for tool in toolsListOut:
 #         listUrl.append(tool['url'])

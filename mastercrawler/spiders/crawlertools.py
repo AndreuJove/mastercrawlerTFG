@@ -18,7 +18,7 @@ class ToolsSpider(CrawlSpider):
     # print(start_urls)
     #user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
     
-    
+
     def start_requests(self):
         self.counter = 0
         for url in toolsListOut:
@@ -34,7 +34,6 @@ class ToolsSpider(CrawlSpider):
             tagsList.remove("")
         return tagsList
 
-
     def listToString(self, listInput):
         str1 = ""
         return (str1.join(listInput))
@@ -47,7 +46,6 @@ class ToolsSpider(CrawlSpider):
         redirect_reasons = response.meta.get('redirect_reasons')         
         latency = response.meta.get('download_latency')
         url = response.url
-        
         
         allLinks = response.xpath('//a/@href').getall()
         externalLinks = []

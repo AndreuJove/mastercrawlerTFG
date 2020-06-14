@@ -1,74 +1,48 @@
 import json 
 
-with open('generictool.json', "r") as fp:
+with open('finaltools.json', "r") as fp:
     jsonData = json.load(fp)
     
-urlToolList, idToolList, nameToolList = ([] for i in range(3))      
-           
-tools = jsonData[1]['tools']
+#urlToolList, idToolList, nameToolList = ([] for i in range(3))      
 
-print(len(jsonData))
-
-lessTools = jsonData[:20]
+lessTools = jsonData[50:70]
 
 def getAllFromJson(toolsList):
     toolsListOut = []
-    for tool in toolsList:
+    problematic_url = []
+
+    for index,tool in enumerate(toolsList):
         dict_tool = {}
-        idTool = tool["@id"]
-        numberOfDashes = idTool.count('/')
-        if numberOfDashes <= 5:
-            urlTool = tool["web"]["homepage"]
-            if urlTool not in urlToolList and not urlTool.endswith((".zip", "pdf", ".de", ".mp4")) and not urlTool.startswith("ftp://") and len(urlTool)>7:
-                if not urlTool.startswith("http"):
-                    urlTool = "https://www." + urlTool
-                dict_tool['name'] = tool["name"]
-                dict_tool['url'] = urlTool
-                dict_tool['id'] = idTool
-                toolsListOut.append(dict_tool)         
-    return toolsListOut            
+        
+        idTool = tool["entities"][0]['tools'][0]["@id"]
+        urlTool = tool["entities"][0]['tools'][0]["web"]["homepage"]
+        nameTool = tool["entities"][0]['tools'][0]["name"]
+        if urlTool.endswith(".zip") or urlTool.endswith(".pdf") or urlTool.endswith(".mp4") or urlTool.endswith(".gz") or urlTool.startswith("ftp://") or len(urlTool)<7:
+            dict_tool['url'] = urlTool
+            dict_tool['name'] = nameTool
+            dict_tool['id'] = idTool
+            problematic_url.append(dict_tool)
+            continue
+        if not urlTool.startswith("http"):
+                urlTool = "https://www." + urlTool
+        if toolsListOut and toolsListOut[-1]['url'] == urlTool:
+            if type(toolsListOut[-1]['name']) is str:
+                toolsListOut[-1]['name'] = [toolsListOut[-1]['name']]
+                toolsListOut[-1]['id'] = [toolsListOut[-1]['id']]
+            toolsListOut[-1]['name'].append(nameTool)
+            toolsListOut[-1]['id'].append(idTool)
+            continue
+        dict_tool['url'] = urlTool
+        dict_tool['name'] = nameTool
+        dict_tool['id'] = idTool
+        toolsListOut.append(dict_tool)  
+    return toolsListOut, problematic_url            
 
+toolsListOut, problematic_url = getAllFromJson(lessTools)
 
+print(len(toolsListOut))
 
-# def getUrlListFromTools(toolsListOut):
-#     toolUrlList = []
-#     for tool in toolsListOut:
-#         toolUrlList.append(tool['url'])
-#     return toolUrlList
-
-toolsListOut = getAllFromJson(lessTools)
-
-# print(len(toolsListOut))
-# listUrl = []
-# for tool in toolsListOut:
-#         listUrl.append(tool['url'])
-    
-# print(len(listUrl))
-#print(len(toolsListOut))
-#toolUrlList = getUrlListFromTools(toolsListOut)
-
-# print(toolUrlList)
-# print(len(toolUrlList))
-
-# print(toolsListOut)
-# print(len(toolsListOut))
-
-
-# import logging
-# logging.getLogger('scrapy').setLevel(logging.WARNING)
-# with open('tools.json', "r") as fp:
-#     jsonData = json.load(fp)
-# urlToolList, idToolList, nameToolList = ([] for i in range(3))             
-# tools = jsonData[1]['tools']
-# lessTools = tools[:10]
-# def getAllFromJson(toolsList):
-#     for tool in toolsList:
-#         urlTool = tool["web"]["homepage"]
-#         numberOfDashes = urlTool.count('/')
-#         if numberOfDashes <= 5:
-#             if urlTool not in urlToolList:
-#                 nameToolList.append(tool["name"])
-#                 urlToolList.append(urlTool) 
-#                 idToolList.append(tool["@id"])  
-#     return urlToolList, idToolList, nameToolList            
-# urlToolList, idToolList, nameToolList = getAllFromJson(lessTools)
+#print(problematic_url)
+for tool in problematic_url:
+    print("_----------------------------------------")
+    print(tool)

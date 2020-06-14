@@ -1,7 +1,7 @@
-import scrapy, json
+import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-from mastercrawler.spiders.jsonextraction import *
+from mastercrawler.spiders.jsonextraction import toolsListOut
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.web._newclient import ResponseFailed, ResponseNeverReceived
 from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupError, ConnectError, ConnectionRefusedError
@@ -10,49 +10,65 @@ from scrapy_splash import SplashRequest
 
 class SplashspiderSpider(CrawlSpider):
     name = 'splashSpider'
-    #allowed_domains = ['example.com']
-    #start_urls = toolsListOut
-    #print(len(start_urls))
-    # rules = (
-    #     Rule(LinkExtractor(allow=r'Items/'), callback='parse_item', follow=True),
-    # )
+    
+    # def __init__(self, toolsListOut):
+    #     super(SplashspiderSpider, self).__init__()
+    #     self.toolsListOut = toolsListOut
 
     script = '''
-        function main(splash, args)
-            splash:on_request(function(request)
-                request:set_timeout(15)
-                request:enable_response_body()
-            end)
-            splash.private_mode_enabled = false
-            url = args.url
-            assert(splash:go(url))
-            assert(splash:wait(1))
-            return {
-                html = splash:html()
-            }
-        end
-        
-    '''
-    
-    # rur_tab = assert(splash:select_all(".filterPanelItem___2z5Gb"))
-    #         rur_tab[5]:mouse_click()
-    #         assert(splash:wait(1))
-    # splash:set_viewport_full()
-    def start_requests(self):
-        for url in toolsListOut:
-            yield scrapy.Request(url = url['url'], callback=self.parse, meta={'dont retry': False, 'handle_httpstatus_all' : False, 'dont_redirect': True, 'id' : url['id'], 'name' : url['name'], 
-                'splash' : { 
-                    'args' : {
-                        'lua_source': self.script
-                    }, 
-                        'endpoint' : 'execute', 'magic_response' : True 
+            function main(splash, args)
+                assert(splash:go(args.url))
+                assert(splash:wait(2))
+                return {
+                    html = splash:html(),
+                    har = splash:har()
                 }
-                }, errback=self.errback_httpbin)
+                end
+    '''
+
+    # script = '''
+    #     function main(splash, args)
+    #         splash:on_request(function(request)
+    #             request:set_timeout(20)
+    #             request:enable_response_body()
+    #             splash.private_mode_enabled = false
+    #         end)    
+    #         splash:go(args.url)
+    #         assert(splash:wait(5))
+    #         return {
+    #             html = splash:html(),
+    #         }
+    #     end
+    # '''
+
+    def start_requests(self):
+        self.counter = 0
+        for url in toolsListOut:
+            self.counter +=1
+            print(f"{self.counter} -- {url['url']}")
+            yield scrapy.Request(url = url['url'], callback=self.parse_httpbin, 
+            errback=self.errback_httpbin, dont_filter=True,
+            meta={
+            'dont_retry': False, 
+            'handle_httpstatus_all' : False, 
+            'id' : url['id'], 
+            'name' : url['name'], 
+                'splash' : { 
+                    'args' : {                        
+                        'lua_source': self.script,
+                        'html' : 1,
+                        'har' : 1
+                    }, 
+                        'endpoint' : 'execute', 
+                        'http_method' : 'GET',
+                        'handle_httpstatus_all': True,
+                        'magic_response' : True 
+                }
+                }) 
 
     def listToString(self, listInput):
         str1 = ""
         return (str1.join(listInput))
-
 
     def parseHtmlTags(self, tagsList):
         tagsList = [item.replace('\n', "") for item in tagsList]
@@ -61,14 +77,7 @@ class SplashspiderSpider(CrawlSpider):
             tagsList.remove("")
         return tagsList
 
-    def parse(self, response):
-        idTool = response.meta.get('id')
-        url = response.url
-        nameTool = response.meta.get('name') 
-        redirect_reasons = response.meta.get('redirect_reasons')
-        redirectUrls = response.meta.get('redirect_urls')       
-        latency = response.meta.get('download_latency')
-        allLinks = response.xpath('//a/@href').getall()
+    def parseLinks (self, allLinks, url):  
         externalLinks = []
         relativeLinks = []
         for link in allLinks:
@@ -79,7 +88,12 @@ class SplashspiderSpider(CrawlSpider):
                     relativeLinks.append(relative_url)
                 elif link.startswith("http"):
                     externalLinks.append(link)
-        
+        return externalLinks, relativeLinks
+
+    def parse_httpbin(self, response):
+        url = response.url
+        allLinks = response.xpath('//a/@href').getall()
+        externalLinks, relativelinks = self.parseLinks(allLinks, url)
         scriptsTagsText = response.xpath('//script/text()').getall()
         lenScriptsTagsText = len(self.listToString(scriptsTagsText))
         
@@ -88,41 +102,45 @@ class SplashspiderSpider(CrawlSpider):
         h3List = response.xpath('//h3/text()').getall()
         h4List = response.xpath('//h4/text()').getall()
 
-        h1ListOut = self.parseHtmlTags(h1List)
-        h2ListOut = self.parseHtmlTags(h2List)
-        h3ListOut = self.parseHtmlTags(h3List)
-        h4ListOut = self.parseHtmlTags(h4List)
 
-        
 
-        
+        #--------------------------------------------------------------------------------------------------
         toolItem = MastercrawlerItem()
-        toolItem ['idTool'] = idTool
-        toolItem ['bodyContent'] = len(response.text) - lenScriptsTagsText
+        toolItem ['idTool'] = response.meta.get('id')
+        toolItem ['nameTool'] = response.meta.get('name')   
+        toolItem ['html_without_scripts'] = len(response.body) - lenScriptsTagsText
+        toolItem ['len_html'] = len(response.body)
+
+
+        toolItem ['HTML'] = response.body
         toolItem ['httpCode'] = response.status
+
+
+        #toolItem ['HarData'] = response.data['har']
+        
         #toolItem ['scriptsTagsText'] = scriptsTagsText
-        toolItem ['lenScriptsTagsText'] = lenScriptsTagsText
+        #toolItem ['len_scriptsTagsText'] = lenScriptsTagsText
 
         toolItem ['JavaScript'] = "Yes"
 
         toolItem ['urlTool'] = response.url
-        #toolItem ['nameTool'] = nameTool    
+        
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()
         toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
         
-        toolItem ['h1'] = h1ListOut
-        toolItem ['h2'] = h2ListOut
-        toolItem ['h3'] = h3ListOut
-        toolItem ['h4'] = h4ListOut
+        toolItem ['h1'] = self.parseHtmlTags(h1List)
+        toolItem ['h2'] = self.parseHtmlTags(h2List)
+        toolItem ['h3'] = self.parseHtmlTags(h3List)
+        toolItem ['h4'] = self.parseHtmlTags(h4List)
 
-         #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers:
-        toolItem ['latency'] = latency
+        #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers:
+        #toolItem ['latency'] = response.meta.get('download_latency')
         
-        #toolItem ['redirect_reasons'] = redirect_reasons
-        #toolItem ['redirectUrls'] = redirectUrls
+        #toolItem ['redirect_reasons'] = response.meta.get('redirect_reasons')
+        #toolItem ['redirectUrls'] = response.meta.get('redirect_urls') 
 
-        toolItem ['numberRelativeLinks'] = len(relativeLinks)
-        toolItem ['numberExternalLinks'] = len(externalLinks)
+        #toolItem ['numberRelativeLinks'] = len(relativeLinks)
+        #toolItem ['numberExternalLinks'] = len(externalLinks)
         #toolItem ['externalLinks'] = externalLinks
         #toolItem ['relativeLinks'] = relativeLinks
         yield toolItem
@@ -149,7 +167,7 @@ class SplashspiderSpider(CrawlSpider):
             print("Entered in DNSLookupError: " + url)
             toolItem ['bodyContent'] = 0
             toolItem ['idTool'] = idUrl
-            toolItem ['httpCode'] = str(failure.type())
+            toolItem ['httpCode'] = "DNSLookupError"
             #toolItem ['nameTool'] = nameTool
             toolItem ['urlTool'] = url
             yield (toolItem)

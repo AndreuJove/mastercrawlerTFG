@@ -1,7 +1,7 @@
 # import pandas as pd
 # import seaborn as sns
 
-# df = pd.read_csv('20noJS.csv')
+# df = pd.read_csv('10noJS.csv')
 
 # df = df.loc[df['bodyContent']!=0]
 

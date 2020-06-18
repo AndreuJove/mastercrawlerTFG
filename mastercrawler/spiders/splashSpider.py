@@ -16,14 +16,22 @@ class SplashspiderSpider(CrawlSpider):
     #     self.toolsListOut = toolsListOut
 
     script = '''
-            function main(splash, args)
-                assert(splash:go(args.url))
-                assert(splash:wait(2))
-                return {
-                    html = splash:html(),
-                    har = splash:har()
-                }
-                end
+        function main(splash, args)
+            splash:on_request(function(request)
+                request:set_timeout(15)
+                request:enable_response_body()
+            end)
+            splash.private_mode_enabled = false
+            
+            url = args.url
+            assert(splash:go(url))
+            assert(splash:wait(1))
+            return {
+                html = splash:html()
+            }
+        end
+        
+>>>>>>> f6cf7f4338a8e0d7c1536b18f180d57a72875c96
     '''
 
     # script = '''
@@ -42,6 +50,7 @@ class SplashspiderSpider(CrawlSpider):
     # '''
 
     def start_requests(self):
+
         self.counter = 0
         for url in toolsListOut:
             self.counter +=1
@@ -70,6 +79,7 @@ class SplashspiderSpider(CrawlSpider):
         str1 = ""
         return (str1.join(listInput))
 
+
     def parseHtmlTags(self, tagsList):
         tagsList = [item.replace('\n', "") for item in tagsList]
         tagsList = [item.strip() for item in tagsList]
@@ -94,6 +104,9 @@ class SplashspiderSpider(CrawlSpider):
         url = response.url
         allLinks = response.xpath('//a/@href').getall()
         externalLinks, relativelinks = self.parseLinks(allLinks, url)
+
+        
+
         scriptsTagsText = response.xpath('//script/text()').getall()
         lenScriptsTagsText = len(self.listToString(scriptsTagsText))
         
@@ -106,6 +119,7 @@ class SplashspiderSpider(CrawlSpider):
 
         #--------------------------------------------------------------------------------------------------
         toolItem = MastercrawlerItem()
+
         toolItem ['idTool'] = response.meta.get('id')
         toolItem ['nameTool'] = response.meta.get('name')   
         toolItem ['html_without_scripts'] = len(response.body) - lenScriptsTagsText
@@ -128,10 +142,16 @@ class SplashspiderSpider(CrawlSpider):
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()
         toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
         
+
         toolItem ['h1'] = self.parseHtmlTags(h1List)
         toolItem ['h2'] = self.parseHtmlTags(h2List)
         toolItem ['h3'] = self.parseHtmlTags(h3List)
         toolItem ['h4'] = self.parseHtmlTags(h4List)
+        # toolItem ['h1'] = h1ListOut
+        # toolItem ['h2'] = h2ListOut
+        # toolItem ['h3'] = h3ListOut
+        # toolItem ['h4'] = h4ListOut
+
 
         #The download latency is measured as the time elapsed between establishing the TCP connection and receiving the HTTP headers:
         #toolItem ['latency'] = response.meta.get('download_latency')

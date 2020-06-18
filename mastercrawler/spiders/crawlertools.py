@@ -41,6 +41,7 @@ class ToolsSpider(CrawlSpider):
         str1 = ""
         return (str1.join(listInput))
 
+
     def parseLinks (self, allLinks, url):  
         externalLinks = []
         relativeLinks = []
@@ -63,10 +64,17 @@ class ToolsSpider(CrawlSpider):
 
         # lenScriptsTagsText = len(response.xpath('//script/text()').getall())
 
+        scriptsTagsText = response.xpath('//script/text()').getall()
+        lenScriptsTagsText = len(self.listToString(scriptsTagsText))
+
+        # lenScriptsTagsText = len(response.xpath('//script/text()').getall())
+
+
         h1List = response.xpath('//h1/text()').getall()
         h2List = response.xpath('//h2/text()').getall()
         h3List = response.xpath('//h3/text()').getall()
         h4List = response.xpath('//h4/text()').getall()
+
 
 
         toolItem = MastercrawlerItem()
@@ -82,15 +90,19 @@ class ToolsSpider(CrawlSpider):
         
         toolItem ['JavaScript'] = "No"
 
+
         toolItem ['urlTool'] = url
         toolItem ['nameTool'] = response.meta.get('name')
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()
         toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
 
+
         toolItem ['h1'] = self.parseHtmlTags(h1List)
         toolItem ['h2'] = self.parseHtmlTags(h2List)
         toolItem ['h3'] = self.parseHtmlTags(h3List)
         toolItem ['h4'] = self.parseHtmlTags(h4List)
+
+
 
         # toolItem ['latency'] = response.meta.get('download_latency')
         

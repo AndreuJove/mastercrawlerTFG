@@ -1,4 +1,4 @@
 mastercrawler/__pycache__
 .pyc
 .json
-.txt
+mastercrawler/spiders/.txt

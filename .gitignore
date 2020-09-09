@@ -3,3 +3,4 @@ mastercrawler/__pycache__
 .json
 mastercrawler/spiders/50-70.txt
 mastercrawler/spiders/log.txt
+.txt

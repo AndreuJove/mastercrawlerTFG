@@ -30,9 +30,7 @@ class SplashspiderSpider(CrawlSpider):
                 html = splash:html()
             }
         end
-        
->>>>>>> f6cf7f4338a8e0d7c1536b18f180d57a72875c96
-    '''
+            '''
 
     # script = '''
     #     function main(splash, args)

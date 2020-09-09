@@ -1,6 +1,4 @@
-mastercrawler/__pycache__
-.pyc
-.json
-mastercrawler/spiders/50-70.txt
-mastercrawler/spiders/log.txt
+*__pycache__
+*.pyc
+*.json
 *.txt

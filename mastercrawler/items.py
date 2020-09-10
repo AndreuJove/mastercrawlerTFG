@@ -14,7 +14,7 @@ class MastercrawlerItem(scrapy.Item):
 
     HTML = scrapy.Field()
     
-    urlTool = scrapy.Field()
+    first_url_tool = scrapy.Field()
 
     httpCode = scrapy.Field()
     titleUrl = scrapy.Field()

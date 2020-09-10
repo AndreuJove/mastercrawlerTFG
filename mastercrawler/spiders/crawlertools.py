@@ -1,7 +1,7 @@
 import scrapy, json
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-from mastercrawler.spiders.jsonextraction import toolsListOut
+from mastercrawler.spiders.jsonextraction import tools_list_unique_url
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.web._newclient import ResponseFailed, ResponseNeverReceived
 from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupError, ConnectError, ConnectionRefusedError
@@ -15,10 +15,10 @@ class ToolsSpider(CrawlSpider):
         Start the crawler
         """
         self.counter = 0
-        for url in toolsListOut:
+        for url in tools_list_unique_url:
             self.counter +=1
-            print(f"{self.counter} -- {url['url']}")
-            yield scrapy.Request(url['url'],
+            print(f"{self.counter} -- {url[first_url_tool]}")
+            yield scrapy.Request(url[first_url_tool],
             callback = self.parse_httpbin,
             meta = {
                 'dont_retry' : True,
@@ -67,7 +67,7 @@ class ToolsSpider(CrawlSpider):
         toolItem ['JavaScript'] = "No"
 
 
-        toolItem ['urlTool'] = url
+        toolItem ['first_url_tool'] = url
         toolItem ['nameTool'] = response.meta.get('name')
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()
         toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
@@ -107,7 +107,7 @@ class ToolsSpider(CrawlSpider):
             toolItem ['idTool'] = idUrl
             #toolItem ['httpCode'] = "HttpError"
             #toolItem ['nameTool'] = nameTool
-            toolItem ['urlTool'] = request.url
+            toolItem ['first_url_tool'] = request.url
             toolItem ['JavaScript'] = "No"
             yield (toolItem)
                   
@@ -116,7 +116,7 @@ class ToolsSpider(CrawlSpider):
             toolItem ['html_without_scripts'] = 0
             #toolItem ['httpCode'] = "DNSLookupError"
             #toolItem ['nameTool'] = nameTool
-            toolItem ['urlTool'] = request.url
+            toolItem ['first_url_tool'] = request.url
             toolItem ['JavaScript'] = "No"
             yield (toolItem)
             #self.logger.error('DNSLookupError on %s', request.url)
@@ -126,7 +126,7 @@ class ToolsSpider(CrawlSpider):
             toolItem ['html_without_scripts'] = 0
             #toolItem ['nameTool'] = nameTool
             #toolItem ['httpCode'] = "TimeoutError"
-            toolItem ['urlTool'] = request.url
+            toolItem ['first_url_tool'] = request.url
             toolItem ['JavaScript'] = "No"
             yield (toolItem)
 
@@ -135,7 +135,7 @@ class ToolsSpider(CrawlSpider):
             toolItem ['html_without_scripts'] = 0
             #toolItem ['nameTool'] = nameTool
             #toolItem ['httpCode'] = "TCPTimedOutError"
-            toolItem ['urlTool'] = request.url
+            toolItem ['first_url_tool'] = request.url
             toolItem ['JavaScript'] = "No"
             yield (toolItem)
             
@@ -144,7 +144,7 @@ class ToolsSpider(CrawlSpider):
             #toolItem ['nameTool'] = nameTool
             toolItem ['html_without_scripts'] = 0
             #toolItem ['httpCode'] = "ConnectError"
-            toolItem ['urlTool'] = request.url
+            toolItem ['first_url_tool'] = request.url
             toolItem ['JavaScript'] = "No"
             yield (toolItem)
         
@@ -153,7 +153,7 @@ class ToolsSpider(CrawlSpider):
             #toolItem ['nameTool'] = nameTool
             toolItem ['html_without_scripts'] = 0
             #toolItem ['httpCode'] = "ConnectionRefusedError"
-            toolItem ['urlTool'] = request.url
+            toolItem ['first_url_tool'] = request.url
             toolItem ['JavaScript'] = "No" 
             yield (toolItem)
         
@@ -164,7 +164,7 @@ class ToolsSpider(CrawlSpider):
             #toolItem ['httpCode'] = str(failure.type())
             #TypeError: __init__() missing 1 required positional argument: 'reasons'
             #toolItem ['httpCode'] = "ResponseFailed"
-            toolItem ['urlTool'] = request.url
+            toolItem ['first_url_tool'] = request.url
             toolItem ['JavaScript'] = "No" 
             yield (toolItem)
 
@@ -173,7 +173,7 @@ class ToolsSpider(CrawlSpider):
             toolItem ['html_without_scripts'] = 0
             #toolItem ['nameTool'] = nameTool
             #toolItem ['httpCode'] = "ResponseNeverReceived"
-            toolItem ['urlTool'] = request.url
+            toolItem ['first_url_tool'] = request.url
             toolItem ['JavaScript'] = "No" 
             yield (toolItem)
 

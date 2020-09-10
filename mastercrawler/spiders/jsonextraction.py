@@ -1,50 +1,61 @@
 import json 
+import time
+start = time.time()
 
+#wget "https://dev-openebench.bsc.es/monitor/rest/edam/aggregate?projection=description&projection=web&name=&label=null" -O final_tools_vicky_api.json
 
+rel_path = "../data/final_tools_vicky_api.json"
 
-with open('mastercrawler/data/finaltools.json', "r") as fp:
-    jsonData = json.load(fp)
-    
-#urlToolList, idToolList, nameToolList = ([] for i in range(3))      
+with open(rel_path, "r") as fp:
+    jsonData = json.load(fp)   
 
-lessTools = jsonData[50:70]
+lessTools = jsonData
+
+def create_dict_item(url, name, id):
+    dict_tool = {}
+    dict_tool['first_url_tool'] = url
+    dict_tool['name'] = name
+    dict_tool['id'] = id
+    return dict_tool
 
 def getAllFromJson(toolsList):
-    toolsListOut = []
+    tools_list_unique_url = []
     problematic_url = []
-
     for index,tool in enumerate(toolsList):
-        dict_tool = {}
-        
+        passing = True    
+        first_url_tool = tool["entities"][0]['tools'][0]["web"]["homepage"]
         idTool = tool["entities"][0]['tools'][0]["@id"]
-        urlTool = tool["entities"][0]['tools'][0]["web"]["homepage"]
         nameTool = tool["entities"][0]['tools'][0]["name"]
-        if urlTool.endswith(".zip") or urlTool.endswith(".pdf") or urlTool.endswith(".mp4") or urlTool.endswith(".gz") or urlTool.startswith("ftp://") or len(urlTool)<7:
-            dict_tool['url'] = urlTool
-            dict_tool['name'] = nameTool
-            dict_tool['id'] = idTool
-            problematic_url.append(dict_tool)
+        if first_url_tool.endswith(".zip") or first_url_tool.endswith(".pdf") or first_url_tool.endswith(".mp4") or first_url_tool.endswith(".gz") or first_url_tool.startswith("ftp://") or len(first_url_tool)<7:
+            problematic_url.append(create_dict_item(first_url_tool,idTool,nameTool))
             continue
-        if not urlTool.startswith("http"):
-                urlTool = "https://www." + urlTool
-        if toolsListOut and toolsListOut[-1]['url'] == urlTool:
-            if type(toolsListOut[-1]['name']) is str:
-                toolsListOut[-1]['name'] = [toolsListOut[-1]['name']]
-                toolsListOut[-1]['id'] = [toolsListOut[-1]['id']]
-            toolsListOut[-1]['name'].append(nameTool)
-            toolsListOut[-1]['id'].append(idTool)
-            continue
-        dict_tool['url'] = urlTool
-        dict_tool['name'] = nameTool
-        dict_tool['id'] = idTool
-        toolsListOut.append(dict_tool)  
-    return toolsListOut, problematic_url            
+        if not first_url_tool.startswith("http"):
+                first_url_tool = "https://www." + first_url_tool
+        if tools_list_unique_url:
+            for i, k in enumerate(tools_list_unique_url):
+                if k['first_url_tool'] == first_url_tool:
+                    passing = False
+                    if type(k['name']) is str:
+                        tools_list_unique_url[i]['name'] = [tools_list_unique_url[i]['name']] 
+                        tools_list_unique_url[i]['id'] = [tools_list_unique_url[i]['id']]
+                    tools_list_unique_url[i]['name'].append(nameTool)
+                    tools_list_unique_url[i]['id'].append(idTool)
+                    continue
+        if passing:
+            tools_list_unique_url.append(create_dict_item(first_url_tool,idTool,nameTool))  
+    return tools_list_unique_url, problematic_url            
 
-toolsListOut, problematic_url = getAllFromJson(lessTools)
+tools_list_unique_url, problematic_url = getAllFromJson(lessTools)
 
-print(len(toolsListOut))
+with open('../data/tools_list_unique_url.json', 'w') as fout:
+    json.dump(tools_list_unique_url, fout)
 
-#print(problematic_url)
-for tool in problematic_url:
-    print("_----------------------------------------")
-    print(tool)
+with open('../data/problematic_url.json', 'w') as out:
+    json.dump(problematic_url, out)
+
+
+print(f"Tools URL unique: {len(tools_list_unique_url)}")
+print(f"Problematic tools: {len(problematic_url)}")
+
+end = time.time()
+print(end - start)

@@ -15,28 +15,24 @@ class ToolsSpider(CrawlSpider):
         Start the crawler
         """
         self.counter = 0
-        for url in tools_list_unique_url:
+        for url in tools_list_unique_url[:10]:
             self.counter +=1
-            print(f"{self.counter} -- {url[first_url_tool]}")
-            yield scrapy.Request(url[first_url_tool],
+            print(f"{self.counter} -- {url['first_url_tool']}")
+            yield scrapy.Request(url['first_url_tool'],
             callback = self.parse_httpbin,
             meta = {
                 'dont_retry' : True,
                 'download_timeout' : 15,
+                'first_url' : url['first_url_tool'],
                 'id' : url['id'],
                 'name' : url['name']},
                 errback=self.errback_httpbin,
                 dont_filter=True)
              
-
-
 #Parse response object from a successfull request:
     def parse_httpbin(self, response):  
         url = response.url
         allLinks = response.xpath('//a/@href').getall()
-        externalLinks, relativeLinks = self.parseLinks(allLinks, url)
-        scriptsTagsText = response.xpath('//script/text()').getall()
-        lenScriptsTagsText = len(self.listToString(scriptsTagsText))
 
         # lenScriptsTagsText = len(response.xpath('//script/text()').getall())
 
@@ -55,7 +51,6 @@ class ToolsSpider(CrawlSpider):
 
         toolItem = MastercrawlerItem()
         toolItem ['idTool'] = response.meta.get('id')
-        toolItem ['html_without_scripts'] = len(response.body) - lenScriptsTagsText
         toolItem ['len_html'] = len(response.body)
 
         toolItem ['HTML'] = response.body

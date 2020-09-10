@@ -1,6 +1,8 @@
 import json 
 
-with open('finaltools.json', "r") as fp:
+
+
+with open('mastercrawler/data/finaltools.json', "r") as fp:
     jsonData = json.load(fp)
     
 #urlToolList, idToolList, nameToolList = ([] for i in range(3))      

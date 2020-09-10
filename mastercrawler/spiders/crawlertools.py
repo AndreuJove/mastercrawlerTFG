@@ -10,12 +10,10 @@ from scrapy.crawler import CrawlerProcess
 
 class ToolsSpider(CrawlSpider):
     name ='tools'
-   
-    # def __init__(self, toolsListOut):
-    #     super(CrawlSpider, self).__init__()
-    #     self.toolsListOut = toolsListOut
-
     def start_requests(self):
+        """
+        Start the crawler
+        """
         self.counter = 0
         for url in toolsListOut:
             self.counter +=1
@@ -30,31 +28,9 @@ class ToolsSpider(CrawlSpider):
                 errback=self.errback_httpbin,
                 dont_filter=True)
              
-    def parseHtmlTags(self, tagsList):
-        tagsList = [item.replace('\n', "") for item in tagsList]
-        tagsList = [item.strip() for item in tagsList]
-        while("" in tagsList):
-            tagsList.remove("")
-        return tagsList
-
-    def listToString(self, listInput):
-        str1 = ""
-        return (str1.join(listInput))
 
 
-    def parseLinks (self, allLinks, url):  
-        externalLinks = []
-        relativeLinks = []
-        for link in allLinks:
-                if url in link:
-                    relativeLinks.append(link)
-                elif link.startswith("/") or link.startswith("#") or link[:1].isalpha() or link.startswith("./") or link.startswith("../"):
-                    relative_url = url + link
-                    relativeLinks.append(relative_url)
-                elif link.startswith("http"):
-                    externalLinks.append(link)
-        return externalLinks, relativeLinks
-
+#Parse response object from a successfull request:
     def parse_httpbin(self, response):  
         url = response.url
         allLinks = response.xpath('//a/@href').getall()

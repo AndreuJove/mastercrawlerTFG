@@ -12,7 +12,7 @@ class ToolsSpider(CrawlSpider):
     name ='tools'
     def start_requests(self):
         """
-        Start the crawler
+        Start the crawler with the list of tools with unique URL
         """
         self.counter = 0
         for url in tools_list_unique_url[:10]:
@@ -32,46 +32,18 @@ class ToolsSpider(CrawlSpider):
 #Parse response object from a successfull request:
     def parse_httpbin(self, response):  
         url = response.url
-        allLinks = response.xpath('//a/@href').getall()
-
-        # lenScriptsTagsText = len(response.xpath('//script/text()').getall())
-
-        scriptsTagsText = response.xpath('//script/text()').getall()
-        lenScriptsTagsText = len(self.listToString(scriptsTagsText))
-
-        # lenScriptsTagsText = len(response.xpath('//script/text()').getall())
-
-
-        h1List = response.xpath('//h1/text()').getall()
-        h2List = response.xpath('//h2/text()').getall()
-        h3List = response.xpath('//h3/text()').getall()
-        h4List = response.xpath('//h4/text()').getall()
-
-
 
         toolItem = MastercrawlerItem()
         toolItem ['idTool'] = response.meta.get('id')
-        toolItem ['len_html'] = len(response.body)
-
-        toolItem ['HTML'] = response.body
-        toolItem ['httpCode'] = response.status
-        
-        #toolItem ['scriptsTagsText'] = scriptsTagsText
-        #toolItem ['lenScriptsTagsText'] = lenScriptsTagsText
-        
-        toolItem ['JavaScript'] = "No"
-
-
-        toolItem ['first_url_tool'] = url
         toolItem ['nameTool'] = response.meta.get('name')
+
+        # toolItem ['HTML'] = response.body
+        toolItem ['httpCode'] = response.status   
+        toolItem ['first_url_tool'] = response.meta.get('name')
+
         toolItem ['titleUrl'] = response.xpath('//title/text()').get()
         toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
 
-
-        toolItem ['h1'] = self.parseHtmlTags(h1List)
-        toolItem ['h2'] = self.parseHtmlTags(h2List)
-        toolItem ['h3'] = self.parseHtmlTags(h3List)
-        toolItem ['h4'] = self.parseHtmlTags(h4List)
 
 
 

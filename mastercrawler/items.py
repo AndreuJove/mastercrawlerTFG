@@ -10,7 +10,6 @@ class MastercrawlerItem(scrapy.Item):
     idTool = scrapy.Field()
     nameTool = scrapy.Field()
     final_url_tool = scrapy.Field()
-    JavaScript = scrapy.Field()
     error_name = scrapy.Field()
     
     # HTML = scrapy.Field()

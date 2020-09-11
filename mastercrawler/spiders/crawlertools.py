@@ -68,7 +68,6 @@ class ToolsSpider(CrawlSpider):
         toolItem ['idTool'] = id
         toolItem ['nameTool'] = name
         toolItem ['final_url_tool'] = final_url
-        toolItem ['JavaScript'] = "No"
         toolItem ['error_name'] = error_name
         return toolItem
 

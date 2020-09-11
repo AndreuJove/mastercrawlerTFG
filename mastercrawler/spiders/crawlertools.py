@@ -4,7 +4,6 @@ from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.web._newclient import ResponseFailed, ResponseNeverReceived
 from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupError, ConnectError, ConnectionRefusedError
 from ..items import MastercrawlerItem
-from scrapy.crawler import CrawlerProcess
 from scrapy import crawler
 from pydispatch import dispatcher
 from scrapy import signals
@@ -24,21 +23,20 @@ class ToolsSpider(CrawlSpider):
     @classmethod
     def from_crawler(cls, crawler):
         """
-        Overwrite from_crawler for access to crawler.stats
+        Overwrite from_crawler() for access to crawler.stats
         """
         return cls(crawler.stats,crawler.settings)
 
     def parse_scrapy_stats(self, dict_stats):
         """
-        Parse scrapy to delete datetime object for JSON serializable. Double append because stat is a tuple.
+        Parse scrapy to delete datetime object for JSON serializable. 
         """
         list_stats = []
         for stat in dict_stats.items():
-            if isinstance(stat[1], datetime.datetime):
-                formated_datetime_string = stat[1].strftime("%d-%b-%Y (%H:%M:%S.%f)")
-                list_stats.append(dict({stat[0] : formated_datetime_string}))
-                continue
-            list_stats.append(dict({stat[0] : stat[1]}))
+            b = stat[1]
+            if isinstance(b, datetime.datetime):
+                b = b.strftime("%d-%b-%Y (%H:%M:%S.%f)")
+            list_stats.append(dict({stat[0] : b}))
         return list_stats
 
     def save_crawl_stats(self):
@@ -64,12 +62,12 @@ class ToolsSpider(CrawlSpider):
                 errback=self.errback_httpbin,
                 dont_filter=True)
 
-    def create_item_errors(self, url, id, name, error_name):
+    def create_item(self, first_url, final_url, id, name, error_name):
         toolItem = MastercrawlerItem()
-        toolItem ['first_url_tool'] = url
+        toolItem ['first_url_tool'] = first_url
         toolItem ['idTool'] = id
         toolItem ['nameTool'] = name
-        toolItem ['final_url_tool'] = url
+        toolItem ['final_url_tool'] = final_url
         toolItem ['JavaScript'] = "No"
         toolItem ['error_name'] = error_name
         return toolItem
@@ -78,14 +76,7 @@ class ToolsSpider(CrawlSpider):
         """
         Parse satisfactory response object and extract reliable information to create the item from scrapy.Request
         """
-        toolItem = MastercrawlerItem()
-        toolItem ['first_url_tool'] = response.meta.get('first_url')
-        toolItem ['idTool'] = response.meta.get('id')
-        toolItem ['nameTool'] = response.meta.get('name')
-        toolItem ['final_url_tool'] = response.url
-        toolItem ['JavaScript'] = "No"
-        toolItem ['error_name'] = None
-        
+        toolItem= self.create_item(response.meta.get('first_url'), response.url, response.meta.get('id'), response.meta.get('name'), None)
         yield toolItem
         
     def errback_httpbin(self, failure):
@@ -97,37 +88,37 @@ class ToolsSpider(CrawlSpider):
         name = failure.request.meta.get('name')
         print("Entered in errback_httpin ----> " + url)
         if failure.check(HttpError):
-            toolItem = self.create_item_errors(url, id, name, "HttpError")
+            toolItem = self.create_item(url, url, id, name, "HttpError")
             yield (toolItem)
                   
         elif failure.check(DNSLookupError):
-            toolItem = self.create_item_errors(url, id, name, "DNSLookupError")
+            toolItem = self.create_item(url, url, id, name, "DNSLookupError")
             yield (toolItem)
    
         elif failure.check(TimeoutError):
-            toolItem = self.create_item_errors(url, id, name, "TimeoutError")
+            toolItem = self.create_item(url, url, id, name, "TimeoutError")
             yield (toolItem)
 
         elif failure.check(TCPTimedOutError):
-            toolItem = self.create_item_errors(url, id, name, "TCPTimedOutError")
+            toolItem = self.create_item(url, url, id, name, "TCPTimedOutError")
             yield (toolItem)
             
         elif failure.check(ConnectError):
-            toolItem = self.create_item_errors(url, id, name, "ConnectError")
+            toolItem = self.create_item(url, url, id, name, "ConnectError")
             yield (toolItem)
         
         elif failure.check(ConnectionRefusedError):
-            toolItem = self.create_item_errors(url, id, name, "ConnectionRefusedError")
+            toolItem = self.create_item(url, url, id, name, "ConnectionRefusedError")
             yield (toolItem)
         
         elif failure.check(ResponseFailed):
-            toolItem = self.create_item_errors(url, id, name, "ResponseFailed")
+            toolItem = self.create_item(url, url, id, name, "ResponseFailed")
             yield (toolItem)
 
         elif failure.check(ResponseNeverReceived):
-            toolItem = self.create_item_errors(url, id, name, "ResponseNeverReceived")
+            toolItem = self.create_item(url, url, id, name, "ResponseNeverReceived")
             yield (toolItem)
 
         else:
-            toolItem = self.create_item_errors(url, id, name, "Unknown Exception")
+            toolItem = self.create_item(url, url, id, name, "Unknown Exception")
             yield toolItem

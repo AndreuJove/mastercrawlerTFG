@@ -1,8 +1,5 @@
 import scrapy, json
-from scrapy.linkextractors import LinkExtractor
-from scrapy.spiders import CrawlSpider, Rule
-from scrapy.crawler import CrawlerProcess
-from scrapy import signals
+from scrapy.spiders import CrawlSpider
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.web._newclient import ResponseFailed, ResponseNeverReceived
 from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupError, ConnectError, ConnectionRefusedError
@@ -11,6 +8,7 @@ from scrapy.crawler import CrawlerProcess
 from scrapy import crawler
 from pydispatch import dispatcher
 from scrapy import signals
+import datetime
 
 relative_path = "../input_data/tools_list_unique_url.json"
 
@@ -18,7 +16,6 @@ with open(relative_path, "r") as fp:
     list_unique_url = json.load(fp)   
 
 class ToolsSpider(CrawlSpider):
-
     name ='tools'
     def __init__(self, stats, settings):
         self.stats = stats
@@ -27,16 +24,29 @@ class ToolsSpider(CrawlSpider):
     @classmethod
     def from_crawler(cls, crawler):
         """
-
+        Overwrite from_crawler for access to crawler.stats
         """
         return cls(crawler.stats,crawler.settings)
 
+    def parse_scrapy_stats(self, dict_stats):
+        """
+        Parse scrapy to delete datetime object for JSON serializable. Double append because stat is a tuple.
+        """
+        list_stats = []
+        for stat in dict_stats.items():
+            if isinstance(stat[1], datetime.datetime):
+                formated_datetime_string = stat[1].strftime("%d-%b-%Y (%H:%M:%S.%f)")
+                list_stats.append(dict({stat[0] : formated_datetime_string}))
+                continue
+            list_stats.append(dict({stat[0] : stat[1]}))
+        return list_stats
+
     def save_crawl_stats(self):
         """
-        Save stats to a file for posterior anaylisis
+        Save stats to a json file for posterior anaylisis.
         """
-        print("Entered in save_crawl_stats")
-        print(type(self.stats.get_stats()))
+        with open('../output_data/stats.json', 'w') as e:
+            json.dump(self.parse_scrapy_stats(self.stats.get_stats()), e)
 
     def start_requests(self):
         """

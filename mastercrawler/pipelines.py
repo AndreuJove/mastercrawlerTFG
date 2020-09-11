@@ -6,6 +6,7 @@
 
 class MastercrawlerPipeline(object):
     def process_item(self, item, spider):
+        print(item)
         return item
 
     def __init__(self, stats):

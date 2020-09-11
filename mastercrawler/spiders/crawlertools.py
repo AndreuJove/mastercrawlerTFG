@@ -1,23 +1,48 @@
 import scrapy, json
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-from mastercrawler.spiders.jsonextraction import tools_list_unique_url
+from scrapy.crawler import CrawlerProcess
+from scrapy import signals
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.web._newclient import ResponseFailed, ResponseNeverReceived
 from twisted.internet.error import TimeoutError, TCPTimedOutError, DNSLookupError, ConnectError, ConnectionRefusedError
 from ..items import MastercrawlerItem
 from scrapy.crawler import CrawlerProcess
+from scrapy import crawler
+from pydispatch import dispatcher
+from scrapy import signals
+
+relative_path = "../input_data/tools_list_unique_url.json"
+
+with open(relative_path, "r") as fp:
+    list_unique_url = json.load(fp)   
 
 class ToolsSpider(CrawlSpider):
+
     name ='tools'
+    def __init__(self, stats, settings):
+        self.stats = stats
+        dispatcher.connect(self.save_crawl_stats, signals.spider_closed)
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        """
+
+        """
+        return cls(crawler.stats,crawler.settings)
+
+    def save_crawl_stats(self):
+        """
+        Save stats to a file for posterior anaylisis
+        """
+        print("Entered in save_crawl_stats")
+        print(type(self.stats.get_stats()))
+
     def start_requests(self):
         """
-        Start the crawler with the list of tools with unique URL
+        Start the crawler with the list of unique URL:
         """
-        self.counter = 0
-        for url in tools_list_unique_url[:10]:
-            self.counter +=1
-            print(f"{self.counter} -- {url['first_url_tool']}")
+        for url in list_unique_url[:10]:
             yield scrapy.Request(url['first_url_tool'],
             callback = self.parse_httpbin,
             meta = {
@@ -28,122 +53,71 @@ class ToolsSpider(CrawlSpider):
                 'name' : url['name']},
                 errback=self.errback_httpbin,
                 dont_filter=True)
-             
-#Parse response object from a successfull request:
-    def parse_httpbin(self, response):  
-        url = response.url
 
+    def create_item_errors(self, url, id, name, error_name):
         toolItem = MastercrawlerItem()
+        toolItem ['first_url_tool'] = url
+        toolItem ['idTool'] = id
+        toolItem ['nameTool'] = name
+        toolItem ['final_url_tool'] = url
+        toolItem ['JavaScript'] = "No"
+        toolItem ['error_name'] = error_name
+        return toolItem
+
+    def parse_httpbin(self, response):  
+        """
+        Parse satisfactory response object and extract reliable information to create the item from scrapy.Request
+        """
+        toolItem = MastercrawlerItem()
+        toolItem ['first_url_tool'] = response.meta.get('first_url')
         toolItem ['idTool'] = response.meta.get('id')
         toolItem ['nameTool'] = response.meta.get('name')
-
-        # toolItem ['HTML'] = response.body
-        toolItem ['httpCode'] = response.status   
-        toolItem ['first_url_tool'] = response.meta.get('name')
-
-        toolItem ['titleUrl'] = response.xpath('//title/text()').get()
-        toolItem ['metaDescription'] = response.xpath('//meta[@name="description"]/@content').get()
-
-
-
-
-        # toolItem ['latency'] = response.meta.get('download_latency')
+        toolItem ['final_url_tool'] = response.url
+        toolItem ['JavaScript'] = "No"
+        toolItem ['error_name'] = None
         
-        #toolItem ['redirect_reasons'] = response.meta.get('redirect_reasons')
-        #toolItem ['redirectUrls'] = response.meta.get('redirect_urls')
-       
-        #toolItem ['numberRelativeLinks'] = len(relativeLinks)
-        #toolItem ['numberExternalLinks'] = len(externalLinks)
-        #toolItem ['externalLinks'] = externalLinks
-        #toolItem ['relativeLinks'] = relativeLinks
         yield toolItem
         
-    
     def errback_httpbin(self, failure):
+        """
+        Parse non-satisfactory response object (failure) and catch the specific exception
+        """
         url = failure.request.url
-        #print("Entered in errback_httpin: " + url)
-        errbackUrls = []
-        errbackUrls.append(url)
-        toolItem = MastercrawlerItem()
-        nameTool = failure.request.meta.get('name') 
-        idUrl = failure.request.meta.get('id') 
-        request = failure.request
- 
+        id = failure.request.meta.get('id')
+        name = failure.request.meta.get('name')
+        print("Entered in errback_httpin ----> " + url)
         if failure.check(HttpError):
-            toolItem ['html_without_scripts'] = 0
-            toolItem ['idTool'] = idUrl
-            #toolItem ['httpCode'] = "HttpError"
-            #toolItem ['nameTool'] = nameTool
-            toolItem ['first_url_tool'] = request.url
-            toolItem ['JavaScript'] = "No"
+            toolItem = self.create_item_errors(url, id, name, "HttpError")
             yield (toolItem)
                   
         elif failure.check(DNSLookupError):
-            toolItem ['idTool'] = idUrl
-            toolItem ['html_without_scripts'] = 0
-            #toolItem ['httpCode'] = "DNSLookupError"
-            #toolItem ['nameTool'] = nameTool
-            toolItem ['first_url_tool'] = request.url
-            toolItem ['JavaScript'] = "No"
+            toolItem = self.create_item_errors(url, id, name, "DNSLookupError")
             yield (toolItem)
-            #self.logger.error('DNSLookupError on %s', request.url)
-            
-        elif failure.check(TimeoutError, TCPTimedOutError):
-            toolItem ['idTool'] = idUrl
-            toolItem ['html_without_scripts'] = 0
-            #toolItem ['nameTool'] = nameTool
-            #toolItem ['httpCode'] = "TimeoutError"
-            toolItem ['first_url_tool'] = request.url
-            toolItem ['JavaScript'] = "No"
+   
+        elif failure.check(TimeoutError):
+            toolItem = self.create_item_errors(url, id, name, "TimeoutError")
             yield (toolItem)
 
         elif failure.check(TCPTimedOutError):
-            toolItem ['idTool'] = idUrl
-            toolItem ['html_without_scripts'] = 0
-            #toolItem ['nameTool'] = nameTool
-            #toolItem ['httpCode'] = "TCPTimedOutError"
-            toolItem ['first_url_tool'] = request.url
-            toolItem ['JavaScript'] = "No"
+            toolItem = self.create_item_errors(url, id, name, "TCPTimedOutError")
             yield (toolItem)
             
         elif failure.check(ConnectError):
-            toolItem ['idTool'] = idUrl
-            #toolItem ['nameTool'] = nameTool
-            toolItem ['html_without_scripts'] = 0
-            #toolItem ['httpCode'] = "ConnectError"
-            toolItem ['first_url_tool'] = request.url
-            toolItem ['JavaScript'] = "No"
+            toolItem = self.create_item_errors(url, id, name, "ConnectError")
             yield (toolItem)
         
         elif failure.check(ConnectionRefusedError):
-            toolItem ['idTool'] = idUrl
-            #toolItem ['nameTool'] = nameTool
-            toolItem ['html_without_scripts'] = 0
-            #toolItem ['httpCode'] = "ConnectionRefusedError"
-            toolItem ['first_url_tool'] = request.url
-            toolItem ['JavaScript'] = "No" 
+            toolItem = self.create_item_errors(url, id, name, "ConnectionRefusedError")
             yield (toolItem)
         
         elif failure.check(ResponseFailed):
-            toolItem ['idTool'] = idUrl
-            toolItem ['html_without_scripts'] = 0
-            #toolItem ['nameTool'] = nameTool
-            #toolItem ['httpCode'] = str(failure.type())
-            #TypeError: __init__() missing 1 required positional argument: 'reasons'
-            #toolItem ['httpCode'] = "ResponseFailed"
-            toolItem ['first_url_tool'] = request.url
-            toolItem ['JavaScript'] = "No" 
+            toolItem = self.create_item_errors(url, id, name, "ResponseFailed")
             yield (toolItem)
 
         elif failure.check(ResponseNeverReceived):
-            toolItem ['idTool'] = idUrl
-            toolItem ['html_without_scripts'] = 0
-            #toolItem ['nameTool'] = nameTool
-            #toolItem ['httpCode'] = "ResponseNeverReceived"
-            toolItem ['first_url_tool'] = request.url
-            toolItem ['JavaScript'] = "No" 
+            toolItem = self.create_item_errors(url, id, name, "ResponseNeverReceived")
             yield (toolItem)
 
-        
-    
-    
+        else:
+            toolItem = self.create_item_errors(url, id, name, "Unknown Exception")
+            yield toolItem

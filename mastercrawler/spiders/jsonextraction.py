@@ -47,7 +47,7 @@ import time
 
 # tools_list_unique_url, problematic_url = getAllFromJson(lessTools)
 
-# with open('../input_data/tools_list_unique_url.json', 'w') as fout:
+# with open('../output_data/tools_list_unique_url.json', 'w') as fout:
 #     json.dump(tools_list_unique_url, fout)
 
 # with open('../output_data/problematic_url.json', 'w') as out:

@@ -9,7 +9,7 @@ from pydispatch import dispatcher
 from scrapy import signals
 import datetime
 
-relative_path = "../input_data/tools_list_unique_url.json"
+relative_path = "../output_data/tools_list_unique_url.json"
 
 with open(relative_path, "r") as fp:
     list_unique_url = json.load(fp)   
@@ -50,7 +50,7 @@ class ToolsSpider(CrawlSpider):
         """
         Start the crawler with the list of unique URL:
         """
-        for url in list_unique_url[:10]:
+        for url in list_unique_url:
             yield scrapy.Request(url['first_url_tool'],
             callback = self.parse_httpbin,
             meta = {
@@ -62,20 +62,21 @@ class ToolsSpider(CrawlSpider):
                 errback=self.errback_httpbin,
                 dont_filter=True)
 
-    def create_item(self, first_url, final_url, id, name, error_name):
+    def create_item(self, first_url, final_url, id, name, error_name, html_no_js):
         toolItem = MastercrawlerItem()
         toolItem ['first_url_tool'] = first_url
         toolItem ['idTool'] = id
         toolItem ['nameTool'] = name
         toolItem ['final_url_tool'] = final_url
         toolItem ['error_name'] = error_name
+        toolItem ['html_no_js'] = html_no_js
         return toolItem
 
     def parse_httpbin(self, response):  
         """
         Parse satisfactory response object and extract reliable information to create the item from scrapy.Request
         """
-        toolItem= self.create_item(response.meta.get('first_url'), response.url, response.meta.get('id'), response.meta.get('name'), None)
+        toolItem= self.create_item(response.meta.get('first_url'), response.url, response.meta.get('id'), response.meta.get('name'), None, response.text)
         yield toolItem
         
     def errback_httpbin(self, failure):
@@ -87,37 +88,37 @@ class ToolsSpider(CrawlSpider):
         name = failure.request.meta.get('name')
         print("Entered in errback_httpin ----> " + url)
         if failure.check(HttpError):
-            toolItem = self.create_item(url, url, id, name, "HttpError")
+            toolItem = self.create_item(url, url, id, name, "HttpError", None)
             yield (toolItem)
                   
         elif failure.check(DNSLookupError):
-            toolItem = self.create_item(url, url, id, name, "DNSLookupError")
+            toolItem = self.create_item(url, url, id, name, "DNSLookupError", None)
             yield (toolItem)
    
         elif failure.check(TimeoutError):
-            toolItem = self.create_item(url, url, id, name, "TimeoutError")
+            toolItem = self.create_item(url, url, id, name, "TimeoutError", None)
             yield (toolItem)
 
         elif failure.check(TCPTimedOutError):
-            toolItem = self.create_item(url, url, id, name, "TCPTimedOutError")
+            toolItem = self.create_item(url, url, id, name, "TCPTimedOutError", None)
             yield (toolItem)
             
         elif failure.check(ConnectError):
-            toolItem = self.create_item(url, url, id, name, "ConnectError")
+            toolItem = self.create_item(url, url, id, name, "ConnectError", None)
             yield (toolItem)
         
         elif failure.check(ConnectionRefusedError):
-            toolItem = self.create_item(url, url, id, name, "ConnectionRefusedError")
+            toolItem = self.create_item(url, url, id, name, "ConnectionRefusedError", None)
             yield (toolItem)
         
         elif failure.check(ResponseFailed):
-            toolItem = self.create_item(url, url, id, name, "ResponseFailed")
+            toolItem = self.create_item(url, url, id, name, "ResponseFailed", None)
             yield (toolItem)
 
         elif failure.check(ResponseNeverReceived):
-            toolItem = self.create_item(url, url, id, name, "ResponseNeverReceived")
+            toolItem = self.create_item(url, url, id, name, "ResponseNeverReceived", None)
             yield (toolItem)
 
         else:
-            toolItem = self.create_item(url, url, id, name, "Unknown Exception")
+            toolItem = self.create_item(url, url, id, name, "Unknown Exception", None)
             yield toolItem

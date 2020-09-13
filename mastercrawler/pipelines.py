@@ -44,7 +44,6 @@ class MastercrawlerPipeline(object):
         last_list_of_dicts = [dict({value[0]: value[1]})
                               for value in item.items()]
         unique_id = unique_id.split("/")[-1]
-        print(last_list_of_dicts)
         path_tool = f"../htmls_no_JS/{unique_id}.json"
         self.write_json(last_list_of_dicts, path_tool)
         return item

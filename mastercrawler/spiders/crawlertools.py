@@ -43,6 +43,7 @@ class ToolsSpider(CrawlSpider):
         """
         Save stats to a json file for posterior anaylisis.
         """
+
         with open('../output_data/stats.json', 'w') as e:
             json.dump(self.parse_scrapy_stats(self.stats.get_stats()), e)
 
@@ -50,7 +51,7 @@ class ToolsSpider(CrawlSpider):
         """
         Start the crawler with the list of unique URL:
         """
-        for url in list_unique_url:
+        for url in list_unique_url[:1]:
             yield scrapy.Request(url['first_url_tool'],
             callback = self.parse_httpbin,
             meta = {
@@ -63,6 +64,9 @@ class ToolsSpider(CrawlSpider):
                 dont_filter=True)
 
     def create_item(self, first_url, final_url, id, name, error_name, html_no_js):
+        """
+        Create an item of scrapped fields.
+        """
         toolItem = MastercrawlerItem()
         toolItem ['first_url_tool'] = first_url
         toolItem ['idTool'] = id
@@ -81,7 +85,7 @@ class ToolsSpider(CrawlSpider):
         
     def errback_httpbin(self, failure):
         """
-        Parse non-satisfactory response object (failure) and catch the specific exception
+        Parse non-satisfactory response object (failure) and catch the specific exception.
         """
         url = failure.request.url
         id = failure.request.meta.get('id')

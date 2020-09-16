@@ -77,7 +77,6 @@ class ToolsSpider(CrawlSpider):
         url = failure.request.url
         id = failure.request.meta.get('id')
         name = failure.request.meta.get('name')
-        print("Entered in errback_httpin ----> " + url)
         if failure.check(HttpError):
             toolItem = self.create_item(url, url, id, name, "HttpError", None)
             yield (toolItem)

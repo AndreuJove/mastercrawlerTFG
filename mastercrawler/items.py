@@ -4,7 +4,7 @@ import scrapy
 
 class MastercrawlerItem(scrapy.Item):
     """
-    Fields of the item for the extracted information of the crawler:
+    Fields of the item of the extracted information of the spider (crawlertools.py):
     """
     first_url_tool = scrapy.Field()
     idTool = scrapy.Field()

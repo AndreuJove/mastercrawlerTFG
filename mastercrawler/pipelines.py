@@ -2,22 +2,30 @@ import json
 
 
 class MastercrawlerPipeline(object):
+    """    
+    After an item has been scraped by a spider, it is sent to the Item Pipeline which processes it through several components that are executed sequentially.
+    """
 
+    #Access stats from item pipeline
     def __init__(self, stats):
         self.stats = stats
 
     @classmethod
+    #Return stats from item pipeline to the crawler.
     def from_crawler(cls, crawler):
         return cls(crawler.stats)
 
+    #Write on a json file. Input: data and path of the file.
     def write_json(self, data, path):
         with open(path, 'w') as f:
             json.dump(data, f)
-
+    
+    #Load json file and return list of dictionaries. Input: and path of the file.
     def load_json(self, path_file):
         with open(path_file) as f:
             return json.load(f)
 
+    #Check if item has no error, and append on file for crawling js.
     def append_item_for_crawling_js(self, item, final_id):
         item_no_error = {
             'final_url_tool': item['final_url_tool'], 'idTool': final_id}
@@ -31,12 +39,14 @@ class MastercrawlerPipeline(object):
             final_list.append(item_no_error)
             self.write_json(final_list, path_final_file)
 
+    #Get unique Id to create a file with this name.
     def parse_id(self, item):
         id = item['idTool']
         if type(id) == list:
             id = item['idTool'][0]
         return id
 
+    #Recieve item. Parse item. Write item on a json file for posterior access.
     def process_item(self, item, spider):
         unique_id = self.parse_id(item)
         if item['error_name'] == None:

@@ -99,9 +99,11 @@ if not os.path.exists(rel_path_output):
                'sourceforge.net', 'sites.google.com', 'metacpan.org', 'gitlab.com', 'code.google.com', 'bitbucket.org']
 
     # Create list of dictionaries to save in json format:
-    list_domains_and_grouptations = [
+    domains_count = [
         {'domains': df['Domain'].tolist()},
-        {'values_domains':  df['Count'].tolist()},
+        {'values_domains':  df['Count'].tolist()}]
+
+    primary_classifcation_domains = [
         {'university': university},
         {'institucional': institucional},
         {'lifeScience': lifeScience},
@@ -109,9 +111,13 @@ if not os.path.exists(rel_path_output):
         {'generic': generic}
     ]
 
-    # Safe list of dictionaries about domains, domains_count, groupation in jsonfile.
-    with open('../output_data/domains_and_groupations.json', 'w') as f:
-        json.dump(list_domains_and_grouptations, f)
+    # Safe list of dictionaries: item is a domain and his count in a jsonfile.
+    with open('../output_data/primary_classifcation_domains.json', 'w') as f:
+        json.dump(primary_classifcation_domains, f)
+
+    # Safe list of dictionaries about primary classification of groupation in a jsonfile.
+    with open('../output_data/domains_count.json', 'w') as f:
+        json.dump(domains_count, f)
 
     # Safe tools lists for scrapy crawler in json format:
     with open('../output_data/tools_list_unique_url.json', 'w') as fout:

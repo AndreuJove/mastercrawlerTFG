@@ -13,7 +13,8 @@ This crawler aims to determinate the status and collect the HTMLS without JavaSc
 - JSON file about the stats of the crawler (Exceptions, Time of execution, HTTP Codes, etc).
 - JSON file that contains the tools and his websites without errors for posterior crawling for rendering JS.
 - HTMLs of the websites without errors each one in a JSON file inside the directory of htmls_no_JS. The name of each one is the ID of the tool.
-
+<br />
+---
 
 ## Package installation:
 
@@ -25,13 +26,14 @@ This crawler aims to determinate the status and collect the HTMLS without JavaSc
         $ pip3 install -r requirements.txt
 - 5) Move to mastercrawler/spiders and run the following command:
         $ scrapy crawl tools
-
+<br />
+---
 
 ## Build with:
-- [Scrapy](https://docs.scrapy.org/en/latest/)
-- [Pandas](https://pandas.pydata.org/docs/)
-- [Pydispatcher](https://grass.osgeo.org/grass79/manuals/libpython/pydispatch.html)
-- [Twisted](https://readthedocs.org/projects/twisted/)
+- [Scrapy](https://docs.scrapy.org/en/latest/) - Scrapy is a fast high-level web crawling and web scraping framework, used to crawl websites and extract structured data from their pages. It can be used for a wide range of purposes, from data mining to monitoring and automated testing.
+- [Pandas](https://pandas.pydata.org/docs/) - is an opensource, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.
+- [Pydispatcher](https://grass.osgeo.org/grass79/manuals/libpython/pydispatch.html) - Multiple-producer-multiple-consumer signal-dispatching
+- [Twisted](https://readthedocs.org/projects/twisted/) - Twisted is an event-driven networking engine written in Python and licensed under the open source.
 
 <br />
 ---

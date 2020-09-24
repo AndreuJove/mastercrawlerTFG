@@ -14,7 +14,7 @@ This crawler aims to determinate the status and collect the HTMLS without JavaSc
 - JSON file that contains the tools and his websites without errors for posterior crawling for rendering JS.
 - HTMLs of the websites without errors each one in a JSON file inside the directory of htmls_no_JS. The name of each one is the ID of the tool.
 <br />
----
+
 
 ## Package installation:
 
@@ -27,7 +27,7 @@ This crawler aims to determinate the status and collect the HTMLS without JavaSc
 - 5) Move to mastercrawler/spiders and run the following command:
         $ scrapy crawl tools
 <br />
----
+
 
 ## Build with:
 - [Scrapy](https://docs.scrapy.org/en/latest/) - Scrapy is a fast high-level web crawling and web scraping framework, used to crawl websites and extract structured data from their pages. It can be used for a wide range of purposes, from data mining to monitoring and automated testing.
@@ -36,14 +36,14 @@ This crawler aims to determinate the status and collect the HTMLS without JavaSc
 - [Twisted](https://readthedocs.org/projects/twisted/) - Twisted is an event-driven networking engine written in Python and licensed under the open source.
 
 <br />
----
+
 
 ### Authors
 
 Andreu Jové
 
 <br />
----
+
 
 ### License
 

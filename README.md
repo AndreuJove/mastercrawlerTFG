@@ -1,42 +1,5 @@
 
-
-SOFTWARE PACKAGE FOR SCRAPING WEBSITES AND CATCH THE ERRORS OF A DATASET
-
-
-
-
-Author: Andreu Jové
-
-
-
-
-
-
-
-INSTALLATION OF THIS PACKAGE:
-
-========================================================================
-
-1) Open terminal.
-
-2) Go to the current directory where you want the cloned directory to be added using 'cd'.
-
-3) Run the command: $git clone https://github.com/AndreuJove/mastercrawlerTFG
-
-4) Install requirements.txt if it's possible in a virtual environment. 
-
-5) Move to mastercrawler/input_data and run the following command: 
-    $ wget "https://dev-openebench.bsc.es/monitor/rest/edam/aggregate?projection=description&projection=web&name=&label=null" -O final_tools_v_api.json
-
-6) Move to mastercrawler/spiders and run the following command:
-    $ scrapy crawl tools
-    
-========================================================================
-
-
-
-
-## DESCRITION OF THE CRAWLER:
+## Crawler description:
 This crawler aims to determinate the status and collect the HTMLS without JavaScript from the websites of a dataset of bioinformatic tools.
 
 #### Input:
@@ -52,7 +15,7 @@ This crawler aims to determinate the status and collect the HTMLS without JavaSc
 - HTMLs of the websites without errors each one in a JSON file inside the directory of htmls_no_JS. The name of each one is the ID of the tool.
 
 
-## Installation of this package:
+## Package installation:
 
 - 1) Open terminal.
 - 2) Go to the current directory where you want the cloned directory to be added using 'cd'.
@@ -64,37 +27,22 @@ This crawler aims to determinate the status and collect the HTMLS without JavaSc
         $ scrapy crawl tools
 
 
-### Build with:
+## Build with:
 - [Scrapy](https://docs.scrapy.org/en/latest/)
 - [Pandas](https://pandas.pydata.org/docs/)
 - [Pydispatcher](https://grass.osgeo.org/grass79/manuals/libpython/pydispatch.html)
 - [Twisted](https://readthedocs.org/projects/twisted/)
 
 <br />
-
-### Languages and Tools:
-
-[<img align="left" alt="Python" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />][webdevplaylist]
-[<img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />][webdevplaylist]
-[<img align="left" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />][cssplaylist]
-[<img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />][jsplaylist]
-[<img align="left" alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />][webdevplaylist]
-[<img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />][webdevplaylist]
-[<img align="left" alt="Terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" />][webdevplaylist]
-
-<br />
-<br />
-
 ---
 
 ### Authors
 
 Andreu Jové
 
-
-
+<br />
 ---
 
 ### License
 
-This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3 - see the LICENSE.md file for details.
+This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3 - see the [LICENSE.MD](https://github.com/AndreuJove/mastercrawlerTFG/blob/master/LICENSE.md) file for details.

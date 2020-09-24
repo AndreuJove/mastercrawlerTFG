@@ -37,55 +37,47 @@ INSTALLATION OF THIS PACKAGE:
 
 
 ## DESCRITION OF THE CRAWLER:
+This crawler aims to determinate the status and collect the HTMLS without JavaScript from the websites of a dataset of bioinformatic tools.
 
-#### INPUT:
-- Dataset of bioinformatics tools (access to their websites).
+#### Input:
+- Dataset of bioinformatics tools (the access to their websites).
 
-#### OUTPUT:
-- The count of the most common domains in these websites (JSON file)
+#### Output:
+- JSON file that contains the count of the most common domains in these websites.
 - JSON file of the primary classification about the precedence of these websites. 
-- JSON file
-- 🥅 2020 Goals: Contribute more to Open Source projects
-- ⚡ Fun fact: I love to draw and play guitar / drums
+- JSON file of problematic URLs for crawling (.pdf, .gz, etc).
+- JSON file of the tools 
+- JSON file about the stats of the crawler (Exceptions, Time of execution, HTTP Codes, etc).
+- JSON file that contains the tools and his websites without errors for posterior crawling for rendering JS.
+- HTMLs of the websites without errors each one in a JSON file inside the directory of htmls_no_JS. The name of each one is the ID of the tool.
 
 
+## Installation of this package:
 
-## I'm a Husband, Father, Developer, and Teacher!
+- 1) Open terminal.
+- 2) Go to the current directory where you want the cloned directory to be added using 'cd'.
+- 3) Run the command: 
+        $ git clone https://github.com/AndreuJove/mastercrawlerTFG.
+- 4) Install requirements.txt:
+        $ pip3 install -r requirements.txt
+- 5) Move to mastercrawler/spiders and run the following command:
+        $ scrapy crawl tools
 
-- 🔭 I’m currently working on a [VS Code Course][website]!
-- 🌱 I’m currently learning everything 🤣
-- 👯 I’m looking to collaborate with other content creators
-- 🥅 2020 Goals: Contribute more to Open Source projects
-- ⚡ Fun fact: I love to draw and play guitar / drums
 
-### Spotify Playing 🎧
-[<img src="https://now-playing-codestackr.vercel.app/api/spotify-playing" alt="codeSTACKr Spotify Playing" width="350" />](https://open.spotify.com/user/swyqyimdc12jajde4vpwd2x1b)
-
-### Connect with me:
-
-[<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
-[<img align="left" alt="codeSTACKr | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
-[<img align="left" alt="codeSTACKr | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="codeSTACKr | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
+### Build with:
+- [Scrapy](https://docs.scrapy.org/en/latest/)
+- [Pandas](https://pandas.pydata.org/docs/)
+- [Pydispatcher](https://grass.osgeo.org/grass79/manuals/libpython/pydispatch.html)
+- [Twisted](https://readthedocs.org/projects/twisted/)
 
 <br />
 
 ### Languages and Tools:
 
-[<img align="left" alt="Visual Studio Code" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />][webdevplaylist]
+[<img align="left" alt="Python" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />][webdevplaylist]
 [<img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />][webdevplaylist]
 [<img align="left" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />][cssplaylist]
-[<img align="left" alt="Sass" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" />][cssplaylist]
 [<img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />][jsplaylist]
-[<img align="left" alt="React" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />][reactplaylist]
-[<img align="left" alt="Gatsby" width="26px" src="https://raw.githubusercontent.com/github/explore/e94815998e4e0713912fed477a1f346ec04c3da2/topics/gatsby/gatsby.png" />][webdevplaylist]
-[<img align="left" alt="GraphQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/graphql/graphql.png" />][webdevplaylist]
-[<img align="left" alt="Node.js" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" />][webdevplaylist]
-[<img align="left" alt="Deno" width="26px" src="https://raw.githubusercontent.com/github/explore/361e2821e2dea67711cde99c9c40ed357061cf27/topics/deno/deno.png" />][webdevplaylist]
-[<img align="left" alt="SQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />][webdevplaylist]
-[<img align="left" alt="MySQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" />][webdevplaylist]
-[<img align="left" alt="MongoDB" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png" />][webdevplaylist]
 [<img align="left" alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />][webdevplaylist]
 [<img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />][webdevplaylist]
 [<img align="left" alt="Terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" />][webdevplaylist]
@@ -95,60 +87,14 @@ INSTALLATION OF THIS PACKAGE:
 
 ---
 
-### 📺 Latest YouTube Videos
+### Authors
 
-<!-- YOUTUBE:START -->
-- [Become A VS Code SuperHero Today! | Course Launch](https://www.youtube.com/watch?v=MIsHYGZ3MwQ)
-- [How to Create a VS Code Extension Pack | Top Extensions | Download SuperHero Extension Pack Now!!](https://www.youtube.com/watch?v=DvNXEBxO3YQ)
-- [How to Create a Custom VS Code Theme (2020) | Step-by-Step | Debut of codeSTACKr Dark Theme](https://www.youtube.com/watch?v=QCqWzb-9Sy8)
-- [FREE Icons! How to use Bootstrap Icons v1.0.0 | Bootstrap 5 (2020)](https://www.youtube.com/watch?v=DPnJldwv22o)
-- [0 to 70K SUBSCRIBERS in 1 YEAR | YouTube 2020: The strategies that helped me to grow on YouTube](https://www.youtube.com/watch?v=oNGZ7h5LR-o)
-<!-- YOUTUBE:END -->
+Andreu Jové
 
-➡️ [more videos...](https://youtube.com/codestackr)
+
 
 ---
 
-### 📕 Latest Blog Posts
+### License
 
-<!-- BLOG-POST-LIST:START -->
-- [Microinteractions: Password Validation Animation](https://dev.to/codestackr/microinteractions-password-validation-animation-5629)
-- [Notion + YouTube - A Powerful Combination for Productivity](https://dev.to/codestackr/notion-youtube-a-powerful-combination-for-productivity-1def)
-- [Regular Expressions (RegEx) Crash Course](https://dev.to/codestackr/regular-expressions-regex-crash-course-248n)
-- [Emmet Part 2 - Advanced](https://dev.to/codestackr/emmet-part-2-advanced-4c65)
-- [Deno 1.0 Released! (Easy) REST API Example](https://dev.to/codestackr/deno-1-0-released-easy-rest-api-example-2fbl)
-<!-- BLOG-POST-LIST:END -->
-
-➡️ [more blog posts...](https://codestackr.com)
-
----
-
-<details>
-  <summary>:zap: Recent Github Activity</summary>
-  
-<!--START_SECTION:activity-->
-1. ❗️ Closed issue [#1](https://github.com//codeSTACKr/codestackr-vscode-theme/issues/1) in [codeSTACKr/codestackr-vscode-theme](https://github.com//codeSTACKr/codestackr-vscode-theme)
-2. 🎉 Merged PR [#2](https://github.com//codeSTACKr/codestackr-vscode-theme/pull/2) in [codeSTACKr/codestackr-vscode-theme](https://github.com//codeSTACKr/codestackr-vscode-theme)
-3. 🗣 Commented on [#1](https://github.com//codeSTACKr/codestackr-vscode-theme/issues/1) in [codeSTACKr/codestackr-vscode-theme](https://github.com//codeSTACKr/codestackr-vscode-theme)
-4. 💪 Opened PR [#6](https://github.com//colbyfayock/50-projects-for-react-and-the-static-web/pull/6) in [colbyfayock/50-projects-for-react-and-the-static-web](https://github.com//colbyfayock/50-projects-for-react-and-the-static-web)
-5. 🗣 Commented on [#249](https://github.com//abhisheknaiidu/awesome-github-profile-readme/issues/249) in [abhisheknaiidu/awesome-github-profile-readme](https://github.com//abhisheknaiidu/awesome-github-profile-readme)
-<!--END_SECTION:activity-->
-
-</details>
-
-<details>
-  <summary>:zap: Github Stats</summary>
-
-  <img align="left" alt="codeSTACKr's Github Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=codeSTACKr&show_icons=true&hide_border=true" />
-
-</details>
-
-[website]: https://codeSTACKr.com
-[twitter]: https://twitter.com/codeSTACKr
-[youtube]: https://youtube.com/codeSTACKr
-[instagram]: https://instagram.com/codeSTACKr
-[linkedin]: https://linkedin.com/in/codeSTACKr
-[webdevplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAJ0WbEsFA9W3I1W-g_BTsbt
-[jsplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALRJKu7wfXby3MKeflhTu6B
-[cssplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALSdvZuEh6gqQdmDoDIoqz4
-[reactplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAK4TdffpxKY3QGyHCpxFcQ0
+This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3 - see the LICENSE.md file for details.

@@ -17,15 +17,12 @@ wget "https://dev-openebench.bsc.es/monitor/rest/edam/aggregate?projection=descr
 
 """
 
-        
-
 # Instance of the class ArgumentParser.
 parser = argparse.ArgumentParser(description="Bioinformatics tools API extraction to get websites of tools")
 parser.add_argument('-input_url', '--url', type=str, 
                     help="Url API for extraction")
 args = parser.parse_args()
 
-print(type(args))
 if not args.url:
     raise Exception("Input URL has to be passed in coomand line.\n Try: $ python3 jsonextraction.py -input_url https://dev-openebench.bsc.es/monitor/rest/edam/aggregate?projection=description&projection=web&name=&label=null")
 
@@ -131,23 +128,17 @@ if not os.path.exists(rel_path_output):
         {'generic': generic}
     ]
 
-
-
     # Safe list of dictionaries: item is a domain and his count in a jsonfile.
-    with open('../output_data/primary_classifcation_domains.json', 'w') as f:
-        json.dump(primary_classifcation_domains, f)
+    write_json(primary_classifcation_domains, '../output_data/primary_classifcation_domains.json')
 
     # Safe list of dictionaries about primary classification of groupation in a jsonfile.
-    with open('../output_data/domains_count.json', 'w') as f:
-        json.dump(domains_count, f)
+    write_json(domains_count, '../output_data/domains_count.json')
 
     # Safe tools lists for scrapy crawler in json format:
-    with open('../output_data/tools_list_unique_url.json', 'w') as fout:
-        json.dump(tools_list_unique_url, fout)
+    write_json(tools_list_unique_url, '../output_data/tools_list_unique_url.json')
 
     # Safe problematic tools for scrapy crawler in json format:
-    with open('../output_data/problematic_tools.json', 'w') as out:
-        json.dump(problematic_url, out)
+    write_json(problematic_url, '../output_data/problematic_tools.json')
 
     print(f"Tools URL unique: {len(tools_list_unique_url)}")
     print(f"Problematic tools: {len(problematic_url)}")

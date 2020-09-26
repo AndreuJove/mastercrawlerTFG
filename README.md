@@ -1,9 +1,9 @@
 
 ## Crawler description:
-This crawler aims to determinate the status and collect the HTMLS without JavaScript from the websites of a dataset of bioinformatic tools.
+This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect the HTMLS without JavaScript from the websites of a dataset of bioinformatic tools.
 
 #### Input:
-- Dataset of bioinformatics tools (the access to their websites).
+- Dataset of bioinformatics tools (used to get the websites of the bioinformatic tools).
 
 #### Output:
 - JSON file that contains the count of the most common domains in these websites.
@@ -38,13 +38,13 @@ This crawler aims to determinate the status and collect the HTMLS without JavaSc
 <br />
 
 
-### Authors
+## Authors
 
 Andreu Jové
 
 <br />
 
 
-### License
+## License
 
 This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3 - see the [LICENSE.MD](https://github.com/AndreuJove/mastercrawlerTFG/blob/master/LICENSE.md) file for details.

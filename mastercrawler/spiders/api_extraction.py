@@ -2,6 +2,8 @@ import json
 import time
 import os
 import pandas as pd
+import requests
+import argparse
 """
 Collect all problematic URLs for crawling and group different tools that have same URLs.
 
@@ -15,14 +17,31 @@ wget "https://dev-openebench.bsc.es/monitor/rest/edam/aggregate?projection=descr
 
 """
 
+class ArgumentMissingInCommandLine(Exception):
+    __module__ = Exception.__module__
+    def __init__(self, msg):
+        super().__init__(msg)
+        
+
+# Instance of the class ArgumentParser.
+parser = argparse.ArgumentParser(description="Bioinformatics tools API extraction to get websites of tools")
+parser.add_argument('-input_url', '--url', type=str, 
+                    help="Url API for extraction")
+args = parser.parse_args()
+
+print(type(args))
+if not args.url:
+    raise ArgumentMissingInCommandLine("Input URL has to be passed in coomand line.\n Try: $ python3 jsonextraction.py -input_url https://dev-openebench.bsc.es/monitor/rest/edam/aggregate?projection=description&projection=web&name=&label=null")
+
+
 rel_path_output = '../output_data/tools_list_unique_url.json'
 if not os.path.exists(rel_path_output):
     start = time.time()
 
     # Open file of tools. This file is a list of dictionaries. Finally load to the variable jsonInput_data.
-    rel_path_input_data = "../input_data/final_tools_v_api.json"
-    with open(rel_path_input_data, "r") as fp:
-        jsonInput_data = json.load(fp)
+    
+    with requests.get(args.url, stream=True) as r:
+        jsonInput_data = r.json()
 
     # Create a dictionary with 3 pairs of key : value. Keys are: first_url_tool, name and id.
     def create_dict_item(url, name, id):
@@ -34,6 +53,11 @@ if not os.path.exists(rel_path_output):
 
     # Counter of different domains in dataset.
     domains_counter = {}
+
+    def write_json(self, data, path):
+        with open(path, 'w') as f:
+            json.dump(data, f)
+
     def counter_domains(url):
         domain = url.split("://")[-1].split("/")[0].replace("www.", "").lower()
         if domain in domains_counter:
@@ -41,7 +65,7 @@ if not os.path.exists(rel_path_output):
         else:
             domains_counter[domain] = 1
 
-    def getAllFromJson(toolsList):
+    def json_parser(toolsList):
         """
         Extracts website/homepage, id, name from dataset.
 
@@ -81,7 +105,7 @@ if not os.path.exists(rel_path_output):
                 tools_list_unique_url.append(
                     create_dict_item(first_url_tool, nameTool, idTool))
         return tools_list_unique_url, problematic_url
-    tools_list_unique_url, problematic_url = getAllFromJson(jsonInput_data)
+    tools_list_unique_url, problematic_url = json_parser(jsonInput_data)
 
     # Create Dataframe of the counter of domains:
     df = pd.DataFrame(domains_counter.items(), columns=[
@@ -110,6 +134,8 @@ if not os.path.exists(rel_path_output):
         {'collections': collections},
         {'generic': generic}
     ]
+
+
 
     # Safe list of dictionaries: item is a domain and his count in a jsonfile.
     with open('../output_data/primary_classifcation_domains.json', 'w') as f:

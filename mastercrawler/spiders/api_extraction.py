@@ -17,10 +17,6 @@ wget "https://dev-openebench.bsc.es/monitor/rest/edam/aggregate?projection=descr
 
 """
 
-class ArgumentMissingInCommandLine(Exception):
-    __module__ = Exception.__module__
-    def __init__(self, msg):
-        super().__init__(msg)
         
 
 # Instance of the class ArgumentParser.
@@ -31,7 +27,7 @@ args = parser.parse_args()
 
 print(type(args))
 if not args.url:
-    raise ArgumentMissingInCommandLine("Input URL has to be passed in coomand line.\n Try: $ python3 jsonextraction.py -input_url https://dev-openebench.bsc.es/monitor/rest/edam/aggregate?projection=description&projection=web&name=&label=null")
+    raise Exception("Input URL has to be passed in coomand line.\n Try: $ python3 jsonextraction.py -input_url https://dev-openebench.bsc.es/monitor/rest/edam/aggregate?projection=description&projection=web&name=&label=null")
 
 
 rel_path_output = '../output_data/tools_list_unique_url.json'

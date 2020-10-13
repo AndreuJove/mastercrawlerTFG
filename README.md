@@ -6,12 +6,8 @@ This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect
 - Dataset of bioinformatics tools (used to get the websites of the bioinformatic tools).
 
 #### Output:
-- JSON file that contains the count of the most common domains in these websites.
-- JSON file of the primary classification about the precedence of these websites. 
-- JSON file of problematic URLs for crawling (.pdf, .gz, etc).
-- JSON file of the tools 
 - JSON file about the stats of the crawler (Exceptions, Time of execution, HTTP Codes, etc).
-- JSON file that contains the tools and his websites without errors for posterior crawling for rendering JS.
+- JSON file that contains the websites without errors for posterior crawling with [Selenium] (https://github.com/AndreuJove/seleniumCrawler) for rendering JS.
 - HTMLs of the websites without errors each one in a JSON file inside the directory of htmls_no_JS. The name of each one is the ID of the tool.
 <br />
 

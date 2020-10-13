@@ -10,8 +10,8 @@ class MastercrawlerPipeline(object):
     def __init__(self, stats):
         self.stats = stats
 
-    @classmethod
     #Return stats from item pipeline to the crawler.
+    @classmethod
     def from_crawler(cls, crawler):
         return cls(crawler.stats)
 
@@ -28,7 +28,7 @@ class MastercrawlerPipeline(object):
     #Check if item has no error, and append on file for crawling js.
     def append_item_for_crawling_js(self, item, final_id):
         item_no_error = {
-            'final_url_tool': item['final_url_tool'], 'idTool': final_id}
+            'final_url_tool': item['final_url_tool'], 'idTool': final_id, 'first_url_tool' : item['first_url_tool']}
         path_final_file = '../output_data/tools_for_crawling_js.json'
         try:
             data = self.load_json(path_final_file)

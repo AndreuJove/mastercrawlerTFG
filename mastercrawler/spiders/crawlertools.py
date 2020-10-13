@@ -8,6 +8,8 @@ from scrapy import crawler
 from pydispatch import dispatcher
 from scrapy import signals
 import datetime
+from scrapy.crawler import CrawlerProcess
+
 
 relative_path = "../output_data/tools_list_unique_url.json"
 
@@ -112,3 +114,10 @@ class ToolsSpider(CrawlSpider):
         else:
             toolItem = self.create_item(url, url, id, name, "Unknown Exception", None)
             yield toolItem
+
+
+
+if __name__ == "__main__":
+    process = CrawlerProcess()
+    process.crawl(ToolsSpider)
+    process.start()

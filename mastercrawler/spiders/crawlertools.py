@@ -9,12 +9,10 @@ from pydispatch import dispatcher
 from scrapy import signals
 import datetime
 from scrapy.crawler import CrawlerProcess
+import argparse
+import os
 
 
-relative_path = "../output_data/tools_list_unique_url.json"
-
-with open(relative_path, "r") as fp:
-    list_unique_url = json.load(fp)   
 
 #Crawler class that inherets from CrawlSpider.
 #Sourcecode of CrawlSpider available at: https://docs.scrapy.org/en/latest/_modules/scrapy/spiders/crawl.html#CrawlSpider
@@ -41,12 +39,12 @@ class ToolsSpider(CrawlSpider):
 
     #Save stats to a json file for posterior anaylisis.
     def save_crawl_stats(self):
-        with open('../output_data/stats.json', 'w') as e:
+        with open(f'../{args.output_directory}/{args.file_name_stats}.json', 'w') as e:
             json.dump(self.parse_scrapy_stats(self.stats.get_stats()), e)
 
     #It is called by Scrapy when the spider is opened for scraping. 
     def start_requests(self):
-        for url in list_unique_url[:1]:
+        for url in list_unique_url:
             yield scrapy.Request(url['first_url_tool'],
             callback = self.parse_httpbin,
             meta = {
@@ -118,6 +116,38 @@ class ToolsSpider(CrawlSpider):
 
 
 if __name__ == "__main__":
+
+    # Instance of the class ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Crawler for bioinformatics tools with")
+
+    # Add file of tools: Each tool has: ['name'], ['id'] and ['first_url_tool'] URL of the api to extract the data:
+    parser.add_argument('-i_path_file', '--path_list_tools_unique_url', type=str, default="../../api_extraction/output_data/tools_unique_url.json",
+                    help="File of tools unique url. Each tool has: ['name'], ['id'] and ['first_url_tool']")
+
+    # Add the argument of output's directory name where the output files will be saved:
+    parser.add_argument('-o_directory', '--output_directory_data', type=str,
+                    default="output_data", help="Name of the directory for the outputs files")
+
+    # Add the argument of the ouput file name for stats:
+    parser.add_argument('-o_file_stats', '--file_name_stats', type=str,
+                    default="stats", help="Name of the output stats file from crawler")
+
+    # Add the argument of the ouput file name for stats:
+    parser.add_argument('-o_directory_htmls_js', '--output_directory_htmls', type=str,
+                    default="stats", help="Name of the output stats file from crawler")
+
+    args = parser.parse_args()
+
+    if not os.path.isdir(args.output_directory_data):
+        os.mkdir(args.output_directory_data)
+
+    if not os.path.isdir(args.output_directory_htmls):
+        os.mkdir(args.output_directory_htmls)
+
+    with open(args.path_list_tools_unique_url, "r") as fp:
+        list_unique_url = json.load(fp) 
+
     process = CrawlerProcess()
     process.crawl(ToolsSpider)
     process.start()

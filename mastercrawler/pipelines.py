@@ -1,4 +1,5 @@
 import json
+from spiders.crawlertools import args
 
 
 class MastercrawlerPipeline(object):
@@ -16,12 +17,14 @@ class MastercrawlerPipeline(object):
         return cls(crawler.stats)
 
     #Write on a json file. Input: data and path of the file.
-    def write_json(self, data, path):
+    @staticmethod
+    def write_json(data, path):
         with open(path, 'w') as f:
             json.dump(data, f)
     
     #Load json file and return list of dictionaries. Input: and path of the file.
-    def load_json(self, path_file):
+    @staticmethod
+    def load_json(path_file):
         with open(path_file) as f:
             return json.load(f)
 

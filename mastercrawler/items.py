@@ -1,6 +1,4 @@
-
 import scrapy
-
 
 class MastercrawlerItem(scrapy.Item):
     """

@@ -16,12 +16,20 @@ This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect
 
 - 1) Open terminal.
 - 2) Go to the current directory where you want the cloned directory to be added using 'cd'.
-- 3) Run the command: 
+- 3) Run the command: <br />
         $ git clone https://github.com/AndreuJove/mastercrawlerTFG.
-- 4) Install requirements.txt:
+- 4) Install requirements.txt: <br />
         $ pip3 install -r requirements.txt
-- 5) Move to mastercrawler/spiders and run the following command:
-        $ scrapy crawl tools
+- 5) From root directory and run the following command:<br />
+        $ python3 main.py
+- 6) The name of the output files and the directory to save them can be changed using the following command line (write it with the default values):<br />
+
+        $ python3 main.py 
+        i_path_file ../api_extraction/output_data/tools_unique_url.json 
+        -o_directory output_data 
+        -o_file_stats stats
+        -o_directory_htmls_no_js htmls_no_js
+        -o_file_tools_crawling_js tools_crawling_js
 <br />
 
 

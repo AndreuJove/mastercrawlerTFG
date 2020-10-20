@@ -1,6 +1,5 @@
 import json
-from spiders.crawlertools import args
-
+import sys
 
 class MastercrawlerPipeline(object):
     """    
@@ -32,7 +31,7 @@ class MastercrawlerPipeline(object):
     def append_item_for_crawling_js(self, item, final_id):
         item_no_error = {
             'final_url_tool': item['final_url_tool'], 'idTool': final_id, 'first_url_tool' : item['first_url_tool']}
-        path_final_file = '../output_data/tools_for_crawling_js.json'
+        path_final_file = f'{self.args.output_directory_data}/{self.args.tools_file_crawling_js}.json'
         try:
             data = self.load_json(path_final_file)
             data.append(item_no_error)
@@ -49,6 +48,10 @@ class MastercrawlerPipeline(object):
             id = item['idTool'][0]
         return id
 
+    #Access the args of the spider (ToolsSpider) and safe it in self.args
+    def open_spider(self, spider):
+        self.args = spider.args
+
     #Recieve item. Parse item. Write item on a json file for posterior access.
     def process_item(self, item, spider):
         unique_id = self.parse_id(item)
@@ -57,7 +60,7 @@ class MastercrawlerPipeline(object):
         last_list_of_dicts = [dict({value[0]: value[1]})
                               for value in item.items()]
         unique_id = unique_id.split("/")[-1]
-        path_tool = f"../htmls_no_JS/{unique_id}.json"
+        path_tool = f"{self.args.output_directory_htmls}/{unique_id}.json"
         self.write_json(last_list_of_dicts, path_tool)
         return item
 

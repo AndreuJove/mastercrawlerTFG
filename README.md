@@ -1,16 +1,14 @@
 
 ## Crawler description:
-This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect the HTMLS without JavaScript from the websites of a dataset of bioinformatic tools.
+This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect the HTMLS without JavaScript from the websites of a dataset of bioinformatic tools.<br />
 
-#### Input:
-- Dataset of bioinformatics tools (used to get the websites of the bioinformatic tools).
+### Input:
+- Dataset of bioinformatics tools (used to get the websites of the bioinformatic tools).<br />
 
-#### Output:
+### Output:
 - JSON file about the stats of the crawler (Exceptions, Time of execution, HTTP Codes, etc).
 - JSON file that contains the websites without errors for posterior crawling with [Selenium] (https://github.com/AndreuJove/seleniumCrawler) for rendering JS.
-- HTMLs of the websites without errors each one in a JSON file inside the directory of htmls_no_JS. The name of each one is the ID of the tool.
-<br />
-
+- HTMLs of the websites without errors each one in a JSON file inside the directory of htmls_no_JS. The name of each one is the Name of the tool.<br />
 
 ## Package installation:
 
@@ -23,7 +21,6 @@ This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect
 - 5) From root directory and run the following command:<br />
         $ python3 main.py
 - 6) The name of the output files and the directory to save them can be changed using the following command line (write it with the default values):<br />
-
         $ python3 main.py 
         i_path_file ../api_extraction/output_data/tools_unique_url.json 
         -o_directory output_data 

@@ -16,17 +16,10 @@ import datetime
 class ToolsSpider(CrawlSpider):
     name ='tools'
     def __init__(self, stats, settings, args, list_unique_url):
-        # print(a)
-        # args, stats, settings = a[0:2]
-        # # new_args = [args, stats, settings]
-        # super().__init__(*a[3:], **kwargs)
         self.stats = stats
         self.settings = settings
         self.args = args
         self.list_unique_url = list_unique_url
-
-        # self.args = args
-        # self.settings = settings
         dispatcher.connect(self.save_crawl_stats, signals.spider_closed)
 
     #Overwrite from_crawler() for access to crawler.stats
@@ -36,11 +29,6 @@ class ToolsSpider(CrawlSpider):
         # spider = super().from_crawler(crawler, args[0], crawler.stats, crawler.settings, *args[1:], **kwargs)
         # return spider
         return cls(crawler.stats, crawler.settings, args, list_unique_url)
-    #Overwrite from_crawler() for access to crawler.stats
-    # @classmethod
-    # def from_crawler(cls, crawler):
-    #     return cls(crawler.stats,crawler.settings)
-
 
     #Parse scrapy to delete datetime object for JSON serializable. 
     def parse_scrapy_stats(self, dict_stats):
@@ -59,7 +47,7 @@ class ToolsSpider(CrawlSpider):
 
     #It is called by Scrapy when the spider is opened for scraping. 
     def start_requests(self):
-        for url in self.list_unique_url[:5]:
+        for url in self.list_unique_url:
             yield scrapy.Request(url['first_url_tool'],
             callback = self.parse_httpbin,
             meta = {

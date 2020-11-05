@@ -6,9 +6,45 @@ This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect
 - Dataset of bioinformatics tools (used to get the websites of the bioinformatic tools).<br />
 
 ### Output:
-- JSON file about the stats of the crawler (Exceptions, Time of execution, HTTP Codes, etc).
-- JSON file that contains the websites without errors for posterior crawling with [Selenium] (https://github.com/AndreuJove/seleniumCrawler) for rendering JS.
-- HTMLs of the websites without errors each one in a JSON file inside the directory of htmls_no_JS. The name of each one is the Name of the tool.<br />
+- JSON file called by default "manifest_tools.json" inside the directory output_data that follows the next JSON schema. 
+
+```
+manifest_tools.json = {
+  'tools_ok' : [
+                        {
+                        "final_url": "https://github.com/ernstlab/X-CNN",
+                        "id": "https://dev-openebench.bsc.es/monitor/tool/-cnn",
+                        "name": "-CNN",
+                        "first_url": "https://github.com/ernstlab/X-CNN",
+                        "path_file": "entry_1.json"
+                        },
+
+                ...
+  ],
+  'stats' : 
+                        {
+                         "log_count/INFO": type="integer",
+                        "start_time": type="string",
+                        "memusage/startup": type="integer",
+                        ...
+
+                        },
+                        
+        
+```
+
+- JSON file called by default "entry_n.json" inside the directory of htmls_no_js that follows the next JSON schema. 
+
+```
+
+entry_n.json = {
+  'id' : type="string",
+ 
+  'html_no_js' : type="string"
+                        
+}
+```
+
 
 ## Package installation:
 
@@ -32,7 +68,6 @@ This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect
 
 ## Build with:
 - [Scrapy](https://docs.scrapy.org/en/latest/) - Scrapy is a fast high-level web crawling and web scraping framework, used to crawl websites and extract structured data from their pages. It can be used for a wide range of purposes, from data mining to monitoring and automated testing.
-- [Pandas](https://pandas.pydata.org/docs/) - is an opensource, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.
 - [Pydispatcher](https://grass.osgeo.org/grass79/manuals/libpython/pydispatch.html) - Multiple-producer-multiple-consumer signal-dispatching
 - [Twisted](https://readthedocs.org/projects/twisted/) - Twisted is an event-driven networking engine written in Python and licensed under the open source.
 

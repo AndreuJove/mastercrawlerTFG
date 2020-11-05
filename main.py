@@ -35,7 +35,7 @@ if __name__ == "__main__":
     parser.add_argument( 
                         '-filename_output',
                         type=str,
-                        default="stats_and_tools_ok",
+                        default="manifest_tools",
                         help="Output filename. Contains 2 different keys: ['stats'] and ['tools_ok"
                         )
 
@@ -65,8 +65,10 @@ if __name__ == "__main__":
     #Create the logger:
     logging.basicConfig(format='%(levelname)s: %(message)s (%(asctime)s)', level=logging.INFO)
 
+    logging.info("*********************************************************************")
     logging.info(f"Starting the crawler of {len(metrics['tools_list_unique'])} websites")
-    
+    logging.info("*********************************************************************")
+
     #Instance of CrawlerProcess and call the method to access the settings of the crawler in settings.py: 
     process = CrawlerProcess(get_project_settings())
 
@@ -75,6 +77,10 @@ if __name__ == "__main__":
 
     #Start the process of crawling
     process.start()
+
+    logging.info("Crawler finished")
+    logging.info(f"{args.filename_output} saved in {args.output_directory}")
+    logging.info(f"Each URL entry with his corresponding HTML saved in {args.o_directory_htmls_no_js}")
 
 
 

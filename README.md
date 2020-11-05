@@ -12,11 +12,11 @@ This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect
 manifest_tools.json = {
   'tools_ok' : [
                         {
-                        "final_url": "https://github.com/ernstlab/X-CNN",
-                        "id": "https://dev-openebench.bsc.es/monitor/tool/-cnn",
-                        "name": "-CNN",
-                        "first_url": "https://github.com/ernstlab/X-CNN",
-                        "path_file": "entry_1.json"
+                        "final_url": type="string",
+                        "id": type="string",
+                        "name": type="string",
+                        "first_url": type="string"
+                        "path_file": type="string"
                         },
 
                 ...

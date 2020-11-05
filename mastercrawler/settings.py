@@ -20,6 +20,8 @@ USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Ge
 ROBOTSTXT_OBEY = False
 
 HTTPCACHE_ENABLED=False
+
+LOG_LEVEL = 'INFO'
 #Export as CSV Feed
 
 #FEED_FORMAT = "json"

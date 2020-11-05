@@ -25,25 +25,24 @@ class ToolsSpider(CrawlSpider):
     #Overwrite from_crawler() for access to crawler.stats
     @classmethod
     def from_crawler(cls, crawler, args, list_unique_url):
-        # new_args = []
-        # spider = super().from_crawler(crawler, args[0], crawler.stats, crawler.settings, *args[1:], **kwargs)
-        # return spider
         return cls(crawler.stats, crawler.settings, args, list_unique_url)
 
     #Parse scrapy to delete datetime object for JSON serializable. 
     def parse_scrapy_stats(self, dict_stats):
-        list_stats = []
         for stat in dict_stats.items():
             b = stat[1]
             if isinstance(b, datetime.datetime):
-                b = b.strftime("%d-%b-%Y (%H:%M:%S.%f)")
-            list_stats.append(dict({stat[0] : b}))
-        return list_stats
+                dict_stats[stat[0]] = b.strftime("%d-%b-%Y (%H:%M:%S.%f)")
+        return dict_stats
 
     #Save stats to a json file for posterior anaylisis.
     def save_crawl_stats(self):
-        with open(f'{self.args.output_directory_data}/{self.args.file_name_stats}.json', 'w') as e:
-            json.dump(self.parse_scrapy_stats(self.stats.get_stats()), e)
+    
+        with open(f'{self.args.output_directory}/{self.args.filename_output}.json') as f:
+            f_dict = json.load(f)
+        f_dict['stats'] = self.parse_scrapy_stats(self.stats.get_stats())
+        with open(f'{self.args.output_directory}/{self.args.filename_output}.json', 'w') as e:
+            json.dump(f_dict, e)
 
     #It is called by Scrapy when the spider is opened for scraping. 
     def start_requests(self):

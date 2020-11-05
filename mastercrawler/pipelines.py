@@ -5,10 +5,10 @@ class MastercrawlerPipeline(object):
     """    
     After an item has been scraped by a spider, it is sent to the Item Pipeline which processes it through several components that are executed sequentially.
     """
-
     #Access stats from item pipeline
     def __init__(self, stats):
         self.stats = stats
+        self.counter = 0
 
     #Return stats from item pipeline to the crawler.
     @classmethod
@@ -28,39 +28,40 @@ class MastercrawlerPipeline(object):
             return json.load(f)
 
     #Check if item has no error, and append on file for crawling js.
-    def append_item_for_crawling_js(self, item, final_id):
+    def append_item_for_crawling_js(self, item, ):
         item_no_error = {
-            'final_url_tool': item['final_url_tool'], 'idTool': final_id, 'first_url_tool' : item['first_url_tool']}
-        path_final_file = f'{self.args.output_directory_data}/{self.args.tools_file_crawling_js}.json'
+                            'final_url': item['final_url_tool'], 
+                            'id': item['idTool'], 
+                            'name' : item['nameTool'],
+                            'first_url' : item['first_url_tool'], 
+                            'path_file' : f"entry_{self.counter}.json"
+                        }
+        path_final_file = f'{self.args.output_directory}/{self.args.filename_output}.json'
         try:
             data = self.load_json(path_final_file)
-            data.append(item_no_error)
+            data['tools_ok'].append(item_no_error)
             self.write_json(data, path_final_file)
         except:
-            final_list = []
-            final_list.append(item_no_error)
-            self.write_json(final_list, path_final_file)
+            list_tools = []
+            list_tools.append(item_no_error)
+            final_dict = {"tools_ok" : list_tools}
+            self.write_json(final_dict, path_final_file)
 
-    #Get unique Id to create a file with this name.
-    def parse_id(self, item):
-        id = item['idTool']
-        if type(id) == list:
-            id = item['idTool'][0]
-        return id
-
+        return item_no_error
     #Access the args of the spider (ToolsSpider) and safe it in self.args
     def open_spider(self, spider):
         self.args = spider.args
 
     #Recieve item. Parse item. Write item on a json file for posterior access.
     def process_item(self, item, spider):
-        unique_id = self.parse_id(item)
+        self.counter += 1
         if item['error_name'] == None:
-            self.append_item_for_crawling_js(item, unique_id)
-        last_list_of_dicts = [dict({value[0]: value[1]})
-                              for value in item.items()]
-        unique_id = unique_id.split("/")[-1]
-        path_tool = f"{self.args.output_directory_htmls}/{unique_id}.json"
-        self.write_json(last_list_of_dicts, path_tool)
+            item_no_error = self.append_item_for_crawling_js(item)
+            path_tool = f"{self.args.o_directory_htmls_no_js}/{item_no_error['path_file']}.json"
+            tool_dict = {
+                        'id': item['idTool'], 
+                        'html_no_js' : item['html_no_js']
+                        }
+            self.write_json(tool_dict, path_tool)
         return item
 

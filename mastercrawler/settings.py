@@ -21,7 +21,6 @@ ROBOTSTXT_OBEY = False
 
 HTTPCACHE_ENABLED=False
 
-LOG_LEVEL = 'INFO'
 #Export as CSV Feed
 
 #FEED_FORMAT = "json"

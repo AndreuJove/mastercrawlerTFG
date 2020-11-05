@@ -73,11 +73,12 @@ if __name__ == "__main__":
     process = CrawlerProcess(get_project_settings())
 
     #Method to crawl the spider in crawlertools.py and pass as **kwargs the following variables:
-    process.crawl(ToolsSpider, args=args, list_unique_url=metrics['tools_list_unique'][:3])
+    process.crawl(ToolsSpider, args=args, list_unique_url=metrics['tools_list_unique'])
 
     #Start the process of crawling
     process.start()
 
+    #Final log of the program
     logging.info("Crawler finished")
     logging.info(f"{args.filename_output} saved in {args.output_directory}")
     logging.info(f"Each URL entry with his corresponding HTML saved in {args.o_directory_htmls_no_js}")

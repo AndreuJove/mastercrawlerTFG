@@ -27,7 +27,7 @@ class MastercrawlerPipeline(object):
         with open(path_file) as f:
             return json.load(f)
 
-    #Check if item has no error, and append on file for crawling js.
+    #Check if item has no error, and append on file his correspoding file.
     def append_item_for_crawling_js(self, item, ):
         item_no_error = {
                             'final_url': item['final_url_tool'], 

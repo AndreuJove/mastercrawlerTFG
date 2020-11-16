@@ -34,7 +34,7 @@ class MastercrawlerPipeline(object):
                             'id': item['idTool'], 
                             'name' : item['nameTool'],
                             'first_url' : item['first_url_tool'], 
-                            'path_file' : f"entry_{self.counter}_no_js.json"
+                            'path_file' : f"entry_{self.counter}_no_js"
                         }
         path_final_file = f'{self.args.output_directory}/{self.args.filename_output}.json'
         try:

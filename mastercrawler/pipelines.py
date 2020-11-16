@@ -32,7 +32,7 @@ class MastercrawlerPipeline(object):
     def process_id(tool):
         if isinstance(tool['idTool'], list):
             id = tool['idTool'][0]
-        id = tool['idTool'].split("/")[-1]
+        id = id.split("/")[-1]
         return id
 
     #Check if item has no error, and append on file his correspoding file.

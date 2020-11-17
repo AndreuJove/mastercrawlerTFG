@@ -36,7 +36,7 @@ if __name__ == "__main__":
                         '-filename_output',
                         type=str,
                         default="manifest_tools",
-                        help="Output filename. Contains 2 different keys: ['stats'] and ['tools_ok"
+                        help="Output filename. Contains 2 different keys: ['stats'] and ['tools_ok']"
                         )
 
     # Add the argument of the ouput file name for stats:
@@ -44,7 +44,7 @@ if __name__ == "__main__":
                         '-o_directory_htmls_no_js',
                         type=str,
                         default="htmls_no_js",
-                        help="Name of the output stats file from crawler"
+                        help="Name of the output directory for htmls_js"
                         )
 
     #ArgumentParser parses arguments through the parse_args() method. This will inspect the command line, convert each argument to the appropriate type and then invoke the appropriate action. In most cases, this means a simple Namespace object will be built up from attributes parsed out of the command line:

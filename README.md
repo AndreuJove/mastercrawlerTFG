@@ -13,8 +13,6 @@ manifest_tools.json = {
   'tools_ok' : [
                         {
                         "final_url": type="string",
-                        "id": type="string",
-                        "name": type="string",
                         "first_url": type="string"
                         "path_file": type="string"
                         },
@@ -58,11 +56,11 @@ entry_n.json = {
         $ python3 main.py
 - 6) The name of the output files and the directory to save them can be changed using the following command line (write it with the default values):<br />
         $ python3 main.py 
-        i_path_file ../api_extraction/output_data/tools_unique_url.json 
+        i_path_file ../websites_filter/output_data/websites_to_crawl.json
         -o_directory output_data 
-        -o_file_stats stats
+        -filename_output manifest_tools_scrapy
         -o_directory_htmls_no_js htmls_no_js
-        -o_file_tools_crawling_js tools_crawling_js
+        -log_file_name crawler
 <br />
 
 

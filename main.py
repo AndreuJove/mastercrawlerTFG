@@ -1,3 +1,11 @@
+
+""" 
+
+This module starts the process of crawling along X websites and extract his corresponding HTML without JavaScript rendered. 
+Furthermore extracts the statistics from the amount of websites given as input.
+
+"""
+
 import argparse
 import os
 import logging
@@ -6,6 +14,7 @@ from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 from mastercrawler.spiders.crawlertools import ToolsSpider
 
+
 def load_json(path_file):
     # Load JSON file
     with open(path_file) as file:
@@ -13,8 +22,8 @@ def load_json(path_file):
 
 def write_json(data, path):
     # Write on a json file. Input: data and path of the file.
-    with open(path, 'w') as f:
-        json.dump(data, f)
+    with open(path, 'w') as file:
+        json.dump(data, file)
 
 def main(args):
     # Open the file of list tools unique and save it in a list of dictionaries:
@@ -38,9 +47,9 @@ def main(args):
     process = CrawlerProcess(get_project_settings())
 
     # Method to crawl the spider in crawlertools.py and pass as **kwargs the following variables:
-    process.crawl(ToolsSpider, 
-                    args=args, 
-                    list_unique_url=websites_to_crawl['websites_to_crawl'])
+    process.crawl(ToolsSpider,
+                    args=args,
+                    list_unique_url=websites_to_crawl['websites_to_crawl'][:10])
 
     # Start the process of crawling.
     process.start()

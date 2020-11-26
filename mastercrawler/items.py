@@ -12,9 +12,3 @@ class MastercrawlerItem(scrapy.Item):
     def __repr__(self):
         # Only print out first_url_tool after exiting the Pipeline
         return repr(f"Scraped website: {self['first_url_tool']}")
-
-
-
-    
-    
-

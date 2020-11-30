@@ -1,6 +1,6 @@
 
 ## Crawler description:
-This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect the HTMLS without JavaScript from the websites of a dataset of bioinformatic tools.<br />
+- This crawler aims to determinate the status (HTTP Codes, Exceptions) and collect the HTMLS without JavaScript from the websites of a dataset of bioinformatic tools.<br />
 
 ### Input:
 - File that has to contain an array of websites for crawling.<br />
@@ -30,7 +30,7 @@ manifest_tools.json = {
                         
         
 ```
-<br />
+
 - JSON file called by default "entry_n.json" inside the directory of htmls_no_js that follows the next JSON schema. 
 
 ```
@@ -46,15 +46,15 @@ entry_n.json = {
 
 ## Package installation:
 
-- 1) Open terminal.
-- 2) Go to the current directory where you want the cloned directory to be added using 'cd'.
-- 3) Run the command: <br />
+1) Open terminal.
+2) Go to the current directory where you want the cloned directory to be added using 'cd'.
+3) Run the command: <br />
         $ git clone https://github.com/AndreuJove/mastercrawlerTFG.
-- 4) Install requirements.txt: <br />
+4) Install requirements.txt: <br />
         $ pip3 install -r requirements.txt
-- 5) From root directory and run the following command:<br />
+5) From root directory and run the following command:<br />
         $ python3 main.py
-- 6) The name of the output files and the directory to save them can be changed using the following command line (write it with the default values):<br />
+6) The name of the output files and the directory to save them can be changed using the following      command line (write it with the default values):<br />
         $ python3 main.py <br />
         i_path_file ../websites_filter/output_data/websites_to_crawl.json <br />
         -o_directory output_data <br />
@@ -76,11 +76,11 @@ entry_n.json = {
 
 ## Authors
 
-Andreu Jové
+- Andreu Jové
 
 <br />
 
 
 ## License
 
-This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3 - see the [LICENSE.MD](https://github.com/AndreuJove/mastercrawlerTFG/blob/master/LICENSE.md) file for details.
+- This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3 - see the [LICENSE.MD](https://github.com/AndreuJove/mastercrawlerTFG/blob/master/LICENSE.md) file for details.
